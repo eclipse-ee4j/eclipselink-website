@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sections title="Eclipse Persistence Services Project"
+	subtitle="EclipseLink">
+	<section class="main" name="About EclipseLink">
+		<description>
+			EclipseLink will...
+		</description>
+	</section>
+	<section class="main" name="Project Organization">
+		<description>
+			The EclipseLink project is a sub-project of ...
+		</description>
+	</section>
+	<section class="main" name="Project News" anchor="ProjectNews">
+		<section name="EclipseLink at SpringOne"
+			link="http://www.springone.com/display/SpringOne07/Eclipse+Java+Persistence+Platform+-+The+Full+Monty"
+			image="/eclipselink/images/springone.gif">
+			<em>June 2007</em>
+		</section>
+		<section name="EclipseLink Provisioned">
+			<em>June 2007</em>
+		</section>
+	</section>
+	<section class="infobox" name="Learn More">
+		<item title="Project News" link="#ProjectNews" />
+		<item title="Newsgroup"
+			link="http://www.eclipse.org/newsportal/thread.php?group=eclipse.technology.eclipselink">
+			<a href="http://www.eclipse.org/newsgroups/index.html"
+				target="_blank">
+				[sign up]
+			</a>
+		</item>
+		<item title="Original EclipseLink Proposal"
+			link="http://www.eclipse.org/proposals/eclipselink/" />
+		<item title="Creation Review Slides"
+			link="http://www.eclipse.org/proposals/eclipselink/Eclipse_Persistence_Services-creation.pdf" />
+	</section>
+	<section class="infobox" name="Downloads">
+	</section>
+</sections>
