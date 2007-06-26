@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sections title="Eclipse Persistence Services Project"
-	subtitle="EclipseLink">
+<sections title="Eclipse Persistence Services Project">
 	<section class="main" name="About EclipseLink">
 		<description>
 			EclipseLink will...
