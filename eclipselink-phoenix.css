@@ -1,0 +1,64 @@
+/* Turn off hover decoration on named anchors */
+a[name]:hover {text-decoration: inherit; color: inherit; background: inherit}
+
+h2.bar {
+	background-image:
+		url(/eclipse.org-common/themes/Phoenix/images/header_bg.gif);
+	background-position: top left;
+	background-repeat: repeat-x;
+	background-color: #669;
+	color: #fff;
+	/*  font-size: 1.1em;  */
+	font-size: 110%;
+	font-weight: bold;
+	margin-left: 0;
+	margin-right: 4px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+h2.bar span.left {
+	float: left;
+}
+
+h2.bar span.right {
+	float: right;
+}
+
+h2.bar a {
+	color: #fff;
+}
+
+ul.indent {
+	margin-left: 20px;
+	padding: 0px;
+}
+
+ul.indent ol {
+	list-style-image: none;
+}
+
+div.eclipselinksubtitle {
+	color: #336;
+	font-weight: bold;
+}
+
+div.infoboxsubtitle {
+	padding-top: 1em;
+	font-weight: bold;
+}
+
+div.sectiontitle {
+	font-weight: bold;
+}
+
+span.sectionimage {
+	float: left;
+	padding-right: 4px;
+}
+
+div.clearall {
+	clear: both;
+}
