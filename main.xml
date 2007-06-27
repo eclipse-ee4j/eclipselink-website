@@ -21,14 +21,16 @@
 			<em>June 2007</em>
 		</section>
 	</section>
-	<section class="infobox" name="Learn More">
-		<item title="Incubation"
-			link="/projects/what-is-incubation.php"
-			image="/images/egg-incubation.png"/>
-		<item title="Project Status">
-			This project is in the <a
-			href="/projects/dev_process/validation-phase.php">Incubation Phase</a>
+	<section class="infobox" name="Incubation">
+		<a href="/projects/what-is-incubation.php">
+			<img align="center" src="/images/egg-incubation.png" border="0" />
+		</a>
+		<item>
+			This project is in the
+			<a href="/projects/dev_process/validation-phase.php">Incubation Phase</a>
 		</item>
+	</section>
+	<section class="infobox" name="Learn More">
 		<item title="Project News" link="#ProjectNews" />
 		<item title="Newsgroup"
 			link="http://www.eclipse.org/newsportal/thread.php?group=eclipse.technology.eclipselink">
