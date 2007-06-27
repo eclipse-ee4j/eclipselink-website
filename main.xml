@@ -3,6 +3,7 @@
 	<section class="main" name="About EclipseLink">
 		<description>
 			EclipseLink will...
+			<img src="images/EclipseLink-overview.png" border="0" />
 		</description>
 	</section>
 	<section class="main" name="Project Organization">
@@ -21,6 +22,13 @@
 		</section>
 	</section>
 	<section class="infobox" name="Learn More">
+		<item title="Incubation"
+			link="/projects/what-is-incubation.php"
+			image="/images/egg-incubation.png"/>
+		<item title="Project Status">
+			This project is in the <a
+			href="/projects/dev_process/validation-phase.php">Incubation Phase</a>
+		</item>
 		<item title="Project News" link="#ProjectNews" />
 		<item title="Newsgroup"
 			link="http://www.eclipse.org/newsportal/thread.php?group=eclipse.technology.eclipselink">
