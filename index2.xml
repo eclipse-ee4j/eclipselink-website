@@ -8,7 +8,18 @@
 	</section>
 	<section class="main" name="Project Organization">
 		<description>
-			The EclipseLink project is a sub-project of ...
+			<p>The Eclipse Persistence Services Project is a sub-project of the Technology project.</p>
+			<p><b>Services</b></p>
+			<p><b>JPA</b></p>
+			<p>The JPA service supports the Java Persistence API (JPA) and enables mapping a Java domain model to a relational schema using metadata provided in XML and/or annotations. Applications using this service will have access to the mapping, query framework, transaction support, object caching (including clustering support), advanced database specific capabilities, and many performance tuning and management options. Each of these functional areas are flexible and extensible to address complex application requirements.</p>
+			<p><b>Mapping Objects to XML (MOXy)</b></p> 
+			<p>The Mapping Objects to XML (MOXy) service with support for Java Architecture for XML Binding (JAXB) enables mapping of a Java domain model to an XML Schema (XSD) using metadata provided in XML and/or annotations. This service supports the generation of mappings and XSD from an annotated model, generation of the domain model and mapping from a provided XSD, or meet-in-the-middle mapping with a provided domain model and XSD. The application interface enables the efficient marshalling of the domain model objects into an XML document and un-marshalling of XML documents into domain model objects via DOM or SAX.</p>
+			<p><b>Service Data Object (SDO)</b></p>
+			<p>The Service Data Object (SDO) service will allow devlopers to generate dynamic and static SDO models from an XSD and use these within their application.  In addition to the XML binding capabilities defined in the specification additional flexibility is provided by the Object-XML service. This approach provides a solution for applications requiring less coupling to the data structures being accessed and modified. Support for wrapping a Java object (i.e. JPA entity) within a DataObject will be provided to enable the usage of existing domain models with SDO. A Data Access Service (DAS) will be provided that brings together the Java Persistence API (JPA) with SDO.</p>
+			<p><b>Database Web Services (DBWS)</b></p>
+			<p>This service will provide a simple and declarative solution for defining and generating a Web service exposing database operations. Using the core Object-Relational and Object-XML capabilities, consumers can leverage default XML representations of their relational data or completely customize the shape of their XML documents.</p>
+			<p><b>Enterprise Information Systems (EIS)</b></p>
+			<p>The EIS persistence service enables the usage of data stores through Java Connector Architecture (JCA) resource adapters. Using XML metadata the interactions and their exchanged data are configured and mapped onto a domain model. The interactions data can be mapped from either the Common Client interface (CCI) or using XML schemas. This usage is intended for non-relational data stores where no JDBC or SQL access is provided.</p>
 		</description>
 	</section>
 	<section class="main" name="Project News" anchor="ProjectNews">
