@@ -22,13 +22,13 @@
 		</section>
 	</section>
 	<section class="infobox" name="Incubation">
-		<a href="/projects/what-is-incubation.php">
-			<img align="center" src="/images/egg-incubation.png" border="0" />
-		</a>
-		<item>
+		<description>
+			<a href="/projects/what-is-incubation.php">
+				<img align="center" src="/images/egg-incubation.png" border="0" />
+			</a>
 			This project is in the
 			<a href="/projects/dev_process/validation-phase.php">Incubation Phase</a>
-		</item>
+		</description>
 	</section>
 	<section class="infobox" name="Learn More">
 		<item title="Project News" link="#ProjectNews" />
