@@ -2,7 +2,7 @@
 <sections title="Eclipse Persistence Services Project">
 	<section class="main" name="About EclipseLink">
 		<description>
-			EclipseLink will...
+			The Eclipse Persistence Services Project (EclipseLink) incubator project's goal is to provide an extensible framework that will enable Java developers to interact with relational databases, XML, and Enterprise Information Systems (EIS). EclipseLink will provide support for a number of persistence standards including the Java Persistence API (JPA), Java API for XML Binding (JAXB), Java Connector Architecture (JCA), and Service Data Objects (SDO).
 			<img src="images/EclipseLink-overview.png" border="0" />
 		</description>
 	</section>
