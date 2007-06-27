@@ -3,7 +3,6 @@
 	<section class="main" name="About EclipseLink">
 		<description>
 			The Eclipse Persistence Services Project (EclipseLink) incubator project's goal is to provide an extensible framework that will enable Java developers to interact with relational databases, XML, and Enterprise Information Systems (EIS). EclipseLink will provide support for a number of persistence standards including the Java Persistence API (JPA), Java API for XML Binding (JAXB), Java Connector Architecture (JCA), and Service Data Objects (SDO).
-			<img src="images/EclipseLink-overview.png" border="0" />
 		</description>
 	</section>
 	<section class="main" name="Project Organization">
@@ -20,6 +19,7 @@
 			<p>This service will provide a simple and declarative solution for defining and generating a Web service exposing database operations. Using the core Object-Relational and Object-XML capabilities, consumers can leverage default XML representations of their relational data or completely customize the shape of their XML documents.</p>
 			<p><b>Enterprise Information Systems (EIS)</b></p>
 			<p>The EIS persistence service enables the usage of data stores through Java Connector Architecture (JCA) resource adapters. Using XML metadata the interactions and their exchanged data are configured and mapped onto a domain model. The interactions data can be mapped from either the Common Client interface (CCI) or using XML schemas. This usage is intended for non-relational data stores where no JDBC or SQL access is provided.</p>
+			<img src="images/EclipseLink-overview.png" border="0" />
 		</description>
 	</section>
 	<section class="main" name="Project News" anchor="ProjectNews">
