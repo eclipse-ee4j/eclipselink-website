@@ -17,8 +17,6 @@
 							</div>
 						</td>
 						<td>
-							<img src="/eclipselink/images/eclipse_pos_logo_fc_sm.jpg"
-								align="middle" height="144" hspace="50" width="144" />
 						</td>
 					</tr>
 				</table>
