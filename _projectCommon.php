@@ -15,7 +15,7 @@ $App->AddExtraHtmlHeader("<link rel=\"stylesheet\" type=\"text/css\" href=\"/ecl
 # We have folding menus.  Second level (anything with a ... below) has a _projectCommon.php that overrides this one.
 # It is up to you to keep all these files in sync.
 $Nav->setLinkList(array()); # Clear Nav Bar
-$Nav->addNavSeparator("EclipseLink", 	"/eclipselink/main.php");
-$Nav->addCustomNav("Downloads",     "/eclipselink/main.php", "_self", 2);
+$Nav->addNavSeparator("EclipseLink", 	"/eclipselink/index.php");
+$Nav->addCustomNav("Downloads",     "/eclipselink/index.php", "_self", 2);
 
 ?>
