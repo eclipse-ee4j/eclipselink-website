@@ -7,8 +7,7 @@
 	</section>
 	<section class="main" name="Project Organization">
 		<description>
-			<p>The Eclipse Persistence Services Project is a sub-project of the Technology project.</p>
-			<p><b>Services</b></p>
+			<p>The Eclipse Persistence Services Project is a sub-project of the Technology project.  This Project will provide persistence services in an extensible framework focusing on performance, productivity, and flexibility.  The following services and functional areas are defined to be in the initial scope of this project:</p>
 			<p><b>JPA</b></p>
 			<p>The JPA service supports the Java Persistence API (JPA) and enables mapping a Java domain model to a relational schema using metadata provided in XML and/or annotations. Applications using this service will have access to the mapping, query framework, transaction support, object caching (including clustering support), advanced database specific capabilities, and many performance tuning and management options. Each of these functional areas are flexible and extensible to address complex application requirements.</p>
 			<p><b>Mapping Objects to XML (MOXy)</b></p> 
