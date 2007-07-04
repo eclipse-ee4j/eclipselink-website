@@ -17,5 +17,5 @@ $App->AddExtraHtmlHeader("<link rel=\"stylesheet\" type=\"text/css\" href=\"/ecl
 $Nav->setLinkList(array()); # Clear Nav Bar
 $Nav->addNavSeparator("EclipseLink", 	"/eclipselink/index.php");
 $Nav->addCustomNav("Downloads",     "/eclipselink/index.php", "_self", 2);
-
+$Nav->addCustomNav("EclipseLink Wiki",     "http://wiki.eclipse.org/EclipseLink", "_self", 2);
 ?>
