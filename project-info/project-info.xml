@@ -1,0 +1,33 @@
+<project>
+  <name>Eclipse Persistence Services</name>
+  <short-name>EclipseLink</short-name>
+  <bugzilla>
+    <product name="EclipseLink"/>
+  </bugzilla>
+<!-- 
+  <committers url="/eclipselink/dev.php"/>
+  <contributors url="/eclipselink/dev.php"/>
+  <leaders url="/eclipselink/team.php"/>
+-->
+ <cvs repository="/cvsroot/technology/">
+    <module path="org.eclipse.eclipselink" /> 
+  </cvs>
+  
+  <getting-started url="http://wiki.eclipse.org/EclipseLink/GettingStarted"/>
+
+  <mailing-lists>
+    <list name="eclipselink-dev"/>
+    <list name="eclipselink-users"/>
+  </mailing-lists>
+  
+  <downloads url="/eclipselink/downloads"/>
+
+  <download url="/eclipselink/downloads"/>
+  
+  <newsgroups>
+	  <newsgroup name="eclipse.technology.eclipselink"/>
+  </newsgroups>
+
+  <releases>
+  </releases>
+</project>
