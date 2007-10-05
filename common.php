@@ -1,5 +1,23 @@
 <?php
 
+  $theme = "Phoenix";
+	
+  require_once($_SERVER['DOCUMENT_ROOT'] . "/projects/common/project-info.class.php");
+  $projectInfo = new ProjectInfo("technology.maya");
+  $projectInfo->generate_common_nav( $Nav );
+
+	function add2users() {
+	   global $Nav;
+		 $Nav->addCustomNav("Maya Wiki", "http://wiki.eclipse.org/index.php/Maya", "", 2);
+		 $Nav->addCustomNav("Downloads", "/maya/downloads.php", "", 2);
+	}   
+	
+	function add2contributors() {
+	   global $Nav;
+	}
+	
+	$projectInfo->generate_common_nav( $Nav, "add2users", NULL, "add2contributors" );
+
 	#*****************************************************************************
 	#
 	# common.php
