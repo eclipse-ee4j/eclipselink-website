@@ -99,16 +99,6 @@
 			<img src="images/EclipseLink-overview.png" border="0" />
 		</description>
 	</section>
-	<section class="main" name="Project News" anchor="ProjectNews">
-		<section name="EclipseLink at SpringOne"
-			link="http://www.springone.com/display/SpringOne07/Eclipse+Java+Persistence+Platform+-+The+Full+Monty"
-			image="/eclipselink/images/springone.gif">
-			<em>June 2007</em>
-		</section>
-		<section name="EclipseLink Provisioned">
-			<em>June 2007</em>
-		</section>
-	</section>
 	<section class="infobox" name="Incubation">
 		<description>
 			<div align="center">
@@ -142,5 +132,16 @@
 		<item title="Creation Review Slides"
 			link="http://www.eclipse.org/proposals/eclipselink/Eclipse_Persistence_Services-creation.pdf" />
 	</section>
-	<section class="infobox" name="Downloads"></section>
+	<section class="infobox" name="Project News">
+
+		<section name="EclipseLink at SpringOne"
+			link="http://www.springone.com/display/SpringOne07/Eclipse+Java+Persistence+Platform+-+The+Full+Monty"
+			image="/eclipselink/images/springone.gif">
+			<em>June 2007</em>
+		</section>
+		<section name="EclipseLink Provisioned">
+			<em>June 2007</em>
+		</section>
+
+	</section>
 </sections>
