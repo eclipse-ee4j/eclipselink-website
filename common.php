@@ -8,7 +8,8 @@
 
 	function add2users() {
 	   global $Nav;
-		 $Nav->addCustomNav("EclipseLink Wiki", "http://wiki.eclipse.org/EclipseLink", "", 2);
+		 $Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/EclipseLink", "", 2);
+		 $Nav->addCustomNav("User Manual", "http://wiki.eclipse.org/EclipseLink/UserManual", "", 2);
 	}   
 	
 	function add2contributors() {
