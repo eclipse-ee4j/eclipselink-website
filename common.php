@@ -3,13 +3,13 @@
   $theme = "Phoenix";
 	
   require_once($_SERVER['DOCUMENT_ROOT'] . "/projects/common/project-info.class.php");
-  $projectInfo = new ProjectInfo("technology.maya");
+  $projectInfo = new ProjectInfo("technology.eclipselink");
   $projectInfo->generate_common_nav( $Nav );
 
 	function add2users() {
 	   global $Nav;
-		 $Nav->addCustomNav("Maya Wiki", "http://wiki.eclipse.org/index.php/Maya", "", 2);
-		 $Nav->addCustomNav("Downloads", "/maya/downloads.php", "", 2);
+		 $Nav->addCustomNav("EclipseLink Wiki", "http://wiki.eclipse.org/EclipseLink", "", 2);
+		 $Nav->addCustomNav("Downloads", "/eclipselink/downloads/index.php", "", 2);
 	}   
 	
 	function add2contributors() {
