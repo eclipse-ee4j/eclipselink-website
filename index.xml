@@ -133,10 +133,8 @@
 			link="http://www.eclipse.org/proposals/eclipselink/Eclipse_Persistence_Services-creation.pdf" />
 	</section>
 	<section class="infobox" name="Project News">
-		<section name="EclipseLink @ Conferences">
-			<item title="Upcoming Conferences"
-				link="http://wiki.eclipse.org/EclipseLink/Presentations">
-			</item>
+		<section name="EclipseLink @ Conferences" link="http://wiki.eclipse.org/EclipseLink/Presentations">
+			<em>October 2007</em>
 		</section>
 		<section name="EclipseLink Provisioned">
 			<em>June 2007</em>
