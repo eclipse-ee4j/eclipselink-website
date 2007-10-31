@@ -134,11 +134,6 @@
 	</section>
 	<section class="infobox" name="Project News">
 
-		<section name="EclipseLink at SpringOne"
-			link="http://www.springone.com/display/SpringOne07/Eclipse+Java+Persistence+Platform+-+The+Full+Monty"
-			image="/eclipselink/images/springone.gif">
-			<em>June 2007</em>
-		</section>
 		<section name="EclipseLink Provisioned">
 			<em>June 2007</em>
 		</section>
