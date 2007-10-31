@@ -9,7 +9,6 @@
 	function add2users() {
 	   global $Nav;
 		 $Nav->addCustomNav("EclipseLink Wiki", "http://wiki.eclipse.org/EclipseLink", "", 2);
-		 $Nav->addCustomNav("Downloads", "/eclipselink/downloads/index.php", "", 2);
 	}   
 	
 	function add2contributors() {
