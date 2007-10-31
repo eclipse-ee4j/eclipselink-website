@@ -13,7 +13,7 @@
 			and Service Data Objects (SDO).
 		</description>
 	</section>
-	<section class="main" name="Project Organization">
+	<section class="main" name="Persistence Services">
 		<description>
 			<p>
 				The Eclipse Persistence Services Project is a
@@ -23,7 +23,9 @@
 				The following services and functional areas are defined
 				to be in the initial scope of this project:
 			</p>
-			<img src="images/EclipseLink-overview.png" border="0" align="center"/>
+			<div align="center">
+				<img src="images/EclipseLink-overview.png" border="0" />
+			</div>
 			<p>
 				<b>JPA</b>
 			</p>
