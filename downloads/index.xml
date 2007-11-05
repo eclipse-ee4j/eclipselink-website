@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sections title="Eclipse Persistence Services Project (EclipseLink) : Downloads">
 	<section class="main" name="1.0 Milestone Builds">
-		<section name="1.0M1" link="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/eclipselink-1.0M1-incubation.zip">
-			<em>1.0 Milestone 1 - eclipselink-1.0M1-incubation.zip</em>
+		<section name="1.0 Milestone 1 - eclipselink-1.0M1-incubation.zip" link="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/eclipselink-1.0M1-incubation.zip">
 		</section>
 	</section>
 	<section class="main" name="1.0 Nightly Builds">
