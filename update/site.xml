@@ -4,7 +4,7 @@
       Update site for EclipseLink plugins
    </description>
    <category-def name="EclipseLink" label="Eclipse Persistence Services"/>
-   <feature url="org.eclipse.persistence_0.1.0.jar" id="org.eclipse.persistence" version="1.0M1">
+   <feature url="http://www.eclipse.org/eclipselink/update/org.eclipse.persistence_0.1.0.jar" id="org.eclipse.persistence" version="1.0M1">
       <category name="EclipseLink"/>
    </feature>
 </site>
