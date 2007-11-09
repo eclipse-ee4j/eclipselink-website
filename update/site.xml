@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description url="www.eclipse.org/eclipselink/update">
+      Update site for EclipseLink plugins
+   </description>
+   <archive path="www.eclipse.org/eclipselink/update" url="org.eclipse.persistence_0.1.0.jar"/>
+   <category-def name="EclipseLink" label="Eclipse Persistence Services"/>
+</site>
