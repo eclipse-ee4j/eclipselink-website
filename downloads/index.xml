@@ -5,7 +5,6 @@
 		</section>
 	</section>
 	<section class="main" name="1.0 Nightly Builds">
-		<description>
 		<section name="20071112 Nightly Build" link="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/nightly/eclipselink-1.0M1-incubation20071112.zip">
 		</section>
 		<section name="20071113 Nightly Build" link="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/nightly/eclipselink-1.0M1-incubation20071113.zip">
@@ -18,7 +17,6 @@
 		</section>
 		<section name="20071119 Nightly Build" link="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/nightly/eclipselink-incubation-20071119.zip">
 		</section>
-		</description>
 	</section>
 	<section class="infobox" name="Incubation">
 		<description>
