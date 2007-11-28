@@ -6,12 +6,8 @@
         </section>
         <section class="main" name="1.0 Nightly Builds">
         <description>
-        <p><a href="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/nightly/eclipselink-incubation-20071128.zip"> eclipselink-incubation-20071128.zip </a> --
-        <a href="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/nightly.javadocs/javadocs-eclipselink-incubation-20071128.zip"> javadocs </a>
-        </p>
-        <p><a href="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/nightly/eclipselink-incubation-20071127.zip"> eclipselink-incubation-20071127.zip </a> --
-        <a href="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/nightly.javadocs/javadocs-eclipselink-incubation-20071127.zip"> javadocs </a>
-        </p>
+        <p><a href="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/nightly/eclipselink-incubation-20071128.zip"> eclipselink-incubation-20071128.zip </a> ----- <a href="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/nightly.javadocs/javadocs-eclipselink-incubation-20071128.zip"> javadocs </a></p>
+        <p><a href="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/nightly/eclipselink-incubation-20071127.zip"> eclipselink-incubation-20071127.zip </a> ----- <a href="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/nightly.javadocs/javadocs-eclipselink-incubation-20071127.zip"> javadocs </a></p>
         
         </description>
         </section>
