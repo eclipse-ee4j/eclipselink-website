@@ -5,7 +5,7 @@
                 </section>
         </section>
         <section class="main" name="1.0 Nightly Builds">
-                <section name="1.0 Nightly Builds and Javadocs" link="nightly.php"/>
+                <section name="1.0 Nightly Builds" link="nightly.php"/>
         </section>
         <section class="infobox" name="Incubation">
                 <description>
