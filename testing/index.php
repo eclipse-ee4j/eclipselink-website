@@ -7,7 +7,7 @@ require_once ($root . '/eclipselink/common.php');
 
 # Generate the web page
 // Load the XML source
-$xml = DOMDocument::load('http://download.eclipse.org/technology/eclipselink/nightly/test-results/test-results.xml');
+$xml = DOMDocument::load('index.html');
 
 //Set the page title
 $xpath = new DOMXPath($xml);
