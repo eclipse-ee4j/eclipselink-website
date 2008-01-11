@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sections title="Eclipse Persistence Services Project (EclipseLink) : Testing Results">
+        <section class="main" name="Nightly Testing Results">
+        		<section name="Latest Core SRG Test Results" link="http://www.eclipse.org/downloads/technology/eclipselink/nightly/test-results/core/latest-test-results.html"/>
+        		<section name="Latest Core LRG Test Results - TBD"/>
+                <section name="Latest JPA Test Results - TBD"/>
+                <section name="Latest MOXy Test Results - TBD"/>
+                <section name="Latest SDO Test Results - TBD"/>
+                <section name="Previous Nightly Test runs" link="results.php"/>                
+        </section>
+</sections>
+        
