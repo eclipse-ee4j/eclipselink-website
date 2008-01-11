@@ -39,6 +39,7 @@ org.eclipse.persistence.oxm.mappings.nullpolicy
 org.eclipse.persistence.oxm.platform
 org.eclipse.persistence.oxm.record
 org.eclipse.persistence.oxm.schema
+org.eclipse.persistence.oxm.sequenced
 org.eclipse.persistence.oxm.unmapped
 org.eclipse.persistence.platform.database
 org.eclipse.persistence.platform.database.converters
@@ -58,8 +59,6 @@ org.eclipse.persistence.sdo.helper
 org.eclipse.persistence.sdo.helper.delegates
 org.eclipse.persistence.sdo.helper.extension
 org.eclipse.persistence.sequencing
-org.eclipse.persistence.services
-org.eclipse.persistence.services.mbean
 org.eclipse.persistence.sessions
 org.eclipse.persistence.sessions.broker
 org.eclipse.persistence.sessions.changesets
@@ -72,8 +71,6 @@ org.eclipse.persistence.sessions.coordination.rmi
 org.eclipse.persistence.sessions.factories
 org.eclipse.persistence.sessions.remote
 org.eclipse.persistence.sessions.remote.corba.sun
-org.eclipse.persistence.sessions.remote.jms
-org.eclipse.persistence.sessions.remote.jms.mdb
 org.eclipse.persistence.sessions.remote.rmi
 org.eclipse.persistence.sessions.remote.rmi.iiop
 org.eclipse.persistence.sessions.server
