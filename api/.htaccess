@@ -1,2 +1,3 @@
 RedirectMatch "/eclipselink/api/latest/(.*)" http:/eclipselink/api/1.0/$1
+RedirectMatch "www.eclipselink.org/wiki" http://wiki.eclipse.org/EclipseLink
 RedirectMatch "/eclipselink/maven.repo" http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/eclipselink/maven.repo
