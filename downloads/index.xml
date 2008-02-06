@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sections title="Eclipse Persistence Services Project (EclipseLink) : Downloads">
         <section class="main" name="1.0 Milestone Builds">
+				<section name="1.0 Milestone 4 - eclipselink-incubation-1.0M3.zip" link="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/eclipselink-incubation-1.0M4.zip"/>
         		<section name="1.0 Milestone 3 - eclipselink-incubation-1.0M3.zip" link="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/eclipselink-incubation-1.0M3.zip"/>
                 <section name="1.0 Milestone 2 - eclipselink-1.0M2-incubation.zip" link="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/eclipselink-1.0M2-incubation.zip"/>
                 <section name="1.0 Milestone 1 - eclipselink-1.0M1-incubation.zip" link="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/eclipselink-1.0M1-incubation.zip"/>
