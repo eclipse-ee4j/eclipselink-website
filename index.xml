@@ -12,6 +12,9 @@
 			for XML Binding (JAXB), Java Connector Architecture (JCA),
 			and Service Data Objects (SDO).
 		</description>
+				<div align="center">
+				<img src="images/EclipseLink-overview.png" border="0" />
+			</div>
 	</section>
 	<section class="main" name="News">
 		<section name="EclipseLink Project to Deliver JPA 2.0 Reference Implementation" link="http://www.eclipse.org/org/press-release/20080317_Eclipselink.php">
