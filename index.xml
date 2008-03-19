@@ -11,7 +11,7 @@
 			standards including the Java Persistence API (JPA), Java API
 			for XML Binding (JAXB), Java Connector Architecture (JCA),
 			and Service Data Objects (SDO).
-			<p>
+			
 				<div align="center">
 				<img src="images/EclipseLink-overview.png" border="0" />
 			</div>
