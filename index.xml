@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sections title="EclipseLink">
-	<section>
+	<section class="main" name="About EclipseLink">
 		<description>
-			<div align="center">
-				<img src="images/eclipselink.png" border="0" />
-			</div>
-		
 			The <b>Eclipse Persistence Services Project (EclipseLink)</b>
 			project's goal is to provide an extensible
 			framework that will enable Java developers to interact with

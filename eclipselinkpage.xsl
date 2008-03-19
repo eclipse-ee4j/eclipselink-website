@@ -5,9 +5,6 @@
 
 	<xsl:template match="/sections">
 		<div id="maincontent">
-		<div align="center">
-				<img src="images/eclipselink.png" border="0" />
-			</div>
 			<div id="midcolumn">
 				<table>
 					<tr>
@@ -25,6 +22,8 @@
 				</table>
 				<xsl:apply-templates select="section[@class='main']"
 					mode="main" />
+				<xsl:apply-templates select="section[@class='news']"
+					mode="news" />
 			</div>
 			<div id="rightcolumn">
 				<xsl:apply-templates select="section[@class='infobox']"
@@ -34,6 +33,20 @@
 	</xsl:template>
 
 	<xsl:template match="section" mode="main">
+			<xsl:if test="@anchor">
+				<a>
+					<xsl:attribute name="name">
+						<xsl:value-of select="@anchor" />
+					</xsl:attribute>
+				</a>
+			</xsl:if>
+			<xsl:apply-templates select="description" mode="body" />
+			<ul>
+				<xsl:apply-templates />
+			</ul>
+	</xsl:template>
+
+	<xsl:template match="section" mode="news">
 		<div class="homeitem3col">
 			<xsl:if test="@anchor">
 				<a>
