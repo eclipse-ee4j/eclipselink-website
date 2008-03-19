@@ -9,12 +9,9 @@
 				<table>
 					<tr>
 						<td width="60%">
-							<h1>
-								<xsl:value-of select="@title" />
-							</h1>
-							<div class="wtpsubtitle">
-								<xsl:value-of select="@subtitle" />
-							</div>
+							<div align="center">
+				<img src="/eclipselink/images/eclipselink.jpg" border="0" />
+			</div>
 						</td>
 						<td>
 						</td>
