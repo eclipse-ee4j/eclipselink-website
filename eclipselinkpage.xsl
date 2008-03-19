@@ -6,17 +6,6 @@
 	<xsl:template match="/sections">
 		<div id="maincontent">
 			<div id="midcolumn">
-				<table>
-					<tr>
-						<td width="60%">
-							<div align="center">
-				<img src="/eclipselink/images/eclipselink.jpg" border="0" />
-			</div>
-						</td>
-						<td>
-						</td>
-					</tr>
-				</table>
 				<xsl:apply-templates select="section[@class='main']"
 					mode="main" />
 				<xsl:apply-templates select="section[@class='news']"

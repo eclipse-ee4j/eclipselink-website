@@ -2,6 +2,10 @@
 <sections title="EclipseLink">
 	<section class="main" name="About EclipseLink">
 		<description>
+									<div align="center">
+				<img src="/eclipselink/images/eclipselink.jpg" border="0" />
+			</div>
+		
 			The <b>Eclipse Persistence Services Project (EclipseLink)</b>
 			project's goal is to provide an extensible
 			framework that will enable Java developers to interact with
