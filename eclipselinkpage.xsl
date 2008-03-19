@@ -5,6 +5,9 @@
 
 	<xsl:template match="/sections">
 		<div id="maincontent">
+		<div align="center">
+				<img src="images/eclipselink.png" border="0" />
+			</div>
 			<div id="midcolumn">
 				<table>
 					<tr>
