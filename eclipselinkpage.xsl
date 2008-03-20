@@ -18,7 +18,7 @@
 		</div>
 	</xsl:template>
 
-	<xsl:template match="section" mode="main">
+	<xsl:template match="section" mode="none">
 			<xsl:if test="@anchor">
 				<a>
 					<xsl:attribute name="name">
@@ -32,7 +32,7 @@
 			</ul>
 	</xsl:template>
 
-	<xsl:template match="section" mode="news">
+	<xsl:template match="section" mode="main">
 		<div class="homeitem3col">
 			<xsl:if test="@anchor">
 				<a>
