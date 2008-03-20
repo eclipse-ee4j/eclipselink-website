@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sections title="EclipseLink">
-	<section class="main" name="About EclipseLink">
+	<section class="none" name="About EclipseLink">
 		<description>
 			<div align="center">
 				<img src="/eclipselink/images/eclipselink.jpg"
@@ -23,7 +23,7 @@
 			</div>
 		</description>
 	</section>
-	<section class="news" name="News">
+	<section class="main" name="News">
 		<section
 			name="EclipseLink Project to Deliver JPA 2.0 Reference Implementation"
 			link="http://www.eclipse.org/org/press-release/20080317_Eclipselink.php">
