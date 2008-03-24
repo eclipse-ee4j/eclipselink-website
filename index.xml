@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sections title="EclipseLink">
-	<section class="main" name="About EclipseLink">
+	<section class="none">
 		<description>
 			<div align="center">
 				<img src="/eclipselink/images/eclipselink.jpg"

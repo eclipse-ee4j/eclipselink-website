@@ -6,7 +6,7 @@
 				<img src="/eclipselink/images/eclipselink.jpg"
 					border="0"/>
 			</div>
-			<table width="100%"><tr><td align="top">
+			<table width="100%"><tr><td valign="top">
 			The
 			<b>Eclipse Persistence Services Project (EclipseLink)</b>
 			project's goal is to provide an extensible framework that
@@ -23,6 +23,40 @@
 			</td>
 			</tr>
 			</table>
+			
+			<table border="0" cellpadding="5">
+					<tr height="9">	 
+						<td width="20"></td>
+						<td><a href="community.php"><img src="/eclipselink/images/community.jpg"></a></td>
+						<td>
+							<table border="0" cellpadding="0">
+								<tr>
+				          			<td><font size="+1"><a href="/mylyn/community">Community</a></font></td>
+								</tr>
+								<tr>
+					          		<td>Get help and interact with users and developers</td>
+					          	</tr>
+							</table>
+						</td>
+	          		</tr>
+	          		<tr>
+						<td width="20"></td>
+						<td><a href="/eclipselink/downloads"><img src="eclipselink/images/downloads.gif"></a></td>
+						<td>
+							<table border="0" cellpadding="0">
+								<tr>
+				          			<td><font size="+1"><a href="/mylyn/downloads">Downloads</a></font></td>
+								</tr>
+								<tr>
+					          		<td>Get the latest and greatest Mylyn release</td>
+					          	</tr>
+							</table>
+						</td>
+	          		</tr> 
+	          		<tr height=11>
+	          		</tr>
+	         	</table>
+			
 		</description>
 	</section>
 	<section class="main" name="News">
