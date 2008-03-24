@@ -22,7 +22,7 @@
 			<table border="0"> 
         		<tr>
         		<td valign="top">
-        			<a href="/eclipselink/bugs"><img border="0" src="/eclipselink/images/community.jpg"></a>
+        			<img border="0" src="/eclipselink/images/community.jpg">
         		</td>
 		        <td>
 			        The EclipseLink Newsgroup is the main forum for user questions and support.
@@ -38,12 +38,6 @@
 					<a href="http://www.eclipse.org/newsportal/thread.php?group=eclipse.technology.eclipselink">Web Access</a>,
 					registration is <a href="http://www.eclipse.org/newsgroups/register.php">required</a>. 
 				</li>
-				<li>
-					<a href="http://dev.eclipse.org/mhonarc/lists/eclipselink-users/maillist.html">EclipseLink-Users Mailing List Archive</a>
-				</li>
-				<li>
-					<a href="http://dev.eclipse.org/mhonarc/lists/eclipselink-dev/maillist.html">EclipseLink-Dev Mailing List Archive</a>
-				</li>
 			</ul>
 		</div>
 
@@ -52,30 +46,29 @@
 			<table border="0"> 
         		<tr>
         		<td valign="top">
-        			&nbsp;&nbsp;&nbsp;&nbsp;<a href="/eclipselink/bugs"><img border="0" src="/eclipselink/images/image-email.gif"></a>
+        			<img border="0" src="/eclipselink/images/image-email.gif">
         		</td>
 		        <td>
-			       	We recommend that all users subscribe to the low traffic announce mailing list.  Contributors
-			       	should subscribe to the dev mailing list and those building on Mylyn to the integrators
-			       	mailing list.
+			       	Contributors should subscribe to the dev mailing list.
 			    </td> 
 				</tr>
 			</table>
 			<ul> 
+				<!-- <li>
+	                <a href="http://dev.eclipse.org/mailman/listinfo/eclipselink-announce">
+					eclipselink-announce@eclipse.org:</a> major releases and events
+					<a href="http://dev.eclipse.org/mhonarc/lists/eclipselink-announce/maillist.html">[archive]</a>
+				</li> -->
 				<li>
-	                <a href="http://dev.eclipse.org/mailman/listinfo/mylyn-announce">
-					mylyn-announce@eclipse.org:</a> major releases and events
-					<a href="http://dev.eclipse.org/mhonarc/lists/mylyn-announce/maillist.html">[archive]</a>
-					<a href="http://dev.eclipse.org/mhonarc/lists/mylar-announce/maillist.html">[old archive]</a></li>
+	                <a href="http://dev.eclipse.org/mailman/listinfo/eclipselink-users">
+					eclipselink-users@eclipse.org:</a> User questions and discussions
+					<a href="http://dev.eclipse.org/mhonarc/lists/eclipselink-users/maillist.html">[archive]</a>
+				</li>
 				<li>
-	                <a href="http://dev.eclipse.org/mailman/listinfo/mylyn-integrators">
-					mylyn-integrators@eclipse.org:</a> developer discussions and planning
-					<a href="http://dev.eclipse.org/mhonarc/lists/mylyn-integrators/maillist.html">[archive]</a></li>
-				<li>
-	                <a href="http://dev.eclipse.org/mailman/listinfo/mylyn-dev">
-					mylyn-dev@eclipse.org:</a> developer discussions and planning
-					<a href="http://dev.eclipse.org/mhonarc/lists/mylyn-dev/maillist.html">[archive]</a>
-					<a href="http://dev.eclipse.org/mhonarc/lists/mylar-dev/maillist.html">[old archive]</a></li>
+	                <a href="http://dev.eclipse.org/mailman/listinfo/eclipselink-dev">
+					eclipselink-dev@eclipse.org:</a> developer discussions and planning
+					<a href="http://dev.eclipse.org/mhonarc/lists/eclipselink-dev/maillist.html">[archive]</a>
+				</li>
 			</ul>
 		</div>
 		

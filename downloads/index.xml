@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sections
 	title="Eclipse Persistence Services Project (EclipseLink) : Downloads">
+	<section class="none">
+		<description>
+			<div align="center">
+				<img src="/eclipselink/images/eclipselink.jpg"
+					border="0"/>
+			</div>
+	</description>
+	</section>
+	
 	<section class="main" name="1.0 Milestone Builds">
         <section 
             name="1.0 Milestone 5 - eclipselink-incubation-1.0M5.zip" 
