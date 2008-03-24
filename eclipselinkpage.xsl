@@ -7,7 +7,7 @@
 		<div id="maincontent">
 			<div id="midcolumn">
 				<xsl:apply-templates select="section[@class='none']"
-					mode="main" />
+					mode="none" />
 				<xsl:apply-templates select="section[@class='main']"
 					mode="main" />
 				<xsl:apply-templates select="section[@class='news']"

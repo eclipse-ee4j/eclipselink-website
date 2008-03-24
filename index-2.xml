@@ -6,7 +6,7 @@
 				<img src="/eclipselink/images/eclipselink.jpg"
 					border="0"/>
 			</div>
-
+			<table width="100%"><tr><td>
 			The
 			<b>Eclipse Persistence Services Project (EclipseLink)</b>
 			project's goal is to provide an extensible framework that
@@ -17,10 +17,12 @@
 			Persistence API (JPA), Java API for XML Binding (JAXB), Java
 			Connector Architecture (JCA), and Service Data Objects
 			(SDO).
-
-			<div align="center">
+			</td>
+			<td>
 				<img src="images/EclipseLink-overview.png" border="0" width="500" />
-			</div>
+			</td>
+			</tr>
+			</table>
 		</description>
 	</section>
 	<section class="main" name="News">
