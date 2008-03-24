@@ -21,14 +21,14 @@
 			<table border="0" cellpadding="5">
 					<tr height="9">	 
 						<td>
-							<a href="community.php">
+							<a href="/eclipselink/community.php">
 								<img src="/eclipselink/images/community.jpg"/>
 							</a>
 						</td>
 						<td>
 							<table border="0" cellpadding="0">
 								<tr>
-				          			<td><font size="+1"><a href="/mylyn/community">Community</a></font></td>
+				          			<td><font size="+1"><a href="/eclipselink/community.php">Community</a></font></td>
 								</tr>
 								<tr>
 					          		<td>Get help and interact with users and developers</td>
@@ -39,13 +39,13 @@
 	          		<tr>
 						<td>
 							<a href="/eclipselink/downloads">
-								<img src="eclipselink/images/downloads.gif"/>
+								<img src="/eclipselink/images/downloads.gif"/>
 							</a>
 						</td>
 						<td>
 							<table border="0" cellpadding="0">
 								<tr>
-				          			<td><font size="+1"><a href="/mylyn/downloads">Downloads</a></font></td>
+				          			<td><font size="+1"><a href="/eclipselink/downloads">Downloads</a></font></td>
 								</tr>
 								<tr>
 					          		<td>Get the latest and greatest EclipseLink</td>
