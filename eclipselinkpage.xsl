@@ -6,9 +6,9 @@
 	<xsl:template match="/sections">
 		<div id="maincontent">
 			<div id="midcolumn">
-				<xsl:apply-templates select="section[@class='main']"
-					mode="main" />
 				<xsl:apply-templates select="section[@class='none']"
+					mode="main" />
+				<xsl:apply-templates select="section[@class='main']"
 					mode="main" />
 				<xsl:apply-templates select="section[@class='news']"
 					mode="news" />
