@@ -17,13 +17,7 @@
 			Persistence API (JPA), Java API for XML Binding (JAXB), Java
 			Connector Architecture (JCA), and Service Data Objects
 			(SDO).
-			</td>
-			<td>
-				<img src="images/EclipseLink-overview.png" border="0" width="600" />
-			</td>
-			</tr>
-			</table>
-			
+
 			<table border="0" cellpadding="5">
 					<tr height="9">	 
 						<td>
@@ -54,12 +48,19 @@
 				          			<td><font size="+1"><a href="/mylyn/downloads">Downloads</a></font></td>
 								</tr>
 								<tr>
-					          		<td>Get the latest and greatest Mylyn release</td>
+					          		<td>Get the latest and greatest EclipseLink</td>
 					          	</tr>
 							</table>
 						</td>
 	          		</tr> 
 	         	</table>
+			</td>
+
+			<td>
+				<img src="images/EclipseLink-overview.png" border="0" width="600" />
+			</td>
+			</tr>
+			</table>			
 			
 		</description>
 	</section>
