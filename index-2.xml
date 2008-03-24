@@ -6,7 +6,7 @@
 				<img src="/eclipselink/images/eclipselink.jpg"
 					border="0"/>
 			</div>
-			<table width="100%"><tr><td>
+			<table width="100%"><tr><td align="top">
 			The
 			<b>Eclipse Persistence Services Project (EclipseLink)</b>
 			project's goal is to provide an extensible framework that
@@ -19,7 +19,7 @@
 			(SDO).
 			</td>
 			<td>
-				<img src="images/EclipseLink-overview.png" border="0" width="500" />
+				<img src="images/EclipseLink-overview.png" border="0" width="600" />
 			</td>
 			</tr>
 			</table>
