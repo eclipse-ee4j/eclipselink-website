@@ -26,7 +26,6 @@
 			
 			<table border="0" cellpadding="5">
 					<tr height="9">	 
-						<td width="20"/>
 						<td>
 							<a href="community.php">
 								<img src="/eclipselink/images/community.jpg"/>
@@ -44,8 +43,11 @@
 						</td>
 	          		</tr>
 	          		<tr>
-						<td width="20"></td>
-						<td><a href="/eclipselink/downloads"><img src="eclipselink/images/downloads.gif"/></a></td>
+						<td>
+							<a href="/eclipselink/downloads">
+								<img src="eclipselink/images/downloads.gif"/>
+							</a>
+						</td>
 						<td>
 							<table border="0" cellpadding="0">
 								<tr>
@@ -57,7 +59,6 @@
 							</table>
 						</td>
 	          		</tr> 
-	          		</tr>
 	         	</table>
 			
 		</description>
