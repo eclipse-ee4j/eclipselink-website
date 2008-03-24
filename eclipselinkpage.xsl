@@ -10,13 +10,17 @@
 					mode="none" />
 				<xsl:apply-templates select="section[@class='main']"
 					mode="main" />
-				<xsl:apply-templates select="section[@class='news']"
-					mode="news" />
 			</div>
 			<div id="rightcolumn">
 				<xsl:apply-templates select="section[@class='infobox']"
 					mode="infobox" />
 			</div>
+			<script src="http://www.google-analytics.com/urchin.js"
+				type="text/javascript">
+			</script>
+			<script type="text/javascript">
+				_uacct = "UA-1608008-2";urchinTracker();
+			</script>
 		</div>
 	</xsl:template>
 
