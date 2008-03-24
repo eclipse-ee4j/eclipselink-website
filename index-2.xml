@@ -2,10 +2,6 @@
 <sections title="EclipseLink">
 	<section class="none" name="About EclipseLink">
 		<description>
-			<div align="center">
-				<img src="/eclipselink/images/eclipselink.jpg"
-					border="0"/>
-			</div>
 			<table width="100%"><tr><td valign="top">
 			The
 			<b>Eclipse Persistence Services Project (EclipseLink)</b>
@@ -87,20 +83,4 @@
 		</section>
 	</section>
 
-	<section class="infobox" name="Incubation">
-		<description>
-			<div align="center">
-				<a href="/projects/what-is-incubation.php">
-					<img align="center" src="/images/egg-incubation.png"
-						border="0" />
-				</a>
-			</div>
-			<div align="center">
-				This project is in the
-				<a href="/projects/dev_process/validation-phase.php">
-					Incubation Phase
-				</a>
-			</div>
-		</description>
-	</section>
 </sections>

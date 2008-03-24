@@ -2,13 +2,7 @@
 <sections title="EclipseLink">
 	<section class="none">
 		<description>
-			<div align="center">
-				<img src="/eclipselink/images/eclipselink.jpg"
-					border="0"/>
-			</div>
-
-			The
-			<b>Eclipse Persistence Services Project (EclipseLink)</b>
+			The <b>Eclipse Persistence Services Project (EclipseLink)</b>
 			project's goal is to provide an extensible framework that
 			will enable Java developers to interact with relational
 			databases, XML, and Enterprise Information Systems (EIS) in
@@ -45,20 +39,4 @@
 		</section>
 	</section>
 
-	<section class="infobox" name="Incubation">
-		<description>
-			<div align="center">
-				<a href="/projects/what-is-incubation.php">
-					<img align="center" src="/images/egg-incubation.png"
-						border="0" />
-				</a>
-			</div>
-			<div align="center">
-				This project is in the
-				<a href="/projects/dev_process/validation-phase.php">
-					Incubation Phase
-				</a>
-			</div>
-		</description>
-	</section>
 </sections>
