@@ -5,13 +5,13 @@
 
 	<xsl:template match="/sections">
 		<div id="maincontent">
-			<div align="center">
-				<a href="/eclipselink">
-				<img src="/eclipselink/images/eclipselink.jpg"
-					border="0"/>
-				</a>
-			</div>
 			<div id="midcolumn">
+				<div align="center">
+					<a href="/eclipselink">
+						<img src="/eclipselink/images/eclipselink.jpg" border="0"/>
+					</a>
+				</div>
+				
 				<xsl:apply-templates select="section[@class='none']"
 					mode="none" />
 				<xsl:apply-templates select="section[@class='main']"
