@@ -3,7 +3,7 @@
 
 	<section class="main" name="Newsgroup">
 		<section image="/eclipselink/images/community.jpg">
-			<em> The EclipseLink Newsgroup is the main forum for user questions and support.</em>
+			The EclipseLink Newsgroup is the main forum for user questions and support.
 		</section>
 		<section
 			name="News Reader Access"
