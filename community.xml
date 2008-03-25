@@ -24,12 +24,14 @@
 		<section
 			name="eclipselink-users@eclipse.org"
 			link="http://dev.eclipse.org/mailman/listinfo/eclipselink-users">
-			<em>User questions and discussions [<a href="http://dev.eclipse.org/mhonarc/lists/eclipselink-users/maillist.html">archive</a>]</em>
+			<em>User questions and discussions [<a href="http://dev.eclipse.org/mhonarc/lists/eclipselink-users/maillist.html">archive</a>, 
+			<a href="http://www.nabble.com/EclipseLink---Users-f26658.html">Nabble Forum</a>]</em>
 		</section>
 		<section
 			name="eclipselink-dev@eclipse.org"
 			link="http://dev.eclipse.org/mailman/listinfo/eclipselink-dev">
-			<em>Developer announcements and discussions [<a href="http://dev.eclipse.org/mhonarc/lists/eclipselink-dev/maillist.html">archive</a>]</em>
+			<em>Developer announcements and discussions [<a href="http://dev.eclipse.org/mhonarc/lists/eclipselink-dev/maillist.html">archive</a>, 
+			<a href="http://www.nabble.com/EclipseLink---Dev-f26332.html">Nabble Forum</a>]</em>
 		</section>
 	</section>
 
