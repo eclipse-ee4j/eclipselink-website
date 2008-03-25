@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sections title="EclipseLink">
-	<section class="main" name="Newsgroup">
+	<section class="main" name="Newsgroup" image="/eclipselink/images/community.jpg">
 		<section
 			name="News Reader Access"
 			link="news://news.eclipse.org/eclipse.technology.eclipselink">
@@ -9,7 +9,7 @@
 		<section
 			name="Web Access"
 			link="http://www.eclipse.org/newsportal/thread.php?group=eclipse.technology.eclipselink">
-			<em><a href="http://www.eclipse.org/newsgroups/register.php">registration is required</a>a></em>
+			<em><a href="http://www.eclipse.org/newsgroups/register.php">registration is required</a></em>
 		</section>
 	</section>
 
