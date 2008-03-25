@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sections title="EclipseLink">
-	<section class="none">
+	<section class="none" name="About EclipseLink">
 		<description>
-			The <b>Eclipse Persistence Services Project (EclipseLink)</b>
+			<table width="100%"><tr><td valign="top"><p align="justify">
+			The
+			<b>Eclipse Persistence Services Project (EclipseLink)</b>
 			project's goal is to provide an extensible framework that
 			will enable Java developers to interact with relational
 			databases, XML, and Enterprise Information Systems (EIS) in
@@ -11,10 +13,52 @@
 			Persistence API (JPA), Java API for XML Binding (JAXB), Java
 			Connector Architecture (JCA), and Service Data Objects
 			(SDO).
+			</p>
 
-			<div align="center">
+			<table border="0" cellpadding="5">
+					<tr height="9">	 
+						<td>
+							<a href="/eclipselink/community.php">
+								<img src="/eclipselink/images/community.jpg"/>
+							</a>
+						</td>
+						<td>
+							<table border="0" cellpadding="0">
+								<tr>
+				          			<td><font size="+1"><a href="/eclipselink/community.php">Community</a></font></td>
+								</tr>
+								<tr>
+					          		<td>Get help and interact with users and developers</td>
+					          	</tr>
+							</table>
+						</td>
+	          		</tr>
+	          		<tr>
+						<td>
+							<a href="/eclipselink/downloads">
+								<img src="/eclipselink/images/downloads.gif"/>
+							</a>
+						</td>
+						<td>
+							<table border="0" cellpadding="0">
+								<tr>
+				          			<td><font size="+1"><a href="/eclipselink/downloads">Downloads</a></font></td>
+								</tr>
+								<tr>
+					          		<td>Get the latest and greatest EclipseLink</td>
+					          	</tr>
+							</table>
+						</td>
+	          		</tr> 
+	         	</table>
+			</td>
+
+			<td>
 				<img src="images/EclipseLink-overview.png" border="0" width="600" />
-			</div>
+			</td>
+			</tr>
+			</table>			
+			
 		</description>
 	</section>
 	<section class="main" name="Project News">
@@ -34,7 +78,7 @@
 			link="http://www.eclipse.org/org/press-release/20080317_Equinox.php">
 			<em>March 2008</em>
 		</section>
-		<section name="EclipseLink Project Provisioned">
+		<section name="EclipseLink Provisioned">
 			<em>June 2007</em>
 		</section>
 	</section>

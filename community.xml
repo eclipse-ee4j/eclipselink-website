@@ -18,11 +18,15 @@
 	</section>
 
 	<section class="main" name="Mailing Lists">
-		<section image="/eclipselink/images/image-email.gif"/>
+		<section image="/eclipselink/images/image-email.gif">
+			Contributors should subscribe to the dev mailing list. 
+		</section>
 	</section>
 
 	<section class="main" name="Bugs">
-		<section image="/eclipselink/images/bug-report.png"/>
+		<section image="/eclipselink/images/bug-report.png">
+			The preferred way of reporting and discussing defects and enhancement requests is via <a href="http://www.eclipse.org/eclipselink/bugs">Bug Reports</a>.
+		</section>
 	</section>
 
 </sections>
