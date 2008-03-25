@@ -65,8 +65,7 @@
 		<section
 			name="EclipseLink Project to Deliver JPA 2.0 Reference Implementation"
 			link="http://www.eclipse.org/org/press-release/20080317_Eclipselink.php">
-			<em>March 2008<br/><br/>
-				Related Articles:<ul>
+			<em>March 2008 - Related Articles:<ul>
 				<li><a href="http://www.informationweek.com/software/showArticle.jhtml?articleID=206904549">Sun Turns To Eclipse To Get Object/Relational Mapping, Information Week</a></li>
 				<li><a href="http://www.infoworld.com/article/08/03/18/Oracle-EclipseLink-links-JCP-Eclipse_1.html">Oracle: EclipseLink links JCP, Eclipse, InfoWorld</a></li>
 				<li><a href="http://searchsoa.techtarget.com/news/article/0,289142,sid26_gci1306005,00.html">Eclipse, Sun and Oracle team up on persistence API, SearchSOA.com</a></li>
