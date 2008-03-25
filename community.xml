@@ -18,11 +18,11 @@
 	</section>
 
 	<section class="main" name="Mailing Lists">
-		<section image="/eclipselink/images/image-email.gif">
+		<section image="/eclipselink/images/image-email.gif"/>
 	</section>
 
 	<section class="main" name="Bugs">
-		<section image="/eclipselink/images/bug-report.png">
+		<section image="/eclipselink/images/bug-report.png"/>
 	</section>
 
 </sections>
