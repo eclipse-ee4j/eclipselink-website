@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sections title="EclipseLink">
-	<section class="main" name="Newsgroup" image="/eclipselink/images/community.jpg">
+	<section class="main" name="Newsgroup">
+		<section image="/eclipselink/images/community.jpg"/>
 		<section
 			name="News Reader Access"
 			link="news://news.eclipse.org/eclipse.technology.eclipselink">
