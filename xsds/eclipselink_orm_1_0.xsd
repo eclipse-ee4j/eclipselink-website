@@ -300,6 +300,8 @@
                    minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="embedded" type="orm:embedded"
                    minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="transformation" type="orm:transformation"
+                   minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="transient" type="orm:transient"
                    minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
@@ -921,6 +923,154 @@
         <xsd:element name="enumerated" type="orm:enumerated" minOccurs="0"/>
         <xsd:element name="convert" type="xsd:string" minOccurs="0"/>
       </xsd:choice>
+    </xsd:sequence>
+    <xsd:attribute name="name" type="xsd:string" use="required"/>
+    <xsd:attribute name="fetch" type="orm:fetch-type"/>
+    <xsd:attribute name="optional" type="xsd:boolean"/>
+    <xsd:attribute name="mutable" type="xsd:boolean"/>
+  </xsd:complexType>
+
+  <!-- **************************************************** -->
+
+  <xsd:complexType name="read-transformer">
+    <xsd:annotation>
+      <xsd:documentation>
+
+		/**
+		 * Annotation for org.eclipse.persistence.mappings.TransformationMapping.
+		 * Unless the TransformationMapping is write-only, it should have a ReadTransformer,
+		 * it defines transformation of database column(s) value(s)into attribute value.
+		 *  
+		 * Also unless it's a read-only mapping, either WriteTransformer annotation or WriteTransformers annotation
+		 * should be specified. Each WriteTransformer defines transformation of the attribute value to a single
+		 * database column value (column is specified in the WriteTransformer). 
+		 */ 
+		@Target({METHOD, FIELD})
+		@Retention(RUNTIME)
+		public @interface ReadTransformer {
+		    /**
+		     * User-defined class that must org.eclipse.persistence.mappings.transformers.AttributeTransformer interface.
+		     * The class will be instantiated, its buildAttributeValue will be used to create the value to be assigned
+		     * to the attribute.
+		     * Either transformerClass or method must be specified, but not both.
+		     */ 
+		    Class transformerClass() default void.class;
+		
+		    /**
+		     * The mapped class must have a method with this name which returns a value to be assigned
+		     * to the attribute (not assigns the value to the attribute).
+		     * Either transformerClass or method must be specified, but not both.
+		     */ 
+		    String method() default "";
+		}
+
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:attribute name="transformer-class" type="xsd:string"/>
+    <xsd:attribute name="method" type="xsd:string"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="write-transformer">
+    <xsd:annotation>
+      <xsd:documentation>
+
+		/**
+		 * Annotation for org.eclipse.persistence.mappings.TransformationMapping.
+		 * WriteTransformer defines transformation of the attribute value to a single
+		 * database column value (column is specified in the WriteTransformer).
+		 *  
+		 * A single WriteTransformer may be specified directly on the method or attribute.
+		 * Multiple WriteTransformers should be wrapped into WriteTransformers annotation.
+		 * No WriteTransformers specified for read-only mapping.
+		 * Unless the TransformationMapping is write-only, it should have a ReadTransformer,
+		 * it defines transformation of database column(s) value(s)into attribute value.
+		 */ 
+		@Target({METHOD, FIELD})
+		@Retention(RUNTIME)
+		public @interface WriteTransformer {
+		    /**
+		     * User-defined class that must implement org.eclipse.persistence.mappings.transformers.FieldTransformer interface.
+		     * The class will be instantiated, its buildFieldValue will be used to create the value to be written into
+		     * the database column.
+		     * Note that for ddl generation and returning to be supported the method buildFieldValue in the class
+		     * should be defined to return the relevant Java type, not just Object as defined in the interface,
+		     * for instance:
+		     * public Time buildFieldValue(Object instance, String fieldName, Session session).
+		     * Either transformerClass or method must be specified, but not both.
+		     */ 
+		    Class transformerClass() default void.class;
+		
+		    /**
+		     * The mapped class must have a method with this name which returns a value to be written into
+		     * the database column.
+		     * Note that for ddl generation and returning to be supported the method
+		     * should be defined to return a particular type, not just Object,
+		     * for instance:
+		     * public Time getStartTime().
+		     * The method may require @Transient annotation to avoid being mapped as @Basic by default.
+		     * Either transformerClass or method must be specified, but not both.
+		     */ 
+		    String method() default "";
+		
+		    /**
+		     * Specify here the column into which the value should be written.
+		     * The only case when this could be skipped is if a single WriteTransformer
+		     * annotates an attribute - the attribute's name will be
+		     * used as a column name.
+		     */ 
+		    Column column() default @Column;
+		}
+
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="column" type="orm:column"/>
+    </xsd:sequence>
+    <xsd:attribute name="transformer-class" type="xsd:string"/>
+    <xsd:attribute name="method" type="xsd:string"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="transformation">
+    <xsd:annotation>
+      <xsd:documentation>
+
+		/**
+		 * Transformation is an optional annotation for org.eclipse.persistence.mappings.TransformationMapping.
+		 * TransformationMapping allows to map an attribute to one or more database columns.
+		 * 
+		 * Transformation annotation is an optional part of TransformationMapping definition.
+		 * Unless the TransformationMapping is write-only, it should have a ReadTransformer,
+		 * it defines transformation of database column(s) value(s)into attribute value.
+		 * Also unless it's a read-only mapping, either WriteTransformer annotation or WriteTransformers annotation
+		 * should be specified. Each WriteTransformer defines transformation of the attribute value to a single
+		 * database column value (column is specified in the WriteTransformer). 
+		 */ 
+		@Target({METHOD, FIELD})
+		@Retention(RUNTIME)
+		public @interface Transformation {
+		    /**
+		     * (Optional) Defines whether the value of the field or property should
+		     * be lazily loaded or must be eagerly fetched. The EAGER strategy is a 
+		     * requirement on the persistence provider runtime that the value must be 
+		     * eagerly fetched. The LAZY strategy is a hint to the persistence provider 
+		     * runtime. If not specified, defaults to EAGER.
+		     */
+		    FetchType fetch() default EAGER;
+		    
+		    /**
+		     * (Optional) The optional element is a hint as to whether the value
+		     *  of the field or property may be null. It is disregarded
+		     *  for primitive types, which are considered non-optional.
+		     */
+		    boolean optional() default true;
+		}
+
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="read-transformer" type="orm:read-transformer"/>
+      <xsd:element name="write-transformer" type="orm:write-transformer" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="access" type="orm:access-type" minOccurs="0"/>
     </xsd:sequence>
     <xsd:attribute name="name" type="xsd:string" use="required"/>
     <xsd:attribute name="fetch" type="orm:fetch-type"/>
