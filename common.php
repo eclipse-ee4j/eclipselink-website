@@ -16,7 +16,6 @@
 	
 	}   
 	function add2contributors() {
-	   global $Nav;
 	}
 	
 	$projectInfo->generate_common_nav( $Nav, "add2users", NULL, "add2contributors" );
