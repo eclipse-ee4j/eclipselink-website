@@ -11,53 +11,53 @@
 		<description>
 			<table width="100%" cellpadding="10">
 			<tr>
-			<td width="33%" align="center"><img src="images/doug-clarke.jpg" width="100"/><br/>Doug Clarke<br/>Project Co-Lead</td>
-			<td width="33%" align="center"><img src="images/peter_krogh.jpg" width="100"/><br/>Peter Krogh<br/>Project Co-Lead</td>
+			<td width="33%" align="center"><img src="images/doug-clarke.jpg" width="100"/><br/>Doug Clarke<br/>Project Co-Lead<br/>Oracle<br/>Ottawa, Ontario, Canada</td>
+			<td width="33%" align="center"><img src="images/peter_krogh.jpg" width="100"/><br/>Peter Krogh<br/>Project Co-Lead<br/>Oracle<br/>Ottawa, Ontario, Canada</td>
 			<td/>
 			</tr>
 
 			<tr>
-			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Rick Barkhouse</td>
-			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Leslie Davis</td>
-			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Chris Delahunt</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Rick Barkhouse<br/>Oracle<br/>Ottawa, Ontario, Canada</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Leslie Davis<br/>Oracle<br/>Raleigh, North Carolina, USA</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Chris Delahunt<br/>Oracle<br/>Ottawa, Ontario, Canada</td>
 			</tr>
 			<tr>
-			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Blaise Doughan</td>
-			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Pascal Filion</td>
-			<td width="33%" align="center"><img src="images/neil_hauge.jpg" width="100"/><br/>Neil Hauge</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Blaise Doughan<br/>Oracle<br/>Ottawa, Ontario, Canada</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Pascal Filion<br/>Oracle<br/>Raleigh, North Carolina, USA</td>
+			<td width="33%" align="center"><img src="images/neil_hauge.jpg" width="100"/><br/>Neil Hauge<br/>Oracle<br/>Raleigh, North Carolina, USA</td>
 			</tr>
 			<tr>
-			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Andrei Ilitchev</td>
-			<td width="33%" align="center"><img src="images/mike_keith.jpg" width="100"/><br/>Mike Keith</td>
-			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Matt MacIvor</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Andrei Ilitchev<br/>Oracle<br/>Ottawa, Ontario, Canada</td>
+			<td width="33%" align="center"><img src="images/mike_keith.jpg" width="100"/><br/>Mike Keith<br/>Oracle<br/>Ottawa, Ontario, Canada</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Matt MacIvor<br/>Oracle<br/>Ottawa, Ontario, Canada</td>
 			</tr>
 			<tr>
-			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>David McCann</td>
-			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>David Minsky</td>
-			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Mike Norman</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>David McCann<br/>Oracle<br/>Ottawa, Ontario, Canada</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>David Minsky<br/>Oracle<br/>Ottawa, Ontario, Canada</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Mike Norman<br/>Oracle<br/>Ottawa, Ontario, Canada</td>
 			</tr>
 			<tr>
-			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Michael O'Brien</td>
-			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Guy Pelletier</td>
-			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Peter Purich</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Michael O'Brien<br/>Oracle<br/>Ottawa, Ontario, Canada</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Guy Pelletier<br/>Oracle<br/>Ottawa, Ontario, Canada</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Peter Purich<br/>Oracle<br/>Ottawa, Ontario, Canada</td>
 			</tr>
 			<tr>
-			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Liza Rekadze</td>
-			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Rick Sapir</td>
-			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Denise Smith</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Liza Rekadze<br/>Oracle<br/>Ottawa, Ontario, Canada</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Rick Sapir<br/>Oracle<br/>Ottawa, Ontario, Canada</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Denise Smith<br/>Oracle<br/>Ottawa, Ontario, Canada</td>
 			</tr>
 			<tr>
-			<td width="33%" align="center"><img src="images/ssmith.jpg" width="100"/><br/>Shaun Smith</td>
-			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>James Sutherland</td>
-			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Edwin Tang</td>
+			<td width="33%" align="center"><img src="images/ssmith.jpg" width="100"/><br/>Shaun Smith<br/>Oracle<br/>Toronto, Ontario, Canada</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>James Sutherland<br/>Oracle<br/>Ottawa, Ontario, Canada</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Edwin Tang<br/>Oracle<br/>Ottawa, Ontario, Canada</td>
 			</tr>
 			<tr>
-			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>David Twelves</td>
-			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Brian Vosburgh</td>
-			<td width="33%" align="center"><img src="images/tom_ware.jpg" width="100"/><br/>Tom Ware</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>David Twelves<br/>Oracle<br/>Ottawa, Ontario, Canada</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Brian Vosburgh<br/>Oracle<br/>Raleigh, North Carolina, USA</td>
+			<td width="33%" align="center"><img src="images/tom_ware.jpg" width="100"/><br/>Tom Ware<br/>Oracle<br/>Ottawa, Ontario, Canada</td>
 			</tr>
 			<tr>
-			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Gordon Yorke</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Gordon Yorke<br/>Oracle<br/>Ottawa, Ontario, Canada</td>
 			</tr>			
 			</table>
 		</description>
