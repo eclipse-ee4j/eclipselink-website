@@ -7,13 +7,29 @@
 		<section name="Mentors" link="#mentors" />
 	</section>
 
-	<section class="developers" name="Committers(28)" anchor="committers">
+	<section class="main" name="Committers(28)" anchor="committers">
+		<description>
+			<table width="100%">
+			<tr>
+			<td width="33%" align="center">Doug Clarke</td>
+			<td width="33%" align="center">Peter Krogh</td>
+			<td width="33%" align="center">Shaun Smith</td>
+			</tr>
+
+			<tr>
+			<td width="33%" align="center">Mike Keith</td>
+			<td width="33%" align="center">Gordon Yorke</td>
+			<td width="33%" align="center">Tom Ware</td>
+			</tr>
+
+			</table>
+		</description>
 	</section>
 
-	<section class="developers" name="Contributors" anchor="contributors">
+	<section class="main" name="Contributors" anchor="contributors">
 	</section>
 
-	<section class="developers" name="Mentors" anchor="mentors">
+	<section class="main" name="Mentors" anchor="mentors">
 	</section>
 	
 	<section class="infobox" name = "IP Log">
