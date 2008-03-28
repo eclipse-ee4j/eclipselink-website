@@ -77,6 +77,28 @@
 		</div>
 	</xsl:template>
 
+	<xsl:template match="section" mode="developers">
+		<div class="homeitem3col">
+			<xsl:if test="@anchor">
+				<a>
+					<xsl:attribute name="name">
+						<xsl:value-of select="@anchor" />
+					</xsl:attribute>
+				</a>
+			</xsl:if>
+			<h3>
+				<xsl:value-of select="@name" />
+			</h3>
+			<xsl:apply-templates select="description" mode="body" />
+			
+			<table width="100%"/>
+			<tr>
+			<xsl:apply-templates select="description" mode="body" />
+			</tr>
+			</td>
+		</div>
+	</xsl:template>
+
 	<xsl:template match="section" mode="infobox">
 		<div class="sideitem">
 			<h6>
@@ -163,6 +185,22 @@
 		<p>
 			<xsl:apply-templates mode="body" />
 		</p>
+	</xsl:template>
+
+	<xsl:template match="committer" mode="body">
+		<td valign="top" width="33%">
+		<div align="center">
+			<img>
+				<xsl:attribute name="src">
+					<xsl:value-of select="@image" />
+				</xsl:attribute>
+			</img>
+			<h6>
+				<xsl:value-of select="@name" />
+			</h6>
+			<xsl:apply-templates mode="body" />
+		</div>
+		</td>
 	</xsl:template>
 
 	<xsl:template match="*|@*|text()" mode="body">

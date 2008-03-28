@@ -7,13 +7,16 @@
 		<section name="Mentors" link="#mentors" />
 	</section>
 
-	<section class="main" name="Committers(#)" anchor="committers">
+	<section class="developers" name="Committers(28)" anchor="committers">
+		<committer name="Doug Clarke" image="images/doug-clarke.jpg">
+		Project-co-lead
+		</committer>
 	</section>
 
-	<section class="main" name="Contributors" anchor="contributors">
+	<section class="developers" name="Contributors" anchor="contributors">
 	</section>
 
-	<section class="main" name="mentors" anchor="Mentors">
+	<section class="developers" name="Mentors" anchor="mentors">
 	</section>
 	
 	<section class="infobox" name = "IP Log">
