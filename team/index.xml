@@ -13,15 +13,52 @@
 			<tr>
 			<td width="33%" align="center"><img src="images/doug-clarke.jpg" width="100"/><br/>Doug Clarke<br/>Project Co-Lead</td>
 			<td width="33%" align="center"><img src="images/peter_krogh.jpg" width="100"/><br/>Peter Krogh<br/>Project Co-Lead</td>
-			<td width="33%" align="center"><img src="images/ssmith.jpg" width="100"/><br/>Shaun Smith<br/>Ecosystem Guy</td>
+			<td/>
 			</tr>
 
 			<tr>
-			<td width="33%" align="center"><img src="images/mike_keith.jpg" width="100"/><br/>Mike Keith</td>
-			<td width="33%" align="center">Gordon Yorke</td>
-			<td width="33%" align="center">Tom Ware</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Rick Barkhouse</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Leslie Davis</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Chris Delahunt</td>
 			</tr>
-
+			<tr>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Blaise Doughan</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Pascal Filion</td>
+			<td width="33%" align="center"><img src="images/neil_hauge.jpg" width="100"/><br/>Neil Hauge</td>
+			</tr>
+			<tr>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Andrei Ilitchev</td>
+			<td width="33%" align="center"><img src="images/mike_keith.jpg" width="100"/><br/>Mike Keith</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Matt MacIvor</td>
+			</tr>
+			<tr>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>David McCann</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>David Minsky</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Mike Norman</td>
+			</tr>
+			<tr>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Michael O'Brien</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Guy Pelletier</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Peter Purich</td>
+			</tr>
+			<tr>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Liza Rekadze</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Rick Sapir</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Denise Smith</td>
+			</tr>
+			<tr>
+			<td width="33%" align="center"><img src="images/ssmith.jpg" width="100"/><br/>Shaun Smith</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>James Sutherland</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Edwin Tang</td>
+			</tr>
+			<tr>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>David Twelves</td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Brian Vosburgh</td>
+			<td width="33%" align="center"><img src="images/tom_ware.jpg" width="100"/><br/>Tom Ware</td>
+			</tr>
+			<tr>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Gordon Yorke</td>
+			</tr>			
 			</table>
 		</description>
 	</section>
