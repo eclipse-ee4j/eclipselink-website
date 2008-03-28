@@ -14,8 +14,9 @@
 		 $Nav->addCustomNav("User Guide (wiki)", "http://wiki.eclipse.org/EclipseLink/UserManual", "", 2);
 	}   
 	
-	}   
 	function add2contributors() {
+	   global $Nav;
+		 $Nav->addCustomNav("EclipseLink Team", "http://www.eclipse.org/eclipselink/team", "", 2);
 	}
 	
 	$projectInfo->generate_common_nav( $Nav, "add2users", NULL, "add2contributors" );
