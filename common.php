@@ -17,7 +17,7 @@
 	}   
 	function add2contributors() {
 	   global $Nav;
-		 $Nav->addCustomNav("EclipseLink Team", "http://www.eclipse.org/eclipselink/team/index.php", "", 2);
+		 $Nav->addCustomNav("EclipseLink Team", "http://www.eclipse.org/eclipselink/team/index.php", "Test", 2);
 	}
 	
 	$projectInfo->generate_common_nav( $Nav, "add2users", NULL, "add2contributors" );

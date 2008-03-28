@@ -4,7 +4,6 @@
 	<section class="none">
 		<section name="Committers" link="#committers" />
 		<section name="Contributors" link="#contributors" />
-		<section name="Mentors" link="#mentors" />
 	</section>
 
 	<section class="main" name="Committers(27)" anchor="committers">
@@ -66,9 +65,6 @@
 	<section class="main" name="Contributors" anchor="contributors">
 	</section>
 
-	<section class="main" name="Mentors" anchor="mentors">
-	</section>
-	
 	<section class="infobox" name = "IP Log">
 		<description>See committer/contributor <a href="http://wiki.eclipse.org/EclipseLink/IPLog">IP log</a>.</description>
 	</section>
