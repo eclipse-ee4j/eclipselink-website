@@ -11,13 +11,13 @@
 		<description>
 			<table width="100%" cellpadding="10">
 			<tr>
-			<td width="33%" align="center"><img src="images/doug-clarke.jpg" width="100"/>Doug Clarke<br/>Project Co-Lead</td>
+			<td width="33%" align="center"><img src="images/doug-clarke.jpg" width="100"/><br/>Doug Clarke<br/>Project Co-Lead</td>
 			<td width="33%" align="center">Peter Krogh</td>
-			<td width="33%" align="center"><img src="images/ssmith.jpg" width="100"/>Shaun Smith<br/>Ecosystem Guy</td>
+			<td width="33%" align="center"><img src="images/ssmith.jpg" width="100"/><br/>Shaun Smith<br/>Ecosystem Guy</td>
 			</tr>
 
 			<tr>
-			<td width="33%" align="center"><img src="images/mike_keith.jpg" width="100"/>Mike Keith</td>
+			<td width="33%" align="center"><img src="images/mike_keith.jpg" width="100"/><br/>Mike Keith</td>
 			<td width="33%" align="center">Gordon Yorke</td>
 			<td width="33%" align="center">Tom Ware</td>
 			</tr>
