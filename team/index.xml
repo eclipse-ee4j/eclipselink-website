@@ -17,7 +17,7 @@
 	</section>
 	
 	<section class="infobox" name = "IP Log">
-		See committer/contributor <a href="http://wiki.eclipse.org/EclipseLink/IPLog">IP log</a>.
+		<description>See committer/contributor <a href="http://wiki.eclipse.org/EclipseLink/IPLog">IP log</a>.</description>
 	</section>
 
 </sections>
