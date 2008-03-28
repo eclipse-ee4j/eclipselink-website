@@ -9,6 +9,7 @@
 	function add2users() {
 	   global $Nav;
 		 $Nav->addCustomNav("Community", "/eclipselink/community.php", "", 2);
+		 $Nav->addCustomNav("Team Blog", "http://eclipselink.blogspot.com", "", 2);
 		 $Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/EclipseLink", "", 2);
 		 $Nav->addCustomNav("Users Mailing List", "https://dev.eclipse.org/mailman/listinfo/eclipselink-users", "", 2);
 		 $Nav->addCustomNav("User Guide (wiki)", "http://wiki.eclipse.org/EclipseLink/UserManual", "", 2);
