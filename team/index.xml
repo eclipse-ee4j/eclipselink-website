@@ -10,13 +10,13 @@
 		<description>
 			<table width="100%" cellpadding="10">
 			<tr>
-			<td width="33%" align="center"><img src="images/doug-clarke.jpg" width="100"/><br/><h3>Doug Clarke</h3>Project Co-Lead<br/>Oracle<br/>Ottawa, Ontario, Canada</td>
+			<td width="33%" align="center"><img src="images/doug-clarke.jpg" width="100"/><br/><h3>Doug Clarke</h3>Project Co-Lead<br/>Oracle<br/>Ottawa, Ontario, Canada<a href="http://java-persistence.blogspot.com/">Java Persistence Blog</a></td>
 			<td width="33%" align="center"><img src="images/peter_krogh.jpg" width="100"/><br/>Peter Krogh<br/>Project Co-Lead<br/>Oracle<br/>Ottawa, Ontario, Canada</td>
 			<td/>
 			</tr>
 
 			<tr>
-			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Rick Barkhouse<br/>Oracle<br/>Ottawa, Ontario, Canada<br/><a href="http://java-persistence.blogspot.com/">Java Persistence Blog</a></td>
+			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Rick Barkhouse<br/>Oracle<br/>Ottawa, Ontario, Canada<br/></td>
 			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Leslie Davis<br/>Oracle<br/>Raleigh, North Carolina, USA</td>
 			<td width="33%" align="center"><img src="images/toplink.jpg" width="100"/><br/>Chris Delahunt<br/>Oracle<br/>Ottawa, Ontario, Canada</td>
 			</tr>
