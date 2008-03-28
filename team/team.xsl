@@ -187,7 +187,7 @@
 		</p>
 	</xsl:template>
 
-	<xsl:template match="committer" mode="body">
+	<xsl:template match="developer" mode="body">
 		<td valign="top" width="33%">
 		<div align="center">
 			<img>

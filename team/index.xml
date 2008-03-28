@@ -8,9 +8,9 @@
 	</section>
 
 	<section class="developers" name="Committers(28)" anchor="committers">
-		<committer name="Doug Clarke" image="images/doug-clarke.jpg">
+		<developer name="Doug Clarke" image="images/doug-clarke.jpg">
 		Project-co-lead
-		</committer>
+		</developer>
 	</section>
 
 	<section class="developers" name="Contributors" anchor="contributors">
