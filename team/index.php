@@ -12,10 +12,10 @@ $xml = DOMDocument::load('index.xml');
 //Set the page title
 $xpath = new DOMXPath($xml);
 $titleNode = $xpath->query("/sections/attribute::title")->item(0);
-$pageTitle = ($titleNode != null) ? $titleNode->nodeValue : "eclipse.org eclipselink download page";
+$pageTitle = ($titleNode != null) ? $titleNode->nodeValue : "EclipseLink Team";
 
 // Load the XSL source
-$xsl = DOMDocument::load($root . 'team.xsl');
+$xsl = DOMDocument::load($root . '/eclipselink/team/team.xsl');
 
 // Configure the transformer
 $proc = new XSLTProcessor;

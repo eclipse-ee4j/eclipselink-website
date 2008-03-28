@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sections title="EclipseLink Team">
 
+<!-- 
 	<section class="none">
 		<section name="Committers" link="#committers" />
 		<section name="Contributors" link="#contributors" />
 		<section name="Mentors" link="#mentors" />
 	</section>
-	
+-->
 	<section class="main" name="Committers(#)" anchor="committers">
 	</section>
 
