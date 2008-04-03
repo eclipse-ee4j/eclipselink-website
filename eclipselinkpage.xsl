@@ -37,7 +37,7 @@
 					<form action="http://www.google.com/cse" id="cse-search-box">
 						<input type="hidden" name="cx"
 							value="002128250543942842320:qffgtrd2s3k" />
-						<input type="text" name="q" size="20" maxlength="2048" /><br/>
+						<input type="text" name="q" size="24" maxlength="2048" /><br/>
 						<input type="submit" name="sa" value="Search" />
 					</form>
 				</div>
