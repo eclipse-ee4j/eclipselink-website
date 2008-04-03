@@ -33,7 +33,7 @@
 				</div>
 				
 				<div class="sideitem" align="center">
-					<h6>Search EclipseLink Wiki</h6>			
+					<h6>Search <a href="http://wiki.eclipse.org/EclipseLink">EclipseLink Wiki</a></h6>			
 					<form action="http://www.google.com/cse" id="cse-search-box">
 						<input type="hidden" name="cx"
 							value="002128250543942842320:qffgtrd2s3k" />
