@@ -16,6 +16,9 @@
 					mode="none" />
 				<xsl:apply-templates select="section[@class='main']"
 					mode="main" />
+				<div align="center">
+					<script src="http://gmodules.com/ig/ifr?url=http://www.google.com/coop/api/002128250543942842320/cse/qffgtrd2s3k/gadget&amp;synd=open&amp;w=320&amp;h=75&amp;title=EclipseLink+Wiki&amp;border=%23ffffff%7C3px%2C1px+solid+%23999999&amp;output=js"></script>
+				</div>
 			</div>
 			<div id="rightcolumn">
 		
@@ -32,10 +35,6 @@
 					</div>
 				</div>
 				
-				<div class="sideitem">
-					<script src="http://gmodules.com/ig/ifr?url=http://www.google.com/coop/api/002128250543942842320/cse/qffgtrd2s3k/gadget&amp;synd=open&amp;w=320&amp;h=75&amp;title=EclipseLink+Wiki&amp;border=%23ffffff%7C3px%2C1px+solid+%23999999&amp;output=js"></script>
-				</div>
-
 				<xsl:apply-templates select="section[@class='infobox']"
 					mode="infobox" />
 			</div>
