@@ -101,6 +101,10 @@
 	</section>
 
 	<section class="main" name="Project News">
+		<section name="EclipseLink Webinar Available: Introduction and JPA Feature Overview"
+				 link="http://live.eclipse.org/node/490">
+				 <em>May 1, 2008</em>
+		</section>
 		<section
 			name="EclipseLink Project to Deliver JPA 2.0 Reference Implementation"
 			link="http://www.eclipse.org/org/press-release/20080317_Eclipselink.php">
