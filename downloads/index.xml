@@ -27,8 +27,7 @@
 	</section>
   
  	
-    <section class="main" name="1.0 Milestone OSGi Plugins">
-        <img src="http://www.eclipse.org/images/new.gif" border="0" />
+    <section class="main" name=<img src="http://www.eclipse.org/images/new.gif" border="0" /> "1.0 Milestone OSGi Plugins">
  
         <section 
             name="1.0 Milestone 7 OSGi plugins - eclipselink-plugins-incubation-1.0M7.zip" 
