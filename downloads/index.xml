@@ -25,6 +25,15 @@
 			name="1.0 Milestone 1 - eclipselink-1.0M1-incubation.zip"
 			link="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/eclipselink-1.0M1-incubation.zip" />
 	</section>
+  
+ 	
+    <section class="main" name="1.0 Milestone OSGi Plugins">
+        <img src="http://www.eclipse.org/images/new.gif" border="0" />
+ 
+        <section 
+            name="1.0 Milestone 7 OSGi plugins - eclipselink-plugins-incubation-1.0M7.zip" 
+            link="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/eclipselink-plugins-incubation-1.0M7.zip"/>
+    </section>
 	
 	<section class="main" name="1.0 Nightly Builds">
 		<section name="1.0 Nightly Builds" link="nightly.php" />
