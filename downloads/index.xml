@@ -4,6 +4,9 @@
 	
 	<section class="main" name="1.0 Milestone Builds">
         <section 
+            name="1.0 Milestone 8 - eclipselink-incubation-1.0M8.zip  - June 2008" 
+            link="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/eclipselink-incubation-1.0M8.zip"/>
+        <section 
             name="1.0 Milestone 7 - eclipselink-incubation-1.0M7.zip  - May 2008" 
             link="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/eclipselink-incubation-1.0M7.zip"/>
         <section 
@@ -28,6 +31,9 @@
   
  	
     <section class="main" name="*NEW* 1.0 Milestone OSGi Plugins">
+          <section 
+            name="1.0 Milestone 8 OSGi plugins - eclipselink-plugins-incubation-1.0M7.zip  - June 2008" 
+            link="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/eclipselink-plugins-incubation-1.0M8.zip"/>
          <section 
             name="1.0 Milestone 7 OSGi plugins - eclipselink-plugins-incubation-1.0M7.zip  - May 2008" 
             link="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/eclipselink-plugins-incubation-1.0M7.zip"/>
