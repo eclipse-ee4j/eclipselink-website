@@ -101,6 +101,11 @@
 	</section>
 
 	<section class="main" name="Project News">
+        <section name="EclipseLink M8 available for download"
+                 link="http://eclipse.org/eclipselink/downloads">
+                 <em>June 5, 2008</em>
+        </section>
+
 		<section name="EclipseLink Webinar Available: Introduction and JPA Feature Overview"
 				 link="http://live.eclipse.org/node/490">
 				 <em>May 1, 2008</em>
