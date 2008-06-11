@@ -13,6 +13,7 @@
 		 $Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/EclipseLink", "", 2);
 		 $Nav->addCustomNav("Users Mailing List", "https://dev.eclipse.org/mailman/listinfo/eclipselink-users", "", 2);
 		 $Nav->addCustomNav("User Guide (wiki)", "http://wiki.eclipse.org/EclipseLink/UserManual", "", 2);
+		 $Nav->addCustomNav("FishEye", "http://fisheye2.atlassian.com/browse/eclipselink", "", 2);
 	}   
 	
 	function add2contributors() {
