@@ -1,1 +1,1 @@
-RedirectMatch "/eclipselink/maven.repo" http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/eclipselink/maven.repo
+RedirectMatch "/eclipselink/maven.repo" http://www.eclipse.org/downloads/download.php?r=1&amp;file=/rt/eclipselink/maven.repo

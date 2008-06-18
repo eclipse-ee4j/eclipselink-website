@@ -7,12 +7,12 @@
 		</section>
 		<section
 			name="News Reader Access"
-			link="news://news.eclipse.org/eclipse.technology.eclipselink">
+			link="news://news.eclipse.org/eclipse.rt.eclipselink">
 			<em>See the <a href="http://wiki.eclipse.org/index.php/Webmaster_FAQ#How_do_I_access_the_Eclipse_newsgroups.3F">Webmaster FAQ</a> for instructions</em>
 		</section>
 		<section
 			name="Web Access"
-			link="http://www.eclipse.org/newsportal/thread.php?group=eclipse.technology.eclipselink">
+			link="http://www.eclipse.org/newsportal/thread.php?group=eclipse.rt.eclipselink">
 			Registration is <a href="http://www.eclipse.org/newsgroups/register.php">required</a>.
 		</section>
 	</section>

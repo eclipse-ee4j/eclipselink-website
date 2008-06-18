@@ -31,11 +31,11 @@
 			</table>
 			<ul>
 				<li>
-	                <a href="news://news.eclipse.org/eclipse.technology.eclipselink">
+	                <a href="news://news.eclipse.org/eclipse.rt.eclipselink">
 					News Reader Access</a>, for instructions see the <a href="http://wiki.eclipse.org/index.php/Webmaster_FAQ#How_do_I_access_the_Eclipse_newsgroups.3F">Webmaster FAQ</a>
 				</li>
 				<li>
-					<a href="http://www.eclipse.org/newsportal/thread.php?group=eclipse.technology.eclipselink">Web Access</a>,
+					<a href="http://www.eclipse.org/newsportal/thread.php?group=eclipse.rt.eclipselink">Web Access</a>,
 					registration is <a href="http://www.eclipse.org/newsgroups/register.php">required</a>. 
 				</li>
 			</ul>

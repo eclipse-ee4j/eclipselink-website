@@ -8,8 +8,8 @@
 			relational databases, XML, and Enterprise Information
 			Systems (EIS) in an efficient and productive manor.
 			EclipseLink will focus on supporting leading persistence
-			standards including the Java Persistence API (JPA), Java API
-			for XML Binding (JAXB), Java Connector Architecture (JCA),
+			standards including the Java Persistence API (JPA), Java Architecture
+			for XML Binding (JAXB), J2EE Connector Architecture (JCA),
 			and Service Data Objects (SDO).
 		</description>
 	</section>
@@ -17,7 +17,7 @@
 		<description>
 			<p>
 				The Eclipse Persistence Services Project is a
-				sub-project of the Technology project. This Project will
+				sub-project of the Runtime project. This Project will
 				provide persistence services in an extensible framework
 				focusing on performance, productivity, and flexibility.
 				The following services and functional areas are defined

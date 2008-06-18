@@ -8,25 +8,25 @@
             link="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/eclipselink-incubation-1.0M8.zip"/>
         <section 
             name="1.0 Milestone 7 - eclipselink-incubation-1.0M7.zip  - May 2008" 
-            link="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/eclipselink-incubation-1.0M7.zip"/>
+            link="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/eclipselink-incubation-1.0M7.zip"/>
         <section 
             name="1.0 Milestone 6 - eclipselink-incubation-1.0M6.zip  - Apr 2008" 
-            link="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/eclipselink-incubation-1.0M6.zip"/>
+            link="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/eclipselink-incubation-1.0M6.zip"/>
         <section 
             name="1.0 Milestone 5 - eclipselink-incubation-1.0M5.zip  - Mar 2008" 
-            link="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/eclipselink-incubation-1.0M5.zip"/>
+            link="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/eclipselink-incubation-1.0M5.zip"/>
 		<section
 			name="1.0 Milestone 4 - eclipselink-incubation-1.0M4.zip  - Feb 2008"
-			link="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/eclipselink-incubation-1.0M4.zip" />
+			link="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/eclipselink-incubation-1.0M4.zip" />
 		<section
 			name="1.0 Milestone 3 - eclipselink-incubation-1.0M3.zip  - Jan 2008"
-			link="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/eclipselink-incubation-1.0M3.zip" />
+			link="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/eclipselink-incubation-1.0M3.zip" />
 		<section
 			name="1.0 Milestone 2 - eclipselink-1.0M2-incubation.zip  - Dec 2007"
-			link="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/eclipselink-1.0M2-incubation.zip" />
+			link="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/eclipselink-1.0M2-incubation.zip" />
 		<section
 			name="1.0 Milestone 1 - eclipselink-1.0M1-incubation.zip  - Nov 2007"
-			link="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/eclipselink-1.0M1-incubation.zip" />
+			link="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/eclipselink-1.0M1-incubation.zip" />
 	</section>
   
  	
@@ -36,7 +36,7 @@
             link="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/eclipselink-plugins-incubation-1.0M8.zip"/>
          <section 
             name="1.0 Milestone 7 OSGi plugins - eclipselink-plugins-incubation-1.0M7.zip  - May 2008" 
-            link="http://www.eclipse.org/downloads/download.php?file=/technology/eclipselink/eclipselink-plugins-incubation-1.0M7.zip"/>
+            link="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/eclipselink-plugins-incubation-1.0M7.zip"/>
     </section>
 	
 	<section class="main" name="1.0 Nightly Builds">

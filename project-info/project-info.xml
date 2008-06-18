@@ -9,7 +9,7 @@
   <contributors url="/eclipselink/dev.php"/>
   <leaders url="/eclipselink/team.php"/>
 -->
- <cvs repository="/cvsroot/technology/">
+ <cvs repository="/cvsroot/rt/">
     <module path="org.eclipse.eclipselink" /> 
   </cvs>
   

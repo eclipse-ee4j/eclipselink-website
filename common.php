@@ -3,7 +3,7 @@
   $theme = "Phoenix";
 	
   require_once($_SERVER['DOCUMENT_ROOT'] . "/projects/common/project-info.class.php");
-  $projectInfo = new ProjectInfo("technology.eclipselink");
+  $projectInfo = new ProjectInfo("rt.eclipselink");
   $projectInfo->generate_common_nav( $Nav );
 
 	function add2users() {

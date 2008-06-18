@@ -22,8 +22,8 @@
 							advanced feature extensions, for the
 							dominant persistence standards for each
 							target data source; Java Persistence API
-							(JPA) for relational databases, Java API for
-							XML Binding (JAXB) for XML, Java Connector
+							(JPA) for relational databases, Java Architecture for
+							XML Binding (JAXB) for XML, J2EE Connector
 							Architecture (JCA) for EIS and other types
 							of legacy systems, and Service Data Objects
 							(SDO).
