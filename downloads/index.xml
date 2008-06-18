@@ -8,12 +8,14 @@
         <table border="1">                                           
           <tr>                                                         
             <th align="center"> Build ID </th>                       
+            <th align="center"> Release Date </th>                       
             <th align="center"> Archives </th>                       
             <th align="center"> </th>                                
             <th colspan="5" align="center"> Testing Results </th>  
           </tr>                                                        
           <tr>
             <td align="center"> 1.0M9 </td>
+            <td align="center"> June 18, 2008 </td>
             <td align="center">
               <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0M9/eclipselink-incubation-1.0M9.zip"> Install Archive </a> <br/>
               <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0M9/eclipselink-incubation-src-1.0M9.zip"> Source Archive </a> <br/>
@@ -28,6 +30,7 @@
           </tr>
           <tr>
             <td align="center"> 1.0M8 </td>
+            <td align="center"> June 4, 2008 </td>
             <td align="center">
               <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0M8/eclipselink-incubation-1.0M8.zip"> Install Archive </a> <br/>
               Source archive not available <br/>
@@ -42,6 +45,7 @@
           </tr>
           <tr>
             <td align="center"> 1.0M7 </td>
+            <td align="center"> May 8, 2008 </td>
             <td align="center">
               <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0M7/eclipselink-incubation-1.0M7.zip"> Install Archive </a> <br/>
               Source archive not available <br/>
@@ -55,21 +59,8 @@
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.0M7/eclipselink-sdo-lrg-1.0M7.html"> SDO </a> </td>
           </tr>
           <tr>
-            <td align="center"> 1.0M6.1 </td>
-            <td align="center">
-              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0M6.1/eclipselink-incubation-1.0M6.1.zip"> Install Archive </a> <br/>
-              Source archive not available <br/>
-              OSGi Plugins archive not available <br/>
-            </td>
-            <td align="center"> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.0M6.1/eclipselink-core-lrg-1.0M6.1.html"> CoreLRG </a> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.0M6.1/eclipselink-jpa-lrg-1.0M6.1.html"> JPA </a> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.0M6.1/eclipselink-jaxb-lrg-1.0M6.1.html"> Moxy (JAXB) </a> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.0M6.1/eclipselink-oxm-lrg-1.0M6.1.html"> Moxy (OXM) </a> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.0M6.1/eclipselink-sdo-lrg-1.0M6.1.html"> SDO </a> </td>
-          </tr>
-          <tr>
             <td align="center"> 1.0M6 </td>
+            <td align="center"> April 9, 2008 </td>
             <td align="center">
               <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0M6/eclipselink-incubation-1.0M6.zip"> Install Archive </a> <br/>
               Source archive not available <br/>
@@ -84,6 +75,7 @@
           </tr>
           <tr>
             <td align="center"> 1.0M5 </td>
+            <td align="center"> March 5, 2008 </td>
             <td align="center">
               <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0M5/eclipselink-incubation-1.0M5.zip"> Install Archive </a> <br/>
               Source archive not available <br/>
@@ -98,6 +90,7 @@
           </tr>
           <tr>
             <td align="center"> 1.0M4 </td>
+            <td align="center"> February 7, 2008 </td>
             <td align="center">
               <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0M4/eclipselink-incubation-1.0M4.zip"> Install Archive </a> <br/>
               Source archive not available <br/>
@@ -112,6 +105,7 @@
           </tr>
           <tr>
             <td align="center"> 1.0M3 </td>
+            <td align="center"> January 24, 2008 </td>
             <td align="center">
               <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0M3/eclipselink-incubation-1.0M3.zip"> Install Archive </a> <br/>
               Source archive not available <br/>
@@ -126,6 +120,7 @@
           </tr>
           <tr>
             <td align="center"> 1.0M2 </td>
+             <td align="center"> December 6, 2007 </td>
             <td align="center">
               <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0M2/eclipselink-incubation-1.0M2.zip"> Install Archive </a> <br/>
               Source archive not available <br/>
@@ -140,6 +135,7 @@
           </tr>
           <tr>
             <td align="center"> 1.0M1 </td>
+            <td align="center"> November 9, 2007 </td>
             <td align="center">
               <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0M1/eclipselink-incubation-1.0M1.zip"> Install Archive </a> <br/>
               Source archive not available <br/>
@@ -155,10 +151,14 @@
         </table>                                                                          
       </p>
     </description>                                                                                
-	</section>
+  </section>
  
- 	<section class="main" name="Maven">
-		<section name="Maven usage information" link="http://wiki.eclipse.org/EclipseLink/Maven" />
-	</section>
+  <section class="main" name="1.0 Nightly Builds">
+    <section name="1.0 Nightly Builds" link="nightly.php" />
+  </section>
+	
+  <section class="main" name="Maven">
+    <section name="Maven usage information" link="http://wiki.eclipse.org/EclipseLink/Maven" />
+  </section>
 	
 </sections>
