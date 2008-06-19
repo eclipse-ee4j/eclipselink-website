@@ -101,7 +101,11 @@
 	</section>
 
 	<section class="main" name="Project News">
-        <section name="EclipseLink M8 available for download"
+         <section name="EclipseLink M9 available for download"
+                 link="http://eclipse.org/eclipselink/downloads">
+                 <em>June 18, 2008</em>
+        </section>
+               <section name="EclipseLink M8 available for download"
                  link="http://eclipse.org/eclipselink/downloads">
                  <em>June 5, 2008</em>
         </section>
