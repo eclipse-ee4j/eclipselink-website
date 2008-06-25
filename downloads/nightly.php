@@ -1,7 +1,4 @@
 <?php  																														require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());    # All on the same line to unclutter the user's desktop'
-if($_GET['debug']) {
-    ini_set("error_reporing", E_ALL); ini_set("display_errors", "on");
-}
 $pageKeywords	= "Eclipse Persistence EclipseLink Download";
 $pageAuthor		= "Doug Clarke based on work by Bob Fraser";
 
