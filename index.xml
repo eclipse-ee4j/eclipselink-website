@@ -101,6 +101,10 @@
 	</section>
 
 	<section class="main" name="Project News">
+         <section name="EclipseLink Graduates from Incubation"
+                 link="http://java-persistence.blogspot.com/">
+                 <em>June 27, 2008</em>
+        </section>
          <section name="EclipseLink M10 available for download"
                  link="http://eclipse.org/eclipselink/downloads">
                  <em>June 25, 2008</em>
