@@ -19,7 +19,7 @@
 			</div>
 			<div id="rightcolumn">
 		
-				<div class="sideitem">
+				<!-- div class="sideitem">
 					<h6>Incubation</h6>
 					<div align="center">
 						<a href="/projects/what-is-incubation.php">
@@ -30,7 +30,7 @@
 						<a href="/projects/dev_process/validation-phase.php">
 						Incubation Phase</a>
 					</div>
-				</div>
+				</div -->
 				
 				<div class="sideitem" align="center">
 					<h6>Search <a href="http://wiki.eclipse.org/EclipseLink">EclipseLink Wiki</a></h6>			
