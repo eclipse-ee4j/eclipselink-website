@@ -101,6 +101,10 @@
 	</section>
 
 	<section class="main" name="Project News">
+ 		<section name="EclipseZone Article: Introducing EclipseLink"
+				 link="http://eclipse.dzone.com/articles/introducing-eclipselink">
+				 <em>June 30, 2008</em>
+		</section>
          <section name="EclipseLink Graduates from Incubation"
                  link="http://java-persistence.blogspot.com/">
                  <em>June 27, 2008</em>
