@@ -8,13 +8,7 @@
         On this page you will find EclipseLink 1.0.  After downloading, click <a href="http://wiki.eclipse.org/EclipseLink/UserManual">here to get started</a> 
         </p>
         <table border="1" width="100%">
-        <tr>
-            <td colspan="9" align="center">
-                <h1>Eclipse 1.0 Downloads</h1>
-            </td>
-
-        </tr>
-        <tr>
+         <tr>
             <td align="center">
                 <div>
                     <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0/eclipselink-1.0.zip"><h2>EclipseLink 1.0 Installer Zip (22 MB)</h2></a>
