@@ -5,11 +5,11 @@
   <section class="main" name="EclipseLink 1.0 Download">  
     <description>                                                      
        <h1>EclipseLink 1.0 Downloads</h1>
-        <p><br/>On this page you will find EclipseLink 1.0.  After downloading, click <a href="http://wiki.eclipse.org/EclipseLink/UserManual">here to get started</a>
-        <br/> 
+        <p>
+        On this page you will find EclipseLink 1.0.  After downloading, click <a href="http://wiki.eclipse.org/EclipseLink/UserManual">here to get started</a> 
         </p>
         <table width="100%" class="contentTable" cellspacing=0 style="font-size:95%;">
-        <tr class="dialogHeader">
+        <tr>
             <td colspan="2">
                 <h1 class="title" style="display:inline">Eclipse 1.0 Downloads</h1></a> 
             </td>
@@ -22,7 +22,7 @@
             <td width="60" align="center">
                 <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0/eclipselink-1.0.zip"><img src="http://www.eclipse.org/downloads/images/jee.jpg"></a>
             </td>
-            <td  valign="top" class="packageDesc">
+            <td  valign="top">
                 <div>
                     <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0/eclipselink-1.0.zip">EclipseLink 1.0 Installer Zip (22 MB)</a>
                 </div>
@@ -35,7 +35,7 @@
             <td width="60" align="center">
                 <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0/eclipselink-1.0.zip"><img src="http://www.eclipse.org/downloads/images/jee.jpg"></a>
             </td>
-            <td  valign="top" class="packageDesc">
+            <td  valign="top">
                 <div>
                     <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0/eclipselink-plugins-1.0.zip">EclipseLink 1.0 OSGi Bundles Zip (5 MB)</a>
                 </div>
@@ -48,7 +48,7 @@
             <td width="60" align="center">
                 <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0/eclipselink-1.0.zip"><img src="http://www.eclipse.org/downloads/images/jee.jpg"></a>
             </td>
-            <td  valign="top" class="packageDesc">
+            <td  valign="top">
                 <div>
                     <a href="http://mirror.cc.columbia.edu/pub/software/eclipse/rt/eclipselink/maven.repo/">EclipseLink 1.0 Maven Repository</a>
                 </div>
