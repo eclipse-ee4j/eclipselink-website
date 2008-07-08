@@ -11,7 +11,7 @@
         <p>
         On this page you will find EclipseLink 1.0.  After downloading, click <a href="http://wiki.eclipse.org/EclipseLink/UserManual">here to get started</a> 
         </p>
-        <table class="contentTable" width="100%" cellspacing=0 style="font-size:95%;">
+        <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
          <tr class="tableData">
             <td class="packageDesc">
                 <div>
