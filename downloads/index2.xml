@@ -8,9 +8,6 @@
     <div>
     <link rel="stylesheet" type="text/css" href="/downloads/packages/themes/eclipse/style.css" media="screen" />
     </div>                                                    
-        <p>
-        On this page you will find EclipseLink 1.0.  After downloading, click <a href="http://wiki.eclipse.org/EclipseLink/UserManual">here to get started</a> 
-        </p>
         <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
          <tr class="tableData">
             <td class="packageDesc">
@@ -29,6 +26,9 @@
                 </div>
                 <div>
                 <a href="http://wiki.eclipse.org/EclipseLink/Release/1.0">Release Notes</a>
+                </div>
+                <div>
+                <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a> 
                 </div>
                 <div class="bottomRow">
                 <div>
@@ -54,6 +54,9 @@
                 </div>
                 <div>
                 <a href="http://wiki.eclipse.org/EclipseLink/Release/1.0">Release Notes</a>
+                </div>
+                <div>
+                <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a> 
                 </div>
                 <div class="bottomRow">
                 <div>
@@ -83,7 +86,9 @@
                 <div>
                 <a href="http://wiki.eclipse.org/EclipseLink/Maven">Maven Usage</a>
                 </div>
-
+                <div>
+                <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a> 
+                </div>
                 <div class="bottomRow">
                 <div>
                 </div>
