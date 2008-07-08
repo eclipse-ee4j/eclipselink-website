@@ -18,7 +18,7 @@
             </td>
         </tr> 
                           
-        <tr class="tableData">
+        <tr>
             <td width="60" align="center">
                 <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0/eclipselink-1.0.zip"><img src="http://www.eclipse.org/downloads/images/jee.jpg"></a>
             </td>
@@ -31,7 +31,7 @@
                 </div>
             </td>
          </tr>
-        <tr class="tableData">
+        <tr>
             <td width="60" align="center">
                 <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0/eclipselink-1.0.zip"><img src="http://www.eclipse.org/downloads/images/jee.jpg"></a>
             </td>
@@ -44,7 +44,7 @@
                 </div>
             </td>
          </tr>
-        <tr class="tableData">
+        <tr>
             <td width="60" align="center">
                 <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0/eclipselink-1.0.zip"><img src="http://www.eclipse.org/downloads/images/jee.jpg"></a>
             </td>
