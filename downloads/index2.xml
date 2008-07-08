@@ -8,7 +8,7 @@
         <p>
         On this page you will find EclipseLink 1.0.  After downloading, click <a href="http://wiki.eclipse.org/EclipseLink/UserManual">here to get started</a> 
         </p>
-        <table border="1" width="100%">
+        <table class="contentTable" width="100%">
          <tr class="tableData">
             <td class="packageDesc">
                 <div>
