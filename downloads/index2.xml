@@ -11,23 +11,19 @@
         <table border="1" width="100%">
         <tr>
             <td colspan="9" align="center">
-                Eclipse 1.0 Downloads
+                <h1>Eclipse 1.0 Downloads</h1>
             </td>
-        </tr>               
+        </tr>
         <tr>
             <td>
                 <div>
-                    <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0/eclipselink-1.0.zip">EclipseLink 1.0 Installer Zip (22 MB)</a>
+                    <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0/eclipselink-1.0.zip"><h2>EclipseLink 1.0 Installer Zip (22 MB)</h2></a>
                 </div>
                 Contains eclipselink.jar, workbench.jar and their dependencies.  Get the Installer Zip to use EclipseLink 1.0 in JavaSE, or a non OSGi container. <a href="http://wiki.eclipse.org/EclipseLink/Release/1.0">Release Notes</a>              
                 <div class="bottomRow">
                 </div>
             </td>
          </tr>
-         </table>
-         </p>
-         <!--
-         
         <tr>
             <td width="60" align="center">
                 <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0/eclipselink-1.0.zip"><img src="http://www.eclipse.org/downloads/images/jee.jpg"></a>
@@ -54,8 +50,7 @@
                 </div>
             </td>
          </tr>
-       </table>
-       -->    
+       </table>   
       </description>                                                      
    </section> 
  
