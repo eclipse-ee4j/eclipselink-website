@@ -7,7 +7,7 @@
         <p>
  <!--       On this page you will find EclipseLink 1.0.  After downloading, click <a href="http://wiki.eclipse.org/EclipseLink/UserManual">here to get started</a> 
         </p> -->
-        <table border=1 width="100%" class="contentTable" cellspacing=0 style="font-size:95%;">
+        <table border=1 width="100%" cellspacing=0 style="font-size:95%;">
         <tr>
             <td colspan="2">
                 <h1 class="title" style="display:inline">Eclipse 1.0 Downloads</h1></a> 
