@@ -15,7 +15,7 @@
          <tr class="tableData">
             <td class="packageDesc">
                 <div>
-                    <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0/eclipselink-1.0.zip"><h2>EclipseLink 1.0 Installer Zip (22 MB)</h2></a>
+                    <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0/eclipselink-1.0.zip">EclipseLink 1.0 Installer Zip (22 MB)</a>
                 </div>
                 Contains eclipselink.jar, workbench.jar and their dependencies.  Get the Installer Zip to use EclipseLink 1.0 in JavaSE, or a non OSGi container.              
                 <div class="bottomRow">
@@ -23,7 +23,7 @@
                 </div>
                 </div>
             </td>
-            <td class="packageDesc">
+            <td width="120" class="downloadCol">
                 <div>
                 <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0/eclipselink-1.0.zip">Installer Zip</a>
                 </div>
@@ -48,7 +48,7 @@
                 </div>                
                 </div>
             </td>
-            <td class="packageDesc">
+            <td width="120" class="downloadCol">
                 <div>
                 <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0/eclipselink-plugins-1.0.zip">OSGi Bundles Zip</a>
                 </div>
@@ -63,7 +63,7 @@
             
          </tr>
         <tr class="tableData">
-            <td>
+            <td class="packageDesc">
                 <div>
                     <a class="packageTitle" href="http://mirror.cc.columbia.edu/pub/software/eclipse/rt/eclipselink/maven.repo/">EclipseLink 1.0 Maven Repository</a>
                 </div>
@@ -73,7 +73,7 @@
                 </div>
                 </div>
             </td>
-            <td>
+            <td width="120" class="downloadCol">
                 <div>
                 <a href="http://mirror.cc.columbia.edu/pub/software/eclipse/rt/eclipselink/maven.repo">Maven Repository</a>
                 </div>
