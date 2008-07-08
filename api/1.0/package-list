@@ -1,5 +1,6 @@
 org.eclipse.persistence
 org.eclipse.persistence.annotations
+org.eclipse.persistence.config
 org.eclipse.persistence.descriptors
 org.eclipse.persistence.descriptors.changetracking
 org.eclipse.persistence.descriptors.copying
@@ -21,7 +22,6 @@ org.eclipse.persistence.jaxb.compiler
 org.eclipse.persistence.jaxb.javamodel
 org.eclipse.persistence.jaxb.javamodel.reflection
 org.eclipse.persistence.jpa
-org.eclipse.persistence.jpa.config
 org.eclipse.persistence.jpa.osgi
 org.eclipse.persistence.logging
 org.eclipse.persistence.mappings
@@ -60,6 +60,8 @@ org.eclipse.persistence.sdo.helper.delegates
 org.eclipse.persistence.sdo.helper.extension
 org.eclipse.persistence.sdo.types
 org.eclipse.persistence.sequencing
+org.eclipse.persistence.services
+org.eclipse.persistence.services.mbean
 org.eclipse.persistence.sessions
 org.eclipse.persistence.sessions.broker
 org.eclipse.persistence.sessions.changesets
@@ -70,6 +72,7 @@ org.eclipse.persistence.sessions.coordination.corba.sun
 org.eclipse.persistence.sessions.coordination.jms
 org.eclipse.persistence.sessions.coordination.rmi
 org.eclipse.persistence.sessions.factories
+org.eclipse.persistence.sessions.interceptors
 org.eclipse.persistence.sessions.remote
 org.eclipse.persistence.sessions.remote.corba.sun
 org.eclipse.persistence.sessions.remote.rmi

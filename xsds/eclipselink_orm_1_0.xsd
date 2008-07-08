@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Java Persistence API object-relational mapping file schema -->
-<xsd:schema targetNamespace="http://www.eclipse.org/xml/ns/persistence/orm" 
-  xmlns:orm="http://www.eclipse.org/xml/ns/persistence/orm" 
+<xsd:schema targetNamespace="http://www.eclipse.org/eclipselink/xsds/persistence/orm" 
+  xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" 
   xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
   elementFormDefault="qualified" 
   attributeFormDefault="unqualified" 
@@ -128,6 +128,8 @@
     <xsd:sequence>
       <xsd:element name="xml-mapping-metadata-complete" type="orm:emptyType"
                    minOccurs="0"/>
+      <xsd:element name="exclude-default-mappings" type="orm:emptyType"
+                   minOccurs="0"/>             
       <xsd:element name="persistence-unit-defaults" 
                    type="orm:persistence-unit-defaults"
                    minOccurs="0"/>
@@ -221,6 +223,12 @@
                    minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="struct-converter" type="orm:struct-converter" 
                    minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="copy-policy" type="orm:copy-policy" 
+                     minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="instantiation-copy-policy" type="orm:instantiation-copy-policy" 
+                     minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="clone-copy-policy" type="orm:clone-copy-policy" 
+                     minOccurs="0" maxOccurs="1"/>
       <xsd:element name="sequence-generator" type="orm:sequence-generator" 
                    minOccurs="0"/>
       <xsd:element name="table-generator" type="orm:table-generator" 
@@ -248,6 +256,7 @@
       <xsd:element name="pre-update" type="orm:pre-update" minOccurs="0"/>
       <xsd:element name="post-update" type="orm:post-update" minOccurs="0"/>
       <xsd:element name="post-load" type="orm:post-load" minOccurs="0"/>
+      <xsd:element name="property" type="orm:property" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="attribute-override" type="orm:attribute-override" 
                    minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="association-override" type="orm:association-override"
@@ -259,6 +268,8 @@
     <xsd:attribute name="access" type="orm:access-type"/>
     <xsd:attribute name="metadata-complete" type="xsd:boolean"/>
     <xsd:attribute name="read-only" type="xsd:boolean"/>
+    <xsd:attribute name="existence-checking" type="orm:existence-type"/>
+    <xsd:attribute name="exclude-default-mappings" type="xsd:boolean"/>
   </xsd:complexType>
 
   <!-- **************************************************** -->
@@ -295,6 +306,8 @@
       <xsd:element name="one-to-many" type="orm:one-to-many"
                    minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="one-to-one" type="orm:one-to-one"
+                   minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="variable-one-to-one" type="orm:variable-one-to-one"
                    minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="many-to-many" type="orm:many-to-many" 
                    minOccurs="0" maxOccurs="unbounded"/>
@@ -466,6 +479,42 @@
   </xsd:complexType>
 
   <!-- **************************************************** -->
+  
+  <xsd:complexType name="property">
+    <xsd:annotation>
+      <xsd:documentation>
+        A user defined mapping's property.
+		@Target({METHOD, FIELD, TYPE})
+		@Retention(RUNTIME)
+		public @interface Property {
+			/**
+			* Property name.
+			*/ 
+			String name();
+			
+			/**
+			* String representation of Property value,
+			* converted to an instance of valueType.
+			*/ 
+			String value();
+			
+			/**
+			* Property value type.
+			* The value converted to valueType by ConversionManager.
+			* If specified must be a simple type that could be handled by 
+			* ConversionManager: 
+			* numerical, boolean, temporal.  
+			*/ 
+			Class valueType() default String.class;
+		}
+	</xsd:documentation>
+    </xsd:annotation>
+    <xsd:attribute name="name" type="xsd:string" use="required"/>
+    <xsd:attribute name="value" type="xsd:string" use="required"/>
+    <xsd:attribute name="value-type" type="xsd:string"/>
+    </xsd:complexType>
+    
+    <!-- **************************************************** -->
 
   <xsd:complexType name="query-hint">
     <xsd:annotation>
@@ -771,6 +820,18 @@
 
   <!-- **************************************************** -->
 
+  <xsd:complexType name="access-methods">
+    <xsd:annotation>
+      <xsd:documentation>
+
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:attribute name="get-method" type="xsd:string" use="required"/>
+    <xsd:attribute name="set-method" type="xsd:string" use="required"/>
+  </xsd:complexType>
+
+  <!-- **************************************************** -->
+
   <xsd:complexType name="attribute-override">
     <xsd:annotation>
       <xsd:documentation>
@@ -844,6 +905,9 @@
       <xsd:element name="convert" type="xsd:string" minOccurs="0"/>
       <xsd:element name="table-generator" type="orm:table-generator" minOccurs="0"/>
       <xsd:element name="sequence-generator" type="orm:sequence-generator" minOccurs="0"/>
+      <xsd:element name="property" type="orm:property" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="access-methods" type="orm:access-methods" 
+                       minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
     <xsd:attribute name="name" type="xsd:string" use="required"/>
     <xsd:attribute name="mutable" type="xsd:boolean"/>
@@ -863,6 +927,9 @@
     <xsd:sequence>
       <xsd:element name="attribute-override" type="orm:attribute-override" 
                    minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="property" type="orm:property" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="access-methods" type="orm:access-methods" 
+                       minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
     <xsd:attribute name="name" type="xsd:string" use="required"/>
   </xsd:complexType>
@@ -896,6 +963,9 @@
       <xsd:element name="column" type="orm:column" minOccurs="0"/>
       <xsd:element name="temporal" type="orm:temporal" minOccurs="0"/>
       <xsd:element name="convert" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="property" type="orm:property" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="access-methods" type="orm:access-methods" 
+                       minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
     <xsd:attribute name="name" type="xsd:string" use="required"/>
     <xsd:attribute name="mutable" type="xsd:boolean"/>
@@ -923,6 +993,9 @@
         <xsd:element name="enumerated" type="orm:enumerated" minOccurs="0"/>
         <xsd:element name="convert" type="xsd:string" minOccurs="0"/>
       </xsd:choice>
+      <xsd:element name="property" type="orm:property" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="access-methods" type="orm:access-methods" 
+                       minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
     <xsd:attribute name="name" type="xsd:string" use="required"/>
     <xsd:attribute name="fetch" type="orm:fetch-type"/>
@@ -938,28 +1011,34 @@
 
 		/**
 		 * Annotation for org.eclipse.persistence.mappings.TransformationMapping.
-		 * Unless the TransformationMapping is write-only, it should have a ReadTransformer,
-		 * it defines transformation of database column(s) value(s)into attribute value.
+		 * Unless the TransformationMapping is write-only, it should have a 
+		 * ReadTransformer, it defines transformation of database column(s) 
+		 * value(s)into attribute value.
 		 *  
-		 * Also unless it's a read-only mapping, either WriteTransformer annotation or WriteTransformers annotation
-		 * should be specified. Each WriteTransformer defines transformation of the attribute value to a single
-		 * database column value (column is specified in the WriteTransformer). 
+		 * Also unless it's a read-only mapping, either WriteTransformer 
+		 * annotation or WriteTransformers annotation should be specified. Each 
+		 * WriteTransformer defines transformation of the attribute value to a 
+		 * single database column value (column is specified in the 
+		 * WriteTransformer). 
 		 */ 
 		@Target({METHOD, FIELD})
 		@Retention(RUNTIME)
 		public @interface ReadTransformer {
 		    /**
-		     * User-defined class that must org.eclipse.persistence.mappings.transformers.AttributeTransformer interface.
-		     * The class will be instantiated, its buildAttributeValue will be used to create the value to be assigned
-		     * to the attribute.
+		     * User-defined class that must implement the 
+		     * org.eclipse.persistence.mappings.transformers.AttributeTransformer 
+		     * interface. The class will be instantiated, its 
+		     * buildAttributeValue will be used to create the value to be 
+		     * assigned to the attribute.
 		     * Either transformerClass or method must be specified, but not both.
 		     */ 
 		    Class transformerClass() default void.class;
 		
 		    /**
-		     * The mapped class must have a method with this name which returns a value to be assigned
-		     * to the attribute (not assigns the value to the attribute).
-		     * Either transformerClass or method must be specified, but not both.
+		     * The mapped class must have a method with this name which returns 
+		     * a value to be assigned to the attribute (not assigns the value to 
+		     * the attribute). Either transformerClass or method must be 
+		     * specified, but not both.
 		     */ 
 		    String method() default "";
 		}
@@ -976,47 +1055,52 @@
 
 		/**
 		 * Annotation for org.eclipse.persistence.mappings.TransformationMapping.
-		 * WriteTransformer defines transformation of the attribute value to a single
-		 * database column value (column is specified in the WriteTransformer).
+		 * WriteTransformer defines transformation of the attribute value to a 
+		 * single database column value (column is specified in the 
+		 * WriteTransformer).
 		 *  
-		 * A single WriteTransformer may be specified directly on the method or attribute.
-		 * Multiple WriteTransformers should be wrapped into WriteTransformers annotation.
-		 * No WriteTransformers specified for read-only mapping.
-		 * Unless the TransformationMapping is write-only, it should have a ReadTransformer,
-		 * it defines transformation of database column(s) value(s)into attribute value.
+		 * A single WriteTransformer may be specified directly on the method or 
+		 * attribute. Multiple WriteTransformers should be wrapped into 
+		 * WriteTransformers annotation. No WriteTransformers specified for 
+		 * read-only mapping. Unless the TransformationMapping is write-only, it 
+		 * should have a ReadTransformer, it defines transformation of database 
+		 * column(s) value(s)into attribute value.
 		 */ 
 		@Target({METHOD, FIELD})
 		@Retention(RUNTIME)
 		public @interface WriteTransformer {
 		    /**
-		     * User-defined class that must implement org.eclipse.persistence.mappings.transformers.FieldTransformer interface.
-		     * The class will be instantiated, its buildFieldValue will be used to create the value to be written into
-		     * the database column.
-		     * Note that for ddl generation and returning to be supported the method buildFieldValue in the class
-		     * should be defined to return the relevant Java type, not just Object as defined in the interface,
-		     * for instance:
+		     * User-defined class that must implement the 
+		     * org.eclipse.persistence.mappings.transformers.FieldTransformer 
+		     * interface. The class will be instantiated, its buildFieldValue 
+		     * will be used to create the value to be written into the database 
+		     * column. Note that for ddl generation and returning to be 
+		     * supported the method buildFieldValue in the class should be 
+		     * defined to return the relevant Java type, not just Object as 
+		     * defined in the interface, for instance:
 		     * public Time buildFieldValue(Object instance, String fieldName, Session session).
 		     * Either transformerClass or method must be specified, but not both.
 		     */ 
 		    Class transformerClass() default void.class;
 		
 		    /**
-		     * The mapped class must have a method with this name which returns a value to be written into
-		     * the database column.
-		     * Note that for ddl generation and returning to be supported the method
-		     * should be defined to return a particular type, not just Object,
-		     * for instance:
+		     * The mapped class must have a method with this name which returns 
+		     * a value to be written into the database column.
+		     * Note that for ddl generation and returning to be supported the 
+		     * method should be defined to return a particular type, not just 
+		     * Object, for instance:
 		     * public Time getStartTime().
-		     * The method may require @Transient annotation to avoid being mapped as @Basic by default.
+		     * The method may require a Transient annotation to avoid being 
+		     * mapped as Basic by default.
 		     * Either transformerClass or method must be specified, but not both.
 		     */ 
 		    String method() default "";
 		
 		    /**
 		     * Specify here the column into which the value should be written.
-		     * The only case when this could be skipped is if a single WriteTransformer
-		     * annotates an attribute - the attribute's name will be
-		     * used as a column name.
+		     * The only case when this could be skipped is if a single 
+		     * WriteTransformer annotates an attribute - the attribute's name 
+		     * will be used as a column name.
 		     */ 
 		    Column column() default @Column;
 		}
@@ -1035,25 +1119,31 @@
       <xsd:documentation>
 
 		/**
-		 * Transformation is an optional annotation for org.eclipse.persistence.mappings.TransformationMapping.
-		 * TransformationMapping allows to map an attribute to one or more database columns.
+		 * Transformation is an optional annotation for 
+		 * org.eclipse.persistence.mappings.TransformationMapping.
+		 * TransformationMapping allows to map an attribute to one or more 
+		 * database columns.
 		 * 
-		 * Transformation annotation is an optional part of TransformationMapping definition.
-		 * Unless the TransformationMapping is write-only, it should have a ReadTransformer,
-		 * it defines transformation of database column(s) value(s)into attribute value.
-		 * Also unless it's a read-only mapping, either WriteTransformer annotation or WriteTransformers annotation
-		 * should be specified. Each WriteTransformer defines transformation of the attribute value to a single
-		 * database column value (column is specified in the WriteTransformer). 
+		 * Transformation annotation is an optional part of 
+		 * TransformationMapping definition. Unless the TransformationMapping is 
+		 * write-only, it should have a ReadTransformer, it defines 
+		 * transformation of database column(s) value(s)into attribute value.
+		 * Also unless it's a read-only mapping, either WriteTransformer 
+		 * annotation or WriteTransformers annotation should be specified. Each 
+		 * WriteTransformer defines transformation of the attribute value to a 
+		 * single database column value (column is specified in the 
+		 * WriteTransformer). 
 		 */ 
 		@Target({METHOD, FIELD})
 		@Retention(RUNTIME)
 		public @interface Transformation {
 		    /**
-		     * (Optional) Defines whether the value of the field or property should
-		     * be lazily loaded or must be eagerly fetched. The EAGER strategy is a 
-		     * requirement on the persistence provider runtime that the value must be 
-		     * eagerly fetched. The LAZY strategy is a hint to the persistence provider 
-		     * runtime. If not specified, defaults to EAGER.
+		     * (Optional) Defines whether the value of the field or property 
+		     * should be lazily loaded or must be eagerly fetched. The EAGER 
+		     * strategy is a requirement on the persistence provider runtime 
+		     * that the value must be eagerly fetched. The LAZY strategy is a 
+		     * hint to the persistence provider runtime. If not specified, 
+		     * defaults to EAGER.
 		     */
 		    FetchType fetch() default EAGER;
 		    
@@ -1071,6 +1161,9 @@
       <xsd:element name="read-transformer" type="orm:read-transformer"/>
       <xsd:element name="write-transformer" type="orm:write-transformer" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="access" type="orm:access-type" minOccurs="0"/>
+      <xsd:element name="property" type="orm:property" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="access-methods" type="orm:access-methods" 
+                       minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
     <xsd:attribute name="name" type="xsd:string" use="required"/>
     <xsd:attribute name="fetch" type="orm:fetch-type"/>
@@ -1202,6 +1295,9 @@
       </xsd:choice>       
       <xsd:element name="cascade" type="orm:cascade-type" minOccurs="0"/>
       <xsd:element name="join-fetch" type="orm:join-fetch-type" minOccurs="0"/>
+      <xsd:element name="property" type="orm:property" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="access-methods" type="orm:access-methods" 
+                       minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
     <xsd:attribute name="name" type="xsd:string" use="required"/>
     <xsd:attribute name="target-entity" type="xsd:string"/>
@@ -1259,6 +1355,9 @@
       <xsd:element name="cascade" type="orm:cascade-type" minOccurs="0"/>
       <xsd:element name="private-owned" type="orm:emptyType" minOccurs="0"/>
       <xsd:element name="join-fetch" type="orm:join-fetch-type" minOccurs="0"/>
+      <xsd:element name="property" type="orm:property" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="access-methods" type="orm:access-methods" 
+                       minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
     <xsd:attribute name="name" type="xsd:string" use="required"/>
     <xsd:attribute name="target-entity" type="xsd:string"/>
@@ -1293,6 +1392,9 @@
       <xsd:element name="cascade" type="orm:cascade-type" minOccurs="0"/>
       <xsd:element name="private-owned" type="orm:emptyType" minOccurs="0"/>
       <xsd:element name="join-fetch" type="orm:join-fetch-type" minOccurs="0"/>
+      <xsd:element name="property" type="orm:property" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="access-methods" type="orm:access-methods" 
+                       minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
     <xsd:attribute name="name" type="xsd:string" use="required"/>
     <xsd:attribute name="target-entity" type="xsd:string"/>
@@ -1353,6 +1455,9 @@
       <xsd:element name="join-table" type="orm:join-table" minOccurs="0"/>
       <xsd:element name="cascade" type="orm:cascade-type" minOccurs="0"/>
       <xsd:element name="join-fetch" type="orm:join-fetch-type" minOccurs="0"/>
+      <xsd:element name="property" type="orm:property" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="access-methods" type="orm:access-methods" 
+                       minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
     <xsd:attribute name="name" type="xsd:string" use="required"/>
     <xsd:attribute name="target-entity" type="xsd:string"/>
@@ -1550,23 +1655,20 @@
                    minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="struct-converter" type="orm:struct-converter" 
                    minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element name="attributes" type="orm:embeddable-attributes" 
+      <xsd:element name="property" type="orm:property" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="attributes" type="orm:attributes" 
                    minOccurs="0"/>
+      <xsd:element name="copy-policy" type="orm:copy-policy" 
+                     minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="instantiation-copy-policy" type="orm:instantiation-copy-policy" 
+                     minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="clone-copy-policy" type="orm:clone-copy-policy" 
+                     minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
     <xsd:attribute name="class" type="xsd:string" use="required"/>
     <xsd:attribute name="access" type="orm:access-type"/>
     <xsd:attribute name="metadata-complete" type="xsd:boolean"/>
-  </xsd:complexType>
-
-  <!-- **************************************************** -->
-
-  <xsd:complexType name="embeddable-attributes">
-    <xsd:sequence>
-      <xsd:element name="basic" type="orm:basic" 
-                   minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element name="transient" type="orm:transient" 
-                   minOccurs="0" maxOccurs="unbounded"/>
-    </xsd:sequence>
+    <xsd:attribute name="exclude-default-mappings" type="xsd:boolean"/>
   </xsd:complexType>
 
   <!-- **************************************************** -->
@@ -1583,6 +1685,9 @@
     <xsd:sequence>
       <xsd:element name="attribute-override" type="orm:attribute-override" 
                    minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="property" type="orm:property" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="access-methods" type="orm:access-methods" 
+                       minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
     <xsd:attribute name="name" type="xsd:string" use="required"/>
   </xsd:complexType>
@@ -1622,6 +1727,12 @@
                    minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="struct-converter" type="orm:struct-converter" 
                    minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="copy-policy" type="orm:copy-policy" 
+                     minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="instantiation-copy-policy" type="orm:instantiation-copy-policy" 
+                     minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="clone-copy-policy" type="orm:clone-copy-policy" 
+                     minOccurs="0" maxOccurs="1"/>
       <xsd:element name="exclude-default-listeners" type="orm:emptyType" 
                    minOccurs="0"/>
       <xsd:element name="exclude-superclass-listeners" type="orm:emptyType" 
@@ -1636,12 +1747,15 @@
       <xsd:element name="pre-update" type="orm:pre-update" minOccurs="0"/>
       <xsd:element name="post-update" type="orm:post-update" minOccurs="0"/>
       <xsd:element name="post-load" type="orm:post-load" minOccurs="0"/>
+      <xsd:element name="property" type="orm:property" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="attributes" type="orm:attributes" minOccurs="0"/>
     </xsd:sequence>
     <xsd:attribute name="class" type="xsd:string" use="required"/>
     <xsd:attribute name="access" type="orm:access-type"/>
     <xsd:attribute name="metadata-complete" type="xsd:boolean"/>
     <xsd:attribute name="read-only" type="xsd:boolean"/>
+    <xsd:attribute name="existence-checking" type="orm:existence-type"/>
+    <xsd:attribute name="exclude-default-mappings" type="xsd:boolean"/>
   </xsd:complexType>
 
   <!-- **************************************************** -->
@@ -1875,6 +1989,123 @@
     <xsd:attribute name="name" type="xsd:string" use="required"/>
     <xsd:attribute name="converter" type="xsd:string" use="required"/>
   </xsd:complexType>
+
+  <!-- **************************************************** -->
+  
+  <xsd:complexType name="copy-policy">
+    <xsd:annotation>
+      <xsd:documentation>
+        /**
+         * A CopyPolicy is used to set a 
+         * org.eclipse.persistence.descriptors.copying.CopyPolicy on an Entity.
+         * It is required that a class that implements 
+         * org.eclipse.persistence.descriptors.copying.CopyPolicy be specified 
+         * as the argument.
+         * 
+         * A CopyPolicy should be specified on an Entity or MappedSuperclass.
+         * 
+         * For instance:
+         * @Entity
+         * @CopyPolicy("example.MyCopyPolicy")
+         */
+        public @interface CopyPolicy {
+
+        /*
+        * (Required)
+        * This defines the class of the copy policy. It must specify a class 
+        * that implements org.eclipse.persistence.descriptors.copying.CopyPolicy
+        */
+        Class value();
+        }
+
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:attribute name="class" type="xsd:string" use="required"/>
+  </xsd:complexType>
+
+    <!-- **************************************************** -->
+  
+  <xsd:complexType name="instantiation-copy-policy">
+    <xsd:annotation>
+      <xsd:documentation>
+        /**
+         * An InstantiationCopyPolicy is used to set an 
+         * org.eclipse.persistence.descriptors.copying.InstantiationCopyPolicy 
+         * on an Entity. InstantiationCopyPolicy is the default CopyPolicy in 
+         * EclipseLink and therefore this configuration option is only used to 
+         * override other types of copy policies
+         * 
+         * An InstantiationCopyPolicy should be specified on an Entity or 
+         * MappedSuperclass.
+         * 
+         * Example:
+         * @Entity
+         * @InstantiationCopyPolicy 
+         */
+        public @interface InstantiationCopyPolicy {
+        }
+      </xsd:documentation>
+    </xsd:annotation>
+  </xsd:complexType>
+
+  <!-- **************************************************** -->
+  
+  <xsd:complexType name="clone-copy-policy">
+    <xsd:annotation>
+      <xsd:documentation>
+        /**
+         * A CloneCopyPolicy is used to set an 
+         * org.eclipse.persistence.descriptors.copying.CloneCopyPolicy on an 
+         * Entity. A CloneCopyPolicy must specify at one or both of the "method" 
+         * or "workingCopyMethod". "workingCopyMethod" is used to clone objects 
+         * that will be returned to the user as they are registered in 
+         * EclipseLink's transactional mechanism, the UnitOfWork. "method" will 
+         * be used for the clone that is used for comparison in conjunction with 
+         * EclipseLink's DeferredChangeDetectionPolicy
+         *  
+         * A CloneCopyPolicy should be specified on an Entity or 
+         * MappedSuperclass.
+         * 
+         * Example:
+         * @Entity
+         * @CloneCopyPolicy(method="myCloneMethod")
+         * 
+         * or:
+         * 
+         * @Entity
+         * @CloneCopyPolicy(method="myCloneMethod", workingCopyMethod="myWorkingCopyCloneMethod")
+         * 
+         * or:
+         * 
+          @Entity
+         * @CloneCopyPolicy(workingCopyMethodName="myWorkingCopyClone")
+         */
+        public @interface CloneCopyPolicy {
+
+            /**
+             * (Optional)
+             * Either method or workingCopyMethod must be specified this defines 
+             * a method that will be used to create a clone that will be used 
+             * for comparison by
+             * EclipseLink's DeferredChangeDetectionPolicy
+             */
+            String method();
+            
+            /**
+             * (Optional)
+             * Either method or workingCopyMethod must be specified
+             * this defines a method that will be used to create a clone that 
+             * will be used to create the object returned when registering an 
+             * Object in an EclipseLink UnitOfWork
+             */
+            String workingCopyMethod();
+            
+        }
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:attribute name="method" type="xsd:string"/>
+    <xsd:attribute name="working-copy-method" type="xsd:string"/>
+  </xsd:complexType>
   
   <!-- **************************************************** -->
   
@@ -1970,6 +2201,9 @@
       <xsd:element name="collection-table" type="orm:collection-table" minOccurs="0"/>
       <xsd:element name="private-owned" type="orm:emptyType" minOccurs="0"/>
       <xsd:element name="join-fetch" type="orm:join-fetch-type" minOccurs="0"/>
+      <xsd:element name="property" type="orm:property" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="access-methods" type="orm:access-methods" 
+                       minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
     <xsd:attribute name="name" type="xsd:string"/>
     <xsd:attribute name="fetch" type="orm:fetch-type"/>
@@ -2032,6 +2266,9 @@
       <xsd:element name="collection-table" type="orm:collection-table" minOccurs="0"/>
       <xsd:element name="private-owned" type="orm:emptyType" minOccurs="0"/>
       <xsd:element name="join-fetch" type="orm:join-fetch-type" minOccurs="0"/>
+      <xsd:element name="property" type="orm:property" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="access-methods" type="orm:access-methods" 
+                       minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
     <xsd:attribute name="name" type="xsd:string"/>
     <xsd:attribute name="fetch" type="orm:fetch-type"/>
@@ -2201,7 +2438,7 @@
 	         * (Optional) Cached instances in the shared cache or a client 
 	         * isolated cache.
 	         */ 
-	        boolean isolated() default false;
+	        boolean shared() default true;
 	
 	        /**
 	         * (Optional) Expire cached instance after a fix period of time (ms). 
@@ -2251,7 +2488,7 @@
 	    <xsd:element name="expiry-time-of-day" type="orm:time-of-day" minOccurs="0"/>
 	  </xsd:choice>
 	  <xsd:attribute name="size" type="xsd:integer"/>
-	  <xsd:attribute name="isolated" type="xsd:boolean"/>
+	  <xsd:attribute name="shared" type="xsd:boolean"/>
 	  <xsd:attribute name="type" type="orm:cache-type"/>
 	  <xsd:attribute name="always-refresh" type="xsd:boolean"/>
 	  <xsd:attribute name="refresh-only-if-newer" type="xsd:boolean"/>
@@ -2593,7 +2830,7 @@
 	        /**
 	         * (Optional) Defines arguments to the stored procedure.
 	         */
-	        StoredProcedureParameter[] procedureParameters() default {};
+	        StoredProcedureParameter[] parameters() default {};
 	      }
 	
 	    </xsd:documentation>
@@ -2601,7 +2838,7 @@
 	    <xsd:sequence>
 	      <xsd:element name="hint" type="orm:query-hint" minOccurs="0" 
 	                   maxOccurs="unbounded"/>
-	      <xsd:element name="procedure-parameter" type="orm:stored-procedure-parameter" 
+	      <xsd:element name="parameter" type="orm:stored-procedure-parameter" 
 	                   minOccurs="0" maxOccurs="unbounded"/>
 	    </xsd:sequence>
 	  <xsd:attribute name="name" type="xsd:string" use="required"/>
@@ -2627,7 +2864,7 @@
 	        /**
 	         * (Optional) The direction of the stored procedure parameter.
 	         */
-	        Direction procedureParameterDirection() default IN;
+	        Direction direction() default IN;
 	
 	        /**
 	         * (Optional) Stored procedure parameter name.
@@ -2710,6 +2947,183 @@
 	    <xsd:enumeration value="OUT_CURSOR"/>
 	  </xsd:restriction>
 	</xsd:simpleType>
+	
+	<!-- **************************************************** -->
+	
+	<xsd:complexType name="variable-one-to-one">
+    <xsd:annotation>
+      <xsd:documentation>
+				/** 
+				 * Variable one to one mappings are used to represent a pointer 
+				 * references between a java object and an implementer of an interface. 
+				 * This mapping is usually represented by a single pointer (stored in an 
+				 * instance variable) between the source and target objects. In the 
+				 * relational database tables, these mappings are normally implemented 
+				 * using a foreign key and a type code.
+				 * 
+				 * A VariableOneToOne can be specified within an Entity, 
+				 * MappedSuperclass and Embeddable class. 
+				 */ 
+				@Target({METHOD, FIELD}) 
+				@Retention(RUNTIME)
+				public @interface VariableOneToOne {
+				    /**
+				     * (Optional) The interface class that is the target of the 
+				     * association. If not specified it will be inferred from the type 
+				     * of the object being referenced.
+				     */
+				    Class targetInterface() default void.class;
+				    
+				    /**
+				     * (Optional) The operations that must be cascaded to the target of 
+				     * the association.
+				     */
+				    CascadeType[] cascade() default {};
+				    
+				    /**
+				     * (Optional) Defines whether the value of the field or property 
+				     * should be lazily loaded or must be eagerly fetched. The EAGER 
+				     * strategy is a requirement on the persistence provider runtime 
+				     * that the value must be eagerly fetched. The LAZY strategy is a 
+				     * hint to the persistence provider runtime. If not specified, 
+				     * defaults to EAGER.
+				     */
+				    FetchType fetch() default EAGER;
+				    
+				    /**
+				     * (Optional) Whether the association is optional. If set to false 
+				     * then a non-null relationship must always exist.
+				     */
+				    boolean optional() default true;
+				  
+				    /**
+				     * (Optional) The discriminator column will hold the type 
+				     * indicators. If the DiscriminatorColumn is not specified, the name 
+				     * of the discriminator column defaults to "DTYPE" and the 
+				     * discriminator type to STRING.
+				     */
+				    DiscriminatorColumn discriminatorColumn() default @DiscriminatorColumn;
+				    
+            /**
+             * (Optional) The list of discriminator types that can be used with 
+             * this VariableOneToOne. If none are specified then those entities 
+             * within the persistence unit that implement the target interface 
+             * will be added to the list of types. The discriminator type will 
+             * default as follows:
+             *  - If DiscriminatorColumn type is STRING: Entity.name()
+             *  - If DiscriminatorColumn type is CHAR: First letter of the 
+             *    Entity class
+             *  - If DiscriminatorColumn type is INTEGER: The next integer after 
+             *    the highest integer explicitly added.
+             */
+				    DiscriminatorClass[] discriminatorClasses() default {};
+				}
+
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="cascade" type="orm:cascade-type" minOccurs="0"/>
+      <xsd:element name="discriminator-column" type="orm:discriminator-column"
+                   minOccurs="0"/>
+      <xsd:element name="discriminator-class" type="orm:discriminator-class"
+                   minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="join-column" type="orm:join-column" minOccurs="0"
+                   maxOccurs="unbounded"/>
+      <xsd:element name="private-owned" type="orm:emptyType" minOccurs="0"/>
+      <xsd:element name="property" type="orm:property" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="access-methods" type="orm:access-methods" 
+                       minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+    <xsd:attribute name="name" type="xsd:string" use="required"/>
+    <xsd:attribute name="target-interface" type="xsd:string"/>
+    <xsd:attribute name="fetch" type="orm:fetch-type"/>
+    <xsd:attribute name="optional" type="xsd:boolean"/>
+  </xsd:complexType>
+
+  <!-- **************************************************** -->
+
+  <xsd:complexType name="discriminator-class">
+    <xsd:annotation>
+      <xsd:documentation>
+
+        /** 
+         * A DiscriminatorClass is used within a VariableOneToOne annotation.
+         */ 
+        @Target({}) 
+        @Retention(RUNTIME)
+        public @interface DiscriminatorClass {
+          /**
+           * (Required) The discriminator to be stored on the database. 
+           */
+          String discriminator();
+
+          /**
+           * (Required) The class to the instantiated with the given 
+           * discriminator.
+           */
+          Class value();
+        }
+
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:attribute name="discriminator" type="xsd:string" use="required"/>
+    <xsd:attribute name="value" type="xsd:string" use="required"/>
+  </xsd:complexType>
+
+  <!-- **************************************************** -->
+  
+	<xsd:simpleType name="existence-type">
+	  <xsd:annotation>
+	    <xsd:documentation>
+	        /**
+           * The ExistenceChecking annotation is used to specify the type of 
+           * checking EclipseLink should use when updating entities.
+           * 
+           * An existence-checking specification is supported on an Entity or 
+           * MappedSuperclass annotation.
+           */
+          public @interface ExistenceChecking {
+            /**
+             * (Optional) Set the existence check for determining
+             * if an insert or update should occur for an object.
+             */
+             ExistenceType value() default CHECK_CACHE;
+          }
+          
+          /**
+           * Assume that if the objects primary key does not include null and 
+           * it is in the cache, then it must exist.
+           */
+          CHECK_CACHE,
+			
+          /**
+           * Perform does exist check on the database.
+           */
+          CHECK_DATABASE,
+			
+          /**
+           * Assume that if the objects primary key does not include null then 
+           * it must exist. This may be used if the application guarantees or 
+           * does not care about the existence check.
+           */
+          ASSUME_EXISTENCE,
+			
+          /**
+           * Assume that the object does not exist. This may be used if the 
+           * application guarantees or does not care about the existence check.  
+           * This will always force an insert to be called.
+           */
+          ASSUME_NON_EXISTENCE
+		
+      </xsd:documentation>
+    </xsd:annotation>	 
+	  <xsd:restriction base="xsd:token">
+	    <xsd:enumeration value="CHECK_CACHE" />
+	    <xsd:enumeration value="CHECK_DATABASE" />
+	    <xsd:enumeration value="ASSUME_EXISTENCE" />
+	    <xsd:enumeration value="ASSUME_NON_EXISTENCE"/>
+	  </xsd:restriction>
+	</xsd:simpleType>	
 	
 </xsd:schema>
 
