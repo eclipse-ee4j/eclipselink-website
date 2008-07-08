@@ -4,7 +4,10 @@
     
   <section class="main" name="EclipseLink 1.0 Downloads">  
  
-    <description>                                                    
+    <description>
+    <div>
+    <link rel="stylesheet" type="text/css" href="/downloads/packages/themes/eclipse/style.css" media="screen" />
+    </div>                                                    
         <p>
         On this page you will find EclipseLink 1.0.  After downloading, click <a href="http://wiki.eclipse.org/EclipseLink/UserManual">here to get started</a> 
         </p>
