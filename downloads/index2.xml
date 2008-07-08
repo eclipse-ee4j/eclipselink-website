@@ -68,7 +68,7 @@
         <tr class="tableData">
             <td class="packageDesc">
                 <div>
-                    <a class="packageTitle" href="http://mirror.cc.columbia.edu/pub/software/eclipse/rt/eclipselink/maven.repo/">EclipseLink 1.0 Maven Repository</a>
+                    <a class="packageTitle" href="http://wiki.eclipse.org/EclipseLink/Maven">EclipseLink 1.0 Maven Repository</a>
                 </div>
                 Eclipselink.jar and it's dependencies can be downloaded from a Maven repository.      
                 <div class="bottomRow">
@@ -84,16 +84,12 @@
                 <a href="http://wiki.eclipse.org/EclipseLink/Release/1.0">Release Notes</a>
                 </div>
                 <div>
-                <a href="http://wiki.eclipse.org/EclipseLink/Maven">Maven Usage</a>
-                </div>
-                <div>
                 <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a> 
                 </div>
                 <div class="bottomRow">
                 <div>
                 </div>
                 </div>
-                
             </td>
             
          </tr>
