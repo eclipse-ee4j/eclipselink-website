@@ -11,7 +11,7 @@
         <p>
         On this page you will find EclipseLink 1.0.  After downloading, click <a href="http://wiki.eclipse.org/EclipseLink/UserManual">here to get started</a> 
         </p>
-        <table class="contentTable" width="100%">
+        <table class="contentTable" width="100%" cellspacing=0 style="font-size:95%;">
          <tr class="tableData">
             <td class="packageDesc">
                 <div>
@@ -19,6 +19,8 @@
                 </div>
                 Contains eclipselink.jar, workbench.jar and their dependencies.  Get the Installer Zip to use EclipseLink 1.0 in JavaSE, or a non OSGi container.              
                 <div class="bottomRow">
+                <div>
+                </div>
                 </div>
             </td>
             <td class="packageDesc">
@@ -29,6 +31,8 @@
                 <a href="http://wiki.eclipse.org/EclipseLink/Release/1.0">Release Notes</a>
                 </div>
                 <div class="bottomRow">
+                <div>
+                </div>
                 </div>
             </td>
 
@@ -40,6 +44,8 @@
                 </div>
                 Contains EclipseLink and dependency bundles.  Get the OSGI Bundel Zip to use EclipseLink 1.0 runtime in an OSGi container.              
                 <div class="bottomRow">
+                <div>
+                </div>                
                 </div>
             </td>
             <td class="packageDesc">
@@ -50,6 +56,8 @@
                 <a href="http://wiki.eclipse.org/EclipseLink/Release/1.0">Release Notes</a>
                 </div>
                 <div class="bottomRow">
+                <div>
+                </div>                
                 </div>
             </td>
             
@@ -61,6 +69,8 @@
                 </div>
                 Eclipselink.jar and it's dependencies can be downloaded from a Maven repository.      
                 <div class="bottomRow">
+                <div>
+                </div>
                 </div>
             </td>
             <td>
@@ -75,7 +85,10 @@
                 </div>
 
                 <div class="bottomRow">
+                <div>
                 </div>
+                </div>
+                
             </td>
             
          </tr>
