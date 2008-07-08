@@ -20,10 +20,10 @@
             </td>
         </tr>                   
         <tr class="tableData"><td width="60" align="center">
-                <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0/eclipselink-1.0.zip" onClick="clickCount(110, 'windows');"><img src="http://www.eclipse.org/downloads/images/jee.jpg"></a>
+                <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0/eclipselink-1.0.zip"><img src="http://www.eclipse.org/downloads/images/jee.jpg"></a>
             </td><td  valign="top" class="packageDesc">
                 <div>
-                    <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0/eclipselink-1.0.zip" onClick="clickCount(, 'windows');">EclipseLink 1.0 Installer Zip (22 MB)</a>
+                    <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0/eclipselink-1.0.zip">EclipseLink 1.0 Installer Zip (22 MB)</a>
                 </div>
                 Contains eclipselink.jar, workbench.jar and their dependancies.  Get the Installer Zip to use EclipseLink 1.0 in JavaSE, or a non OSGi container. <a href="http://wiki.eclipse.org/EclipseLink/Release/1.0">Release Notes</a>              
                 <div class="bottomRow">
@@ -33,10 +33,10 @@
             </td>
          </tr>
         <tr class="tableData"><td width="60" align="center">
-                <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0/eclipselink-1.0.zip" onClick="clickCount(110, 'windows');"><img src="http://www.eclipse.org/downloads/images/jee.jpg"></a>
+                <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0/eclipselink-1.0.zip"><img src="http://www.eclipse.org/downloads/images/jee.jpg"></a>
             </td><td  valign="top" class="packageDesc">
                 <div>
-                    <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0/eclipselink-plugins-1.0.zip" onClick="clickCount(, 'windows');">EclipseLink 1.0 OSGi Bundles Zip (5 MB)</a>
+                    <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0/eclipselink-plugins-1.0.zip">EclipseLink 1.0 OSGi Bundles Zip (5 MB)</a>
                 </div>
                 Contains EclipseLink and dependancy bundels.  Get the OSGI Bundel Zip to use EclipseLink 1.0 runtime in an OSGi container. <a href="http://wiki.eclipse.org/EclipseLink/Release/1.0">Release Notes</a>              
                 <div class="bottomRow">
@@ -46,10 +46,10 @@
             </td>
          </tr>
         <tr class="tableData"><td width="60" align="center">
-                <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0/eclipselink-1.0.zip" onClick="clickCount(110, 'windows');"><img src="http://www.eclipse.org/downloads/images/jee.jpg"></a>
+                <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0/eclipselink-1.0.zip"><img src="http://www.eclipse.org/downloads/images/jee.jpg"></a>
             </td><td  valign="top" class="packageDesc">
                 <div>
-                    <a class="packageTitle" href="http://mirror.cc.columbia.edu/pub/software/eclipse/rt/eclipselink/maven.repo/" onClick="clickCount(, 'windows');">EclipseLink 1.0 Maven Repository</a>
+                    <a href="http://mirror.cc.columbia.edu/pub/software/eclipse/rt/eclipselink/maven.repo/">EclipseLink 1.0 Maven Repository</a>
                 </div>
                 Eclipselink.jar and it's dependancies can be downloaded from a Maven repository<a href="http://wiki.eclipse.org/EclipseLink/Maven">Maven Usage Information</a>.  <a href="http://wiki.eclipse.org/EclipseLink/Release/1.0">Release Notes</a>              
                 <div class="bottomRow">
@@ -58,7 +58,7 @@
                 </div>
             </td>
          </tr>
-                </table>                                                             
+       </table>                                                             
      </description>                                                      
    </section> 
  
