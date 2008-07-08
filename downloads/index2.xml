@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sections
+    title="EclipseLink 1.0 Downloads">
+    
+  <section class="main" name="EclipseLink 1.0 Download">  
+    <description>                                                      
+      <p>                                                              
+        <table border="1">                                           
+          <tr>
+            <th colspan="9" align="center"> EclipseLink 1.0 Download</th>
+          </tr>
+          <tr>                                                         
+            <th align="center"> Release </th>                       
+            <th align="center"> Download</th>                       
+          </tr>                                                        
+          <tr>
+            <td align="center"> 1.0 </td>
+            <td align="center">
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0/eclipselink-1.0.zip"> EclipseLink 1.0 Installer zip </a> <br/>
+            </td>
+          </tr>
+          <tr>
+            <td align="center"> 1.0 </td>
+            <td align="center">
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0/eclipselink-plugins-incubation-1.0.zip"> EclipseLink 1.0 OSGi Plugins </a> <br/>
+            </td>
+          </tr>
+          <tr>
+            <td align="center"> 1.0 </td>
+            <td align="center">
+              <a href="http://wiki.eclipse.org/EclipseLink/Maven">EclipseLink 1.0 Maven repository </a> <br/>
+            </td>
+          </tr>  
+      </table>                                                                          
+      </p>
+    </description>                                                                                
+  </section>
+     
+  <section class="main" name="1.0 Milestone Builds">
+    <section name="Pre 1.0 Milestones Builds" link="milestones.php" />
+  </section> 
+</sections>
