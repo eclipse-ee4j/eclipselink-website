@@ -12,7 +12,7 @@
          <tr class="tableData">
             <td>
                 <div>
-                    <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0/eclipselink-1.0.zip"><h2>EclipseLink 1.0 Installer Zip (22 MB)</h2></a>
+                    <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0/eclipselink-1.0.zip"><h2>EclipseLink 1.0 Installer Zip (22 MB)</h2></a>
                 </div>
                 Contains eclipselink.jar, workbench.jar and their dependencies.  Get the Installer Zip to use EclipseLink 1.0 in JavaSE, or a non OSGi container.              
                 <div class="bottomRow">
