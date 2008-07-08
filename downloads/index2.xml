@@ -7,7 +7,7 @@
         <p>
         On this page you will find EclipseLink 1.0.  After downloading, click <a href="http://wiki.eclipse.org/EclipseLink/UserManual">here to get started</a> 
         </p>
-        <table border=1 width="100%" cellspacing=0 style="font-size:95%;">
+ <!--       <table border=1 width="100%" cellspacing=0 style="font-size:95%;">
         <tr>
             <td colspan="9" align="center">
                 <h1 class="title" style="display:inline">Eclipse 1.0 Downloads</h1>
@@ -22,7 +22,7 @@
                 <div>
                     <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0/eclipselink-1.0.zip">EclipseLink 1.0 Installer Zip (22 MB)</a>
                 </div>
-                Contains eclipselink.jar, workbench.jar and their dependancies.  Get the Installer Zip to use EclipseLink 1.0 in JavaSE, or a non OSGi container. <a href="http://wiki.eclipse.org/EclipseLink/Release/1.0">Release Notes</a>              
+                Contains eclipselink.jar, workbench.jar and their dependencies.  Get the Installer Zip to use EclipseLink 1.0 in JavaSE, or a non OSGi container. <a href="http://wiki.eclipse.org/EclipseLink/Release/1.0">Release Notes</a>              
                 <div class="bottomRow">
                 </div>
             </td>
@@ -35,7 +35,7 @@
                 <div>
                     <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0/eclipselink-plugins-1.0.zip">EclipseLink 1.0 OSGi Bundles Zip (5 MB)</a>
                 </div>
-                Contains EclipseLink and dependancy bundels.  Get the OSGI Bundel Zip to use EclipseLink 1.0 runtime in an OSGi container. <a href="http://wiki.eclipse.org/EclipseLink/Release/1.0">Release Notes</a>              
+                Contains EclipseLink and dependency bundels.  Get the OSGI Bundel Zip to use EclipseLink 1.0 runtime in an OSGi container. <a href="http://wiki.eclipse.org/EclipseLink/Release/1.0">Release Notes</a>              
                 <div class="bottomRow">
                 </div>
             </td>
@@ -53,7 +53,8 @@
                 </div>
             </td>
          </tr>
-       </table>    
+       </table>
+       -->    
       </description>                                                      
    </section> 
  
