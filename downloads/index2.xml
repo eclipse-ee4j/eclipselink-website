@@ -97,7 +97,11 @@
       </description>                                                      
    </section> 
  
-  <section class="main" name="1.0 Milestone Builds">
-    <section name="Pre 1.0 Milestones Builds" link="milestones.php" />
+  <section class="main" name="Milestone Builds">
+    <section name="Milestones Builds" link="milestones.php" />
+  </section> 
+  
+  <section class="main" name="Nightly Builds">
+    <section name="Nightly Builds" link="nightly.php" />
   </section> 
 </sections>
