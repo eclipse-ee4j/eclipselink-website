@@ -97,11 +97,11 @@
       </description>                                                      
    </section> 
  
-  <section class="main" name="Milestone Builds">
+  <section class="main" name="EclipseLink Milestone Builds">
     <section name="Milestones Builds" link="milestones.php" />
   </section> 
   
-  <section class="main" name="Nightly Builds">
+  <section class="main" name="EclipseLink Nightly Builds">
     <section name="Nightly Builds" link="nightly.php" />
   </section> 
 </sections>
