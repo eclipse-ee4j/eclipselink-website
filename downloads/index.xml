@@ -79,9 +79,6 @@
             </td>
             <td width="120" class="downloadCol">
                 <div>
-                <a href="http://mirror.cc.columbia.edu/pub/software/eclipse/rt/eclipselink/maven.repo">Maven Repository</a>
-                </div>
-                <div>
                 <a href="http://wiki.eclipse.org/EclipseLink/Release/1.0">Release Notes</a>
                 </div>
                 <div>
