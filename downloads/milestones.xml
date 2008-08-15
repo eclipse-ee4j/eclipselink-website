@@ -32,7 +32,7 @@
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1/1.1M1/eclipselink-sdo-lrg-1.1M1.html"> SDO </a> </td>
           </tr>
         </table>                                                                          
-      </p>
+        <br/>
         <table border="1">                                           
           <tr>
             <th colspan="9" align="center"> 1.0.1 Milestone Builds</th>
@@ -60,7 +60,7 @@
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.0.1/1.0.1M1/eclipselink-sdo-lrg-1.0.1M1.html"> SDO </a> </td>
           </tr>
         </table>                                                                          
-      </p>
+        <br/>
         <table border="1">                                           
           <tr>
             <th colspan="9" align="center"> 1.0 Milestone Builds</th>
