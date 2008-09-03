@@ -45,6 +45,21 @@
             <th colspan="5" align="center"> Testing Results </th>  
           </tr>                                                        
           <tr>
+            <td align="center"> 1.0.1M3 </td>
+            <td align="center"> Sept 3, 2008 </td>
+            <td align="center">
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0.1/1.0.1M3/eclipselink-1.0.1M3.zip"> Install Archive </a> <br/>
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0.1/1.0.1M3/eclipselink-src-1.0.1M3.zip"> Source Archive </a> <br/>
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.0.1/1.0.1M3/eclipselink-plugins-1.0.1M3.zip"> OSGi Plugins Archive </a> <br/>
+            </td>
+            <td align="center"> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.0.1/1.0.1M3/eclipselink-core-srg-1.0.1M3.html"> CoreSRG </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.0.1/1.0.1M3/eclipselink-jpa-lrg-1.0.1M3.html"> JPA </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.0.1/1.0.1M3/eclipselink-jaxb-lrg-1.0.1M3.html"> Moxy (JAXB) </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.0.1/1.0.1M3/eclipselink-oxm-lrg-1.0.1M3.html"> Moxy (OXM) </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.0.1/1.0.1M3/eclipselink-sdo-lrg-1.0.1M3.html"> SDO </a> </td>
+          </tr>
+          <tr>
             <td align="center"> 1.0.1M2 </td>
             <td align="center"> August 27, 2008 </td>
             <td align="center">
