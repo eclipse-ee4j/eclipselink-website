@@ -82,7 +82,7 @@
 										<tr>
 											<td>
 												Get the latest and
-												greatest EclipseLink
+												greatest EclipseLink release (1.0.1)
 											</td>
 										</tr>
 									</table>
@@ -101,6 +101,11 @@
 	</section>
 
 	<section class="main" name="Project News">
+        <section name="EclipseLink 1.0.1 Released"
+                 link="http://www.eclipse.org/eclipselink/downloads">
+                 <em>Sept 09, 2008</em>
+        </section>
+
         <section name="EclipseLink 1.0 Released"
                  link="http://www.eclipse.org/eclipselink/downloads">
                  <em>July 09, 2008</em>

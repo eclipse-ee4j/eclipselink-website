@@ -1,7 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sections
-    title="EclipseLink 1.0 Downloads">
+    title="EclipseLink Downloads">
     
+  <section class="main" name="EclipseLink 1.0.1 Downloads">  
+ 
+    <description>
+    <div>
+    <link rel="stylesheet" type="text/css" href="/downloads/packages/themes/eclipse/style.css" media="screen" />
+    </div>                                                    
+        <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
+         <tr class="tableData">
+            <td class="packageDesc">
+                <div>
+                    <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0.1/eclipselink-1.0.1.zip">EclipseLink 1.0.1 Installer Zip (22 MB)</a>
+                </div>
+                Contains eclipselink.jar, workbench.jar and their dependencies.  Get the Installer Zip to use EclipseLink 1.0.1 in JavaSE, or a non OSGi container.              
+                <div class="bottomRow">
+                <div>
+                </div>
+                </div>
+            </td>
+            <td width="120" class="downloadCol">
+                <div>
+                <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0.1/eclipselink-1.0.1.zip">Installer Zip</a>
+                </div>
+                <div>
+                <a href="http://wiki.eclipse.org/EclipseLink/Release/1.0.1">Release Notes</a>
+                </div>
+                <div>
+                <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a> 
+                </div>
+                <div class="bottomRow">
+                <div>
+                </div>
+                </div>
+            </td>
+
+         </tr>
+        <tr class="tableData">
+            <td class="packageDesc">
+                <div>
+                    <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0.1/eclipselink-plugins-1.0.1.zip">EclipseLink 1.0.1 OSGi Bundles Zip (8.5 MB)</a>
+                </div>
+                Contains EclipseLink and dependency bundles.  Get the OSGI Bundel Zip to use EclipseLink 1.0.1 runtime in an OSGi container.              
+                <div class="bottomRow">
+                <div>
+                </div>                
+                </div>
+            </td>
+            <td width="120" class="downloadCol">
+                <div>
+                <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0.1/eclipselink-plugins-1.0.1.zip">OSGi Bundles Zip</a>
+                </div>
+                <div>
+                <a href="http://wiki.eclipse.org/EclipseLink/Release/1.0.1">Release Notes</a>
+                </div>
+                <div>
+                <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a> 
+                </div>
+                <div class="bottomRow">
+                <div>
+                </div>                
+                </div>
+            </td>
+            
+         </tr>
+        <tr class="tableData">
+            <td class="packageDesc">
+                <div>
+                    <a class="packageTitle" href="http://wiki.eclipse.org/EclipseLink/Maven">EclipseLink 1.0.1 Maven Repository</a>
+                </div>
+                Eclipselink.jar and it's dependencies can be downloaded from a Maven repository.      
+                <div class="bottomRow">
+                <div>
+                </div>
+                </div>
+            </td>
+            <td width="120" class="downloadCol">
+                <div>
+                <a href="http://wiki.eclipse.org/EclipseLink/Release/1.0.1">Release Notes</a>
+                </div>
+                <div>
+                <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a> 
+                </div>
+                <div class="bottomRow">
+                <div>
+                </div>
+                </div>
+            </td>
+            
+         </tr>
+       </table>   
+      </description>                                                      
+   </section> 
   <section class="main" name="EclipseLink 1.0 Downloads">  
  
     <description>
