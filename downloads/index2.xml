@@ -95,7 +95,7 @@
    </section> 
  
   <section class="main" name="Archived EclipseLink Release Builds">
-    <section name="Previous Releases" link="releasearchive.php" />
+    <section name="Previous Releases" link="previous_releases.php" />
   </section> 
   
   <section class="main" name="EclipseLink Milestone Builds">
