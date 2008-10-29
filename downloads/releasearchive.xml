@@ -35,7 +35,7 @@
           <tr>
             <td align="center"> 1.0 </td>
             <td align="center"> July 08, 2008 </td>
-            <td align="center">
+            <td align="left">
               <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0/eclipselink-1.0.zip">EclipseLink 1.0 Installer Zip</a> (22 MB) <br/>
               <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0/eclipselink-plugins-1.0.zip">EclipseLink 1.0 OSGi Bundles Zip</a> (5 MB) <br/>
               <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0/eclipselink-src-1.0.zip">EclipseLink 1.0 Source Zip</a> (4 MB) <br/>
