@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sections
-    title="EclipseLink 1.0 Downloads">
+    title="EclipseLink Downloads">
     
-  <section class="main" name="EclipseLink 1.0 Downloads">  
+  <section class="main" name="EclipseLink 1.0.2 Downloads">  
  
     <description>
     <div>
@@ -12,9 +12,9 @@
          <tr class="tableData">
             <td class="packageDesc">
                 <div>
-                    <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0/eclipselink-1.0.zip">EclipseLink 1.0 Installer Zip (22 MB)</a>
+                    <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0.2/eclipselink-1.0.2.zip">EclipseLink 1.0.2 Installer Zip (22 MB)</a>
                 </div>
-                Contains eclipselink.jar, workbench.jar and their dependencies.  Get the Installer Zip to use EclipseLink 1.0 in JavaSE, or a non OSGi container.              
+                Contains eclipselink.jar, workbench.jar and their dependencies.  Get the Installer Zip to use EclipseLink 1.0.2 in JavaSE, or a non OSGi container.              
                 <div class="bottomRow">
                 <div>
                 </div>
@@ -22,10 +22,10 @@
             </td>
             <td width="120" class="downloadCol">
                 <div>
-                <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0/eclipselink-1.0.zip">Installer Zip</a>
+                <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0.2/eclipselink-1.0.2.zip">Installer Zip</a>
                 </div>
                 <div>
-                <a href="http://wiki.eclipse.org/EclipseLink/Release/1.0">Release Notes</a>
+                <a href="http://wiki.eclipse.org/EclipseLink/Release/1.0.2">Release Notes</a>
                 </div>
                 <div>
                 <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a> 
@@ -40,9 +40,9 @@
         <tr class="tableData">
             <td class="packageDesc">
                 <div>
-                    <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0/eclipselink-plugins-1.0.zip">EclipseLink 1.0 OSGi Bundles Zip (5 MB)</a>
+                    <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0.2/eclipselink-plugins-1.0.2.zip">EclipseLink 1.0.2 OSGi Bundles Zip (8.5 MB)</a>
                 </div>
-                Contains EclipseLink and dependency bundles.  Get the OSGI Bundel Zip to use EclipseLink 1.0 runtime in an OSGi container.              
+                Contains EclipseLink and dependency bundles.  Get the OSGI Bundel Zip to use EclipseLink 1.0.2 runtime in an OSGi container.              
                 <div class="bottomRow">
                 <div>
                 </div>                
@@ -50,10 +50,10 @@
             </td>
             <td width="120" class="downloadCol">
                 <div>
-                <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0/eclipselink-plugins-1.0.zip">OSGi Bundles Zip</a>
+                <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0.2/eclipselink-plugins-1.0.2.zip">OSGi Bundles Zip</a>
                 </div>
                 <div>
-                <a href="http://wiki.eclipse.org/EclipseLink/Release/1.0">Release Notes</a>
+                <a href="http://wiki.eclipse.org/EclipseLink/Release/1.0.2">Release Notes</a>
                 </div>
                 <div>
                 <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a> 
@@ -68,7 +68,7 @@
         <tr class="tableData">
             <td class="packageDesc">
                 <div>
-                    <a class="packageTitle" href="http://wiki.eclipse.org/EclipseLink/Maven">EclipseLink 1.0 Maven Repository</a>
+                    <a class="packageTitle" href="http://wiki.eclipse.org/EclipseLink/Maven">EclipseLink 1.0.2 Maven Repository</a>
                 </div>
                 Eclipselink.jar and it's dependencies can be downloaded from a Maven repository.      
                 <div class="bottomRow">
@@ -78,10 +78,7 @@
             </td>
             <td width="120" class="downloadCol">
                 <div>
-                <a href="http://mirror.cc.columbia.edu/pub/software/eclipse/rt/eclipselink/maven.repo">Maven Repository</a>
-                </div>
-                <div>
-                <a href="http://wiki.eclipse.org/EclipseLink/Release/1.0">Release Notes</a>
+                <a href="http://wiki.eclipse.org/EclipseLink/Release/1.0.2">Release Notes</a>
                 </div>
                 <div>
                 <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a> 
@@ -97,6 +94,10 @@
       </description>                                                      
    </section> 
  
+  <section class="main" name="Archived EclipseLink Release Builds">
+    <section name="Previous Releases" link="rel_archive.php" />
+  </section> 
+  
   <section class="main" name="EclipseLink Milestone Builds">
     <section name="Milestones Builds" link="milestones.php" />
   </section> 
