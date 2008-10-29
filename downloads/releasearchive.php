@@ -10,7 +10,7 @@ require_once ($root . '/eclipselink/common.php');
 
 # Generate the web page
 // Load the XML source
-$xml = DOMDocument::load('rel_archive.xml');
+$xml = DOMDocument::load('releasearchive.xml');
 
 //Set the page title
 $xpath = new DOMXPath($xml);
