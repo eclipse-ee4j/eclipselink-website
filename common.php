@@ -19,7 +19,7 @@
 	   global $Nav;
 		 $Nav->addCustomNav("EclipseLink Team", "http://www.eclipse.org/eclipselink/team", "", 2);
 		 $Nav->addCustomNav("FishEye", "http://fisheye2.atlassian.com/browse/eclipselink", "", 2);
-		 $Nav->addCustomNav("Contributions", "http://wiki.eclipse.org/EclipseLink/Contibutions", "", 2);
+		 $Nav->addCustomNav("Incubation", "http://wiki.eclipse.org/EclipseLink/Development/Incubation", "", 2);
 	}
 	
 	$projectInfo->generate_common_nav( $Nav, "add2users", NULL, "add2contributors" );
