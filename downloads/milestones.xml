@@ -17,6 +17,23 @@
             <th colspan="7" align="center"> Testing Results </th>  
           </tr>                                                        
           <tr>
+            <td align="center"> M7 </td>
+            <td align="center"> Jan 21, 2009 </td>
+            <td align="center">
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.1.0/M7/eclipselink-1.1.0.r3257-M7.zip"> Install Archive </a> <br/>
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.1.0/M7/eclipselink-src-1.1.0.r3257-M7.zip"> Source Archive </a> <br/>
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.1.0/M7/eclipselink-plugins-1.1.0.r3257-M7.zip"> OSGi Plugins Archive </a> <br/>
+            </td>
+            <td align="center"> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.0/M7/eclipselink-core-lrg-1.1.0.r3257-M7.html"> CoreLRG </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.0/M7/eclipselink-jpa-lrg-1.1.0.r3257-M7.html"> JPA </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.0/M7/eclipselink-jaxb-lrg-1.1.0.r3257-M7.html"> Moxy (JAXB) </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.0/M7/eclipselink-oxm-lrg-1.1.0.r3257-M7.html"> Moxy (OXM) </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.0/M7/eclipselink-sdo-lrg-1.1.0.r3257-M7.html"> SDO </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.0/M7/eclipselink-dbws-lrg-1.1.0.r3257-M7.html"> DBWS </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.0/M7/eclipselink-dbws-util-lrg-1.1.0.r3257-M7.html"> DBWS Util </a> </td>
+          </tr>
+          <tr>
             <td align="center"> M6 </td>
             <td align="center"> Jan 14, 2009 </td>
             <td align="center">
