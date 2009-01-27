@@ -7,7 +7,7 @@ require_once ($root . '/eclipselink/common_nova.php');
 
 # Generate the web page
 // Load the XML source
-$xml = DOMDocument::load('index.xml');
+$xml = DOMDocument::load('jpa.xml');
 
 //Set the page title
 $xpath = new DOMXPath($xml);
