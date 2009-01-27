@@ -22,10 +22,10 @@
 				<div class="sideitem">
 					<h6><a href="/eclipselink/index-2.php">EclipseLink</a></h6> 
 					<ul>
-						<li><a href="/eclipselink/jpa.php">JPA</a></li>
-						<li>MOXy</li>
-						<li>SDO</li>
-						<li>DBWS</li>
+						<li><a href="/eclipselink/jpa.php">JPA: Object-Relational</a></li>
+						<li><a href="/eclipselink/moxy.php">MOXy: Object-XML</a></li>
+						<li><a href="/eclipselink/sdo.php">SDO: Service Data Objects</a></li>
+						<li><a href="/eclipselink/dbws.php">DBWS: Data Web Services</a></li>
 					</ul>
 				</div>
 				
