@@ -26,6 +26,9 @@
 						<li><a href="/eclipselink/moxy.php">MOXy: Object-XML</a></li>
 						<li><a href="/eclipselink/sdo.php">SDO: Service Data Objects</a></li>
 						<li><a href="/eclipselink/dbws.php">DBWS: Data Web Services</a></li>
+						<br>
+						<li><a href="/eclipselink/news.php">News</a></li>
+						<li><a href="/eclipselink/documentation.php">Documentation</a></li>
 					</ul>
 				</div>
 				
