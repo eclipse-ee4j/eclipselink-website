@@ -23,7 +23,7 @@
 					<h6>< a href="/eclipselink/index-2.php">EclipseLink Home</a></h6> 
 					<h6>EclipseLink Components</h6>
 					<ul>
-					<li>EclipseLink JPA</li>
+					<li><a href="/eclipselink/jpa">EclipseLink JPA</a></li>
 					<li>EclipseLink MOXy</li>
 					<li>EclipseLink SDO</li>
 					<li>EclipseLink DBWS</li>
@@ -40,6 +40,20 @@
 					</form>
 				</div>
 				
+				<div class="sideitem">
+					<a	href="/eclipselink/community.php">
+						<img src="/eclipselink/images/community.jpg" />
+						<font size="+1">Community</font>
+					</a>
+				</div>
+				
+				<div class="sideitem">
+					<a	href="/eclipselink/downloads">
+						<img src="/eclipselink/images/downloads.gif" />
+						<font size="+1">Downloads</font>
+					</a>
+				</div>
+
 				<xsl:apply-templates select="section[@class='infobox']"
 					mode="infobox" />
 			</div>
