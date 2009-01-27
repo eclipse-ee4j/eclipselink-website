@@ -7,7 +7,7 @@ require_once ($root . '/eclipselink/common.php');
 
 # Generate the web page
 // Load the XML source
-$xml = DOMDocument::load('index-2.xml');
+$xml = DOMDocument::load('index.xml');
 
 //Set the page title
 $xpath = new DOMXPath($xml);
