@@ -1,6 +1,6 @@
 <?php
 
-  $theme = "Phoenix";
+  $theme = "Nova";
 	
   require_once($_SERVER['DOCUMENT_ROOT'] . "/projects/common/project-info.class.php");
   $projectInfo = new ProjectInfo("rt.eclipselink");
