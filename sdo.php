@@ -7,12 +7,12 @@ require_once ($root . '/eclipselink/common_nova.php');
 
 # Generate the web page
 // Load the XML source
-$xml = DOMDocument::load('jpa.xml');
+$xml = DOMDocument::load('sdo.xml');
 
 //Set the page title
 $xpath = new DOMXPath($xml);
 $titleNode = $xpath->query("/sections/attribute::title")->item(0);
-$pageTitle = "EclipseLink JPA";
+$pageTitle = "EclipseLink SDO";
 
 // Load the XSL source
 $xsl = DOMDocument::load($root . '/eclipselink/eclipselinkpage.xsl');
