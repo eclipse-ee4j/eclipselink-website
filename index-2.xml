@@ -2,74 +2,158 @@
 <sections title="EclipseLink">
 	<section class="none" name="About EclipseLink">
 		<description>
-			<table width="100%"><tr><td valign="top"><p align="justify">
-			The
-			<b>Eclipse Persistence Services Project (EclipseLink)</b>
-			project's goal is to provide an extensible framework that
-			will enable Java developers to interact with relational
-			databases, XML, and Enterprise Information Systems (EIS) in
-			an efficient and productive manor. EclipseLink will focus on
-			supporting leading persistence standards including the Java
-			Persistence API (JPA), Java API for XML Binding (JAXB), Java
-			Connector Architecture (JCA), and Service Data Objects
-			(SDO).
-			</p>
+			<table width="100%">
+				<tr>
+					<td valign="top">
+						<p align="justify">
+							The
+							<b>
+								Eclipse Persistence Services Project
+								(EclipseLink)
+							</b>
+							project's goal is to provide a complete
+							persistence framework that is both
+							comprehensive and universal. It will run in
+							any Java environment and read and write
+							objects to virtually any type of data
+							source, including relational databases, XML,
+							or EIS systems. EclipseLink will focus on
+							providing leading edge support, including
+							advanced feature extensions, for the
+							dominant persistence standards for each
+							target data source; Java Persistence API
+							(JPA) for relational databases, Java Architecture for
+							XML Binding (JAXB) for XML, J2EE Connector
+							Architecture (JCA) for EIS and other types
+							of legacy systems, and Service Data Objects
+							(SDO).
+						</p>
 
-			<table border="0" cellpadding="5">
-					<tr height="9">	 
-						<td>
-							<a href="/eclipselink/community.php">
-								<img src="/eclipselink/images/community.jpg"/>
-							</a>
-						</td>
-						<td>
-							<table border="0" cellpadding="0">
-								<tr>
-				          			<td><font size="+1"><a href="/eclipselink/community.php">Community</a></font></td>
-								</tr>
-								<tr>
-					          		<td>Get help and interact with users and developers</td>
-					          	</tr>
-							</table>
-						</td>
-	          		</tr>
-	          		<tr>
-						<td>
-							<a href="/eclipselink/downloads">
-								<img src="/eclipselink/images/downloads.gif"/>
-							</a>
-						</td>
-						<td>
-							<table border="0" cellpadding="0">
-								<tr>
-				          			<td><font size="+1"><a href="/eclipselink/downloads">Downloads</a></font></td>
-								</tr>
-								<tr>
-					          		<td>Get the latest and greatest EclipseLink</td>
-					          	</tr>
-							</table>
-						</td>
-	          		</tr> 
-	         	</table>
-			</td>
+						<table border="0" cellpadding="5">
+							<tr height="9">
+								<td>
+									<a
+										href="/eclipselink/community.php">
+										<img
+											src="/eclipselink/images/community.jpg" />
+									</a>
+								</td>
+								<td>
+									<table border="0" cellpadding="0">
+										<tr>
+											<td>
+												<font size="+1">
+													<a
+														href="/eclipselink/community.php">
+														Community
+													</a>
+												</font>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Get help and interact
+												with users and
+												developers
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="/eclipselink/downloads">
+										<img
+											src="/eclipselink/images/downloads.gif" />
+									</a>
+								</td>
+								<td>
+									<table border="0" cellpadding="0">
+										<tr>
+											<td>
+												<font size="+1">
+													<a
+														href="/eclipselink/downloads">
+														Downloads
+													</a>
+												</font>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Get the latest and
+												greatest EclipseLink release (1.0.1)
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
 
-			<td>
-				<img src="images/EclipseLink-overview.png" border="0" width="600" />
-			</td>
-			</tr>
-			</table>			
-			
+					<td>
+						<img src="images/EclipseLink-overview.png"
+							border="0" width="600" />
+					</td>
+				</tr>
+			</table>
 		</description>
 	</section>
+
 	<section class="main" name="Project News">
+         <section name="EclipseLink 1.0.2 Released"
+                 link="http://www.eclipse.org/eclipselink/downloads">
+                 <em>Oct 29, 2008</em>
+        </section>
+        <section name="EclipseLink 1.0.1 Released"
+                 link="http://www.eclipse.org/eclipselink/downloads">
+                 <em>Sept 09, 2008</em>
+        </section>
+
+        <section name="EclipseLink 1.0 Released"
+                 link="http://www.eclipse.org/eclipselink/downloads">
+                 <em>July 09, 2008</em>
+        </section>
+
+ 		<section name="EclipseZone Article: Introducing EclipseLink"
+				 link="http://eclipse.dzone.com/articles/introducing-eclipselink">
+				 <em>June 30, 2008</em>
+		</section>
+         <section name="EclipseLink Graduates from Incubation"
+                 link="http://java-persistence.blogspot.com/">
+                 <em>June 27, 2008</em>
+        </section>
+  		<section name="EclipseLink Webinar Available: Introduction and JPA Feature Overview"
+				 link="http://live.eclipse.org/node/490">
+				 <em>May 1, 2008</em>
+		</section>
 		<section
 			name="EclipseLink Project to Deliver JPA 2.0 Reference Implementation"
 			link="http://www.eclipse.org/org/press-release/20080317_Eclipselink.php">
-			<em>March 2008<br/>
-				Related Articles:<ul>
-				<li><a href="http://www.informationweek.com/software/showArticle.jhtml?articleID=206904549">Sun Turns To Eclipse To Get Object/Relational Mapping, Information Week</a></li>
-				<li><a href="http://www.infoworld.com/article/08/03/18/Oracle-EclipseLink-links-JCP-Eclipse_1.html">Oracle: EclipseLink links JCP, Eclipse, InfoWorld</a></li>
-				<li><a href="http://searchsoa.techtarget.com/news/article/0,289142,sid26_gci1306005,00.html">Eclipse, Sun and Oracle team up on persistence API, SearchSOA.com</a></li>
+			<em>
+				March 2008 - Related Articles:
+				<ul>
+					<li>
+						<a
+							href="http://www.informationweek.com/software/showArticle.jhtml?articleID=206904549">
+							Sun Turns To Eclipse To Get
+							Object/Relational Mapping, Information Week
+						</a>
+					</li>
+					<li>
+						<a
+							href="http://www.infoworld.com/article/08/03/18/Oracle-EclipseLink-links-JCP-Eclipse_1.html">
+							Oracle: EclipseLink links JCP, Eclipse,
+							InfoWorld
+						</a>
+					</li>
+					<li>
+						<a
+							href="http://searchsoa.techtarget.com/news/article/0,289142,sid26_gci1306005,00.html">
+							Eclipse, Sun and Oracle team up on
+							persistence API, SearchSOA.com
+						</a>
+					</li>
 				</ul>
 			</em>
 		</section>

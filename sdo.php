@@ -15,7 +15,7 @@ $titleNode = $xpath->query("/sections/attribute::title")->item(0);
 $pageTitle = "EclipseLink SDO";
 
 // Load the XSL source
-$xsl = DOMDocument::load($root . '/eclipselink/eclipselinkpage.xsl');
+$xsl = DOMDocument::load($root . '/eclipselink/eclipselinkp_nova.xsl');
 
 // Configure the transformer
 $proc = new XSLTProcessor;
