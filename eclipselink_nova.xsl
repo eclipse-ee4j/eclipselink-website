@@ -20,8 +20,13 @@
 			<div id="rightcolumn">
 		
 				<div class="sideitem">
-					<h6><a href="/eclipselink/index-2.php">EclipseLink Home</a></h6> 
-					<h6>EclipseLink Components</h6>
+					<h6><a href="/eclipselink/index-2.php">EclipseLink</a></h6> 
+					<ul>
+						<li><a href="/eclipselink/jpa.php">JPA</a></li>
+						<li>MOXy</li>
+						<li>SDO</li>
+						<li>DBWS</li>
+					</ul>
 				</div>
 				
 				<div class="sideitem" align="center">

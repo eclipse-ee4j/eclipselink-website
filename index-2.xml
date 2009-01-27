@@ -8,13 +8,12 @@
 					<td valign="center">MOXy</td>
 					<td valign="center">SDO</td>
 					<td valign="center">DBWS</td>
-
 				</tr>
 			</table>
 		</description>
 	</section>
 
-	<section class="main" name="Project News">
+	<section class="main" name="<h3>Project News</h3>">
 		<section name="EclipseLink 1.0.2 Released"
 			link="http://www.eclipse.org/eclipselink/downloads">
 			<em>Oct 29, 2008</em>
