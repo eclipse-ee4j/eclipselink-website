@@ -12,8 +12,8 @@
 	$Nav->addCustomNav("JPA", "/eclipselink/jpa.php", "_self", 2);
   
  	$Nav->addNavSeparator("Downloads", "/eclispelink/downloads/index.php");
-	$Nav->addCustomNav("1.0.2", "/eclispelink/downloads/index.php", "_self", 2);
-	$Nav->addCustomNav("1.1 Milestones", "/eclispelink/downloads/milestones.php", "_self", 2);
+	$Nav->addCustomNav("1.0.2", "/eclipselink/downloads/index.php", "_self", 2);
+	$Nav->addCustomNav("1.1 Milestones", "/eclipselink/downloads/milestones.php", "_self", 2);
 	$Nav->addCustomNav("Maven", "http://wiki.eclipse.org/EclipseLink/Maven", "_self", 2);
 	
 	$Nav->addNavSeparator("Community", "/eclipselink/community.php");
