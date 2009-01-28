@@ -2,7 +2,17 @@
 <sections title="EclipseLink SDO">
 	<section class="none" name="About EclipseLink SDO">
 		<description>
-			<h1>EclipseLink SDO</h1>
+			<table border="0">
+				<tr>
+					<td>
+						<img
+							src="/eclipselink/images/Eclipselink_sdo.png" border="0" />
+					</td>
+					<td>
+						<h1>EclipseLink SDO</h1>
+					</td>
+				</tr>
+			</table>
 			<p>The EclipseLink SDO component ...</p>
 		</description>
 	</section>

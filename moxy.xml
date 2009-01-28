@@ -2,7 +2,17 @@
 <sections title="EclipseLink JPA">
 	<section class="none" name="About EclipseLink MOXy">
 		<description>
-			<h1>EclipseLink MOXy</h1>
+			<table border="0">
+				<tr>
+					<td>
+						<img
+							src="/eclipselink/images/Eclipselink_moxy.png" border="0" />
+					</td>
+					<td>
+						<h1>EclipseLink MOXy</h1>
+					</td>
+				</tr>
+			</table>
 			<p>The EclipseLink MOXy .</p>
 		</description>
 	</section>

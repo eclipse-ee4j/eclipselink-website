@@ -2,7 +2,18 @@
 <sections title="EclipseLink JPA">
 	<section class="none" name="About EclipseLink DBWS">
 		<description>
-		The EclipseLink DBWS .
+			<table border="0">
+				<tr>
+					<td>
+						<img
+							src="/eclipselink/images/Eclipselink_eis.png" border="0" />
+					</td>
+					<td>
+						<h1>EclipseLink DBWS</h1>
+					</td>
+				</tr>
+			</table>
+			<p>The EclipseLink DBWS .</p>
 		</description>
 	</section>
 
