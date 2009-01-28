@@ -3,9 +3,12 @@
 
 	<section class="none" name="About EclipseLink JPA">
 		<description>
-			The EclipseLink JPA provides developers with a standards
-			based Object-Relational persistence solution with additional
-			support for many advanced features.
+			<h1>EclipseLink JPA</h1>
+			<p>
+				The EclipseLink JPA provides developers with a standards
+				based Object-Relational persistence solution with
+				additional support for many advanced features.
+			</p>
 		</description>
 	</section>
 
