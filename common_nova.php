@@ -16,7 +16,8 @@
 	$Nav->addCustomNav("1.1 Milestones", "/eclispelink/downloads/milestones.php", "_self", 2);
 	$Nav->addCustomNav("Maven", "http://wiki.eclipse.org/EclipseLink/Maven", "_self", 2);
 	
-	$Nav->addNavSeparator("Newsgroup", "/newsportal/thread.php?group=eclipse.rt.eclipselink");
+	$Nav->addNavSeparator("Community", "/eclipselink/community.php");
+	$Nav->addCustomNav("Newsgroup", "/newsportal/thread.php?group=eclipse.rt.eclipselink", "_self", 2);
 	$Nav->addCustomNav("Users Mailing List", "https://dev.eclipse.org/mailman/listinfo/eclipselink-users", "_self", 2);
 
 	$Nav->addNavSeparator("Documentation", "http://wiki.eclipse.org/EclipseLink/UserManual");
@@ -29,7 +30,7 @@
 	$Nav->addNavSeparator("Project", "http://wiki.eclipse.org/EclipseLink/UserManual");
 	$Nav->addCustomNav("Plan", "http://www.eclipse.org/projects/project-plan.php?projectid=eclipselink", "_self", 2);
 	$Nav->addCustomNav("Road Map", "http://wiki.eclipse.org/EclipseLink/RoadMap", "_self", 2);
-	$Nav->addCustomNav("Community", "/eclipselink/community.php", "_self", 2);
+	$Nav->addCustomNav("News", "/eclipselink/news.php", "_self", 2);
 	$Nav->addCustomNav("Team", "/eclipselink/team/", "_self", 2);
 
   

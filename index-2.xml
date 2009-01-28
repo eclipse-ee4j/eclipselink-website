@@ -2,6 +2,9 @@
 <sections title="EclipseLink">
 	<section class="none" name="About EclipseLink">
 		<description>
+			<p>
+			The Eclipse Persistence Services Project delivers ... 
+			</p>
 			<table width="100%">
 				<tr>
 					<td valign="center">
