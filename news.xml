@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sections title="EclipseLink">
+	<section class="main">
+		<description>
+			<h1>EclispeLink Project News</h1>		
+		</description>
+		
+		<section name="EclipseLink 1.0.2 Released"
+			link="http://www.eclipse.org/eclipselink/downloads">
+			<em>Oct 29, 2008</em>
+		</section>
+		<section name="EclipseLink 1.0.1 Released"
+			link="http://www.eclipse.org/eclipselink/downloads">
+			<em>Sept 09, 2008</em>
+		</section>
+
+		<section name="EclipseLink 1.0 Released"
+			link="http://www.eclipse.org/eclipselink/downloads">
+			<em>July 09, 2008</em>
+		</section>
+
+		<section name="EclipseZone Article: Introducing EclipseLink"
+			link="http://eclipse.dzone.com/articles/introducing-eclipselink">
+			<em>June 30, 2008</em>
+		</section>
+		<section name="EclipseLink Graduates from Incubation"
+			link="http://java-persistence.blogspot.com/">
+			<em>June 27, 2008</em>
+		</section>
+		<section
+			name="EclipseLink Webinar Available: Introduction and JPA Feature Overview"
+			link="http://live.eclipse.org/node/490">
+			<em>May 1, 2008</em>
+		</section>
+		<section
+			name="EclipseLink Project to Deliver JPA 2.0 Reference Implementation"
+			link="http://www.eclipse.org/org/press-release/20080317_Eclipselink.php">
+			<em>
+				March 2008 - Related Articles:
+				<ul>
+					<li>
+						<a
+							href="http://www.informationweek.com/software/showArticle.jhtml?articleID=206904549">
+							Sun Turns To Eclipse To Get
+							Object/Relational Mapping, Information Week
+						</a>
+					</li>
+					<li>
+						<a
+							href="http://www.infoworld.com/article/08/03/18/Oracle-EclipseLink-links-JCP-Eclipse_1.html">
+							Oracle: EclipseLink links JCP, Eclipse,
+							InfoWorld
+						</a>
+					</li>
+					<li>
+						<a
+							href="http://searchsoa.techtarget.com/news/article/0,289142,sid26_gci1306005,00.html">
+							Eclipse, Sun and Oracle team up on
+							persistence API, SearchSOA.com
+						</a>
+					</li>
+				</ul>
+			</em>
+		</section>
+	</section>
+
+</sections>
