@@ -9,27 +9,29 @@
 				<tr>
 					<td valign="center">
 						<a href="/eclipselink/jpa.php">
-						<img align="center" src="/eclipselink/images/jpa.jpg" border="0" />
 						<h1>JPA</h1>
+						Object-Relational
 						</a>
 					</td>
 					
 					<td valign="center">
 						<a href="/eclipselink/moxy.php">
-						<img align="center" src="/eclipselink/images/moxy.jpg" border="0" />
 						<h1>MOXy</h1>
+						Object-XML (JAXB)
 						</a>
 					</td>
 					
 					<td valign="center">
 						<a href="/eclipselink/sdo.php">
 						<h1>SDO</h1>
+						Service Data Objects
 						</a>
 					</td>
 					
 					<td valign="center">
 						<a href="/eclipselink/dbws.php">
 						<h1>DBWS</h1>
+						Database Web Services
 						</a>
 					</td>
 				</tr>

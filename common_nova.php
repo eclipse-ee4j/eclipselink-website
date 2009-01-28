@@ -29,7 +29,7 @@
 
 	$Nav->addNavSeparator("Project", "http://wiki.eclipse.org/EclipseLink/UserManual");
 	$Nav->addCustomNav("Plan", "http://www.eclipse.org/projects/project-plan.php?projectid=eclipselink", "_self", 2);
-	$Nav->addCustomNav("Road Map", "http://wiki.eclipse.org/EclipseLink/RoadMap", "_self", 2);
+	$Nav->addCustomNav("Timeline", "http://www.eclipse.org/projects/timeline/index.php?projectid=rt.eclipselink", "_self", 2);
 	$Nav->addCustomNav("News", "/eclipselink/news.php", "_self", 2);
 	$Nav->addCustomNav("Team", "/eclipselink/team/", "_self", 2);
 
