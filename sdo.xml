@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sections title="EclipseLink JPA">
-	<section class="none" name="About EclipseLink SDO">
+<sections title="EclipseLink SDO">
+	<section class="main">
 		<description>
+			<h1>EclipseLink SDO</h1>
 			<p align="justify">
 				EclipseLink SDO delivers a compliant SDO 2.1.1
 				implementation...

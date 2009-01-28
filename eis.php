@@ -12,7 +12,7 @@ $xml = DOMDocument::load('jpa.xml');
 //Set the page title
 $xpath = new DOMXPath($xml);
 $titleNode = $xpath->query("/sections/attribute::title")->item(0);
-$pageTitle = "EclipseLink JPA";
+$pageTitle = "EclipseLink EIS";
 
 // Load the XSL source
 $xsl = DOMDocument::load($root . '/eclipselink/eclipselink_nova.xsl');
