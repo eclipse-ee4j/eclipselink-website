@@ -2,56 +2,8 @@
 <sections title="EclipseLink SDO">
 	<section class="main">
 		<description>
-			<p align="justify">
 				EclipseLink SDO delivers a compliant SDO 2.1.1
 				implementation...
-			</p>
-			<p align="justify">
-				Service Data Objects (SDO) is designed to simplify and
-				unify the way in which applications handle data. Using
-				SDO, application programmers can uniformly access and
-				manipulate data from heterogeneous data sources,
-				including relational databases, XML data sources, Web
-				services, and enterprise information systems.
-			</p>
-			<p align="justify">
-				SDO is based on the concept of disconnected data graphs.
-				A data graph is a collection of tree-structured or
-				graph-structured data objects. Under the disconnected
-				data graphs architecture, a client retrieves a data
-				graph from a data source, mutates the data graph, and
-				can then apply the data graph changes back to the data
-				source.
-			</p>
-			<p align="justify">
-				The task of connecting applications to data sources is
-				performed by data mediator services. Client applications
-				query a data mediator service and get a data graph in
-				response. Client applications send an updated data graph
-				to a data mediator service to have the updates applied
-				to the original data source. This architecture allows
-				applications to deal principally with data graphs and
-				data objects.
-			</p>
-			<p align="justify">
-				SDO enables both a static (or strongly typed)
-				programming model and a dynamic (or loosely typed)
-				programming model. This enables a simple programming
-				model without sacrificing the dynamic model needed by
-				tools and frameworks.
-			</p>
-			<p align="justify">
-				SDO also provides a metadata API, which allows
-				applications, tools, and frameworks to introspect the
-				data model for a data graph. The SDO metadata API
-				unifies data-source-specific metadata APIs to enable
-				applications to handle data from heterogeneous data
-				sources in a uniform way.
-			</p>
-			<p align="justify">
-				SDO is intended to be language-neutral and to be
-				available in a range of programming languages.
-			</p>
 		</description>
 	</section>
 </sections>

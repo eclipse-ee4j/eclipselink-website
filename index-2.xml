@@ -2,7 +2,7 @@
 <sections title="EclipseLink">
 	<section class="none" name="About EclipseLink">
 		<description>
-			<p>
+			<p align="justify">
 				The Eclipse Persistence Services Project (EclipseLink)
 				project's goal is to provide a complete persistence
 				framework that is both comprehensive and universal. It
