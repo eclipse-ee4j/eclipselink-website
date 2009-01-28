@@ -4,7 +4,6 @@
 		<description>
 			EclipseLink SDO delivers a compliant SDO 2.1.1 implementation...
 			
-			<blockquote>
 			Service Data Objects (SDO) is designed to simplify and unify
 			the way in which applications handle data. Using SDO,
 			application programmers can uniformly access and manipulate
@@ -41,7 +40,6 @@
 
 			SDO is intended to be language-neutral and to be available
 			in a range of programming languages.
-			</blockquote>
 		</description>
 	</section>
 
