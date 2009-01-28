@@ -20,19 +20,19 @@
 			<div id="rightcolumn">
 		
 				<div class="sideitem">
-					<h6><a href="/eclipselink/index-2.php">EclipseLink</a></h6> 
+					<font size="+1"><a href="/eclipselink/index-2.php">EclipseLink Project</a></font> 
 					<ul>
-						<li><a href="/eclipselink/jpa.php">JPA: Object-Relational</a></li>
-						<li><a href="/eclipselink/moxy.php">MOXy: Object-XML</a></li>
-						<li><a href="/eclipselink/sdo.php">SDO: Service Data Objects</a></li>
-						<li><a href="/eclipselink/dbws.php">DBWS: Data Web Services</a></li>
-						<li><a href="/eclipselink/news.php">Project News</a></li>
-						<li><a href="/eclipselink/documentation.php">Documentation</a></li>
+						<li><a href="/eclipselink/jpa.php"><font size="+1">JPA</font>: Object-Relational</a></li>
+						<li><a href="/eclipselink/moxy.php"><font size="+1">MOXy</font>: Object-XML</a></li>
+						<li><a href="/eclipselink/sdo.php"><font size="+1">SDO</font>: Service Data Objects</a></li>
+						<li><a href="/eclipselink/dbws.php"><font size="+1">DBWS</font>: Data Web Services</a></li>
+						<li><a href="/eclipselink/news.php"><font size="+1">Project News</font></a></li>
+						<li><a href="/eclipselink/documentation.php"><font size="+1">Documentation</font></a></li>
 					</ul>
 				</div>
 				
 				<div class="sideitem" align="center">
-					<h6>Search <a href="http://wiki.eclipse.org/EclipseLink">EclipseLink Wiki</a></h6>			
+					<font size="+1">Search <a href="http://wiki.eclipse.org/EclipseLink">EclipseLink Wiki</a></font>			
 					<form action="http://www.google.com/cse" id="cse-search-box">
 						<input type="hidden" name="cx"
 							value="002128250543942842320:qffgtrd2s3k" />

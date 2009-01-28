@@ -4,10 +4,29 @@
 		<description>
 			<table width="100%">
 				<tr>
-					<td valign="center">JPA</td>
-					<td valign="center">MOXy</td>
-					<td valign="center">SDO</td>
-					<td valign="center">DBWS</td>
+					<td valign="center">
+						<a href="/eclipselink/jpa.php">
+						<h1>JPA</h1>
+						</a>
+					</td>
+					
+					<td valign="center">
+						<a href="/eclipselink/moxy.php">
+						<h1>MOXy</h1>
+						</a>
+					</td>
+					
+					<td valign="center">
+						<a href="/eclipselink/sdo.php">
+						<h1>SDO</h1>
+						</a>
+					</td>
+					
+					<td valign="center">
+						<a href="/eclipselink/dbws.php">
+						<h1>DBWS</h1>
+						</a>
+					</td>
 				</tr>
 			</table>
 		</description>
@@ -15,7 +34,7 @@
 
 	<section class="main">
 		<description>
-			<h1>Project News - Highlights</h1>
+			<h1><a href="/eclipselink/news.php">Project News</a></h1>
 		</description>
 		
 		<section name="EclipseLink 1.0.2 Released"
@@ -27,8 +46,6 @@
 			link="http://www.eclipse.org/eclipselink/downloads">
 			<em>Sept 09, 2008</em>
 		</section>
-		
-		<section name="More News" link="/eclipselink/news.php" />
 
 	</section>
 
