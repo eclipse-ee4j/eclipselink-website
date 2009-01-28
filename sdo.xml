@@ -2,8 +2,9 @@
 <sections title="EclipseLink JPA">
 	<section class="none" name="About EclipseLink SDO">
 		<description>
-			EclipseLink SDO delivers a compliant SDO 2.1.1 implementation...
-			
+			EclipseLink SDO delivers a compliant SDO 2.1.1
+			implementation...
+
 			Service Data Objects (SDO) is designed to simplify and unify
 			the way in which applications handle data. Using SDO,
 			application programmers can uniformly access and manipulate
@@ -43,4 +44,10 @@
 		</description>
 	</section>
 
+	<section class="rightcolumn">
+
+		<section class="sideitem">
+			<h6>SDO Links</h6>
+		</section>
+	</section>
 </sections>
