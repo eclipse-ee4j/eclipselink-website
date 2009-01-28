@@ -20,7 +20,7 @@
 			<div id="rightcolumn">
 		
 				<div class="sideitem">
-					<h6><a href="/eclipselink/index-2.php">EclipseLink</a> Components</h6> 
+					<h6><a href="/eclipselink/index-2.php">EclipseLink</a></h6> 
 					<ul>
 						<li><a href="/eclipselink/jpa.php">JPA: Object-Relational</a></li>
 						<li><a href="/eclipselink/moxy.php">MOXy: Object-XML</a></li>
@@ -50,7 +50,7 @@
 				
 				<div class="sideitem">
 					<a	href="/eclipselink/downloads">
-						<img src="/eclipselink/images/downloads.gif" />
+						<img src="http://dev.eclipse.org/huge_icons/actions/go-bottom.png" />
 						<font size="+1">Downloads</font>
 					</a>
 				</div>
