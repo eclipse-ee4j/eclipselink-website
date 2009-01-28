@@ -11,12 +11,17 @@
 	$Nav->addCustomNav("SDO", "/eclipselink/sdo.php", "_self", 2);
 	$Nav->addCustomNav("JPA", "/eclipselink/jpa.php", "_self", 2);
   
- 	$Nav->addNavSeparator("Downloads", "/eclispelink/downloads/");
-
+ 	$Nav->addNavSeparator("Downloads", "/eclispelink/downloads/index.php");
+	$Nav->addCustomNav("1.0.2", "/eclispelink/downloads/index.php", "_self", 2);
+	$Nav->addCustomNav("1.1 Milestones", "/eclispelink/downloads/milestones.php", "_self", 2);
+	$Nav->addCustomNav("Maven", "http://wiki.eclipse.org/EclipseLink/Maven", "_self", 2);
+	
 	$Nav->addNavSeparator("Newsgroup", "/newsportal/thread.php?group=eclipse.rt.eclipselink");
 	$Nav->addCustomNav("Users Mailing List", "https://dev.eclipse.org/mailman/listinfo/eclipselink-users", "_self", 2);
 
 	$Nav->addNavSeparator("Documentation", "http://wiki.eclipse.org/EclipseLink/UserManual");
+	$Nav->addCustomNav("User Guide", "http://wiki.eclipse.org/EclipseLink/UserManual", "_self", 2);
+	$Nav->addCustomNav("User Guide - JPA", "http://wiki.eclipse.org/EclipseLink/UserManual", "_self", 3);
 	$Nav->addCustomNav("Search User Guide", "http://www.google.com/coop/cse?cx=016171230611334810008%3A8qajdsud9zq&hl=en", "_self", 2);
 	$Nav->addCustomNav("API (JavaDocs)", "/eclipselink/api/latest/index.html", "_self", 2);
 	$Nav->addCustomNav("EclipseLink Wiki", "http://wiki.eclipse.org/EclipseLink", "_self", 2);
