@@ -15,7 +15,7 @@
 					<td valign="center">
 						<a href="/eclipselink/moxy.php">
 							<img
-								src="/eclipselink/images/Eclipselink_xml.png" border="0" />
+								src="/eclipselink/images/Eclipselink_moxy.png" border="0" />
 						</a>
 					</td>
 
@@ -27,18 +27,19 @@
 					</td>
 
 					<td valign="center">
-						<a href="/eclipselink/eis.php">
+						<a href="/eclipselink/dbws.php">
 							<img
 								src="/eclipselink/images/Eclipselink_eis.png" border="0" />
 						</a>
 					</td>
 
 					<td valign="center">
-						<a href="/eclipselink/dbws.php">
-							<h1>DBWS</h1>
-							Database Web Services
+						<a href="/eclipselink/eis.php">
+							<img
+								src="/eclipselink/images/Eclipselink_eis.png" border="0" />
 						</a>
 					</td>
+
 				</tr>
 			</table>
 		</description>
