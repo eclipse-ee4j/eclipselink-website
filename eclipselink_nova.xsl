@@ -17,47 +17,7 @@
 				<xsl:apply-templates select="section[@class='main']"
 					mode="main" />
 			</div>
-			<div id="rightcolumn">
-		
-				<div class="sideitem">
-					<font size="+1"><a href="/eclipselink/index-2.php">EclipseLink Project</a></font> 
-					<ul>
-						<li><a href="/eclipselink/jpa.php"><font size="+1">JPA</font>: Object-Relational</a></li>
-						<li><a href="/eclipselink/moxy.php"><font size="+1">MOXy</font>: Object-XML</a></li>
-						<li><a href="/eclipselink/sdo.php"><font size="+1">SDO</font>: Service Data Objects</a></li>
-						<li><a href="/eclipselink/dbws.php"><font size="+1">DBWS</font>: Data Web Services</a></li>
-						<li><a href="/eclipselink/news.php"><font size="+1">Project News</font></a></li>
-						<li><a href="/eclipselink/documentation.php"><font size="+1">Documentation</font></a></li>
-					</ul>
-				</div>
-				
-				<div class="sideitem" align="center">
-					<font size="+1">Search <a href="http://wiki.eclipse.org/EclipseLink">EclipseLink Wiki</a></font>			
-					<form action="http://www.google.com/cse" id="cse-search-box">
-						<input type="hidden" name="cx"
-							value="002128250543942842320:qffgtrd2s3k" />
-						<input type="text" name="q" size="24" maxlength="2048" /><br/>
-						<input type="submit" name="sa" value="Search" />
-					</form>
-				</div>
-				
-				<div class="sideitem">
-					<a	href="/eclipselink/community.php">
-						<img src="/eclipselink/images/community.jpg" />
-						<font size="+1">Community</font>
-					</a>
-				</div>
-				
-				<div class="sideitem">
-					<a	href="/eclipselink/downloads">
-						<img src="http://dev.eclipse.org/huge_icons/actions/go-bottom.png" />
-						<font size="+1">Downloads</font>
-					</a>
-				</div>
 
-				<xsl:apply-templates select="section[@class='infobox']"
-					mode="infobox" />
-			</div>
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
