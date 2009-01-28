@@ -4,26 +4,14 @@
 	
   require_once($_SERVER['DOCUMENT_ROOT'] . "/projects/common/project-info.class.php");
   $projectInfo = new ProjectInfo("rt.eclipselink");
-  $projectInfo->generate_common_nav( $Nav );
-
-	function add2users() {
-	   global $Nav;
-		 $Nav->addCustomNav("Community", "/eclipselink/community.php", "", 2);
-		 $Nav->addCustomNav("Team Blog", "http://eclipselink.blogspot.com", "", 2);
-		 $Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/EclipseLink", "", 2);
-		 $Nav->addCustomNav("Users Mailing List", "https://dev.eclipse.org/mailman/listinfo/eclipselink-users", "", 2);
-		 $Nav->addCustomNav("User Guide (wiki)", "http://wiki.eclipse.org/EclipseLink/UserManual", "", 2);
-	}   
-	
-	function add2contributors() {
-	   global $Nav;
-		 $Nav->addCustomNav("EclipseLink Team", "http://www.eclipse.org/eclipselink/team", "", 2);
-		 $Nav->addCustomNav("FishEye", "http://fisheye2.atlassian.com/browse/eclipselink", "", 2);
-		 $Nav->addCustomNav("Incubation", "http://wiki.eclipse.org/EclipseLink/Development/Incubation", "", 2);
-	}
-	
-	$projectInfo->generate_common_nav( $Nav, "add2users", NULL, "add2contributors" );
-
+  
+	$Nav->addNavSeparator("EclipseLink", "/eclipselink/");
+	$Nav->addCustomNav("JPA", "/eclipselink/jpa.php", "_self", 3);
+	$Nav->addCustomNav("MOXy", "/eclipselink/moxy.php", "_self", 3);
+	$Nav->addCustomNav("SDO", "/eclipselink/sdo.php", "_self", 3);
+	$Nav->addCustomNav("JPA", "/eclipselink/jpa.php", "_self", 3);
+  
+  
 	#*****************************************************************************
 	#
 	# common.php
