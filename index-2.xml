@@ -9,12 +9,14 @@
 				<tr>
 					<td valign="center">
 						<a href="/eclipselink/jpa.php">
+						<img align="center" src="/images/jpa.jpg" border="0" />
 						<h1>JPA</h1>
 						</a>
 					</td>
 					
 					<td valign="center">
 						<a href="/eclipselink/moxy.php">
+						<img align="center" src="/images/moxy.jpg" border="0" />
 						<h1>MOXy</h1>
 						</a>
 					</td>
