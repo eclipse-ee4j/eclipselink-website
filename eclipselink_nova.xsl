@@ -20,13 +20,13 @@
 			<div id="rightcolumn">
 		
 				<div class="sideitem">
-					<h6><a href="/eclipselink/index-2.php">EclipseLink</a></h6> 
+					<h6><a href="/eclipselink/index-2.php">EclipseLink</a> Components</h6> 
 					<ul>
 						<li><a href="/eclipselink/jpa.php">JPA: Object-Relational</a></li>
 						<li><a href="/eclipselink/moxy.php">MOXy: Object-XML</a></li>
 						<li><a href="/eclipselink/sdo.php">SDO: Service Data Objects</a></li>
 						<li><a href="/eclipselink/dbws.php">DBWS: Data Web Services</a></li>
-						<li><a href="/eclipselink/news.php">News</a></li>
+						<li><a href="/eclipselink/news.php">Project News</a></li>
 						<li><a href="/eclipselink/documentation.php">Documentation</a></li>
 					</ul>
 				</div>

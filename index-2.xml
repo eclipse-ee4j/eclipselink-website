@@ -15,7 +15,7 @@
 
 	<section class="main">
 		<description>
-			<h2>Project News - Highlights</h2>
+			<h1>Project News - Highlights</h1>
 		</description>
 		
 		<section name="EclipseLink 1.0.2 Released"
