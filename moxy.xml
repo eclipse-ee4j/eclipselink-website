@@ -2,7 +2,8 @@
 <sections title="EclipseLink JPA">
 	<section class="none" name="About EclipseLink MOXy">
 		<description>
-		The EclipseLink MOXy .
+			<h1>EclipseLink MOXy</h1>
+			<p>The EclipseLink MOXy .</p>
 		</description>
 	</section>
 

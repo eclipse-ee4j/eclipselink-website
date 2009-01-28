@@ -3,6 +3,8 @@
 
 	<section class="none" name="About EclipseLink JPA">
 		<description>
+			<img src="/eclipselink/images/Eclipselink_jpa.png"
+				border="0" />
 			<h1>EclipseLink JPA</h1>
 			<p>
 				The EclipseLink JPA provides developers with a standards

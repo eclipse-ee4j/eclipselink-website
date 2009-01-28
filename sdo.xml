@@ -3,9 +3,8 @@
 	<section class="none" name="About EclipseLink SDO">
 		<description>
 			<h1>EclipseLink SDO</h1>
-			
-			EclipseLink SDO delivers a compliant SDO 2.1.1
-			implementation...
+			<p>The EclipseLink SDO component ...</p>
 		</description>
 	</section>
+
 </sections>
