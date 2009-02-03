@@ -1,4 +1,4 @@
 RedirectMatch "/eclipselink/api/latest/(.*)" http:/eclipselink/api/1.0.2/$1
-redirect /eclipselink/api http://www.eclipse.org/eclipselink/api/1.0.2/index.html
+redirect /eclipselink/api/latest http://www.eclipse.org/eclipselink/api/1.0.2/index.html
 redirect /eclipselink/maven.repo http://www.eclipse.org/eclipselink/downloads/download.php?r=1&nf=1&file=/rt/eclipselink/maven.repo
 redirect /eclipselink/project_summary http://www.eclipse.org/eclipselink/projects/project_summary.php?projectid=rt.eclipselink
