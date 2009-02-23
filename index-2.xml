@@ -6,7 +6,7 @@
 				<img src="/eclipselink/images/eclipselink.jpg"
 					border="0" />
 			</div>
-			<p align="justify">
+			<div align="justify">
 				The <b>Eclipse Persistence Services Project (EclipseLink)</b>
 				project's goal is to provide a complete persistence
 				framework that is both comprehensive and universal. It
@@ -20,7 +20,7 @@
 				for XML Binding (JAXB) for XML, Java Connector
 				Architecture (JCA) for EIS and other types of legacy
 				systems, and Service Data Objects (SDO).
-			</p>
+			</div>
 			<table width="100%">
 				<tr>
 					<td valign="center">
