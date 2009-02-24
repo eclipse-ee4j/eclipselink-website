@@ -13,8 +13,41 @@
 					</td>
 				</tr>
 			</table>
-			<p>The EclipseLink MOXy .</p>
+			<p>
+				The EclipseLink MOXy component enables Java developers
+				to efficiently bind Java classes to XML Schemas. MOXy
+				implements JAXB allowing developers to provide their
+				mapping information through annotations as well as
+				providing support for storing the mappings in XML
+				format. The many advanced mappings enable developers to
+				handle the complex XML structures without having to
+				mirror the schema in their Java class model.
+			</p>
 		</description>
+	</section>
+
+	<section class="main">
+		<description>
+			<h1>Getting Started with MOXy</h1>
+		</description>
+
+		<section name="Manipulating XML using EclipseLink MOXy (JAXB)"
+			link="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/JAXB">
+			<em>
+				This examnple walks through the configuration and usage
+				of MOXY's JAXB implementation to ...
+			</em>
+		</section>
+
+		<section name="Meet in the Middle Mapping with MOXy"
+			link="http://wiki.eclipse.org/EclipseLink/Examples/MOXy">
+			<em>
+				This tutorial illustrates for a POJO object model can be
+				mapped to an XML schema using the EclipseLink Workbench
+				and XML mappings with the JAXB runtime API.
+			</em>
+		</section>
+
 	</section>
 
 </sections>
