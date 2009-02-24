@@ -13,29 +13,7 @@
 				persistence framework. EclipseLink will focus on
 				providing leading edge support, including advanced
 				feature extensions, for the dominant persistence
-				standards for each target data source:
-				<ul>
-					<li>
-						<b>JPA</b>
-						: Java Persistence API for relational databases
-					</li>
-					<li>
-						<b>MOXy</b>
-						: Java API for XML Binding (JAXB)for XML
-					</li>
-					<li>
-						<b>SDO</b>
-						: Service Data Objects for SCA
-					</li>
-					<li>
-						<b>DBWS</b>
-						: Database Web Services
-					</li>
-					<li>
-						<b>EIS</b>
-						: Java Connector Architecture (JCA) for EIS
-					</li>
-				</ul>
+				standards for each target data source.
 			</div>
 		</description>
 	</section>
