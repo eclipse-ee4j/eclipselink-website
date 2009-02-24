@@ -28,11 +28,7 @@
 							Object-Relational
 						</a>
 					</td>
-					<td>
-						EclipseLink JPA enables mapping of Java classes
-						to a relational schema with complete query and
-						transaction processing.
-					</td>
+					<td>using EclipseLink JPA</td>
 				</tr>
 				<tr>
 					<td>
@@ -40,12 +36,7 @@
 							Object-XML Binding
 						</a>
 					</td>
-					<td>
-						EclipseLink MOXy enables binding an existing or
-						generated Java classes to an XML schema for
-						simple and efficiently integration XML with
-						JAXB.
-					</td>
+					<td>using EclipseLink MOXy</td>
 				</tr>
 				<tr>
 					<td>
@@ -53,10 +44,7 @@
 							Service Data Objects
 						</a>
 					</td>
-					<td>
-						EclipseLink SDO enables development DataObject
-						based services.
-					</td>
+					<td>using EclipseLink SDO</td>
 				</tr>
 				<tr>
 					<td>
@@ -64,10 +52,7 @@
 							Web Services for RDBMS
 						</a>
 					</td>
-					<td>
-						EclipseLink DBWS generates Web Services for
-						relational data access.
-					</td>
+					<td>using EclipseLink DBWS</td>
 				</tr>
 				<tr>
 					<td>
@@ -75,11 +60,7 @@
 							Non-Relational
 						</a>
 					</td>
-					<td>
-						EclipseLink EIS enables integration of
-						non-relational systems using JCA resource
-						adapters.
-					</td>
+					<td>using EclipseLink EIS</td>
 				</tr>
 			</table>
 		</description>
