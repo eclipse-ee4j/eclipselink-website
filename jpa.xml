@@ -9,7 +9,7 @@
 						<img
 							src="/eclipselink/images/Eclipselink_jpa.png" border="0" />
 					</td>
-					<td>
+					<td style="text-align:center">
 						<h1>EclipseLink JPA</h1>
 					</td>
 				</tr>

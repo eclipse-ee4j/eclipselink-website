@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sections title="EclipseLink EIS">
-	<section class="none" name="About EclipseLink EIS">
+	<section class="title">
 		<description>
 			<table border="0">
 				<tr>

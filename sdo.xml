@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sections title="EclipseLink SDO">
-	<section class="none" name="About EclipseLink SDO">
+	<section class="title">
 		<description>
 			<table border="0">
 				<tr>

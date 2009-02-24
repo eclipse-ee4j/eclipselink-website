@@ -47,20 +47,7 @@ pageTracker._trackPageview();
 
 	<xsl:template match="section" mode="title">
 		<div class="homeitem">
-			<xsl:if test="@anchor">
-				<a>
-					<xsl:attribute name="name">
-						<xsl:value-of select="@anchor" />
-					</xsl:attribute>
-				</a>
-			</xsl:if>
-			<h1>
-				<xsl:value-of select="@name" />
-			</h1>
 			<xsl:apply-templates select="description" mode="body" />
-			<ul>
-				<xsl:apply-templates />
-			</ul>
 		</div>
 	</xsl:template>
 
