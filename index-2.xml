@@ -30,7 +30,7 @@
 			<description>
 				<div style="text-align:center">
 				<a href="/eclipselink/jpa.php">
-					<img src="/eclipselink/images/jpa.gif"
+					<img src="/eclipselink/images/jpa.png"
 						border="0" />
 				</a>
 				<br/>
@@ -60,7 +60,7 @@
 
 	<section class="main" name="Learn more about EclipseLink" >
 		
-		<section name="Introdusing EclipseLink (Eclipse Zone)" link="http://eclipse.dzone.com/articles/introducing-eclipselink">
+		<section name="Introducing EclipseLink (Eclipse Zone)" link="http://eclipse.dzone.com/articles/introducing-eclipselink">
 			<em>June 30, 2008</em>
 		</section>
 		
@@ -68,7 +68,7 @@
 		
 	</section>
 	
-	<section class="main" name="Project News" >
+	<section class="main" name="Project News" link="/eclipselink/news.php" >
 
 		<section name="EclipseLink 1.0.2 Released"
 			link="http://www.eclipse.org/eclipselink/downloads">
