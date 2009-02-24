@@ -2,11 +2,8 @@
 <sections title="EclipseLink">
 	<section class="none" name="About EclipseLink">
 		<description>
-			<div align="center">
-				<img src="/eclipselink/images/eclipselink.jpg"
-					border="0" />
-			</div>
-			<div align="justify">
+			<h1>EclipseLink</h1>
+			<p align="justify">
 				The
 				<b>
 					Eclipse Persistence Services Project (EclipseLink)
@@ -23,7 +20,7 @@
 				for XML Binding (JAXB) for XML, Java Connector
 				Architecture (JCA) for EIS and other types of legacy
 				systems, and Service Data Objects (SDO).
-			</div>
+			</p>
 			<table width="100%">
 				<tr>
 					<td valign="center" halign="top">
