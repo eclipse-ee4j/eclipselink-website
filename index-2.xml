@@ -27,7 +27,7 @@
 						<a href="/eclipselink/jpa.php">
 							Object-Relational
 						</a>
-						using EclipseLink JPA
+						</td><td> EclipseLink JPA
 					</td>
 				</tr>
 				<tr>
@@ -35,7 +35,7 @@
 						<a href="/eclipselink/moxy.php">
 							Object-XML Binding
 						</a>
-						using EclipseLink MOXy
+						</td><td> EclipseLink MOXy
 					</td>
 				</tr>
 				<tr>
@@ -43,7 +43,7 @@
 						<a href="/eclipselink/sdo.php">
 							Service Data Objects
 						</a>
-						using EclipseLink SDO
+						</td><td> EclipseLink SDO
 					</td>
 				</tr>
 				<tr>
@@ -51,7 +51,7 @@
 						<a href="/eclipselink/dbws.php">
 							Web Services for RDBMS
 						</a>
-						using EclipseLink DBWS
+						</td><td> EclipseLink DBWS
 					</td>
 				</tr>
 				<tr>
@@ -59,7 +59,7 @@
 						<a href="/eclipselink/eis.php">
 							Non-Relational
 						</a>
-						using EclipseLink EIS
+						</td><td> EclipseLink EIS
 					</td>
 				</tr>
 			</table>
