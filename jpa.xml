@@ -56,7 +56,10 @@
 
 	</section>
 
-	<section class="sideitem" name="About JPA">
+	<section class="sideitem">
+		<description>
+			<h3>About JPA</h3>
+		</description>
 	</section>
 
 </sections>

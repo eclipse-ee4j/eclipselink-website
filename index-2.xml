@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sections title="EclipseLink">
 
-	<section class="none" name="About EclipseLink">
+	<section class="main" name="About EclipseLink">
 		<description>
 			<h1>EclipseLink</h1>
-			<div style="text-align:justify">
+			<p style="text-align:justify">
 				The Eclipse Persistence Services Project (EclipseLink)
 				delivers a comprehensive open-source Java persistence
 				solution. EclipseLink focuses on standards with advanced
 				features, performance and scalability for enterprise
 				software developers across data sources, formats, and
 				containers.
-			</div>
+			</p>
 		</description>
 	</section>
 
