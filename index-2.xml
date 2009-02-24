@@ -28,9 +28,9 @@
 	<section class="infobox" >
 
 			<description>
-				<div align="center">
+				<div style="text-align:center">
 				<a href="/eclipselink/jpa.php">
-					<img src="/eclipselink/images/Eclipselink_jpa.png"
+					<img src="/eclipselink/images/jpa.gif"
 						border="0" />
 				</a>
 				<br/>
