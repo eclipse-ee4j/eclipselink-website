@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sections title="EclipseLink">
 
-	<section class="main" name="About EclipseLink">
+	<section class="main">
 		<description>
 			<h1>EclipseLink</h1>
 			<p style="text-align:justify">
