@@ -24,12 +24,7 @@
 			</p>
 			<table width="100%">
 				<tr>
-					<td valign="center" halign="top">
-						<a href="/eclipselink/jpa.php">
-							<img
-								src="/eclipselink/images/Eclipselink_jpa.png" border="0" />
-						</a>
-					</td>
+					<td valign="center" halign="top"></td>
 
 					<td valign="center" halign="top">
 						<a href="/eclipselink/moxy.php">
@@ -64,14 +59,16 @@
 		</description>
 	</section>
 
-	<section class="infobox" name="Components" >
+	<section class="infobox" name="Components">
 
-		<description>description</description>
-
-		<section name="JPA" link="jpa.php"/>
-		<section name="MOXy" link="moxy.php"/>
-		<section name="SDO" link="sdo.php"/>
-		<section name="DBWS" link="dbws.php"/>
+		<section name="JPA">
+			<description>
+				<a href="/eclipselink/jpa.php">
+					<img src="/eclipselink/images/Eclipselink_jpa.png"
+						border="0" />
+				</a>
+			</description>
+		</section>
 	</section>
 
 	<section class="main">

@@ -4,13 +4,17 @@
 	version="1.0">
 
 	<xsl:template match="/sections">
-		<div id="maincontent">
 			<div id="midcolumn">
 				
 				<xsl:apply-templates select="section[@class='none']"
 					mode="none" />
 				<xsl:apply-templates select="section[@class='main']"
 					mode="main" />
+			</div>
+			
+			<div id="rightcolumn" >
+				<xsl:apply-templates select="section[@class='infobox']"
+					mode="infobox" />
 			</div>
 
 <script type="text/javascript">
@@ -22,7 +26,7 @@ var pageTracker = _gat._getTracker("UA-1608008-2");
 pageTracker._initData();
 pageTracker._trackPageview();
 </script>
-		</div>
+
 	</xsl:template>
 
 	<xsl:template match="section" mode="none">
@@ -60,8 +64,6 @@ pageTracker._trackPageview();
 
 	<xsl:template match="section" mode="infobox">
 
-	<div id="rightcolumn">
-
 		<div class='sideitem'>
 			<h6><xsl:value-of select="@name" /></h6>
 			<div class='modal'>
@@ -70,8 +72,7 @@ pageTracker._trackPageview();
 
 			<xsl:apply-templates />
 		</div>
-	
-	</div>	
+
 	</xsl:template>
 
 	<xsl:template match="section">
