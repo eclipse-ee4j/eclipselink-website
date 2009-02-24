@@ -12,6 +12,7 @@
     <html:p>EclipseLink past and upcoming milestones and releases.</html:p>
   </release_deliverables>
   <release_milestones>
+<!--  
     <milestone date="11/05/2007" milestone="1.0M1"><html:p>Nov Milestone for 1.0</html:p></milestone>
     <milestone date="12/05/2007" milestone="1.0M2"><html:p>Dec Milestone for 1.0</html:p></milestone>
     <milestone date="01/08/2008" milestone="1.0M3"><html:p>Jan Milestone for 1.0</html:p></milestone>
@@ -22,6 +23,7 @@
     <milestone date="06/04/2008" milestone="1.0M8"><html:p>Jun Milestone for 1.0</html:p></milestone>
     <milestone date="06/18/2008" milestone="1.0M9"><html:p>RC1 Milestone for 1.0</html:p></milestone>
     <milestone date="07/09/2008" milestone="1.0M9"><html:p>1.0 Released</html:p></milestone>
+-->
     <milestone date="08/13/2008" milestone="1.0.1M1"><html:p>August Milestone for 1.0.1</html:p></milestone>
     <milestone date="08/13/2008" milestone="1.1M1"><html:p>August Milestone for 1.1</html:p></milestone>
     <milestone date="08/27/2008" milestone="1.0.1M2"><html:p>RC1 Milestone for 1.0.1</html:p></milestone>
@@ -36,7 +38,7 @@
     <milestone date="12/09/2008" milestone="1.1M5"><html:p>Dec Milestone for 1.1</html:p></milestone>
     <milestone date="01/14/2009" milestone="1.1M6"><html:p>Code freeze - RC1 Milestone for 1.1</html:p></milestone>
     <milestone date="01/21/2009" milestone="1.1M7"><html:p>RC2 Milestone for 1.1</html:p></milestone>
-    <milestone date="02/04/2009" milestone="1.1.0"><html:p>1.1.0 Released</html:p></milestone>
+    <milestone date="03/11/2009" milestone="1.1.0"><html:p>1.1.0 Released</html:p></milestone>
     <postamble/>
   </release_milestones>
   <target_environments>
