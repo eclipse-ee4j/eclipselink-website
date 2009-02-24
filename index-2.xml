@@ -21,7 +21,7 @@
 				Select a persistence service and learn more about how to
 				get started developing with EclipseLink.
 			</p>
-			<table width="100%">
+			<table>
 				<tr>
 					<td>
 						<a href="/eclipselink/jpa.php">
