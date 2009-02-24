@@ -18,8 +18,47 @@
 				The EclipseLink JPA provides developers with a standards
 				based Object-Relational persistence solution with
 				additional support for many advanced features.
+				EclipseLink JPA provides advanced support for leading
+				relational databases and Java containers.
 			</p>
 		</description>
 	</section>
+
+	<section class="main">
+		<description>
+			<h1>Getting Started with JPA</h1>
+		</description>
+		<em>
+			<a
+				href="http://wiki.eclipse.org/EclipseLink/Examples/JPA">
+				More JPA examples
+			</a>
+		</em>
+
+		<section name="Basic configuration examples"
+			link="http://wiki.eclipse.org/EclipseLink/Examples/JPA/JPAConfigure">
+			<em>
+				Basic examples of configuration necessary when using
+				EclipseLink JPA.
+			</em>
+		</section>
+
+		<section name="Using EclipseLink JPA in a JSF application"
+			link="http://wiki.eclipse.org/EclipseLink/Examples/JPA/JSF_Tutorial">
+			<em>
+				This tutorial illustrates the use of EclipseLink JPA in
+				a JSF application. The tutorial includes configuration
+				and usage information in leading Java EE containers.
+			</em>
+		</section>
+
+		<section name="Using EclipseLink JPA in an RCP Application"
+			link="http://wiki.eclipse.org/EclipseLink/Examples/JPA/RCP">
+			<em>
+				This example provides a simple RCP application that uses
+				EclipseLink JPA. It illustrates the usage of EclipseLink
+				JPA in an Equinox environment.
+			</em>
+		</section>
 
 </sections>
