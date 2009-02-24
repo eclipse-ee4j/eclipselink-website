@@ -62,7 +62,7 @@ pageTracker._trackPageview();
 		</div>
 	</xsl:template>
 
-	<xsl:template match="section" mode="infobox">
+	<xsl:template match="section" mode="sideitem">
 
 		<div class='sideitem'>
 			<xsl:apply-templates select="description" mode="body" />

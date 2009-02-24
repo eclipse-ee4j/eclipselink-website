@@ -18,39 +18,57 @@
 		</description>
 	</section>
 
-	<section class="infobox">
-
+	<section class="main" name="Getting Started">
 		<description>
-			<div style="text-align:center">
-				<a href="/eclipselink/jpa.php">
-					<img src="/eclipselink/images/Eclipselink_jpa.png" border="0" />
-				</a>
-				<br />
-				<a href="/eclipselink/moxy.php">
-					<img src="/eclipselink/images/Eclipselink_moxy.png"
-						border="0" />
-				</a>
-				<br />
-				<a href="/eclipselink/sdo.php">
-					<img src="/eclipselink/images/Eclipselink_sdo.png"
-						border="0" />
-				</a>
-				<br />
-				<a href="/eclipselink/dbws.php">
-					<img src="/eclipselink/images/Eclipselink_dbws.png"
-						border="0" />
-				</a>
-				<br />
-				<a href="/eclipselink/eis.php">
-					<img src="/eclipselink/images/Eclipselink_eis.png"
-						border="0" />
-				</a>
-			</div>
+			EclipseLink has components available for different
+			persistence service needs.
 		</description>
+
+		<section name="Object-Relational Persistence using JPA"
+			link="/eclispelink/jpa.php">
+			<em>
+				EclipseLink JPA offers support for mapping Java classes
+				to a relational schema with an easy to use API for query
+				and transaction processing.
+			</em>
+		</section>
+
+		<section name="Object-XML Binding using MOXy"
+			link="/eclispelink/moxy.php">
+			<em>
+				EclipseLink MOXy offers support for binding an existing
+				or generated Java classes to an XML schema so
+				application code can efficiently integrated XML.
+			</em>
+		</section>
+
+		<section name="Service Development with Service Data Objects"
+			link="/eclispelink/sdo.php">
+			<em>
+				EclipseLink SDO provides the support for developing
+				DataObject models for Service integration.
+			</em>
+		</section>
+
+		<section name="Web Service access to relational databases"
+			link="/eclispelink/dbws.php">
+			<em>
+				EclipseLink DBWS enables the rapide generation of Web
+				Services to access relational data.
+			</em>
+		</section>
+
+		<section name="Non-Relational Persistence"
+			link="/eclispelink/jpa.php">
+			<em>
+				EclipseLink EIS provides support for integrating
+				non-relational systems using JCA resource adapters.
+			</em>
+		</section>
 
 	</section>
 
-	<section class="main" name="Learn more...">
+	<section class="main" name="Learn More">
 
 		<section name="Introducing EclipseLink (Eclipse Zone)"
 			link="http://eclipse.dzone.com/articles/introducing-eclipselink">
@@ -77,5 +95,37 @@
 
 	</section>
 
+	<section class="sideitem">
+
+		<description>
+			<div style="text-align:center">
+				<a href="/eclipselink/jpa.php">
+					<img src="/eclipselink/images/Eclipselink_jpa.png"
+						border="0" />
+				</a>
+				<br />
+				<a href="/eclipselink/moxy.php">
+					<img src="/eclipselink/images/Eclipselink_moxy.png"
+						border="0" />
+				</a>
+				<br />
+				<a href="/eclipselink/sdo.php">
+					<img src="/eclipselink/images/Eclipselink_sdo.png"
+						border="0" />
+				</a>
+				<br />
+				<a href="/eclipselink/dbws.php">
+					<img src="/eclipselink/images/Eclipselink_dbws.png"
+						border="0" />
+				</a>
+				<br />
+				<a href="/eclipselink/eis.php">
+					<img src="/eclipselink/images/Eclipselink_eis.png"
+						border="0" />
+				</a>
+			</div>
+		</description>
+
+	</section>
 
 </sections>
