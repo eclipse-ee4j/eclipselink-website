@@ -24,7 +24,7 @@
 		</description>
 	</section>
 
-	<section class="main" name="Getting started with EclipseLink JPA" >
+	<section class="main" name="Getting Started" >
 
 		<section name="Basic configuration examples"
 			link="http://wiki.eclipse.org/EclipseLink/Examples/JPA/JPAConfigure">
@@ -56,4 +56,6 @@
 
 	</section>
 
+	<section class="main" name="Documentation" >
+	</section>
 </sections>

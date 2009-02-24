@@ -13,8 +13,8 @@
 			</div>
 			
 			<div id="rightcolumn" >
-				<xsl:apply-templates select="section[@class='infobox']"
-					mode="infobox" />
+				<xsl:apply-templates select="section[@class='sideitem']"
+					mode="sideitem" />
 			</div>
 
 <script type="text/javascript">

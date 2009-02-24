@@ -20,8 +20,10 @@
 
 	<section class="main" name="Getting Started">
 		<description>
-			EclipseLink has components available for different
-			persistence service needs.
+			EclipseLink offers persistence services to access data in
+			various formats and data storage solutions. Select the
+			component that addresses your needs and learn how to get
+			started.
 		</description>
 
 		<section name="Object-Relational Persistence using JPA"
