@@ -52,16 +52,7 @@
 			</em>
 		</section>
 
-		<section>
-			<em>
-				<div  style="text-align:right">
-					<a
-						href="http://wiki.eclipse.org/EclipseLink/Examples/JPA">
-						More JPA examples
-					</a>
-				</div>
-			</em>
-		</section>
+		<section name="More EclipseLink JPA examples" link="http://wiki.eclipse.org/EclipseLink/Examples/JPA" />
 
 	</section>
 
