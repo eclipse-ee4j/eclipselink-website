@@ -27,40 +27,40 @@
 						<a href="/eclipselink/jpa.php">
 							Object-Relational
 						</a>
+						using EclipseLink JPA
 					</td>
-					<td>using EclipseLink JPA</td>
 				</tr>
 				<tr>
 					<td>
 						<a href="/eclipselink/moxy.php">
 							Object-XML Binding
 						</a>
+						using EclipseLink MOXy
 					</td>
-					<td>using EclipseLink MOXy</td>
 				</tr>
 				<tr>
 					<td>
 						<a href="/eclipselink/sdo.php">
 							Service Data Objects
 						</a>
+						using EclipseLink SDO
 					</td>
-					<td>using EclipseLink SDO</td>
 				</tr>
 				<tr>
 					<td>
 						<a href="/eclipselink/dbws.php">
 							Web Services for RDBMS
 						</a>
+						using EclipseLink DBWS
 					</td>
-					<td>using EclipseLink DBWS</td>
 				</tr>
 				<tr>
 					<td>
 						<a href="/eclipselink/eis.php">
 							Non-Relational
 						</a>
+						using EclipseLink EIS
 					</td>
-					<td>using EclipseLink EIS</td>
 				</tr>
 			</table>
 		</description>
