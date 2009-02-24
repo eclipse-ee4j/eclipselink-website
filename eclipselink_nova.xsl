@@ -6,10 +6,12 @@
 	<xsl:template match="/sections">
 			<div id="midcolumn">
 				
-				<xsl:apply-templates select="section[@class='none']"
-					mode="none" />
+				<xsl:apply-templates select="section[@class='title']"
+					mode="title" />
 				<xsl:apply-templates select="section[@class='main']"
 					mode="main" />
+				<xsl:apply-templates select="section[@class='none']"
+					mode="none" />
 			</div>
 			
 			<div id="rightcolumn" >
@@ -41,6 +43,25 @@ pageTracker._trackPageview();
 			<ul>
 				<xsl:apply-templates />
 			</ul>
+	</xsl:template>
+
+	<xsl:template match="section" mode="title">
+		<div class="homeitem">
+			<xsl:if test="@anchor">
+				<a>
+					<xsl:attribute name="name">
+						<xsl:value-of select="@anchor" />
+					</xsl:attribute>
+				</a>
+			</xsl:if>
+			<h1>
+				<xsl:value-of select="@name" />
+			</h1>
+			<xsl:apply-templates select="description" mode="body" />
+			<ul>
+				<xsl:apply-templates />
+			</ul>
+		</div>
 	</xsl:template>
 
 	<xsl:template match="section" mode="main">
