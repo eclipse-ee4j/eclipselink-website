@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sections title="EclipseLink">
+
 	<section class="none" name="About EclipseLink">
 		<description>
 			<h1>EclipseLink</h1>
@@ -63,6 +64,16 @@
 		</description>
 	</section>
 
+	<section class="infobox" name="Components" >
+
+		<description>description</description>
+
+		<section name="JPA" link="jpa.php"/>
+		<section name="MOXy" link="moxy.php"/>
+		<section name="SDO" link="sdo.php"/>
+		<section name="DBWS" link="dbws.php"/>
+	</section>
+
 	<section class="main">
 		<description>
 			<h1>
@@ -82,14 +93,5 @@
 
 	</section>
 
-	<section class="infobox" name="Components" >
-
-		<description>description</description>
-
-		<section name="JPA" link="jpa.php"/>
-		<section name="MOXy" link="moxy.php"/>
-		<section name="SDO" link="sdo.php"/>
-		<section name="DBWS" link="dbws.php"/>
-	</section>
 
 </sections>
