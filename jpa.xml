@@ -24,16 +24,7 @@
 		</description>
 	</section>
 
-	<section class="main">
-		<description>
-			<h1>Getting Started with JPA</h1>
-		</description>
-		<em>
-			<a
-				href="http://wiki.eclipse.org/EclipseLink/Examples/JPA">
-				More JPA examples
-			</a>
-		</em>
+	<section class="main" name="Getting started with EclipseLink JPA" >
 
 		<section name="Basic configuration examples"
 			link="http://wiki.eclipse.org/EclipseLink/Examples/JPA/JPAConfigure">
@@ -60,6 +51,18 @@
 				JPA in an Equinox environment.
 			</em>
 		</section>
+
+		<section>
+			<em>
+				<div  style="text-align:right">
+					<a
+						href="http://wiki.eclipse.org/EclipseLink/Examples/JPA">
+						More JPA examples
+					</a>
+				</div>
+			</em>
+		</section>
+
 	</section>
 
 </sections>

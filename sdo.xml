@@ -17,4 +17,18 @@
 		</description>
 	</section>
 
+	<section class="main" name="Getting Started with EclipseLink SDO">
+
+		<section name="Generating statis Data Objects from XSD"
+			link="http://wiki.eclipse.org/EclipseLink/Examples/SDO/Compiler">
+			<em>
+				Generating a static SDO DataObject model from an XML
+				schema using EclipseLink's SDO compiler.
+			</em>
+		</section>
+
+		<section name="More EclipseLink SDO examples"
+			link="http://wiki.eclipse.org/EclipseLink/Examples/SDO" />
+
+	</section>
 </sections>
