@@ -65,11 +65,7 @@ pageTracker._trackPageview();
 	<xsl:template match="section" mode="infobox">
 
 		<div class='sideitem'>
-			<h6><xsl:value-of select="@name" /></h6>
-			<div class='modal'>
-				<xsl:apply-templates select="description" mode="body" />
-			</div>
-
+			<xsl:apply-templates select="description" mode="body" />
 			<xsl:apply-templates />
 		</div>
 
