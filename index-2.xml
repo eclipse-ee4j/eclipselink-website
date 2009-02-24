@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sections title="EclipseLink">
 
-	<section class="main" name="EclipseLink" >
+	<section class="title" name="EclipseLink" >
 		<description>
 			<p style="text-align:justify">
 				The Eclipse Persistence Services Project (EclipseLink)
