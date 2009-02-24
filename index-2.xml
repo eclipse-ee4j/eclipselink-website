@@ -28,6 +28,7 @@
 	<section class="infobox" name="Components">
 
 			<description>
+				<div align="center">
 				<a href="/eclipselink/jpa.php">
 					<img src="/eclipselink/images/Eclipselink_jpa.png"
 						border="0" />
@@ -52,6 +53,7 @@
 					<img src="/eclipselink/images/Eclipselink_eis.png"
 						border="0" />
 				</a>
+				</div>
 			</description>
 
 	</section>
