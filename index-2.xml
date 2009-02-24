@@ -87,8 +87,12 @@
 
 	<section class="infobox" name="Components" >
 
-		<section name="JPA" link="jpa.php" />
+		<description>description</description>
 
+		<section name="JPA" link="jpa.php"/>
+		<section name="MOXy" link="moxy.php"/>
+		<section name="SDO" link="sdo.php"/>
+		<section name="DBWS" link="dbws.php"/>
 	</section>
 
 </sections>
