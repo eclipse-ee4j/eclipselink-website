@@ -60,6 +60,8 @@ pageTracker._trackPageview();
 
 	<xsl:template match="section" mode="infobox">
 
+	<div id="rightcolumn">
+
 		<div class='sideitem'>
 			<h6><xsl:value-of select="@name" /></h6>
 			<div class='modal'>
@@ -68,7 +70,8 @@ pageTracker._trackPageview();
 
 			<xsl:apply-templates />
 		</div>
-		
+	
+	</div>	
 	</xsl:template>
 
 	<xsl:template match="section">
