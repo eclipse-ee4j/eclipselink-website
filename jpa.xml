@@ -56,6 +56,11 @@
 
 	</section>
 
-	<section class="main" name="Documentation" >
+	<section class="sideitem" name="About JPA">
 	</section>
+
+	<section class="sideitem" name="Documentation">
+	</section>
+
+
 </sections>

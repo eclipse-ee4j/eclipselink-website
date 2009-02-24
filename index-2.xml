@@ -5,67 +5,84 @@
 		<description>
 			<h1>EclipseLink</h1>
 			<div style="text-align:justify">
-				The
-				<b>
-					Eclipse Persistence Services Project (EclipseLink)
-				</b>
+				The Eclipse Persistence Services Project (EclipseLink)
 				delivers a comprehensive open-source Java persistence
-				solution. EclipseLink delivers a standards based
-				solution with advanced features for enterprise software
-				developers.
+				solution. EclipseLink focuses on standards with advanced
+				features, performance and scalability for enterprise
+				software developers across data sources, formats, and
+				containers.
 			</div>
 		</description>
 	</section>
 
 	<section class="main" name="Getting Started">
 		<description>
-			Select a persistence service and learn more about how to get
-			started developing with EclipseLink.
+			<p>
+				Select a persistence service and learn more about how to
+				get started developing with EclipseLink.
+			</p>
+			<table width="100%">
+				<tr>
+					<td>
+						<a href="/eclipselink/jpa.php">
+							Object-Relational
+						</a>
+					</td>
+					<td>
+						EclipseLink JPA enables mapping of Java classes
+						to a relational schema with complete query and
+						transaction processing.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="/eclipselink/moxy.php">
+							Object-XML Binding
+						</a>
+					</td>
+					<td>
+						EclipseLink MOXy enables binding an existing or
+						generated Java classes to an XML schema for
+						simple and efficiently integration XML with
+						JAXB.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="/eclipselink/sdo.php">
+							Service Data Objects
+						</a>
+					</td>
+					<td>
+						EclipseLink SDO enables development DataObject
+						based services.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="/eclipselink/dbws.php">
+							Web Services for RDBMS
+						</a>
+					</td>
+					<td>
+						EclipseLink DBWS generates Web Services for
+						relational data access.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="/eclipselink/eis.php">
+							Non-Relational
+						</a>
+					</td>
+					<td>
+						EclipseLink EIS enables integration of
+						non-relational systems using JCA resource
+						adapters.
+					</td>
+				</tr>
+			</table>
 		</description>
-
-		<section name="Object-Relational Persistence"
-			link="/eclispelink/jpa.php">
-			<em>
-				<a href="/eclipselink/jpa.php">EclipseLink JPA</a>
-				enables mapping of Java classes to a relational schema
-				with complete query and transaction processing.
-			</em>
-		</section>
-
-		<section name="Object-XML Binding"
-			link="/eclispelink/moxy.php">
-			<em>
-				<a href="/eclipselink/moxy.php">EclipseLink MOXy</a>
-				enabled binding an existing or generated Java classes to
-				an XML schema for simple and efficiently integration
-				XML.
-			</em>
-		</section>
-
-		<section name="Service Development with Service Data Objects"
-			link="/eclispelink/sdo.php">
-			<em>
-				<a href="/eclipselink/sdo.php">EclipseLink SDO</a>
-				enables development DataObject based services.
-			</em>
-		</section>
-
-		<section name="Web Service access to relational databases"
-			link="/eclispelink/dbws.php">
-			<em>
-				<a href="/eclipselink/dbws.php">EclipseLink DBWS</a>
-				generates Web Services for relational data access.
-			</em>
-		</section>
-
-		<section name="Non-Relational Persistence"
-			link="/eclispelink/jpa.php">
-			<em>
-				<a href="/eclipselink/eis.php">EclipseLink EIS</a>
-				enables integration of non-relational systems using JCA
-				resource adapters.
-			</em>
-		</section>
 
 	</section>
 
