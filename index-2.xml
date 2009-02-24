@@ -23,7 +23,7 @@
 		<description>
 			<div style="text-align:center">
 				<a href="/eclipselink/jpa.php">
-					<img src="/eclipselink/images/jpa.png" border="0" />
+					<img src="/eclipselink/images/Eclipselink_jpa.png" border="0" />
 				</a>
 				<br />
 				<a href="/eclipselink/moxy.php">
@@ -50,7 +50,7 @@
 
 	</section>
 
-	<section class="main" name="Learn more about EclipseLink">
+	<section class="main" name="Learn more...">
 
 		<section name="Introducing EclipseLink (Eclipse Zone)"
 			link="http://eclipse.dzone.com/articles/introducing-eclipselink">
