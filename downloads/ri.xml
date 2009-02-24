@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sections title="EclipseLink">
 
-	<section class="none"
-		name="EclipseLink Reference Implementations">
+	<section class="main"
+		name="EclipseLink's Reference Implementation Downloads">
 		<description>
 			EclipseLink is a leader is providing standards based open
 			source persistence solutions. The following downloads are
 			reference implementations delivered by the EclipseLink
 			project.
 		</description>
-	</section>
-
-
-	<section class="main"
-		name="EclipseLink's Reference Implementation Downloads">
 
 		<section name="Service Data Objects 2.1.1 (JSR 235)"
 			link="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/ri/eclipselink-1.1_SDO_2.1.1_RI.zip">
