@@ -60,7 +60,6 @@
 		<description>
 			<h3>JPA Resources</h3>
 			<li><a href="http://www.apress.com/book/bookDisplay.html?bID=10093">Pro EJB3 - JPA</a></li>
-			<br/><a href="http://www.oracle.com/technology/products/ias/toplink/jpa/resources/Pro_EJB_3-Java_Persistence_API-Chapter2.pdf">Chapter 2: Getting Started</a>
 			<a href="http://www.apress.com/book/view/9781590596456"><img src="http://www.apress.com/resource/bookcover/9781590596456?size=medium"
 						border="0" /></a>
 			<li><a href="http://jcp.org/en/jsr/detail?id=220">JPA 1.0 (JSR 220)</a></li>
