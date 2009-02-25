@@ -13,7 +13,13 @@
 					</td>
 				</tr>
 			</table>
-			<p>The EclipseLink SDO component ...</p>
+			<p>
+				The EclipseLink SDO component delivers the reference
+				implementation of SDO 2.1.1 (JSR 235). The EclipseLink
+				SDO implementation enables Java developer to efficiently
+				build and use data object models that can be
+				incorporated into service architectures.
+			</p>
 		</description>
 	</section>
 
