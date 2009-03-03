@@ -34,6 +34,15 @@
 			</em>
 		</section>
 
+		<section name="Using POJOs and JPA Entities with SDO"
+			link="http://wiki.eclipse.org/EclipseLink/Examples/SDO#Data_Access_Service">
+			<em>
+				EclipseLink SDO provides Data Access Service (DAS)
+				combining existing POJO object models or JPA entities
+				wrapped within static or dynamic data objects.
+			</em>
+		</section>
+
 		<section name="More EclipseLink SDO examples"
 			link="http://wiki.eclipse.org/EclipseLink/Examples/SDO" />
 
@@ -42,16 +51,23 @@
 	<section class="sideitem">
 		<description>
 			<h3>SDO Resources</h3>
-			<li><a href="http://www.osoa.org/display/Main/Service+Data+Objects+Home">OSOA SDO Home</a></li>
-			<a href="http://www.osoa.org/display/Main/Service+Data+Objects+Home"><img src="http://www.osoa.org/download/userResources/logo"
-						border="0" /></a>
+			<li>
+				<a
+					href="http://www.osoa.org/display/Main/Service+Data+Objects+Home">
+					OSOA SDO Home
+				</a>
+			</li>
+			<a
+				href="http://www.osoa.org/display/Main/Service+Data+Objects+Home">
+				<img
+					src="http://www.osoa.org/download/userResources/logo" border="0" />
+			</a>
 			<li>
 				<a href="http://jcp.org/en/jsr/detail?id=235">
 					SDO 2.1.1 (JSR 235)
-				</a><br/>
-				<a href="/eclipselink/downloads/ri.php">
-					RI Download
 				</a>
+				<br />
+				<a href="/eclipselink/downloads/ri.php">RI Download</a>
 			</li>
 
 			<h3>Documentation</h3>
