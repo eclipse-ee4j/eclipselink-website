@@ -14,11 +14,11 @@
 				</tr>
 			</table>
 			<p>
-			The EclipseLink EIS provides support for developing Java
-			applications where non-relational data stores must be
-			integrated. EclipseLink allows developers to map between
-			their domain model and the records or XML interchanged with
-			the underlying data store using JCA resource adapters.
+				The EclipseLink EIS provides support for developing Java
+				applications integrating non-relational data stores.
+				EclipseLink allows developers to map between their
+				domain model and the records or XML interchanged with
+				the underlying data store using JCA resource adapters.
 			</p>
 		</description>
 	</section>

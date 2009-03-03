@@ -15,10 +15,11 @@
 			</table>
 			<p>
 				The EclipseLink SDO component delivers the reference
-				implementation of SDO 2.1.1 (JSR 235). The EclipseLink
-				SDO implementation enables Java developer to efficiently
-				build and use data object models that can be
-				incorporated into service architectures.
+				implementation of the Service Data Objects (SDO) 2.1.1.
+				The EclipseLink SDO implementation enables Java
+				developer to efficiently build and use data object
+				models that can be incorporated into service
+				architectures.
 			</p>
 		</description>
 	</section>
@@ -37,4 +38,27 @@
 			link="http://wiki.eclipse.org/EclipseLink/Examples/SDO" />
 
 	</section>
+
+	<section class="sideitem">
+		<description>
+			<h3>SDO Resources</h3>
+			<li><a href="http://www.osoa.org/display/Main/Service+Data+Objects+Home">OSOA SDO Home</a></li>
+			<a href="http://www.osoa.org/display/Main/Service+Data+Objects+Home"><img src="http://www.osoa.org/download/userResources/logo"
+						border="0" /></a>
+			<li>
+				<a href="http://jcp.org/en/jsr/detail?id=235">
+					SDO 2.1.1 (JSR 235)
+				</a>
+			</li>
+
+			<h3>Documentation</h3>
+			<li>
+				<a
+					href="http://wiki.eclipse.org/EclipseLink/UserGuide/SDO">
+					Intro to SDO
+				</a>
+			</li>
+		</description>
+	</section>
+
 </sections>
