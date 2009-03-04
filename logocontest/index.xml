@@ -24,7 +24,7 @@
 	<section class="main" name="Proposal 1 ">
 		<description>
 			<p>Submitted by Rick Sapir.</p>
-			<table>
+			<table border="1">
 				<tr>
 					<td><p>Large icon for most usages</p>
 						<img
