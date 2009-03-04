@@ -9,7 +9,6 @@
 	$Nav->addCustomNav("JPA", "/eclipselink/jpa.php", "_self", 2);
 	$Nav->addCustomNav("MOXy", "/eclipselink/moxy.php", "_self", 2);
 	$Nav->addCustomNav("SDO", "/eclipselink/sdo.php", "_self", 2);
-	$Nav->addCustomNav("EIS", "/eclipselink/eis.php", "_self", 2);
 	$Nav->addCustomNav("DBWS", "/eclipselink/dbws.php", "_self", 2);
   
  	$Nav->addNavSeparator("Downloads", "/eclispelink/downloads/index.php");

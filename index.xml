@@ -22,11 +22,11 @@
 							advanced feature extensions, for the
 							dominant persistence standards for each
 							target data source; Java Persistence API
-							(JPA) for relational databases, Java Architecture for
-							XML Binding (JAXB) for XML, J2EE Connector
-							Architecture (JCA) for EIS and other types
-							of legacy systems, and Service Data Objects
-							(SDO).
+							(JPA) for relational databases, Java
+							Architecture for XML Binding (JAXB) for XML,
+							J2EE Connector Architecture (JCA) for EIS
+							and other types of legacy systems, and
+							Service Data Objects (SDO).
 						</p>
 
 						<table border="0" cellpadding="5">
@@ -82,7 +82,8 @@
 										<tr>
 											<td>
 												Get the latest and
-												greatest EclipseLink release (1.0.1)
+												greatest EclipseLink
+												release (1.0.1)
 											</td>
 										</tr>
 									</table>
@@ -101,31 +102,40 @@
 	</section>
 
 	<section class="main" name="Project News">
-         <section name="EclipseLink 1.0.2 Released"
-                 link="http://www.eclipse.org/eclipselink/downloads">
-                 <em>Oct 29, 2008</em>
-        </section>
-        <section name="EclipseLink 1.0.1 Released"
-                 link="http://www.eclipse.org/eclipselink/downloads">
-                 <em>Sept 09, 2008</em>
-        </section>
-
-        <section name="EclipseLink 1.0 Released"
-                 link="http://www.eclipse.org/eclipselink/downloads">
-                 <em>July 09, 2008</em>
-        </section>
-
- 		<section name="EclipseZone Article: Introducing EclipseLink"
-				 link="http://eclipse.dzone.com/articles/introducing-eclipselink">
-				 <em>June 30, 2008</em>
+		<section name="EclipseLink Logo Contest"
+			link="http://www.eclipse.org/eclipselink/logocontest/">
+			<em>Mar 4, 2009</em>
 		</section>
-         <section name="EclipseLink Graduates from Incubation"
-                 link="http://java-persistence.blogspot.com/">
-                 <em>June 27, 2008</em>
-        </section>
-  		<section name="EclipseLink Webinar Available: Introduction and JPA Feature Overview"
-				 link="http://live.eclipse.org/node/490">
-				 <em>May 1, 2008</em>
+		<section name="EclipseLink Presentations at EclipseCon"
+			link="http://wiki.eclipse.org/EclipseLink/Presentations">
+			<em>Mar 4, 2009</em>
+		</section>
+		<section name="EclipseLink 1.0.2 Released"
+			link="http://www.eclipse.org/eclipselink/downloads">
+			<em>Oct 29, 2008</em>
+		</section>
+		<section name="EclipseLink 1.0.1 Released"
+			link="http://www.eclipse.org/eclipselink/downloads">
+			<em>Sept 09, 2008</em>
+		</section>
+
+		<section name="EclipseLink 1.0 Released"
+			link="http://www.eclipse.org/eclipselink/downloads">
+			<em>July 09, 2008</em>
+		</section>
+
+		<section name="EclipseZone Article: Introducing EclipseLink"
+			link="http://eclipse.dzone.com/articles/introducing-eclipselink">
+			<em>June 30, 2008</em>
+		</section>
+		<section name="EclipseLink Graduates from Incubation"
+			link="http://java-persistence.blogspot.com/">
+			<em>June 27, 2008</em>
+		</section>
+		<section
+			name="EclipseLink Webinar Available: Introduction and JPA Feature Overview"
+			link="http://live.eclipse.org/node/490">
+			<em>May 1, 2008</em>
 		</section>
 		<section
 			name="EclipseLink Project to Deliver JPA 2.0 Reference Implementation"

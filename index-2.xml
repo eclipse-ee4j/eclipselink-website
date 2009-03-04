@@ -54,14 +54,6 @@
 						</td><td> EclipseLink DBWS
 					</td>
 				</tr>
-				<tr>
-					<td>
-						<a href="/eclipselink/eis.php">
-							Non-Relational
-						</a>
-						</td><td> EclipseLink EIS
-					</td>
-				</tr>
 			</table>
 		</description>
 
@@ -115,11 +107,6 @@
 				<br />
 				<a href="/eclipselink/dbws.php">
 					<img src="/eclipselink/images/Eclipselink_dbws.png"
-						border="0" />
-				</a>
-				<br />
-				<a href="/eclipselink/eis.php">
-					<img src="/eclipselink/images/Eclipselink_eis.png"
 						border="0" />
 				</a>
 			</div>
