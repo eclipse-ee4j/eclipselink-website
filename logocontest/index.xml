@@ -26,12 +26,12 @@
 			<p>Submitted by Rick Sapir.</p>
 			<table>
 				<tr>
-					<td>
+					<td><p>Large icon for most usages</p>
 						<img
 							src="/eclipselink/logocontest/sapir/bridge_eclipse.gif"
 							border="0" />
 					</td>
-					<td>
+					<td><p>Simplified (smaller) icon</p> 
 						<img
 							src="/eclipselink/logocontest/sapir/bridge_80x80.gif" border="0" />
 					</td>
