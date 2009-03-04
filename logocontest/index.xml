@@ -48,7 +48,37 @@
 				</tr>
 			</table>
 		</description>
+	</section>
 
+	<section class="main" name="Proposal 2 ">
+		<description>
+			<p>Submitted by J. Andres Pizarro</p>
+			<table border="1" padding="10">
+				<tr>
+					<td>
+						<p> Complete version without text</p>
+						<img
+							src="/eclipselink/logocontest/pizarro/eclipselinkComplete.jpg"
+							border="0" />
+					</td>
+					<td valign="top">
+						<p> Complete version without text</p>
+						<img
+							src="/eclipselink/logocontest/pizarro/eclipselinkNoText.jpg" border="0" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p> Without eclipse logo. Perfect for printing t-shirts ;-)</p>
+						<img
+							src="/eclipselink/logocontest/pizarro/justBridge.jpg"
+							border="0" />
+					</td>
+					<td valign="top">
+					</td>
+				</tr>
+			</table>
+		</description>
 	</section>
 
 	<section class="sideitem">
