@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sections title="EclipseLink Logo Contest">
+
+	<section class="title">
+		<description>
+			<h1>EclipseLink Logo Contest</h1>
+			<p style="text-align:justify">
+				This page shows all of the proposed logos submitted as
+				part of the EclipseLink logo contest. The contest is
+				running from March 4th through 20th with the new logo
+				being unveiled at EclipseCon 2009.
+			</p>
+			<p>
+				Please provide feedback and vote on the submissions you
+				like or contribute additional proposals using
+				<a
+					href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=267076">
+					BUG 267076
+				</a>
+			</p>
+		</description>
+	</section>
+
+	<section class="main" name="Proposal 1 ">
+		<description>
+			<p>Submitted by Rick Sapir.</p>
+			<table>
+				<tr>
+					<td>
+						<img
+							src="/eclipselink/logocontest/sapir/bridge_eclipse.png"
+							border="0" />
+					</td>
+					<td>
+						<img
+							src="/eclipselink/logocontest/sapir/bridge_80x80.gif" border="0" />
+					</td>
+				</tr>
+			</table>
+		</description>
+
+	</section>
+
+
+</sections>
