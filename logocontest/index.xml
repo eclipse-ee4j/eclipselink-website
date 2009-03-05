@@ -56,26 +56,28 @@
 			<table border="1" padding="10">
 				<tr>
 					<td>
-						<p> Complete version without text</p>
+						<p>Complete version without text</p>
 						<img
 							src="/eclipselink/logocontest/pizarro/eclipseLinkComplete.jpg"
 							border="0" />
 					</td>
 					<td valign="top">
-						<p> Complete version without text</p>
+						<p>Complete version without text</p>
 						<img
-							src="/eclipselink/logocontest/pizarro/eclipseLinkNoText.jpg" border="0" />
+							src="/eclipselink/logocontest/pizarro/eclipseLinkNoText.jpg"
+							border="0" />
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<p> Without eclipse logo. Perfect for printing t-shirts ;-)</p>
+						<p>
+							Without eclipse logo. Perfect for printing
+							t-shirts ;-)
+						</p>
 						<img
-							src="/eclipselink/logocontest/pizarro/justBridge.jpg"
-							border="0" />
+							src="/eclipselink/logocontest/pizarro/justBridge.jpg" border="0" />
 					</td>
-					<td valign="top">
-					</td>
+					<td valign="top"></td>
 				</tr>
 			</table>
 		</description>
@@ -86,8 +88,15 @@
 			<h3>Contest Prize</h3>
 			<p>TBD</p>
 
-			<h3>Votes Cast</h3>
-			<p>None So far</p>
+			<h3>Voting</h3>
+			<p>
+				Cast your vote in the
+				<a href="http://www.doodle.com/cnx6vwphnehy5c22">
+					Doodle Poll
+				</a>
+				. Feel free to change your vote as more proposals become
+				available.
+			</p>
 		</description>
 	</section>
 
