@@ -83,6 +83,25 @@
 		</description>
 	</section>
 
+	<section class="main" name="Proposal 3 ">
+		<description>
+			<p>Submitted by Miguel Flechaff.</p>
+			<table border="1" padding="10">
+				<tr>
+					<td>
+						<img
+							src="/eclipselink/logocontest/flechaff/logo_Eclipse.png"
+							border="0" />
+					</td>
+					<td valign="top" align="center">
+						<img
+							src="/eclipselink/logocontest/flechaff/logo_Eclipse3.png" border="0" />
+					</td>
+				</tr>
+			</table>
+		</description>
+	</section>
+
 	<section class="sideitem">
 		<description>
 			<h3>Contest Prize</h3>
