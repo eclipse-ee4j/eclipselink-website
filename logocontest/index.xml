@@ -17,6 +17,9 @@
 					href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=267076">
 					BUG 267076
 				</a>
+				. We will finalize the proposals on Friday March 13th
+				and we'll then move the voting to the bug to ensure that
+				all votes cast are from Eclipse community members.
 			</p>
 			<p>
 				For those interested the original TopLink logo is used
@@ -103,19 +106,35 @@
 		</description>
 	</section>
 
+	<section class="main" name="Proposal 4 ">
+		<description>
+			<p>Submitted by Ben Osterhaus.</p>
+			<table border="1" padding="10">
+				<tr>
+					<td>
+						<img
+							src="/eclipselink/logocontest/osterhaus/eclipselink_ben.jpg"
+							border="0" width="300" />
+					</td>
+					<td valign="top" align="center">
+						<img
+							src="/eclipselink/logocontest/osterhaus/eclipselink_icons_ben.jpg"
+							border="0" width="300" />
+					</td>
+				</tr>
+			</table>
+		</description>
+	</section>
+
 	<section class="sideitem">
 		<description>
-			<h3>Contest Prize</h3>
-			<p>TBD</p>
-
 			<h3>Voting</h3>
 			<p>
-				Cast your vote in the
-				<a href="http://www.doodle.com/cnx6vwphnehy5c22">
-					Doodle Poll
+				Please cast your vote within
+				<a
+					href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=267076">
+					BUG 267076
 				</a>
-				. Feel free to change your vote as more proposals become
-				available.
 			</p>
 		</description>
 	</section>
