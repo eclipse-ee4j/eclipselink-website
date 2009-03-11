@@ -5,16 +5,20 @@
 
 	<xsl:template match="/sections">
 			<div id="midcolumn">
-				<table width="750"><tr><td>
+				
 				<xsl:apply-templates select="section[@class='title']"
 					mode="title" />
 				<xsl:apply-templates select="section[@class='main']"
 					mode="main" />
 				<xsl:apply-templates select="section[@class='none']"
 					mode="none" />
-				</td></tr></table>
 			</div>
 			
+			<div id="rightcolumn" >
+				<xsl:apply-templates select="section[@class='sideitem']"
+					mode="sideitem" />
+			</div>
+
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -66,6 +70,32 @@ pageTracker._trackPageview();
 		</div>
 	</xsl:template>
 
+	<xsl:template match="section" mode="sideitem">
+
+		<div class='sideitem' style="text-align:center">
+			<xsl:apply-templates select="description" mode="body" />
+			<xsl:apply-templates />		
+				<p/>
+				<h6 style="text-align:center">
+					Search<br/>
+					<a href="http://wiki.eclipse.org/EclipseLink">
+						EclipseLink Wiki
+					</a>
+				</h6>
+				<table><tr><td style="text-align:center">
+				<form action="http://www.google.com/cse"
+					id="cse-search-box" >
+					<input type="hidden" name="cx"
+						value="002128250543942842320:qffgtrd2s3k" />
+					<input type="text" name="q" size="24"
+						maxlength="2048" />
+					<br />
+					<input type="submit" name="sa" value="Search" />
+				</form>
+				</td></tr></table>
+		</div>
+
+	</xsl:template>
 
 	<xsl:template match="section">
 		<li>
