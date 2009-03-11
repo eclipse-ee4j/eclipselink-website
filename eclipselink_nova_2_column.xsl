@@ -5,20 +5,16 @@
 
 	<xsl:template match="/sections">
 			<div id="midcolumn">
-				
+				<table width="750"><tr><td>	
 				<xsl:apply-templates select="section[@class='title']"
 					mode="title" />
 				<xsl:apply-templates select="section[@class='main']"
 					mode="main" />
 				<xsl:apply-templates select="section[@class='none']"
 					mode="none" />
+				</td></tr></table>
 			</div>
 			
-			<div id="rightcolumn" >
-				<xsl:apply-templates select="section[@class='sideitem']"
-					mode="sideitem" />
-			</div>
-
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));

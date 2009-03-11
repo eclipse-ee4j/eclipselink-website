@@ -16,7 +16,7 @@
 	$Nav->setLinkList(null);
 	
 	$Nav->addNavSeparator("EclipseLink Project", "/eclipselink/index.php");
-	$Nav->addCustomNav("About Project", "/projects/project_summary.php?projectid=rt.eclipselink", "_self", 2);
+	$Nav->addCustomNav("Project Summary", "/projects/project_summary.php?projectid=rt.eclipselink", "_self", 2);
 	$Nav->addCustomNav("JPA", "/eclipselink/jpa.php", "_self", 2);
 	$Nav->addCustomNav("MOXy", "/eclipselink/moxy.php", "_self", 2);
 	$Nav->addCustomNav("SDO", "/eclipselink/sdo.php", "_self", 2);
