@@ -30,6 +30,20 @@
 			<h1>Getting Started with DBWS</h1>
 		</description>
 
+		<section name="EclipseLink DBWS Overview"
+			link="http://wiki.eclipse.org/EclipseLink/Examples/DBWS/DBWSOverview">
+			<em>
+				Brief walk through of the DBWS configuration files and
+				usage with the DBWSBuilder utility.
+			</em>
+		</section>
+		<section name="Generating a Web Service for accessing a Table"
+			link="http://wiki.eclipse.org/EclipseLink/Examples/DBWS/DBWSBasicTable">
+			<em>
+				Basic example illustrating how a table can easily be
+				exposed as a web service using default CRUD operations.
+			</em>
+		</section>
 		<section name="More EclipseLink DBWS Examples"
 			link="http://wiki.eclipse.org/EclipseLink/Examples/DBWS">
 		</section>
@@ -41,8 +55,7 @@
 
 			<h3>Documentation</h3>
 			<li>
-				<a
-					href="http://wiki.eclipse.org/EclipseLink/UserGuide/DBWS">
+				<a href="http://wiki.eclipse.org/Category:XML">
 					DBWS User Guide
 				</a>
 			</li>
