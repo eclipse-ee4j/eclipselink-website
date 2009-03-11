@@ -74,7 +74,23 @@ pageTracker._trackPageview();
 
 		<div class='sideitem'>
 			<xsl:apply-templates select="description" mode="body" />
-			<xsl:apply-templates />
+			<xsl:apply-templates />				
+				<h6>
+					Search
+					<a href="http://wiki.eclipse.org/EclipseLink">
+						EclipseLink Wiki
+					</a>
+				</h6>
+				<form action="http://www.google.com/cse"
+					id="cse-search-box">
+					<input type="hidden" name="cx"
+						value="002128250543942842320:qffgtrd2s3k" />
+					<input type="text" name="q" size="24"
+						maxlength="2048" />
+					<br />
+					<input type="submit" name="sa" value="Search" />
+				</form>
+			
 		</div>
 
 	</xsl:template>

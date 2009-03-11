@@ -31,7 +31,9 @@
 						</p>
 					</td>
 					<td width="100" />
-					<td width="50%"><p style="text-align:left">EclipseLink JPA</p></td>
+					<td width="50%">
+						<p style="text-align:left">EclipseLink JPA</p>
+					</td>
 				</tr>
 				<tr>
 					<td>
@@ -42,7 +44,9 @@
 						</p>
 					</td>
 					<td width="75" />
-					<td><p style="text-align:left">EclipseLink MOXy</p></td>
+					<td>
+						<p style="text-align:left">EclipseLink MOXy</p>
+					</td>
 				</tr>
 				<tr>
 					<td>
@@ -53,7 +57,9 @@
 						</p>
 					</td>
 					<td width="75" />
-					<td><p style="text-align:left">EclipseLink SDO</p></td>
+					<td>
+						<p style="text-align:left">EclipseLink SDO</p>
+					</td>
 				</tr>
 				<tr>
 					<td>
@@ -64,7 +70,9 @@
 						</p>
 					</td>
 					<td width="75" />
-					<td><p style="text-align:left">EclipseLink DBWS</p></td>
+					<td>
+						<p style="text-align:left">EclipseLink DBWS</p>
+					</td>
 				</tr>
 			</table>
 		</description>
@@ -132,6 +140,21 @@
 					<img src="/eclipselink/images/Eclipselink_dbws.png"
 						border="0" />
 				</a>
+				<h6>
+					Search
+					<a href="http://wiki.eclipse.org/EclipseLink">
+						EclipseLink Wiki
+					</a>
+				</h6>
+				<form action="http://www.google.com/cse"
+					id="cse-search-box">
+					<input type="hidden" name="cx"
+						value="002128250543942842320:qffgtrd2s3k" />
+					<input type="text" name="q" size="24"
+						maxlength="2048" />
+					<br />
+					<input type="submit" name="sa" value="Search" />
+				</form>
 			</div>
 		</description>
 
