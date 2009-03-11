@@ -14,7 +14,7 @@
   $theme = "Nova";
 	
 	$Nav->setLinkList(null);
-	$Nav->addCustomNav("About This Project", "/projects/project_summary.php?projectid=rt.eclipselink", "_self", 1);
+	$Nav->addCustomNav("About EclipseLink Project", "/projects/project_summary.php?projectid=rt.eclipselink", "_self", 1);
 	$Nav->addCustomNav("EclipseLink Wiki", "http://wiki.eclipse.org/EclipseLink", "_self", 2);
 	$Nav->addCustomNav("Search Wiki", "http://www.google.com/coop/cse?cx=016171230611334810008%3A8qajdsud9zq&hl=en", "_self", 2);
 	
