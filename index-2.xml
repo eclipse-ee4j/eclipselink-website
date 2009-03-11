@@ -30,7 +30,7 @@
 							</a>
 						</p>
 					</td>
-					<td width="200" />
+					<td width="75" />
 					<td>EclipseLink JPA</td>
 				</tr>
 				<tr>
@@ -41,7 +41,7 @@
 							</a>
 						</p>
 					</td>
-					<td width="200" />
+					<td width="75" />
 					<td>EclipseLink MOXy</td>
 				</tr>
 				<tr>
@@ -52,7 +52,7 @@
 							</a>
 						</p>
 					</td>
-					<td width="200" />
+					<td width="75" />
 					<td>EclipseLink SDO</td>
 				</tr>
 				<tr>
@@ -63,7 +63,7 @@
 							</a>
 						</p>
 					</td>
-					<td width="200" />
+					<td width="75" />
 					<td>EclipseLink DBWS</td>
 				</tr>
 			</table>

@@ -1,15 +1,15 @@
+<?php
 	#*****************************************************************************
 	#
 	# common_nova.php
 	#
-	# Author: 		Doug Clarke, Oracle
+	# Author: 		Doug Clarke & Peter Krogh, Oracle
 	# Last updated:	2009-03-11
 	#
 	# Description: Contains common functions and left navigation for EclipseLink site using the Nova template.
 	#
 	#
 	#****************************************************************************
-<?php
 
   $theme = "Nova";
 	
