@@ -72,12 +72,11 @@ pageTracker._trackPageview();
 
 	<xsl:template match="section" mode="sideitem">
 
-		<div class='sideitem'>
+		<div class='sideitem' style="text-align:center">
 			<xsl:apply-templates select="description" mode="body" />
 			<xsl:apply-templates />		
 				<p/>
-				<div style="text-align:center">		
-				<h6>
+				<h6 style="text-align:center">
 					Search<br/>
 					<a href="http://wiki.eclipse.org/EclipseLink">
 						EclipseLink Wiki
@@ -92,7 +91,6 @@ pageTracker._trackPageview();
 					<br />
 					<input type="submit" name="sa" value="Search" />
 				</form>
-				</div>
 		</div>
 
 	</xsl:template>
