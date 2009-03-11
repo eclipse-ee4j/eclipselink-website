@@ -13,8 +13,41 @@
 					</td>
 				</tr>
 			</table>
-			<p>The EclipseLink DBWS .</p>
+			<p>
+				The EclipseLink DBWS component enables Java developers a
+				declarative Web Service solution for accessing
+				relational databases. The DBWS Builder generates the
+				necessary configuration files based on the provided
+				database artifacts so that EclipseLink's relational and
+				persistence services can be combined to handle the
+				requests.
+			</p>
 		</description>
 	</section>
+
+	<section class="main">
+		<description>
+			<h1>Getting Started with DBWS</h1>
+		</description>
+
+		<section name="More EclipseLink DBWS Examples"
+			link="http://wiki.eclipse.org/EclipseLink/Examples/DBWS">
+		</section>
+
+	</section>
+
+	<section class="sideitem">
+		<description>
+
+			<h3>Documentation</h3>
+			<li>
+				<a
+					href="http://wiki.eclipse.org/EclipseLink/UserGuide/DBWS">
+					DBWS User Guide
+				</a>
+			</li>
+		</description>
+	</section>
+
 
 </sections>

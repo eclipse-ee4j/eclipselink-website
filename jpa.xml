@@ -67,6 +67,7 @@
 			
 			<h3>Documentation</h3>
 			<li><a href="http://wiki.eclipse.org/Introduction_to_Java_Persistence_API_(ELUG)">Intro to JPA</a></li>
+			<li><a href="http://wiki.eclipse.org/Category:JPA">EclipseLink JPA User Guide</a></li>
 		</description>
 	</section>
 

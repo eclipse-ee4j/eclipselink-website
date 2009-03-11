@@ -48,6 +48,17 @@
 			</em>
 		</section>
 
+		<section name="More MOXy Examples"
+			link="http://wiki.eclipse.org/EclipseLink/Examples/MOXy">
+		</section>
 	</section>
+	
+		<section class="sideitem">
+		<description>
+			<h3>Documentation</h3>
+			<li><a href="http://wiki.eclipse.org/Category:MOXY">EclipseLink MOXy User Guide</a></li>
+		</description>
+	</section>
+	
 
 </sections>
