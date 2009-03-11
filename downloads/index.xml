@@ -8,8 +8,8 @@
     <div>
     <link rel="stylesheet" type="text/css" href="/downloads/packages/themes/eclipse/style.css" media="screen" />
     </div>               
-    	<h6>EclipseLink Downloads</h6>                                     
-    	<h6>EclipseLink 1.1.0 Downloads</h6>                                     
+    	<h1>EclipseLink Downloads</h1>                                     
+    	<b>EclipseLink 1.1.0 Downloads</b>                                     
         <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
          <tr class="tableData">
             <td class="packageDesc">
@@ -94,7 +94,7 @@
          </tr>
        </table>   
 
-    	<h6>EclipseLink 1.0.2 Downloads</h6>                                     
+    	<b>EclipseLink 1.0.2 Downloads</b>                                     
         <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
          <tr class="tableData">
             <td class="packageDesc">
