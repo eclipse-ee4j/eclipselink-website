@@ -3,7 +3,7 @@ $pageKeywords	= "";
 $pageAuthor		= "Shaun Smith, Doug Clarke based on work by Bob Fraser";
 
 $root = $_SERVER['DOCUMENT_ROOT'];
-require_once ($root . '/eclipselink/logocontest/common_nova.php');
+require_once ($root . '/eclipselink/common_nova.php');
 
 # Generate the web page
 // Load the XML source
@@ -15,7 +15,7 @@ $titleNode = $xpath->query("/sections/attribute::title")->item(0);
 $pageTitle = ($titleNode != null) ? $titleNode->nodeValue : "eclipse.org eclipselink page";
 
 // Load the XSL source
-$xsl = DOMDocument::load($root . '/eclipselink/logocontest/eclipselink_nova.xsl');
+$xsl = DOMDocument::load($root . '/eclipselink/eclipselink_nova_2_column.xsl');
 
 // Configure the transformer
 $proc = new XSLTProcessor;
