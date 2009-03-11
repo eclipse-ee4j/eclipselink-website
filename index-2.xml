@@ -24,35 +24,47 @@
 			<table>
 				<tr>
 					<td>
-						<a href="/eclipselink/jpa.php">
-							Object-Relational
-						</a>
-						</td><td> EclipseLink JPA
+						<p style="text-align:right">
+							<a href="/eclipselink/jpa.php">
+								Object-Relational
+							</a>
+						</p>
 					</td>
+					<td width="200" />
+					<td>EclipseLink JPA</td>
 				</tr>
 				<tr>
 					<td>
-						<a href="/eclipselink/moxy.php">
-							Object-XML Binding
-						</a>
-						</td><td> EclipseLink MOXy
+						<p style="text-align:right">
+							<a href="/eclipselink/moxy.php">
+								Object-XML Binding
+							</a>
+						</p>
 					</td>
+					<td width="200" />
+					<td>EclipseLink MOXy</td>
 				</tr>
 				<tr>
 					<td>
-						<a href="/eclipselink/sdo.php">
-							Service Data Objects
-						</a>
-						</td><td> EclipseLink SDO
+						<p style="text-align:right">
+							<a href="/eclipselink/sdo.php">
+								Service Data Objects
+							</a>
+						</p>
 					</td>
+					<td width="200" />
+					<td>EclipseLink SDO</td>
 				</tr>
 				<tr>
 					<td>
-						<a href="/eclipselink/dbws.php">
-							Web Services for RDBMS
-						</a>
-						</td><td> EclipseLink DBWS
+						<p style="text-align:right">
+							<a href="/eclipselink/dbws.php">
+								Web Services for RDBMS
+							</a>
+						</p>
 					</td>
+					<td width="200" />
+					<td>EclipseLink DBWS</td>
 				</tr>
 			</table>
 		</description>
@@ -73,18 +85,18 @@
 
 	<section class="main" name="Project News"
 		link="/eclipselink/news.php">
-        <section name="EclipseLink 1.1 Released"
-            link="http://www.eclipse.org/eclipselink/downloads">
-            <em>March 11, 2009</em>
-        </section>
-        <section name="EclipseLink Logo Contest"
-            link="http://www.eclipse.org/eclipselink/logocontest/">
-            <em>Mar 4, 2009</em>
-        </section>
-        <section name="EclipseLink Presentations at EclipseCon"
-            link="http://wiki.eclipse.org/EclipseLink/Presentations">
-            <em>Mar 4, 2009</em>
-        </section>
+		<section name="EclipseLink 1.1 Released"
+			link="http://www.eclipse.org/eclipselink/downloads">
+			<em>March 11, 2009</em>
+		</section>
+		<section name="EclipseLink Logo Contest"
+			link="http://www.eclipse.org/eclipselink/logocontest/">
+			<em>Mar 4, 2009</em>
+		</section>
+		<section name="EclipseLink Presentations at EclipseCon"
+			link="http://wiki.eclipse.org/EclipseLink/Presentations">
+			<em>Mar 4, 2009</em>
+		</section>
 		<section name="EclipseLink 1.0.2 Released"
 			link="http://www.eclipse.org/eclipselink/downloads">
 			<em>Oct 29, 2008</em>

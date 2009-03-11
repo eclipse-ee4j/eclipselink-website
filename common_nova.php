@@ -1,3 +1,14 @@
+	#*****************************************************************************
+	#
+	# common_nova.php
+	#
+	# Author: 		Doug Clarke, Oracle
+	# Last updated:	2009-03-11
+	#
+	# Description: Contains common functions and left navigation for EclipseLink site using the Nova template.
+	#
+	#
+	#****************************************************************************
 <?php
 
   $theme = "Nova";
@@ -5,7 +16,7 @@
 	$Nav->setLinkList(null);
 	$Nav->addCustomNav("About This Project", "/projects/project_summary.php?projectid=rt.eclipselink", "_self", 1);
 	
-	$Nav->addNavSeparator("EclipseLink", "/eclipselink/index-2.php");
+	$Nav->addNavSeparator("EclipseLink", "/eclipselink/index.php");
 	$Nav->addCustomNav("JPA", "/eclipselink/jpa.php", "_self", 2);
 	$Nav->addCustomNav("MOXy", "/eclipselink/moxy.php", "_self", 2);
 	$Nav->addCustomNav("SDO", "/eclipselink/sdo.php", "_self", 2);
@@ -36,17 +47,6 @@
 	$Nav->addCustomNav("Releases", "http://wiki.eclipse.org/EclipseLink/Release", "_self", 2);
 
   
-	#*****************************************************************************
-	#
-	# common.php
-	#
-	# Author: 		Lawrence Mandel, IBM
-	# Last updated:	2005-12-21
-	#
-	# Description: Contains common functions used on the WTP site.
-	#
-	#
-	#****************************************************************************
  function &read_file($file_name) {
 	$fp = fopen($file_name, "r");
 	$file_contents = fread($fp, filesize($file_name));
