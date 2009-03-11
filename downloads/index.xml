@@ -2,13 +2,9 @@
 <sections
     title="EclipseLink Downloads">
     
-   <section class="main">  
+   <section class="main" name="EclipseLink Downloads">  
  
     <description>
-    <div>
-    <link rel="stylesheet" type="text/css" href="/downloads/packages/themes/eclipse/style.css" media="screen" />
-    </div>               
-    	<h1>EclipseLink Downloads</h1>                                     
     	<b>EclipseLink 1.1.0 Downloads</b>                                     
         <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
          <tr class="tableData">
