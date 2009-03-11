@@ -15,6 +15,8 @@
 	
 	$Nav->setLinkList(null);
 	$Nav->addCustomNav("About This Project", "/projects/project_summary.php?projectid=rt.eclipselink", "_self", 1);
+	$Nav->addCustomNav("EclipseLink Wiki", "http://wiki.eclipse.org/EclipseLink", "_self", 2);
+	$Nav->addCustomNav("Search Wiki", "http://www.google.com/coop/cse?cx=016171230611334810008%3A8qajdsud9zq&hl=en", "_self", 2);
 	
 	$Nav->addNavSeparator("EclipseLink", "/eclipselink/index.php");
 	$Nav->addCustomNav("JPA", "/eclipselink/jpa.php", "_self", 2);
@@ -38,9 +40,7 @@
 	$Nav->addNavSeparator("Documentation", "http://wiki.eclipse.org/EclipseLink/UserGuide");
 	$Nav->addCustomNav("FAQ", "http://wiki.eclipse.org/EclipseLink/FAQ", "_self", 2);
 	$Nav->addCustomNav("User Guide", "http://wiki.eclipse.org/EclipseLink/UserManual", "_self", 2);
-	$Nav->addCustomNav("Search User Guide", "http://www.google.com/coop/cse?cx=016171230611334810008%3A8qajdsud9zq&hl=en", "_self", 2);
 	$Nav->addCustomNav("API (JavaDocs)", "/eclipselink/api/latest/index.html", "_self", 2);
-	$Nav->addCustomNav("EclipseLink Wiki", "http://wiki.eclipse.org/EclipseLink", "_self", 2);
 
 	$Nav->addNavSeparator("Project");
 	$Nav->addCustomNav("Plan", "/projects/project-plan.php?projectid=rt.eclipselink", "_self", 2);
