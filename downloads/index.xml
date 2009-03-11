@@ -2,12 +2,13 @@
 <sections
     title="EclipseLink Downloads">
     
-   <section class="main" name="EclipseLink 1.1.0 Downloads">  
+   <section class="main" >  
  
     <description>
     <div>
     <link rel="stylesheet" type="text/css" href="/downloads/packages/themes/eclipse/style.css" media="screen" />
-    </div>                                                    
+    </div>               
+    	<h6>EclipseLink 1.1.0 Downloads</h6>                                     
         <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
          <tr class="tableData">
             <td class="packageDesc">
@@ -93,12 +94,11 @@
        </table>   
       </description>                                                      
    </section> 
-   <section class="main" name="EclipseLink 1.0.2 Downloads">  
+
+   <section class="main">  
  
     <description>
-    <div>
-    <link rel="stylesheet" type="text/css" href="/downloads/packages/themes/eclipse/style.css" media="screen" />
-    </div>                                                    
+    	<h6>EclipseLink 1.0.2 Downloads</h6>                                     
         <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
          <tr class="tableData">
             <td class="packageDesc">
