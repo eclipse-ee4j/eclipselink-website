@@ -6,7 +6,7 @@ $pageKeywords	= "Eclipse Persistence EclipseLink Download";
 $pageAuthor		= "Doug Clarke based on work by Bob Fraser";
 
 $root = $_SERVER['DOCUMENT_ROOT'];
-require_once ($root . '/eclipselink/common.php');
+require_once ($root . '../common_nova.php');
 
 # Generate the web page
 // Load the XML source
@@ -18,7 +18,7 @@ $titleNode = $xpath->query("/sections/attribute::title")->item(0);
 $pageTitle = ($titleNode != null) ? $titleNode->nodeValue : "eclipse.org eclipselink download page";
 
 // Load the XSL source
-$xsl = DOMDocument::load($root . '/eclipselink/eclipselinkpage.xsl');
+$xsl = DOMDocument::load($root . '../eclipselink_nova.xsl');
 
 // Configure the transformer
 $proc = new XSLTProcessor;
