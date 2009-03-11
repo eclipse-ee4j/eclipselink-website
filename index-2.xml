@@ -21,9 +21,9 @@
 				Select a persistence service and learn more about how to
 				get started developing with EclipseLink.
 			</p>
-			<table>
+			<table width="100%">
 				<tr>
-					<td>
+					<td width="50%">
 						<p style="text-align:right">
 							<a href="/eclipselink/jpa.php">
 								Object-Relational
@@ -31,7 +31,7 @@
 						</p>
 					</td>
 					<td width="75" />
-					<td>EclipseLink JPA</td>
+					<td width="50%">EclipseLink JPA</td>
 				</tr>
 				<tr>
 					<td>
