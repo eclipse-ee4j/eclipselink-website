@@ -83,7 +83,7 @@ pageTracker._trackPageview();
 					</a>
 				</h6>
 				<form action="http://www.google.com/cse"
-					id="cse-search-box">
+					id="cse-search-box" style="text-align:center">
 					<input type="hidden" name="cx"
 						value="002128250543942842320:qffgtrd2s3k" />
 					<input type="text" name="q" size="24"
