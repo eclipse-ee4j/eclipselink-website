@@ -2,7 +2,7 @@
 <sections
     title="EclipseLink Downloads">
     
-   <section class="main" >  
+   <section class="main" name="EclipseLink Downloads">  
  
     <description>
     <div>
@@ -92,12 +92,7 @@
             
          </tr>
        </table>   
-      </description>                                                      
-   </section> 
 
-   <section class="main">  
- 
-    <description>
     	<h6>EclipseLink 1.0.2 Downloads</h6>                                     
         <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
          <tr class="tableData">
