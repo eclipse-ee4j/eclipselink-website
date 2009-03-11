@@ -1,107 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sections title="EclipseLink">
-	<section class="none" name="About EclipseLink">
+
+	<section class="title">
 		<description>
-			<table width="100%">
-				<tr>
-					<td valign="top">
-						<p align="justify">
-							The
-							<b>
-								Eclipse Persistence Services Project
-								(EclipseLink)
-							</b>
-							project's goal is to provide a complete
-							persistence framework that is both
-							comprehensive and universal. It will run in
-							any Java environment and read and write
-							objects to virtually any type of data
-							source, including relational databases, XML,
-							or EIS systems. EclipseLink will focus on
-							providing leading edge support, including
-							advanced feature extensions, for the
-							dominant persistence standards for each
-							target data source; Java Persistence API
-							(JPA) for relational databases, Java
-							Architecture for XML Binding (JAXB) for XML,
-							J2EE Connector Architecture (JCA) for EIS
-							and other types of legacy systems, and
-							Service Data Objects (SDO).
-						</p>
-
-						<table border="0" cellpadding="5">
-							<tr height="9">
-								<td>
-									<a
-										href="/eclipselink/community.php">
-										<img
-											src="/eclipselink/images/community.jpg" />
-									</a>
-								</td>
-								<td>
-									<table border="0" cellpadding="0">
-										<tr>
-											<td>
-												<font size="+1">
-													<a
-														href="/eclipselink/community.php">
-														Community
-													</a>
-												</font>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												Get help and interact
-												with users and
-												developers
-											</td>
-										</tr>
-									</table>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="/eclipselink/downloads">
-										<img
-											src="/eclipselink/images/downloads.gif" />
-									</a>
-								</td>
-								<td>
-									<table border="0" cellpadding="0">
-										<tr>
-											<td>
-												<font size="+1">
-													<a
-														href="/eclipselink/downloads">
-														Downloads
-													</a>
-												</font>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												Get the latest and
-												greatest EclipseLink
-												release (1.0.1)
-											</td>
-										</tr>
-									</table>
-								</td>
-							</tr>
-						</table>
-					</td>
-
-					<td>
-						<img src="images/EclipseLink-overview.png"
-							border="0" width="600" />
-					</td>
-				</tr>
-			</table>
+			<h1>EclipseLink</h1>
+			<p style="text-align:justify">
+				The Eclipse Persistence Services Project (EclipseLink)
+				delivers a comprehensive open-source Java persistence
+				solution. EclipseLink focuses on standards with advanced
+				features, performance and scalability for enterprise
+				software developers across data sources, formats, and
+				containers.
+			</p>
 		</description>
 	</section>
 
-	<section class="main" name="Project News">
+	<section class="main" name="Getting Started">
+		<description>
+			<p>
+				Select a persistence service and learn more about how to
+				get started developing with EclipseLink.
+			</p>
+			<table width="100%">
+				<tr>
+					<td width="50%">
+						<p style="text-align:right">
+							<a href="/eclipselink/jpa.php">
+								Object-Relational
+							</a>
+						</p>
+					</td>
+					<td width="100" />
+					<td width="50%"><p style="text-align:left">EclipseLink JPA</p></td>
+				</tr>
+				<tr>
+					<td>
+						<p style="text-align:right">
+							<a href="/eclipselink/moxy.php">
+								Object-XML Binding
+							</a>
+						</p>
+					</td>
+					<td width="75" />
+					<td><p style="text-align:left">EclipseLink MOXy</p></td>
+				</tr>
+				<tr>
+					<td>
+						<p style="text-align:right">
+							<a href="/eclipselink/sdo.php">
+								Service Data Objects
+							</a>
+						</p>
+					</td>
+					<td width="75" />
+					<td><p style="text-align:left">EclipseLink SDO</p></td>
+				</tr>
+				<tr>
+					<td>
+						<p style="text-align:right">
+							<a href="/eclipselink/dbws.php">
+								Web Services for RDBMS
+							</a>
+						</p>
+					</td>
+					<td width="75" />
+					<td><p style="text-align:left">EclipseLink DBWS</p></td>
+				</tr>
+			</table>
+		</description>
+
+	</section>
+
+	<section class="main" name="Learn More">
+
+		<section name="Introducing EclipseLink (Eclipse Zone)"
+			link="http://eclipse.dzone.com/articles/introducing-eclipselink">
+			<em>June 30, 2008</em>
+		</section>
+
+		<section name="Conference Presentations"
+			link="http://wiki.eclipse.org/EclipseLink/Presentations" />
+
+	</section>
+
+	<section class="main" name="Project News"
+		link="/eclipselink/news.php">
+		<section name="EclipseLink 1.1 Released"
+			link="http://www.eclipse.org/eclipselink/downloads">
+			<em>March 11, 2009</em>
+		</section>
 		<section name="EclipseLink Logo Contest"
 			link="http://www.eclipse.org/eclipselink/logocontest/">
 			<em>Mar 4, 2009</em>
@@ -114,67 +101,40 @@
 			link="http://www.eclipse.org/eclipselink/downloads">
 			<em>Oct 29, 2008</em>
 		</section>
+
 		<section name="EclipseLink 1.0.1 Released"
 			link="http://www.eclipse.org/eclipselink/downloads">
 			<em>Sept 09, 2008</em>
 		</section>
 
-		<section name="EclipseLink 1.0 Released"
-			link="http://www.eclipse.org/eclipselink/downloads">
-			<em>July 09, 2008</em>
-		</section>
+	</section>
 
-		<section name="EclipseZone Article: Introducing EclipseLink"
-			link="http://eclipse.dzone.com/articles/introducing-eclipselink">
-			<em>June 30, 2008</em>
-		</section>
-		<section name="EclipseLink Graduates from Incubation"
-			link="http://java-persistence.blogspot.com/">
-			<em>June 27, 2008</em>
-		</section>
-		<section
-			name="EclipseLink Webinar Available: Introduction and JPA Feature Overview"
-			link="http://live.eclipse.org/node/490">
-			<em>May 1, 2008</em>
-		</section>
-		<section
-			name="EclipseLink Project to Deliver JPA 2.0 Reference Implementation"
-			link="http://www.eclipse.org/org/press-release/20080317_Eclipselink.php">
-			<em>
-				March 2008 - Related Articles:
-				<ul>
-					<li>
-						<a
-							href="http://www.informationweek.com/software/showArticle.jhtml?articleID=206904549">
-							Sun Turns To Eclipse To Get
-							Object/Relational Mapping, Information Week
-						</a>
-					</li>
-					<li>
-						<a
-							href="http://www.infoworld.com/article/08/03/18/Oracle-EclipseLink-links-JCP-Eclipse_1.html">
-							Oracle: EclipseLink links JCP, Eclipse,
-							InfoWorld
-						</a>
-					</li>
-					<li>
-						<a
-							href="http://searchsoa.techtarget.com/news/article/0,289142,sid26_gci1306005,00.html">
-							Eclipse, Sun and Oracle team up on
-							persistence API, SearchSOA.com
-						</a>
-					</li>
-				</ul>
-			</em>
-		</section>
-		<section
-			name="New Runtime Initiative around Equinox to include EclipseLink"
-			link="http://www.eclipse.org/org/press-release/20080317_Equinox.php">
-			<em>March 2008</em>
-		</section>
-		<section name="EclipseLink Provisioned">
-			<em>June 2007</em>
-		</section>
+	<section class="sideitem">
+
+		<description>
+			<div style="text-align:center">
+				<a href="/eclipselink/jpa.php">
+					<img src="/eclipselink/images/Eclipselink_jpa.png"
+						border="0" />
+				</a>
+				<br />
+				<a href="/eclipselink/moxy.php">
+					<img src="/eclipselink/images/Eclipselink_moxy.png"
+						border="0" />
+				</a>
+				<br />
+				<a href="/eclipselink/sdo.php">
+					<img src="/eclipselink/images/Eclipselink_sdo.png"
+						border="0" />
+				</a>
+				<br />
+				<a href="/eclipselink/dbws.php">
+					<img src="/eclipselink/images/Eclipselink_dbws.png"
+						border="0" />
+				</a>
+			</div>
+		</description>
+
 	</section>
 
 </sections>
