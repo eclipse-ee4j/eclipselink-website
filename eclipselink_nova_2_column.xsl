@@ -5,13 +5,14 @@
 
 	<xsl:template match="/sections">
 			<div id="midcolumn">
-				
+				<table width="750"><tr><td>
 				<xsl:apply-templates select="section[@class='title']"
 					mode="title" />
 				<xsl:apply-templates select="section[@class='main']"
 					mode="main" />
 				<xsl:apply-templates select="section[@class='none']"
 					mode="none" />
+				</td></tr></table>
 			</div>
 			
 <script type="text/javascript">
