@@ -20,7 +20,7 @@
   xmlns="http://www.eclipse.org/eclipselink/xsds/persistence"
   elementFormDefault="qualified"
   attributeFormDefault="unqualified"
-  version="1.0"
+  version="1.1"
   >
   <xsd:element name="object-persistence" type="object-persistence" />
   <xsd:complexType name="object-persistence">
@@ -59,7 +59,7 @@
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
-    <xsd:attribute default="Eclipse Persistence Services - 1.0 (Build YYMMDD)" name="version" type="xsd:string" />
+    <xsd:attribute default="Eclipse Persistence Services - 1.1 (Build YYMMDD)" name="version" type="xsd:string" />
   </xsd:complexType>
   <xsd:complexType name="datasource-login">
     <xsd:annotation>
@@ -222,7 +222,12 @@
     <xsd:complexContent mixed="false">
       <xsd:extension base="datasource-login">
         <xsd:sequence>
-          <xsd:element minOccurs="0" default="true" name="equal-namespace-resolvers" type="xsd:boolean" />
+        	<xsd:element minOccurs="0" default="true"
+        		name="equal-namespace-resolvers" type="xsd:boolean" />
+        	<xsd:element name="document-preservation-policy"
+        		type="document-preservation-policy" maxOccurs="1"
+        		minOccurs="0">
+        	</xsd:element>
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
@@ -2980,9 +2985,9 @@
     <xsd:complexContent mixed="false">
       <xsd:extension base="plsql-procedure-argument-type">
         <xsd:sequence>
-          <xsd:element name="record-name" type="xsd:string" />
           <xsd:element name="type-name" type="xsd:string" />
           <xsd:element minOccurs="0" name="compatible-type" type="xsd:string" />
+          <xsd:element minOccurs="0" name="java-type" type="xsd:string" />
           <xsd:element minOccurs="0" name="fields">
             <xsd:annotation>
               <xsd:documentation>The list of fields.</xsd:documentation>
@@ -2997,6 +3002,18 @@
               </xsd:sequence>
             </xsd:complexType>
           </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="plsql-collection">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="plsql-procedure-argument-type">
+        <xsd:sequence>
+          <xsd:element name="type-name" type="xsd:string" />
+          <xsd:element minOccurs="0" name="compatible-type" type="xsd:string" />
+          <xsd:element minOccurs="0" name="java-type" type="xsd:string" />
+          <xsd:element minOccurs="0" name="nested-type" type="plsql-procedure-argument-type" />
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
@@ -3415,7 +3432,13 @@
       <xsd:documentation>Defines a composite collection mapping for an XML list of nested elements.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent mixed="false">
-      <xsd:extension base="abstract-composite-collection-mapping" />
+      <xsd:extension base="abstract-composite-collection-mapping">
+        <xsd:sequence>
+	  <xsd:element name="container-attribute" minOccurs="0"/>
+	  <xsd:element name="container-get-method" minOccurs="0"/>
+	  <xsd:element name="container-set-method" minOccurs="0"/>
+	</xsd:sequence>
+      </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:complexType name="eis-composite-collection-mapping">
@@ -3435,6 +3458,9 @@
         <xsd:sequence>
           <xsd:element minOccurs="0" name="reference-class" type="xsd:string" />
           <xsd:element name="field" type="field" />
+	  <xsd:element name="container-attribute" minOccurs="0"/>
+	  <xsd:element name="container-get-method" minOccurs="0"/>
+	  <xsd:element name="container-set-method" minOccurs="0"/>
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
@@ -4106,4 +4132,52 @@
       </xsd:documentation>
     </xsd:annotation>
   </xsd:complexType>
+
+  <xsd:complexType name="document-preservation-policy">
+  	<xsd:sequence>
+  		<xsd:element name="node-ordering-policy"
+  			type="node-ordering-policy" maxOccurs="1" minOccurs="0">
+  		</xsd:element>
+  	</xsd:sequence>
+  </xsd:complexType>
+
+    <xsd:complexType name="node-ordering-policy"></xsd:complexType>
+
+
+    <xsd:complexType
+    	name="descriptor-level-document-preservation-policy">
+    	<xsd:complexContent>
+    		<xsd:extension base="document-preservation-policy"></xsd:extension>
+    	</xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="no-document-preservation-policy">
+    	<xsd:complexContent>
+    		<xsd:extension base="document-preservation-policy"></xsd:extension>
+    	</xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="xml-binder-policy">
+    	<xsd:complexContent>
+    		<xsd:extension base="document-preservation-policy"></xsd:extension>
+    	</xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="append-new-elements-ordering-policy">
+    	<xsd:complexContent>
+    		<xsd:extension base="node-ordering-policy"></xsd:extension>
+    	</xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="ignore-new-elements-ordering-policy">
+    	<xsd:complexContent>
+    		<xsd:extension base="node-ordering-policy"></xsd:extension>
+    	</xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="relative-position-ordering-policy">
+    	<xsd:complexContent>
+    		<xsd:extension base="node-ordering-policy"></xsd:extension>
+    	</xsd:complexContent>
+    </xsd:complexType>
 </xsd:schema>
