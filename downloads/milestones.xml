@@ -5,7 +5,7 @@
   <section class="main" name="Milestone Builds">  
     <description>                                                      
       <p>        
-        <table border="1">                                           
+        <table border="1" width="750">                                           
           <tr>
             <th colspan="11" align="center"> 2.0 Milestone Builds</th>
           </tr>
@@ -35,8 +35,7 @@
           </tr>
          </table>                                                                          
         <br/>
-        
-        <table border="1">                                           
+                                            
       <p>                                                              
         <table border="1" width="750">                                           
           <tr>
