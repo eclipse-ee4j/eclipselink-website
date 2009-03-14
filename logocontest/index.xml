@@ -43,7 +43,7 @@
 							src="/eclipselink/logocontest/sapir/bridge_eclipse.gif"
 							border="0" />
 					</td>
-					<td valign="top" align="center">
+					<td align="center" valign="middle">
 						<p>Simplified (smaller) icon</p>
 						<img
 							src="/eclipselink/logocontest/sapir/bridge_80x80.gif" border="0" />
@@ -120,6 +120,42 @@
 						<img
 							src="/eclipselink/logocontest/osterhaus/eclipselink_icons_ben.jpg"
 							border="0" width="300" />
+					</td>
+				</tr>
+			</table>
+		</description>
+	</section>
+
+	<section class="main" name="Proposal 5 ">
+		<description>
+			<p>Submitted by Catherine Pirie</p>
+			<table border="1" padding="10">
+				<tr>
+					<td align="center" valign="middle">
+						<p>5-1</p>
+						<img
+							src="/eclipselink/logocontest/pirie/eclipselink_cpirie-1.jpg"
+							border="0" />
+					</td>
+					<td align="center" valign="middle">
+						<p>5-2</p>
+						<img
+							src="/eclipselink/logocontest/pirie/eclipselink_cpirie-1.jpg"
+							border="0" />
+					</td>
+				</tr>
+				<tr>
+					<td align="center" valign="middle">
+						<p>5-3</p>
+						<img
+							src="/eclipselink/logocontest/pirie/eclipselink_cpirie-3.jpg"
+							border="0" />
+					</td>
+					<td align="center" valign="middle">
+						<p>5-4</p>
+						<img
+							src="/eclipselink/logocontest/pirie/eclipselink_cpirie-4.jpg"
+							border="0" />
 					</td>
 				</tr>
 			</table>
