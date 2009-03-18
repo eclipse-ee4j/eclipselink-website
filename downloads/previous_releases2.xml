@@ -3,7 +3,7 @@
    title="Previous EclipseLink Releases">
    <section class="main" name="Previous EclipseLink Releases">
       <description>
-      	 <b>EclipseLink 1.0.2 Downloads (Released Sept 08, 2008)</b>                                     
+      	 <b>EclipseLink 1.0.2 Downloads (Released Oct 29, 2008)</b>                                     
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
                <td class="packageDesc">
@@ -11,13 +11,13 @@
                      <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0.2/eclipselink-1.0.2.zip">EclipseLink 1.0.2 Installer Zip (22 MB)</a>
                   </div>
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0.2/eclipselink-plugins-1.0.2.zip">EclipseLink 1.0.2 OSGi Bundles Zip (8.5 MB)</a>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0.2/eclipselink-plugins-1.0.2.zip">EclipseLink 1.0.2 OSGi Bundles Zip (8.4 MB)</a>
                   </div>
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0.2/eclipselink-src-1.0.2.zip">EclipseLink 1.0.2 Source Zip (4 MB)</a>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0.2/eclipselink-src-1.0.2.zip">EclipseLink 1.0.2 Source Zip (4.0 MB)</a>
                   </div>
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0.2/eclipselink-examples-1.0.2.zip">EclipseLink 1.0.2 Examples Zip (228 KB)</a>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0.2/eclipselink-examples-1.0.2.zip">EclipseLink 1.0.2 Examples Zip (155 KB)</a>
                   </div>
                   <div class="bottomRow">
                      <div>
@@ -50,13 +50,13 @@
                      <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0.1/eclipselink-1.0.1.zip">EclipseLink 1.0.1 Installer Zip (22 MB) </a>
                   </div>
                   <div>
-                     <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0.1/eclipselink-plugins-1.0.1.zip">EclipseLink 1.0.1 OSGi Bundles Zip  (8.5 MB) </a>
+                     <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0.1/eclipselink-plugins-1.0.1.zip">EclipseLink 1.0.1 OSGi Bundles Zip  (8.4 MB) </a>
                   </div>
                   <div>
-                     <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0.1/eclipselink-src-1.0.1.zip">EclipseLink 1.0.1 Source Zip (4 MB) </a>
+                     <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0.1/eclipselink-src-1.0.1.zip">EclipseLink 1.0.1 Source Zip (4.0 MB) </a>
                   </div>
                   <div>
-                     <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0.1/eclipselink-examples-1.0.1.zip">EclipseLink 1.0.1 Examples Zip (228 KB) </a>
+                     <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0.1/eclipselink-examples-1.0.1.zip">EclipseLink 1.0.1 Examples Zip (229 KB) </a>
                   </div>
                   <div class="bottomRow">
                      <div>
@@ -89,10 +89,10 @@
                      <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0/eclipselink-1.0.zip">EclipseLink 1.0 Installer Zip (22 MB) </a>
                   </div>
                   <div>
-                     <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0/eclipselink-plugins-1.0.zip">EclipseLink 1.0 OSGi Bundles Zip (5 MB) </a>
+                     <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0/eclipselink-plugins-1.0.zip">EclipseLink 1.0 OSGi Bundles Zip (4.7 MB) </a>
                   </div>
                   <div>
-                     <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0/eclipselink-src-1.0.zip">EclipseLink 1.0 Source Zip (4 MB) </a>
+                     <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.0/eclipselink-src-1.0.zip">EclipseLink 1.0 Source Zip (4.0 MB) </a>
                   </div>
                   <div class="bottomRow">
                      <div>
