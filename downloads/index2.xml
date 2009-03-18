@@ -4,7 +4,7 @@
 
    <section class="main" name="Latest Release Downloads">
       <description>
-      	 <b>EclipseLink 1.1.0  (Released Mar 11, 2009)</b>
+      	 <b>EclipseLink 1.1.0  (Released Mar 11, 2009)</b> <br/>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
                <td class="packageDesc">
@@ -65,7 +65,7 @@
                   <div>
                      <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.1.0/eclipselink-src-1.1.0.r3634.zip">EclipseLink 1.1.0 Source Zip (4.2 MB)</a>
                   </div>
-                  Contains eclipselink.jar, workbench.jar and their dependencies.  Get the Installer Zip to use EclipseLink 1.1.0 in JavaSE, or a non OSGi container.
+                  Contains source code for all of eclipselink.  
                   <div class="bottomRow">
                      <div>
                      </div>
@@ -74,12 +74,6 @@
                <td width="120" class="downloadCol">
                   <div>
                      <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.1.0/eclipselink-src-1.1.0.r3634.zip">Source Zip</a>
-                  </div>
-                  <div>
-                     <a href="http://wiki.eclipse.org/EclipseLink/Release/1.1">Release Notes</a>
-                  </div>
-                  <div>
-                   <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a>
                   </div>
                   <div class="bottomRow">
                      <div>
