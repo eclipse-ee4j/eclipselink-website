@@ -7,7 +7,7 @@
       <p>        
         <table border="1" width="750">                                           
           <tr>
-            <th colspan="11" align="center"> 2.0 Milestone Builds</th>
+            <th colspan="11" align="center"><h6><b> 2.0.0 Milestone Builds </b></h6></th>
           </tr>
           <tr>                                                         
             <th align="center"> Build ID </th>                       
@@ -39,7 +39,7 @@
       <p>                                                              
         <table border="1" width="750">                                           
           <tr>
-            <th colspan="11" align="center"><h6>1.1.0 Milestone Builds</h6></th>
+            <th colspan="11" align="center"><h6><b> 1.1.0 Milestone Builds </b></h6></th>
           </tr>
           <tr>                                                         
             <th align="center"> Build ID </th>                       
@@ -239,7 +239,7 @@
         <br/>
         <table border="1" width="750">                                           
           <tr>
-            <th colspan="9" align="center"><h6> 1.0.2 Milestone Builds</h6></th>
+            <th colspan="9" align="center"><h6><b> 1.0.2 Milestone Builds </b></h6></th>
           </tr>
           <tr>                                                         
             <th align="center"> Build ID </th>                       
