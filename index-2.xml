@@ -3,6 +3,7 @@
 
 	<section class="title">
 		<description>
+			<table><tr><td valign="top">
 			<h1>EclipseLink</h1>
 			<p style="text-align:justify">
 				The Eclipse Persistence Services Project (EclipseLink)
@@ -12,6 +13,11 @@
 				software developers across data sources, formats, and
 				containers.
 			</p>
+			</td><td width="300">
+			<img src="/eclipselink/images/logo.png"
+						border="0" />
+			</td>
+			</tr></table>
 		</description>
 	</section>
 
