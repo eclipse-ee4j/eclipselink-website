@@ -24,13 +24,22 @@
 		</description>
 	</section>
 
-	<section class="main" name="Getting Started" >
+	<section class="main" name="Getting Started">
 
 		<section name="Basic configuration examples"
 			link="http://wiki.eclipse.org/EclipseLink/Examples/JPA/JPAConfigure">
 			<em>
 				Basic examples of configuration necessary when using
 				EclipseLink JPA.
+			</em>
+		</section>
+
+		<section name="Introduction to OEPE 11g JPA Workbench"
+			link="http://www.oracle.com/technology/pub/articles/cioroianu-eclipse-jpa.html">
+			<em>
+				Learn how to use Oracle Enterprise Pack for Eclipse
+				(OEPE) to build Java EE applications that map objects to
+				relational databases, using EclipseLink JPA.
 			</em>
 		</section>
 
@@ -52,22 +61,48 @@
 			</em>
 		</section>
 
-		<section name="More EclipseLink JPA examples" link="http://wiki.eclipse.org/EclipseLink/Examples/JPA" />
+		<section name="More EclipseLink JPA examples"
+			link="http://wiki.eclipse.org/EclipseLink/Examples/JPA" />
 
 	</section>
 
 	<section class="sideitem">
 		<description>
 			<h3>JPA Resources</h3>
-			<li><a href="http://www.apress.com/book/bookDisplay.html?bID=10093">Pro EJB3 - JPA</a></li>
-			<a href="http://www.apress.com/book/view/9781590596456"><img src="http://www.apress.com/resource/bookcover/9781590596456?size=medium"
-						border="0" /></a>
-			<li><a href="http://jcp.org/en/jsr/detail?id=220">JPA 1.0 (JSR 220)</a></li>
-			<li><a href="http://jcp.org/en/jsr/detail?id=317">JPA 2.0 (JSR 317)</a></li>
-			
+			<li>
+				<a
+					href="http://www.apress.com/book/bookDisplay.html?bID=10093">
+					Pro EJB3 - JPA
+				</a>
+			</li>
+			<a href="http://www.apress.com/book/view/9781590596456">
+				<img
+					src="http://www.apress.com/resource/bookcover/9781590596456?size=medium"
+					border="0" />
+			</a>
+			<li>
+				<a href="http://jcp.org/en/jsr/detail?id=220">
+					JPA 1.0 (JSR 220)
+				</a>
+			</li>
+			<li>
+				<a href="http://jcp.org/en/jsr/detail?id=317">
+					JPA 2.0 (JSR 317)
+				</a>
+			</li>
+
 			<h3>Documentation</h3>
-			<li><a href="http://wiki.eclipse.org/Introduction_to_Java_Persistence_API_(ELUG)">Intro to JPA</a></li>
-			<li><a href="http://wiki.eclipse.org/Category:JPA">EclipseLink JPA User Guide</a></li>
+			<li>
+				<a
+					href="http://wiki.eclipse.org/Introduction_to_Java_Persistence_API_(ELUG)">
+					Intro to JPA
+				</a>
+			</li>
+			<li>
+				<a href="http://wiki.eclipse.org/Category:JPA">
+					EclipseLink JPA User Guide
+				</a>
+			</li>
 		</description>
 	</section>
 
