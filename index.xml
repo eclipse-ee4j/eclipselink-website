@@ -3,7 +3,10 @@
 
 	<section class="title">
 		<description>
-			<h1>EclipseLink</h1>
+			<h1>
+				<img src="/eclipselink/images/logo.jpg" border="0"
+					alt="EclipseLink" alt="EclipseLink" />
+			</h1>
 			<p style="text-align:justify">
 				The Eclipse Persistence Services Project (EclipseLink)
 				delivers a comprehensive open-source Java persistence
@@ -93,13 +96,13 @@
 
 	<section class="main" name="Project News"
 		link="/eclipselink/news.php">
+		<section name="New EclipseLink Logo Unveiled"
+			link="http://www.eclipse.org/eclipselink/logocontest/">
+			<em>Mar 25, 2009</em>
+		</section>
 		<section name="EclipseLink 1.1 Released"
 			link="http://www.eclipse.org/eclipselink/downloads">
 			<em>March 11, 2009</em>
-		</section>
-		<section name="EclipseLink Logo Contest"
-			link="http://www.eclipse.org/eclipselink/logocontest/">
-			<em>Mar 4, 2009</em>
 		</section>
 		<section name="EclipseLink Presentations at EclipseCon"
 			link="http://wiki.eclipse.org/EclipseLink/Presentations">
