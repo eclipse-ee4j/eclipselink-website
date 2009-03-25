@@ -6,14 +6,13 @@
 			<h1>EclipseLink Logo Contest</h1>
 			<p style="text-align:justify">
 				This page shows all of the proposed logos submitted as
-				part of the EclipseLink logo contest. The winning logo is:
+				part of the EclipseLink logo contest. The winning logo
+				is:
 			</p>
-							<img src="/eclipselink/images/logo.jpg" border="0"
-					alt="EclipseLink" alt="EclipseLink" />
-			
-			<p>
-				Thanks for all the wonderful proposals.
-			</p>
+			<img src="/eclipselink/images/logo.jpg" border="0"
+				alt="EclipseLink" alt="EclipseLink" />
+
+			<p>Thanks for all the wonderful proposals.</p>
 		</description>
 	</section>
 

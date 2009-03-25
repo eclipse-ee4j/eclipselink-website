@@ -3,10 +3,8 @@
 
 	<section class="title">
 		<description>
-			<h1>
-				<img src="/eclipselink/images/logo.jpg" border="0"
-					alt="EclipseLink" alt="EclipseLink" />
-			</h1>
+			<img src="/eclipselink/images/logo.jpg" border="0"
+				alt="EclipseLink" alt="EclipseLink" />
 			<p style="text-align:justify">
 				The Eclipse Persistence Services Project (EclipseLink)
 				delivers a comprehensive open-source Java persistence
