@@ -1,26 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sections title="EclipseLink">
 
-	<section class="main"
-		name="EclipseLink's Reference Implementation Downloads">
+	<section class="title">
 		<description>
-			EclipseLink is a leader is providing standards based open
-			source persistence solutions. The following downloads are
-			reference implementations delivered by the EclipseLink
-			project.
+			<h1>EclipseLink's Reference Implementation Downloads</h1>
+			<p>
+				EclipseLink is a leader is providing standards based
+				open source persistence solutions. The following
+				downloads are reference implementations delivered by the
+				EclipseLink project.
+			</p>
 		</description>
-
-		<section name="Service Data Objects 2.1.1 (JSR 235)"
-			link="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/ri/eclipselink-1.1_SDO_2.1.1_RI.zip">
-			<em>EclipseLink 1.1</em>
-		</section>
-
-		<section name="Java Persistence API 2.0 (JSR 317)"
-			link="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/ri/eclipselink-2.0_JPA_2.0_RI.zip">
-			<em>Planned for EclipseLink 2.0</em>
-		</section>
-
 	</section>
+
+	<section class="main" name="Service Data Objects 2.1.1 (JSR 235)">
+		<description>
+			<p>
+				EclipseLink 1.1 provides the reference implementation of
+				SDO 2.1.1.
+			</p>
+			<p>
+				<b>Downloads:</b>
+				<ul>
+					<li>
+						<a
+							href="/eclipselink/downloads/index.php#1.1.0">
+							EclipseLink 1.1.0 - Complete
+						</a>
+					</li>
+					<li>
+						<a
+							href="/downloads/download.php?file=/rt/eclipselink/ri/eclipselink-1.1_SDO_2.1.1_RI.zip">
+							EclipseLink 1.1.0 - Only the SDO 2.1.1
+							required components
+						</a>
+					</li>
+				</ul>
+			</p>
+		</description>
+		<em>EclipseLink 1.1</em>
+	</section>
+
+	<section class="main" name="Java Persistence API 2.0 (JSR 317)">
+		<description>Planned for EclipseLink 2.0</description>
+	</section>
+
+
 
 
 </sections>
