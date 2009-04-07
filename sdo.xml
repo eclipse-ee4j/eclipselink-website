@@ -73,6 +73,12 @@
 			<h3>Documentation</h3>
 			<li>
 				<a
+					href="http://wiki.eclipse.org/EclipseLink/FAQ/WhatIsSDO">
+					EclipseLink FAQ: What is SDO?
+				</a>
+			</li>
+			<li>
+				<a
 					href="http://wiki.eclipse.org/Category:SDO">
 					EclipseLink SDO User Guide
 				</a>

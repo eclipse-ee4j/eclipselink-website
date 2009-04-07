@@ -16,8 +16,8 @@
 	<section class="main" name="Service Data Objects 2.1.1 (JSR 235)">
 		<description>
 			<p>
-				EclipseLink 1.1 provides the reference implementation of
-				SDO 2.1.1.
+				The <a href="/eclipselink/sdo.php">EclipseLink SDO</a> component in EclipseLink 1.1 provides the reference implementation of
+				SDO 2.1.1. 
 			</p>
 			<p>
 				<b>Downloads:</b>
