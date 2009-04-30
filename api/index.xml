@@ -18,28 +18,25 @@
 				release. The latest JavaDocs are always available
 				<a href="/eclipselink/api/latest/index.html">here</a>
 				.
-				<ul>
-					<li>
-						<a href="/eclipselink/api/1.1/index.html">
-							1.1.0
-						</a>
-					</li>
-					<li>
-						<a href="/eclipselink/api/1.0.2/index.html">
-							1.0.2
-						</a>
-					</li>
-					<li>
-						<a href="/eclipselink/api/1.0.1/index.html">
-							1.0.1
-						</a>
-					</li>
-					<li>
-						<a href="/eclipselink/api/1.0/index.html">
-							1.0.0
-						</a>
-					</li>
-				</ul>
+			</p>
+			<ul>
+				<li>
+					<a href="/eclipselink/api/1.1/index.html">1.1.0</a>
+				</li>
+				<li>
+					<a href="/eclipselink/api/1.0.2/index.html">
+						1.0.2
+					</a>
+				</li>
+				<li>
+					<a href="/eclipselink/api/1.0.1/index.html">
+						1.0.1
+					</a>
+				</li>
+				<li>
+					<a href="/eclipselink/api/1.0/index.html">1.0.0</a>
+				</li>
+			</ul>
 		</description>
 	</section>
 
