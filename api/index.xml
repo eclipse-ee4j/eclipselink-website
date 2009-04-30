@@ -10,9 +10,8 @@
 		</description>
 	</section>
 
-	<section class="main" name="EclipseLink API JavaDocs">
+	<section class="main" name="EclipseLink JavaDocs">
 		<description>
-			<h3>EclipseLink JavaDocs</h3>
 			<p>
 				EclipseLink publishes JavaDocs to the web site for each
 				release. The latest JavaDocs are always available
