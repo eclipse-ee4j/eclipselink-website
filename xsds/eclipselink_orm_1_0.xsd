@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+******************************************************************************
+ Copyright (c) 1998, 2008 Oracle. All rights reserved.
+ This program and the accompanying materials are made available under the 
+ terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0 
+ which accompanies this distribution. 
+ The Eclipse Public License is available at http://www.eclipse.org/legal/epl-v10.html
+ and the Eclipse Distribution License is available at 
+ http://www.eclipse.org/org/documents/edl-v10.php.
+
+ Contributors:
+     Oracle - initial API and implementation from Oracle TopLink
+*****************************************************************************/
+-->
+
 <!-- Java Persistence API object-relational mapping file schema -->
 <xsd:schema targetNamespace="http://www.eclipse.org/eclipselink/xsds/persistence/orm" 
   xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" 
@@ -2002,7 +2017,8 @@
          * org.eclipse.persistence.descriptors.copying.CopyPolicy be specified 
          * as the argument.
          * 
-         * A CopyPolicy should be specified on an Entity or MappedSuperclass.
+         * A CopyPolicy should be specified on an Entity, MappedSuperclass or
+         * Embeddable.
          * 
          * For instance:
          * @Entity
@@ -2035,8 +2051,8 @@
          * EclipseLink and therefore this configuration option is only used to 
          * override other types of copy policies
          * 
-         * An InstantiationCopyPolicy should be specified on an Entity or 
-         * MappedSuperclass.
+         * An InstantiationCopyPolicy should be specified on an Entity,
+         * MappedSuperclass or Embeddable.
          * 
          * Example:
          * @Entity
@@ -2063,8 +2079,8 @@
          * be used for the clone that is used for comparison in conjunction with 
          * EclipseLink's DeferredChangeDetectionPolicy
          *  
-         * A CloneCopyPolicy should be specified on an Entity or 
-         * MappedSuperclass.
+         * A CloneCopyPolicy should be specified on an Entity, MappedSuperclass
+         * or Embeddable.
          * 
          * Example:
          * @Entity
@@ -2231,9 +2247,9 @@
           /**
            * (Optional) The name of the data column that holds the direct map 
            * key. If the name on te key column is "", the name will default to:
-           * the name of the property or field; "_key".
+           * the name of the property or field; "_KEY".
            */
-          Column keyColumn();
+          Column keyColumn() default @Column;
 
           /**
            * (Optional) Specify the key converter. Default is equivalent to 
@@ -2683,8 +2699,8 @@
          * which computes changes sets for EclipseLink's UnitOfWork commit 
          * process. An ObjectChangePolicy is stored on an Entity's descriptor.
          *
-         * A ChangeTracking annotation may be specified on an Entity or 
-         * MappedSuperclass.
+         * A ChangeTracking annotation may be specified on an Entity, 
+         * MappedSuperclass or Embeddable.
          */ 
         @Target({TYPE})
         @Retention(RUNTIME)
@@ -2758,7 +2774,7 @@
 	
       /** 
        * The Customizer annotation is used to specify a class that implements 
-       * the org.eclipse.persistence.internal.sessions.factories.DescriptorCustomizer 
+       * the org.eclipse.persistence.config.DescriptorCustomizer 
        * interface and is to run against an enetity's class descriptor after all 
        * metadata processing has been completed.
        *
