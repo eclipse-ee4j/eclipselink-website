@@ -3,28 +3,26 @@
 
 	<section class="title" name="EclipseLink Images">
 		<description>
-			These logos were designed and contributed to the EclipseLink project by
-			Catherine Pirie of
-			<a href="http://www.catapultdesign.ca/">Catapult Design</a>
-			as part of our
-			<a href="/eclipselink/logocontest/index.php">Logo Contest</a>
-		</description>
+			<h1>EclipseLink Logo Images</h1>
+			<p>
+				These logos were designed and contributed to the EclipseLink project by
+				Catherine Pirie of
+				<a href="http://www.catapultdesign.ca/">Catapult Design</a>
+				as part of our
+				<a href="/eclipselink/logocontest/index.php">Logo Contest</a>
+			</p>
 
-		<section name="JPG" link="/eclipselink/images/logos/eclipselink-logo.jpg">
+
 			<img src="/eclipselink/images/logos/eclipselink-logo.jpg" border="0" />
-		</section>
-		<section name="GIF" link="/eclipselink/images/logos/eclipselink-logo.gif">
+			<br />
 			<img src="/eclipselink/images/logos/eclipselink-logo.gif" border="0" />
-		</section>
-		<section name="PNG" link="/eclipselink/images/logos/eclipselink-logo.png">
+			<br />
 			<img src="/eclipselink/images/logos/eclipselink-logo.png" border="0" />
-		</section>
-		<section name="PDF" link="/eclipselink/images/logos/eclipselink-logo.pdf">
+			<br />
 			<img src="/eclipselink/images/logos/eclipselink-logo.pdf" border="0" />
-		</section>
-		<section name="EPS" link="/eclipselink/images/logos/eclipselink-logo.eps">
+			<br />
 			<img src="/eclipselink/images/logos/eclipselink-logo.eps" border="0" />
-		</section>
+		</description>
 
 	</section>
 
