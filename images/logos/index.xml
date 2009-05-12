@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sections title="EclipseLink Images">
 
-	<section class="main" name="EclipseLink Images">
-		<section>
+	<section class="title" name="EclipseLink Images">
+		<description>
 			These logos were designed and contributed to the EclipseLink project by
 			Catherine Pirie of
 			<a href="http://www.catapultdesign.ca/">Catapult Design</a>
 			as part of our
 			<a href="/eclipselink/logocontest/index.php">Logo Contest</a>
-		</section>
+		</description>
 
 		<section name="JPG" link="/eclipselink/images/logos/eclipselink-logo.jpg">
 			<img src="/eclipselink/images/logos/eclipselink-logo.jpg" border="0" />
