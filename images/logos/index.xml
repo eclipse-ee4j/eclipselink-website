@@ -12,7 +12,7 @@
 				<a href="/eclipselink/logocontest/index.php">Logo Contest</a>
 			</p>
 
-
+			<p>
 			<img src="/eclipselink/images/logos/eclipselink-logo.jpg" border="0" />
 			<br />
 			<img src="/eclipselink/images/logos/eclipselink-logo.gif" border="0" />
@@ -22,6 +22,7 @@
 			<img src="/eclipselink/images/logos/eclipselink-logo.pdf" border="0" />
 			<br />
 			<img src="/eclipselink/images/logos/eclipselink-logo.eps" border="0" />
+			</p>
 		</description>
 
 	</section>
