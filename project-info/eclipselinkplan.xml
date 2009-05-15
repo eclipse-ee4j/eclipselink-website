@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
 
 <plan xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml">
-  <release projectid="rt" version="1.0"/>
+  <release projectid="rt.eclipselink" version="1.1.2"/>
     <introduction>
     <html:p>The <a href="http://www.eclipse.org/eclipselink/downloads/index.php">Eclipse Persistence Services Project (EclipseLink)</a> project's goal is to provide a complete persistence framework that is both comprehensive and universal. It will run in any Java environment and read and write objects to virtually any type of data source, including relational databases, XML, or EIS systems. </html:p>
     <html:p>EclipseLink will focus on providing leading edge support, including advanced feature extensions, for the dominant persistence standards for each target data source; Java Persistence API (JPA) for relational databases, Java API for XML Binding (JAXB) for XML, Java Connector Architecture (JCA) for EIS and other types of legacy systems, and Service Data Objects (SDO).
@@ -23,7 +23,7 @@
     <milestone date="06/04/2008" milestone="1.0M8"><html:p>Jun Milestone for 1.0</html:p></milestone>
     <milestone date="06/18/2008" milestone="1.0M9"><html:p>RC1 Milestone for 1.0</html:p></milestone>
     <milestone date="07/09/2008" milestone="1.0M9"><html:p>1.0 Released</html:p></milestone>
--->
+
     <milestone date="08/13/2008" milestone="1.0.1M1"><html:p>August Milestone for 1.0.1</html:p></milestone>
     <milestone date="08/13/2008" milestone="1.1M1"><html:p>August Milestone for 1.1</html:p></milestone>
     <milestone date="08/27/2008" milestone="1.0.1M2"><html:p>RC1 Milestone for 1.0.1</html:p></milestone>
@@ -38,25 +38,34 @@
     <milestone date="12/09/2008" milestone="1.1M5"><html:p>Dec Milestone for 1.1</html:p></milestone>
     <milestone date="01/14/2009" milestone="1.1M6"><html:p>Code freeze - RC1 Milestone for 1.1</html:p></milestone>
     <milestone date="01/21/2009" milestone="1.1M7"><html:p>RC2 Milestone for 1.1</html:p></milestone>
-    <milestone date="03/11/2009" milestone="1.1.0"><html:p>1.1.0 Released</html:p></milestone>
+    -->
+    <milestone date="03/11/2009" milestone="1.1.0"><html:div>1.1.0 Released</html:div></milestone>
+    <milestone date="04/30/2009" milestone="1.1.1RC"><html:div>1.1.1 RC build</html:div></milestone>
+    <milestone date="05/15/2009" milestone="1.1.1"><html:div>1.1.1 Released</html:div></milestone>
+    <milestone date="06/05/2009" milestone="1.1.2RC"><html:div>1.1.2 RC</html:div></milestone>
+    <milestone date="06/19/2009" milestone="1.1.2"><html:div>1.1.2 Release</html:div></milestone>
+    
     <postamble/>
   </release_milestones>
   <target_environments>
     <internationalization>
        <html:p>
-        Currently none of the EclipseLink deliverables are internationalized.
+        EclipseLink is Localized, but not Translated.
         </html:p>
     </internationalization>
   </target_environments>
-  <compatibility_with_previous_releases/>
-  
+  <compatibility_with_previous_releases>
+         <html:p>
+        EclispeLink is fully compatible with previous EclipseLink releases. 
+        </html:p>
+  </compatibility_with_previous_releases>
   <themes_and_priorities>
     <preamble>
      <html:p>
 		
      </html:p>
     </preamble>
-    <theme name="JPA 2.0">
+<!--     <theme name="JPA 2.0">
       <description>
         <html:p>EclipseLink is working towards JPA 2.0 compliance.  The features required for functional completeness can be found  <a href="http://wiki.eclipse.org/EclipseLink/Development/JPA_2.0">here</a>.  All assigned, and closed JPA 2.0 bugs filed against EclipseLink can be found here:
         </html:p>
@@ -66,6 +75,18 @@
 	  <deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=JPA+2.0&amp;classification=RT&amp;product=EclipseLink&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;resolution=WONTFIX&amp;resolution=LATER&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="></deferred>
 
     </theme>
+
+
+    <theme name="SDO 2.1.1">
+      <description>
+         <html:p>EclipseLink is working towards SDO 2.1.1 compliance. All assigned, and closed SDO 2.1.1 bugs filed against EclipseLink can be found here:
+         </html:p>
+      </description>
+      <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=SDO+2.1&amp;classification=RT&amp;product=EclipseLink&amp;component=SDO&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="></committed>
+      <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=SDO+2.1&amp;classification=RT&amp;product=EclipseLink&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="></proposed>
+      <deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=SDO+2.1&amp;classification=RT&amp;product=EclipseLink&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;resolution=WONTFIX&amp;resolution=LATER&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="></deferred>
+    </theme>
+
     <theme name="SDO 2.1.1">
       <description>
          <html:p>EclipseLink is working towards SDO 2.1.1 compliance. All assigned, and closed SDO 2.1.1 bugs filed against EclipseLink can be found here:
@@ -75,14 +96,15 @@
       <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=SDO+2.1&amp;classification=RT&amp;product=EclipseLink&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="></proposed>
 	  <deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=SDO+2.1&amp;classification=RT&amp;product=EclipseLink&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;resolution=WONTFIX&amp;resolution=LATER&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="></deferred>
     </theme>
-    <theme name="JAXB 2.1">
+    -->
+    <theme name="1.1.1 and 1.1.2 bugs">
       <description>
-        <html:p>EclipseLink is working towards JAXB 2.1 compliance.  All assigned, and closed JAXB2.1 bugs filed against EclipseLink can be found here:
+        <html:p>EclipseLink is targetting the following bugs for 1.1.2
         </html:p>
       </description>
-      <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=JAXB+2.&amp;classification=RT&amp;product=EclipseLink&amp;component=MOXy&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="></committed>
-      <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=JAXB+2.&amp;classification=RT&amp;product=EclipseLink&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="></proposed>
-	  <deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=JAXB+2.&amp;classification=RT&amp;product=EclipseLink&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;resolution=WONTFIX&amp;resolution=LATER&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="></deferred>
+      <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=RT&product=EclipseLink&target_milestone=1.1.1&target_milestone=1.1.2&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=ASSIGNED&bug_status=REOPENED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0="></committed>
+      <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=RT&product=EclipseLink&target_milestone=1.1.1&target_milestone=1.1.2&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=UNCONFIRMED&bug_status=NEW&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0="></proposed>
+	  <deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=RT&product=EclipseLink&target_milestone=1.1.1&target_milestone=1.1.2&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&resolution=WONTFIX&resolution=LATER&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0="></deferred>
     </theme>
   </themes_and_priorities>
   <appendix/>
