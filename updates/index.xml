@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sections title="EclipseLink">
+
+    <section class="title">
+        <description>
+            <h1>
+                <img src="/eclipselink/images/logo.jpg" border="0"
+                    alt="EclipseLink" />
+            </h1>
+            <p style="text-align:justify">
+                The Eclipse Persistence Services Project (EclipseLink)
+                delivers a comprehensive open-source Java persistence
+                solution. EclipseLink focuses on standards with advanced
+                features, performance and scalability for enterprise
+                software developers across data sources, formats, and
+                containers.
+            </p>
+        </description>
+    </section>
+
+    <section class="main" name="Getting Started">
+        <description>
+            <p>
+                Select a persistence service and learn more about how to
+                get started developing with EclipseLink.
+            </p>
+            <table width="100%">
+                <tr>
+                    <td width="50%">
+                        <p style="text-align:right">
+                            <a href="/eclipselink/jpa.php">
+                                Object-Relational
+                            </a>
+                        </p>
+                    </td>
+                    <td width="100" />
+                    <td width="50%">
+                        <p style="text-align:left">EclipseLink JPA</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p style="text-align:right">
+                            <a href="/eclipselink/moxy.php">
+                                Object-XML Binding
+                            </a>
+                        </p>
+                    </td>
+                    <td width="75" />
+                    <td>
+                        <p style="text-align:left">EclipseLink MOXy</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p style="text-align:right">
+                            <a href="/eclipselink/sdo.php">
+                                Service Data Objects
+                            </a>
+                        </p>
+                    </td>
+                    <td width="75" />
+                    <td>
+                        <p style="text-align:left">EclipseLink SDO</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p style="text-align:right">
+                            <a href="/eclipselink/dbws.php">
+                                Web Services for RDBMS
+                            </a>
+                        </p>
+                    </td>
+                    <td width="75" />
+                    <td>
+                        <p style="text-align:left">EclipseLink DBWS</p>
+                    </td>
+                </tr>
+            </table>
+        </description>
+
+    </section>
+
+    <section class="main" name="Learn More">
+
+        <section name="Introducing EclipseLink (Eclipse Zone)"
+            link="http://eclipse.dzone.com/articles/introducing-eclipselink">
+            <em>June 30, 2008</em>
+        </section>
+
+        <section name="Conference Presentations"
+            link="http://wiki.eclipse.org/EclipseLink/Presentations" />
+
+    </section>
+
+    <section class="main" name="Project News"
+        link="/eclipselink/news.php">
+        <section name="EclipseLink 1.1.1 Released"
+            link="http://www.eclipse.org/eclipselink/downloads">
+            <em>May 15, 2009</em>
+        </section>
+        <section name="New EclipseLink Logo Unveiled"
+            link="http://www.eclipse.org/eclipselink/logocontest/">
+            <em>Mar 25, 2009</em>
+        </section>
+        <section name="EclipseLink 1.1 Released"
+            link="http://www.eclipse.org/eclipselink/downloads">
+            <em>March 11, 2009</em>
+        </section>
+        <section name="EclipseLink Presentations at EclipseCon"
+            link="http://wiki.eclipse.org/EclipseLink/Presentations">
+            <em>Mar 4, 2009</em>
+        </section>
+        <section name="EclipseLink 1.0.2 Released"
+            link="http://www.eclipse.org/eclipselink/downloads">
+            <em>Oct 29, 2008</em>
+        </section>
+
+        <section name="EclipseLink 1.0.1 Released"
+            link="http://www.eclipse.org/eclipselink/downloads">
+            <em>Sept 09, 2008</em>
+        </section>
+
+    </section>
+
+    <section class="sideitem">
+
+        <description>
+            <div style="text-align:center">
+                <a href="/eclipselink/jpa.php">
+                    <img src="/eclipselink/images/Eclipselink_jpa.png"
+                        border="0" />
+                </a>
+                <br />
+                <a href="/eclipselink/moxy.php">
+                    <img src="/eclipselink/images/Eclipselink_moxy.png"
+                        border="0" />
+                </a>
+                <br />
+                <a href="/eclipselink/sdo.php">
+                    <img src="/eclipselink/images/Eclipselink_sdo.png"
+                        border="0" />
+                </a>
+                <br />
+                <a href="/eclipselink/dbws.php">
+                    <img src="/eclipselink/images/Eclipselink_dbws.png"
+                        border="0" />
+                </a>
+            </div>
+        </description>
+
+    </section>
+
+</sections>
