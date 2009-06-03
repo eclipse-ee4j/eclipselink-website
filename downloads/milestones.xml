@@ -83,6 +83,23 @@
             <th colspan="7" align="center"> Testing Results </th>  
           </tr>                                                        
           <tr>
+            <td align="center"> M4 </td>
+            <td align="center"> June 3, 2009 </td>
+            <td align="center">
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.1.2/M4/eclipselink-1.1.2.v20090603-r4398.zip"> Install Archive </a> <br/>
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.1.2/M4/eclipselink-src-1.1.2.v20090603-r4398.zip"> Source Archive </a> <br/>
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.1.2/M4/eclipselink-plugins-1.1.2.v20090603-r4398.zip"> OSGi Plugins Archive </a> <br/>
+            </td>
+            <td align="center"> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.2/M4/eclipselink-core-lrg-1.1.2.v20090603-r4398.html"> CoreSRG </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.2/M4/eclipselink-jpa-lrg-1.1.2.v20090603-r4398.html"> JPA </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.2/M4/eclipselink-jaxb-lrg-1.1.2.v20090603-r4398.html"> MOXy (JAXB) </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.2/M4/eclipselink-oxm-lrg-1.1.2.v20090603-r4398.html"> MOXy (OXM) </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.2/M4/eclipselink-sdo-lrg-1.1.2.v20090603-r4398.html"> SDO </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.2/M4/eclipselink-dbws-lrg-1.1.2.v20090603-r4398.html"> DBWS </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.2/M4/eclipselink-dbws-util-lrg-1.1.2.v20090603-r4398.html"> DBWS Util </a> </td>
+          </tr>
+          <tr>
             <td align="center"> M3 </td>
             <td align="center"> June 1, 2009 </td>
             <td align="center">
