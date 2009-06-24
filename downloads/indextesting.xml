@@ -4,7 +4,6 @@
 
    <section class="main" name="Latest Release Downloads">
       <description>
-         <b>EclipseLink 1.1.2  (Released June 24, 2009)</b> <br/>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
          <tr class="tableData">
                <td class="packageDesc">
@@ -41,6 +40,12 @@
                      </div>
                   </div>
                </td>
+               <td width="120" class="downloadCol">
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>          
             </tr>
             <tr class="tableData">
                <td class="packageDesc">
@@ -53,6 +58,12 @@
                      </div>
                   </div>
                </td>
+               <td width="120" class="downloadCol">
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td> 
             </tr>
             
             <tr class="tableData">
@@ -66,6 +77,12 @@
                      </div>
                   </div>
                </td>
+               <td width="120" class="downloadCol">
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td> 
             </tr>
             <tr class="tableData">
                <td class="packageDesc">
@@ -78,6 +95,12 @@
                      </div>
                   </div>
                </td>
+               <td width="120" class="downloadCol">
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td> 
             </tr>
             <tr class="tableData">
                <td class="packageDesc">
@@ -90,6 +113,12 @@
                      </div>
                   </div>
                </td>
+               <td width="120" class="downloadCol">
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td> 
             </tr>
          </table>
       </description>
