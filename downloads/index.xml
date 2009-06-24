@@ -21,9 +21,9 @@
             <tr class="tableData">
                <td class="packageDesc">
                   <div>
-                     <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">EclipseLink P2 Update Site</a>
+                     <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">EclipseLink P2 Repository</a>
                   </div>
-                  This p2 update site allows EclipseLink 1.1.2 to be made available though the Eclipse Update tool.
+                  This P2 repository allows EclipseLink 1.1.2 to be made available though the Eclipse Update tool. The repository includes EclipseLink's JPA, MOXy and SDO features. 
                   <div class="bottomRow">
                   </div>
                </td>
