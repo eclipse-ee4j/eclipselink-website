@@ -72,7 +72,7 @@
                   <div>
                      <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.1.2/eclipselink-src-1.1.2.v20090612-r4475.zip">EclipseLink 1.1.2 Source Zip (4.2 MB)</a>
                   </div>
-                  Contains source code for all of eclipselink.  
+                  Contains source code for all of EclipseLink.  
                   <div class="bottomRow">
                      <div>
                      </div>
@@ -84,7 +84,7 @@
                   <div>
                      <a class="packageTitle" href="http://wiki.eclipse.org/EclipseLink/Maven">EclipseLink 1.1.2 Maven Repository</a>
                   </div>
-                  Eclipselink.jar and it's dependencies can be downloaded from a Maven repository.
+                  eclipselink.jar and it's dependencies can be downloaded from a Maven repository.
                   <div class="bottomRow">
                      <div>
                      </div>
