@@ -9,7 +9,7 @@ require_once ($root . 'www.eclipse.org/eclipselink/common_nova.php');
 
 # Generate the web page
 // Load the XML source
-$xml = DOMDocument::load('www.eclipse.org/eclipselink/downloads/indextesting.xml');
+$xml = DOMDocument::load('indextesting.xml');
 
 //Set the page title
 $xpath = new DOMXPath($xml);
