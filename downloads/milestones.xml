@@ -16,6 +16,40 @@
             <th align="center"> </th>                                
             <th colspan="7" align="center"> Testing Results </th>  
           </tr>                                                        
+          <!-- tr>
+            <td align="center"> M5 </td>
+            <td align="center"> July 15, 2009 </td>
+            <td align="center">
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/2.0.0/M5/eclipselink-2.0.0.v20090715-r4777.zip"> Install Archive </a> <br/>
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/2.0.0/M5/eclipselink-src-2.0.0.v20090715-r4777.zip"> Source Archive </a> <br/>
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/2.0.0/M5/eclipselink-plugins-2.0.0.v20090715-r4777.zip"> OSGi Plugins Archive </a> <br/>
+            </td>
+            <td align="center"> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M5/eclipselink-core-lrg-2.0.0.v20090715-r4777.html"> CoreLRG </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M5/eclipselink-jpa-lrg-2.0.0.v20090715-r4777.html"> JPA </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M5/eclipselink-jaxb-lrg-2.0.0.v20090715-r4777.html"> MOXy (JAXB) </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M5/eclipselink-oxm-lrg-2.0.0.v20090715-r4777.html"> MOXy (OXM) </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M5/eclipselink-sdo-lrg-2.0.0.v20090715-r4777.html"> SDO </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M5/eclipselink-dbws-lrg-2.0.0.v20090715-r4777.html"> DBWS </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M5/eclipselink-dbws-util-lrg-2.0.0.v20090715-r4777.html"> DBWS Util </a> </td>
+          </tr -->
+          <tr>
+            <td align="center"> M4 </td>
+            <td align="center"> June 29, 2009 </td>
+            <td align="center">
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/2.0.0/M4/eclipselink-2.0.0.v20090627-r4569.zip"> Install Archive </a> <br/>
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/2.0.0/M4/eclipselink-src-2.0.0.v20090627-r4569.zip"> Source Archive </a> <br/>
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/2.0.0/M4/eclipselink-plugins-2.0.0.v20090627-r4569.zip"> OSGi Plugins Archive </a> <br/>
+            </td>
+            <td align="center"> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M4/eclipselink-core-lrg-2.0.0.v20090627-r4569.html"> CoreLRG </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M4/eclipselink-jpa-lrg-2.0.0.v20090627-r4569.html"> JPA </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M4/eclipselink-jaxb-lrg-2.0.0.v20090627-r4569.html"> MOXy (JAXB) </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M4/eclipselink-oxm-lrg-2.0.0.v20090627-r4569.html"> MOXy (OXM) </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M4/eclipselink-sdo-lrg-2.0.0.v20090627-r4569.html"> SDO </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M4/eclipselink-dbws-lrg-2.0.0.v20090627-r4569.html"> DBWS </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M4/eclipselink-dbws-util-lrg-2.0.0.v20090627-r4569.html"> DBWS Util </a> </td>
+          </tr>
           <tr>
             <td align="center"> M3 </td>
             <td align="center"> June 4, 2009 </td>
@@ -204,72 +238,6 @@
         </table>                                                                          
         <br/>
       </p>                            
-      <p>                                                              
-        <table border="1" width="750">                                           
-          <tr>
-            <th colspan="11" align="center"><h6><b> 1.1.1 Milestone Builds </b></h6></th>
-          </tr>
-          <tr>                                                         
-            <th align="center"> Build ID </th>                       
-            <th align="center"> Release Date </th>                       
-            <th align="center"> Archives </th>                       
-            <th align="center"> </th>                                
-            <th colspan="7" align="center"> Testing Results </th>  
-          </tr>                                                        
-          <tr>
-            <td align="center"> RC1 </td>
-            <td align="center"> Apr 30, 2009 </td>
-            <td align="center">
-              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.1.1/RC1/eclipselink-1.1.1.v20090430-r4097.zip"> Install Archive </a> <br/>
-              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.1.1/RC1/eclipselink-src-1.1.1.v20090430-r4097.zip"> Source Archive </a> <br/>
-              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.1.1/RC1/eclipselink-plugins-1.1.1.v20090430-r4097.zip"> OSGi Plugins Archive </a> <br/>
-            </td>
-            <td align="center"> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.1/RC1/eclipselink-core-lrg-1.1.1.v20090430-r4097.html"> CoreSRG </a> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.1/RC1/eclipselink-jpa-lrg-1.1.1.v20090430-r4097.html"> JPA </a> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.1/RC1/eclipselink-jaxb-lrg-1.1.1.v20090430-r4097.html"> MOXy (JAXB) </a> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.1/RC1/eclipselink-oxm-lrg-1.1.1.v20090430-r4097.html"> MOXy (OXM) </a> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.1/RC1/eclipselink-sdo-lrg-1.1.1.v20090430-r4097.html"> SDO </a> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.1/RC1/eclipselink-dbws-lrg-1.1.1.v20090430-r4097.html"> DBWS </a> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.1/RC1/eclipselink-dbws-util-lrg-1.1.1.v20090430-r4097.html"> DBWS Util </a> </td>
-          </tr>
-          <tr>
-            <td align="center"> M2 </td>
-            <td align="center"> Apr 18, 2009 </td>
-            <td align="center">
-              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.1.1/M2/eclipselink-1.1.1.v20090418-r3989.zip"> Install Archive </a> <br/>
-              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.1.1/M2/eclipselink-src-1.1.1.v20090418-r3989.zip"> Source Archive </a> <br/>
-              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.1.1/M2/eclipselink-plugins-1.1.1.v20090418-r3989.zip"> OSGi Plugins Archive </a> <br/>
-            </td>
-            <td align="center"> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.1/M2/eclipselink-core-lrg-1.1.1.v20090418-r3989.html"> CoreLRG </a> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.1/M2/eclipselink-jpa-lrg-1.1.1.v20090418-r3989.html"> JPA </a> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.1/M2/eclipselink-jaxb-lrg-1.1.1.v20090418-r3989.html"> MOXy (JAXB) </a> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.1/M2/eclipselink-oxm-lrg-1.1.1.v20090418-r3989.html"> MOXy (OXM) </a> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.1/M2/eclipselink-sdo-lrg-1.1.1.v20090418-r3989.html"> SDO </a> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.1/M2/eclipselink-dbws-lrg-1.1.1.v20090418-r3989.html"> DBWS </a> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.1/M2/eclipselink-dbws-util-lrg-1.1.1.v20090418-r3989.html"> DBWS Util </a> </td>
-          </tr>
-          <tr>
-            <td align="center"> M1 </td>
-            <td align="center"> Apr 07, 2009 </td>
-            <td align="center">
-              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.1.1/M1/eclipselink-1.1.1.v20090407-r3867.zip"> Install Archive </a> <br/>
-              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.1.1/M1/eclipselink-src-1.1.1.v20090407-r3867.zip"> Source Archive </a> <br/>
-              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.1.1/M1/eclipselink-plugins-1.1.1.v20090407-r3867.zip"> OSGi Plugins Archive </a> <br/>
-            </td>
-            <td align="center"> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.1/M1/eclipselink-core-lrg-1.1.1.v20090407-r3867.html"> CoreLRG </a> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.1/M1/eclipselink-jpa-lrg-1.1.1.v20090407-r3867.html"> JPA </a> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.1/M1/eclipselink-jaxb-lrg-1.1.1.v20090407-r3867.html"> MOXy (JAXB) </a> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.1/M1/eclipselink-oxm-lrg-1.1.1.v20090407-r3867.html"> MOXy (OXM) </a> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.1/M1/eclipselink-sdo-lrg-1.1.1.v20090407-r3867.html"> SDO </a> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.1/M1/eclipselink-dbws-lrg-1.1.1.v20090407-r3867.html"> DBWS </a> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.1/M1/eclipselink-dbws-util-lrg-1.1.1.v20090407-r3867.html"> DBWS Util </a> </td>
-          </tr>
-        </table>                                                                          
-        <br/>
-      </p>                                                            
     </description>                                                                                
   </section>
 
