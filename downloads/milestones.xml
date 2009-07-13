@@ -16,23 +16,23 @@
             <th align="center"> </th>                                
             <th colspan="7" align="center"> Testing Results </th>  
           </tr>                                                        
-          <!-- tr>
+          <tr>
             <td align="center"> M5 </td>
-            <td align="center"> July 15, 2009 </td>
+            <td align="center"> July 13, 2009 </td>
             <td align="center">
-              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/2.0.0/M5/eclipselink-2.0.0.v20090715-r4777.zip"> Install Archive </a> <br/>
-              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/2.0.0/M5/eclipselink-src-2.0.0.v20090715-r4777.zip"> Source Archive </a> <br/>
-              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/2.0.0/M5/eclipselink-plugins-2.0.0.v20090715-r4777.zip"> OSGi Plugins Archive </a> <br/>
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/2.0.0/M5/eclipselink-2.0.0.v20090713-r4547.zip"> Install Archive </a> <br/>
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/2.0.0/M5/eclipselink-src-2.0.0.v20090713-r4547.zip"> Source Archive </a> <br/>
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/2.0.0/M5/eclipselink-plugins-2.0.0.v20090713-r4547.zip"> OSGi Plugins Archive </a> <br/>
             </td>
             <td align="center"> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M5/eclipselink-core-lrg-2.0.0.v20090715-r4777.html"> CoreLRG </a> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M5/eclipselink-jpa-lrg-2.0.0.v20090715-r4777.html"> JPA </a> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M5/eclipselink-jaxb-lrg-2.0.0.v20090715-r4777.html"> MOXy (JAXB) </a> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M5/eclipselink-oxm-lrg-2.0.0.v20090715-r4777.html"> MOXy (OXM) </a> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M5/eclipselink-sdo-lrg-2.0.0.v20090715-r4777.html"> SDO </a> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M5/eclipselink-dbws-lrg-2.0.0.v20090715-r4777.html"> DBWS </a> </td>
-            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M5/eclipselink-dbws-util-lrg-2.0.0.v20090715-r4777.html"> DBWS Util </a> </td>
-          </tr -->
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M5/eclipselink-core-lrg-2.0.0.v20090713-r4547.html"> CoreLRG </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M5/eclipselink-jpa-lrg-2.0.0.v20090713-r4547.html"> JPA </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M5/eclipselink-jaxb-lrg-2.0.0.v20090713-r4547.html"> MOXy (JAXB) </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M5/eclipselink-oxm-lrg-2.0.0.v20090713-r4547.html"> MOXy (OXM) </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M5/eclipselink-sdo-lrg-2.0.0.v20090713-r4547.html"> SDO </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M5/eclipselink-dbws-lrg-2.0.0.v20090713-r4547.html"> DBWS </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M5/eclipselink-dbws-util-lrg-2.0.0.v20090713-r4547.html"> DBWS Util </a> </td>
+          </tr>
           <tr>
             <td align="center"> M4 </td>
             <td align="center"> June 29, 2009 </td>
