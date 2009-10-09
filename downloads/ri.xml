@@ -42,19 +42,14 @@
 	</section>
 
 	<section class="main" name="Java Persistence API 2.0 (JSR 317)">
-		<description>         <p>
+		<description>         
+		    <p>
                 The <a href="/eclipselink/jpa.php">EclipseLink JPA</a> component in EclipseLink will provide the reference implementation of
-                JPA 2.0.  Preview RI.
+                JPA 2.0.  Here is Preview RI.
             </p>
             <p>
                 <b>Downloads:</b>
                 <ul>
-                    <li>
-                        <a
-                            href="/downloads/download.php?file=/rt/eclipselink/ri/eclipselink-2.0.0M9_JPA-2.0.0_Preview_RI.zip">
-                            EclipseLink 2.0 M9 - Only the required components for the JPA 2.0 Preview RI.
-                        </a>
-                    </li>
  
                     <li>
                         <a
@@ -62,6 +57,13 @@
                             EclipseLink 2.0 M9 - Full EclipseLink M9 build, including the JPA 2.0 Preview RI.
                         </a>
                     </li>
+                    <li>
+                        <a
+                            href="/downloads/download.php?file=/rt/eclipselink/ri/eclipselink-2.0.0M9_JPA-2.0.0_Preview_RI.zip">
+                            EclipseLink 2.0 M9 - Only the required components for the JPA 2.0 Preview RI.
+                        </a>
+                    </li>
+                    
                </ul>
             </p>
 </description>
