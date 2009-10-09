@@ -51,18 +51,19 @@
                 <ul>
                     <li>
                         <a
-                            href="/downloads/download.php?file=/rt/eclipselink/milestones/2.0.0/M9/eclipselink-2.0.0.v20091009-r5515.zip">
-                            EclipseLink 2.0 M9 - Full EclipseLink M9 build, including the JPA 2.0 Preview RI.
-                        </a>
-                    </li>
-                    <li>
-                        <a
                             href="/downloads/download.php?file=/rt/eclipselink/ri/eclipselink-2.0.0M9_JPA-2.0.0_Preview_RI.zip">
                             EclipseLink 2.0 M9 - JPA 2.0 Preview RI bundles. - 
                             the required components for the JPA 2.0 Preview RI.
                         </a>
                     </li>
-                </ul>
+ 
+                    <li>
+                        <a
+                            href="/downloads/download.php?file=/rt/eclipselink/milestones/2.0.0/M9/eclipselink-2.0.0.v20091009-r5515.zip">
+                            EclipseLink 2.0 M9 - Full EclipseLink M9 build, including the JPA 2.0 Preview RI.
+                        </a>
+                    </li>
+               </ul>
             </p>
 </description>
 	</section>
