@@ -18,6 +18,23 @@
             <th colspan="7" align="center"> Testing Results </th>  
           </tr>                                                        
           <tr>
+            <td align="center"> M10 </td>
+            <td align="center"> Oct 19, 2009 </td>
+            <td align="center">
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/2.0.0/M10/eclipselink-2.0.0.v20091017-r5570.zip"> Install Archive </a> <br/>
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/2.0.0/M10/eclipselink-src-2.0.0.v20091017-r5570.zip"> Source Archive </a> <br/>
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/2.0.0/M10/eclipselink-plugins-2.0.0.v20091017-r5570.zip"> OSGi Plugins Archive </a> <br/>
+            </td>
+            <td align="center"> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M10/eclipselink-core-lrg-2.0.0.v20091017-r5570.html"> CoreLRG </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M10/eclipselink-jpa-lrg-2.0.0.v20091017-r5570.html"> JPA </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M10/eclipselink-jaxb-lrg-2.0.0.v20091017-r5570.html"> MOXy (JAXB) </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M10/eclipselink-oxm-lrg-2.0.0.v20091017-r5570.html"> MOXy (OXM) </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M10/eclipselink-sdo-lrg-2.0.0.v20091017-r5570.html"> SDO </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M10/eclipselink-dbws-lrg-2.0.0.v20091017-r5570.html"> DBWS </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.0/M10/eclipselink-dbws-util-lrg-2.0.0.v20091017-r5570.html"> DBWS Util </a> </td>
+          </tr>
+          <tr>
             <td align="center"> M9 </td>
             <td align="center"> Oct 9, 2009 </td>
             <td align="center">
