@@ -3,6 +3,7 @@
    title="EclipseLink Downloads">
 
    <section class="main" name="Latest Release Downloads">
+      <a name="1.2.0"> </a>        
       <description>
          <b>EclipseLink 1.2.0  (Released Oct 23, 2009)</b> - <a href="http://wiki.eclipse.org/EclipseLink/Release/1.2.0">New and Noteworthy</a> - <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a><br/>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
@@ -75,6 +76,7 @@
          </table>
       </description>
       <p></p>
+      <a name="1.1.3"> </a>        
       <description>
          <b>EclipseLink 1.1.3  (Released Oct 9, 2009)</b> - <a href="http://wiki.eclipse.org/EclipseLink/Release/1.1.3">New and Noteworthy</a> - <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a><br/>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
