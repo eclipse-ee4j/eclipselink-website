@@ -45,7 +45,7 @@
 		<description>         
 		    <p>
                 The <a href="/eclipselink/jpa.php">EclipseLink JPA</a> component in EclipseLink will provide the reference implementation of
-                JPA 2.0.  Here is Preview RI.
+                JPA 2.0.  Here is build M13 of the RI.
             </p>
             <p>
                 <b>Downloads:</b>
@@ -53,14 +53,14 @@
  
                     <li>
                         <a
-                            href="/downloads/download.php?file=/rt/eclipselink/milestones/2.0.0/M9/eclipselink-2.0.0.v20091009-r5515.zip">
-                            EclipseLink 2.0 M9 - Full EclipseLink M9 build, including the JPA 2.0 Preview RI.
+                            href="/downloads/download.php?file=/rt/eclipselink/milestones/2.0.0/M13/eclipselink-2.0.0.v20091105-r5740.zip">
+                            EclipseLink 2.0 M13 - Full EclipseLink M13 build, including the JPA 2.0 Preview RI.
                         </a>
                     </li>
                     <li>
                         <a
-                            href="/downloads/download.php?file=/rt/eclipselink/ri/eclipselink-2.0.0M9_JPA-2.0.0_Preview_RI.zip">
-                            EclipseLink 2.0 M9 - Only the required components for the JPA 2.0 Preview RI.
+                            href="/downloads/download.php?file=/rt/eclipselink/ri/eclipselink-2.0.0M13_JPA-2.0.0_RI.zip">
+                            EclipseLink 2.0 M13 - Only the required components for the JPA 2.0 Preview RI.
                         </a>
                     </li>
                     
