@@ -13,33 +13,6 @@
 		</description>
 	</section>
 
-	<section class="main" name="Service Data Objects 2.1.1 (JSR 235)">
-		<description>
-			<p>
-				The <a href="/eclipselink/sdo.php">EclipseLink SDO</a> component in EclipseLink 1.1 provides the reference implementation of
-				SDO 2.1.1. 
-			</p>
-			<p>
-				<b>Downloads:</b>
-				<ul>
-					<li>
-						<a
-							href="/eclipselink/downloads/index.php#1.1.0">
-							EclipseLink 1.1.0 - Complete
-						</a>
-					</li>
-					<li>
-						<a
-							href="/downloads/download.php?file=/rt/eclipselink/ri/eclipselink-1.1_SDO_2.1.1_RI.zip">
-							EclipseLink 1.1.0 - Only the SDO 2.1.1
-							required components
-						</a>
-					</li>
-				</ul>
-			</p>
-		</description>
-		<em>EclipseLink 1.1</em>
-	</section>
 
 	<section class="main" name="Java Persistence API 2.0 (JSR 317)">
 		<description>         
@@ -53,14 +26,14 @@
  
                     <li>
                         <a
-                            href="/downloads/download.php?file=/rt/eclipselink/milestones/2.0.0/M13/eclipselink-2.0.0.v20091105-r5740.zip">
-                            EclipseLink 2.0 M13 - Full EclipseLink M13 build, including the JPA 2.0 Preview RI.
+                            href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/2.0.0/RC1/eclipselink-2.0.0.v20091127-r5931.zip">
+                            EclipseLink 2.0 RC1 - Full EclipseLink build, including the JPA 2.0 RI.
                         </a>
                     </li>
                     <li>
                         <a
-                            href="/downloads/download.php?file=/rt/eclipselink/ri/eclipselink-2.0.0M13_JPA-2.0.0_RI.zip">
-                            EclipseLink 2.0 M13 - Only the required components for the JPA 2.0 Preview RI.
+                            href="/downloads/download.php?file=/rt/eclipselink/ri/eclipselink-2.0.0_JPA-2.0.0_RI.zip">
+                            EclipseLink 2.0 RC1 - minimal bundles that are shipped in the Java EE6 RI.
                         </a>
                     </li>
                     
@@ -69,6 +42,33 @@
 </description>
 	</section>
 
+    <section class="main" name="Service Data Objects 2.1.1 (JSR 235)">
+        <description>
+            <p>
+                The <a href="/eclipselink/sdo.php">EclipseLink SDO</a> component in EclipseLink 1.1 provides the reference implementation of
+                SDO 2.1.1. 
+            </p>
+            <p>
+                <b>Downloads:</b>
+                <ul>
+                    <li>
+                        <a
+                            href="/eclipselink/downloads/index.php#1.1.0">
+                            EclipseLink 1.1.0 - Complete
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="/downloads/download.php?file=/rt/eclipselink/ri/eclipselink-1.1_SDO_2.1.1_RI.zip">
+                            EclipseLink 1.1.0 - Only the SDO 2.1.1
+                            required components
+                        </a>
+                    </li>
+                </ul>
+            </p>
+        </description>
+        <em>EclipseLink 1.1</em>
+    </section>
 
 
 
