@@ -17,8 +17,8 @@
 	<section class="main" name="Java Persistence API 2.0 (JSR 317)">
 		<description>         
 		    <p>
-                The <a href="/eclipselink/jpa.php">EclipseLink JPA</a> component in EclipseLink will provide the reference implementation of
-                JPA 2.0.  Here is build M13 of the RI.
+                The <a href="/eclipselink/jpa.php">EclipseLink JPA</a> component in EclipseLink provides the reference implementation of
+                JPA 2.0.
             </p>
             <p>
                 <b>Downloads:</b>
