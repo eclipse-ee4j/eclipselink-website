@@ -26,14 +26,14 @@
  
                     <li>
                         <a
-                            href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/2.0.0/RC1/eclipselink-2.0.0.v20091127-r5931.zip">
-                            EclipseLink 2.0 RC1 - Full EclipseLink build, including the JPA 2.0 RI.
+                            href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.0.0/eclipselink-2.0.0.v20091127-r5931.zip">
+                            EclipseLink 2.0.0 - Full EclipseLink build, including the JPA 2.0 RI.
                         </a>
                     </li>
                     <li>
                         <a
                             href="/downloads/download.php?file=/rt/eclipselink/ri/eclipselink-2.0.0_JPA-2.0.0_RI.zip">
-                            EclipseLink 2.0 RC1 - minimal bundles that are shipped in the Java EE6 RI.
+                            EclipseLink 2.0.0 - minimal bundles that are shipped in the Java EE6 RI.
                         </a>
                     </li>
                     
