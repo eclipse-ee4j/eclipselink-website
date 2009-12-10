@@ -96,6 +96,10 @@
 
 	<section class="main" name="Project News"
 		link="/eclipselink/news.php">
+        <section name="EclipseLink 2.0.0 Released"
+            link="http://www.eclipse.org/eclipselink/downloads">
+            <em>Dec 10, 2009</em>
+        </section>
         <section name="EclipseLink 1.2.0 Released"
             link="http://www.eclipse.org/eclipselink/downloads">
             <em>Oct 23, 2009</em>

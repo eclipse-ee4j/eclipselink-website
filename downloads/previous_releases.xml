@@ -3,6 +3,76 @@
    title="Previous EclipseLink Releases">
    <section class="main" name="Previous EclipseLink Releases">
       <description>
+      	 <b>EclipseLink 1.2.0 Downloads (Released Oct 23, 2009)</b>
+         <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
+            <tr class="tableData">
+               <td class="packageDesc">
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.2.0/eclipselink-1.2.0.v20091016-r5565.zip">EclipseLink 1.2.0 Installer Zip (27 MB)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.2.0/eclipselink-plugins-1.2.0.v20091016-r5565.zip">EclipseLink 1.2.0 OSGi Bundles Zip (11 MB)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.2.0/eclipselink-src-1.2.0.v20091016-r5565.zip">EclipseLink 1.2.0 Source Zip (4.9 MB)</a>
+                  </div>
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+               <td width="120" class="downloadCol">
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/Release/1.2.0">Release Notes</a>
+                  </div>
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a> 
+                  </div>
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/Maven">Maven</a>
+                  </div>
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+            </tr>
+         </table>   
+      	 <b>EclipseLink 1.1.3 Downloads (Released Oct 9, 2009)</b>
+         <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
+            <tr class="tableData">
+               <td class="packageDesc">
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.1.3/eclipselink-1.1.3.v20091002-r5404.zip">EclipseLink 1.1.3 Installer Zip (24 MB)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.1.3/eclipselink-plugins-1.1.3.v20091002-r5404.zip">EclipseLink 1.1.3 OSGi Bundles Zip (9.6 MB)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.1.3/eclipselink-src-1.1.3.v20091002-r5404.zip">EclipseLink 1.1.3 Source Zip (4.3 MB)</a>
+                  </div>
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+               <td width="120" class="downloadCol">
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/Release/1.1.3">Release Notes</a>
+                  </div>
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a> 
+                  </div>
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/Maven">Maven</a>
+                  </div>
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+            </tr>
+         </table>   
       	 <b>EclipseLink 1.1.2 Downloads (Released June 24, 2009)</b>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">

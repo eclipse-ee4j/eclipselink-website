@@ -48,7 +48,8 @@
     <milestone date="10/09/2009" milestone="1.1.3"><html:div>1.1.3 Release</html:div></milestone>
     <milestone date="10/16/2009" milestone="1.2.0RC"><html:div>1.2.0 RC</html:div></milestone>
     <milestone date="10/23/2009" milestone="1.2.0"><html:div>1.2.0 Release</html:div></milestone>
-    <milestone date="10/26/2009" milestone="2.0.0M11"><html:div>2.0.0 M11</html:div></milestone>
+    <milestone date="11/27/2009" milestone="2.0.0RC1"><html:div>2.0.0 RC</html:div></milestone>
+    <milestone date="12/10/2009" milestone="2.0.0"><html:div>2.0.0 Release</html:div></milestone>
     
     <postamble/>
   </release_milestones>
