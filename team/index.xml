@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sections title="EclipseLink Team">
 
-	<section class="none">
-		<section name="Committers" link="#committers" />
-		<section name="Contributors" link="#contributors" />
-	</section>
-
 	<section class="main" name="Committers" anchor="committers">
 		<description>
 			<table width="100%" cellpadding="10">
@@ -14,7 +9,6 @@
 			<td width="33%" align="center"><img src="images/peter_krogh.jpg" width="100"/><br/><a href="http://wiki.eclipse.org/User:Peter.krogh.oracle.com">Peter Krogh</a><br/>Project Co-Lead<br/>Oracle<br/>Ottawa, Ontario, Canada</td>
 			<td/>
 			</tr>
-
 			<tr>
 			<td width="33%" align="center"><img src="http://www.widowswalk.ca/i/080105/080105-06.jpg" width="100"/><br/>Rick Barkhouse<br/>Oracle<br/>Ottawa, Ontario, Canada<br/></td>
 			<td width="33%" align="center"><img src="images/oracle.jpg" width="100"/><br/>Les Davis<br/>Oracle<br/>Raleigh, North Carolina, USA</td>
@@ -62,13 +56,6 @@
 			</tr>			
 			</table>
 		</description>
-	</section>
-
-	<section class="main" name="Contributors" anchor="contributors">
-	</section>
-
-	<section class="infobox" name = "IP Log">
-		<description>See committer/contributor <a href="http://wiki.eclipse.org/EclipseLink/IPLog">IP log</a>.</description>
 	</section>
 
 </sections>
