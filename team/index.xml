@@ -6,12 +6,12 @@
 		<section name="Contributors" link="#contributors" />
 	</section>
 
-	<section class="main" name="Committers(28)" anchor="committers">
+	<section class="main" name="Committers" anchor="committers">
 		<description>
 			<table width="100%" cellpadding="10">
 			<tr>
-			<td width="33%" align="center"><img src="images/doug-clarke.jpg" width="100"/><br/><h4>Doug Clarke</h4>Project Co-Lead<br/>Oracle<br/>Ottawa, Ontario, Canada<br/><a href="http://java-persistence.blogspot.com/">Java Persistence Blog</a></td>
-			<td width="33%" align="center"><img src="images/peter_krogh.jpg" width="100"/><br/>Peter Krogh<br/>Project Co-Lead<br/>Oracle<br/>Ottawa, Ontario, Canada</td>
+			<td width="33%" align="center"><img src="images/doug-clarke.jpg" width="100"/><br/><a href="http://wiki.eclipse.org/User:Douglas.clarke.oracle.com">Doug Clarke</a>Project Co-Lead<br/>Oracle<br/>Ottawa, Ontario, Canada<br/><a href="http://java-persistence.blogspot.com/">Java Persistence Blog</a></td>
+			<td width="33%" align="center"><img src="images/peter_krogh.jpg" width="100"/><br/><a href="http://wiki.eclipse.org/User:Peter.krogh.oracle.com">Peter Krogh</a><br/>Project Co-Lead<br/>Oracle<br/>Ottawa, Ontario, Canada</td>
 			<td/>
 			</tr>
 
