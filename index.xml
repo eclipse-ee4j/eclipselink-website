@@ -94,8 +94,11 @@
 
 	</section>
 
-	<section class="main" name="Project News"
-		link="/eclipselink/news.php">
+	<section class="main">
+        <section name="Spring 3.0 goes GA with EclipseLink 2.0"
+            link="http://blog.springsource.com/2009/12/16/spring-framework-3-0-goes-ga/">
+            <em>Dec 12, 2009</em>
+        </section>
         <section name="EclipseLink 2.0.0 Released"
             link="http://www.eclipse.org/eclipselink/downloads">
             <em>Dec 10, 2009</em>
