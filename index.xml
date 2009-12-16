@@ -4,15 +4,17 @@
 	<section class="title">
 		<description>
 			<h1>
-				<img src="/eclipselink/images/logo.jpg" border="0"
-					alt="EclipseLink" />
+				<img src="/eclipselink/images/logo.jpg" border="0" alt="EclipseLink" />
 			</h1>
 			<p style="text-align:justify">
 				The Eclipse Persistence Services Project (EclipseLink)
 				delivers a comprehensive open-source Java persistence
-				solution. EclipseLink focuses on standards with advanced
-				features, performance and scalability for enterprise
-				software developers across data sources, formats, and
+				solution.
+				EclipseLink focuses on standards with advanced
+				features, performance
+				and scalability for enterprise
+				software developers across data
+				sources, formats, and
 				containers.
 			</p>
 		</description>
@@ -22,7 +24,8 @@
 		<description>
 			<p>
 				Select a persistence service and learn more about how to
-				get started developing with EclipseLink.
+				get
+				started developing with EclipseLink.
 			</p>
 			<table width="100%">
 				<tr>
@@ -94,50 +97,42 @@
 
 	</section>
 
-	<section class="main">
-        <section name="Spring 3.0 goes GA with EclipseLink 2.0"
-            link="http://blog.springsource.com/2009/12/16/spring-framework-3-0-goes-ga/">
-            <em>Dec 12, 2009</em>
-        </section>
-        <section name="EclipseLink 2.0.0 Released"
-            link="http://www.eclipse.org/eclipselink/downloads">
-            <em>Dec 10, 2009</em>
-        </section>
-        <section name="EclipseLink 1.2.0 Released"
-            link="http://www.eclipse.org/eclipselink/downloads">
-            <em>Oct 23, 2009</em>
-        </section>
-        <section name="EclipseLink 1.1.3 Released"
-            link="http://www.eclipse.org/eclipselink/downloads">
-            <em>Oct 9, 2009</em>
-        </section>
-        <section name="EclipseLink 1.1.2 Released"
-            >
-            <em>June 24, 2009</em>
-        </section>
-        <section name="EclipseLink 1.1.1 Released"
-            >
-            <em>May 15, 2009</em>
-        </section>
+	<section class="main" name="Project News">
+		<section name="Spring 3.0 goes GA with EclipseLink 2.0"
+			link="http://blog.springsource.com/2009/12/16/spring-framework-3-0-goes-ga/">
+			<em>Dec 12, 2009</em>
+		</section>
+		<section name="EclipseLink 2.0.0 Released" link="http://www.eclipse.org/eclipselink/downloads">
+			<em>Dec 10, 2009</em>
+		</section>
+		<section name="EclipseLink 1.2.0 Released" link="http://www.eclipse.org/eclipselink/downloads">
+			<em>Oct 23, 2009</em>
+		</section>
+		<section name="EclipseLink 1.1.3 Released" link="http://www.eclipse.org/eclipselink/downloads">
+			<em>Oct 9, 2009</em>
+		</section>
+		<section name="EclipseLink 1.1.2 Released">
+			<em>June 24, 2009</em>
+		</section>
+		<section name="EclipseLink 1.1.1 Released">
+			<em>May 15, 2009</em>
+		</section>
 		<section name="New EclipseLink Logo Unveiled"
 			link="http://www.eclipse.org/eclipselink/logocontest/">
 			<em>Mar 25, 2009</em>
 		</section>
-		<section name="EclipseLink 1.1 Released"
-			>
+		<section name="EclipseLink 1.1 Released">
 			<em>March 11, 2009</em>
 		</section>
 		<section name="EclipseLink Presentations at EclipseCon"
 			link="http://wiki.eclipse.org/EclipseLink/Presentations">
 			<em>Mar 4, 2009</em>
 		</section>
-		<section name="EclipseLink 1.0.2 Released"
-			>
+		<section name="EclipseLink 1.0.2 Released">
 			<em>Oct 29, 2008</em>
 		</section>
 
-		<section name="EclipseLink 1.0.1 Released"
-			>
+		<section name="EclipseLink 1.0.1 Released">
 			<em>Sept 09, 2008</em>
 		</section>
 
@@ -148,23 +143,19 @@
 		<description>
 			<div style="text-align:center">
 				<a href="/eclipselink/jpa.php">
-					<img src="/eclipselink/images/Eclipselink_jpa.png"
-						border="0" />
+					<img src="/eclipselink/images/Eclipselink_jpa.png" border="0" />
 				</a>
 				<br />
 				<a href="/eclipselink/moxy.php">
-					<img src="/eclipselink/images/Eclipselink_moxy.png"
-						border="0" />
+					<img src="/eclipselink/images/Eclipselink_moxy.png" border="0" />
 				</a>
 				<br />
 				<a href="/eclipselink/sdo.php">
-					<img src="/eclipselink/images/Eclipselink_sdo.png"
-						border="0" />
+					<img src="/eclipselink/images/Eclipselink_sdo.png" border="0" />
 				</a>
 				<br />
 				<a href="/eclipselink/dbws.php">
-					<img src="/eclipselink/images/Eclipselink_dbws.png"
-						border="0" />
+					<img src="/eclipselink/images/Eclipselink_dbws.png" border="0" />
 				</a>
 			</div>
 		</description>
