@@ -5,11 +5,11 @@
 	<release projectid="rt.eclipselink" version="2.1.0" />
 	<introduction>
 		<html:p>
-			<b>
+			<html:b>
 				UNDER DEVELOPMENT - The content is being copied into the project
 				plan from the
-				<a href="http://wiki.eclipse.org/EclipseLink/Development/2.1">wiki</a>
-			</b>
+				<html:a href="http://wiki.eclipse.org/EclipseLink/Development/2.1">wiki</html:a>
+			</html:b>
 		</html:p>
 		<html:p>
 			<b></b>
