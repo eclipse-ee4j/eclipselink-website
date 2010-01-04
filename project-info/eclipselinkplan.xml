@@ -56,22 +56,21 @@
 
 		<postamble />
 	</release_milestones>
-	
+
 	<target_environments>
 		<internationalization>
 			<html:p>EclipseLink is Localized, but not Translated.</html:p>
 		</internationalization>
 	</target_environments>
-	
+
 	<compatibility_with_previous_releases>
 		<html:p>
-			EclispeLink is intended to be fully compatible with previous
-			EclipseLink
-			releases with the exception of previously deprecated API
-			removed in this release. 
+			EclispeLink is intended to be fully compatible with previous EclipseLink releases with the exception of previously deprecated API removed in this release.
+
+			Please see Newly Deprecated API' and 'Removed API' below for complete details. 
         </html:p>
 	</compatibility_with_previous_releases>
-	
+
 	<themes_and_priorities>
 		<theme name="Helios">
 			<description>
@@ -99,15 +98,16 @@
 					the bug backlog to a more reasonable quantity.
 
 					Continued improvements to usability focusing on simplified
-					getting started steps as well as ability to find technical
+					getting started steps as
+					well as ability to find technical
 					information on how EclipseLink works and how to solve both common
 					and advanced requirements. 
 				</html:p>
 			</description>
 			<committed
-				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cassigned_to%2Cbug_status%2Cvotes%2Ctarget_milestone%2Ccomponent%2Cshort_desc;classification=RT;query_based_on=2.1;status_whiteboard_type=allwordssubstr;query_format=advanced;status_whiteboard=simple_fix;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;product=EclipseLink;known_name=2.1" />
+				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cassigned_to%2Cbug_status%2Cvotes%2Ctarget_milestone%2Ccomponent%2Cshort_desc;classification=RT;query_based_on=2.1;status_whiteboard_type=allwordssubstr;query_format=advanced;status_whiteboard=simple_fix;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;product=EclipseLink;known_name=2.1"></committed>
 			<proposed
-				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cassigned_to%2Cbug_status%2Cvotes%2Ctarget_milestone%2Ccomponent%2Cshort_desc;classification=RT;query_based_on=2.1;status_whiteboard_type=allwordssubstr;query_format=advanced;status_whiteboard=submitted_patch;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;product=EclipseLink;known_name=2.1" />
+				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cassigned_to%2Cbug_status%2Cvotes%2Ctarget_milestone%2Ccomponent%2Cshort_desc;classification=RT;query_based_on=2.1;status_whiteboard_type=allwordssubstr;query_format=advanced;status_whiteboard=submitted_patch;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;product=EclipseLink;known_name=2.1"></proposed>
 		</theme>
 
 		<theme name="Documentation">
@@ -120,9 +120,9 @@
 				</html:p>
 			</description>
 			<committed
-				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cassigned_to%2Cbug_status%2Cvotes%2Ctarget_milestone%2Ccomponent%2Cshort_desc;classification=RT;query_based_on=2.1;status_whiteboard_type=allwordssubstr;query_format=advanced;status_whiteboard=simple_fix;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;product=EclipseLink;known_name=2.1" />
+				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cassigned_to%2Cbug_status%2Cvotes%2Ctarget_milestone%2Ccomponent%2Cshort_desc;classification=RT;query_based_on=2.1;status_whiteboard_type=allwordssubstr;query_format=advanced;status_whiteboard=simple_fix;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;product=EclipseLink;known_name=2.1"></committed>
 			<proposed
-				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cassigned_to%2Cbug_status%2Cvotes%2Ctarget_milestone%2Ccomponent%2Cshort_desc;classification=RT;query_based_on=2.1;status_whiteboard_type=allwordssubstr;query_format=advanced;status_whiteboard=submitted_patch;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;product=EclipseLink;known_name=2.1" />
+				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cassigned_to%2Cbug_status%2Cvotes%2Ctarget_milestone%2Ccomponent%2Cshort_desc;classification=RT;query_based_on=2.1;status_whiteboard_type=allwordssubstr;query_format=advanced;status_whiteboard=submitted_patch;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;product=EclipseLink;known_name=2.1"></proposed>
 		</theme>
 
 		<theme name="Advanced">
@@ -137,11 +137,16 @@
 				</html:p>
 			</description>
 			<committed
-				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cassigned_to%2Cbug_status%2Cvotes%2Ctarget_milestone%2Ccomponent%2Cshort_desc;classification=RT;query_based_on=2.1;status_whiteboard_type=allwordssubstr;query_format=advanced;status_whiteboard=simple_fix;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;product=EclipseLink;known_name=2.1" />
+				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cassigned_to%2Cbug_status%2Cvotes%2Ctarget_milestone%2Ccomponent%2Cshort_desc;classification=RT;query_based_on=2.1;status_whiteboard_type=allwordssubstr;query_format=advanced;status_whiteboard=simple_fix;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;product=EclipseLink;known_name=2.1"></committed>
 			<proposed
-				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cassigned_to%2Cbug_status%2Cvotes%2Ctarget_milestone%2Ccomponent%2Cshort_desc;classification=RT;query_based_on=2.1;status_whiteboard_type=allwordssubstr;query_format=advanced;status_whiteboard=submitted_patch;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;product=EclipseLink;known_name=2.1" />
+				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cassigned_to%2Cbug_status%2Cvotes%2Ctarget_milestone%2Ccomponent%2Cshort_desc;classification=RT;query_based_on=2.1;status_whiteboard_type=allwordssubstr;query_format=advanced;status_whiteboard=submitted_patch;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;product=EclipseLink;known_name=2.1"></proposed>
 		</theme>
 
 	</themes_and_priorities>
 
+	<appendix name="Work Completed"></appendix>
+
+	<appendix name="Newly Deprecated API"></appendix>
+
+	<appendix name="Removed API"></appendix>
 </plan>
