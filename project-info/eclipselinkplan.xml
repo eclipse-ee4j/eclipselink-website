@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
 
-<plan xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml">
+<plan xmlns="http://www.eclipse.org/project/plan"
+	schemaLocation="http://www.eclipse.org/project/plan http://www.eclipse.org/projects/plan.xsd"
+	xmlns:html="http://www.w3.org/1999/xhtml">
 	<release projectid="rt.eclipselink" version="2.1.0" />
 	<introduction>
 		<html:p>
