@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
 
-<plan xmlns="http://www.eclipse.org/project/plan" schemaLocation="http://www.eclipse.org/project/plan http://www.eclipse.org/projects/plan.xsd" xmlns:html="http://www.w3.org/1999/xhtml">
+<plan xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml">
 	<release projectid="rt.eclipselink" version="2.1.0" />
 	<introduction>
 		<html:p>
@@ -10,12 +10,6 @@
 				plan from the
 				<html:a href="http://wiki.eclipse.org/EclipseLink/Development/2.1">wiki</html:a>
 			</html:b>
-		</html:p>
-		<html:p>
-			<b></b>
-			This release of the
-			<a href="/eclipselink">EclipseLink</a>
-			project will focus on...
 		</html:p>
 	</introduction>
 
@@ -32,8 +26,7 @@
 
 	<release_milestones>
 		<preamble>
-			<html:p>The milestone and release candidate names align with the
-				Helios.</html:p>
+			<html:p>The milestone and release candidate names align with the Helios.</html:p>
 		</preamble>
 
 		<milestone date="01/27/2010" milestone="2.1.0 M5">
@@ -63,13 +56,13 @@
 
 		<postamble />
 	</release_milestones>
+	
 	<target_environments>
 		<internationalization>
-			<html:p>
-				EclipseLink is Localized, but not Translated.
-        </html:p>
+			<html:p>EclipseLink is Localized, but not Translated.</html:p>
 		</internationalization>
 	</target_environments>
+	
 	<compatibility_with_previous_releases>
 		<html:p>
 			EclispeLink is intended to be fully compatible with previous
@@ -78,13 +71,8 @@
 			removed in this release. 
         </html:p>
 	</compatibility_with_previous_releases>
+	
 	<themes_and_priorities>
-		<preamble>
-			<html:p>
-
-			</html:p>
-		</preamble>
-
 		<theme name="Helios">
 			<description>
 				<html:p>This is the EclipseLink release that will go into the annual
@@ -107,14 +95,13 @@
 				<html:p>The last couple of release cycles have had a focus on major
 					new feature areas (SDO, DBWS, JPA 2.0). This work has prevented the
 					project team from keeping up with the community's request for
-					enhancements and bug fixes. This release will endeavour to reduce
-					the bug backlog to a more reasonable quantity.</html:p>
-				<html:p>
+					enhancements and bug fixes. This release will endeavor to reduce
+					the bug backlog to a more reasonable quantity.
+
 					Continued improvements to usability focusing on simplified
 					getting started steps as well as ability to find technical
 					information on how EclipseLink works and how to solve both common
-					and
-					advanced requirements. 
+					and advanced requirements. 
 				</html:p>
 			</description>
 			<committed
