@@ -2,126 +2,173 @@
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
 
 <plan xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml">
-  <release projectid="rt.eclipselink" version="2.1.0"/>
-    <introduction>
-    <html:p>The <a href="http://www.eclipse.org/eclipselink/downloads/index.php">Eclipse Persistence Services Project (EclipseLink)</a> project's goal is to provide a complete persistence framework that is both comprehensive and universal. It will run in any Java environment and read and write objects to virtually any type of data source, including relational databases, XML, or EIS systems. </html:p>
-    <html:p>EclipseLink will focus on providing leading edge support, including advanced feature extensions, for the dominant persistence standards for each target data source; Java Persistence API (JPA) for relational databases, Java API for XML Binding (JAXB) for XML, Java Connector Architecture (JCA) for EIS and other types of legacy systems, and Service Data Objects (SDO).
-    </html:p>
-  </introduction>
-  <release_deliverables>
-    <html:p>EclipseLink past and upcoming milestones and releases.</html:p>
-  </release_deliverables>
-  <release_milestones>
-<!--  
-    <milestone date="11/05/2007" milestone="1.0M1"><html:p>Nov Milestone for 1.0</html:p></milestone>
-    <milestone date="12/05/2007" milestone="1.0M2"><html:p>Dec Milestone for 1.0</html:p></milestone>
-    <milestone date="01/08/2008" milestone="1.0M3"><html:p>Jan Milestone for 1.0</html:p></milestone>
-    <milestone date="02/06/2008" milestone="1.0M4"><html:p>Feb Milestone for 1.0</html:p></milestone>
-    <milestone date="03/05/2008" milestone="1.0M5"><html:p>Mar Milestone for 1.0</html:p></milestone>
-    <milestone date="04/09/2008" milestone="1.0M6"><html:p>Apr Milestone for 1.0</html:p></milestone>
-    <milestone date="05/07/2008" milestone="1.0M7"><html:p>May Milestone for 1.0</html:p></milestone>
-    <milestone date="06/04/2008" milestone="1.0M8"><html:p>Jun Milestone for 1.0</html:p></milestone>
-    <milestone date="06/18/2008" milestone="1.0M9"><html:p>RC1 Milestone for 1.0</html:p></milestone>
-    <milestone date="07/09/2008" milestone="1.0M9"><html:p>1.0 Released</html:p></milestone>
+	<release projectid="rt.eclipselink" version="2.1.0" />
+	<introduction>
+		<html:p>
+			<b>
+				UNDER DEVELOPMENT - The content is being copied into the project
+				plan from the
+				<a href="http://wiki.eclipse.org/EclipseLink/Development/2.1">wiki</a>
+			</b>
+		</html:p>
+		<html:p>
+			<b></b>
+			This release of the
+			<a href="/eclipselink">EclipseLink</a>
+			project will focus on...
+		</html:p>
+	</introduction>
 
-    <milestone date="08/13/2008" milestone="1.0.1M1"><html:p>August Milestone for 1.0.1</html:p></milestone>
-    <milestone date="08/13/2008" milestone="1.1M1"><html:p>August Milestone for 1.1</html:p></milestone>
-    <milestone date="08/27/2008" milestone="1.0.1M2"><html:p>RC1 Milestone for 1.0.1</html:p></milestone>
-    <milestone date="09/03/2008" milestone="1.0.1M3"><html:p>RC2 Milestone for 1.0.1</html:p></milestone>
-    <milestone date="09/09/2008" milestone="1.0.1"><html:p>1.0.1 Released</html:p></milestone>
-    <milestone date="09/17/2008" milestone="1.1M2"><html:p>Sept Milestone for 1.1</html:p></milestone>
-    <milestone date="10/17/2008" milestone="1.1M3"><html:p>Oct Milestone for 1.1</html:p></milestone>
-    <milestone date="10/15/2008" milestone="1.0.2M1"><html:p>M1 Milestone for 1.0.2</html:p></milestone>
-    <milestone date="10/22/2008" milestone="1.0.2M2"><html:p>RC Milestone for 1.0.2</html:p></milestone>
-    <milestone date="10/29/2008" milestone="1.0.2"><html:p>1.0.2 Released</html:p></milestone>
-    <milestone date="11/17/2008" milestone="1.1M4"><html:p>Nov Milestone for 1.1</html:p></milestone>
-    <milestone date="12/09/2008" milestone="1.1M5"><html:p>Dec Milestone for 1.1</html:p></milestone>
-    <milestone date="01/14/2009" milestone="1.1M6"><html:p>Code freeze - RC1 Milestone for 1.1</html:p></milestone>
-    <milestone date="01/21/2009" milestone="1.1M7"><html:p>RC2 Milestone for 1.1</html:p></milestone>
-    -->
-    <milestone date="03/11/2009" milestone="1.1.0"><html:div>1.1.0 Released</html:div></milestone>
-    <milestone date="04/30/2009" milestone="1.1.1RC"><html:div>1.1.1 RC build</html:div></milestone>
-    <milestone date="05/15/2009" milestone="1.1.1"><html:div>1.1.1 Released</html:div></milestone>
-    <milestone date="06/05/2009" milestone="1.1.2RC"><html:div>1.1.2 RC</html:div></milestone>
-    <milestone date="06/19/2009" milestone="1.1.2"><html:div>1.1.2 Release</html:div></milestone>
-    <milestone date="09/28/2009" milestone="1.1.3RC"><html:div>1.1.3 RC</html:div></milestone>
-    <milestone date="10/09/2009" milestone="1.1.3"><html:div>1.1.3 Release</html:div></milestone>
-    <milestone date="10/16/2009" milestone="1.2.0RC"><html:div>1.2.0 RC</html:div></milestone>
-    <milestone date="10/23/2009" milestone="1.2.0"><html:div>1.2.0 Release</html:div></milestone>
-    <milestone date="11/27/2009" milestone="2.0.0RC1"><html:div>2.0.0 RC</html:div></milestone>
-    <milestone date="12/10/2009" milestone="2.0.0"><html:div>2.0.0 Release</html:div></milestone>
-    
-    <postamble/>
-  </release_milestones>
-  <target_environments>
-    <internationalization>
-       <html:p>
-        EclipseLink is Localized, but not Translated.
-        </html:p>
-    </internationalization>
-  </target_environments>
-  <compatibility_with_previous_releases>
-         <html:p>
-        EclispeLink is fully compatible with previous EclipseLink releases. 
-        </html:p>
-  </compatibility_with_previous_releases>
-  <themes_and_priorities>
-    <preamble>
-     <html:p>
-		
-     </html:p>
-    </preamble>
-<!--     <theme name="JPA 2.0">
-      <description>
-        <html:p>EclipseLink is working towards JPA 2.0 compliance.  The features required for functional completeness can be found  <a href="http://wiki.eclipse.org/EclipseLink/Development/JPA_2.0">here</a>.  All assigned, and closed JPA 2.0 bugs filed against EclipseLink can be found here:
-        </html:p>
-      </description>
-      <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=JPA+2&amp;classification=RT&amp;product=EclipseLink&amp;component=JPA&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="></committed>
-      <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=JPA+2.0&amp;classification=RT&amp;product=EclipseLink&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="></proposed>
-	  <deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=JPA+2.0&amp;classification=RT&amp;product=EclipseLink&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;resolution=WONTFIX&amp;resolution=LATER&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="></deferred>
+	<release_deliverables>
+		<html:p>
+			<html:ul>
+				<html:li>P2 Repository</html:li>
+				<html:li>Complete ZIP file installer (eclispelink.jar)</html:li>
+				<html:li>Bundles ZIP file installer</html:li>
+				<html:li>Maven Repository</html:li>
+			</html:ul>
+		</html:p>
+	</release_deliverables>
 
-    </theme>
+	<release_milestones>
+		<preamble>
+			<html:p>The milestone and release candidate names align with the
+				Helios.</html:p>
+		</preamble>
 
+		<milestone date="01/27/2010" milestone="2.1.0 M5">
+			<html:div>Release Candidate 1 - Available in Helios M5 on 02/05/2010
+			</html:div>
+		</milestone>
+		<milestone date="03/10/2010" milestone="2.1.0 M6">
+			<html:div>Release Candidate 1 - Available in Helios M6 on 03/19/2010
+			</html:div>
+		</milestone>
+		<milestone date="04/28/2010" milestone="2.1.0 M7">
+			<html:div>Release Candidate 1 - Available in Helios M7 on 05/07/2010
+			</html:div>
+		</milestone>
+		<milestone date="04/28/2010" milestone="2.1.0 M7">
+			<html:div>Release Candidate 1 - Available in Helios M7 on 05/07/2010
+			</html:div>
+		</milestone>
+		<milestone date="05/05/2010" milestone="2.1.0 RC1">
+			<html:div>Release Candidate 1 - Available in Helios RC1 on 05/21/2010
+			</html:div>
+		</milestone>
+		<milestone date="05/19/2010" milestone="2.1.0 RC2">
+			<html:div>Release Candidate 2 - Available in Helios RC2 on 05/28/2010
+			</html:div>
+		</milestone>
+		<milestone date="05/26/2010" milestone="2.1.0 RC3">
+			<html:div>Release Candidate 3 - Available in Helios RC3 on 06/04/2010
+			</html:div>
+		</milestone>
+		<milestone date="06/02/2010" milestone="2.1.0 RC4">
+			<html:div>Release Candidate 4 - Available in Helios RC4 on 06/11/2010
+			</html:div>
+		</milestone>
+		<milestone date="06/23/2010" milestone="2.1.0">
+			<html:div>Eclipse Helios Release - including EclipseLink 2.1.0
+			</html:div>
+		</milestone>
 
-    <theme name="SDO 2.1.1">
-      <description>
-         <html:p>EclipseLink is working towards SDO 2.1.1 compliance. All assigned, and closed SDO 2.1.1 bugs filed against EclipseLink can be found here:
-         </html:p>
-      </description>
-      <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=SDO+2.1&amp;classification=RT&amp;product=EclipseLink&amp;component=SDO&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="></committed>
-      <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=SDO+2.1&amp;classification=RT&amp;product=EclipseLink&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="></proposed>
-      <deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=SDO+2.1&amp;classification=RT&amp;product=EclipseLink&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;resolution=WONTFIX&amp;resolution=LATER&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="></deferred>
-    </theme>
-
-    <theme name="SDO 2.1.1">
-      <description>
-         <html:p>EclipseLink is working towards SDO 2.1.1 compliance. All assigned, and closed SDO 2.1.1 bugs filed against EclipseLink can be found here:
-         </html:p>
-      </description>
-      <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=SDO+2.1&amp;classification=RT&amp;product=EclipseLink&amp;component=SDO&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="></committed>
-      <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=SDO+2.1&amp;classification=RT&amp;product=EclipseLink&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="></proposed>
-	  <deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=SDO+2.1&amp;classification=RT&amp;product=EclipseLink&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;resolution=WONTFIX&amp;resolution=LATER&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="></deferred>
-    </theme>
-    -->
-    <theme name="2.0.1 bugs">
-      <description>
-        <html:p>EclipseLink is targetting the following bugs for 2.0.1
+		<postamble />
+	</release_milestones>
+	<target_environments>
+		<internationalization>
+			<html:p>
+				EclipseLink is Localized, but not Translated.
         </html:p>
-      </description>
-      <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=RT&amp;product=EclipseLink&amp;target_milestone=2.0.1&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="></committed>
-      <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=RT&amp;product=EclipseLink&amp;target_milestone=2.0.1&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="></proposed>
-	  <deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=RT&amp;product=EclipseLink&amp;target_milestone=2.0.1&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;resolution=WONTFIX&amp;resolution=LATER&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="></deferred>
-    </theme>
-       <theme name="2.1 bugs">
-      <description>
-        <html:p>EclipseLink is targetting the following bugs for 2.1
+		</internationalization>
+	</target_environments>
+	<compatibility_with_previous_releases>
+		<html:p>
+			EclispeLink is intended to be fully compatible with previous
+			EclipseLink
+			releases with the exception of previously deprecated API
+			removed in this release. 
         </html:p>
-      </description>
-      <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=RT&amp;product=EclipseLink&amp;target_milestone=2.1&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="></committed>
-      <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=RT&amp;product=EclipseLink&amp;target_milestone=2.1&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="></proposed>
-      <deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=RT&amp;product=EclipseLink&amp;target_milestone=2.1&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;resolution=WONTFIX&amp;resolution=LATER&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="></deferred>
-    </theme>
-    
-  </themes_and_priorities>
-  <appendix/>
+	</compatibility_with_previous_releases>
+	<themes_and_priorities>
+		<preamble>
+			<html:p>
+
+			</html:p>
+		</preamble>
+
+		<theme name="Helios">
+			<description>
+				<html:p>This is the EclipseLink release that will go into the annual
+					Eclipse release named Helios scheduled for release on June 23rd
+					2010. Some work will be required to ensure all of the release train
+					requirements are met and that EclipseLink functions well within the
+					IDE as well as within the RT platform. This work will include
+					addressing better OSGi/Equinox compatibility.
+				</html:p>
+			</description>
+			<committed
+				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=RT&amp;product=EclipseLink&amp;target_milestone=2.1&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="></committed>
+			<proposed
+				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=RT&amp;product=EclipseLink&amp;target_milestone=2.1&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="></proposed>
+			<deferred
+				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=RT&amp;product=EclipseLink&amp;target_milestone=2.1&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;resolution=WONTFIX&amp;resolution=LATER&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="></deferred>
+		</theme>
+
+		<theme name="Community">
+			<description>
+				<html:p>The last couple of release cycles have had a focus on major
+					new feature areas (SDO, DBWS, JPA 2.0). This work has prevented the
+					project team from keeping up with the community's request for
+					enhancements and bug fixes. This release will endeavour to reduce
+					the bug backlog to a more reasonable quantity.</html:p>
+				<html:p>
+					Continued improvements to usability focusing on simplified
+					getting started steps as well as ability to find technical
+					information on how EclipseLink works and how to solve both common
+					and advanced requirements. 
+				</html:p>
+			</description>
+			<committed
+				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cassigned_to%2Cbug_status%2Cvotes%2Ctarget_milestone%2Ccomponent%2Cshort_desc;classification=RT;query_based_on=2.1;status_whiteboard_type=allwordssubstr;query_format=advanced;status_whiteboard=simple_fix;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;product=EclipseLink;known_name=2.1" />
+			<proposed
+				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cassigned_to%2Cbug_status%2Cvotes%2Ctarget_milestone%2Ccomponent%2Cshort_desc;classification=RT;query_based_on=2.1;status_whiteboard_type=allwordssubstr;query_format=advanced;status_whiteboard=submitted_patch;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;product=EclipseLink;known_name=2.1" />
+			<deferred bugzilla="" />
+		</theme>
+
+		<theme name="Documentation">
+			<description>
+				<html:p>The EclipseLink 2.1 release will include a new set of
+					documentation delivered in HTML and PDF formats. This effort is
+					based on these requirements. The goal is to improve the usability
+					of the documentation.  
+				</html:p>
+			</description>
+			<committed
+				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cassigned_to%2Cbug_status%2Cvotes%2Ctarget_milestone%2Ccomponent%2Cshort_desc;classification=RT;query_based_on=2.1;status_whiteboard_type=allwordssubstr;query_format=advanced;status_whiteboard=simple_fix;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;product=EclipseLink;known_name=2.1" />
+			<proposed
+				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cassigned_to%2Cbug_status%2Cvotes%2Ctarget_milestone%2Ccomponent%2Cshort_desc;classification=RT;query_based_on=2.1;status_whiteboard_type=allwordssubstr;query_format=advanced;status_whiteboard=submitted_patch;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;product=EclipseLink;known_name=2.1" />
+			<deferred bugzilla="" />
+		</theme>
+
+		<theme name="Advanced">
+			<description>
+				<html:p>In this release the project is planning to increase the
+					advanced features available through standard API using common
+					extension points, custom annotations, and extended XML
+					configuration files. The goal is to enable users to work with the
+					standards (JPA, JAXB, SDO) as much as possible and simplify the
+					usage of advanced features.  
+				</html:p>
+			</description>
+			<committed
+				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cassigned_to%2Cbug_status%2Cvotes%2Ctarget_milestone%2Ccomponent%2Cshort_desc;classification=RT;query_based_on=2.1;status_whiteboard_type=allwordssubstr;query_format=advanced;status_whiteboard=simple_fix;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;product=EclipseLink;known_name=2.1" />
+			<proposed
+				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cassigned_to%2Cbug_status%2Cvotes%2Ctarget_milestone%2Ccomponent%2Cshort_desc;classification=RT;query_based_on=2.1;status_whiteboard_type=allwordssubstr;query_format=advanced;status_whiteboard=submitted_patch;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;product=EclipseLink;known_name=2.1" />
+			<deferred bugzilla="" />
+		</theme>
+
+	</themes_and_priorities>
+
+	<appendix></appendix>
 </plan>
