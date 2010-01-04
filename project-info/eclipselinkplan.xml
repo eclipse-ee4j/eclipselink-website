@@ -110,8 +110,9 @@
 					well as ability to find technical
 					information on how EclipseLink works and how to solve both common
 					and advanced requirements. 
-				</html:p>
+				</html:p>				
 			</description>
+			
 		</theme>
 
 		<theme name="Documentation">
@@ -136,9 +137,15 @@
 					usage of advanced features.  
 				</html:p>
 			</description>
+			<committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?bug_id=227219%2C219814%2C293925%2C296967" />
 		</theme>
+		
+		
 
 	</themes_and_priorities>
+
+	<appendix name="Bug Queries">
+	</appendix>
 
 	<appendix name="Newly Deprecated API">
 		<html:p>The following APIs are newly deprecated in this release. Please update to the recommended replacement API.</html:p>
