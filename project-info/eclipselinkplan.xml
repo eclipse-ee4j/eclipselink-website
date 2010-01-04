@@ -58,6 +58,17 @@
 	</release_milestones>
 
 	<target_environments>
+		<html:p>
+			EclipseLink is intended for use in most Java environments including:
+			<html:ul>
+				<html:li>OSGi with specialized support for use with Equinox</html:li>
+				<html:li>Java SE: Using the single eclipselink.jar or a combination of the bundles.</html:li>
+				<html:li>Java EE: Using the single eclipselink.jar or a combination of the bundles.</html:li>
+				<html:li>Web Containers: Using the single eclipselink.jar or a combination of the bundles.</html:li>
+				<html:li>Spring: EclipseLink can be used directly or through the use of Spring's JPA templates.</html:li>
+			</html:ul>
+		</html:p>
+
 		<internationalization>
 			<html:p>EclipseLink is Localized, but not Translated.</html:p>
 		</internationalization>
@@ -67,7 +78,8 @@
 		<html:p>
 			EclispeLink is intended to be fully compatible with previous EclipseLink releases with the exception of previously deprecated API removed in this release.
 
-			Please see Newly Deprecated API' and 'Removed API' below for complete details. 
+			Please see Newly Deprecated API' and
+			'Removed API' below for complete details. 
         </html:p>
 	</compatibility_with_previous_releases>
 
@@ -133,18 +145,18 @@
 	</themes_and_priorities>
 
 	<appendix name="Work Completed">
-	<html:p>The following queries show the work completed for this release.</html:p>
-	<html:ul>
-		<html:li>Themes</html:li>
-		<html:li>All</html:li>
-	</html:ul>
+		<html:p>The following queries show the work completed for this release.</html:p>
+		<html:ul>
+			<html:li>Themes</html:li>
+			<html:li>All</html:li>
+		</html:ul>
 	</appendix>
 
 	<appendix name="Newly Deprecated API">
-	<html:p>The following APIs are newly deprecated in this release. Please update to the recommended replacement API.</html:p>
+		<html:p>The following APIs are newly deprecated in this release. Please update to the recommended replacement API.</html:p>
 	</appendix>
 
 	<appendix name="Removed API">
-	<html:p>The following APIs have been removed in this release. These API were deprecated in earlier releases.</html:p>
+		<html:p>The following APIs have been removed in this release. These API were deprecated in earlier releases.</html:p>
 	</appendix>
 </plan>
