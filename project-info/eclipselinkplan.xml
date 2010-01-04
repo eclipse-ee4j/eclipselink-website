@@ -140,14 +140,6 @@
 
 	</themes_and_priorities>
 
-	<appendix name="Work Completed">
-		<html:p>The following queries show the work completed for this release.</html:p>
-		<html:ul>
-			<html:li>Themes</html:li>
-			<html:li>All</html:li>
-		</html:ul>
-	</appendix>
-
 	<appendix name="Newly Deprecated API">
 		<html:p>The following APIs are newly deprecated in this release. Please update to the recommended replacement API.</html:p>
 	</appendix>
@@ -155,4 +147,12 @@
 	<appendix name="Removed API">
 		<html:p>The following APIs have been removed in this release. These API were deprecated in earlier releases.</html:p>
 	</appendix>
+
+	<appendix name="Examples">
+		<html:p>The following examples have been added or gone through major enhancements for this this release.</html:p>
+		<html:ul>
+			<html:li>TBD</html:li>
+		</html:ul>
+	</appendix>
+
 </plan>
