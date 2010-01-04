@@ -37,18 +37,15 @@
 		</preamble>
 
 		<milestone date="01/27/2010" milestone="2.1.0 M5">
-			<html:div>Release Candidate 1 - Available in Helios M5 on 02/05/2010</html:div>
+			<html:div>Milestone 5 - Available in Helios M5 on 02/05/2010</html:div>
 		</milestone>
 		<milestone date="03/10/2010" milestone="2.1.0 M6">
-			<html:div>Release Candidate 1 - Available in Helios M6 on 03/19/2010</html:div>
+			<html:div>Milestone 6 - Available in Helios M6 on 03/19/2010</html:div>
 		</milestone>
 		<milestone date="04/28/2010" milestone="2.1.0 M7">
-			<html:div>Release Candidate 1 - Available in Helios M7 on 05/07/2010</html:div>
+			<html:div>Milestone 7 - Available in Helios M7 on 05/07/2010</html:div>
 		</milestone>
-		<milestone date="04/28/2010" milestone="2.1.0 M7">
-			<html:div>Release Candidate 1 - Available in Helios M7 on 05/07/2010</html:div>
-		</milestone>
-		<milestone date="05/05/2010" milestone="2.1.0 RC1">
+		<milestone date="05/12/2010" milestone="2.1.0 RC1">
 			<html:div>Release Candidate 1 - Available in Helios RC1 on 05/21/2010</html:div>
 		</milestone>
 		<milestone date="05/19/2010" milestone="2.1.0 RC2">
