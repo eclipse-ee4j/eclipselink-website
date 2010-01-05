@@ -8,7 +8,21 @@
 			the code base to Eclipse along with JPA and MOXy enhancements as well as support for usage of EclipseLink in an OSGi environment. 
     </html:p>
 	</introduction>
+
 	<release_deliverables>
+		<html:p>
+			The 1.0 release and patch-sets are available for download
+			<html:a href="http://www.eclipse.org/eclipselink/downloads/previous_releases.php#1.0">here</html:a>
+			.
+		</html:p>
+		<html:p>
+			The release offers:
+			<html:ul>
+				<html:li>ZIP file intended for standard JavaSE and JavaEE usage</html:li>
+				<html:li>ZIP file provided of OSGi bundles</html:li>
+				<html:li>Maven Repository</html:li>
+			</html:ul>
+		</html:p>
 	</release_deliverables>
 
 	<release_milestones>
