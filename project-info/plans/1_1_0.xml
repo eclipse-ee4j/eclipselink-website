@@ -19,16 +19,29 @@
     <milestone date="12/09/2008" milestone="1.1M5"><html:div>Dec Milestone for 1.1</html:div></milestone>
     <milestone date="01/14/2009" milestone="1.1M6"><html:div>Code freeze - RC1 Milestone for 1.1</html:div></milestone>
     <milestone date="01/21/2009" milestone="1.1M7"><html:div>RC2 Milestone for 1.1</html:div></milestone>
-    <milestone date="03/11/2009" milestone="1.1.0"><html:div>1.1.0 Released</html:div></milestone>
+    <milestone date="03/11/2009" milestone="1.1.0"><html:div>1.1.0 Released</html:div><html:br/></milestone>
+    <milestone date="04/30/2009" milestone="1.1.1RC"><html:div>1.1.1 RC build</html:div></milestone>
+    <milestone date="05/15/2009" milestone="1.1.1"><html:div>1.1.1 Released</html:div><html:br/></milestone>
+    <milestone date="06/05/2009" milestone="1.1.2RC"><html:div>1.1.2 RC</html:div></milestone>
+    <milestone date="06/19/2009" milestone="1.1.2"><html:div>1.1.2 Release</html:div><html:br/></milestone>
+    <milestone date="09/28/2009" milestone="1.1.3RC"><html:div>1.1.3 RC</html:div></milestone>
+    <milestone date="10/09/2009" milestone="1.1.3"><html:div>1.1.3 Release</html:div><html:br/></milestone>
     <postamble/>
   </release_milestones>
-  <target_environments>
-    <internationalization>
-       <html:p>
-        Currently none of the EclipseLink deliverables are internationalized.
-        </html:p>
-    </internationalization>
+
+	<target_environments>
+		<html:p>
+			EclipseLink is intended for use in most Java environments including:
+			<html:ul>
+				<html:li>OSGi with specialized support for use with Equinox</html:li>
+				<html:li>Java SE: Using the single eclipselink.jar or a combination of the bundles.</html:li>
+				<html:li>Java EE: Using the single eclipselink.jar or a combination of the bundles.</html:li>
+				<html:li>Web Containers: Using the single eclipselink.jar or a combination of the bundles.</html:li>
+				<html:li>Spring: EclipseLink can be used directly or through the use of Spring's JPA templates.</html:li>
+			</html:ul>
+		</html:p>
   </target_environments>
+
   <compatibility_with_previous_releases/>
   
   <themes_and_priorities>
