@@ -9,7 +9,7 @@
     </html:p>
 	</introduction>
 	<release_deliverables>
-\	</release_deliverables>
+	</release_deliverables>
 
 	<release_milestones>
 		<milestone date="11/05/2007" milestone="1.0M1">
@@ -66,13 +66,12 @@
 		<postamble />
 	</release_milestones>
 	<target_environments>
-		<internationalization>
-			<html:p>
-				Currently none of the EclipseLink deliverables are internationalized.
-        </html:p>
-		</internationalization>
 	</target_environments>
-	<compatibility_with_previous_releases />
+
+	<compatibility_with_previous_releases>
+		<html:p>This is the first release of EclipseLink so compatibility with previous Eclipse releases is not applicable.</html:p>
+		<html:p>This release does include support for usage of Oracle TopLink XML metadata files.</html:p>
+	</compatibility_with_previous_releases>
 
 	<appendix name="Bug Queries">
 		<html:p>
