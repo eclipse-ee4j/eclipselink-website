@@ -145,6 +145,19 @@
 	</themes_and_priorities>
 
 	<appendix name="Bug Queries">
+		<html:p>
+		Closed Bugs <html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">All Fixed in 2.1</html:a>
+		<html:ul>
+			<html:li><html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Foundation;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">Foundation (Core)</html:a></html:li>
+			<html:li><html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=JPA;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">JPA</html:a></html:li>
+			<html:li><html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=MOXy;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">MOXy</html:a></html:li>
+			<html:li><html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=SDO;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">SDO</html:a></html:li>
+			<html:li><html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=DBWS;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">DBWS</html:a></html:li>
+			<html:li><html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Examples;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">Examples</html:a></html:li>
+			<html:li><html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Utils;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">Utils</html:a></html:li>
+			<html:li><html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Build;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">Build</html:a></html:li>
+		</html:ul>
+		</html:p>
 	</appendix>
 
 	<appendix name="Newly Deprecated API">
