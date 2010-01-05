@@ -53,8 +53,8 @@
 		<milestone date="06/18/2008" milestone="1.0M9">
 			<html:div>RC1 Milestone for 1.0</html:div>
 		</milestone>
-		<milestone date="07/09/2008" milestone="1.0M9">
-			<html:div>1.0 Released</html:div>
+		<milestone date="07/09/2008" milestone="1.0">
+			<html:div>1.0 Released</html:div><html:br/>
 		</milestone>
 		<milestone date="08/13/2008" milestone="1.0.1M1">
 			<html:div>August Milestone for 1.0.1</html:div>
@@ -66,7 +66,7 @@
 			<html:div>RC2 Milestone for 1.0.1</html:div>
 		</milestone>
 		<milestone date="09/09/2008" milestone="1.0.1">
-			<html:div>1.0.1 Released</html:div>
+			<html:div>1.0.1 Released</html:div><html:br/>
 		</milestone>
 		<milestone date="10/15/2008" milestone="1.0.2M1">
 			<html:div>M1 Milestone for 1.0.2</html:div>
@@ -75,10 +75,11 @@
 			<html:div>RC Milestone for 1.0.2</html:div>
 		</milestone>
 		<milestone date="10/29/2008" milestone="1.0.2">
-			<html:div>1.0.2 Released</html:div>
+			<html:div>1.0.2 Released</html:div><html:br/>
 		</milestone>
 		<postamble />
 	</release_milestones>
+
 	<target_environments>
 	</target_environments>
 
