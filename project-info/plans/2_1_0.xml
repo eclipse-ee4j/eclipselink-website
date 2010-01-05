@@ -11,6 +11,12 @@
 				<html:a href="http://wiki.eclipse.org/EclipseLink/Development/2.1">wiki</html:a>
 			</html:b>
 		</html:p>
+		<html:p>
+			<html:img src="/eclipselink/images/logo/eclipselink-logo.png" />
+			<html:br />
+			The 2.1 release of EclispeLink will build upon the strong standards based solutions delivered in the 2.0.0 adding additional advanced functionality with ease of use and will address many of the
+			community requests.
+		</html:p>
 	</introduction>
 
 	<release_deliverables>
@@ -110,9 +116,9 @@
 					well as ability to find technical
 					information on how EclipseLink works and how to solve both common
 					and advanced requirements. 
-				</html:p>				
+				</html:p>
 			</description>
-			
+
 		</theme>
 
 		<theme name="Documentation">
@@ -139,40 +145,57 @@
 			</description>
 			<committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?bug_id=227219%2C219814%2C293925%2C296967" />
 		</theme>
-		
-		
+
+
 
 	</themes_and_priorities>
 
 	<appendix name="Bug Queries">
 		<html:p>
-		Closed Bugs <html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">All Fixed in 2.1</html:a>
-		<html:ul>
-			<html:li><html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Foundation;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">Foundation (Core)</html:a></html:li>
-			<html:li><html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=JPA;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">JPA</html:a></html:li>
-			<html:li><html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=MOXy;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">MOXy</html:a></html:li>
-			<html:li><html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=SDO;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">SDO</html:a></html:li>
-			<html:li><html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=DBWS;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">DBWS</html:a></html:li>
-			<html:li><html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Examples;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">Examples</html:a></html:li>
-			<html:li><html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Utils;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">Utils</html:a></html:li>
-			<html:li><html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Build;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">Build</html:a></html:li>
-		</html:ul>
+			Closed Bugs
+			<html:a
+				href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">All Fixed in 2.1</html:a>
+			<html:ul>
+				<html:li>
+					<html:a
+						href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Foundation;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">Foundation (Core)</html:a>
+				</html:li>
+				<html:li>
+					<html:a
+						href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=JPA;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">JPA</html:a>
+				</html:li>
+				<html:li>
+					<html:a
+						href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=MOXy;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">MOXy</html:a>
+				</html:li>
+				<html:li>
+					<html:a
+						href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=SDO;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">SDO</html:a>
+				</html:li>
+				<html:li>
+					<html:a
+						href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=DBWS;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">DBWS</html:a>
+				</html:li>
+				<html:li>
+					<html:a
+						href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Examples;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">Examples</html:a>
+				</html:li>
+				<html:li>
+					<html:a
+						href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Utils;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">Utils</html:a>
+				</html:li>
+				<html:li>
+					<html:a
+						href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Build;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">Build</html:a>
+				</html:li>
+			</html:ul>
 		</html:p>
 	</appendix>
 
-	<appendix name="Newly Deprecated API">
+	<appendix name="Deprecated and RemovedAPI">
 		<html:p>The following APIs are newly deprecated in this release. Please update to the recommended replacement API.</html:p>
-	</appendix>
 
-	<appendix name="Removed API">
 		<html:p>The following APIs have been removed in this release. These API were deprecated in earlier releases.</html:p>
-	</appendix>
-
-	<appendix name="Examples">
-		<html:p>The following examples have been added or gone through major enhancements for this this release.</html:p>
-		<html:ul>
-			<html:li>TBD</html:li>
-		</html:ul>
 	</appendix>
 
 </plan>
