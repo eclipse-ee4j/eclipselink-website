@@ -2,53 +2,101 @@
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
 
 <plan xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml">
-  <release projectid="rt" version="1.0"/>
-    <introduction>
-    <html:p>The <a href="http://www.eclipse.org/eclipselink/downloads/index.php">Eclipse Persistence Services Project (EclipseLink)</a> project's goal is to provide a complete persistence framework that is both comprehensive and universal. It will run in any Java environment and read and write objects to virtually any type of data source, including relational databases, XML, or EIS systems. </html:p>
-    <html:p>EclipseLink will focus on providing leading edge support, including advanced feature extensions, for the dominant persistence standards for each target data source; Java Persistence API (JPA) for relational databases, Java API for XML Binding (JAXB) for XML, Java Connector Architecture (JCA) for EIS and other types of legacy systems, and Service Data Objects (SDO).
+	<release projectid="rt" version="1.0" />
+	<introduction>
+		<html:p>The EclipseLink 1.0 release is the first release after following the successful incubation of the contributed source from the Oracle TopLink product. This release focused on the migration of
+			the code base to Eclipse along with JPA and MOXy enhancements as well as support for usage of EclipseLink in an OSGi environment. 
     </html:p>
-  </introduction>
-  <release_deliverables>
-    <html:p>EclipseLink past and upcoming milestones and releases.</html:p>
-  </release_deliverables>
-  <release_milestones>
-    <milestone date="11/05/2007" milestone="1.0M1"><html:div>Nov Milestone for 1.0</html:div></milestone>
-    <milestone date="12/05/2007" milestone="1.0M2"><html:div>Dec Milestone for 1.0</html:div></milestone>
-    <milestone date="01/08/2008" milestone="1.0M3"><html:div>Jan Milestone for 1.0</html:div></milestone>
-    <milestone date="02/06/2008" milestone="1.0M4"><html:div>Feb Milestone for 1.0</html:div></milestone>
-    <milestone date="03/05/2008" milestone="1.0M5"><html:div>Mar Milestone for 1.0</html:div></milestone>
-    <milestone date="04/09/2008" milestone="1.0M6"><html:div>Apr Milestone for 1.0</html:div></milestone>
-    <milestone date="05/07/2008" milestone="1.0M7"><html:div>May Milestone for 1.0</html:div></milestone>
-    <milestone date="06/04/2008" milestone="1.0M8"><html:div>Jun Milestone for 1.0</html:div></milestone>
-    <milestone date="06/18/2008" milestone="1.0M9"><html:div>RC1 Milestone for 1.0</html:div></milestone>
-    <milestone date="07/09/2008" milestone="1.0M9"><html:div>1.0 Released</html:div></milestone>
-    <milestone date="08/13/2008" milestone="1.0.1M1"><html:div>August Milestone for 1.0.1</html:div></milestone>
-    <milestone date="08/27/2008" milestone="1.0.1M2"><html:div>RC1 Milestone for 1.0.1</html:div></milestone>
-    <milestone date="09/03/2008" milestone="1.0.1M3"><html:div>RC2 Milestone for 1.0.1</html:div></milestone>
-    <milestone date="09/09/2008" milestone="1.0.1"><html:div>1.0.1 Released</html:div></milestone>
-    <milestone date="10/15/2008" milestone="1.0.2M1"><html:div>M1 Milestone for 1.0.2</html:div></milestone>
-    <milestone date="10/22/2008" milestone="1.0.2M2"><html:div>RC Milestone for 1.0.2</html:div></milestone>
-    <milestone date="10/29/2008" milestone="1.0.2"><html:div>1.0.2 Released</html:div></milestone>
-    <postamble/>
-  </release_milestones>
-  <target_environments>
-    <internationalization>
-       <html:p>
-        Currently none of the EclipseLink deliverables are internationalized.
+	</introduction>
+	<release_deliverables>
+\	</release_deliverables>
+
+	<release_milestones>
+		<milestone date="11/05/2007" milestone="1.0M1">
+			<html:div>Nov Milestone for 1.0</html:div>
+		</milestone>
+		<milestone date="12/05/2007" milestone="1.0M2">
+			<html:div>Dec Milestone for 1.0</html:div>
+		</milestone>
+		<milestone date="01/08/2008" milestone="1.0M3">
+			<html:div>Jan Milestone for 1.0</html:div>
+		</milestone>
+		<milestone date="02/06/2008" milestone="1.0M4">
+			<html:div>Feb Milestone for 1.0</html:div>
+		</milestone>
+		<milestone date="03/05/2008" milestone="1.0M5">
+			<html:div>Mar Milestone for 1.0</html:div>
+		</milestone>
+		<milestone date="04/09/2008" milestone="1.0M6">
+			<html:div>Apr Milestone for 1.0</html:div>
+		</milestone>
+		<milestone date="05/07/2008" milestone="1.0M7">
+			<html:div>May Milestone for 1.0</html:div>
+		</milestone>
+		<milestone date="06/04/2008" milestone="1.0M8">
+			<html:div>Jun Milestone for 1.0</html:div>
+		</milestone>
+		<milestone date="06/18/2008" milestone="1.0M9">
+			<html:div>RC1 Milestone for 1.0</html:div>
+		</milestone>
+		<milestone date="07/09/2008" milestone="1.0M9">
+			<html:div>1.0 Released</html:div>
+		</milestone>
+		<milestone date="08/13/2008" milestone="1.0.1M1">
+			<html:div>August Milestone for 1.0.1</html:div>
+		</milestone>
+		<milestone date="08/27/2008" milestone="1.0.1M2">
+			<html:div>RC1 Milestone for 1.0.1</html:div>
+		</milestone>
+		<milestone date="09/03/2008" milestone="1.0.1M3">
+			<html:div>RC2 Milestone for 1.0.1</html:div>
+		</milestone>
+		<milestone date="09/09/2008" milestone="1.0.1">
+			<html:div>1.0.1 Released</html:div>
+		</milestone>
+		<milestone date="10/15/2008" milestone="1.0.2M1">
+			<html:div>M1 Milestone for 1.0.2</html:div>
+		</milestone>
+		<milestone date="10/22/2008" milestone="1.0.2M2">
+			<html:div>RC Milestone for 1.0.2</html:div>
+		</milestone>
+		<milestone date="10/29/2008" milestone="1.0.2">
+			<html:div>1.0.2 Released</html:div>
+		</milestone>
+		<postamble />
+	</release_milestones>
+	<target_environments>
+		<internationalization>
+			<html:p>
+				Currently none of the EclipseLink deliverables are internationalized.
         </html:p>
-    </internationalization>
-  </target_environments>
-  <compatibility_with_previous_releases/>
-  
-  <appendix name="Bug Queries">
-  	<html:p>
-  		Bugs closed in 1.0 - <html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;resolution=FIXED;classification=RT;product=EclipseLink;target_milestone=1.0">All</html:a>
-  		<html:ul>
-  			<html:il><html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Foundation;resolution=FIXED;classification=RT;product=EclipseLink;target_milestone=1.0">Foundation (core)</html:a></html:il>
-  			<html:il><html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=JPA;resolution=FIXED;classification=RT;product=EclipseLink;target_milestone=1.0">JPA</html:a></html:il>
-  			<html:il><html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=MOXy;resolution=FIXED;classification=RT;product=EclipseLink;target_milestone=1.0">MOXy</html:a></html:il>
-  			<html:il><html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=SDO;resolution=FIXED;classification=RT;product=EclipseLink;target_milestone=1.0">SDO</html:a></html:il>
-  		</html:ul>
-  	</html:p>
-  </appendix>
+		</internationalization>
+	</target_environments>
+	<compatibility_with_previous_releases />
+
+	<appendix name="Bug Queries">
+		<html:p>
+			Bugs closed in 1.0 -
+			<html:a
+				href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;resolution=FIXED;classification=RT;product=EclipseLink;target_milestone=1.0">All</html:a>
+			<html:ul>
+				<html:il>
+					<html:a
+						href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Foundation;resolution=FIXED;classification=RT;product=EclipseLink;target_milestone=1.0">Foundation (core)</html:a>
+				</html:il>
+				<html:il>
+					<html:a
+						href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=JPA;resolution=FIXED;classification=RT;product=EclipseLink;target_milestone=1.0">JPA</html:a>
+				</html:il>
+				<html:il>
+					<html:a
+						href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=MOXy;resolution=FIXED;classification=RT;product=EclipseLink;target_milestone=1.0">MOXy</html:a>
+				</html:il>
+				<html:il>
+					<html:a
+						href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=SDO;resolution=FIXED;classification=RT;product=EclipseLink;target_milestone=1.0">SDO</html:a>
+				</html:il>
+			</html:ul>
+		</html:p>
+	</appendix>
 </plan>
