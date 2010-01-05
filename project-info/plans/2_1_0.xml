@@ -12,7 +12,7 @@
 			</html:b>
 		</html:p>
 		<html:p>
-			<html:img src="/eclipselink/images/logo/eclipselink-logo.png" />
+			<html:img src="/eclipselink/images/logos/eclipselink-logo.png" width="200"/>
 			<html:br />
 			The 2.1 release of EclispeLink will build upon the strong standards based solutions delivered in the 2.0.0 adding additional advanced functionality with ease of use and will address many of the
 			community requests.
