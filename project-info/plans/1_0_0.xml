@@ -79,22 +79,22 @@
 			<html:a
 				href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;resolution=FIXED;classification=RT;product=EclipseLink;target_milestone=1.0">All</html:a>
 			<html:ul>
-				<html:il>
+				<html:li>
 					<html:a
 						href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Foundation;resolution=FIXED;classification=RT;product=EclipseLink;target_milestone=1.0">Foundation (core)</html:a>
-				</html:il>
-				<html:il>
+				</html:li>
+				<html:li>
 					<html:a
 						href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=JPA;resolution=FIXED;classification=RT;product=EclipseLink;target_milestone=1.0">JPA</html:a>
-				</html:il>
-				<html:il>
+				</html:li>
+				<html:li>
 					<html:a
 						href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=MOXy;resolution=FIXED;classification=RT;product=EclipseLink;target_milestone=1.0">MOXy</html:a>
-				</html:il>
-				<html:il>
+				</html:li>
+				<html:li>
 					<html:a
 						href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=SDO;resolution=FIXED;classification=RT;product=EclipseLink;target_milestone=1.0">SDO</html:a>
-				</html:il>
+				</html:li>
 			</html:ul>
 		</html:p>
 	</appendix>
