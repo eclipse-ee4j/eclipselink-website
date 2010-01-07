@@ -15,9 +15,9 @@
 		<html:p>
 			<html:ul>
 				<html:li>P2 Repository - <html:br/><html:i>These features are promoted to Helios on the +1 milestone dates.</html:i></html:li>
-				<html:li>Complete ZIP file installer (eclispelink.jar) - <html:a href="http://www.eclipse.org/eclipselink/downloads/milestones.php">Nightly downloads & test results</html:a></html:li>
-				<html:li>Bundles ZIP file installer - <html:a href="http://www.eclipse.org/eclipselink/downloads/milestones.php">Nightly downloads & test results</html:a></html:li>
-				<html:li>Maven - <html:a href="http://www.eclipse.org/downloads/download.php?r=1&nf=1&file=/rt/eclipselink/maven.repo">Repository</html:a>, <html:a href="http://wiki.eclipse.org/EclipseLink/Maven">usage info</html:a></html:li>
+				<html:li>Complete ZIP file installer (eclispelink.jar) - <html:a href="http://www.eclipse.org/eclipselink/downloads/milestones.php">Nightly downloads and test results</html:a></html:li>
+				<html:li>Bundles ZIP file installer - <html:a href="http://www.eclipse.org/eclipselink/downloads/milestones.php">Nightly downloads and test results</html:a></html:li>
+				<html:li>Maven Repository - <html:a href="http://wiki.eclipse.org/EclipseLink/Maven">Usage Info</html:a></html:li> 
 			</html:ul>
 		</html:p>
 	</release_deliverables>
