@@ -137,10 +137,10 @@
 				<html:p>The EclipseLink 2.1 release will include a new set of
 					documentation delivered in HTML and PDF formats. This effort is
 					based on these requirements. The goal is to improve the usability
-					of the
-					documentation.  
+					of the documentation.  
 				</html:p>
 			</description>
+			<committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;component=Documentation;classification=RT;product=EclipseLink;target_milestone=2.1"/>
 		</theme>
 
 		<theme name="Advanced">
