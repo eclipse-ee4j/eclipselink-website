@@ -5,16 +5,8 @@
 	<release projectid="rt.eclipselink" version="2.1.0" />
 	<introduction>
 		<html:p>
-			<html:b>
-				UNDER DEVELOPMENT - The content is being copied into the project
-				plan from the
-				<html:a href="http://wiki.eclipse.org/EclipseLink/Development/2.1">wiki</html:a>
-			</html:b>
-		</html:p>
-		<html:p>
-			<html:img src="/eclipselink/images/logos/eclipselink-logo.png" width="200" />
-			<html:br />
-			The 2.1 release of EclispeLink will build upon the strong standards based solutions delivered in the 2.0.0 adding additional advanced functionality with ease of use and will address many of the
+			The 2.1 release of EclispeLink will build upon the strong standards based solutions delivered in the 2.0.0 adding additional advanced functionality with ease of use and will address many of
+			the
 			community requests.
 		</html:p>
 	</introduction>
@@ -22,10 +14,10 @@
 	<release_deliverables>
 		<html:p>
 			<html:ul>
-				<html:li>P2 Repository</html:li>
-				<html:li>Complete ZIP file installer (eclispelink.jar)</html:li>
-				<html:li>Bundles ZIP file installer</html:li>
-				<html:li>Maven Repository</html:li>
+				<html:li>P2 Repository - <html:br/><html:i>These features are promoted to Helios on the +1 milestone dates.</html:i></html:li>
+				<html:li>Complete ZIP file installer (eclispelink.jar) - <html:a href="http://www.eclipse.org/eclipselink/downloads/milestones.php">Nightly downloads & test results</html:a></html:li>
+				<html:li>Bundles ZIP file installer - <html:a href="http://www.eclipse.org/eclipselink/downloads/milestones.php">Nightly downloads & test results</html:a></html:li>
+				<html:li>Maven - <html:a href="http://www.eclipse.org/downloads/download.php?r=1&nf=1&file=/rt/eclipselink/maven.repo">Repository</html:a>, <html:a href="http://wiki.eclipse.org/EclipseLink/Maven">usage info</html:a></html:li>
 			</html:ul>
 		</html:p>
 	</release_deliverables>
@@ -76,7 +68,7 @@
 		</html:p>
 
 		<internationalization>
-			<html:p>EclipseLink is Localized, but not Translated.</html:p>
+			<html:p>EclipseLink diagnostic messages are Localized, but no translated bundles are included in this release.</html:p>
 		</internationalization>
 	</target_environments>
 
@@ -180,26 +172,34 @@
 			<html:h3>2.1 Closed Bugs:</html:h3>
 			<html:a
 				href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">All</html:a>
-			, <html:a
+			,
+			<html:a
 				href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Foundation;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">Foundation (Core)</html:a>
-			, <html:a
+			,
+			<html:a
 				href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=JPA;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">JPA</html:a>
-			, <html:a
+			,
+			<html:a
 				href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=MOXy;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">MOXy</html:a>
-			, <html:a
+			,
+			<html:a
 				href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=SDO;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">SDO</html:a>
-			, <html:a
+			,
+			<html:a
 				href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=DBWS;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">DBWS</html:a>
-			, <html:a
+			,
+			<html:a
 				href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Examples;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">Examples</html:a>
-			, <html:a
+			,
+			<html:a
 				href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Utils;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">Utils</html:a>
-			, <html:a
+			,
+			<html:a
 				href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Build;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">Build</html:a>
 		</html:p>
 	</appendix>
 
-	<appendix name="Deprecated and RemovedAPI">
+	<appendix name="Deprecated and Removed API">
 		<html:p>The following APIs are newly deprecated in this release. Please update to the recommended replacement API.</html:p>
 
 		<html:p>The following APIs have been removed in this release. These API were deprecated in earlier releases.</html:p>
