@@ -117,19 +117,19 @@
 					information on how EclipseLink works and how to solve both common
 					and advanced requirements. 
 				</html:p>
+				<html:p>
+					The goal for this release is to address:
+					<html:ul>
+					<html:li>Backlog of <html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cassigned_to%2Cbug_status%2Cvotes%2Ctarget_milestone%2Ccomponent%2Cshort_desc;classification=RT;query_format=advanced;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;target_milestone=Future;product=EclipseLink">simple_fix bugs</html:a></html:li>
+					<html:li>Backlog of <html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cassigned_to%2Cbug_status%2Cvotes%2Ctarget_milestone%2Ccomponent%2Cshort_desc;classification=RT;query_based_on=2.1;status_whiteboard_type=allwordssubstr;query_format=advanced;status_whiteboard=submitted_patch;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;product=EclipseLink">submitted_patch bugs</html:a></html:li>
+					<html:li>Reduce overall backlog of <html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cassigned_to%2Cbug_status%2Cvotes%2Ctarget_milestone%2Ccomponent%2Cshort_desc;classification=RT;query_format=advanced;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;target_milestone=Future;product=EclipseLink">'Future' bugs</html:a></html:li>
+					</html:ul>				
+				</html:p>
 			</description>
 			<committed
 				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?classification=RT;status_whiteboard_type=allwordssubstr;query_format=advanced;status_whiteboard=Community;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;target_milestone=2.1;product=EclipseLink">
 				<html:p>These are the bugs with Target Milestone = 2.1 and the Whiteboard entry includes 'Community' to identify the theme.</html:p>
 			</committed>
-			<proposed
-				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cassigned_to%2Cbug_status%2Cvotes%2Ctarget_milestone%2Ccomponent%2Cshort_desc;classification=RT;query_based_on=2.1;status_whiteboard_type=allwordssubstr;query_format=advanced;status_whiteboard=simple_fix;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;product=EclipseLink">
-				<html:p>All open bugs with 'simple_fix" in the whitebaord field.</html:p>
-			</proposed>
-			<deferred
-				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cassigned_to%2Cbug_status%2Cvotes%2Ctarget_milestone%2Ccomponent%2Cshort_desc;classification=RT;query_format=advanced;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;target_milestone=Future;product=EclipseLink">
-				<html:p>Currently all bugs are in this query where the target milestone is 'Future'. The team is still pulling bugs from this list into the 2.1 release.</html:p>
-			</deferred>
 		</theme>
 
 		<theme name="Documentation">
