@@ -169,7 +169,36 @@
 
 	<appendix name="Bug Queries">
 		<html:p>
-			<html:h3>2.1 Closed Bugs:</html:h3>
+			<html:b>Open Bugs:</html:b>
+			<html:a
+				href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;target_milestone=2.1;product=EclipseLink;classification=RT">All</html:a>
+			,
+			<html:a
+				href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;component=Foundation;target_milestone=2.1;product=EclipseLink;classification=RT">Foundation (Core)</html:a>
+			,
+			<html:a
+				href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;component=JPA;target_milestone=2.1;product=EclipseLink;classification=RT">JPA</html:a>
+			,
+			<html:a
+				href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;component=MOXy;target_milestone=2.1;product=EclipseLink;classification=RT">MOXy</html:a>
+			,
+			<html:a
+				href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;component=SDO;target_milestone=2.1;product=EclipseLink;classification=RT">SDO</html:a>
+			,
+			<html:a
+				href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;component=DBWS;target_milestone=2.1;product=EclipseLink;classification=RT">DBWS</html:a>
+			,
+			<html:a
+				href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;component=Examples;target_milestone=2.1;product=EclipseLink;classification=RT">Examples</html:a>
+			,
+			<html:a
+				href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;component=Utils;target_milestone=2.1;product=EclipseLink;classification=RT">Utils</html:a>
+			,
+			<html:a
+				href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;component=Build;target_milestone=2.1;product=EclipseLink;classification=RT">Build</html:a>
+		</html:p>
+		<html:p>
+			<html:b>Closed Bugs:</html:b>
 			<html:a
 				href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">All</html:a>
 			,
@@ -197,6 +226,7 @@
 			<html:a
 				href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Build;resolution=FIXED;target_milestone=2.1;product=EclipseLink;classification=RT">Build</html:a>
 		</html:p>
+		<html:p>Additional Bug queries available <html:a href="http://wiki.eclipse.org/EclipseLink/Bugs">here</html:a>.</html:p>
 	</appendix>
 
 	<appendix name="Deprecated and Removed API">
