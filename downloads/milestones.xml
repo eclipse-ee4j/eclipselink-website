@@ -104,6 +104,23 @@
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.1/RC1/eclipselink-dbws-lrg-2.0.1.v20100210-r6568.html"> DBWS </a> </td>
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.1/RC1/eclipselink-dbws-util-lrg-2.0.1.v20100210-r6568.html"> DBWS Util </a> </td>
           </tr>
+          <tr>
+            <td align="center"> RC2 </td>
+            <td align="center"> Feb 13, 2010 </td>
+            <td align="center">
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/2.0.1/RC2/eclipselink-2.0.1.v20100213-r6600.zip"> Install Archive </a> <br/>
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/2.0.1/RC2/eclipselink-src-2.0.1.v20100213-r6600.zip"> Source Archive </a> <br/>
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/2.0.1/RC2/eclipselink-plugins-2.0.1.v20100213-r6600.zip"> OSGi Plugins Archive </a> <br/>
+            </td>
+            <td align="center"> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.1/RC2/eclipselink-core-lrg-2.0.1.v20100213-r6600.html"> CoreLRG </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.1/RC2/eclipselink-jpa-lrg-2.0.1.v20100213-r6600.html"> JPA </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.1/RC2/eclipselink-jaxb-lrg-2.0.1.v20100213-r6600.html"> MOXy (JAXB) </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.1/RC2/eclipselink-oxm-lrg-2.0.1.v20100213-r6600.html"> MOXy (OXM) </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.1/RC2/eclipselink-sdo-lrg-2.0.1.v20100213-r6600.html"> SDO </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.1/RC2/eclipselink-dbws-lrg-2.0.1.v20100213-r6600.html"> DBWS </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.0.1/RC2/eclipselink-dbws-util-lrg-2.0.1.v20100213-r6600.html"> DBWS Util </a> </td>
+          </tr>
         </table>                                                                          
         <br/>
       </p>                            
