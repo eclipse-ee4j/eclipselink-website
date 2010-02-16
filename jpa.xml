@@ -66,20 +66,32 @@
 
 	</section>
 
-	<section class="sideitem">
-		<description>
-			<h3>JPA Resources</h3>
-			<li>
-				<a
-					href="http://www.apress.com/book/bookDisplay.html?bID=10093">
-					Pro EJB3 - JPA
-				</a>
-			</li>
-			<a href="http://www.apress.com/book/view/9781590596456">
+	<section class="main" name="JPA Books">
+		<section name="Pro JPA 2: Mastering the Java™ Persistence API"
+			link="http://www.apress.com/book/view/9781430219569">
+			<em>
+				<a href="http://www.apress.com/book/view/9781430219569">
+				<img
+					src="http://www.apress.com/resource/bookcover/9781430219569?size=medium"
+					border="0" />
+			</a>
+			</em>
+		</section>
+		<section name="Pro EJB3 - JPA"
+			link="http://www.apress.com/book/view/9781590596456">
+			<em>
+				<a href="http://www.apress.com/book/view/9781590596456">
 				<img
 					src="http://www.apress.com/resource/bookcover/9781590596456?size=medium"
 					border="0" />
 			</a>
+			</em>
+		</section>
+	</section>
+
+	<section class="sideitem">
+		<description>
+			<h3>JPA Resources</h3>
 			<li>
 				<a href="http://jcp.org/en/jsr/detail?id=220">
 					JPA 1.0 (JSR 220)
