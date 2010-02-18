@@ -3,6 +3,7 @@
    title="Previous EclipseLink Releases">
    <section class="main" name="Previous EclipseLink Releases">
       <description>
+         <a name="2.0.0"> </a>        
       	 <b>EclipseLink 2.0.0 Downloads (Released Dec 10, 2009)</b>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
@@ -38,6 +39,7 @@
                </td>
             </tr>
          </table>   
+         <a name="1.2.0"> </a>        
       	 <b>EclipseLink 1.2.0 Downloads (Released Oct 23, 2009)</b>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
@@ -73,6 +75,7 @@
                </td>
             </tr>
          </table>   
+         <a name="1.1.3"> </a>        
       	 <b>EclipseLink 1.1.3 Downloads (Released Oct 9, 2009)</b>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
@@ -108,6 +111,7 @@
                </td>
             </tr>
          </table>   
+         <a name="1.1.2"> </a>        
       	 <b>EclipseLink 1.1.2 Downloads (Released June 24, 2009)</b>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
@@ -143,6 +147,7 @@
                </td>
             </tr>
          </table>   
+         <a name="1.1.1"> </a>        
       	 <b>EclipseLink 1.1.1 Downloads (Released May 12, 2009)</b>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
@@ -178,6 +183,7 @@
                </td>
             </tr>
          </table>   
+         <a name="1.1.0"> </a>        
          <b>EclipseLink 1.1.0 Downloads (Released March 11, 2009)</b>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
@@ -213,6 +219,7 @@
                </td>
             </tr>
          </table>   
+         <a name="1.0.2"> </a>        
          <b>EclipseLink 1.0.2 Downloads (Released Oct 29, 2008)</b>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
@@ -251,7 +258,7 @@
                </td>
             </tr>
          </table>   
-      
+         <a name="1.0.1"> </a>        
       	 <b>EclipseLink 1.0.1 Downloads (Released Sept 08, 2008)</b>                                     
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
@@ -290,7 +297,7 @@
                </td>
             </tr>
          </table>   
-      
+         <a name="1.0"> </a>        
       	 <b>EclipseLink 1.0 Downloads (Released July 08, 2008)</b>                                     
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
@@ -326,7 +333,6 @@
                </td>
             </tr>
          </table>
-                                                                                   
          <br/>
       </description>                                                                                
    </section>
