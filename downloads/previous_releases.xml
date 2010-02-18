@@ -3,6 +3,41 @@
    title="Previous EclipseLink Releases">
    <section class="main" name="Previous EclipseLink Releases">
       <description>
+      	 <b>EclipseLink 2.0.0 Downloads (Released Dec 10, 2009)</b>
+         <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
+            <tr class="tableData">
+               <td class="packageDesc">
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.0.0/eclipselink-2.0.0.v20091127-r5931.zip">EclipseLink 2.0.0 Installer Zip (27 MB)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.0.0/eclipselink-plugins-2.0.0.v20091127-r5931.zip">EclipseLink 2.0.0 OSGi Bundles Zip (11 MB)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.0.0/eclipselink-src-2.0.0.v20091127-r5931.zip">EclipseLink 2.0.0 Source Zip (4.9 MB)</a>
+                  </div>
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+               <td width="120" class="downloadCol">
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/Release/2.0.0">Release Notes</a>
+                  </div>
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a> 
+                  </div>
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/Maven">Maven</a>
+                  </div>
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+            </tr>
+         </table>   
       	 <b>EclipseLink 1.2.0 Downloads (Released Oct 23, 2009)</b>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
