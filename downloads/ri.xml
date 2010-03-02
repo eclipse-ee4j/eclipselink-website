@@ -15,61 +15,77 @@
 
 
 	<section class="main" name="Java Persistence API 2.0 (JSR 317)">
-		<description>         
-		    <p>
-                The <a href="/eclipselink/jpa.php">EclipseLink JPA</a> component in EclipseLink provides the reference implementation of
-                JPA 2.0.
-            </p>
-            <p>
-                <b>Downloads:</b>
-                <ul>
- 
-                    <li>
-                        <a
-                            href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.0.0/eclipselink-2.0.0.v20091127-r5931.zip">
-                            EclipseLink 2.0.0 - Full EclipseLink build, including the JPA 2.0 RI.
+		<description>
+			<p>
+				The
+				<a href="/eclipselink/jpa.php">EclipseLink JPA</a>
+				component in EclipseLink provides the reference implementation of
+				JPA 2.0.
+			</p>
+			<p>
+				<b>Downloads:</b>
+				<ul>
+
+					<li>
+						<a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.0.0/eclipselink-2.0.0.v20091127-r5931.zip">
+							EclipseLink 2.0.0 - Full EclipseLink build, including the JPA 2.0 RI.
                         </a>
-                    </li>
-                    <li>
-                        <a
-                            href="/downloads/download.php?file=/rt/eclipselink/ri/eclipselink-2.0.0_JPA-2.0.0_RI.zip">
-                            EclipseLink 2.0.0 - minimal bundles that are shipped in the Java EE6 RI.
+					</li>
+					<li>
+						<a href="/downloads/download.php?file=/rt/eclipselink/ri/eclipselink-2.0.0_JPA-2.0.0_RI.zip">
+							EclipseLink 2.0.0 - minimal bundles that are shipped in the Java EE6 RI.
                         </a>
-                    </li>
-                    
-               </ul>
-            </p>
-</description>
+					</li>
+
+				</ul>
+			</p>
+		</description>
 	</section>
 
-    <section class="main" name="Service Data Objects 2.1.1 (JSR 235)">
-        <description>
-            <p>
-                The <a href="/eclipselink/sdo.php">EclipseLink SDO</a> component in EclipseLink 1.1 provides the reference implementation of
-                SDO 2.1.1. 
-            </p>
-            <p>
-                <b>Downloads:</b>
-                <ul>
-                    <li>
-                        <a
-                            href="/eclipselink/downloads/index.php#1.1.0">
-                            EclipseLink 1.1.0 - Complete
+	<section class="main" name="Service Data Objects 2.1.1 (JSR 235)">
+		<description>
+			<p>
+				The
+				<a href="/eclipselink/sdo.php">EclipseLink SDO</a>
+				component in EclipseLink 1.1 provides the reference implementation of
+				SDO 2.1.1.
+			</p>
+			<p>
+				<b>Downloads:</b>
+				<ul>
+					<li>
+						<a href="/eclipselink/downloads/index.php#1.1.0">
+							EclipseLink 1.1.0 - Complete
                         </a>
-                    </li>
-                    <li>
-                        <a
-                            href="/downloads/download.php?file=/rt/eclipselink/ri/eclipselink-1.1_SDO_2.1.1_RI.zip">
-                            EclipseLink 1.1.0 - Only the SDO 2.1.1
-                            required components
+					</li>
+					<li>
+						<a href="/downloads/download.php?file=/rt/eclipselink/ri/eclipselink-1.1_SDO_2.1.1_RI.zip">
+							EclipseLink 1.1.0 - Only the SDO 2.1.1
+							required components
                         </a>
-                    </li>
-                </ul>
-            </p>
-        </description>
-        <em>EclipseLink 1.1</em>
-    </section>
+					</li>
+				</ul>
+			</p>
+		</description>
+		<em>EclipseLink 1.1</em>
+	</section>
 
+	<section class="main" name="EclipseLink Licenses">
+		<description>
+			<p>
+				The EclipseLink Project produced contents are dual licensed under
+				the terms of the
+				<a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse
+					Public License v1.0</a>
+				and
+				<a href="http://www.eclipse.org/org/documents/edl-v10.php">Eclipse
+					Distribution License v1.0</a>
+				.
+			</p>
+			<p>
+				For the license of dependent libraries included within a distribution please refer to the about.html file within each distribution.</p>
+		</description>
+	</section>
 
 
 </sections>

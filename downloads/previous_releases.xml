@@ -336,4 +336,22 @@
          <br/>
       </description>                                                                                
    </section>
+   
+   	<section class="main" name="EclipseLink Licenses">
+		<description>
+			<p>
+				The EclipseLink Project produced contents are dual licensed under
+				the terms of the
+				<a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse
+					Public License v1.0</a>
+				and
+				<a href="http://www.eclipse.org/org/documents/edl-v10.php">Eclipse
+					Distribution License v1.0</a>
+				.
+			</p>
+			<p>
+				For the license of dependent libraries included within a distribution please refer to the about.html file within each distribution.</p>
+		</description>
+	</section>
+   
 </sections>
