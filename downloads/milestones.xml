@@ -15,7 +15,7 @@
             <th align="center"> Release Date </th>
             <th align="center"> Archives </th>
             <th align="center"> </th>
-            <th colspan="7" align="center"> Testing Results </th>
+            <th colspan="8" align="center"> Testing Results </th>
           </tr>
           <tr>
             <td align="center"> M1 </td>
@@ -28,6 +28,7 @@
             <td align="center"> </td>
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.0/M1/eclipselink-core-lrg-2.1.0.v20091216-r6086.html"> CoreLRG </a> </td>
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.0/M1/eclipselink-jpa-lrg-2.1.0.v20091216-r6086.html"> JPA </a> </td>
+            <td align="center"> <a> JPA (WDF) </a> </td>
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.0/M1/eclipselink-jaxb-lrg-2.1.0.v20091216-r6086.html"> MOXy (JAXB) </a> </td>
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.0/M1/eclipselink-oxm-lrg-2.1.0.v20091216-r6086.html"> MOXy (OXM) </a> </td>
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.0/M1/eclipselink-sdo-lrg-2.1.0.v20091216-r6086.html"> SDO </a> </td>
@@ -45,6 +46,7 @@
             <td align="center"> </td>
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.0/M5/eclipselink-core-lrg-2.1.0.v20100127-r6421.html"> CoreLRG </a> </td>
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.0/M5/eclipselink-jpa-lrg-2.1.0.v20100127-r6421.html"> JPA </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.0/M5/eclipselink-jpa-wdf-lrg-2.1.0.v20100127-r6421.html"> JPA (WDF) </a> </td>
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.0/M5/eclipselink-jaxb-lrg-2.1.0.v20100127-r6421.html"> MOXy (JAXB) </a> </td>
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.0/M5/eclipselink-oxm-lrg-2.1.0.v20100127-r6421.html"> MOXy (OXM) </a> </td>
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.0/M5/eclipselink-sdo-lrg-2.1.0.v20100127-r6421.html"> SDO </a> </td>
@@ -62,6 +64,7 @@
             <td align="center"> </td>
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.0/M6/eclipselink-core-lrg-2.1.0.v20100311-r6779.html"> CoreLRG </a> </td>
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.0/M6/eclipselink-jpa-lrg-2.1.0.v20100311-r6779.html"> JPA </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.0/M6/eclipselink-jpa-wdf-lrg-2.1.0.v20100311-r6779.html"> JPA (WDF) </a> </td>
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.0/M6/eclipselink-jaxb-lrg-2.1.0.v20100311-r6779.html"> MOXy (JAXB) </a> </td>
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.0/M6/eclipselink-oxm-lrg-2.1.0.v20100311-r6779.html"> MOXy (OXM) </a> </td>
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.0/M6/eclipselink-sdo-lrg-2.1.0.v20100311-r6779.html"> SDO </a> </td>
