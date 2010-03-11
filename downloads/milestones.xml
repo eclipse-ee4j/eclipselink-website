@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sections
     title="EclipseLink Milestones">
-    
-  <section class="main" name="Milestone Builds">  
-    <description>                                                      
+
+  <section class="main" name="Milestone Builds">
+    <description>
       <p>
-      <a name="2.1.0"> </a>        
-        <table border="1" width="750">                                           
+      <a name="2.1.0"> </a>
+        <table border="1" width="750">
           <tr>
             <th colspan="11" align="center"><h6><b> 2.1.0 Milestone Builds </b></h6></th>
           </tr>
-          <tr>                                                         
-            <th align="center"> Build ID </th>                       
-            <th align="center"> Release Date </th>                       
-            <th align="center"> Archives </th>                       
-            <th align="center"> </th>                                
-            <th colspan="7" align="center"> Testing Results </th>  
-          </tr>                                                        
+          <tr>
+            <th align="center"> Build ID </th>
+            <th align="center"> Release Date </th>
+            <th align="center"> Archives </th>
+            <th align="center"> </th>
+            <th colspan="7" align="center"> Testing Results </th>
+          </tr>
           <tr>
             <td align="center"> M1 </td>
             <td align="center"> Dec 16, 2009 </td>
@@ -68,28 +68,24 @@
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.0/M6/eclipselink-dbws-lrg-2.1.0.v20100311-r6779.html"> DBWS </a> </td>
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.0/M6/eclipselink-dbws-util-lrg-2.1.0.v20100311-r6779.html"> DBWS Util </a> </td>
           </tr>
-        </table>                                                                          
+        </table>
         <a> Note: M2-M4 skipped to align with Helios Milestones.</a>
+        <br/>
         <a> Note2: M6 shipped with 3 WDF test "errors" due to an intentional change in the level of strictness in JPQL type checking. We are currently assessing the direction needed to resolve this disparity.</a>
         <br/>
-      </p>                            
-    </description>                                                                                
+      </p>
+    </description>
   </section>
-	<section class="main" name="EclipseLink Licenses">
-		<description>
-			<p>
-				The EclipseLink Project produced contents are dual licensed under
-				the terms of the
-				<a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse
-					Public License v1.0</a>
-				and
-				<a href="http://www.eclipse.org/org/documents/edl-v10.php">Eclipse
-					Distribution License v1.0</a>
-				.
-			</p>
-			<p>
-				For the license of dependent libraries included within a distribution please refer to the about.html file within each distribution.</p>
-		</description>
-	</section>
-
+  <section class="main" name="EclipseLink Licenses">
+    <description>
+      <p>
+        The EclipseLink Project produced contents are dual licensed under the terms of the
+        <a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse Public License v1.0</a>
+		and <a href="http://www.eclipse.org/org/documents/edl-v10.php">Eclipse Distribution License v1.0</a>.
+      </p>
+      <p>
+        For the license of dependent libraries included within a distribution please refer to the about.html file within each distribution.
+      </p>
+    </description>
+  </section>
 </sections>
