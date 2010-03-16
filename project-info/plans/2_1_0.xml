@@ -6,8 +6,7 @@
 	<introduction>
 		<html:p>
 			The 2.1 release of EclispeLink will build upon the strong standards based solutions delivered in the 2.0.0 adding additional advanced functionality with ease of use and will address many of
-			the
-			community requests.
+			the	community requests.  Included in this are Milestone dates, and the development rampdown plan
 		</html:p>
 	</introduction>
 
@@ -34,16 +33,16 @@
 			<html:div>Milestone 6 - Available in Helios M6 on 03/19/2010</html:div>
 		</milestone>
 		<milestone date="04/28/2010" milestone="2.1.0 M7">
-			<html:div>Milestone 7 - Available in Helios M7 on 05/07/2010</html:div>
+			<html:div>Milestone 7 - Available in Helios M7 on 05/07/2010 - For M7, EclipseLink plans to be functionally complete.  The RCs following M7 will be used for bug fixes, packaging, and licensing issues</html:div>
 		</milestone>
 		<milestone date="05/12/2010" milestone="2.1.0 RC1">
-			<html:div>Release Candidate 1 - Available in Helios RC1 on 05/21/2010</html:div>
+			<html:div>Release Candidate 1 - Available in Helios RC1 on 05/21/2010 - Following RC1 project lead must approve code changes.</html:div>
 		</milestone>
 		<milestone date="05/19/2010" milestone="2.1.0 RC2">
 			<html:div>Release Candidate 2 - Available in Helios RC2 on 05/28/2010</html:div>
 		</milestone>
 		<milestone date="05/26/2010" milestone="2.1.0 RC3">
-			<html:div>Release Candidate 3 - Available in Helios RC3 on 06/04/2010</html:div>
+			<html:div>Release Candidate 3 - Available in Helios RC3 on 06/04/2010 - Only 'stop ship' issues fixed after RC3.</html:div>
 		</milestone>
 		<milestone date="06/02/2010" milestone="2.1.0 RC4">
 			<html:div>Release Candidate 4 - Available in Helios RC4 on 06/11/2010</html:div>
