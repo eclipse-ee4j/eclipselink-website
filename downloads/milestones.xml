@@ -76,6 +76,8 @@
         <br/>
         <a> Note2: M6 shipped with 3 WDF test "errors" due to an intentional change in the level of strictness in JPQL type checking. We are currently assessing the direction needed to resolve this disparity.</a>
       <br/>
+      </p>
+      <p>
       <a name="2.0.2"> </a>
         <table border="1" width="750">
           <tr>
