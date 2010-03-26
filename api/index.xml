@@ -19,7 +19,13 @@
 				.
 			</p>
 			<ul>
-			    <li>
+	            <li>
+                    <a href="/eclipselink/api/2.0.1/index.html">2.0.1</a>
+                </li>
+                <li>
+                    <a href="/eclipselink/api/2.0/index.html">2.0.0</a>
+                </li>			    
+                <li>
                     <a href="/eclipselink/api/1.2/index.html">1.2.0</a>
                 </li>
 			
