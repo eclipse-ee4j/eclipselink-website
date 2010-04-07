@@ -61,6 +61,21 @@
                <td class="downloadCol">
                </td>
             </tr>
+            <tr class="tableData">
+               <td class="packageDesc">
+                  <div>
+                     <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates/2.0.1/">EclipseLink 2.0.1 P2 Repository</a>
+                  </div>
+                  Eclipselink.jar and it's dependencies can be downloaded from a P2 repository.  Copy the link ( http://download.eclipse.org/rt/eclipselink/updates/2.0.1/ ) into the update site location in your ide.
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+               <td class="downloadCol">
+               </td>
+            </tr>
+            
          </table>
       </description>
    </section>
