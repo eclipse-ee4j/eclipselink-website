@@ -66,7 +66,7 @@
                   <div>
                      <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates/2.0.1/">EclipseLink 2.0.1 P2 Repository</a>
                   </div>
-                  Eclipselink.jar and it's dependencies can be downloaded from a P2 repository.  Copy the link ( http://download.eclipse.org/rt/eclipselink/updates/2.0.1/ ) into the update site location in your ide.
+                  The EclipseLink bundles can be obtained from a P2 repository for installation in a target platform or Eclipse IDE.  Copy the following URL into the update site location:  http://download.eclipse.org/rt/eclipselink/updates/2.0.1/ . 
                   <div class="bottomRow">
                      <div>
                      </div>
