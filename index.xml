@@ -98,7 +98,10 @@
 	</section>
 
 	<section class="main" name="Project News">
-		<section name="EclipseLink 2.0.1 Released" link="http://www.eclipse.org/eclipselink/downloads">
+        <section name="EclipseLink 2.0.2 Released" link="http://www.eclipse.org/eclipselink/downloads">
+            <em>April 21, 2010</em>
+        </section>
+		<section name="EclipseLink 2.0.1 Released">
 			<em>Feb 17, 2010</em>
 		</section>
 		<section name="Spring 3.0 goes GA with EclipseLink 2.0"
