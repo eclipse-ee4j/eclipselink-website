@@ -7,52 +7,44 @@
 				<img src="/eclipselink/images/logo.jpg" border="0" alt="EclipseLink" />
 			</h1>
 			<p style="text-align:justify">
-				
+				Each EclipseLink release publishes XML Schema (XSD) files that define what is supported in the mapping and configuration files. This page lists the available XSDs and how they can be
+				used.
 			</p>
 		</description>
 	</section>
 
 	<section class="main" name="EclipseLink 2.0 XSDs">
-		<section
-			name="eclipselink_orm_2_0.xsd"
-			link="eclipselink_orm_2_0.xsd">
+		<section name="eclipselink_orm_2_0.xsd" link="eclipselink_orm_2_0.xsd">
+		<pre>
+		<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="2.0"
+	xmlns="http://www.eclipse.org/eclipselink/xsds/persistence/orm http://www.eclipse.org/eclipselink/xsds/persistence/orm/eclipselink_orm_2_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">	
+		</pre>
 		</section>
-		<section
-			name="eclipselink_persistence_map_2.0.xsd"
-			link="eclipselink_persistence_map_2.0.xsd">
+		<section name="eclipselink_persistence_map_2.0.xsd" link="eclipselink_persistence_map_2.0.xsd">
 		</section>
 	</section>
 
 	<section class="main" name="EclipseLink 1.2 XSDs">
-		<section
-			name="eclipselink_orm_1_2.xsd"
-			link="eclipselink_orm_1_2.xsd">
+		<section name="eclipselink_orm_1_2.xsd" link="eclipselink_orm_1_2.xsd">
 		</section>
-		<section
-			name="eclipselink_persistence_map_1.2.xsd"
-			link="eclipselink_persistence_map_1.2.xsd">
+		<section name="eclipselink_persistence_map_1.2.xsd" link="eclipselink_persistence_map_1.2.xsd">
 		</section>
 	</section>
 
-\	<section class="main" name="EclipseLink 1.1 XSDs">
-		<section
-			name="eclipselink_orm_1_1.xsd"
-			link="eclipselink_orm_1_1.xsd">
+	\
+	<section class="main" name="EclipseLink 1.1 XSDs">
+		<section name="eclipselink_orm_1_1.xsd" link="eclipselink_orm_1_1.xsd">
 		</section>
-		<section
-			name="eclipselink_persistence_map_1.1.xsd"
-			link="eclipselink_persistence_map_1.1.xsd">
+		<section name="eclipselink_persistence_map_1.1.xsd" link="eclipselink_persistence_map_1.1.xsd">
 		</section>
 	</section>
 
 	<section class="main" name="EclipseLink 1.0 XSDs">
-		<section
-			name="eclipselink_orm_1_1.xsd"
-			link="eclipselink_orm_1_1.xsd">
+		<section name="eclipselink_orm_1_1.xsd" link="eclipselink_orm_1_1.xsd">
 		</section>
-		<section
-			name="eclipselink_persistence_map_1.1.xsd"
-			link="eclipselink_persistence_map_1.1.xsd">
+		<section name="eclipselink_persistence_map_1.1.xsd" link="eclipselink_persistence_map_1.1.xsd">
 		</section>
 	</section>
 </sections>
