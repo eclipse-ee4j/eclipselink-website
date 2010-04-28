@@ -16,8 +16,7 @@
 	<section class="main" name="EclipseLink 2.0 XSDs">
 		<section name="eclipselink_orm_2_0.xsd" link="eclipselink_orm_2_0.xsd">
 		<pre>
-		<?xml version="1.0" encoding="UTF-8"?>
-<entity-mappings version="2.0"
+	entity-mappings version="2.0"
 	xmlns="http://www.eclipse.org/eclipselink/xsds/persistence/orm http://www.eclipse.org/eclipselink/xsds/persistence/orm/eclipselink_orm_2_0.xsd"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">	
 		</pre>
