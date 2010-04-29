@@ -32,7 +32,6 @@
 		</section>
 	</section>
 
-	\
 	<section class="main" name="EclipseLink 1.1 XSDs">
 		<section name="eclipselink_orm_1_1.xsd" link="eclipselink_orm_1_1.xsd">
 		</section>
@@ -41,9 +40,9 @@
 	</section>
 
 	<section class="main" name="EclipseLink 1.0 XSDs">
-		<section name="eclipselink_orm_1_1.xsd" link="eclipselink_orm_1_1.xsd">
+		<section name="eclipselink_orm_1_0.xsd" link="eclipselink_orm_1_0.xsd">
 		</section>
-		<section name="eclipselink_persistence_map_1.1.xsd" link="eclipselink_persistence_map_1.1.xsd">
+		<section name="eclipselink_persistence_map_1.0.xsd" link="eclipselink_persistence_map_1.0.xsd">
 		</section>
 	</section>
 </sections>
