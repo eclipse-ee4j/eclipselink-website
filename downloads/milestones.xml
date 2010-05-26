@@ -89,6 +89,24 @@
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.0/M7/eclipselink-dbws-lrg-2.1.0.v20100503-r7134.html"> DBWS </a> </td>
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.0/M7/eclipselink-dbws-util-lrg-2.1.0.v20100503-r7134.html"> DBWS Util </a> </td>
           </tr>
+          <tr>
+            <td align="center"> RC1 </td>
+            <td align="center"> May 17, 2010 </td>
+            <td align="center">
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/2.1.0/RC1/eclipselink-2.1.0.v20100517-r7246.zip"> Install Archive </a> <br/>
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/2.1.0/RC1/eclipselink-src-2.1.0.v20100517-r7246.zip"> Source Archive </a> <br/>
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/2.1.0/RC1/eclipselink-plugins-2.1.0.v20100517-r7246.zip"> OSGi Plugins Archive </a> <br/>
+            </td>
+            <td align="center"> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.0/RC1/eclipselink-core-lrg-2.1.0.v20100517-r7246.html"> CoreLRG </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.0/RC1/eclipselink-jpa-lrg-2.1.0.v20100517-r7246.html"> JPA </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.0/RC1/eclipselink-jpa-wdf-lrg-2.1.0.v20100517-r7246.html"> JPA (WDF) </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.0/RC1/eclipselink-jaxb-lrg-2.1.0.v20100517-r7246.html"> MOXy (JAXB) </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.0/RC1/eclipselink-oxm-lrg-2.1.0.v20100517-r7246.html"> MOXy (OXM) </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.0/RC1/eclipselink-sdo-lrg-2.1.0.v20100517-r7246.html"> SDO </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.0/RC1/eclipselink-dbws-lrg-2.1.0.v20100517-r7246.html"> DBWS </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.0/RC1/eclipselink-dbws-util-lrg-2.1.0.v20100517-r7246.html"> DBWS Util </a> </td>
+          </tr>
         </table>
         <a> Note: M2-M4 skipped to align with Helios Milestones.</a>
         <br/>
