@@ -19,7 +19,7 @@
           </tr>
           <tr>
             <td align="center"> M1 </td>
-            <td align="center"> July 23, 2009 </td>
+            <td align="center"> July 23, 2010 </td>
             <td align="center">
               <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/2.2.0/M1/eclipselink-2.2.0.v20100720-r7870.zip"> Install Archive </a> <br/>
               <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/2.2.0/M1/eclipselink-src-2.2.0.v20100720-r7870.zip"> Source Archive </a> <br/>
@@ -34,6 +34,38 @@
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.2.0/M1/eclipselink-sdo-lrg-2.2.0.v20100720-r7870.html"> SDO </a> </td>
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.2.0/M1/eclipselink-dbws-lrg-2.2.0.v20100720-r7870.html"> DBWS </a> </td>
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.2.0/M1/eclipselink-dbws-util-lrg-2.2.0.v20100720-r7870.html"> DBWS Util </a> </td>
+          </tr>
+        </table>
+      </p>
+      <p>
+      <a name="1.1.4"> </a>
+        <table border="1" width="750">
+          <tr>
+            <th colspan="11" align="center"><h6><b> 1.1.4 Milestone Builds </b></h6></th>
+          </tr>
+          <tr>
+            <th align="center"> Build ID </th>
+            <th align="center"> Release Date </th>
+            <th align="center"> Archives </th>
+            <th align="center"> </th>
+            <th colspan="8" align="center"> Testing Results </th>
+          </tr>
+          <tr>
+            <td align="center"> RC1 </td>
+            <td align="center"> August 13, 2010 </td>
+            <td align="center">
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.1.4/RC1/eclipselink-1.1.4.v20100812-r7860.zip"> Install Archive </a> <br/>
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.1.4/RC1/eclipselink-src-1.1.4.v20100812-r7860.zip"> Source Archive </a> <br/>
+              <a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/milestones/1.1.4/RC1/eclipselink-plugins-1.1.4.v20100812-r7860.zip"> OSGi Plugins Archive </a> <br/>
+            </td>
+            <td align="center"> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.4/RC1/eclipselink-core-lrg-1.1.4.v20100812-r7860.html"> CoreLRG </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.4/RC1/eclipselink-jpa-lrg-1.1.4.v20100812-r7860.html"> JPA </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.4/RC1/eclipselink-jaxb-lrg-1.1.4.v20100812-r7860.html"> MOXy (JAXB) </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.4/RC1/eclipselink-oxm-lrg-1.1.4.v20100812-r7860.html"> MOXy (OXM) </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.4/RC1/eclipselink-sdo-lrg-1.1.4.v20100812-r7860.html"> SDO </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.4/RC1/eclipselink-dbws-lrg-1.1.4.v20100812-r7860.html"> DBWS </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/1.1.4/RC1/eclipselink-dbws-util-lrg-1.1.4.v20100812-r7860.html"> DBWS Util </a> </td>
           </tr>
         </table>
       </p>
