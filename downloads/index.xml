@@ -36,7 +36,7 @@
             <tr class="tableData">
                <td class="packageDesc">
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.1.1/eclipselink-src-2.1.1.v20100817-r8050.zip">EclipseLink 2.1.0 Source Zip (5.2 MB)</a>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.1.1/eclipselink-src-2.1.1.v20100817-r8050.zip">EclipseLink 2.1.1 Source Zip (5.2 MB)</a>
                   </div>
                   Contains source code for all of eclipselink.  
                   <div class="bottomRow">
