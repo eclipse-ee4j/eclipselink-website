@@ -78,6 +78,83 @@
             
          </table>
       </description>
+      
+      <a name="1.1.4"> </a>        
+      <description>
+         <b>EclipseLink 1.1.4  (Released Sept 9th, 2010) Patch Set</b> - <a href="http://wiki.eclipse.org/EclipseLink/Release/1.1.4">New and Noteworthy</a> - <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a><br/>
+         <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
+            <tr class="tableData">
+               <td class="packageDesc">
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.1.4/eclipselink-1.1.4.v20100812-r7860.zip">EclipseLink 1.1.4 Installer Zip (28 MB)</a>
+                  </div>
+                  This zip includes EclipseLink 1.1.4 with the single jar packaging,  source,  JavaDocs, utilities, and dependent libraries. Intended for use in Java EE and SE environments.
+                  <div class="bottomRow">
+                  </div>
+               </td>
+               <td class="downloadCol">
+               </td>
+            </tr>
+            <tr class="tableData">
+               <td class="packageDesc">
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.1.4/eclipselink-plugins-1.1.4.v20100812-r7860.zip">EclipseLink 1.1.4 OSGi Bundles Zip (12 MB)</a>
+                  </div>
+                  Contains EclipseLink and dependency bundles.  Get the OSGI Bundle Zip to use EclipseLink 1.1.4 runtime in an OSGi container.
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+               <td class="downloadCol">
+               </td>
+            </tr>
+            <tr class="tableData">
+               <td class="packageDesc">
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.1.4/eclipselink-src-1.1.4.v20100812-r7860.zip">EclipseLink 1.1.4 Source Zip (5.2 MB)</a>
+                  </div>
+                  Contains source code for all of eclipselink.  
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+               <td class="downloadCol">
+               </td>
+            </tr>
+            <tr class="tableData">
+               <td class="packageDesc">
+                  <div>
+                     <a class="packageTitle" href="http://wiki.eclipse.org/EclipseLink/Maven">EclipseLink Maven Repository</a>
+                  </div>
+                  Eclipselink.jar and it's dependencies can be downloaded from a Maven repository.
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+               <td class="downloadCol">
+               </td>
+            </tr>
+            <tr class="tableData">
+               <td class="packageDesc">
+                  <div>
+                     <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates/">EclipseLink P2 Repository</a>
+                  </div>
+                  The EclipseLink bundles can be obtained from a P2 repository for installation in a target platform or Eclipse IDE.  Copy the following URL into the update site location:  http://download.eclipse.org/rt/eclipselink/updates/ . 
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+               <td class="downloadCol">
+               </td>
+            </tr>
+            
+         </table>
+      </description>
+      
    </section>
 
    <section class="main" name="Other EclipseLink Downloads">
