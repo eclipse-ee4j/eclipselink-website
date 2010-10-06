@@ -97,6 +97,7 @@
             <td align="center"> </td>
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.2/M1/eclipselink-core-lrg-2.1.2.v20100928-r8243.html"> CoreLRG </a> </td>
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.2/M1/eclipselink-jpa-lrg-2.1.2.v20100928-r8243.html"> JPA </a> </td>
+            <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.2/M1/eclipselink-jpa-wdf-lrg-2.2.0.v20100928-r8243.html"> JPA (WDF) </a> </td>
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.2/M1/eclipselink-jaxb-lrg-2.1.2.v20100928-r8243.html"> MOXy (JAXB) </a> </td>
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.2/M1/eclipselink-oxm-lrg-2.1.2.v20100928-r8243.html"> MOXy (OXM) </a> </td>
             <td align="center"> <a href="http://download.eclipse.org/rt/eclipselink/milestones/2.1.2/M1/eclipselink-sdo-lrg-2.1.2.v20100928-r8243.html"> SDO </a> </td>
