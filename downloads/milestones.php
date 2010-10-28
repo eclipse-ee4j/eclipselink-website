@@ -10,7 +10,7 @@ require_once ($root . '/eclipselink/common_nova.php');
 
 # Generate the web page
 // Load the XML source
-$xml = DOMDocument::load('milestones.xml');
+$xml = DOMDocument::load('http://download.eclipse.org/rt/eclipselink/milestone.xml');
 
 //Set the page title
 $xpath = new DOMXPath($xml);
