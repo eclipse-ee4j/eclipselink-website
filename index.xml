@@ -98,7 +98,10 @@
 	</section>
 
 	<section class="main" name="Project News">
-         <section name="EclipseLink 2.1.1 Released" link="http://www.eclipse.org/eclipselink/downloads">
+         <section name="EclipseLink 2.1.2 Released" link="http://www.eclipse.org/eclipselink/downloads">
+            <em>Dec 13, 2010</em>
+        </section>
+        <section name="EclipseLink 2.1.1 Released">
             <em>Aug 26, 2010</em>
         </section>
         <section name="EclipseLink 2.1.0 Released">
