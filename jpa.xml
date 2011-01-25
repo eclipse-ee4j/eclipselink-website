@@ -91,6 +91,10 @@
 
 	<section class="sideitem">
 		<description>
+			<h3>Documentation</h3>
+			<li><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA">JPA User Guide</a></li>
+			<li><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA">JPA Examples</a></li>
+
 			<h3>JPA Resources</h3>
 			<li>
 				<a href="http://jcp.org/en/jsr/detail?id=220">
@@ -103,18 +107,6 @@
 				</a>
 			</li>
 
-			<h3>Documentation</h3>
-			<li>
-				<a
-					href="http://wiki.eclipse.org/Introduction_to_Java_Persistence_API_(ELUG)">
-					Intro to JPA
-				</a>
-			</li>
-			<li>
-				<a href="http://wiki.eclipse.org/Category:JPA">
-					EclipseLink JPA User Guide
-				</a>
-			</li>
 		</description>
 	</section>
 

@@ -56,7 +56,8 @@
 		<section class="sideitem">
 		<description>
 			<h3>Documentation</h3>
-			<li><a href="http://wiki.eclipse.org/Category:XML">EclipseLink MOXy User Guide</a></li>
+			<li><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/MOXy">MOXy User Guide</a></li>
+			<li><a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy">MOXy Examples</a></li>
 		</description>
 	</section>
 	
