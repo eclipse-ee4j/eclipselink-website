@@ -23,13 +23,10 @@
 	$Nav->addCustomNav("DBWS", "/eclipselink/dbws.php", "_self", 2);
   
 	$Nav->addNavSeparator("Documentation", "http://wiki.eclipse.org/EclipseLink/UserGuide");
+	$Nav->addCustomNav("Doc Center", "http://wiki.eclipse.org/EclipseLink/Documentation_Center", "_self", 2);
 	$Nav->addCustomNav("FAQ", "http://wiki.eclipse.org/EclipseLink/FAQ", "_self", 2);
-	$Nav->addCustomNav("Documentation Center", "http://wiki.eclipse.org/EclipseLink/Documentation_Center", "_self", 2);
-	$Nav->addCustomNav("Search User Guide", "http://www.google.com/coop/cse?cx=016171230611334810008%3A8qajdsud9zq&hl=en", "_self", 2);
-	$Nav->addCustomNav("API", "/eclipselink/api/index.php", "_self", 2);
-	$Nav->addCustomNav("API (latest)", "/eclipselink/api/latest/index.html", "_self", 2);
+	$Nav->addCustomNav("API (JavaDocs)", "/eclipselink/api/index.php", "_self", 2);
 	$Nav->addCustomNav("EclipseLink Wiki", "http://wiki.eclipse.org/EclipseLink", "_self", 2);
-	$Nav->addCustomNav("Search Wiki", "http://www.google.com/coop/cse?cx=002128250543942842320%3Aqffgtrd2s3k&hl=en", "_self", 2);
 
  	$Nav->addNavSeparator("Downloads", "/eclipselink/downloads/index.php");
 	$Nav->addCustomNav("2.1.2", "/eclipselink/downloads/index.php#2.1.2", "_self", 2);
