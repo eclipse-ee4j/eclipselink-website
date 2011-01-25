@@ -24,7 +24,7 @@
   
 	$Nav->addNavSeparator("Documentation", "http://wiki.eclipse.org/EclipseLink/UserGuide");
 	$Nav->addCustomNav("FAQ", "http://wiki.eclipse.org/EclipseLink/FAQ", "_self", 2);
-	$Nav->addCustomNav("User Guide", "http://wiki.eclipse.org/EclipseLink/UserManual", "_self", 2);
+	$Nav->addCustomNav("Documentation Center", "http://wiki.eclipse.org/EclipseLink/Documentation_Center", "_self", 2);
 	$Nav->addCustomNav("Search User Guide", "http://www.google.com/coop/cse?cx=016171230611334810008%3A8qajdsud9zq&hl=en", "_self", 2);
 	$Nav->addCustomNav("API", "/eclipselink/api/index.php", "_self", 2);
 	$Nav->addCustomNav("API (latest)", "/eclipselink/api/latest/index.html", "_self", 2);
