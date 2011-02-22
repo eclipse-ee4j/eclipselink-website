@@ -29,7 +29,7 @@
 	$Nav->addCustomNav("EclipseLink Wiki", "http://wiki.eclipse.org/EclipseLink", "_self", 2);
 
  	$Nav->addNavSeparator("Downloads", "/eclipselink/downloads/index.php");
-	$Nav->addCustomNav("2.1.2", "/eclipselink/downloads/index.php#2.1.2", "_self", 2);
+	$Nav->addCustomNav("2.2.0", "/eclipselink/downloads/index.php#2.2.0", "_self", 2);
 	$Nav->addCustomNav("Previous Releases", "/eclipselink/downloads/previous_releases.php", "_self", 2);
 	$Nav->addCustomNav("Milestones", "/eclipselink/downloads/milestones.php", "_self", 2);
 	$Nav->addCustomNav("Maven", "http://wiki.eclipse.org/EclipseLink/Maven", "_self", 2);	
