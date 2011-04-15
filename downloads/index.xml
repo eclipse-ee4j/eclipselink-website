@@ -78,6 +78,81 @@
             
          </table>
       </description>
+      <a name="2.1.3"> </a>        
+      <description>
+         <b>EclipseLink 2.1.3  (Released April 15, 2011)</b> - <a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.3">New and Noteworthy</a> - <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a><br/>
+         <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
+            <tr class="tableData">
+               <td class="packageDesc">
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.1.3/eclipselink-2.1.3.v20110304-r9073.zip">EclipseLink 2.1.3 Installer Zip (28 MB)</a>
+                  </div>
+                  This zip includes EclipseLink 2.1.3 with the single jar packaging,  source,  JavaDocs, utilities, and dependent libraries. Intended for use in Java EE and SE environments.
+                  <div class="bottomRow">
+                  </div>
+               </td>
+               <td class="downloadCol">
+               </td>
+            </tr>
+            <tr class="tableData">
+               <td class="packageDesc">
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.1.3/eclipselink-plugins-2.1.3.v20110304-r9073.zip">EclipseLink 2.1.3 OSGi Bundles Zip (12 MB)</a>
+                  </div>
+                  Contains EclipseLink and dependency bundles.  Get the OSGI Bundle Zip to use EclipseLink 2.1.3 runtime in an OSGi container.
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+               <td class="downloadCol">
+               </td>
+            </tr>
+            <tr class="tableData">
+               <td class="packageDesc">
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.1.3/eclipselink-src-2.1.3.v20110304-r9073.zip">EclipseLink 2.1.3 Source Zip (5.2 MB)</a>
+                  </div>
+                  Contains source code for all of eclipselink.  
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+               <td class="downloadCol">
+               </td>
+            </tr>
+            <tr class="tableData">
+               <td class="packageDesc">
+                  <div>
+                     <a class="packageTitle" href="http://wiki.eclipse.org/EclipseLink/Maven">EclipseLink Maven Repository</a>
+                  </div>
+                  Eclipselink.jar and it's dependencies can be downloaded from a Maven repository.
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+               <td class="downloadCol">
+               </td>
+            </tr>
+            <tr class="tableData">
+               <td class="packageDesc">
+                  <div>
+                     <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates/">EclipseLink P2 Repository</a>
+                  </div>
+                  The EclipseLink bundles can be obtained from a P2 repository for installation in a target platform or Eclipse IDE.  Copy the following URL into the update site location:  http://download.eclipse.org/rt/eclipselink/updates/ . 
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+               <td class="downloadCol">
+               </td>
+            </tr>
+            
+         </table>
+      </description>
      
    </section>
 
