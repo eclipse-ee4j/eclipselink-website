@@ -4,13 +4,8 @@
 	<section class="title">
 		<description>
 			<h1>
-				<img src="/eclipselink/images/logo.jpg" border="0" alt="EclipseLink 2.2" />
+				<img src="/eclipselink/images/logo.jpg" border="0" alt="EclipseLink" />2.2.0
 			</h1>
-		</description>
-	</section>
-
-	<section class="main" name="2.2.0 Release">
-		<description>
 			<p>The EclipseLink 2.2 release focuses on providing advanced
 				persistence features for user of relational, XML and Web Services to
 				expose extended persistence features that naturally extend the
@@ -26,25 +21,22 @@
 				<ul>
 					<li>
 						<a
-							href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Performance/Performance_Monitoring_and_Profiling/Performance_Monitoring">New Performance Monitor</a>
-					</li>
-					<li>
-						<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Indexes">Index Generation</a>
-					</li>
-					<li>
-						<a
-							href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Schema_Generation/Appending_strings_to_CREATE_TABLE_statements">CREATE TABLE customization</a>
-					</li>
-					<li>
-						<a href="http://wiki.eclipse.org/EclipseLink/DesignDocs/324341">Database CascadeOnDelete Support</a>
-					</li>
-					<li>
-						<a
 							href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Querying/Additional_Criteria">AdditionalCriteria: Limit/Filter all query results</a>
 					</li>
 					<li>
 						<a
 							href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Data_Partitioning">PartitioningPolicy: Partition row data across tables</a>
+					</li>
+					<li> Schema Generation Enhancements: 
+						<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Indexes">@Index Generation</a>, 
+						<a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Schema_Generation/Appending_strings_to_CREATE_TABLE_statements">CREATE TABLE customization</a>
+					</li>
+					<li>
+						<a href="http://wiki.eclipse.org/EclipseLink/DesignDocs/324341">Database Cascade Delete</a>
+					</li>
+					<li>
+						<a
+							href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Performance/Performance_Monitoring_and_Profiling/Performance_Monitoring">New Performance Monitor</a>
 					</li>
 				</ul>
 			</description>
@@ -422,7 +414,7 @@
 					</a>
 				</p>
 				<p>
-					<a href="/eclipselink/releases">All Releases</a>
+					<a href="/eclipselink/releases/index.php">All Releases</a>
 				</p>
 			</div>
 		</description>
