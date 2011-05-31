@@ -17,32 +17,19 @@
 			<description>
 				<ul>
 					<li>
-						<a
-							href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Querying/Additional_Criteria">AdditionalCriteria: Limit/Filter all query results</a>
+						<a href="http://wiki.eclipse.org/EclipseLink/DesignDocs/Extensibility">
+							<b>Extensible Entities</b>
+							: Add mappings on-the-fly
+						</a>
 					</li>
 					<li>
 						<a
-							href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Data_Partitioning">PartitioningPolicy: Partition row data across tables</a>
+							href="http://wiki.eclipse.org/EclipseLink/Development/Indigo/Multi-Tenancy">Multitenant: SaaS enable your application</a>
 					</li>
 					<li>
-						Schema Generation Enhancements:
-						<ul>
-							<li>
-								<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Indexes">@Index Generation</a>
-							</li>
-							<li>
-								<a
-									href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Schema_Generation/Appending_strings_to_CREATE_TABLE_statements">CREATE TABLE customization</a>
-							</li>
-						</ul>
+						External Metadata Source: ...
 					</li>
-					<li>
-						<a href="http://wiki.eclipse.org/EclipseLink/DesignDocs/324341">Database Cascade Delete</a>
-					</li>
-					<li>
-						<a
-							href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Performance/Performance_Monitoring_and_Profiling/Performance_Monitoring">New Performance Monitor</a>
-					</li>
+					<li><b>MySports Example: New example showing new 2.3 feature set</b></li>
 				</ul>
 			</description>
 		</section>
@@ -51,45 +38,19 @@
 			<description>
 				<ul>
 					<li>
-
-						<b>MOXy metadata enhancements:</b>
-						<ul>
-							<li>
-								<a
-									href="http://wiki.eclipse.org//EclipseLink/Examples/MOXy/GettingStarted">
-									Standard or extended JAXB mappings configurable with
-									annotations or XML
-								</a>
-							</li>
-							<li>
-								<a
-									href="http://wiki.eclipse.org//EclipseLink/DesignDocs/317962/Phase3"
-									title="EclipseLink/DesignDocs/317962/Phase3">MOXy equivalent support provided for corresponding JPA
-									Annotations</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a
-							href="http://wiki.eclipse.org//EclipseLink/UserGuide/MOXy/Runtime/Bootstrapping_Dynamic">
-							<b>Dynamic MOXy</b>
-							: JAXB without classes
+						<a href="http://wiki.eclipse.org/EclipseLink/Development/339371">
+							<b>Extensible Beans</b>
+							: Add XML Bindings on-the-fly
 						</a>
 					</li>
 					<li>
-						<a
-							href="http://wiki.eclipse.org//EclipseLink/Examples/MOXy/Spring/JAXBAnnotations">
-							MOXy JAXB in the
-							<b>Spring Framework</b>
-							Example
+						<a href="http://wiki.eclipse.org/EclipseLink/Development/339373">
+							<b>Multiple Binding Files</b>
+							: Greater flexibility for complex domains
 						</a>
 					</li>
 					<li>
-						<a
-							href="http://wiki.eclipse.org//EclipseLink/Examples/REST/GettingStarted">
-							<b>RESTful web service</b>
-							JPA &amp; JAXB Example
-						</a>
+						External Metadata Source: ...
 					</li>
 				</ul>
 			</description>
@@ -98,35 +59,7 @@
 		<section name="DBWS">
 			<description>
 				<ul>
-					<li>
-						Build a DBWS service by retrieving Custom SQL result-set metadata
-						at design time....
-						<i>
-							<a
-								href="http://wiki.eclipse.org/EclipseLink/Examples/DBWS/DBWSBasicSQL">learn
-								more</a>
-						</i>
-					</li>
-					<li>
-						DBWS Update operation now supporting
-						<b>Sparse Merges</b>
-					</li>
-					<li>
-						Run a DBWS service in an OSGi environment....
-						<i>
-							<a href="http://wiki.eclipse.org/EclipseLink/Development/DBWS/OSGi">
-								learn more</a>
-						</i>
-					</li>
-					<li>
-						Run an EclipseLink D/B web service using Java SE 6's
-						container-less Endpoint API....
-						<i>
-							<a
-								href="http://wiki.eclipse.org/EclipseLink/Examples/DBWS/AdvancedJavase6Containerless">
-								learn more</a>
-						</i>
-					</li>
+					<li>JAX-RS infrastructure</li>
 				</ul>
 			</description>
 		</section>
@@ -391,7 +324,8 @@
 	<section class="sideitem">
 
 		<description>
-			<img src="http://www.eclipse.org/indigo/images/indigologo.png" width="100%" />
+			<img src="http://www.eclipse.org/indigo/images/indigologo.png"
+				width="100%" />
 			<h6 style="text-align:center">
 				<a href="/eclipselink/downloads/2.3.0">
 					<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
