@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sections title="EclipseLink 2.2.0">
+<sections title="EclipseLink 2.3.0">
 
 	<section class="title">
 		<description>
-			<h1 style="text-valign:center;size:+5">
+			<h1 style="text-valign:center;text-size:+5">
 				<img src="/eclipselink/images/logo.jpg" border="0" alt="EclipseLink" />
 				2.3.0 (Indigo)
 			</h1>
