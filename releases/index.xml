@@ -65,12 +65,13 @@
 	<section class="sideitem">
 
 		<description>
-			<div style="text-align:center">
+			<h6 style="text-align:center">
 				<a href="/eclipselink/downloads">
 					<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
-						border="0" />Downloads
+						border="0" />
+					Downloads
 				</a>
-			</div>
+			</h6>
 		</description>
 
 	</section>
