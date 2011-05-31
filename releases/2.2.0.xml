@@ -55,31 +55,21 @@
 			<description>
 				<ul>
 					<li>
-						MOXy
-						<b>XML metadata</b>
-						and
-						<b>annotation support</b>
+
+						<b>MOXy metadata enhancements:</b>
 						<ul>
 							<li>
-								Standard JAXB and advanced MOXy mappings configurable with MOXy
-								annotations or XML metadata....
-								<i>
-									<a
-										href="http://wiki.eclipse.org//EclipseLink/Examples/MOXy/GettingStarted">
-										learn
-										more</a>
-								</i>
-
+								<a
+									href="http://wiki.eclipse.org//EclipseLink/Examples/MOXy/GettingStarted">
+									Standard or extended JAXB mappings configurable with
+									annotations or XML
+								</a>
 							</li>
 							<li>
-								MOXy equivalent support provided for corresponding JPA
-								Annotations....
-								<i>
-									<a
-										href="http://wiki.eclipse.org//EclipseLink/DesignDocs/317962/Phase3"
-										title="EclipseLink/DesignDocs/317962/Phase3">learn
-										more</a>
-								</i>
+								<a
+									href="http://wiki.eclipse.org//EclipseLink/DesignDocs/317962/Phase3"
+									title="EclipseLink/DesignDocs/317962/Phase3">MOXy equivalent support provided for corresponding JPA
+									Annotations</a>
 							</li>
 						</ul>
 					</li>
@@ -405,7 +395,7 @@
 	<section class="sideitem">
 
 		<description>
-			<img src="http://wiki.eclipse.org/images/7/75/Helios.jpg" width="100%"/>
+			<img src="http://wiki.eclipse.org/images/7/75/Helios.jpg" width="100%" />
 			<h6 style="text-align:center">
 				<a href="/eclipselink/downloads/2.2.0">
 					<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
