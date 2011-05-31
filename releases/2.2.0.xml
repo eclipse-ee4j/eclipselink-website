@@ -405,7 +405,7 @@
 	<section class="sideitem">
 
 		<description>
-			<img src="http://wiki.eclipse.org/images/7/75/Helios.jpg" width="100"/>
+			<img src="http://wiki.eclipse.org/images/7/75/Helios.jpg" width="100%"/>
 			<h6 style="text-align:center">
 				<a href="/eclipselink/downloads/2.2.0">
 					<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
