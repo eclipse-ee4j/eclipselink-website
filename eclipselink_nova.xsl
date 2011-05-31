@@ -80,6 +80,7 @@
 		<div class='sideitem' style="text-align:center">
 			<xsl:apply-templates select="description" mode="body" />
 			<xsl:apply-templates />
+			<!-- 
 			<p />
 			<h6 style="text-align:center">
 				<a href="http://wiki.eclipse.org/EclipseLink">
@@ -94,6 +95,7 @@
 						src="http://dev.eclipse.org/custom_icons/system-search-bw.png" />
 				</form>
 			</h6>
+			 -->
 		</div>
 
 	</xsl:template>

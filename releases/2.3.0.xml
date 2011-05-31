@@ -31,12 +31,6 @@
 				<li>
 					External Metadata Source: ...
 					</li>
-				<li>
-					<a href="http://wiki.eclipse.org/EclipseLink/Examples/MySports">
-						<b>MySports Example</b>
-						: New example showing new 2.3 feature set
-					</a>
-				</li>
 			</ul>
 
 			<h4>MOXy: XML Binding</h4>
@@ -58,9 +52,14 @@
 					</li>
 			</ul>
 
-			<h4>DBWS: Database Web Services</h4>
+			<h4>Examples</h4>
 			<ul>
-				<li>JAX-RS infrastructure</li>
+				<li>
+					<a href="http://wiki.eclipse.org/EclipseLink/Examples/MySports">
+						<b>MySports Example</b>
+						: New example showing new 2.3 feature set
+					</a>
+				</li>
 			</ul>
 
 			<h4>Support Standards</h4>
