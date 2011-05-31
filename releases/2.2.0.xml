@@ -28,11 +28,24 @@
 						<a
 							href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Performance/Performance_Monitoring_and_Profiling/Performance_Monitoring">New Performance Monitor</a>
 					</li>
-					<li><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Indexes">Index Generation</a></li>
-					<li><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Schema_Generation/Appending_strings_to_CREATE_TABLE_statements">CREATE TABLE customization</a></li>
-					<li><a href="http://wiki.eclipse.org/EclipseLink/DesignDocs/324341">Database CascadeOnDelete Support</a></li>
-					<li><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Querying/Additional_Criteria">AdditionalCriteria: Limit/Filter all query results</a></li>
-					<li><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Data_Partitioning">PartitioningPolicy: Partition row data across tables</a></li>
+					<li>
+						<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Indexes">Index Generation</a>
+					</li>
+					<li>
+						<a
+							href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Schema_Generation/Appending_strings_to_CREATE_TABLE_statements">CREATE TABLE customization</a>
+					</li>
+					<li>
+						<a href="http://wiki.eclipse.org/EclipseLink/DesignDocs/324341">Database CascadeOnDelete Support</a>
+					</li>
+					<li>
+						<a
+							href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Querying/Additional_Criteria">AdditionalCriteria: Limit/Filter all query results</a>
+					</li>
+					<li>
+						<a
+							href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Data_Partitioning">PartitioningPolicy: Partition row data across tables</a>
+					</li>
 				</ul>
 			</description>
 		</section>
@@ -40,7 +53,66 @@
 		<section name="MOXy">
 			<description>
 				<ul>
-					<li></li>
+					<li>
+						MOXy
+						<b>XML metadata</b>
+						and
+						<b>annotation support</b>
+						<ul>
+							<li>
+								Standard JAXB and advanced MOXy mappings configurable with MOXy
+								annotations or XML metadata....
+								<i>
+									<a
+										href="http://wiki.eclipse.org//EclipseLink/Examples/MOXy/GettingStarted">
+										learn
+										more</a>
+								</i>
+
+							</li>
+							<li>
+								MOXy equivalent support provided for corresponding JPA
+								Annotations....
+								<i>
+									<a
+										href="http://wiki.eclipse.org//EclipseLink/DesignDocs/317962/Phase3"
+										title="EclipseLink/DesignDocs/317962/Phase3">learn
+										more</a>
+								</i>
+							</li>
+						</ul>
+					</li>
+					<li>
+						Full
+						<b>Dynamic MOXy</b>
+						support....
+						<i>
+							<a
+								href="http://wiki.eclipse.org//EclipseLink/UserGuide/MOXy/Runtime/Bootstrapping_Dynamic">
+								learn more</a>
+						</i>
+					</li>
+					<li>
+						Using EclipseLink JAXB with the
+						<b>Spring Framework</b>
+						....
+						<i>
+							<a
+								href="http://wiki.eclipse.org//EclipseLink/Examples/MOXy/Spring/JAXBAnnotations">
+								learn more</a>
+						</i>
+
+					</li>
+					<li>
+						Use EclipseLink JPA &amp; JAXB to create a
+						<b>RESTful web service</b>
+						....
+						<i>
+							<a
+								href="http://wiki.eclipse.org//EclipseLink/Examples/REST/GettingStarted">
+								learn more</a>
+						</i>
+					</li>
 				</ul>
 			</description>
 		</section>
@@ -48,16 +120,52 @@
 		<section name="DBWS">
 			<description>
 				<ul>
-					<li></li>
+					<li>
+						Build a DBWS service by retrieving Custom SQL result-set metadata
+						at design time....
+						<i>
+							<a
+								href="http://wiki.eclipse.org/EclipseLink/Examples/DBWS/DBWSBasicSQL">learn
+								more</a>
+						</i>
+					</li>
+					<li>
+						DBWS Update operation now supporting
+						<b>Sparse Merges</b>
+					</li>
+					<li>
+						Run a DBWS service in an OSGi environment....
+						<i>
+							<a href="http://wiki.eclipse.org/EclipseLink/Development/DBWS/OSGi">
+								learn more</a>
+						</i>
+					</li>
+					<li>
+						Run an EclipseLink D/B web service using Java SE 6's
+						container-less Endpoint API....
+						<i>
+							<a
+								href="http://wiki.eclipse.org/EclipseLink/Examples/DBWS/AdvancedJavase6Containerless">
+								learn more</a>
+						</i>
+					</li>
 				</ul>
 			</description>
 		</section>
-		
+
 		<section name="Supported Standards">
 			<description>
 				<ul>
-					<li>JPA 2.0 (<a href="http://www.jcp.org/en/jsr/detail?id=317">JSR 317</a>)</li>
-					<li>JAXB 2.2 (<a href="http://jcp.org/en/jsr/detail?id=222"></a>)</li>
+					<li>
+						JPA 2.0 (
+						<a href="http://www.jcp.org/en/jsr/detail?id=317">JSR 317</a>
+						)
+					</li>
+					<li>
+						JAXB 2.2 (
+						<a href="http://jcp.org/en/jsr/detail?id=222"></a>
+						)
+					</li>
 					<li>SDO 2.1.1</li>
 				</ul>
 			</description>
@@ -66,12 +174,132 @@
 	</section>
 
 	<section class="main" name="Resolved Issues">
+		<description>
+			<p>In addition to the features highlighted in the New and Noteworthy
+				section this release also includes a substantial number of bug fixes
+				and enhancement requests. </p>
+			<ul>
+				<li>
+					<a
+						href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.2%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;target_milestone=2.2.0;product=EclipseLink;known_name=2.2%20Fixed"
+						class="external text"
+						title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.2%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;target_milestone=2.2.0;product=EclipseLink;known_name=2.2%20Fixed"
+						rel="nofollow">All Fixed Bugs and enhancement requests</a>
+					<dl>
+						<dd>
+							Component:
+							<a
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;component=Foundation;target_milestone=2.2.0;product=EclipseLink;classification=RT"
+								class="external text"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;component=Foundation;target_milestone=2.2.0;product=EclipseLink;classification=RT"
+								rel="nofollow">Foundation</a>
+							,
+							<a
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.2%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=JPA;target_milestone=2.2.0;product=EclipseLink;known_name=2.2%20Fixed"
+								class="external text"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.2%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=JPA;target_milestone=2.2.0;product=EclipseLink;known_name=2.2%20Fixed"
+								rel="nofollow">JPA</a>
+							,
+							<a
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.2%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=MOXy;product=EclipseLink;target_milestone=2.2.0;known_name=2.2%20Fixed"
+								class="external text"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.2%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=MOXy;product=EclipseLink;target_milestone=2.2.0;known_name=2.2%20Fixed"
+								rel="nofollow">MOXy</a>
+							,
+							<a
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.2%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=SDO;target_milestone=2.2.0;product=EclipseLink;known_name=2.2%20Fixed"
+								class="external text"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.2%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=SDO;target_milestone=2.2.0;product=EclipseLink;known_name=2.2%20Fixed"
+								rel="nofollow">SDO</a>
+							,
+							<a
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.2%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=DBWS;product=EclipseLink;target_milestone=2.2.0;known_name=2.2%20Fixed"
+								class="external text"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.2%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=DBWS;product=EclipseLink;target_milestone=2.2.0;known_name=2.2%20Fixed"
+								rel="nofollow">DBWS</a>
+							,
+							<a
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.2%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Utils;target_milestone=2.2.0;product=EclipseLink;known_name=2.2%20Fixed"
+								class="external text"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.2%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Utils;target_milestone=2.2.0;product=EclipseLink;known_name=2.2%20Fixed"
+								rel="nofollow">Utils</a>
+							,
+							<a
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.2%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Examples;target_milestone=2.2.0;product=EclipseLink;known_name=2.2%20Fixed"
+								class="external text"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.2%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Examples;target_milestone=2.2.0;product=EclipseLink;known_name=2.2%20Fixed"
+								rel="nofollow">Examples</a>
+							,
+							<a
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.2%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Documentation;target_milestone=2.2.0;product=EclipseLink;known_name=2.2%20Fixed"
+								class="external text"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.2%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Documentation;target_milestone=2.2.0;product=EclipseLink;known_name=2.2%20Fixed"
+								rel="nofollow">Documentation</a>
+						</dd>
+					</dl>
+				</li>
+			</ul>
+		</description>
 	</section>
 
 	<section class="main" name="Known Issues">
 	</section>
 
 	<section class="main" name="Deprecated Functionality">
+		<description>
+			<p>In EclipseLink 2.2 the following features/API have been
+				deprecated. Please upgrade to the suggested alternatives to avoid
+				issues in the future when these deprecated features/AIP might be
+				removed. </p>
+			<table
+				style="font-family: Tahoma,Verdana,Helvetica,sans-serif; font-size: 100%; border-color: rgb(204, 204, 204); border-collapse: collapse; padding: 5px 10px; color: black;"
+				border="1" cellpadding="5" cellspacing="0">
+
+				<tbody>
+					<tr
+						style="background: none repeat scroll 0% 0% rgb(238, 238, 238); color: rgb(102, 102, 102);">
+						<th> Summary</th>
+						<th> Details</th>
+					</tr>
+
+					<tr>
+						<td> ObjectCopyPolicy</td>
+						<td>
+							The
+							<a href="http://javadoc" class="external text" title="http://javadoc"
+								rel="nofollow">ObjectCopyPolicy</a>
+							has been replaced with the
+							<a href="http://javadoc" class="external text" title="http://javadoc"
+								rel="nofollow">CopyGroup</a>
+							. The full API from ObjectCopyPolicy is supported by CopyGroup
+							requiring only a minor class name change in user code.
+						</td>
+					</tr>
+					<tr>
+						<td> ObjectLevelReadQuery.addPartialAttribute</td>
+						<td> Partial attribute queries have been deprecated and replaced
+							with the use of FetchGroup</td>
+					</tr>
+
+					<tr>
+						<td> ReadObjectQuery.selectionKey (Vector)</td>
+						<td>
+							Replaced with the use of an object for single part keys and a
+							CacheId for composite keys. The replacement API is:
+							<a href="http://javadoc" class="external text" title="http://javadoc"
+								rel="nofollow">ReadObjectQuery#selectionId</a>
+						</td>
+					</tr>
+					<tr>
+						<td> BasicMap, BasicCollection, CollectionTable</td>
+						<td> Deprecated in 2.0, these native mappings and supported
+							configuration annotations are now supported by JPA 2.0's
+							ElementCollection mapping and supported configuration annotations
+							and orm.xml.</td>
+					</tr>
+				</tbody>
+			</table>
+		</description>
 	</section>
 
 	<section class="main" name="Retention Policy">

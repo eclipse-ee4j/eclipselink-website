@@ -18,29 +18,43 @@
 					<th>Links</th>
 				</tr>
 				<tr>
-					<td><a href="http://wiki.eclipse.org/EclipseLink/Release/2.2.0">2.2.0 - Helios</a></td>
+					<td>
+						<a href="2.2.0.php">2.2.0 - Helios</a>
+					</td>
 					<td> February 22, 2011</td>
 					<td>
-						<a href="http://wiki.eclipse.org/EclipseLink/Release/2.2.0">Details</a>, 
-						<a href="http://www.eclipse.org/eclipselink/downloads/index.php">Download</a>, 
+						<a href="2.2.0.php">Details</a>
+						,
+						<a href="http://www.eclipse.org/eclipselink/downloads/index.php">Download</a>
+						,
 						<a href="http://www.eclipse.org/eclipselink/api/2.2/index.html">Java Docs</a>
 					</td>
 				</tr>
 				<tr>
-					<td><a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.2">2.1.2</a></td>
+					<td>
+						<a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.2">2.1.2</a>
+					</td>
 					<td> December 13, 2010</td>
 					<td>
-						<a href="http://wiki.eclipse.org/EclipseLink/Release/2.2.0">Details</a>, 
-						<a href="http://www.eclipse.org/eclipselink/downloads/previous_releases.php#2.1.2">Download</a>, 
+						<a href="http://wiki.eclipse.org/EclipseLink/Release/2.2.0">Details</a>
+						,
+						<a
+							href="http://www.eclipse.org/eclipselink/downloads/previous_releases.php#2.1.2">Download</a>
+						,
 						<a href="http://www.eclipse.org/eclipselink/api/2.1/index.html">Java Docs</a>
 					</td>
 				</tr>
 				<tr>
-					<td><a href="http://wiki.eclipse.org/EclipseLink/Release/1.1.4">1.1.4</a></td>
+					<td>
+						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.1.4">1.1.4</a>
+					</td>
 					<td> September 9, 2010</td>
 					<td>
-						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.1.4">Details</a>, 
-						<a href="http://www.eclipse.org/eclipselink/downloads/previous_releases.php#1.1.4">Download</a>,  
+						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.1.4">Details</a>
+						,
+						<a
+							href="http://www.eclipse.org/eclipselink/downloads/previous_releases.php#1.1.4">Download</a>
+						,
 						<a href="http://www.eclipse.org/eclipselink/api/1.1/index.html">Java Docs</a>
 					</td>
 				</tr>
@@ -54,8 +68,7 @@
 			<div style="text-align:center">
 				<a href="/eclipselink/downloads">
 					<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
-						border="0" />
-					<h2>Downloads</h2>
+						border="0" />Downloads
 				</a>
 			</div>
 		</description>
