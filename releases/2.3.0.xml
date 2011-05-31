@@ -29,8 +29,8 @@
 					<li>
 						External Metadata Source: ...
 					</li>
-					<li>
-						<b>MySports Example: New example showing new 2.3 feature set</b>
+					<li><a href="http://wiki.eclipse.org/EclipseLink/Examples/MySports">
+						<b>MySports Example</b>: New example showing new 2.3 feature set</a>
 					</li>
 				</ul>
 			</description>
