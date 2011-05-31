@@ -414,16 +414,18 @@
 	<section class="sideitem">
 
 		<description>
-				<h6 style="text-align:center">
-					<a href="/eclipselink/downloads/2.2.0">
-						<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
-							border="0" />
-						Download 2.2.0
-					</a>
-				</h6>
-				<h6 style="text-align:center">
-					<a href="/eclipselink/releases/index.php">Other Releases</a>
-				</h6>
+			<h6 style="text-align:center">
+				<a href="/eclipselink/downloads/2.2.0">
+					<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
+						border="0" />
+					Download 2.2.0
+					<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
+						border="0" />
+				</a>
+			</h6>
+			<p style="text-align:center">
+				<a href="/eclipselink/releases/index.php">Other Releases</a>
+			</p>
 		</description>
 
 	</section>

@@ -20,13 +20,16 @@
 		</div>
 
 		<script type="text/javascript">
-			var gaJsHost = (("https:" == document.location.protocol) ?
+			var gaJsHost = (("https:" ==
+			document.location.protocol) ?
 			"https://ssl." : "http://www.");
-			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js'
+			document.write(unescape("%3Cscript src='" + gaJsHost +
+			"google-analytics.com/ga.js'
 			type='text/javascript'%3E%3C/script%3E"));
 </script>
 		<script type="text/javascript">
-			var pageTracker = _gat._getTracker("UA-1608008-2");
+			var pageTracker =
+			_gat._getTracker("UA-1608008-2");
 			pageTracker._initData();
 			pageTracker._trackPageview();
 </script>
@@ -84,19 +87,12 @@
 					</a>
 				<br />
 
-				<table>
-					<tr>
-						<td style="text-align:center">
-							<form action="http://www.google.com/cse" id="cse-search-box">
-								<input type="hidden" name="cx"
-									value="002128250543942842320:qffgtrd2s3k" />
-								<input type="text" name="q" size="20" maxlength="2048" />
-								<input type="image" name="sa" alt="Search"
-									src="http://dev.eclipse.org/custom_icons/system-search-bw.png" />
-							</form>
-						</td>
-					</tr>
-				</table>
+				<form action="http://www.google.com/cse" id="cse-search-box">
+					<input type="hidden" name="cx" value="002128250543942842320:qffgtrd2s3k" />
+					<input type="text" name="q" size="20" maxlength="2048" />
+					<input type="image" name="sa" alt="Search"
+						src="http://dev.eclipse.org/custom_icons/system-search-bw.png" />
+				</form>
 			</h6>
 		</div>
 
