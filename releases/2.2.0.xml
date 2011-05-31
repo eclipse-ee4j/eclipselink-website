@@ -84,35 +84,26 @@
 						</ul>
 					</li>
 					<li>
-						Full
-						<b>Dynamic MOXy</b>
-						support....
-						<i>
-							<a
-								href="http://wiki.eclipse.org//EclipseLink/UserGuide/MOXy/Runtime/Bootstrapping_Dynamic">
-								learn more</a>
-						</i>
+						<a
+							href="http://wiki.eclipse.org//EclipseLink/UserGuide/MOXy/Runtime/Bootstrapping_Dynamic">
+							<b>Dynamic MOXy</b>
+							: JAXB without classes
+						</a>
 					</li>
 					<li>
-						Using EclipseLink JAXB with the
-						<b>Spring Framework</b>
-						....
-						<i>
-							<a
-								href="http://wiki.eclipse.org//EclipseLink/Examples/MOXy/Spring/JAXBAnnotations">
-								learn more</a>
-						</i>
-
+						<a
+							href="http://wiki.eclipse.org//EclipseLink/Examples/MOXy/Spring/JAXBAnnotations">
+							MOXy JAXB in the
+							<b>Spring Framework</b>
+							Example
+						</a>
 					</li>
 					<li>
-						Use EclipseLink JPA &amp; JAXB to create a
-						<b>RESTful web service</b>
-						....
-						<i>
-							<a
-								href="http://wiki.eclipse.org//EclipseLink/Examples/REST/GettingStarted">
-								learn more</a>
-						</i>
+						<a
+							href="http://wiki.eclipse.org//EclipseLink/Examples/REST/GettingStarted">
+							<b>RESTful web service</b>
+							JPA &amp; JAXB Example
+						</a>
 					</li>
 				</ul>
 			</description>
@@ -414,7 +405,7 @@
 	<section class="sideitem">
 
 		<description>
-			<img src="http://wiki.eclipse.org/images/7/75/Helios.jpg"/>
+			<img src="http://wiki.eclipse.org/images/7/75/Helios.jpg" />
 			<h6 style="text-align:center">
 				<a href="/eclipselink/downloads/2.2.0">
 					<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
