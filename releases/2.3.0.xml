@@ -29,7 +29,9 @@
 					<li>
 						External Metadata Source: ...
 					</li>
-					<li><b>MySports Example: New example showing new 2.3 feature set</b></li>
+					<li>
+						<b>MySports Example: New example showing new 2.3 feature set</b>
+					</li>
 				</ul>
 			</description>
 		</section>
@@ -321,11 +323,13 @@
 		</description>
 	</section>
 
-	<section class="sideitem">
+	<section class="sideitem" name="Getting Started">
 
 		<description>
-			<img src="http://www.eclipse.org/indigo/images/indigologo.png"
-				width="100%" />
+			<a href="/indigo">
+				<img src="http://www.eclipse.org/indigo/images/indigologo.png"
+					width="100%" />
+			</a>
 			<h6 style="text-align:center">
 				<a href="/eclipselink/downloads/2.3.0">
 					<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
@@ -333,8 +337,6 @@
 					Download 2.3.0
 					<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
 						border="0" />
-				<br/><a href="/eclipselink/api/2.3/index.html">2.3.0 Java Docs</a>
-				<br/><a href="http://wiki.eclipse.org/EclipseLink/Documentation_Center">Documentation</a>
 				</a>
 			</h6>
 			<p style="text-align:center">
