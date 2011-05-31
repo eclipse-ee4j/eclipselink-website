@@ -414,12 +414,16 @@
 
 		<description>
 			<div style="text-align:center">
-				<a href="/eclipselink/downloads/2.2.0">
-					<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
-						border="0" />
-					Download
-				</a>
-				<a href="/eclipselink/releases">All Releases</a>
+				<p>
+					<a href="/eclipselink/downloads/2.2.0">
+						<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
+							border="0" />
+						Download 2.2.0
+					</a>
+				</p>
+				<p>
+					<a href="/eclipselink/releases">All Releases</a>
+				</p>
 			</div>
 		</description>
 
