@@ -23,7 +23,7 @@
 	$Nav->addCustomNav("DBWS", "/eclipselink/dbws.php", "_self", 2);
   
 
- 	$Nav->addNavSeparator("Releases", "/eclipselink/downloads/index.php");
+ 	$Nav->addNavSeparator("Releases", "/eclipselink/releases/index.php");
 	$Nav->addCustomNav("2.2.0", "/eclipselink/releases/2.2.0.php", "_self", 2);
 	$Nav->addCustomNav("All", "/eclipselink/releases/index.php", "_self", 2);
 

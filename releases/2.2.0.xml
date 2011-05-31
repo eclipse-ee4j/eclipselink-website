@@ -400,16 +400,19 @@
 				<a href="/eclipselink/downloads/2.2.0">
 					<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
 						border="0" />
-					2.2.0 Download 
+					2.2.0 Download
 					<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
 						border="0" />
 				</a>
-				<p/><a href="/eclipselink/api/2.2/index.html">2.2.0 Java Docs</a>
-				<p/><a href="http://wiki.eclipse.org/EclipseLink/Documentation_Center">Documentation</a>
 			</h6>
-			<p style="text-align:center">
-				<a href="/eclipselink/releases/index.php">Other Releases</a>
-			</p>
+		</description>
+
+	</section>
+
+	<section class="sideitem" name="Getting Started">
+
+		<description>
+		<h6 style="text-align:center">Getting Started</h6>
 		</description>
 
 	</section>
