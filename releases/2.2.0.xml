@@ -17,8 +17,9 @@
 
 	<section class="main" name="New and Noteworthy">
 
-		<section name="JPA">
+		<section>
 			<description>
+				<h4>JPA: Object-Relational</h4>
 				<ul>
 					<li>
 						<a
@@ -51,8 +52,9 @@
 			</description>
 		</section>
 
-		<section name="MOXy">
+		<section>
 			<description>
+				<h4>MOXy: XML Binding</h4>
 				<ul>
 					<li>
 
@@ -99,8 +101,9 @@
 			</description>
 		</section>
 
-		<section name="DBWS">
+		<section>
 			<description>
+				<h4>DBWS: Database Web Services</h4>
 				<ul>
 					<li>
 						Build a DBWS service by retrieving Custom SQL result-set metadata
