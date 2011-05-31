@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sections title="EclipseLink">
+
+	<section class="title">
+		<description>
+			<h1>
+				<img src="/eclipselink/images/logo.jpg" border="0" alt="EclipseLink" />
+			</h1>
+		</description>
+	</section>
+
+	<section class="main" name="Releases">
+		<description>
+			<table width="100%">
+				<tr style="background:#EEE;color:#666;">
+					<th>Release</th>
+					<th>Date</th>
+					<th>Links</th>
+				</tr>
+				<tr>
+					<td><a href="http://wiki.eclipse.org/EclipseLink/Release/2.2.0">2.2.0</a></td>
+					<td> February 22, 2011</td>
+					<td>
+						<a href="http://wiki.eclipse.org/EclipseLink/Release/2.2.0">Details</a>, 
+						<a href="http://www.eclipse.org/eclipselink/downloads/index.php">Download</a>, 
+						<a href="http://www.eclipse.org/eclipselink/api/2.2/index.html">Java Docs</a>
+					</td>
+				</tr>
+				<tr>
+					<td><a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.2">2.1.2</a></td>
+					<td> December 13, 2010</td>
+					<td>
+						<a href="http://wiki.eclipse.org/EclipseLink/Release/2.2.0">Details</a>, 
+						<a href="http://www.eclipse.org/eclipselink/downloads/previous_releases.php#2.1.2">Download</a>, 
+						<a href="http://www.eclipse.org/eclipselink/api/2.1/index.html">Java Docs</a>
+					</td>
+				</tr>
+				<tr>
+					<td><a href="http://wiki.eclipse.org/EclipseLink/Release/1.1.4">1.1.4</a></td>
+					<td> September 9, 2010</td>
+					<td>
+						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.1.4">Details</a>, 
+						<a href="http://www.eclipse.org/eclipselink/downloads/previous_releases.php#1.1.4">Download</a>,  
+						<a href="http://www.eclipse.org/eclipselink/api/1.1/index.html">Java Docs</a>
+					</td>
+				</tr>
+			</table>
+		</description>
+	</section>
+
+</sections>
