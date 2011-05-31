@@ -48,4 +48,18 @@
 		</description>
 	</section>
 
+	<section class="sideitem">
+
+		<description>
+			<div style="text-align:center">
+				<a href="/eclipselink/downloads">
+					<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
+						border="0" />
+					<h2>Downloads</h2>
+				</a>
+			</div>
+		</description>
+
+	</section>
+
 </sections>

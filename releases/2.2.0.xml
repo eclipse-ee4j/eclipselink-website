@@ -4,19 +4,7 @@
 	<section class="title">
 		<description>
 			<h1>
-				<table width="100%">
-					<tr>
-						<td width="50%">
-							<img src="/eclipselink/images/logo.jpg" border="0"
-								alt="EclipseLink 2.2" />
-						</td>
-						<td width="50%">
-							<img src="http://wiki.eclipse.org/images/7/75/Helios.jpg"
-								border="0" alt="Eclipse Helios" />
-						</td>
-					</tr>
-				</table>
-
+				<img src="/eclipselink/images/logo.jpg" border="0" alt="EclipseLink 2.2" />
 			</h1>
 		</description>
 	</section>
@@ -37,14 +25,44 @@
 			<description>
 				<ul>
 					<li>
-						Monitor persistence performance with the new Performance Monitor
-						...
 						<a
-							href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Performance/Performance_Monitoring_and_Profiling/Performance_Monitoring">learn more</a>
+							href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Performance/Performance_Monitoring_and_Profiling/Performance_Monitoring">New Performance Monitor</a>
 					</li>
+					<li><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Indexes">Index Generation</a></li>
+					<li><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Schema_Generation/Appending_strings_to_CREATE_TABLE_statements">CREATE TABLE customization</a></li>
+					<li><a href="http://wiki.eclipse.org/EclipseLink/DesignDocs/324341">Database CascadeOnDelete Support</a></li>
+					<li><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Querying/Additional_Criteria">AdditionalCriteria: Limit/Filter all query results</a></li>
+					<li><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Data_Partitioning">PartitioningPolicy: Partition row data across tables</a></li>
 				</ul>
 			</description>
 		</section>
+
+		<section name="MOXy">
+			<description>
+				<ul>
+					<li></li>
+				</ul>
+			</description>
+		</section>
+
+		<section name="DBWS">
+			<description>
+				<ul>
+					<li></li>
+				</ul>
+			</description>
+		</section>
+		
+		<section name="Supported Standards">
+			<description>
+				<ul>
+					<li>JPA 2.0 (<a href="http://www.jcp.org/en/jsr/detail?id=317">JSR 317</a>)</li>
+					<li>JAXB 2.2 (<a href="http://jcp.org/en/jsr/detail?id=222"></a>)</li>
+					<li>SDO 2.1.1</li>
+				</ul>
+			</description>
+		</section>
+
 	</section>
 
 	<section class="main" name="Resolved Issues">
