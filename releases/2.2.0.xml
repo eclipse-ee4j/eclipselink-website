@@ -336,9 +336,9 @@
 			<div style="text-align:center">
 				<a href="/eclipselink/downloads/2.2.0">
 					<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
-						border="0" />
-					<h2>Download</h2>
+						border="0" />Download
 				</a>
+				<a href="/eclipselink/releases">All Releases</a>
 			</div>
 		</description>
 
