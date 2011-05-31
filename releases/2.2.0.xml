@@ -3,7 +3,7 @@
 
 	<section class="title">
 		<description>
-			<h1>
+			<h1 style="text-valign:center;size:+2">
 				<img src="/eclipselink/images/logo.jpg" border="0" alt="EclipseLink" />
 				2.2.0
 			</h1>
