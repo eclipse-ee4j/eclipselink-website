@@ -404,8 +404,8 @@
 					<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
 						border="0" />
 				</a>
-				<br/><a href="/eclipselink/api/2.2/index.html">2.2.0 Java Docs</a>
-				<br/><a href="http://wiki.eclipse.org/EclipseLink/Documentation_Center">Documentation</a>
+				<p/><a href="/eclipselink/api/2.2/index.html">2.2.0 Java Docs</a>
+				<p/><a href="http://wiki.eclipse.org/EclipseLink/Documentation_Center">Documentation</a>
 			</h6>
 			<p style="text-align:center">
 				<a href="/eclipselink/releases/index.php">Other Releases</a>
