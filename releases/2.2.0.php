@@ -1,5 +1,5 @@
 <?php  																														require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());    # All on the same line to unclutter the user's desktop'
-$pageKeywords	= "EclipseLink Releases";
+$pageKeywords	= "EclipseLink 2.2 release";
 $pageAuthor		= "Shaun Smith, Doug Clarke based on work by Bob Fraser";
 
 $root = $_SERVER['DOCUMENT_ROOT'];
@@ -7,7 +7,7 @@ require_once ($root . '/eclipselink/common_nova.php');
 
 # Generate the web page
 // Load the XML source
-$xml = DOMDocument::load('index.xml');
+$xml = DOMDocument::load('2.2.0.xml');
 
 //Set the page title
 $xpath = new DOMXPath($xml);

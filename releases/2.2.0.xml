@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sections title="EclipseLink">
+
+	<section class="title">
+		<description>
+			<h1>
+				<table width="100%">
+					<tr>
+						<td width="50%">
+							<img src="/eclipselink/images/logo.jpg" border="0"
+								alt="EclipseLink 2.2" />
+						</td>
+						<td width="50%">
+							<img src="http://wiki.eclipse.org/images/7/75/Helios.jpg"
+								border="0" alt="Eclipse Helios" />
+						</td>
+					</tr>
+				</table>
+
+			</h1>
+		</description>
+	</section>
+
+	<section class="main" name="2.2.0 Release">
+		<description>
+			<p>The EclipseLink 2.2 release focuses on providing advanced
+				persistence features for user of relational, XML and Web Services to
+				expose extended persistence features that naturally extend the
+				industry standards in these spaces. As well as these new features, a
+				great emphasis was placed on bug fixing in this release. </p>
+		</description>
+	</section>
+
+	<section class="main" name="New and Noteworthy">
+
+		<section name="JPA">
+			<description>
+				<ul>
+					<li>
+						Monitor persistence performance with the new Performance Monitor
+						...
+						<a
+							href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Performance/Performance_Monitoring_and_Profiling/Performance_Monitoring">learn more</a>
+					</li>
+				</ul>
+			</description>
+		</section>
+	</section>
+
+	<section class="main" name="Resolved Issues">
+	</section>
+
+	<section class="main" name="Known Issues">
+	</section>
+
+	<section class="main" name="Deprecated Functionality">
+	</section>
+
+	<section class="main" name="Retention Policy">
+		<description>
+			<p>
+				The EclipseLink 2.2 release will remain available for download
+				from
+				the
+				<a href="/eclipselink/downloads/index.php">primary download page</a>
+				until the next release is shipped. At
+				that point it will be moved to
+				the
+				<a href="/eclipselink/downloads/previous_releases.php">previous releases</a>
+				page where it remain
+				for a minimum period of 2 years before becoming
+				available for archival.
+			</p>
+		</description>
+	</section>
+
+	<section class="main" name="Future Releases">
+		<description>
+			<p>
+				For more information about future planned EclipseLink releases and
+				patch sets please refer to the releases section of the
+				<a href="/projects/project_summary.php?projectid=rt.eclipselink">project summary. </a>
+			</p>
+		</description>
+	</section>
+
+	<section class="sideitem">
+
+		<description>
+			<div style="text-align:center">
+				<a href="/eclipselink/downloads/2.2.0">
+					<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
+						border="0" />
+					<h2>Download</h2>
+				</a>
+			</div>
+		</description>
+
+	</section>
+
+</sections>
