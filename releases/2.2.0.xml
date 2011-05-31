@@ -392,29 +392,36 @@
 		</description>
 	</section>
 
-	<section class="sideitem">
-
-		<description>
-			<img src="http://wiki.eclipse.org/images/7/75/Helios.jpg" width="100%" />
-			<h6 style="text-align:center">
-				<a href="/eclipselink/downloads/2.2.0">
-					<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
-						border="0" />
-					2.2.0 Download
-					<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
-						border="0" />
-				</a>
-			</h6>
-		</description>
-
-	</section>
-
 	<section class="sideitem" name="Getting Started">
 
 		<description>
-		<h6 style="text-align:center">Getting Started</h6>
+			<a href="/helios">
+				<img src="http://wiki.eclipse.org/images/7/75/Helios.jpg" width="100%" />
+			</a>
+			<ul>
+				<li>
+					<a href="/eclipselink/downloads/2.2.0">
+						Download 2.2.0
+						<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
+							border="0" />
+					</a>
+				</li>
+				<ul>
+					<li>
+						<a
+							href="http://wiki.eclipse.org/EclipseLink/Installing_and_Configuring_EclipseLink">Install Instructions</a>
+					</li>
+				</ul>
+				<li>
+					<a href="http://wiki.eclipse.org/EclipseLink/Documentation_Center">Documentation</a>
+				</li>
+				<li>
+					<a href="http://wiki.eclipse.org/EclipseLink/Examples">Examples/Tutorials</a>
+				</li>
+			</ul>
 		</description>
 
 	</section>
+
 
 </sections>
