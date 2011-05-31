@@ -5,13 +5,9 @@
 		<description>
 			<h1 style="text-valign:center;size:+5">
 				<img src="/eclipselink/images/logo.jpg" border="0" alt="EclipseLink" />
-				2.2.0 (Helios)
+				2.3.0 (Indigo)
 			</h1>
-			<p>The EclipseLink 2.2 release focuses on providing advanced
-				persistence features for user of relational, XML and Web Services to
-				expose extended persistence features that naturally extend the
-				industry standards in these spaces. As well as these new features, a
-				great emphasis was placed on bug fixing in this release. </p>
+			<p>The EclipseLink 2.3 release focuses on ... </p>
 		</description>
 	</section>
 
@@ -395,12 +391,12 @@
 	<section class="sideitem">
 
 		<description>
-			<img src="http://wiki.eclipse.org/images/7/75/Helios.jpg" width="100%" />
+			<img src="http://www.eclipse.org/indigo/images/indigologo.png" width="100%" />
 			<h6 style="text-align:center">
-				<a href="/eclipselink/downloads/2.2.0">
+				<a href="/eclipselink/downloads/2.3.0">
 					<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
 						border="0" />
-					Download 2.2.0
+					Download 2.3.0
 					<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
 						border="0" />
 				</a>
