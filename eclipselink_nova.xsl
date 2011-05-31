@@ -90,7 +90,7 @@ pageTracker._trackPageview();
 					<input type="text" name="q" size="24"
 						maxlength="2048" />
 					<br />
-					<input type="submit" name="sa" value="Search" />
+					<input type="submit" name="sa" alt="Search" src="http://dev.eclipse.org/custom_icons/system-search-bw.png"/>
 				</form>
 				</td></tr></table>
 		</div>
