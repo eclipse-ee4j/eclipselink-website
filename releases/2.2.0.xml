@@ -243,6 +243,86 @@
 	</section>
 
 	<section class="main" name="Known Issues">
+		<description>
+			<p>
+				The following are known issues that have been identified as
+				potentially effecting users of EclipseLink 2.2. For a list of all
+				open bugs and enhancement requests please see the queries at
+				<a href="http:/wiki.eclipse.org/EclipseLink/Bugs">EclipseLink/Bugs</a>
+
+			</p>
+			<a name="JPA_2"></a>
+			<h3>
+				<span class="mw-headline">JPA </span>
+			</h3>
+			<ul>
+				<li>
+					<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=263944"
+						class="external text" title="https://bugs.eclipse.org/bugs/show_bug.cgi?id=263944"
+						rel="nofollow">263944</a>
+					- Removed an unmapped access element from the transformation
+					element of the eclipselink orm schema. The correct access attribute
+					metadata remains and should be the one that is used. See the bug
+					for more details.
+				</li>
+				<li>
+					<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=331234"
+						class="external text" title="https://bugs.eclipse.org/bugs/show_bug.cgi?id=331234"
+						rel="nofollow">331234</a>
+					- Corrected a JPA specification violation surrounding the
+					xml-mapping-metadata-complete flag. The incorrect behavior however
+					may have been employed by some users meaning they could encounter
+					some issues and need to re-configure their xml metadata. See the
+					bug for more details.
+				</li>
+			</ul>
+			<p>
+				<br />
+			</p>
+			<p>The following bug queries can be used by find known issues with
+				specific feature areas. They return bugs reported against 2.2.
+</p>
+			<ul>
+				<li>
+					<a
+						href="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;classification=RT;query_format=advanced;version=2.2.0;product=EclipseLink"
+						class="external text"
+						title="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;classification=RT;query_format=advanced;version=2.2.0;product=EclipseLink"
+						rel="nofollow">All bugs reported against 2.2</a>
+
+					<ul>
+						<li>
+							By Component:
+							<a
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;classification=RT;query_format=advanced;version=2.2.0;component=JPA;product=EclipseLink"
+								class="external text"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;classification=RT;query_format=advanced;version=2.2.0;component=JPA;product=EclipseLink"
+								rel="nofollow">JPA</a>
+							<a
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;version=2.2.0;columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;component=MOXy;product=EclipseLink;classification=RT"
+								class="external text"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;version=2.2.0;columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;component=MOXy;product=EclipseLink;classification=RT"
+								rel="nofollow">MOXy</a>
+							<a
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;classification=RT;query_format=advanced;version=2.2.0;component=SDO;product=EclipseLink"
+								class="external text"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;classification=RT;query_format=advanced;version=2.2.0;component=SDO;product=EclipseLink"
+								rel="nofollow">SDO</a>
+							<a
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;classification=RT;query_format=advanced;version=2.2.0;component=DBWS;product=EclipseLink"
+								class="external text"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;classification=RT;query_format=advanced;version=2.2.0;component=DBWS;product=EclipseLink"
+								rel="nofollow">DBWS</a>
+							<a
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;version=2.2.0;columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;component=Foundation;product=EclipseLink;classification=RT"
+								class="external text"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;version=2.2.0;columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;component=Foundation;product=EclipseLink;classification=RT"
+								rel="nofollow">Foundation</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</description>
 	</section>
 
 	<section class="main" name="Deprecated Functionality">
@@ -336,7 +416,8 @@
 			<div style="text-align:center">
 				<a href="/eclipselink/downloads/2.2.0">
 					<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
-						border="0" />Download
+						border="0" />
+					Download
 				</a>
 				<a href="/eclipselink/releases">All Releases</a>
 			</div>
