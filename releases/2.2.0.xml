@@ -4,7 +4,8 @@
 	<section class="title">
 		<description>
 			<h1>
-				<img src="/eclipselink/images/logo.jpg" border="0" alt="EclipseLink" />2.2.0
+				<img src="/eclipselink/images/logo.jpg" border="0" alt="EclipseLink" />
+				2.2.0
 			</h1>
 			<p>The EclipseLink 2.2 release focuses on providing advanced
 				persistence features for user of relational, XML and Web Services to
@@ -27,9 +28,17 @@
 						<a
 							href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Data_Partitioning">PartitioningPolicy: Partition row data across tables</a>
 					</li>
-					<li> Schema Generation Enhancements: 
-						<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Indexes">@Index Generation</a>, 
-						<a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Schema_Generation/Appending_strings_to_CREATE_TABLE_statements">CREATE TABLE customization</a>
+					<li>
+						Schema Generation Enhancements:
+						<ul>
+							<li>
+								<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Indexes">@Index Generation</a>
+							</li>
+							<li>
+								<a
+									href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Schema_Generation/Appending_strings_to_CREATE_TABLE_statements">CREATE TABLE customization</a>
+							</li>
+						</ul>
 					</li>
 					<li>
 						<a href="http://wiki.eclipse.org/EclipseLink/DesignDocs/324341">Database Cascade Delete</a>

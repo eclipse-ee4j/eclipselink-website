@@ -77,9 +77,8 @@ pageTracker._trackPageview();
 			<xsl:apply-templates />		
 				<p/>
 				<h6 style="text-align:center">
-					Search<br/>
 					<a href="http://wiki.eclipse.org/EclipseLink">
-						EclipseLink Wiki
+						Search Wiki
 					</a>
 				</h6>
 				<table><tr><td style="text-align:center">
