@@ -5,7 +5,7 @@
 		<description>
 			<h1 style="text-valign:center;text-size:+5">
 				<img src="/eclipselink/images/logo.jpg" border="0" alt="EclipseLink" />
-				2.2.0 (Helios)
+				2.2.0
 			</h1>
 			<p>The EclipseLink 2.2 release focuses on providing advanced
 				persistence features for user of relational, XML and Web Services to
@@ -138,8 +138,9 @@
 			</description>
 		</section>
 
-		<section name="Supported Standards">
+		<section >
 			<description>
+			<h4>Supported Standards</h4>
 				<ul>
 					<li>
 						JPA 2.0 (
