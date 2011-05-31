@@ -414,18 +414,16 @@
 	<section class="sideitem">
 
 		<description>
-			<div style="text-align:center">
-				<p>
+				<h6 style="text-align:center">
 					<a href="/eclipselink/downloads/2.2.0">
 						<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
 							border="0" />
 						Download 2.2.0
 					</a>
-				</p>
-				<p>
-					<a href="/eclipselink/releases/index.php">All Releases</a>
-				</p>
-			</div>
+				</h6>
+				<h6 style="text-align:center">
+					<a href="/eclipselink/releases/index.php">Other Releases</a>
+				</h6>
 		</description>
 
 	</section>

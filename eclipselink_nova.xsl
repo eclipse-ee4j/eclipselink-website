@@ -4,45 +4,47 @@
 	version="1.0">
 
 	<xsl:template match="/sections">
-			<div id="midcolumn">
-				
-				<xsl:apply-templates select="section[@class='title']"
-					mode="title" />
-				<xsl:apply-templates select="section[@class='main']"
-					mode="main" />
-				<xsl:apply-templates select="section[@class='none']"
-					mode="none" />
-			</div>
-			
-			<div id="rightcolumn" >
-				<xsl:apply-templates select="section[@class='sideitem']"
-					mode="sideitem" />
-			</div>
+		<div id="midcolumn">
 
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+			<xsl:apply-templates select="section[@class='title']"
+				mode="title" />
+			<xsl:apply-templates select="section[@class='main']"
+				mode="main" />
+			<xsl:apply-templates select="section[@class='none']"
+				mode="none" />
+		</div>
+
+		<div id="rightcolumn">
+			<xsl:apply-templates select="section[@class='sideitem']"
+				mode="sideitem" />
+		</div>
+
+		<script type="text/javascript">
+			var gaJsHost = (("https:" == document.location.protocol) ?
+			"https://ssl." : "http://www.");
+			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js'
+			type='text/javascript'%3E%3C/script%3E"));
 </script>
-<script type="text/javascript">
-var pageTracker = _gat._getTracker("UA-1608008-2");
-pageTracker._initData();
-pageTracker._trackPageview();
+		<script type="text/javascript">
+			var pageTracker = _gat._getTracker("UA-1608008-2");
+			pageTracker._initData();
+			pageTracker._trackPageview();
 </script>
 
 	</xsl:template>
 
 	<xsl:template match="section" mode="none">
-			<xsl:if test="@anchor">
-				<a>
-					<xsl:attribute name="name">
+		<xsl:if test="@anchor">
+			<a>
+				<xsl:attribute name="name">
 						<xsl:value-of select="@anchor" />
 					</xsl:attribute>
-				</a>
-			</xsl:if>
-			<xsl:apply-templates select="description" mode="body" />
-			<ul>
-				<xsl:apply-templates />
-			</ul>
+			</a>
+		</xsl:if>
+		<xsl:apply-templates select="description" mode="body" />
+		<ul>
+			<xsl:apply-templates />
+		</ul>
 	</xsl:template>
 
 	<xsl:template match="section" mode="title">
@@ -74,23 +76,28 @@ pageTracker._trackPageview();
 
 		<div class='sideitem' style="text-align:center">
 			<xsl:apply-templates select="description" mode="body" />
-			<xsl:apply-templates />		
-				<p/>
-				<h6 style="text-align:center">
-					<a href="http://wiki.eclipse.org/EclipseLink">
-						Search Wiki
+			<xsl:apply-templates />
+			<p />
+			<h6 style="text-align:center">
+				<a href="http://wiki.eclipse.org/EclipseLink">
+					Search Wiki
 					</a>
-				</h6>
-				<table><tr><td style="text-align:center">
-				<form action="http://www.google.com/cse"
-					id="cse-search-box" >
-					<input type="hidden" name="cx"
-						value="002128250543942842320:qffgtrd2s3k" />
-					<input type="text" name="q" size="20"
-						maxlength="2048" />
-					<input type="image" name="sa" alt="Search" src="http://dev.eclipse.org/custom_icons/system-search-bw.png"/>
-				</form>
-				</td></tr></table>
+				<br />
+
+				<table>
+					<tr>
+						<td style="text-align:center">
+							<form action="http://www.google.com/cse" id="cse-search-box">
+								<input type="hidden" name="cx"
+									value="002128250543942842320:qffgtrd2s3k" />
+								<input type="text" name="q" size="20" maxlength="2048" />
+								<input type="image" name="sa" alt="Search"
+									src="http://dev.eclipse.org/custom_icons/system-search-bw.png" />
+							</form>
+						</td>
+					</tr>
+				</table>
+			</h6>
 		</div>
 
 	</xsl:template>
@@ -178,7 +185,7 @@ pageTracker._trackPageview();
 	</xsl:template>
 
 	<xsl:template match="*|@*|text()" />
-	
-	
+
+
 
 </xsl:stylesheet>
