@@ -13,76 +13,69 @@
 
 	<section class="main" name="New and Noteworthy">
 
-		<section name="JPA">
-			<description>
-				<ul>
-					<li>
-						<a href="http://wiki.eclipse.org/EclipseLink/DesignDocs/Extensibility">
-							<b>Extensible Entities</b>
-							: Add mappings on-the-fly
-						</a>
+		<description>
+			<h4>JPA: Object-Relational</h4>
+			<ul>
+				<li>
+					<a href="http://wiki.eclipse.org/EclipseLink/DesignDocs/Extensibility">
+						<b>Extensible Entities</b>
+						: Add mappings on-the-fly
+					</a>
+				</li>
+				<li>
+					<a
+						href="http://wiki.eclipse.org/EclipseLink/Development/Indigo/Multi-Tenancy">Multitenant: SaaS enable your application</a>
+				</li>
+				<li>
+					External Metadata Source: ...
 					</li>
-					<li>
-						<a
-							href="http://wiki.eclipse.org/EclipseLink/Development/Indigo/Multi-Tenancy">Multitenant: SaaS enable your application</a>
-					</li>
-					<li>
-						External Metadata Source: ...
-					</li>
-					<li><a href="http://wiki.eclipse.org/EclipseLink/Examples/MySports">
-						<b>MySports Example</b>: New example showing new 2.3 feature set</a>
-					</li>
-				</ul>
-			</description>
-		</section>
+				<li>
+					<a href="http://wiki.eclipse.org/EclipseLink/Examples/MySports">
+						<b>MySports Example</b>
+						: New example showing new 2.3 feature set
+					</a>
+				</li>
+			</ul>
 
-		<section name="MOXy">
-			<description>
-				<ul>
-					<li>
-						<a href="http://wiki.eclipse.org/EclipseLink/Development/339371">
-							<b>Extensible Beans</b>
-							: Add XML Bindings on-the-fly
-						</a>
+			<h4>MOXy: XML Binding</h4>
+			<ul>
+				<li>
+					<a href="http://wiki.eclipse.org/EclipseLink/Development/339371">
+						<b>Extensible Beans</b>
+						: Add XML Bindings on-the-fly
+					</a>
+				</li>
+				<li>
+					<a href="http://wiki.eclipse.org/EclipseLink/Development/339373">
+						<b>Multiple Binding Files</b>
+						: Greater flexibility for complex domains
+					</a>
+				</li>
+				<li>
+					External Metadata Source: ...
 					</li>
-					<li>
-						<a href="http://wiki.eclipse.org/EclipseLink/Development/339373">
-							<b>Multiple Binding Files</b>
-							: Greater flexibility for complex domains
-						</a>
-					</li>
-					<li>
-						External Metadata Source: ...
-					</li>
-				</ul>
-			</description>
-		</section>
+			</ul>
 
-		<section name="DBWS">
-			<description>
-				<ul>
-					<li>JAX-RS infrastructure</li>
-				</ul>
-			</description>
-		</section>
+			<h4>DBWS: Database Web Services</h4>
+			<ul>
+				<li>JAX-RS infrastructure</li>
+			</ul>
 
-		<section name="Supported Standards">
-			<description>
-				<ul>
-					<li>
-						JPA 2.0 (
-						<a href="http://www.jcp.org/en/jsr/detail?id=317">JSR 317</a>
-						)
-					</li>
-					<li>
-						JAXB 2.2 (
-						<a href="http://jcp.org/en/jsr/detail?id=222">JSR 222</a>
-						)
-					</li>
-					<li>SDO 2.1.1</li>
-				</ul>
-			</description>
-		</section>
+			<h4>Support Standards</h4>
+			<ul>
+				<li>
+					JPA 2.0 (
+					<a href="http://www.jcp.org/en/jsr/detail?id=317">JSR 317</a>
+					)
+				</li>
+				<li>
+					JAXB 2.2 (
+					<a href="http://jcp.org/en/jsr/detail?id=222">JSR 222</a>
+					)
+				</li>
+				<li>SDO 2.1.1</li>
+			</ul>
+		</description>
 
 	</section>
 
@@ -327,8 +320,7 @@
 
 		<description>
 			<a href="/indigo">
-				<img src="/indigo/images/indigologo_alt.png"
-					width="100%" />
+				<img src="/indigo/images/indigologo_alt.png" width="100%" />
 			</a>
 			<h6 style="text-align:center">Getting Started</h6>
 			<ul>
