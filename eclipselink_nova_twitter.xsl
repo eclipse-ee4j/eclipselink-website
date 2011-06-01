@@ -21,29 +21,30 @@
 			<div id="twtr-search-widget" class="sideitem">
 				<script src="http://widgets.twimg.com/j/1/widget.js"></script>
 				<link href="http://widgets.twimg.com/j/1/widget.css" type="text/css"
-					rel="stylesheet" />
-				<script>
-					new TWTR.Widget({
-					search: 'eclipselink',
-					id: 'twtr-search-widget',
-					loop: true,
-					title: 'What\'s being said about...',
-					subject: 'EclipseLink',
-					width: 278,
-					height: 255,
-					theme: {
-					shell: {
-					background: '#5b5993',
-					color: '#ffffff'
-					},
-					tweets: {
-					background: '#ffffff',
-					color: '#444444',
-					links: '#333366'
-					}
-					}
-					}).render().start();
+					rel="stylesheet">
+					<script>
+						new TWTR.Widget({
+						search: 'eclipselink',
+						id: 'twtr-search-widget',
+						loop: true,
+						title: 'What\'s being said about...',
+						subject: 'EclipseLink',
+						width: 278,
+						height: 255,
+						theme: {
+						shell: {
+						background: '#5b5993',
+						color: '#ffffff'
+						},
+						tweets: {
+						background: '#ffffff',
+						color: '#444444',
+						links: '#333366'
+						}
+						}
+						}).render().start();
 					</script>
+				</link>
 				<font size="-1">
 					Follow:
 					<a href="http://twitter.com/doug_clarke">Doug Clarke</a>
