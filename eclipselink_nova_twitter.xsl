@@ -17,37 +17,35 @@
 		<div id="rightcolumn">
 			<xsl:apply-templates select="section[@class='sideitem']"
 				mode="sideitem" />
+			<div class="sideitem">
+				<h6>Twitter</h6>
+			</div>
 		</div>
-
-		<script type="text/javascript">
-			var gaJsHost = (("https:" ==
-			document.location.protocol) ?
-			"https://ssl." : "http://www.");
-			document.write(unescape("%3Cscript src='" + gaJsHost +
-			"google-analytics.com/ga.js'
-			type='text/javascript'%3E%3C/script%3E"));
+			
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
 </script>
-		<script type="text/javascript">
-			var pageTracker =
-			_gat._getTracker("UA-1608008-2");
-			pageTracker._initData();
-			pageTracker._trackPageview();
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-1608008-2");
+pageTracker._initData();
+pageTracker._trackPageview();
 </script>
 
 	</xsl:template>
 
 	<xsl:template match="section" mode="none">
-		<xsl:if test="@anchor">
-			<a>
-				<xsl:attribute name="name">
+			<xsl:if test="@anchor">
+				<a>
+					<xsl:attribute name="name">
 						<xsl:value-of select="@anchor" />
 					</xsl:attribute>
-			</a>
-		</xsl:if>
-		<xsl:apply-templates select="description" mode="body" />
-		<ul>
-			<xsl:apply-templates />
-		</ul>
+				</a>
+			</xsl:if>
+			<xsl:apply-templates select="description" mode="body" />
+			<ul>
+				<xsl:apply-templates />
+			</ul>
 	</xsl:template>
 
 	<xsl:template match="section" mode="title">
@@ -73,62 +71,6 @@
 				<xsl:apply-templates />
 			</ul>
 		</div>
-	</xsl:template>
-
-	<xsl:template match="section" mode="sideitem">
-
-		<div class='sideitem' style="text-align:center">
-			<xsl:apply-templates select="description" mode="body" />
-			<xsl:apply-templates />
-			<!-- 
-			<p />
-			<h6 style="text-align:center">
-				<a href="http://wiki.eclipse.org/EclipseLink">
-					Search Wiki
-					</a>
-				<br />
-
-				<form action="http://www.google.com/cse" id="cse-search-box">
-					<input type="hidden" name="cx" value="002128250543942842320:qffgtrd2s3k" />
-					<input type="text" name="q" size="25" maxlength="2048" />
-					<input type="image" name="sa" alt="Search"
-						src="http://dev.eclipse.org/custom_icons/system-search-bw.png" />
-				</form>
-			</h6>
-			 -->
-			 <br/>
-			 <h6>Twitter Feed</h6>
-			 <!-- 
-			 			<script src="http://widgets.twimg.com/j/1/widget.js"></script>
-			<link href="http://widgets.twimg.com/j/1/widget.css" type="text/css" rel="stylesheet">
-			<script>
-				new TWTR.Widget({
-				  search: 'eclipselink',
-				  id: 'twtr-search-widget',
-				  loop: true,
-				  title: 'What\'s being said about...',
-				  subject: 'EclipseLink',
-				  width: 'auto',
-				  height: 400,
-				  theme: {
-				    shell: {
-				      background: '#002E62',
-				      color: '#ffffff'
-				    },
-				    tweets: {
-				      background: '#ffffff',
-				      color: '#444444',
-				      links: '#002E62'
-				    }
-				  }
-				}).render().start();
-			</script>
-			</link>
-			<br/><font size=-1>Follow: <a href="http://twitter.com/doug_clarke">Doug Clarke</a> (co-lead)
-			<br/>Follow: <a href="http://twitter.com/shaunmsmith">Shaun Smith</a></font>
-			  -->
-		</div>
-
 	</xsl:template>
 
 	<xsl:template match="section">
@@ -214,7 +156,7 @@
 	</xsl:template>
 
 	<xsl:template match="*|@*|text()" />
-
-
+	
+	
 
 </xsl:stylesheet>

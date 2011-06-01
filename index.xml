@@ -4,18 +4,15 @@
 	<section class="title">
 		<description>
 			<h1>
-				<img src="/eclipselink/images/logo.jpg" border="0" alt="EclipseLink" />
+				<img src="/eclipselink/images/logo.jpg" border="0"
+					alt="EclipseLink: Java Persistence" />
 			</h1>
 			<p style="text-align:justify">
-				The Eclipse Persistence Services Project (EclipseLink)
-				delivers a comprehensive open-source Java persistence
-				solution.
-				EclipseLink focuses on standards with advanced
-				features, performance
-				and scalability for enterprise
-				software developers across data
-				sources, formats, and
-				containers.
+				The EclipseLink project
+				delivers a comprehensive
+				open-source Java persistence
+				solution addressing relational, XML, and
+				database web services. 
 			</p>
 		</description>
 	</section>
@@ -91,9 +88,6 @@
 			link="http://eclipse.dzone.com/articles/introducing-eclipselink">
 			<em>June 30, 2008</em>
 		</section>
-
-		<section name="Conference Presentations"
-			link="http://wiki.eclipse.org/EclipseLink/Presentations" />
 
 	</section>
 
