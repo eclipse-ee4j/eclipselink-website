@@ -13,7 +13,7 @@
 				mode="none" />
 		</div>
 
-<script type="text/javascript" src="http://widgets.twimg.com/j/2/widget.js" />
+<script type="text/javascript" src="http://widgets.twimg.com/j/2/widget.js" ></script>
 
 		<div id="rightcolumn">
 			<xsl:apply-templates select="section[@class='sideitem']"
