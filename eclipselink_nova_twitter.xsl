@@ -19,17 +19,17 @@
 				mode="sideitem" />
 		</div>
 
-		<div id="twtr-search-widget" cklass="sideitem">
+		<div id="twtr-search-widget" class="sideitem">
 			<script src="http://widgets.twimg.com/j/1/widget.js"></script>
 			<link href="http://widgets.twimg.com/j/1/widget.css" type="text/css"
 				rel="stylesheet" />
 			<script>
 				new TWTR.Widget({
-				search: 'mylyn',
+				search: 'eclipselink',
 				id: 'twtr-search-widget',
 				loop: true,
 				title: 'What\'s being said about...',
-				subject: 'Mylyn',
+				subject: 'EclipseLink',
 				width: 278,
 				height: 255,
 				theme: {
@@ -47,9 +47,9 @@
 					</script>
 			<font size=-1>
 				Follow:
-				<a href="http://twitter.com/mik_kersten">Mik Kersten</a>
-				(lead),
-				<a href="http://twitter.com/WikiText">WikiText</a>
+				<a href="http://twitter.com/doug_clarke">Doug Clarke</a>
+				(co-lead),
+				<a href="http://twitter.com/shaunmsmith">Shaun Smith</a>
 			</font>
 		</div>
 
