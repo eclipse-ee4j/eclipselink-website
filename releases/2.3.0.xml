@@ -5,7 +5,7 @@
 		<description>
 			<h1 style="text-valign:center;text-size:+5">
 				<img src="/eclipselink/images/logo.jpg" border="0" alt="EclipseLink" />
-				2.3.0 (Indigo)
+				<font size="+5">2.3.0 (Indigo)</font>
 			</h1>
 			<p>The EclipseLink 2.3 release focuses on increased developer
 				flexibility allowing mapped objects to be extensible and multitenant

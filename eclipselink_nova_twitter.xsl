@@ -13,14 +13,12 @@
 				mode="none" />
 		</div>
 
-<script type="text/javascript" src="http://widgets.twimg.com/j/2/widget.js" ></script>
-
 		<div id="rightcolumn">
 			<xsl:apply-templates select="section[@class='sideitem']"
 				mode="sideitem" />
 
 <div class="sideitem">
-<script>
+<script type="text/javascript" src="http://widgets.twimg.com/j/2/widget.js" >
 new TWTR.Widget({
   version: 2,
   type: 'search',
