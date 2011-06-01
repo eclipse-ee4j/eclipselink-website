@@ -116,6 +116,9 @@
 	<xsl:template match="section" mode="sideitem">
 
 		<div class='sideitem' style="text-align:center">
+			<h6>
+				<xsl:value-of select="@name" />
+			</h6>
 			<xsl:apply-templates select="description" mode="body" />
 			<xsl:apply-templates />
 		</div>

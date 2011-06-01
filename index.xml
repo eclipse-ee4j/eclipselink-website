@@ -124,7 +124,9 @@
 	</section>
 	
 	<section class="sideitem" name="Eclipselink Powered">
-		<section name="Oracle TopLink"/>
+		<section name="Oracle TopLink" link="http://www.oracle.com/technetwork/middleware/toplink/overview/index.html"/>
+		<section name="Oracle WebLogic" link="http://www.oracle.com/technetwork/middleware/weblogic/overview/index.html"/>
+		<section name="GlassFish" link="http://glassfish.java.net/"/>
 	</section>
 
 	<section class="sideitem" name="Twitter 2">
