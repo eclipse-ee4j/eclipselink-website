@@ -98,24 +98,24 @@
 	</section>
 
 	<section class="main" name="Project News">
-         <section name="EclipseLink 2.1.3 Released" link="http://www.eclipse.org/eclipselink/downloads">
-            <em>April 15, 2011</em>
-        </section>
-         <section name="EclipseLink 2.2.0 Released">
-            <em>Feb 22, 2011</em>
-        </section>
-         <section name="EclipseLink 2.1.2 Released">
-            <em>Dec 13, 2010</em>
-        </section>
-        <section name="EclipseLink 2.1.1 Released">
-            <em>Aug 26, 2010</em>
-        </section>
-        <section name="EclipseLink 2.1.0 Released">
-            <em>June 23, 2010</em>
-        </section>
-        <section name="EclipseLink 2.0.2 Released">
-            <em>April 21, 2010</em>
-        </section>
+		<section name="EclipseLink 2.1.3 Released" link="http://www.eclipse.org/eclipselink/downloads">
+			<em>April 15, 2011</em>
+		</section>
+		<section name="EclipseLink 2.2.0 Released">
+			<em>Feb 22, 2011</em>
+		</section>
+		<section name="EclipseLink 2.1.2 Released">
+			<em>Dec 13, 2010</em>
+		</section>
+		<section name="EclipseLink 2.1.1 Released">
+			<em>Aug 26, 2010</em>
+		</section>
+		<section name="EclipseLink 2.1.0 Released">
+			<em>June 23, 2010</em>
+		</section>
+		<section name="EclipseLink 2.0.2 Released">
+			<em>April 21, 2010</em>
+		</section>
 		<section name="EclipseLink 2.0.1 Released">
 			<em>Feb 17, 2010</em>
 		</section>
@@ -132,56 +132,47 @@
 	<section class="sideitem">
 
 		<description>
-		<!-- 
-			<div align="left" id="twtr-search-widget"></div>
-			<script src="http://widgets.twimg.com/j/1/widget.js"/>
-			<link href="http://widgets.twimg.com/j/1/widget.css" type="text/css" rel="stylesheet">
+			<script src="http://widgets.twimg.com/j/2/widget.js" />
 			<script>
 				new TWTR.Widget({
-				  search: '#eclipselink',
-				  id: 'twtr-search-widget',
-				  loop: true,
-				  title: 'What\'s being said about...',
-				  subject: '#EclipseLink',
-				  width: 240,
-				  height: 400,
-				  theme: {
-				    shell: {
-				      background: '#002E62',
-				      color: '#ffffff'
-				    },
-				    tweets: {
-				      background: '#ffffff',
-				      color: '#444444',
-				      links: '#002E62'
-				    }
-				  }
+				version: 2,
+				type: 'search',
+				search: '#eclipselink',
+				interval: 6000,
+				title: 'What is being said about',
+				subject: 'EclipseLink',
+				width: 250,
+				height: 300,
+				theme: {
+				shell: {
+				background: '#8ec1da',
+				color: '#ffffff'
+				},
+				tweets: {
+				background: '#ffffff',
+				color: '#444444',
+				links: '#1985b5'
+				}
+				},
+				features: {
+				scrollbar: false,
+				loop: true,
+				live: true,
+				hashtags: true,
+				timestamp: true,
+				avatars: true,
+				toptweets: true,
+				behavior: 'default'
+				}
 				}).render().start();
-			</script>
-			</link>
-			<br/><font size=-1>Follow: <a href="http://twitter.com/doug_clarke">Doug Clarke</a> (co-lead)
-			<br/>Follow: <a href="http://twitter.com/shaunmsmith">Shaun Smith</a>
-			<br/>Follow: <a href="http://twitter.com/bdoughan">Blaise Doughan</a></font>
-		-->
-		<!-- 
-			<div style="text-align:center">
-				<a href="/eclipselink/jpa.php">
-					<img src="/eclipselink/images/Eclipselink_jpa.png" border="0" />
-				</a>
-				<br />
-				<a href="/eclipselink/moxy.php">
-					<img src="/eclipselink/images/Eclipselink_moxy.png" border="0" />
-				</a>
-				<br />
-				<a href="/eclipselink/sdo.php">
-					<img src="/eclipselink/images/Eclipselink_sdo.png" border="0" />
-				</a>
-				<br />
-				<a href="/eclipselink/dbws.php">
-					<img src="/eclipselink/images/Eclipselink_dbws.png" border="0" />
-				</a>
-			</div>
-		-->
+</script>
+
+			<!-- <div style="text-align:center"> <a href="/eclipselink/jpa.php"> <img 
+				src="/eclipselink/images/Eclipselink_jpa.png" border="0" /> </a> <br /> <a 
+				href="/eclipselink/moxy.php"> <img src="/eclipselink/images/Eclipselink_moxy.png" 
+				border="0" /> </a> <br /> <a href="/eclipselink/sdo.php"> <img src="/eclipselink/images/Eclipselink_sdo.png" 
+				border="0" /> </a> <br /> <a href="/eclipselink/dbws.php"> <img src="/eclipselink/images/Eclipselink_dbws.png" 
+				border="0" /> </a> </div> -->
 		</description>
 
 	</section>
