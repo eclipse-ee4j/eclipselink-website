@@ -134,7 +134,7 @@
 		<description>
 		
 			<div align="left" id="twtr-search-widget"></div>
-			<script src="http://widgets.twimg.com/j/1/widget.js"></script>
+			<script src="http://widgets.twimg.com/j/1/widget.js"/>
 			<link href="http://widgets.twimg.com/j/1/widget.css" type="text/css" rel="stylesheet">
 			<script>
 				new TWTR.Widget({
@@ -158,6 +158,7 @@
 				  }
 				}).render().start();
 			</script>
+			</link>
 			<br/><font size=-1>Follow: <a href="http://twitter.com/doug_clarke">Doug Clarke</a> (co-lead)
 			<br/>Follow: <a href="http://twitter.com/shaunmsmith">Shaun Smith</a>
 			<br/>Follow: <a href="http://twitter.com/bdoughan">Blaise Doughan</a></font>

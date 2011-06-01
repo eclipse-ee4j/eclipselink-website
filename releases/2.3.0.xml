@@ -62,7 +62,7 @@
 				</li>
 			</ul>
 
-			<h4>Support Standards</h4>
+			<h4>Implement Standards</h4>
 			<ul>
 				<li>
 					JPA 2.0 (
@@ -70,11 +70,15 @@
 					)
 				</li>
 				<li>
-					JAXB 2.3 (
+					JAXB 2.2 (
 					<a href="http://jcp.org/en/jsr/detail?id=222">JSR 222</a>
 					)
 				</li>
-				<li>SDO 2.1.1</li>
+				<li>
+					SDO 2.1.1(
+					<a href="http://jcp.org/en/jsr/detail?id=235">JSR 235</a>
+					)
+				</li>
 			</ul>
 		</description>
 
