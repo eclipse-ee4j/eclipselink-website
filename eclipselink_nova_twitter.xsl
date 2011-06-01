@@ -27,7 +27,7 @@
 				  loop: true,
 				  title: 'What\'s being said about...',
 				  subject: 'EclipseLink',
-				  width: 240,
+				  width: 'auto',
 				  height: 400,
 				  theme: {
 				    shell: {
@@ -42,9 +42,9 @@
 				  }
 				}).render().start();
 			</script>
+			</link>
 			<br/><font size=-1>Follow: <a href="http://twitter.com/doug_clarke">Doug Clarke</a> (co-lead)
 			<br/>Follow: <a href="http://twitter.com/shaunmsmith">Shaun Smith</a></font>
-
 		</div>
 
 		<script type="text/javascript">
