@@ -18,8 +18,6 @@
 			<xsl:apply-templates select="section[@class='sideitem']"
 				mode="sideitem" />
 
-		<div class="sideitem">
-			<div align="left" id="twtr-search-widget"></div>
 			<script src="http://widgets.twimg.com/j/1/widget.js"></script>
 			<link href="http://widgets.twimg.com/j/1/widget.css" type="text/css" rel="stylesheet">
 			<script>
@@ -46,7 +44,6 @@
 			</script>
 			<br/><font size=-1>Follow: <a href="http://twitter.com/doug_clarke">Doug Clarke</a> (co-lead)
 			<br/>Follow: <a href="http://twitter.com/shaunmsmith">Shaun Smith</a></font>
-		</div>
 
 		</div>
 
