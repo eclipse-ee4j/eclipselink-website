@@ -20,15 +20,14 @@
 
 			<div class="sideitem">
 				<h6>Twitter</h6>
-				<script src="http://widgets.twimg.com/j/1/widget.js" />
+				<script src="http://widgets.twimg.com/j/1/widget.js"/>
 				<link href="http://widgets.twimg.com/j/1/widget.css" type="text/css"
 					rel="stylesheet" />
 				<script>
 					new TWTR.Widget({
 					search: 'eclipselink',
 					loop: true,
-					title:
-					'What\'s being said about...',
+					title: 'What\'s being said about...',
 					subject: 'EclipseLink',
 					width: 278,
 					height: 255,
@@ -120,11 +119,14 @@
 	</xsl:template>
 
 	<xsl:template match="section" mode="sideitem">
-		<h6>
-			<xsl:value-of select="@name" />
-		</h6>
-		<xsl:apply-templates select="description" mode="body" />
-		<xsl:apply-templates />
+
+		<div class='sideitem' style="text-align:center">
+			<h6>
+				<xsl:value-of select="@name" />
+			</h6>
+			<xsl:apply-templates select="description" mode="body" />
+			<xsl:apply-templates />
+		</div>
 
 	</xsl:template>
 
@@ -199,7 +201,7 @@
 	</xsl:template>
 
 	<xsl:template match="description" mode="body">
-		<xsl:apply-templates mode="body" />
+			<xsl:apply-templates mode="body" />
 	</xsl:template>
 
 	<xsl:template match="*|@*|text()" mode="body">
