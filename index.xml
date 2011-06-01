@@ -123,6 +123,10 @@
 
 	</section>
 	
+	<section class="sideitem" name="About">
+		<section name="About This project" link="/projects/project_summary.php?projectid=rt.eclipselink" />
+	</section>
+
 	<section class="sideitem" name="Eclipselink Powered">
 		<section name="Oracle TopLink" link="http://www.oracle.com/technetwork/middleware/toplink/overview/index.html"/>
 		<section name="Oracle WebLogic" link="http://www.oracle.com/technetwork/middleware/weblogic/overview/index.html"/>
