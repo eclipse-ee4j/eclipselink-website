@@ -141,7 +141,7 @@
 						loop: true,
 						title: 'What\'s being said about...',
 						subject: 'EclipseLink',
-						width: 278,
+						width: 'auto',
 						height: 255,
 						theme: {
 						shell: {
