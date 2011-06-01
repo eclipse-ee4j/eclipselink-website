@@ -131,10 +131,11 @@
 				</li>
 			</ul>
 		</description>
+		<item title="Title" link="link" />
 	</section>
 
 	<section class="sideitem" name="Twitter">
-		<text>TEXT</text>
+		<twitter/>
 	</section>
 
 	<section class="sideitem" name="Blogs">

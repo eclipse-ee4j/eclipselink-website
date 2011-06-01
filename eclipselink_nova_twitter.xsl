@@ -17,51 +17,6 @@
 		<div id="rightcolumn">
 			<xsl:apply-templates select="section[@class='sideitem']"
 				mode="sideitem" />
-
-			<div class="sideitem">
-				<h6>Twitter</h6>
-				<xsl:copy>
-					<script src="http://widgets.twimg.com/j/1/widget.js" />
-					<link href="http://widgets.twimg.com/j/1/widget.css" type="text/css"
-						rel="stylesheet" />
-					<script>
-						new TWTR.Widget({
-						search: 'eclipselink',
-						loop: true,
-						title: 'What\'s being said about...',
-						subject: 'EclipseLink',
-						width: 278,
-						height: 255,
-						theme: {
-						shell: {
-						background: '#5b5993',
-						color: '#ffffff'
-						},
-						tweets: {
-						background: '#ffffff',
-						color: '#444444',
-						links: '#333366'
-						}
-						}
-						}).render().start();
-					</script>
-				</xsl:copy>
-				<font size="-1">
-					Follow:
-					<ul>
-						<li>
-							<a href="http://twitter.com/doug_clarke">Doug Clarke (co-lead)</a>
-						</li>
-						<li>
-							<a href="http://twitter.com/shaunmsmith">Shaun Smith</a>
-						</li>
-						<li>
-							<a href="http://twitter.com/bdoughan">Blaise Doughan</a>
-						</li>
-					</ul>
-				</font>
-			</div>
-
 		</div>
 
 		<script type="text/javascript">
@@ -71,13 +26,13 @@
 			document.write(unescape("%3Cscript src='" + gaJsHost +
 			"google-analytics.com/ga.js'
 			type='text/javascript'%3E%3C/script%3E"));
-</script>
+		</script>
 		<script type="text/javascript">
 			var pageTracker =
 			_gat._getTracker("UA-1608008-2");
 			pageTracker._initData();
 			pageTracker._trackPageview();
-</script>
+		</script>
 
 	</xsl:template>
 
@@ -127,6 +82,7 @@
 				<xsl:value-of select="@name" />
 			</h6>
 			<xsl:apply-templates select="description" mode="body" />
+			<xsl:apply-templates select="twitter" mode="body" />
 			<xsl:apply-templates />
 		</div>
 
@@ -204,6 +160,33 @@
 
 	<xsl:template match="description" mode="body">
 		<xsl:apply-templates mode="body" />
+	</xsl:template>
+
+	<xsl:template match="twitter" mode="text">
+		<script src="http://widgets.twimg.com/j/1/widget.js" />
+		<link href="http://widgets.twimg.com/j/1/widget.css" type="text/css"
+			rel="stylesheet" />
+		<script>
+			new TWTR.Widget({
+			search: 'eclipselink',
+			loop: true,
+			title: 'What\'s being said about...',
+			subject: 'EclipseLink',
+			width: 278,
+			height: 255,
+			theme: {
+			shell: {
+			background: '#5b5993',
+			color: '#ffffff'
+			},
+			tweets: {
+			background: '#ffffff',
+			color: '#444444',
+			links: '#333366'
+			}
+			}
+			}).render().start();
+					</script>
 	</xsl:template>
 
 	<xsl:template match="*|@*|text()" mode="body">
