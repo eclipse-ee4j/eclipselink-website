@@ -20,30 +20,32 @@
 
 			<div class="sideitem">
 				<h6>Twitter</h6>
-				<script src="http://widgets.twimg.com/j/1/widget.js"/>
-				<link href="http://widgets.twimg.com/j/1/widget.css" type="text/css"
-					rel="stylesheet" />
-				<script>
-					new TWTR.Widget({
-					search: 'eclipselink',
-					loop: true,
-					title: 'What\'s being said about...',
-					subject: 'EclipseLink',
-					width: 278,
-					height: 255,
-					theme: {
-					shell: {
-					background: '#5b5993',
-					color: '#ffffff'
-					},
-					tweets: {
-					background: '#ffffff',
-					color: '#444444',
-					links: '#333366'
-					}
-					}
-					}).render().start();
+				<xsl:copy>
+					<script src="http://widgets.twimg.com/j/1/widget.js" />
+					<link href="http://widgets.twimg.com/j/1/widget.css" type="text/css"
+						rel="stylesheet" />
+					<script>
+						new TWTR.Widget({
+						search: 'eclipselink',
+						loop: true,
+						title: 'What\'s being said about...',
+						subject: 'EclipseLink',
+						width: 278,
+						height: 255,
+						theme: {
+						shell: {
+						background: '#5b5993',
+						color: '#ffffff'
+						},
+						tweets: {
+						background: '#ffffff',
+						color: '#444444',
+						links: '#333366'
+						}
+						}
+						}).render().start();
 					</script>
+				</xsl:copy>
 				<font size="-1">
 					Follow:
 					<ul>
@@ -201,7 +203,7 @@
 	</xsl:template>
 
 	<xsl:template match="description" mode="body">
-			<xsl:apply-templates mode="body" />
+		<xsl:apply-templates mode="body" />
 	</xsl:template>
 
 	<xsl:template match="*|@*|text()" mode="body">

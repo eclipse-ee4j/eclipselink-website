@@ -136,7 +136,7 @@
 	<section class="sideitem" name="Twitter">
 		<text>TEXT</text>
 	</section>
-	
+
 	<section class="sideitem" name="Blogs">
 		<description>
 			<ul>
@@ -157,11 +157,13 @@
 	</section>
 
 	<section class="sideitem" name="Eclipselink Powered">
-		<section name="Oracle TopLink"
-			link="http://www.oracle.com/technetwork/middleware/toplink/overview/index.html" />
-		<section name="Oracle WebLogic"
-			link="http://www.oracle.com/technetwork/middleware/weblogic/overview/index.html" />
-		<section name="GlassFish" link="http://glassfish.java.net/" />
+		<description>
+			<ul>
+				<li><a href="ttp://www.oracle.com/technetwork/middleware/toplink/overview/index.html">Oracle TopLink</a></li>
+				<li><a href="http://www.oracle.com/technetwork/middleware/weblogic/overview/index.html">Oracle WebLogic</a></li>
+				<li><a href="http://glassfish.java.net">GlassFish</a></li>
+			</ul>
+		</description>
 	</section>
 
 
