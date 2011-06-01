@@ -131,44 +131,46 @@
 				</li>
 			</ul>
 		</description>
-		
+
 	</section>
 
 	<section class="sideitem" name="Twitter">
-	<script src="http://widgets.twimg.com/j/2/widget.js"></script>
-<script>
-new TWTR.Widget({
-  version: 2,
-  type: 'search',
-  search: 'eclipselink',
-  interval: 6000,
-  title: 'EclipseLink',
-  subject: '',
-  width: 'auto',
-  height: 300,
-  theme: {
-    shell: {
-      background: '#8ec1da',
-      color: '#ffffff'
-    },
-    tweets: {
-      background: '#ffffff',
-      color: '#444444',
-      links: '#1985b5'
-    }
-  },
-  features: {
-    scrollbar: false,
-    loop: true,
-    live: true,
-    hashtags: true,
-    timestamp: true,
-    avatars: true,
-    toptweets: true,
-    behavior: 'default'
-  }
-}).render().start();
-</script>		
+		<description>
+			<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+			<script>
+				new TWTR.Widget({
+				version: 2,
+				type: 'search',
+				search: 'eclipselink',
+				interval: 6000,
+				title: 'EclipseLink',
+				subject: '',
+				width: 'auto',
+				height: 300,
+				theme: {
+				shell: {
+				background: '#8ec1da',
+				color: '#ffffff'
+				},
+				tweets: {
+				background: '#ffffff',
+				color: '#444444',
+				links: '#1985b5'
+				}
+				},
+				features: {
+				scrollbar: false,
+				loop: true,
+				live: true,
+				hashtags: true,
+				timestamp: true,
+				avatars: true,
+				toptweets: true,
+				behavior: 'default'
+				}
+				}).render().start();
+</script>
+		</description>
 	</section>
 
 	<section class="sideitem" name="Blogs">
@@ -193,9 +195,17 @@ new TWTR.Widget({
 	<section class="sideitem" name="Eclipselink Powered">
 		<description>
 			<ul>
-				<li><a href="ttp://www.oracle.com/technetwork/middleware/toplink/overview/index.html">Oracle TopLink</a></li>
-				<li><a href="http://www.oracle.com/technetwork/middleware/weblogic/overview/index.html">Oracle WebLogic</a></li>
-				<li><a href="http://glassfish.java.net">GlassFish</a></li>
+				<li>
+					<a
+						href="ttp://www.oracle.com/technetwork/middleware/toplink/overview/index.html">Oracle TopLink</a>
+				</li>
+				<li>
+					<a
+						href="http://www.oracle.com/technetwork/middleware/weblogic/overview/index.html">Oracle WebLogic</a>
+				</li>
+				<li>
+					<a href="http://glassfish.java.net">GlassFish</a>
+				</li>
 			</ul>
 		</description>
 	</section>
