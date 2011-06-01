@@ -44,7 +44,7 @@
 					}
 					}).render().start();
 					</script>
-				<font size=-1>
+				<font size="-1">
 					Follow:
 					<a href="http://twitter.com/doug_clarke">Doug Clarke</a>
 					(co-lead)
@@ -111,6 +111,15 @@
 				<xsl:apply-templates />
 			</ul>
 		</div>
+	</xsl:template>
+
+	<xsl:template match="section" mode="sideitem">
+
+		<div class='sideitem' style="text-align:center">
+			<xsl:apply-templates select="description" mode="body" />
+			<xsl:apply-templates />
+		</div>
+
 	</xsl:template>
 
 	<xsl:template match="section">
