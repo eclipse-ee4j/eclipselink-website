@@ -162,31 +162,41 @@
 		<xsl:apply-templates mode="body" />
 	</xsl:template>
 
-	<xsl:template match="twitter" mode="text">
-		<script src="http://widgets.twimg.com/j/1/widget.js" />
-		<link href="http://widgets.twimg.com/j/1/widget.css" type="text/css"
-			rel="stylesheet" />
-		<script>
-			new TWTR.Widget({
-			search: 'eclipselink',
-			loop: true,
-			title: 'What\'s being said about...',
-			subject: 'EclipseLink',
-			width: 278,
-			height: 255,
-			theme: {
-			shell: {
-			background: '#5b5993',
-			color: '#ffffff'
-			},
-			tweets: {
-			background: '#ffffff',
-			color: '#444444',
-			links: '#333366'
-			}
-			}
-			}).render().start();
-					</script>
+	<xsl:template match="twitter" mode="body">
+		<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'search',
+  search: 'eclipselink',
+  interval: 6000,
+  title: 'What is being said about',
+  subject: 'EclipseLink',
+  width: 'auto',
+  height: 250,
+  theme: {
+    shell: {
+      background: '#1986b5',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#444444',
+      links: '#1985b5'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: true,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: true,
+    toptweets: true,
+    behavior: 'default'
+  }
+}).render().start();
+</script>
 	</xsl:template>
 
 	<xsl:template match="*|@*|text()" mode="body">
