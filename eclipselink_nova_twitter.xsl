@@ -17,68 +17,68 @@
 		<div id="rightcolumn">
 			<xsl:apply-templates select="section[@class='sideitem']"
 				mode="sideitem" />
-			<div class="sideitem">
-				<script src="http://widgets.twimg.com/j/2/widget.js"></script>
-<script>
-new TWTR.Widget({
-  version: 2,
-  type: 'search',
-  search: 'eclipselink',
-  interval: 6000,
-  title: 'What is being said about...',
-  subject: 'EclipseLink',
-  width: 'auto',
-  height: 300,
-  theme: {
-    shell: {
-      background: '#323fd6',
-      color: '#ffffff'
-    },
-    tweets: {
-      background: '#ffffff',
-      color: '#444444',
-      links: '#0324fd'
-    }
-  },
-  features: {
-    scrollbar: false,
-    loop: true,
-    live: true,
-    hashtags: true,
-    timestamp: true,
-    avatars: true,
-    toptweets: true,
-    behavior: 'default'
-  }
-}).render().start();
-</script>
-			</div>
 		</div>
-			
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+		<div id="twtr-search-widget" cklass="sideitem">
+			<script src="http://widgets.twimg.com/j/1/widget.js"></script>
+			<link href="http://widgets.twimg.com/j/1/widget.css" type="text/css"
+				rel="stylesheet" />
+			<script>
+				new TWTR.Widget({
+				search: 'mylyn',
+				id: 'twtr-search-widget',
+				loop: true,
+				title: 'What\'s being said about...',
+				subject: 'Mylyn',
+				width: 278,
+				height: 255,
+				theme: {
+				shell: {
+				background: '#5b5993',
+				color: '#ffffff'
+				},
+				tweets: {
+				background: '#ffffff',
+				color: '#444444',
+				links: '#333366'
+				}
+				}
+				}).render().start();
+					</script>
+			<font size=-1>
+				Follow:
+				<a href="http://twitter.com/mik_kersten">Mik Kersten</a>
+				(lead),
+				<a href="http://twitter.com/WikiText">WikiText</a>
+			</font>
+		</div>
+
+		<script type="text/javascript">
+			var gaJsHost = (("https:" == document.location.protocol) ?
+			"https://ssl." : "http://www.");
+			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js'
+			type='text/javascript'%3E%3C/script%3E"));
 </script>
-<script type="text/javascript">
-var pageTracker = _gat._getTracker("UA-1608008-2");
-pageTracker._initData();
-pageTracker._trackPageview();
+		<script type="text/javascript">
+			var pageTracker = _gat._getTracker("UA-1608008-2");
+			pageTracker._initData();
+			pageTracker._trackPageview();
 </script>
 
 	</xsl:template>
 
 	<xsl:template match="section" mode="none">
-			<xsl:if test="@anchor">
-				<a>
-					<xsl:attribute name="name">
+		<xsl:if test="@anchor">
+			<a>
+				<xsl:attribute name="name">
 						<xsl:value-of select="@anchor" />
 					</xsl:attribute>
-				</a>
-			</xsl:if>
-			<xsl:apply-templates select="description" mode="body" />
-			<ul>
-				<xsl:apply-templates />
-			</ul>
+			</a>
+		</xsl:if>
+		<xsl:apply-templates select="description" mode="body" />
+		<ul>
+			<xsl:apply-templates />
+		</ul>
 	</xsl:template>
 
 	<xsl:template match="section" mode="title">
@@ -189,7 +189,7 @@ pageTracker._trackPageview();
 	</xsl:template>
 
 	<xsl:template match="*|@*|text()" />
-	
-	
+
+
 
 </xsl:stylesheet>
