@@ -17,6 +17,42 @@
 		<div id="rightcolumn">
 			<xsl:apply-templates select="section[@class='sideitem']"
 				mode="sideitem" />
+
+<div class="sideitem">
+<script type="text/javascript" src="http://widgets.twimg.com/j/2/widget.js" ></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'search',
+  search: 'eclipselink',
+  interval: 6000,
+  title: 'What is being said about',
+  subject: 'EclipseLink',
+  width: 'auto',
+  height: 250,
+  theme: {
+    shell: {
+      background: '#1986b5',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#444444',
+      links: '#1985b5'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: true,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: true,
+    toptweets: true,
+    behavior: 'default'
+  }
+}).render().start();
+</script></div>
 		</div>
 
 		<script type="text/javascript">
@@ -160,43 +196,6 @@
 
 	<xsl:template match="description" mode="body">
 		<xsl:apply-templates mode="body" />
-	</xsl:template>
-
-	<xsl:template match="twitter" mode="body">
-		<script type="text/javascript" src="http://widgets.twimg.com/j/2/widget.js"></script>
-<script type="text/javascript">
-new TWTR.Widget({
-  version: 2,
-  type: 'search',
-  search: 'eclipselink',
-  interval: 6000,
-  title: 'What is being said about',
-  subject: 'EclipseLink',
-  width: 'auto',
-  height: 250,
-  theme: {
-    shell: {
-      background: '#1986b5',
-      color: '#ffffff'
-    },
-    tweets: {
-      background: '#ffffff',
-      color: '#444444',
-      links: '#1985b5'
-    }
-  },
-  features: {
-    scrollbar: false,
-    loop: true,
-    live: true,
-    hashtags: true,
-    timestamp: true,
-    avatars: true,
-    toptweets: true,
-    behavior: 'default'
-  }
-}).render().start();
-</script>
 	</xsl:template>
 
 	<xsl:template match="*|@*|text()" mode="body">
