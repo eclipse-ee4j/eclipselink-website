@@ -30,67 +30,6 @@
 		<p>
 			The EclipseLink project delivers a comprehensive open-source Java persistence solution addressing relational, XML, and database web services.  
 		</p>
-		<p>
-			Virgo features:
-			<ul>
-				<li>
-					admin console - deploy and manage artifacts, examine diagnostic dumps,
-					and examine bundle wiring, either in the live system or from a
-					resolution failure
-				</li>
-				<li>
-					Equinox console extension - manage Virgo and deployed artifacts
-				</li>
-				<li>
-					plans - define the artifacts that comprise an application, optionally
-					making the application atomic to tie the artifact lifecycles together,
-					and scoped to isolate the application from other applications
-				</li>
-				<li>
-					provisioning - automatically supply the dependencies of an application including
-					bundles, plans, plan archives (PARs), and configurations, from both local
-					and remote repositories
-				</li>
-				<li>
-					web container - supports vanilla WAR files, with all their dependencies in
-					<tt>WEB-INF/lib</tt>, and Web Application Bundles, that import their dependencies
-					via OSGi manifest metadata, via the embedded Tomcat-based reference implementation
-					of the OSGi Web	Container specification, configured using the standard Tomcat
-					<tt>server.xml</tt>
-				</li>
-				<li>
-					user region - isolates the kernel from user-installed applications and enables
-					admins to focus on application artifacts and their dependencies without seeing
-					those of the kernel as well
-				</li>
-				<li>
-					Spring 3 - Virgo packages Spring 3.0 final, but can easily be configured to
-					use a different version of Spring
-				</li>
-				<li>
-					hot deployment - deploy artifacts to Virgo by copying them into the <tt>pickup</tt> directory,
-					either in archive or exploded form, as an alternative to deploying via the admin console
-				</li>
-				<li>
-					legacy library support - enables third party libraries which were not designed for OSGi
-					to function correctly, once they have been converted into OSGi bundles and deployed, through
-					advanced support for thread context class loading, load time weaving, class path scanning, and
-					implicit package use
-				</li>
-				<li>
-					advanced resolution failure diagnostics - resolution failures are analysed and reported in
-					meaningful terms, a dump is taken for offline analysis using the admin console, and the set
-					of bundles being deployed is not committed to the runtime, preserving a cleanly resolved state  
-				</li>
-				<li>
-					logging - via embedded LogBack, configured in
-					<tt>config/serviceability.xml</tt>, with a rich set of appenders available out of the box
-				</li>
-				<li>
-					automatic thread stack dump on deadlock
-				</li>
-			</ul>
-		</p>
 		
 	</div>
 
@@ -99,24 +38,10 @@
 		<div class="sideitem">
 			<h6>Quick Links</h6>
 			<ul>
-				<li><a href="http://wiki.eclipse.org/Virgo">Wiki</a></li>
-				<li><a href="http://www.eclipse.org/forums/index.php?t=thread&frm_id=159">Community Forum</a></li>  
-				<li><a href="https://dev.eclipse.org/mailman/listinfo/virgo-dev">Developer Mailing List</a></li>
-				<li><a href="http://www.eclipse.org/projects/project_summary.php?projectid=rt.virgo">Project Summary</a></li>
-				<li><a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;order=Importance;classification=RT;product=Virgo">Bugzilla</a></li>
-			    <li><a href="https://hudson.eclipse.org/hudson/view/Virgo/">Continuous Integration</a></li>
-			    <li><a href="http://www.eclipse.org/virgo/agile">Agile Project Management</a></li>
-			    <li><a href="http://www.eclipse.org/virgo/profiling">Profiling</a></li>
-			    <li><a href="http://www.eclipse.org/virgo/analysis">Static Analysis</a></li>
-			    <li>Search:
-			    	<ul>
-			    		<li><a href="http://virgo-opengrok.springsource.org/" title="Enter 'virgo' in File Path to avoid dm Server hits">OpenGrok</a> of Virgo master</li>
-			    		<li><a href="http://grepcode.com/">GrepCode</a> of Virgo 2.1.0</li>
-			    	</ul>
-			    </li>
-			    <li><a href="https://www.ohloh.net/p/eclipse_virgo">ohloh</a></li>
+				<li><a href="http://wiki.eclipse.org/EclipseLink">Wiki</a></li>
 			</ul>
 		</div>
+
 		<div class="sideitem">
 			<h6>Blogs</h6>
 			<ul>
@@ -147,7 +72,7 @@
 				  loop: true,
 				  title: 'What\'s being said about...',
 				  subject: 'EclipseLink',
-				  width: 240,
+				  width: 'auto',
 				  height: 400,
 				  theme: {
 				    shell: {
