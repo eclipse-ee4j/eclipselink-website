@@ -18,6 +18,7 @@
 				mode="sideitem" />
 
 <div class="sideitem">
+<h6>Twitter</h6>
 <script type="text/javascript" src="http://widgets.twimg.com/j/2/widget.js" >
 new TWTR.Widget({
   version: 2,
