@@ -47,9 +47,9 @@
 					</script>
 			<font size=-1>
 				Follow:
-				<a href="http://twitter.com/doug_clarke">Doug Clarke</a>
-				(co-lead),
-				<a href="http://twitter.com/shaunmsmith">Shaun Smith</a>
+				<a href="http://twitter.com/doug_clarke">Doug Clarke</a>(co-lead)
+				<br/><a href="http://twitter.com/shaunmsmith">Shaun Smith</a>
+				<br/><a href="http://twitter.com/bdoughan">Blaise Doughan</a>
 			</font>
 		</div>
 
