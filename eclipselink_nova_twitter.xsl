@@ -18,15 +18,14 @@
 			<xsl:apply-templates select="section[@class='sideitem']"
 				mode="sideitem" />
 
-			<div id="twtr-search-widget" class="sideitem">
+			<div class="sideitem">
 				<h6>Twitter</h6>
-				<script src="http://widgets.twimg.com/j/1/widget.js"></script>
+				<script src="http://widgets.twimg.com/j/1/widget.js"/>
 				<link href="http://widgets.twimg.com/j/1/widget.css" type="text/css"
 					rel="stylesheet" />
 				<script>
 					new TWTR.Widget({
 					search: 'eclipselink',
-					id: 'twtr-search-widget',
 					loop: true,
 					title: 'What\'s being said about...',
 					subject: 'EclipseLink',
