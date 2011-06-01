@@ -97,6 +97,8 @@
 			</h6>
 			 -->
 			 <br/>
+			 <h6>Twitter Feed</h6>
+			 <!-- 
 			 			<script src="http://widgets.twimg.com/j/1/widget.js"></script>
 			<link href="http://widgets.twimg.com/j/1/widget.css" type="text/css" rel="stylesheet">
 			<script>
@@ -124,7 +126,7 @@
 			</link>
 			<br/><font size=-1>Follow: <a href="http://twitter.com/doug_clarke">Doug Clarke</a> (co-lead)
 			<br/>Follow: <a href="http://twitter.com/shaunmsmith">Shaun Smith</a></font>
-			 
+			  -->
 		</div>
 
 	</xsl:template>
