@@ -26,7 +26,7 @@
 	ob_start();
 ?>
 	<div id="midcolumn">
-		<div class="logo"><img src="/eclipselink/images/logo.jpg" alt="Virgo"/></div>
+		<div class="logo"><img src="/eclipselink/images/logo.jpg" alt="EclipseLink"/></div>
 		<p>
 			The EclipseLink project delivers a comprehensive open-source Java persistence solution addressing relational, XML, and database web services.  
 		</p>
@@ -165,12 +165,6 @@
 			<br/><font size=-1>Follow: <a href="http://twitter.com/doug_clarke">Doug Clarke</a>
 			</font>
 		</div>
-		<!-- div class="sideitem">
-			<h6>&lt;h6&gt; tag</h6>
-				<div class="modal">
-					Wrapping your content using a div.modal tag here will add the gradient background
-				</div>
-		</div -->
 	</div>
 
 	
