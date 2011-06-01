@@ -48,8 +48,7 @@
 				</link>
 				<font size="-1">
 					Follow:<ul>
-					<li><a href="http://twitter.com/doug_clarke">Doug Clarke</a></li>
-					(co-lead)
+					<li><a href="http://twitter.com/doug_clarke">Doug Clarke (co-lead)</a></li>
 					<li><a href="http://twitter.com/shaunmsmith">Shaun Smith</a></li>
 					<li><a href="http://twitter.com/bdoughan">Blaise Doughan</a></li>
 					</ul>
