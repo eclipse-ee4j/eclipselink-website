@@ -18,7 +18,40 @@
 			<xsl:apply-templates select="section[@class='sideitem']"
 				mode="sideitem" />
 			<div class="sideitem">
-				<h6>Twitter</h6>
+				<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'search',
+  search: 'eclipselink',
+  interval: 6000,
+  title: 'What is being said about...',
+  subject: 'EclipseLink',
+  width: 'auto',
+  height: 300,
+  theme: {
+    shell: {
+      background: '#323fd6',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#444444',
+      links: '#0324fd'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: true,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: true,
+    toptweets: true,
+    behavior: 'default'
+  }
+}).render().start();
+</script>
 			</div>
 		</div>
 			
