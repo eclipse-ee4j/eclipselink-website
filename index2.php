@@ -14,14 +14,14 @@
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  *
- * Contributors: Christopher Frost
+ * Contributors: Doug Clarke
  *    
  *******************************************************************************/
 
 	# Begin: page-specific settings.  Change these. 
 	$pageTitle 		= "EclipseLink - Home";
-	$pageKeywords	= "Eclipse, EclipseRT, Virgo, OSGi, Home";
-	$pageAuthor		= "Christopher Frost";
+	$pageKeywords	= "Eclipse, EclipseRT, EclipseLink, Persistence, Home";
+	$pageAuthor		= "Doug Clarke";
 			
 	ob_start();
 ?>
@@ -29,12 +29,6 @@
 		<div class="logo"><img src="/eclipselink/images/logo.jpg" alt="Virgo"/></div>
 		<p>
 			The EclipseLink project delivers a comprehensive open-source Java persistence solution addressing relational, XML, and database web services.  
-		</p>
-		<p>
-			The Virgo kernel supports the core concepts of Virgo and is not biased towards the web
-			server, thus enabling other types of server to be created. The kernel can also be used
-			stand-alone as a rich OSGi application platform. A server runtime can easily be constructed
-			by deploying suitable bundles on top of the kernel.
 		</p>
 		<p>
 			Virgo features:
@@ -126,19 +120,8 @@
 		<div class="sideitem">
 			<h6>Blogs</h6>
 			<ul>
-			    <li><a href="http://www.codewax.org">Chris Frost</a></li>
-			    <li><a href="http://eclipsesource.com/blogs/2010/10/28/running-rap-on-virgo/">Florian Waibel</a></li>
-				<li><a href="http://underlap.blogspot.com">Glyn Normington</a></li>
-				<li><a href="http://hsiliev.blogspot.com/">Hristo Iliev</a></li>
-				<li><a href="http://www.redmonk.com/jgovernor/2008/02/05/osgi-and-the-rise-of-the-stackless-stack-just-in-time/">James Governor</a></li>
-				<li><a title="compose a web app from code and resources distributed over many OSGi bundles. Modularization, finally!" href="http://joergviola.blogspot.com/2010/12/eclipse-virgo-snaps-modular-web-apps.html">J&ouml;rg Viola</a></li>
-				<li><a title="the next phase of Java development... the &ldquo;stackless stack&rdquo;" href="http://www.redmonk.com/cote/2010/01/13/virgo/">Michael Cot&eacute;</a></li>
-				<li><a title="a technology that &ldquo;just worked&rdquo;... Light-weight development, light-weight deployment, industrial strength" href="http://milesparker.blogspot.com/2010/12/emf-and-rap-and-virgo-oh-my.html">Miles Parker</a></li>
-				<li><a href="http://www.e-zest.net/Blog/post/OSGi-in-Practise-Part-2-(Spring-DM-Server-).aspx">Nitin Gupta</a></li>
-				<li><a href="http://thomaskratz.blogspot.com/2010/11/porting-to-virgo-seeing-some-light.html">Thomas Kratz</a></li>
-				<li><a href="http://maniagnosis.crsr.net/2010/06/requiescat-in-pace-springsource-dm.html">Tommy McGuire</a></li>
-				<li><a href="http://touk.pl/blog/2011/04/19/modular-web-application-using-eclipse-snaps/">Touk Team</a></li>
-				<li><a title= "the internal quality of this product seems to showcase what open-source can achieve" href="http://kindofsickbutcoolstill.blogspot.com/2010/09/open-source-and-code-quality.html">Whatever Gets You Up</a></li>
+			    <li><a href="http://eclipselink.blogspot.com">EclipseLink</a></li>
+			    <li><a href="http://java-persistence.blogspot.com">Java Persistence</a></li>
 			</ul>
 		</div>
 		<div class="sideitem">
@@ -150,7 +133,7 @@
 		<div class="sideitem">
 			<h6>Virgo Powered</h6>
 			<ul>
-				<li><a href="http://github.com/PouzinSociety/tinos">TINOS research project</a></li>
+				<li><a href="http://github.com/PouzinSociety/tinos">Oracle TopLink</a></li>
 			</ul>
 		</div>
 		<div class="sideitem">
