@@ -17,50 +17,57 @@
 		<div id="rightcolumn">
 			<xsl:apply-templates select="section[@class='sideitem']"
 				mode="sideitem" />
-		</div>
 
-		<div id="twtr-search-widget" class="sideitem">
-			<script src="http://widgets.twimg.com/j/1/widget.js"></script>
-			<link href="http://widgets.twimg.com/j/1/widget.css" type="text/css"
-				rel="stylesheet" />
-			<script>
-				new TWTR.Widget({
-				search: 'eclipselink',
-				id: 'twtr-search-widget',
-				loop: true,
-				title: 'What\'s being said about...',
-				subject: 'EclipseLink',
-				width: 278,
-				height: 255,
-				theme: {
-				shell: {
-				background: '#5b5993',
-				color: '#ffffff'
-				},
-				tweets: {
-				background: '#ffffff',
-				color: '#444444',
-				links: '#333366'
-				}
-				}
-				}).render().start();
+			<div id="twtr-search-widget" class="sideitem">
+				<script src="http://widgets.twimg.com/j/1/widget.js"></script>
+				<link href="http://widgets.twimg.com/j/1/widget.css" type="text/css"
+					rel="stylesheet" />
+				<script>
+					new TWTR.Widget({
+					search: 'eclipselink',
+					id: 'twtr-search-widget',
+					loop: true,
+					title: 'What\'s being said about...',
+					subject: 'EclipseLink',
+					width: 278,
+					height: 255,
+					theme: {
+					shell: {
+					background: '#5b5993',
+					color: '#ffffff'
+					},
+					tweets: {
+					background: '#ffffff',
+					color: '#444444',
+					links: '#333366'
+					}
+					}
+					}).render().start();
 					</script>
-			<font size=-1>
-				Follow:
-				<a href="http://twitter.com/doug_clarke">Doug Clarke</a>(co-lead)
-				<br/><a href="http://twitter.com/shaunmsmith">Shaun Smith</a>
-				<br/><a href="http://twitter.com/bdoughan">Blaise Doughan</a>
-			</font>
+				<font size=-1>
+					Follow:
+					<a href="http://twitter.com/doug_clarke">Doug Clarke</a>
+					(co-lead)
+					<br />
+					<a href="http://twitter.com/shaunmsmith">Shaun Smith</a>
+					<br />
+					<a href="http://twitter.com/bdoughan">Blaise Doughan</a>
+				</font>
+			</div>
+
 		</div>
 
 		<script type="text/javascript">
-			var gaJsHost = (("https:" == document.location.protocol) ?
+			var gaJsHost = (("https:" ==
+			document.location.protocol) ?
 			"https://ssl." : "http://www.");
-			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js'
+			document.write(unescape("%3Cscript src='" + gaJsHost +
+			"google-analytics.com/ga.js'
 			type='text/javascript'%3E%3C/script%3E"));
 </script>
 		<script type="text/javascript">
-			var pageTracker = _gat._getTracker("UA-1608008-2");
+			var pageTracker =
+			_gat._getTracker("UA-1608008-2");
 			pageTracker._initData();
 			pageTracker._trackPageview();
 </script>
