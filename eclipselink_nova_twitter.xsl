@@ -5,7 +5,6 @@
 
 	<xsl:template match="/sections">
 		<div id="midcolumn">
-
 			<xsl:apply-templates select="section[@class='title']"
 				mode="title" />
 			<xsl:apply-templates select="section[@class='main']"
@@ -14,12 +13,13 @@
 				mode="none" />
 		</div>
 
+<script type="text/javascript" src="http://widgets.twimg.com/j/2/widget.js" />
+
 		<div id="rightcolumn">
 			<xsl:apply-templates select="section[@class='sideitem']"
 				mode="sideitem" />
 
 <div class="sideitem">
-<script type="text/javascript" src="http://widgets.twimg.com/j/2/widget.js" ></script>
 <script>
 new TWTR.Widget({
   version: 2,
