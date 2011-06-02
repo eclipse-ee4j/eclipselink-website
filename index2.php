@@ -107,31 +107,40 @@
 			</ul>
 		</div>
 		<div class="sideitem">
-			<div align="left" id="twtr-search-widget"></div>
-			<script src="http://widgets.twimg.com/j/1/widget.js"></script>
-			<link href="http://widgets.twimg.com/j/1/widget.css" type="text/css" rel="stylesheet">
-			<script>
-				new TWTR.Widget({
-				  search: 'eclipselink',
-				  id: 'twtr-search-widget',
-				  loop: true,
-				  title: 'What\'s being said about...',
-				  subject: 'EclipseLink',
-				  width: 'auto',
-				  height: 400,
-				  theme: {
-				    shell: {
-				      background: '#002E62',
-				      color: '#ffffff'
-				    },
-				    tweets: {
-				      background: '#ffffff',
-				      color: '#444444',
-				      links: '#002E62'
-				    }
-				  }
-				}).render().start();
-			</script>
+			<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'search',
+  search: 'eclipselink',
+  interval: 6000,
+  title: '',
+  subject: 'Follow EclipseLink',
+  width: 'auto',
+  height: 300,
+  theme: {
+    shell: {
+      background: '#8ec1da',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#444444',
+      links: '#1985b5'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: true,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: true,
+    toptweets: true,
+    behavior: 'default'
+  }
+}).render().start();
+</script>
 			<br/><font size=-1>Follow: <a href="http://twitter.com/doug_clarke">Doug Clarke</a>
 			</font>
 		</div>
