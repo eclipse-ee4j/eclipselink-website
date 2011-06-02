@@ -47,10 +47,10 @@
 					<a href="http://wiki.eclipse.org/EclipseLink/Documentation_Center"><div class="bigbuttonsTitleLink"></div></a>
 					<span>
 						<a href="http://wiki.eclipse.org/EclipseLink/Documentation_Center">Doc Center</a>,
-						<a href="http://www.eclipse.org/eclipselink/api/index.php"> Java Docs</a>,
+						<a href="/eclipselink/api/index.php"> Java Docs</a>,
+						<a href="http://wiki.eclipse.org/EclipseLink/Examples"> Examples</a>,
 						<a href="http://wiki.eclipse.org/EclipseLink/FAQ"> FAQ</a>, <br/>
-						<a href="/projects/project-plan.php?projectid=rt.eclipselink">Plans,</a>
-						<a href="/eclipselink/releases/2.2.0.php">New and Noteworthy</a>
+						<a href="/eclipselink/releases/2.2.0.php">2.2.0 New and Noteworthy</a>
 					</span>
 				</div>
 			</td>
