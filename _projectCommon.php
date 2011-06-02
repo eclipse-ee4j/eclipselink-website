@@ -26,9 +26,14 @@
 	
 	# Break the navigation into sections
 	$Nav->addNavSeparator("EclipseLink Home", 	"/eclipselink");
-	$Nav->addCustomNav("About EclipseLink", 	"http://www.eclipse.org/projects/project_summary.php?projectid=rt.eclipseilnk",    	"_self", 3);
-	$Nav->addCustomNav("Download", 			"/eclipselink/downloads", 		"_self", 3);
-	$Nav->addCustomNav("Documentation", 	"http://wiki.eclipse.org/EclipseLink/Documentation_Center", "_self", 3);
+	$Nav->addCustomNav("About EclipseLink", "http://www.eclipse.org/projects/project_summary.php?projectid=rt.eclipseilnk",    	"_self", 3);
+	$Nav->addNavSeparator("Releases", "/eclipselink/releases", "_self", 3);
+	$Nav->addCustomNav("2.2.0", "/eclipselink/releases/2.2.0.php", "_self", 3);
+	$Nav->addCustomNav("Downloads", "/eclipselink/downloads", "_self", 3);
+
+	$Nav->addCustomNav("Documentation", "http://wiki.eclipse.org/EclipseLink/Documentation_Center", "_self", 3);
+	$Nav->addCustomNav("Doc Center (wiki)", "http://wiki.eclipse.org/EclipseLink/Documentation_Center", "_self", 3);
+	$Nav->addCustomNav("Java Docs", "/eclipselink/api/latest", "_self", 3);
 	
 	
 	# To enable occasional Eclipse Foundation Promotion banners on your pages (EclipseCon, etc)

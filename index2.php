@@ -99,9 +99,11 @@
 			</ul>
 		</div>
 		<div class="sideitem">
-			<h6>Virgo Powered</h6>
+			<h6>EclipseLink Powered</h6>
 			<ul>
-				<li><a href="http://github.com/PouzinSociety/tinos">Oracle TopLink</a></li>
+				<li><a href="http://glassfish.java.net/">GlassFish Server</a></li>
+				<li><a href="http://www.oracle.com/technetwork/middleware/toplink/overview/index.html">Oracle TopLink</a></li>
+				<li><a href="http://www.oracle.com/technetwork/middleware/weblogic/index.html">Oracle WebLogic Server</a></li>
 			</ul>
 		</div>
 		<div class="sideitem">
