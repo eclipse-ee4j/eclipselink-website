@@ -7,14 +7,13 @@
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  *
- * Contributors:
+ * Contributors: frostc
  *    
  *******************************************************************************/
 
 	# Set the theme for your project's web pages.
 	# See http://eclipse.org/phoenix/
 	$theme = "Nova";
-	
 
 	# Define your project-wide Navigation here
 	# This appears on the left of the page if you define a left nav
@@ -25,24 +24,33 @@
 	# $Nav->setLinkList(array());
 	
 	# Break the navigation into sections
-	$Nav->addNavSeparator("EclipseLink Home", 	"/eclipselink", "_self", 3);
-	$Nav->addCustomNav("About EclipseLink", "http://www.eclipse.org/projects/project_summary.php?projectid=rt.eclipseilnk",    	"_self", 3);
+	$Nav->addNavSeparator("Gemini", 		"/gemini");
+	$Nav->addCustomNav("Download", 			"/gemini/gemini/download.php", 			"_self", 3);
+	$Nav->addCustomNav("Documentation", 	"/gemini/gemini/documentation.php", 	"_self", 3);
+	$Nav->addCustomNav("Support", 			"/gemini/gemini/support.php", 			"_self", 3);
+	$Nav->addCustomNav("Getting Involved", 	"/gemini/gemini/getting_involved.php", 	"_self", 3);
 
-	$Nav->addNavSeparator("Releases", "/eclipselink/releases", "_self", 3);
-	$Nav->addCustomNav("2.2.0", "/eclipselink/releases/2.2.0.php", "_self", 3);
-	$Nav->addCustomNav("Downloads", "/eclipselink/downloads", "_self", 3);
+	# Define keywords, author and title here, or in each PHP page specifically
+	# $pageKeywords		= "javaee, osgi, enterprise, module, gemini";
+	# $pageAuthor		= "Mike Keith";
+	# $pageTitle 		= "Gemini";
 
-	$Nav->addCustomNav("Documentation", "http://wiki.eclipse.org/EclipseLink/Documentation_Center", "_self", 3);
-	$Nav->addCustomNav("Doc Center (wiki)", "http://wiki.eclipse.org/EclipseLink/Documentation_Center", "_self", 3);
-	$Nav->addCustomNav("Java Docs", "/eclipselink/api/latest", "_self", 3);
-	
+
+	# top navigation bar
+	# To override and replace the navigation with your own, uncomment the line below.
+	# $Menu->setMenuItemList(array());
+	# $Menu->addMenuItem("Home", "/project", "_self");
+	# $Menu->addMenuItem("Download", "/project/download.php", "_self");
+	# $Menu->addMenuItem("Documentation", "/project/documentation.php", "_self");
+	# $Menu->addMenuItem("Support", "/project/support.php", "_self");
+	# $Menu->addMenuItem("Developers", "/project/developers", "_self");
 	
 	# To define additional CSS or other pre-body headers
 	$App->AddExtraHtmlHeader('<link media="screen" rel="stylesheet" type="text/css" href="/gemini/styles/style.css"/>');
-
+	
 	# To enable occasional Eclipse Foundation Promotion banners on your pages (EclipseCon, etc)
 	$App->Promotion = TRUE;
 	
 	# If you have Google Analytics code, use it here
-	$App->SetGoogleAnalyticsTrackingCode("UA-1608008-2");
+	# $App->SetGoogleAnalyticsTrackingCode("YOUR_CODE");
 ?>
