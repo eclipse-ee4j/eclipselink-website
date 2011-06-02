@@ -43,9 +43,9 @@
 </div>
 
 <div id="midcolumn">
-	<h2>EclipseLink - Java Persistence Services Project</h2>
 	
 	<div class="section">
+		<h2>EclipseLink Project</h2>
 		<p>
 			The EclipseLink project delivers a comprehensive open-source Java persistence solution addressing relational, XML, and database web services.
 		</p>
@@ -56,8 +56,7 @@
 			<h3>Getting Started</h3>
 			<p>
 				Select a persistence service and learn more about how to
-				get
-				started developing with EclipseLink.
+				get started developing with EclipseLink.
 			</p>
 		<table width="100%">
 		<tr>
@@ -81,6 +80,14 @@
 			</td>
 		</tr>
 		</table>
+	</div>
+
+	<div class="section">
+			<h3>Learn More</h3>
+	</div>
+	
+	<div class="section">
+			<h3>Project News</h3>
 	</div>
 
 </div>
