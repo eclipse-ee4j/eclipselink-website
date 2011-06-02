@@ -25,8 +25,9 @@
 	# $Nav->setLinkList(array());
 	
 	# Break the navigation into sections
-	$Nav->addNavSeparator("EclipseLink Home", 	"/eclipselink");
+	$Nav->addNavSeparator("EclipseLink Home", 	"/eclipselink" "_self", 3);
 	$Nav->addCustomNav("About EclipseLink", "http://www.eclipse.org/projects/project_summary.php?projectid=rt.eclipseilnk",    	"_self", 3);
+
 	$Nav->addNavSeparator("Releases", "/eclipselink/releases", "_self", 3);
 	$Nav->addCustomNav("2.2.0", "/eclipselink/releases/2.2.0.php", "_self", 3);
 	$Nav->addCustomNav("Downloads", "/eclipselink/downloads", "_self", 3);
