@@ -34,17 +34,20 @@
 		<tr>
 			<td width="33% align="center">
 				<a href="jpa.php">
-				<img src="/eclipselink/images/Eclipselink_jpa.png" border="0" />
+				<img src="/eclipselink/images/Eclipselink_jpa.png" border="0" /><br/>
+				<h3>Object-Relational</h3>
 				</a>
 			</td>
 			<td width="33% align="center">
 				<a href="moxy.php">
-				<img src="/eclipselink/images/Eclipselink_moxy.png" border="0" />
+				<img src="/eclipselink/images/Eclipselink_moxy.png" border="0" /><br/>
+				<h3>Object-XML</h3>
 				</a>
 			</td>
 			<td width="33% align="center">
 				<a href="dbws.php">
-				<img src="/eclipselink/images/Eclipselink_dbws.png" border="0" />
+				<img src="/eclipselink/images/Eclipselink_dbws.png" border="0" /><br/>
+				<h3>Database Web Services</h3>
 				</a>
 			</td>
 		</tr>
@@ -66,12 +69,6 @@
 			<ul>
 			    <li><a href="http://eclipselink.blogspot.com">EclipseLink</a></li>
 			    <li><a href="http://java-persistence.blogspot.com">Java Persistence</a></li>
-			</ul>
-		</div>
-		<div class="sideitem">
-			<h6>Presentations</h6>
-			<ul>
-				<li><a href="http://live.eclipse.org/node/937">Virgo Webinar, 31 August 2010</a></li>
 			</ul>
 		</div>
 		<div class="sideitem">
