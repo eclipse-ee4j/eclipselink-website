@@ -27,7 +27,7 @@
 	
 	ob_start();
 ?>
-<link rel="stylesheet" type="text/css" href="/webtools/customMain.css" />
+<link rel="stylesheet" type="text/css" href="/eclipselink/resources/local.css" />
 <link rel="shortcut icon" href="/webtools/images/favicon.ico">
 <div class="logoBanner"><a href="/webtools/"><img src="/eclipselink/images/logo.png" /></a></div>
 <div id="bigbuttons">
@@ -35,18 +35,23 @@
 		<tr>
 			<td>
 				<div class="bigbuttonsAbout">
-					<a href="/projects/project_summary.php?projectid=webtools"><div class="bigbuttonsTitleLink"></div></a>
-					<span><a href="http://dev.eclipse.org/viewcvs/index.cgi/?root=WebTools_Project">Source Repository</a>, PMC,<br/>Committers and more...</span>
+					<a href="/projects/project_summary.php?projectid=rt.eclipselink"><div class="bigbuttonsTitleLink"></div></a>
+					<span>
+						<a href="/projects/project_summary.php?projectid=rt.eclipselink">Project Summary</a>, 
+						<a href="/eclipselink/releases">Releases</a>, <br/>
+						<a href="/eclipselink/team/">Committers</a> and more...
+					</span>
 				</div>
 			</td>
 			<td>
 				<div class="bigbuttonsDocumentation">
-					<a href="/webtools/documentation/"><div class="bigbuttonsTitleLink"></div></a>
+					<a href="http://wiki.eclipse.org/EclipseLink/Documentation_Center"><div class="bigbuttonsTitleLink"></div></a>
 					<span>
-						<a href="/webtools/documentation/">Help Docs</a>,
-						<a href="http://wiki.eclipse.org/WTP_FAQ"> FAQ</a>,
-						<a href="/projects/project-plan.php?projectid=webtools"> Plans,</a><br/>
-						<a href="/webtools/development/news/main.php">New and Noteworthy</a>
+						<a href="http://wiki.eclipse.org/EclipseLink/Documentation_Center">Doc Center</a>,
+						<a href="http://www.eclipse.org/eclipselink/api/index.php"> Java Docs</a>,
+						<a href="http://wiki.eclipse.org/EclipseLink/FAQ"> FAQ</a>, <br/>
+						<a href="/projects/project-plan.php?projectid=rt.eclipselink">Plans,</a>
+						<a href="/eclipselink/releases/2.2.0.php">New and Noteworthy</a>
 					</span>
 				</div>
 			</td>
@@ -56,22 +61,22 @@
 				<div class="bigbuttonsCommunity">
 					<a href="/webtools/community/"><div class="bigbuttonsTitleLink"></div></a>
 					<span>
-						<a href="http://wiki.eclipse.org/Category:Eclipse_Web_Tools_Platform_Project">Wiki</a>,
-						<a href="/forums/eclipse.webtools"> Newsgroup</a>,<br/>
-						<a href="http://dev.eclipse.org/mhonarc/lists/wtp-dev/">Mailing List</a>,
-						<a href="/webtools/community/resources/"> Resources</a>,<br/>
-						<a href="/webtools/community/education/">Education</a>,
-						<a href="/webtools/people/contributors.php"> Contributors</a>
+						<a href="http://wiki.eclipse.org/EclipseLinkt">Wiki</a>,
+						<a href="/newsportal/thread.php?group=eclipse.rt.eclipselink"> Newsgroup</a>,<br/>
+						<a href="http://dev.eclipse.org/mhonarc/lists/eclipselink-users/maillist.html">User Mailing List</a>
 					</span>
 				</div>
 			</td>
 			<td>
 				<div class="bigbuttonsDownloads">
-					<a href="http://download.eclipse.org/webtools/downloads/"><div class="bigbuttonsTitleLink"></div></a>
+					<a href="http://download.eclipse.org/eclipselink/downloads/"><div class="bigbuttonsTitleLink"></div></a>
 					<span>
-						<a href="http://download.eclipse.org/webtools/downloads/">Builds</a>,
-						<a href="http://eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/heliossr2">Java EE</a> and <a href="http://eclipse.org/downloads/packages/eclipse-ide-javascript-web-developers/heliossr2">JavaScript Web</a> packages, 
-						<a href="http://download.eclipse.org/releases/helios/">Helios</a> Update Site
+						<a href="/eclipselink/releases">Releases</a>,
+						<a href="/eclipselink/downloads">Latest Release</a>,
+						<a href="/eclipselink/downloads/previous_releases.php">previous Releases</a>,
+						<a href="/eclipselink/downloads/milestones.php">Milestone Builds</a>, 
+						<a href="/eclipselink/downloads/nightly.php">Nightly Builds</a>, and
+						<a href="http://wiki.eclipse.org/EclipseLink/Maven">Maven Access</a>, 
 					</span>
 				</div>
 			</td>
