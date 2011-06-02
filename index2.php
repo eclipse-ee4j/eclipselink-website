@@ -129,7 +129,6 @@ new TWTR.Widget({
 			<br/><font size=-1>Follow: <a href="http://twitter.com/doug_clarke">Doug Clarke</a>
 			</font>
 		</div>
-	</div>
 
 		<div class="sideitem">
 			<h6>Blogs</h6>
@@ -147,6 +146,8 @@ new TWTR.Widget({
 				<li><a href="http://www.oracle.com/technetwork/middleware/weblogic/index.html">Oracle WebLogic Server</a></li>
 			</ul>
 		</div>
+
+	</div><!-- end of rightcolumn -->
 	
 <?
 	$html = ob_get_clean();
