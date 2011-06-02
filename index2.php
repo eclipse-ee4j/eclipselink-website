@@ -29,7 +29,7 @@
 ?>
 <div id="content-header">
 	<a id="content-logo" href="/eclipselink">
-		<img src="/eclipselink/images/logos/eclipselink-logo.png" height="100px"/>
+		<img src="/eclipselink/images/logo.png"/>
 	</a>
 </div>
 <div id="bigbuttons">

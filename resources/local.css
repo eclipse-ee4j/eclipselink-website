@@ -1,34 +1,22 @@
 @CHARSET "UTF-8";
 
-
-.twtr-hd h3, .twtr-hd h4 {
-	color: #ffffff;
+#midcolumn {
+	width: 640px;
+	padding: 0 10px 10px 10px;
 }
 
-.twtr-hd h3 {
-	border: 0px;
+#rightcolumn {
+	width: 260px;
 }
 
-.logo {
-    margin-left: auto;
-    margin-right: auto;
-    width: 326px;
-    margin-bottom: 20px;
-}
 
-.award {
-	margin-top: -20px;
-	margin-left: auto;
-    margin-right: auto;
-    width: 144px;
-}
-
-#novaContent.faux  {
-	background: url("/virgo/images/faux.png") repeat-y scroll 0 0 #FFFFFF;
+h3 {
+	clear: both;
 }
 
 a {
 	color: #002E62;
+	text-decoration: none;
 }
 
 a:hover {
@@ -36,25 +24,142 @@ a:hover {
 	text-decoration: none;
 }
 
-#incubation {
-	margin-left: auto;
-    margin-right: auto;
-    width: 98px;
+a strong {
+	text-decoration: underline;
+}
+
+
+#novaContent {
+	background: url("/gemini/images/backgroundMain.png") no-repeat white;
+}
+
+#content-header {
+	height: 180px;
+}
+
+#content-logo {
+	left: 85px;
+	position: relative;
+	top: 30px
+}
+
+#content-logo img {
+	width: 150px;
+}
+
+.section {
+	clear: both;
+}
+
+.section p.left {
+	width: 48%;
+	float: left;
+}
+
+.section p.right {
+	width: 48%;
+	float: right;
+}
+	
+#bigbuttons {
+	position: relative;
+	left: 420px;
+	top: -180px;
+}
+#bigbuttons h3{
+	visibility: hidden;
+}
+
+#bigbuttons a {
+}
+
+#bigbuttons ul li {
+   display:block;
+   list-style-type:none;
+   background-color: red;
+   padding: 0;
+   margin: 0;
+}
+
+#bigbuttons a:hover {
+	text-decoration: none;
+}
+
+#bigbuttons a {
+   display: block;
+   height:77px; width:250px;
+   padding: 0;
+   margin: 20px;
+   text-indent: -9000px;
+   position: absolute;
+}
+
+#buttonDownload {
+   background:transparent url("/gemini/images/buttonDownload.png") no-repeat 0 0;
+   top: 0px;
+   left: 0px;
+}
+
+/*
+#buttonDownload:hover {
+   background:transparent url("/gemini/images/buttonDownload_sel.png") no-repeat 0 0;
+}
+*/
+   
+#buttonDocumentation {
+   background:transparent url("/gemini/images/buttonDocumentation.png") no-repeat 0 0;
+   top: 87px;
+   left: 0px;
+}
+
+/*
+#buttonDocumentation:hover {
+   background:transparent url("/gemini/images/buttonDocumentation_sel.png") no-repeat 0 0;
+}
+*/
+
+#buttonSupport {
+   background:transparent url("/gemini/images/buttonSupport.png") no-repeat 0 0;
+   top: 0px;
+   left: 280px;
+}
+
+/*
+#buttonSupport:hover {
+   background:transparent url("/gemini/images/buttonSupport_sel.png") no-repeat 0 0;
+}
+*/
+
+#buttonInvolved {
+   background:transparent url("/gemini/images/buttonInvolved.png") no-repeat 0 0;
+   top: 87px;
+   left: 280px;
+}
+
+/*
+#buttonInvolved:hover {
+   background:transparent url("/gemini/images/buttonInvolved_sel.png") no-repeat 0 0;
+}
+*/
+
+#bigbuttons a * {
+	visibility: hidden;
+}
+
+.sideitem p {
+	margin-bottom: 0px;
+}
+	
+#incubation  {
+	margin-left:auto;
+	margin-right:auto;
+	width:98px;
+}
+
+#novaContent li {
+	list-style-image:url("/gemini/images/bullet.png");
 }
 
 #search #searchBox {
 	width:220px;
-}
-
-#novaContent li {
-	list-style-image: url("/virgo/images/bullet.png");
-}
-
-.toggle {
-	cursor: pointer;
-	color: #002E62;
-}
-
-.toggle:hover {
-	color: #0093CF;
 }
