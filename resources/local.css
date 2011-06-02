@@ -34,13 +34,13 @@ a strong {
 }
 
 #content-header {
-	width: 400px;
+	width: 180px;
 }
 
 #content-logo {
-	left: 75px;
+	left: 50px;
 	position: relative;
-	top: 45px
+	top: 30px
 }
 
 #content-logo img {
