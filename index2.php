@@ -77,19 +77,6 @@
 			</td>
 		</tr>
 	</table>
-</div><div id="content-header">
-	<a id="content-logo" href="/eclipselink">
-		<img src="/eclipselink/images/logo.png"/>
-	</a>
-</div>
-<div id="bigbuttons">
-	<h3>Primary Links</h3>
-	<ul>
-		<li><a id="buttonDownload" 		href="/eclipselink/downloads" 			title="Download">Downloads</a></li>
-		<li><a id="buttonDocumentation" href="http://wiki.eclipse.org/EclipseLink/Documentation_Center" 	title="Documentation">Tutorials, Examples, Documentation</a></li>
-		<li><a id="buttonSupport" 		href="http://www.eclipse.org/newsportal/thread.php?group=eclipse.rt.eclipselink" 			title="Support">Forum</a></li>
-		<li><a id="buttonInvolved" 		href="/gemini/gemini/getting_involved.php" 	title="Getting Involved">SVN, Workspace Setup, Wiki, Committers</a></li>
-	</ul>
 </div>
 
 <div id="midcolumn">
