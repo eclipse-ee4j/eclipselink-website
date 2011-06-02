@@ -14,22 +14,22 @@
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  *
- * Contributors: mkeith, frostc
+ * Contributors: mkeith, frostc, dclarke
  *    
  *******************************************************************************/
 
 	$localVersion = false;
 	
 	# Define these here, or in _projectCommon.php for site-wide values
-	$pageKeywords	= "eclipse, project, gemini, modules, osgi, enterprise";
-	$pageAuthor		= "Mike Keith";
-	$pageTitle 		= "Gemini Home";
+	$pageKeywords	= "eclipse, project, eclipselink, persistence";
+	$pageAuthor		= "Doug Clarke";
+	$pageTitle 		= "EclipseLink Home";
 	
 	ob_start();
 ?>
 <div id="content-header">
 	<a id="content-logo" href="/eclipselink">
-		<img src="/eclipselink/images/logo.png"/>
+		<img src="/eclipselink/images/logo/eclipselink-logo.png" height="100px"/>
 	</a>
 </div>
 <div id="bigbuttons">
@@ -44,7 +44,6 @@
 
 <div id="midcolumn">
 	<h2>EclipseLink - Java Persistence Services Project</h2>
-	<h4>Simplifying data access</h4>
 	
 	<div class="section">
 		<p>
