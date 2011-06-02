@@ -102,8 +102,7 @@
 		<tr>
 			<td width="33% align="center">
 				<a href="jpa.php">
-				<font size="+5"><b>Object-Relational Mapping</b><br/>
-				JPA</font>
+				<font size=+4>Object-Relational Mapping<br/>JPA</font>
 				<img src="/eclipselink/images/Eclipselink_jpa.png" border="0" /><br/>
 				</a>
 			</td>
@@ -172,8 +171,6 @@ new TWTR.Widget({
   }
 }).render().start();
 </script>
-			<br/><font size=-1>Follow: <a href="http://twitter.com/doug_clarke">Doug Clarke</a>
-			</font>
 		</div>
 		
 		<div class="sideitem">
