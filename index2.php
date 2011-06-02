@@ -30,6 +30,20 @@
 		<p>
 			The EclipseLink project delivers a comprehensive open-source Java persistence solution addressing relational, XML, and database web services.  
 		</p>
+		<table width="100%">
+		<tr>
+			<td width="33% align="center">
+			<img
+				<src="/eclipselink/images/Eclipselink_jpa.png" border="0" />
+			</td>
+			<td width="33% align="center">
+				<src="/eclipselink/images/Eclipselink_moxy.png" border="0" />
+			</td>
+			<td width="33% align="center">
+				<src="/eclipselink/images/Eclipselink_dbws.png" border="0" />
+			</td>
+		</tr>
+		</table>
 		
 	</div>
 
