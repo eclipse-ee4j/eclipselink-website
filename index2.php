@@ -26,10 +26,22 @@
 	ob_start();
 ?>
 	<div id="midcolumn">
-		<div class="logo"><img src="/eclipselink/images/logo.jpg" alt="EclipseLink"/></div>
+		<div class="logo">
+			<img src="/eclipselink/images/logo.jpg" alt="EclipseLink"/>
+		</div>
+		<div class="homeitem">
 		<p>
 			The EclipseLink project delivers a comprehensive open-source Java persistence solution addressing relational, XML, and database web services.  
 		</p>
+		</div>
+		
+		<div class="homeitem3col">
+			<h3>Getting Started</h3>
+			<p>
+				Select a persistence service and learn more about how to
+				get
+				started developing with EclipseLink.
+			</p>
 		<table width="100%">
 		<tr>
 			<td width="33% style="text-align:center">
@@ -52,18 +64,33 @@
 			</td>
 		</tr>
 		</table>
+		</div>
+
+	<div class="homeitem3col">
+		<h3>Learn More</h3>
+		<ul>
+			<li><a href="http://eclipse.dzone.com/articles/introducing-eclipselink">Introducing EclipseLink (Eclipse Zone)</a></li>
+			<em>June 30, 2008</em>
+		</ul>
+
+	</div>
+
+	<div class="homeitem3col">
+		<h3>Project News</h3>
 		
+		<ul>
+		<li><a href="http://www.eclipse.org/eclipselink/downloads">EclipseLink 2.1.3 Released</a></li>
+			<em>April 15, 2011</em>
+		</ul>
+
+	</div>
+		
+			
 	</div>
 
 	<!-- remove the entire <div> tag to omit the right column!  -->
 	<div id="rightcolumn">
-		<div class="sideitem">
-			<h6>Quick Links</h6>
-			<ul>
-				<li><a href="http://wiki.eclipse.org/EclipseLink">Wiki</a></li>
-			</ul>
-		</div>
-
+	
 		<div class="sideitem">
 			<h6>Blogs</h6>
 			<ul>
