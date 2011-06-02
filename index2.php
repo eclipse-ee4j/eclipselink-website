@@ -70,7 +70,7 @@
 		<h3>Learn More</h3>
 		<ul>
 			<li><a href="http://eclipse.dzone.com/articles/introducing-eclipselink">Introducing EclipseLink (Eclipse Zone)</a> - 
-			<em>June 30, 2008</em></li>
+			<i>June 30, 2008</i></li>
 		</ul>
 
 	</div>
@@ -80,7 +80,7 @@
 		
 		<ul>
 		<li><a href="http://www.eclipse.org/eclipselink/downloads">EclipseLink 2.1.3 Released</a> - 
-			<em>April 15, 2011</em></li>
+			<i>April 15, 2011</i></li>
 		</ul>
 
 	</div>
