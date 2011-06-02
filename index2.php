@@ -28,16 +28,16 @@
 	ob_start();
 ?>
 <div id="content-header">
-	<a id="content-logo" href="/gemini">
-		<img src="/eclipselink/images/logo.jpg"/>
+	<a id="content-logo" href="/eclipselink">
+		<img src="/eclipselink/images/logo.png"/>
 	</a>
 </div>
 <div id="bigbuttons">
 	<h3>Primary Links</h3>
 	<ul>
-		<li><a id="buttonDownload" 		href="/gemini/gemini/download.php" 			title="Download">Module Downloads</a></li>
-		<li><a id="buttonDocumentation" href="/gemini/gemini/documentation.php" 	title="Documentation">Tutorials, Examples, Reference Documentation</a></li>
-		<li><a id="buttonSupport" 		href="/gemini/gemini/support.php" 			title="Support">Forum</a></li>
+		<li><a id="buttonDownload" 		href="/eclipselink/downloads" 			title="Download">Downloads</a></li>
+		<li><a id="buttonDocumentation" href="http://wiki.eclipse.org/EclipseLink/Documentation_Center" 	title="Documentation">Tutorials, Examples, Documentation</a></li>
+		<li><a id="buttonSupport" 		href="http://www.eclipse.org/newsportal/thread.php?group=eclipse.rt.eclipselink" 			title="Support">Forum</a></li>
 		<li><a id="buttonInvolved" 		href="/gemini/gemini/getting_involved.php" 	title="Getting Involved">SVN, Workspace Setup, Wiki, Committers</a></li>
 	</ul>
 </div>
@@ -53,11 +53,35 @@
 	</div>
 
  
-	<div id="jpa" class="section">
-	
-		<h3>JPA: Object-Relational</h3>
-		<p class="left">Each of the sub-projects is packaged as a separate and standalone module.</p>
-		<p class="right"><a href="jpa.php"><img src="/eclipselink/images/Eclipselink_jpa.png" border="0" /></a></p>
+	<div class="section">
+			<h3>Getting Started</h3>
+			<p>
+				Select a persistence service and learn more about how to
+				get
+				started developing with EclipseLink.
+			</p>
+		<table width="100%">
+		<tr>
+			<td width="33% style="text-align:center">
+				<a href="jpa.php">
+				<img src="/eclipselink/images/Eclipselink_jpa.png" border="0" /><br/>
+				<h5>Object-Relational</h5>
+				</a>
+			</td>
+			<td width="33% style="text-align:center">
+				<a href="moxy.php">
+				<img src="/eclipselink/images/Eclipselink_moxy.png" border="0" /><br/>
+				<h5>Object-XML</h5>
+				</a>
+			</td>
+			<td width="33% style="text-align:center">
+				<a href="dbws.php">
+				<img src="/eclipselink/images/Eclipselink_dbws.png" border="0" /><br/>
+				<h5>DB Web Services</h5>
+				</a>
+			</td>
+		</tr>
+		</table>
 	</div>
 
 </div>
