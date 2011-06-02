@@ -92,21 +92,6 @@
 	<div id="rightcolumn">
 	
 		<div class="sideitem">
-			<h6>Blogs</h6>
-			<ul>
-			    <li><a href="http://eclipselink.blogspot.com">EclipseLink</a></li>
-			    <li><a href="http://java-persistence.blogspot.com">Java Persistence</a></li>
-			</ul>
-		</div>
-		<div class="sideitem">
-			<h6>EclipseLink Powered</h6>
-			<ul>
-				<li><a href="http://glassfish.java.net/">GlassFish Server</a></li>
-				<li><a href="http://www.oracle.com/technetwork/middleware/toplink/overview/index.html">Oracle TopLink</a></li>
-				<li><a href="http://www.oracle.com/technetwork/middleware/weblogic/index.html">Oracle WebLogic Server</a></li>
-			</ul>
-		</div>
-		<div class="sideitem">
 			<script src="http://widgets.twimg.com/j/2/widget.js"></script>
 <script>
 new TWTR.Widget({
@@ -146,6 +131,22 @@ new TWTR.Widget({
 		</div>
 	</div>
 
+		<div class="sideitem">
+			<h6>Blogs</h6>
+			<ul>
+			    <li><a href="http://eclipselink.blogspot.com">EclipseLink</a></li>
+			    <li><a href="http://java-persistence.blogspot.com">Java Persistence</a></li>
+			</ul>
+		</div>
+
+		<div class="sideitem">
+			<h6>EclipseLink Powered</h6>
+			<ul>
+				<li><a href="http://glassfish.java.net/">GlassFish Server</a></li>
+				<li><a href="http://www.oracle.com/technetwork/middleware/toplink/overview/index.html">Oracle TopLink</a></li>
+				<li><a href="http://www.oracle.com/technetwork/middleware/weblogic/index.html">Oracle WebLogic Server</a></li>
+			</ul>
+		</div>
 	
 <?
 	$html = ob_get_clean();
