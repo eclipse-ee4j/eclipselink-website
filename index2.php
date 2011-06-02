@@ -27,7 +27,9 @@
 	
 	ob_start();
 ?>
-<div class="logoBanner"><a href="/webtools/"><img src="/webtools/images/wtp_logo_2010.png" /></a></div>
+<link rel="stylesheet" type="text/css" href="/webtools/customMain.css" />
+<link rel="shortcut icon" href="/webtools/images/favicon.ico">
+<div class="logoBanner"><a href="/webtools/"><img src="/eclipselink/images/logo.png" /></a></div>
 <div id="bigbuttons">
 	<table border="0" cellspacing="0" cellpadding="0">
 		<tr>
