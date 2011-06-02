@@ -58,7 +58,7 @@
 		<tr>
 			<td>
 				<div class="bigbuttonsCommunity">
-					<a href="/webtools/community/"><div class="bigbuttonsTitleLink"></div></a>
+					<a href="/eclipselink/community.php"><div class="bigbuttonsTitleLink"></div></a>
 					<span>
 						<a href="http://wiki.eclipse.org/EclipseLink">Wiki</a>,
 						<a href="/forums/index.php/f/111/"> Newsgroup</a>,<br/>
