@@ -95,50 +95,46 @@ a strong {
 }
 
 #buttonDownload {
-   background:transparent url("/gemini/images/buttonDownload.png") no-repeat 0 0;
+   background:transparent url("/eclipselink/images/buttonDownload.png") no-repeat 0 0;
    top: 0px;
    left: 0px;
 }
 
-/*
 #buttonDownload:hover {
-   background:transparent url("/gemini/images/buttonDownload_sel.png") no-repeat 0 0;
+   background:transparent url("/eclipselink/images/buttonDownload_sel.png") no-repeat 0 0;
 }
-*/
    
 #buttonDocumentation {
-   background:transparent url("/gemini/images/buttonDocumentation.png") no-repeat 0 0;
+   background:transparent url("/eclipselink/images/buttonDocumentation.png") no-repeat 0 0;
    top: 87px;
    left: 0px;
 }
 
-/*
 #buttonDocumentation:hover {
-   background:transparent url("/gemini/images/buttonDocumentation_sel.png") no-repeat 0 0;
+   background:transparent url("/eclipselink/images/buttonDocumentation_sel.png") no-repeat 0 0;
 }
-*/
 
 #buttonSupport {
-   background:transparent url("/gemini/images/buttonSupport.png") no-repeat 0 0;
+   background:transparent url("/eclipselink/images/buttonSupport.png") no-repeat 0 0;
    top: 0px;
    left: 280px;
 }
 
 /*
 #buttonSupport:hover {
-   background:transparent url("/gemini/images/buttonSupport_sel.png") no-repeat 0 0;
+   background:transparent url("/eclipselink/images/buttonSupport_sel.png") no-repeat 0 0;
 }
 */
 
 #buttonInvolved {
-   background:transparent url("/gemini/images/buttonInvolved.png") no-repeat 0 0;
+   background:transparent url("/eclipselink/images/buttonInvolved.png") no-repeat 0 0;
    top: 87px;
    left: 280px;
 }
 
 /*
 #buttonInvolved:hover {
-   background:transparent url("/gemini/images/buttonInvolved_sel.png") no-repeat 0 0;
+   background:transparent url("/eclipselink/images/buttonInvolved_sel.png") no-repeat 0 0;
 }
 */
 
@@ -157,7 +153,7 @@ a strong {
 }
 
 #novaContent li {
-	list-style-image:url("/gemini/images/bullet.png");
+	list-style-image:url("/eclipselink/images/bullet.png");
 }
 
 #search #searchBox {
