@@ -102,8 +102,8 @@
 		<tr>
 			<td width="33% align="center">
 				<a href="jpa.php">
-				<h5 size="+2">Object-Relational Mapping</h5>
-				<h5 size="+2">JPA</h5>
+				<font size="+5"><b>Object-Relational Mapping</b><br/>
+				<h5 size="+2">JPA</font>
 				<img src="/eclipselink/images/Eclipselink_jpa.png" border="0" /><br/>
 				</a>
 			</td>
