@@ -35,19 +35,19 @@
 			<td width="33% align="center">
 				<a href="jpa.php">
 				<img src="/eclipselink/images/Eclipselink_jpa.png" border="0" /><br/>
-				<h3>Object-Relational</h3>
+				<h6>Object-Relational</h6>
 				</a>
 			</td>
 			<td width="33% align="center">
 				<a href="moxy.php">
 				<img src="/eclipselink/images/Eclipselink_moxy.png" border="0" /><br/>
-				<h3>Object-XML</h3>
+				<h6>Object-XML</h6>
 				</a>
 			</td>
 			<td width="33% align="center">
 				<a href="dbws.php">
 				<img src="/eclipselink/images/Eclipselink_dbws.png" border="0" /><br/>
-				<h3>Database Web Services</h3>
+				<h6>DB Web Services</h6>
 				</a>
 			</td>
 		</tr>
