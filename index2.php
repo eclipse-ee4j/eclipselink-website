@@ -27,7 +27,55 @@
 	
 	ob_start();
 ?>
-<div id="content-header">
+<div class="logoBanner"><a href="/webtools/"><img src="/webtools/images/wtp_logo_2010.png" /></a></div>
+<div id="bigbuttons">
+	<table border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td>
+				<div class="bigbuttonsAbout">
+					<a href="/projects/project_summary.php?projectid=webtools"><div class="bigbuttonsTitleLink"></div></a>
+					<span><a href="http://dev.eclipse.org/viewcvs/index.cgi/?root=WebTools_Project">Source Repository</a>, PMC,<br/>Committers and more...</span>
+				</div>
+			</td>
+			<td>
+				<div class="bigbuttonsDocumentation">
+					<a href="/webtools/documentation/"><div class="bigbuttonsTitleLink"></div></a>
+					<span>
+						<a href="/webtools/documentation/">Help Docs</a>,
+						<a href="http://wiki.eclipse.org/WTP_FAQ"> FAQ</a>,
+						<a href="/projects/project-plan.php?projectid=webtools"> Plans,</a><br/>
+						<a href="/webtools/development/news/main.php">New and Noteworthy</a>
+					</span>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="bigbuttonsCommunity">
+					<a href="/webtools/community/"><div class="bigbuttonsTitleLink"></div></a>
+					<span>
+						<a href="http://wiki.eclipse.org/Category:Eclipse_Web_Tools_Platform_Project">Wiki</a>,
+						<a href="/forums/eclipse.webtools"> Newsgroup</a>,<br/>
+						<a href="http://dev.eclipse.org/mhonarc/lists/wtp-dev/">Mailing List</a>,
+						<a href="/webtools/community/resources/"> Resources</a>,<br/>
+						<a href="/webtools/community/education/">Education</a>,
+						<a href="/webtools/people/contributors.php"> Contributors</a>
+					</span>
+				</div>
+			</td>
+			<td>
+				<div class="bigbuttonsDownloads">
+					<a href="http://download.eclipse.org/webtools/downloads/"><div class="bigbuttonsTitleLink"></div></a>
+					<span>
+						<a href="http://download.eclipse.org/webtools/downloads/">Builds</a>,
+						<a href="http://eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/heliossr2">Java EE</a> and <a href="http://eclipse.org/downloads/packages/eclipse-ide-javascript-web-developers/heliossr2">JavaScript Web</a> packages, 
+						<a href="http://download.eclipse.org/releases/helios/">Helios</a> Update Site
+					</span>
+				</div>
+			</td>
+		</tr>
+	</table>
+</div><div id="content-header">
 	<a id="content-logo" href="/eclipselink">
 		<img src="/eclipselink/images/logo.png"/>
 	</a>
