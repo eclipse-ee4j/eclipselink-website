@@ -43,58 +43,21 @@
 </div>
 
 <div id="midcolumn">
-	<h2>Gemini - Enterprise Modules Project</h2>
-	<h4>Making the world thinner... one module at a time</h4>
+	<h2>EclipseLink - Java Persistence Services Project</h2>
+	<h4>Simplifying data access</h4>
 	
 	<div class="section">
-		<p class="left">
-			The Enterprise Modules Project (Gemini) is all about modular implementations 
-			of Java EE technology. It provides the ability for users to consume individual modules as needed,
-			without requiring unnecessary additional runtime pieces.
-		</p>
-		<p class="right">
-			The modules currently run on the OSGi framework and leverage the OSGi bundle model
-			of packaging and lifecycle activation.
+		<p>
+			The EclipseLink project delivers a comprehensive open-source Java persistence solution addressing relational, XML, and database web services.
 		</p>
 	</div>
 
-	<div class="section" id="screencast">
-		<object width="640" height="10"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /></object>
-	</div>
-
-<!-- 
-<div id="screencast">
-<object width="640" height="480"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=8260921&amp;server=vimeo.com&amp;show_title=0&amp;show_byline=0&amp;show_portrait=0&amp;color=DBD7EF&amp;fullscreen=1" /><embed src="http://vimeo.com/moogaloop.swf?clip_id=8260921&amp;server=vimeo.com&amp;show_title=0&amp;show_byline=0&amp;show_portrait=0&amp;color=DBD7EF&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="640" height="480"></embed></object>
-</div>
--->
-
-<!-- 
-<h3>...and yet powerful</h3>
--->
  
-	<div id="modularity" class="section">
-		<h4>Modularity</h4>
-		<p>Each of the sub-projects is packaged as a separate and standalone module.</p>
-	</div>
-
-	<div id="independence" class="section">
-		<h4>Independence</h4>
-		<p>Most of the subproject modules are downloadable and executable independently from the others.</p>
-	</div>
-
-	<div id="free" class="section">
-		<h4>Free and Easy</h4>
-		<p>Like everything else at Eclipse, getting started is as easy as downloading and trying it out!</p>
-	</div>
-
-	<div id="more" class="section">
-		<h4>Find out more</h4>
-		<ul>
-			<li><a href="http://wiki.eclipse.org/Gemini">Gemini Wiki</a></li>
-			<li><a href="http://www.eclipse.org/forums/index.php?t=thread&frm_id=153">Gemini Forum</a></li>  
-			<li><a href="https://dev.eclipse.org/mailman/listinfo/gemini-dev">Developer Mailing List</a></li>
-			<li><a href="/projects/project_summary.php?projectid=rt.gemini">About This Project</a></li>
-		</ul>
+	<div id="jpa" class="section">
+	
+		<h3>JPA: Object-Relational</h3>
+		<p class="left">Each of the sub-projects is packaged as a separate and standalone module.</p>
+		<p class="right"><a href="jpa.php"><img src="/eclipselink/images/Eclipselink_jpa.png" border="0" /></a></p>
 	</div>
 
 </div>
