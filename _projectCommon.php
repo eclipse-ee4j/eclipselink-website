@@ -25,40 +25,15 @@
 	# $Nav->setLinkList(array());
 	
 	# Break the navigation into sections
-	$Nav->addNavSeparator("Virgo Home", 	"/virgo");
-	$Nav->addCustomNav("About Virgo", 	"http://www.eclipse.org/projects/project_summary.php?projectid=rt.virgo",    	"_self", 3);
-	$Nav->addCustomNav("Download", 			"/virgo/download", 		"_self", 3);
-	$Nav->addCustomNav("Documentation", 	"/virgo/documentation", "_self", 3);
-	$Nav->addCustomNav("FAQ",			 	"http://wiki.eclipse.org/Virgo/FAQ", "_self", 3);
-	$Nav->addCustomNav("Support", 			"/virgo/support", 		"_self", 3);
-	$Nav->addCustomNav("Getting Involved", 	"/virgo/contribute", 	"_self", 3);
-	$Nav->addCustomNav("Background",	 	"/virgo/about",	    	"_self", 3);
-	$Nav->addCustomNav("Benefits",	 		"/virgo/benefits",    	"_self", 3);
-
-	# Define keywords, author and title here, or in each PHP page specifically
-	# $pageKeywords	= "eclipse, OSGi, virgo";
-	# $pageAuthor		= "Christopher Frost";
-	# $pageTitle 		= "Virgo Server from EclipseRT";
-
-	# top navigation bar
-	# To override and replace the navigation with your own, uncomment the line below.
-	# $Menu->setMenuItemList(array());
-	# $Menu->addMenuItem("Home", "/project", "_self");
-	# $Menu->addMenuItem("Download", "/project/download.php", "_self");
-	# $Menu->addMenuItem("Documentation", "/project/documentation.php", "_self");
-	# $Menu->addMenuItem("Support", "/project/support.php", "_self");
-	# $Menu->addMenuItem("Developers", "/project/developers", "_self");
-	
-	# To define additional CSS or other pre-body headers
-	$App->AddExtraHtmlHeader('<link media="screen" rel="stylesheet" type="text/css" href="/virgo/resources/local.css"/>');
-	
-	$App->AddExtraHtmlHeader('<script type="text/javascript" src="/virgo/resources/mootools-1.2.4-core-yc.js"></script>');
-	$App->AddExtraHtmlHeader('<script type="text/javascript" src="/virgo/resources/mootools-1.2.4.4-more.js"></script>');
+	$Nav->addNavSeparator("EclipseLink Home", 	"/eclipselink");
+	$Nav->addCustomNav("About EclipseLink", 	"http://www.eclipse.org/projects/project_summary.php?projectid=rt.eclipseilnk",    	"_self", 3);
+	$Nav->addCustomNav("Download", 			"/eclipselink/downloads", 		"_self", 3);
+	$Nav->addCustomNav("Documentation", 	"http://wiki.eclipse.org/EclipseLink/Documentation_Center", "_self", 3);
 	
 	
 	# To enable occasional Eclipse Foundation Promotion banners on your pages (EclipseCon, etc)
 	$App->Promotion = TRUE;
 	
 	# If you have Google Analytics code, use it here
-	$App->SetGoogleAnalyticsTrackingCode("UA-15496793-1");
+	$App->SetGoogleAnalyticsTrackingCode("UA-1608008-2");
 ?>
