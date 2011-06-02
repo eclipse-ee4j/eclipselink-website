@@ -74,7 +74,7 @@
 						<a href="/eclipselink/downloads">Latest Release</a>,
 						<a href="/eclipselink/downloads/milestones.php">Milestone Builds</a>, 
 						<a href="/eclipselink/downloads/nightly.php">Nightly Builds</a>, and
-						<a href="http://wiki.eclipse.org/EclipseLink/Maven">Maven Access</a>, 
+						<a href="http://wiki.eclipse.org/EclipseLink/Maven">Maven</a>, 
 					</span>
 				</div>
 			</td>
