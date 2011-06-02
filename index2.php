@@ -25,10 +25,21 @@
 			
 	ob_start();
 ?>
+<div id="content-header">
+	<a id="content-logo" href="/eclipselink">
+		<img src="/eclipselink/images/logo.jpg"/>
+	</a>
+</div>
+<div id="bigbuttons">
+	<h3>Primary Links</h3>
+	<ul>
+		<li><a id="buttonDownload" 		href="/gemini/gemini/download.php" 			title="Download">Module Downloads</a></li>
+		<li><a id="buttonDocumentation" href="/gemini/gemini/documentation.php" 	title="Documentation">Tutorials, Examples, Reference Documentation</a></li>
+		<li><a id="buttonSupport" 		href="/gemini/gemini/support.php" 			title="Support">Forum</a></li>
+		<li><a id="buttonInvolved" 		href="/gemini/gemini/getting_involved.php" 	title="Getting Involved">SVN, Workspace Setup, Wiki, Committers</a></li>
+	</ul>
+</div>
 	<div id="midcolumn">
-		<div class="logo">
-			<img src="/eclipselink/images/logo.jpg" alt="EclipseLink"/>
-		</div>
 		<div class="homeitem">
 		<p>
 			The EclipseLink project delivers a comprehensive open-source Java persistence solution addressing relational, XML, and database web services.  
