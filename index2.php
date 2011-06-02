@@ -84,7 +84,7 @@
 
 <div id="midcolumn">
 	
-	<div class="section">
+	<div class="homeitem3col">
 		<h2>EclipseLink Project</h2>
 		<p>
 			The EclipseLink project delivers a comprehensive open-source Java persistence solution addressing relational, XML, and database web services.
@@ -92,7 +92,7 @@
 	</div>
 
  
-	<div class="section">
+	<div class="homeitem3col">
 			<h3>Getting Started</h3>
 			<p>
 				Select a persistence service and learn more about how to
