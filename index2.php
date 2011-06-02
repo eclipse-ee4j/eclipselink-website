@@ -100,19 +100,19 @@
 			</p>
 		<table width="100%">
 		<tr>
-			<td width="33% style="text-align:center">
+			<td width="33% align="center">
 				<a href="jpa.php">
 				<img src="/eclipselink/images/Eclipselink_jpa.png" border="0" /><br/>
 				<h5>Object-Relational</h5>
 				</a>
 			</td>
-			<td width="33% style="text-align:center">
+			<td width="33% align="center">
 				<a href="moxy.php">
 				<img src="/eclipselink/images/Eclipselink_moxy.png" border="0" /><br/>
 				<h5>Object-XML</h5>
 				</a>
 			</td>
-			<td width="33% style="text-align:center">
+			<td width="33% align="center">
 				<a href="dbws.php">
 				<img src="/eclipselink/images/Eclipselink_dbws.png" border="0" /><br/>
 				<h5>DB Web Services</h5>
