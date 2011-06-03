@@ -3,6 +3,9 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	version="1.0">
 
+
+	<xsl:template match="/sections">
+
 <div class="logoBanner"><a href="/eclipselink"><img src="/eclipselink/images/logo.png" /></a></div>
 <div id="bigbuttons">
 	<table border="0" cellspacing="0" cellpadding="0">
@@ -57,7 +60,6 @@
 	</table>
 </div>
 
-	<xsl:template match="/sections">
 			<div id="midcolumn">
 				<table width="750"><tr><td>	
 				<xsl:apply-templates select="section[@class='title']"
