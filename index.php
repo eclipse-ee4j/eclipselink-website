@@ -156,8 +156,8 @@ new TWTR.Widget({
   type: 'search',
   search: 'eclipselink',
   interval: 6000,
-  title: '',
-  subject: 'Follow EclipseLink',
+  title: 'What is being said about...',
+  subject: 'EclipseLink',
   width: 'auto',
   height: 300,
   theme: {
