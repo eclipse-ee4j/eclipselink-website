@@ -3,17 +3,7 @@
 
 	<section class="title">
 		<description>
-			<table border="0">
-				<tr>
-					<td>
-						<img
-							src="/eclipselink/images/Eclipselink_jpa.png" border="0" />
-					</td>
-					<td style="text-align:center">
-						<h1>EclipseLink JPA</h1>
-					</td>
-				</tr>
-			</table>
+			<h1>EclipseLink JPA</h1>
 			<p>
 				The EclipseLink JPA provides developers with a standards
 				based Object-Relational persistence solution with
