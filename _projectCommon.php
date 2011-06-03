@@ -15,35 +15,11 @@
 	# See http://eclipse.org/phoenix/
 	$theme = "Nova";
 
-	# Define your project-wide Navigation here
-	# This appears on the left of the page if you define a left nav
-	# Format is Link text, link URL (can be http://www.someothersite.com/), target (_self, _blank), level (1, 2 or 3)
-	# these are optional
-	
-	# If you want to override the eclipse.org navigation, uncomment below.
-	# $Nav->setLinkList(array());
-	
-	# Break the navigation into sections
-	$Nav->addNavSeparator("Gemini", 		"/gemini");
-	$Nav->addCustomNav("Download", 			"/gemini/gemini/download.php", 			"_self", 3);
-	$Nav->addCustomNav("Documentation", 	"/gemini/gemini/documentation.php", 	"_self", 3);
-	$Nav->addCustomNav("Support", 			"/gemini/gemini/support.php", 			"_self", 3);
-	$Nav->addCustomNav("Getting Involved", 	"/gemini/gemini/getting_involved.php", 	"_self", 3);
-
 	# Define keywords, author and title here, or in each PHP page specifically
-	# $pageKeywords		= "javaee, osgi, enterprise, module, gemini";
-	# $pageAuthor		= "Mike Keith";
-	# $pageTitle 		= "Gemini";
+	$pageKeywords		= "eclipselink, persistence, jpa, jaxb";
+	$pageAuthor		= "Doug Clarke";
+	$pageTitle 		= "EclipseLink";
 
-
-	# top navigation bar
-	# To override and replace the navigation with your own, uncomment the line below.
-	# $Menu->setMenuItemList(array());
-	# $Menu->addMenuItem("Home", "/project", "_self");
-	# $Menu->addMenuItem("Download", "/project/download.php", "_self");
-	# $Menu->addMenuItem("Documentation", "/project/documentation.php", "_self");
-	# $Menu->addMenuItem("Support", "/project/support.php", "_self");
-	# $Menu->addMenuItem("Developers", "/project/developers", "_self");
 	
 	# To define additional CSS or other pre-body headers
 	$App->AddExtraHtmlHeader('<link media="screen" rel="stylesheet" type="text/css" href="/eclipselink/resources/local.css"/>');
@@ -52,5 +28,5 @@
 	$App->Promotion = TRUE;
 	
 	# If you have Google Analytics code, use it here
-	# $App->SetGoogleAnalyticsTrackingCode("YOUR_CODE");
+	$App->SetGoogleAnalyticsTrackingCode("UA-1608008-2");
 ?>

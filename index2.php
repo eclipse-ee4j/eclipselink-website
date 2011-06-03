@@ -100,34 +100,46 @@
 			</p>
 		<table width="100%">
 		<tr>
-			<td width="33% align="center">
+			<td width="33%>
+				<p style="text-align:right">
 				<a href="jpa.php">
 				<font size=+4>Object-Relational Mapping<br/>JPA</font><br/>
 				<img src="/eclipselink/images/Eclipselink_jpa.png" border="0" /><br/>
-				</a>
+				</a></p>
 			</td>
 			<td width="33% align="center">
+				<p style="text-align:right">
 				<a href="moxy.php">
 				<font size=+4>Object-XML Binding<br/>JAXB and SDO</font><br/>
 				<img src="/eclipselink/images/Eclipselink_moxy.png" border="0" /><br/>
-				</a>
+				</a></p>
 			</td>
 			<td width="33% align="center">
+				<p style="text-align:right">
 				<a href="dbws.php">
 				<font size=+4>Database Wed Services<br/>JAX-WS and JAX-RS</font><br/>
 				<img src="/eclipselink/images/Eclipselink_dbws.png" border="0" /><br/>
-				</a>
+				</a></p>
 			</td>
 		</tr>
 		</table>
 	</div>
 
-	<div class="section">
-			<h3>Learn More</h3>
-	</div>
 	
 	<div class="section">
-			<h3>Project News</h3>
+			<h3>News</h3>
+			<ul>
+				<li><a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.3">EclipseLink 2.1.3 released</a> - <i>April 15, 2011</i></li>
+				<li><a href="/eclipselink/releases/2.2.0.php">EclipseLink 2.2.0 released</a> - <i>February 22, 2011</i></li>
+				<li><a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.2">EclipseLink 2.1.2 released</a> - <i>December 13, 2010</i></li>
+			</ul>
+	</div>
+
+	<div class="section">
+			<h3>Learn More</h3>
+			<ul>
+				<li>Article: <a href="http://eclipse.dzone.com/articles/introducing-eclipselink">Introducing EclipseLink (Eclipse Zone)</a> - <i>June 30, 2008</i></li>
+			</ul>
 	</div>
 
 </div>

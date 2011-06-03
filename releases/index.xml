@@ -19,6 +19,19 @@
 				</tr>
 				<tr>
 					<td>
+						<a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.3">2.2.0</a>
+					</td>
+					<td> April 15, 2011</td>
+					<td>
+						<a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.3">New &amp; Noteworthy</a>
+						,
+						<a href="http://www.eclipse.org/eclipselink/downloads/index.php#2.1.3">Download</a>
+						,
+						<a href="http://www.eclipse.org/eclipselink/api/2.1/index.html">Java Docs</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
 						<a href="2.2.0.php">2.2.0</a>
 					</td>
 					<td> February 22, 2011</td>
