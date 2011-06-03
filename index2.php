@@ -102,21 +102,19 @@
 		<tr>
 			<td width="33% align="center">
 				<a href="jpa.php">
-				<font size=+4>Object-Relational Mapping<br/>JPA</font>
+				<font size=+4>Object-Relational Mapping<br/>JPA</font><br/>
 				<img src="/eclipselink/images/Eclipselink_jpa.png" border="0" /><br/>
 				</a>
 			</td>
 			<td width="33% align="center">
 				<a href="moxy.php">
-				<h5 size="+2">Object-XML Binding</h5>
-				<h5 size="+2">JAXB and SDO</h5>
+				<font size=+4>Object-XML Binding<br/>JAXB and SDO</font><br/>
 				<img src="/eclipselink/images/Eclipselink_moxy.png" border="0" /><br/>
 				</a>
 			</td>
 			<td width="33% align="center">
 				<a href="dbws.php">
-				<h5>DB Web Services</h5>
-				<h5>JAX-WS and JAX-RS</h5>
+				<font size=+4>Database Wed Services<br/>JAX-WS and JAX-RS</font><br/>
 				<img src="/eclipselink/images/Eclipselink_dbws.png" border="0" /><br/>
 				</a>
 			</td>
