@@ -68,7 +68,7 @@
 			</td>
 			<td>
 				<div class="bigbuttonsDownloads">
-					<a href="http://download.eclipse.org/eclipselink/downloads/"><div class="bigbuttonsTitleLink"></div></a>
+					<a href="/eclipselink/downloads/"><div class="bigbuttonsTitleLink"></div></a>
 					<span>
 						<a href="/eclipselink/releases">Releases</a>,
 						<a href="/eclipselink/downloads">Latest Release</a>,
