@@ -3,7 +3,8 @@
 
 	<section class="main" name="Releases">
 		<description>
-			<table width="100%">
+		<div align="center">
+			<table width="300">
 				<tr style="background:#EEE;color:#666;">
 					<th>Release</th>
 					<th>Date</th>
@@ -14,238 +15,105 @@
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.3">2.1.3</a>
 					</td>
 					<td> April 15, 2011</td>
-					<td>
-						<a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.3">New &amp; Noteworthy</a>
-						,
-						<a href="http://www.eclipse.org/eclipselink/downloads/index.php#2.1.3">Download</a>
-						,
-						<a href="http://www.eclipse.org/eclipselink/api/2.1/index.html">Java Docs</a>
-					</td>
 				</tr>
 				<tr>
 					<td>
 						<a href="2.2.0.php">2.2.0</a>
 					</td>
 					<td> February 22, 2011</td>
-					<td>
-						<a href="2.2.0.php">New &amp; Noteworthy</a>
-						,
-						<a href="http://www.eclipse.org/eclipselink/downloads/index.php">Download</a>
-						,
-						<a href="http://www.eclipse.org/eclipselink/api/2.2/index.html">Java Docs</a>
-					</td>
 				</tr>
 				<tr>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.2">2.1.2</a>
 					</td>
 					<td> December 13, 2010</td>
-					<td>
-						<a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.2">New &amp; Noteworthy</a>
-						,
-						<a
-							href="http://www.eclipse.org/eclipselink/downloads/previous_releases.php#2.1.2">Download</a>
-						,
-						<a href="http://www.eclipse.org/eclipselink/api/2.1/index.html">Java Docs</a>
-					</td>
 				</tr>
 				<tr>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.1.4">1.1.4</a>
 					</td>
 					<td> September 9, 2010</td>
-					<td>
-						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.1.4">New &amp; Noteworthy</a>
-						,
-						<a
-							href="http://www.eclipse.org/eclipselink/downloads/previous_releases.php#1.1.4">Download</a>
-						,
-						<a href="http://www.eclipse.org/eclipselink/api/1.1/index.html">Java Docs</a>
-					</td>
 				</tr>
 				<tr>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.1">2.1.1</a>
 					</td>
 					<td>August 26, 2010</td>
-					<td>
-						<a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.1">New &amp; Noteworthy</a>
-						,
-						<a
-							href="http://www.eclipse.org/eclipselink/downloads/previous_releases.php#2.1.1">Download</a>
-						,
-						<a href="http://www.eclipse.org/eclipselink/api/2.1/index.html">Java Docs</a>
-					</td>
 				</tr>
 				<tr>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.0">2.1.0 - Helios</a>
 					</td>
 					<td>June 23, 2010</td>
-					<td>
-						<a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.0">New &amp; Noteworthy</a>
-						,
-						<a
-							href="http://www.eclipse.org/eclipselink/downloads/previous_releases.php#2.1.0">Download</a>
-						,
-						<a href="http://www.eclipse.org/eclipselink/api/2.1/index.html">Java Docs</a>
-					</td>
 				</tr>
 				<tr>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/2.0.2">2.0.2</a>
 					</td>
 					<td>April 21, 2010</td>
-					<td>
-						<a href="http://wiki.eclipse.org/EclipseLink/Release/2.0.2">New &amp; Noteworthy</a>
-						,
-						<a
-							href="http://www.eclipse.org/eclipselink/downloads/previous_releases.php#2.0.2">Download</a>
-						,
-						<a href="http://www.eclipse.org/eclipselink/api/2.0/index.html">Java Docs</a>
-					</td>
 				</tr>
 				<tr>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/2.0.1">2.0.1</a>
 					</td>
 					<td>February 17, 2010</td>
-					<td>
-						<a href="http://wiki.eclipse.org/EclipseLink/Release/2.0.1">New &amp; Noteworthy</a>
-						,
-						<a
-							href="http://www.eclipse.org/eclipselink/downloads/previous_releases.php#2.0.1">Download</a>
-						,
-						<a href="http://www.eclipse.org/eclipselink/api/2.0/index.html">Java Docs</a>
-					</td>
 				</tr>
 				<tr>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/2.0.0">2.0.0</a>
 					</td>
 					<td> December 10, 2009</td>
-					<td>
-						<a href="http://wiki.eclipse.org/EclipseLink/Release/2.0.0">New &amp; Noteworthy</a>
-						,
-						<a
-							href="http://www.eclipse.org/eclipselink/downloads/previous_releases.php#2.0.0">Download</a>
-						,
-						<a href="http://www.eclipse.org/eclipselink/api/2.0/index.html">Java Docs</a>
-					</td>
 				</tr>
 				<tr>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.2.0">1.2.0</a>
 					</td>
 					<td> October 23, 2009</td>
-					<td>
-						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.2.0">New &amp; Noteworthy</a>
-						,
-						<a
-							href="http://www.eclipse.org/eclipselink/downloads/previous_releases.php#1.2.0">Download</a>
-						,
-						<a href="http://www.eclipse.org/eclipselink/api/1.2/index.html">Java Docs</a>
-					</td>
 				</tr>
 				<tr>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.1.3">1.1.3</a>
 					</td>
 					<td>October 7, 2009</td>
-					<td>
-						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.1.3">New &amp; Noteworthy</a>
-						,
-						<a
-							href="http://www.eclipse.org/eclipselink/downloads/previous_releases.php#1.1.3">Download</a>
-						,
-						<a href="http://www.eclipse.org/eclipselink/api/1.1/index.html">Java Docs</a>
-					</td>
 				</tr>
 				<tr>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.1.2">1.1.2 - Galileo</a>
 					</td>
 					<td> June 24, 2009</td>
-					<td>
-						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.1.2">New &amp; Noteworthy</a>
-						,
-						<a
-							href="http://www.eclipse.org/eclipselink/downloads/previous_releases.php#1.1.2">Download</a>
-						,
-						<a href="http://www.eclipse.org/eclipselink/api/1.1/index.html">Java Docs</a>
-					</td>
 				</tr>
 				<tr>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.1.1">1.1.1</a>
 					</td>
 					<td> May 15, 2009</td>
-					<td>
-						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.1.1">New &amp; Noteworthy</a>
-						,
-						<a
-							href="http://www.eclipse.org/eclipselink/downloads/previous_releases.php#1.1.1">Download</a>
-						,
-						<a href="http://www.eclipse.org/eclipselink/api/1.1/index.html">Java Docs</a>
-					</td>
 				</tr>
 				<tr>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.1">1.1.0</a>
 					</td>
 					<td> March 11, 2009</td>
-					<td>
-						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.1">New &amp; Noteworthy</a>
-						,
-						<a
-							href="http://www.eclipse.org/eclipselink/downloads/previous_releases.php#1.1.0">Download</a>
-						,
-						<a href="http://www.eclipse.org/eclipselink/api/1.1/index.html">Java Docs</a>
-					</td>
 				</tr>
 				<tr>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.0.2">1.0.2</a>
 					</td>
 					<td>October 29, 2008</td>
-					<td>
-						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.0.2">New &amp; Noteworthy</a>
-						,
-						<a
-							href="http://www.eclipse.org/eclipselink/downloads/previous_releases.php#1.0.2">Download</a>
-						,
-						<a href="http://www.eclipse.org/eclipselink/api/1.0/index.html">Java Docs</a>
-					</td>
 				</tr>
 				<tr>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.0.1">1.0.1</a>
 					</td>
 					<td>September 8, 2008</td>
-					<td>
-						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.0.1">New &amp; Noteworthy</a>
-						,
-						<a
-							href="http://www.eclipse.org/eclipselink/downloads/previous_releases.php#1.0.1">Download</a>
-						,
-						<a href="http://www.eclipse.org/eclipselink/api/1.0/index.html">Java Docs</a>
-					</td>
 				</tr>
 				<tr>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.0">1.0.0</a>
 					</td>
 					<td>July 8, 2008</td>
-					<td>
-						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.0">New &amp; Noteworthy</a>
-						,
-						<a
-							href="http://www.eclipse.org/eclipselink/downloads/previous_releases.php#1.0">Download</a>
-						,
-						<a href="http://www.eclipse.org/eclipselink/api/1.0/index.html">Java Docs</a>
-					</td>
 				</tr>
 			</table>
+			</div>
 		</description>
 	</section>
 
