@@ -16,16 +16,15 @@
 			<h4>JPA: Object-Relational Mapping</h4>
 			<ul>
 				<li>
-					<a href="http://wiki.eclipse.org/EclipseLink/DesignDocs/Extensibility">
-						<b>Extensible Entities</b>
-						: Define and use extended mappings on-the-fly with database flex
-						columns.
-					</a>
+					<a href="http://wiki.eclipse.org/EclipseLink/DesignDocs/Extensibility">Extensible Entities</a>
+					: Define and use extended mappings on-the-fly with database flex
+					columns.
 				</li>
 				<li>
-					<a
-						href="http://wiki.eclipse.org/EclipseLink/Development/Indigo/Multi-Tenancy">Multitenant: SaaS enable your application with data from
-						multiple tenants stored in the same table(s).</a>
+					<a href="http://wiki.eclipse.org/EclipseLink/Development/Indigo/Multi-Tenancy">Multitenant</a>
+					: SaaS enable your application with data from
+					multiple tenants
+					stored in the same table(s).
 				</li>
 				<li>
 					<b>External Metadata Source</b>
@@ -41,16 +40,12 @@
 			<h4>MOXy: XML Binding with JAXB and SDO</h4>
 			<ul>
 				<li>
-					<a href="http://wiki.eclipse.org/EclipseLink/Development/339371">
-						<b>Extensible Beans</b>
-						: Add XML Bindings on-the-fly
-					</a>
+					<a href="http://wiki.eclipse.org/EclipseLink/Development/339371">Extensible Beans</a>
+					: Add XML Bindings on-the-fly
 				</li>
 				<li>
-					<a href="http://wiki.eclipse.org/EclipseLink/Development/339373">
-						<b>Multiple Binding Files</b>
-						: Greater flexibility for complex domains
-					</a>
+					<a href="http://wiki.eclipse.org/EclipseLink/Development/339373">Multiple Binding Files</a>
+					: Greater flexibility for complex domains
 				</li>
 				<li>
 					<b>External Metadata Source</b>
