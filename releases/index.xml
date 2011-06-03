@@ -6,106 +6,124 @@
 		<div align="center">
 			<table width="300">
 				<tr style="background:#EEE;color:#666;">
+					<td width="200">&nbsp;</td>
 					<th>Release</th>
 					<th>Date</th>
 				</tr>
 				<tr>
+					<td>&nbsp;</td>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.3">2.1.3</a>
 					</td>
 					<td> April 15, 2011</td>
 				</tr>
 				<tr>
+					<td>&nbsp;</td>
 					<td>
 						<a href="2.2.0.php">2.2.0</a>
 					</td>
 					<td> February 22, 2011</td>
 				</tr>
 				<tr>
+					<td>&nbsp;</td>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.2">2.1.2</a>
 					</td>
 					<td> December 13, 2010</td>
 				</tr>
 				<tr>
+					<td>&nbsp;</td>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.1.4">1.1.4</a>
 					</td>
 					<td> September 9, 2010</td>
 				</tr>
 				<tr>
+					<td>&nbsp;</td>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.1">2.1.1</a>
 					</td>
 					<td>August 26, 2010</td>
 				</tr>
 				<tr>
+					<td>&nbsp;</td>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.0">2.1.0 - Helios</a>
 					</td>
 					<td>June 23, 2010</td>
 				</tr>
 				<tr>
+					<td>&nbsp;</td>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/2.0.2">2.0.2</a>
 					</td>
 					<td>April 21, 2010</td>
 				</tr>
 				<tr>
+					<td>&nbsp;</td>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/2.0.1">2.0.1</a>
 					</td>
 					<td>February 17, 2010</td>
 				</tr>
 				<tr>
+					<td>&nbsp;</td>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/2.0.0">2.0.0</a>
 					</td>
 					<td> December 10, 2009</td>
 				</tr>
 				<tr>
+					<td>&nbsp;</td>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.2.0">1.2.0</a>
 					</td>
 					<td> October 23, 2009</td>
 				</tr>
 				<tr>
+					<td>&nbsp;</td>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.1.3">1.1.3</a>
 					</td>
 					<td>October 7, 2009</td>
 				</tr>
 				<tr>
+					<td>&nbsp;</td>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.1.2">1.1.2 - Galileo</a>
 					</td>
 					<td> June 24, 2009</td>
 				</tr>
 				<tr>
+					<td>&nbsp;</td>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.1.1">1.1.1</a>
 					</td>
 					<td> May 15, 2009</td>
 				</tr>
 				<tr>
+					<td>&nbsp;</td>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.1">1.1.0</a>
 					</td>
 					<td> March 11, 2009</td>
 				</tr>
 				<tr>
+					<td>&nbsp;</td>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.0.2">1.0.2</a>
 					</td>
 					<td>October 29, 2008</td>
 				</tr>
 				<tr>
+					<td>&nbsp;</td>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.0.1">1.0.1</a>
 					</td>
 					<td>September 8, 2008</td>
 				</tr>
 				<tr>
+					<td>&nbsp;</td>
 					<td>
 						<a href="http://wiki.eclipse.org/EclipseLink/Release/1.0">1.0.0</a>
 					</td>
