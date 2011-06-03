@@ -68,10 +68,12 @@
 			<h4>Examples</h4>
 			<ul>
 				<li>
-					<a href="http://wiki.eclipse.org/EclipseLink/Examples/MySports">
-						<b>MySports Example</b>
-						: New example showing new 2.3 feature set
-					</a>
+					<a href="http://wiki.eclipse.org/EclipseLink/Examples/MySports">MySports Example</a>
+					: New example showing new @Multitenant and @VirtualAccessMethods features in Java EE web applications using JSF, JAX-RS, EJB and JPA .
+				</li>
+				<li>
+					<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA">Employee Example</a>
+					: The classic EclipseLink Employee example updated with a JSF front end.
 				</li>
 			</ul>
 
