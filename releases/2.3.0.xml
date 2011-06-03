@@ -3,7 +3,7 @@
 
 	<section class="title">
 		<description>
-			<h1>EclipseLink 2.3.0 Release</h1>
+			<h1>EclipseLink Indigo (2.3.0) Release</h1>
 			<p>The EclipseLink 2.3 release focuses on increased developer
 				flexibility allowing mapped objects to be extensible and multitenant
 				to enable the development of SaaS solutions. </p>
@@ -13,24 +13,32 @@
 	<section class="main" name="New and Noteworthy">
 
 		<description>
-			<h4>JPA: Object-Relational</h4>
+			<h4>JPA: Object-Relational Mapping</h4>
 			<ul>
 				<li>
 					<a href="http://wiki.eclipse.org/EclipseLink/DesignDocs/Extensibility">
 						<b>Extensible Entities</b>
-						: Add mappings on-the-fly
+						: Define and use extended mappings on-the-fly with database flex
+						columns.
 					</a>
 				</li>
 				<li>
 					<a
-						href="http://wiki.eclipse.org/EclipseLink/Development/Indigo/Multi-Tenancy">Multitenant: SaaS enable your application</a>
+						href="http://wiki.eclipse.org/EclipseLink/Development/Indigo/Multi-Tenancy">Multitenant: SaaS enable your application with data from
+						multiple tenants stored in the same table(s).</a>
 				</li>
 				<li>
-					External Metadata Source: ...
-					</li>
+					<b>External Metadata Source</b>
+					: Retrieve and use object-relational mapping from outside your
+					application.
+				</li>
+				<li>
+					<b>Extended Stored Procedure and PL/SQL Support</b>
+					: Leverage more of your existing database features through JPA.
+				</li>
 			</ul>
 
-			<h4>MOXy: XML Binding</h4>
+			<h4>MOXy: XML Binding with JAXB and SDO</h4>
 			<ul>
 				<li>
 					<a href="http://wiki.eclipse.org/EclipseLink/Development/339371">
@@ -45,8 +53,23 @@
 					</a>
 				</li>
 				<li>
-					External Metadata Source: ...
-					</li>
+					<b>External Metadata Source</b>
+					: Retrieve and use XML binding definitions from outside your
+					application.
+				</li>
+				<li>
+					<b></b>
+					XPath Mapping with Predicates
+				</b>
+					: ...
+				</li>
+			</ul>
+
+			<h4>DBWS: Database Web Services</h4>
+			<ul>
+				<li>Complex PL/SQL arguments for stored functions</li>
+				<li>Handle overloaded Stored Procedure/Functions as WSDL operations
+				</li>
 			</ul>
 
 			<h4>Examples</h4>
