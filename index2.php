@@ -27,12 +27,6 @@
 	
 	ob_start();
 ?>
-Note: In some cases, for your request to get through, you will need to set a User Agent before calling the parser script.
-2. Source code of class.myatomparser.php
-
-This class is by no means the be-all and end-all of Atom parsing. It's designed to be simple, functional and easily customisable. Any feedback would be welcome.
-
-File: class.myatomparser.php
 <link rel="stylesheet" type="text/css" href="/eclipselink/resources/local.css" />
 <div class="logoBanner"><a href="/eclipselink"><img src="/eclipselink/images/logo.png" /></a></div>
 <div id="bigbuttons">
