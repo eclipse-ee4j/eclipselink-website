@@ -27,7 +27,6 @@
 	
 	ob_start();
 ?>
-<link rel="stylesheet" type="text/css" href="/eclipselink/resources/local.css" />
 <div class="logoBanner"><a href="/eclipselink"><img src="/eclipselink/images/logo.png" /></a></div>
 <div id="bigbuttons">
 	<table border="0" cellspacing="0" cellpadding="0">
