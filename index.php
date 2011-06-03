@@ -137,6 +137,9 @@
 	<div class="section">
 			<h3>Learn More</h3>
 			<ul>
+				<li><a href="http://refcardz.dzone.com/refcardz/eclipselink-jpa">EclipseLink RefCard</a> - <i>May 30, 2011</i></li>
+			</ul>
+			<ul>
 				<li>Article: <a href="http://eclipse.dzone.com/articles/introducing-eclipselink">Introducing EclipseLink (Eclipse Zone)</a> - <i>June 30, 2008</i></li>
 			</ul>
 	</div>
