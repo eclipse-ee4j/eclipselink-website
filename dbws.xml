@@ -2,17 +2,7 @@
 <sections title="EclipseLink JPA">
 	<section class="title">
 		<description>
-			<table border="0">
-				<tr>
-					<td>
-						<img
-							src="/eclipselink/images/Eclipselink_dbws.png" border="0" />
-					</td>
-					<td>
-						<h1>EclipseLink DBWS</h1>
-					</td>
-				</tr>
-			</table>
+			<h1>EclipseLink DBWS</h1>
 			<p>
 				The EclipseLink DBWS component enables Java developers a
 				declarative Web Service solution for accessing
@@ -25,11 +15,7 @@
 		</description>
 	</section>
 
-	<section class="main">
-		<description>
-			<h1>Getting Started with DBWS</h1>
-		</description>
-
+	<section class="main" name="Getting Started with DBWS">
 		<section name="EclipseLink DBWS Overview"
 			link="http://wiki.eclipse.org/EclipseLink/Examples/DBWS/DBWSOverview">
 			<em>
