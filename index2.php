@@ -128,10 +128,16 @@
 	
 	<div class="section">
 			<h3>Project News</h3>
-			    <object data=http://eclipselink.blogspot.com/atom.xml width="600" height="400">
-    <embed src=http://eclipselink.blogspot.com/atom.xml width="600" height="400"> </embed>
-    Error: Embedded data could not be displayed.
-    </object> 
+			 <?PHP include "class.myatomparser.php"; 
+			 
+			 # where is the feed located? 
+			 $url = "http://www.google.com/reader/bundle/user%2F07143176758151169030%2Fbundle%2FEclipseLink"; 
+			 
+			 # create object to hold data and display output
+			 $atom_parser = new myAtomParser($url); 
+			 
+			 $output = $atom_parser->getOutput(); # returns string containing HTML 
+			 echo $output; ?>
 	</div>
 
 </div>
