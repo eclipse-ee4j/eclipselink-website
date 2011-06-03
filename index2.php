@@ -128,6 +128,10 @@
 	
 	<div class="section">
 			<h3>Project News</h3>
+			    <object data=http://eclipselink.blogspot.com/atom.xml width="600" height="400">
+    <embed src=http://eclipselink.blogspot.com/atom.xml width="600" height="400"> </embed>
+    Error: Embedded data could not be displayed.
+    </object> 
 	</div>
 
 </div>
