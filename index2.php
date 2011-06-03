@@ -98,8 +98,8 @@
 				get started developing with EclipseLink.
 			</p>
 		<table width="100%">
-		<tr>
-			<td width="33%>
+		<tr align="center">
+			<td width="33% align="center">
 				<p style="text-align:right">
 				<a href="jpa.php">
 				<font size=+4>Object-Relational Mapping<br/>JPA</font><br/>
