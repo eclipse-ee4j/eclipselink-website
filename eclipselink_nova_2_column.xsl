@@ -3,6 +3,60 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	version="1.0">
 
+<div class="logoBanner"><a href="/eclipselink"><img src="/eclipselink/images/logo.png" /></a></div>
+<div id="bigbuttons">
+	<table border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td>
+				<div class="bigbuttonsAbout">
+					<a href="/projects/project_summary.php?projectid=rt.eclipselink"><div class="bigbuttonsTitleLink"></div></a>
+					<span>
+						<a href="/projects/project_summary.php?projectid=rt.eclipselink">Project Summary</a>, 
+						<a href="/eclipselink/releases">Releases</a>, <br/>
+						<a href="/eclipselink/team/">Committers</a> and more...
+					</span>
+				</div>
+			</td>
+			<td>
+				<div class="bigbuttonsDocumentation">
+					<a href="http://wiki.eclipse.org/EclipseLink/Documentation_Center"><div class="bigbuttonsTitleLink"></div></a>
+					<span>
+						<a href="http://wiki.eclipse.org/EclipseLink/Documentation_Center">Doc Center</a>,
+						<a href="/eclipselink/api/index.php"> Java Docs</a>,
+						<a href="http://wiki.eclipse.org/EclipseLink/Examples"> Examples</a>,
+						<a href="http://wiki.eclipse.org/EclipseLink/FAQ"> FAQ</a>, <br/>
+						<a href="/eclipselink/releases/2.2.0.php">2.2.0 New and Noteworthy</a>
+					</span>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="bigbuttonsCommunity">
+					<a href="/eclipselink/community.php"><div class="bigbuttonsTitleLink"></div></a>
+					<span>
+						<a href="http://wiki.eclipse.org/EclipseLink">Wiki</a>,
+						<a href="/forums/index.php/f/111/"> Newsgroup</a>,<br/>
+						<a href="http://dev.eclipse.org/mhonarc/lists/eclipselink-users/maillist.html">User Mailing List</a>
+					</span>
+				</div>
+			</td>
+			<td>
+				<div class="bigbuttonsDownloads">
+					<a href="/eclipselink/downloads/"><div class="bigbuttonsTitleLink"></div></a>
+					<span>
+						<a href="/eclipselink/releases">Releases</a>,
+						<a href="/eclipselink/downloads">Latest Release</a>,
+						<a href="/eclipselink/downloads/milestones.php">Milestone Builds</a>, 
+						<a href="/eclipselink/downloads/nightly.php">Nightly Builds</a>, and
+						<a href="http://wiki.eclipse.org/EclipseLink/Maven">Maven</a>, 
+					</span>
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>
+
 	<xsl:template match="/sections">
 			<div id="midcolumn">
 				<table width="750"><tr><td>	

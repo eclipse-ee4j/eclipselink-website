@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sections title="EclipseLink JPA">
+
+
 	<section class="title">
 		<description>
-			<table border="0">
-				<tr>
-					<td>
-						<img
-							src="/eclipselink/images/Eclipselink_moxy.png" border="0" />
-					</td>
-					<td>
-						<h1>EclipseLink MOXy</h1>
-						<h2>XML Binding with JAXB and SDO</h2>
-					</td>
-				</tr>
-			</table>
+			<h1>EclipseLink MOXy</h1>
+			<h3>XML Binding with JAXB and SDO</h3>
 			<p>
 				The EclipseLink MOXy component enables Java developers
 				to efficiently bind Java classes to XML Schemas. MOXy
@@ -54,7 +46,31 @@
 		</section>
 	</section>
 	
-		<section class="sideitem">
+	<section class="main" name="Getting Started with EclipseLink SDO">
+
+		<section name="Generating static Data Objects from XSD"
+			link="http://wiki.eclipse.org/EclipseLink/Examples/SDO/Compiler">
+			<em>
+				Generating a static SDO DataObject model from an XML
+				schema using EclipseLink's SDO compiler.
+			</em>
+		</section>
+
+		<section name="Using POJOs and JPA Entities with SDO"
+			link="http://wiki.eclipse.org/EclipseLink/Examples/SDO#Data_Access_Service">
+			<em>
+				EclipseLink SDO provides Data Access Service (DAS)
+				combining existing POJO object models or JPA entities
+				wrapped within static or dynamic data objects.
+			</em>
+		</section>
+
+		<section name="More EclipseLink SDO examples"
+			link="http://wiki.eclipse.org/EclipseLink/Examples/SDO" />
+
+	</section>
+
+	<section class="sideitem">
 		<description>
 			<h3>Documentation</h3>
 			<li><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/MOXy">MOXy User Guide</a></li>
