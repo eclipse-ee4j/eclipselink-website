@@ -100,21 +100,21 @@
 		<table width="100%">
 		<tr align="center">
 			<td width="33% align="center">
-				<p style="text-align:right">
+				<p style="text-align:center">
 				<a href="jpa.php">
 				<font size=+4>Object-Relational Mapping<br/>JPA</font><br/>
 				<img src="/eclipselink/images/Eclipselink_jpa.png" border="0" /><br/>
 				</a></p>
 			</td>
 			<td width="33% align="center">
-				<p style="text-align:right">
+				<p style="text-align:center">
 				<a href="moxy.php">
 				<font size=+4>Object-XML Binding<br/>JAXB and SDO</font><br/>
 				<img src="/eclipselink/images/Eclipselink_moxy.png" border="0" /><br/>
 				</a></p>
 			</td>
 			<td width="33% align="center">
-				<p style="text-align:right">
+				<p style="text-align:center">
 				<a href="dbws.php">
 				<font size=+4>Database Wed Services<br/>JAX-WS and JAX-RS</font><br/>
 				<img src="/eclipselink/images/Eclipselink_dbws.png" border="0" /><br/>
