@@ -6,7 +6,7 @@
 		<div align="center">
 			<table width="300">
 				<tr style="background:#EEE;color:#666;">
-					<td width="200">&nbsp;</td>
+					<th width="200">&nbsp;</th>
 					<th>Release</th>
 					<th>Date</th>
 				</tr>
