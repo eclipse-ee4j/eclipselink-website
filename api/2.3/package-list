@@ -35,11 +35,16 @@ org.eclipse.persistence.indirection
 org.eclipse.persistence.jaxb
 org.eclipse.persistence.jaxb.attachment
 org.eclipse.persistence.jaxb.compiler
+org.eclipse.persistence.jaxb.dynamic
+org.eclipse.persistence.jaxb.dynamic.metadata
 org.eclipse.persistence.jaxb.javamodel
+org.eclipse.persistence.jaxb.javamodel.oxm
 org.eclipse.persistence.jaxb.javamodel.reflection
+org.eclipse.persistence.jaxb.metadata
 org.eclipse.persistence.jaxb.xmlmodel
 org.eclipse.persistence.jpa
 org.eclipse.persistence.jpa.dynamic
+org.eclipse.persistence.jpa.metadata
 org.eclipse.persistence.logging
 org.eclipse.persistence.mappings
 org.eclipse.persistence.mappings.converters
@@ -63,6 +68,7 @@ org.eclipse.persistence.oxm.unmapped
 org.eclipse.persistence.platform.database
 org.eclipse.persistence.platform.database.converters
 org.eclipse.persistence.platform.database.jdbc
+org.eclipse.persistence.platform.database.oracle.annotations
 org.eclipse.persistence.platform.database.oracle.jdbc
 org.eclipse.persistence.platform.database.oracle.plsql
 org.eclipse.persistence.platform.database.partitioning
