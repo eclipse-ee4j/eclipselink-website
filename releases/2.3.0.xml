@@ -6,7 +6,10 @@
 			<h1>EclipseLink Indigo (2.3.0) Release</h1>
 			<p>The EclipseLink 2.3 release focuses on increased developer
 				flexibility allowing mapped objects to be extensible and multitenant
-				to enable the development of SaaS solutions. </p>
+				as well as external storage of mappings. These features are intended
+				to help developers address some of the challenges related to
+				developing for cloud architectures and more specifically SaaS
+				solutions.</p>
 		</description>
 	</section>
 
@@ -21,15 +24,18 @@
 					columns.
 				</li>
 				<li>
-					<a href="http://wiki.eclipse.org/EclipseLink/Development/Indigo/Multi-Tenancy">Multitenant</a>
+					<b>Multitenant</b>
 					: SaaS enable your application with data from
 					multiple tenants
-					stored in the same table(s).
+					stored in the same table(s). -
+					<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Multitenant">example</a>
 				</li>
 				<li>
-					<b>External Metadata Source</b>
+					<b>External MetadataSource</b>
 					: Retrieve and use object-relational mapping from outside your
-					application.
+					application. -
+					<a
+						href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/MetadataSource">example</a>
 				</li>
 				<li>
 					<b>Extended Stored Procedure and PL/SQL Support</b>
@@ -69,11 +75,14 @@
 			<ul>
 				<li>
 					<a href="http://wiki.eclipse.org/EclipseLink/Examples/MySports">MySports Example</a>
-					: New example showing new @Multitenant and @VirtualAccessMethods features in Java EE web applications using JSF, JAX-RS, EJB and JPA .
+					: New example showing new @Multitenant and @VirtualAccessMethods
+					features in Java EE web applications using JSF, JAX-RS, EJB and JPA
+					.
 				</li>
 				<li>
 					<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA">Employee Example</a>
-					: The classic EclipseLink Employee example updated with a JSF front end.
+					: The classic EclipseLink Employee example updated with a JSF front
+					end.
 				</li>
 			</ul>
 
