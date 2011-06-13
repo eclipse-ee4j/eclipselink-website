@@ -19,9 +19,10 @@
 			<h4>JPA: Object-Relational Mapping</h4>
 			<ul>
 				<li>
-					<a href="http://wiki.eclipse.org/EclipseLink/DesignDocs/Extensibility">Extensible Entities</a>
+					<b>Extensible JPA Entities</b>
 					: Define and use extended mappings on-the-fly with database flex
-					columns.
+					columns. -
+					<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Extensibility">example</a>
 				</li>
 				<li>
 					<b>Multitenant</b>
@@ -39,36 +40,39 @@
 				</li>
 				<li>
 					<b>Extended Stored Procedure and PL/SQL Support</b>
-					: Leverage more of your existing database features through JPA.
+					: Leverage more of your existing database features through JPA. -
+					<a
+						href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/PLSQLStoredFunction">example</a>
 				</li>
 			</ul>
 
 			<h4>MOXy: XML Binding with JAXB and SDO</h4>
 			<ul>
 				<li>
-					<a href="http://wiki.eclipse.org/EclipseLink/Development/339371">Extensible Beans</a>
-					: Add XML Bindings on-the-fly
+					<b>Extensible Beans</b>
+					: Add XML Bindings on-the-fly -
+					<a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/Extensible">example</a>
 				</li>
 				<li>
-					<a href="http://wiki.eclipse.org/EclipseLink/Development/339373">Multiple Binding Files</a>
+					<b>Mapping Enhancements</b>
 					: Greater flexibility for complex domains
+					<ul>
+					<li>XPath Mappings with Predicates - <a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/ElementMappingByAttributeValue">example</a></li>
+					<li>Multiple Bindings File Support</li>
+					<li>Customized XML Name Conversions- <a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/XMLNameTransformer">example</a></li>
+					</ul>
 				</li>
 				<li>
 					<b>External Metadata Source</b>
 					: Retrieve and use XML binding definitions from outside your
 					application.
 				</li>
-				<li>
-					<b>XPath Mapping with Predicates</b>
-					: ...
-				</li>
 			</ul>
 
 			<h4>DBWS: Database Web Services</h4>
 			<ul>
-				<li>Complex PL/SQL arguments for stored functions</li>
-				<li>Handle overloaded Stored Procedure/Functions as WSDL operations
-				</li>
+				<li>JAX-WS Web Service from Stored Function with complex PL/SQL arguments - <a href="http://wiki.eclipse.org/EclipseLink/Examples/DBWS/DBWSComplexArgStoredFunction">example</a></li>
+				<li>JAX-WS Web Service from overloaded Stored Procedure - <a href="http://wiki.eclipse.org/EclipseLink/Examples/DBWS/DBWSOverloadStoredProcedure">example</a></li>
 			</ul>
 
 			<h4>Examples</h4>
