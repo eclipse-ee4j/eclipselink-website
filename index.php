@@ -203,7 +203,10 @@ new TWTR.Widget({
 				<li><a href="http://www.oracle.com/technetwork/middleware/weblogic/index.html">Oracle WebLogic Server</a></li>
 			</ul>
 		</div>
-
+		
+		<div class="sideitem">
+		<script type="text/javascript" src="http://www.ohloh.net/p/13434/widgets/project_partner_badge.js"></script>
+		</div>
 </div>
 
 <?
