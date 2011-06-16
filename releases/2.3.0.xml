@@ -3,7 +3,7 @@
 
 	<section class="title">
 		<description>
-			<h1>EclipseLink Indigo (2.3.0) Release</h1>
+			<h1>EclipseLink 2.3.0 Release</h1>
 			<p>The EclipseLink 2.3 release focuses on increased developer
 				flexibility allowing mapped objects to be extensible and multitenant
 				as well as external storage of mappings. These features are intended
@@ -20,8 +20,9 @@
 			<h4>Extend Entities</h4>
 			<table>
 				<tr>
-					<td>
-						Developers can make their JPA entities or MOXy JAXB beans
+					<td valign="top">
+						Developers can make their JPA entities or MOXy JAXB
+						beans
 						extensible so that at runtime a set of additional extended
 						mappings can be used.
 			</td>
@@ -40,37 +41,71 @@
 				</tr>
 			</table>
 
-			<h4>Multiple Tenants</h4>
-			Developers can design and deploy applications where their
-			persistent
-			entities manage entities for multiple tenants in the
-			same application
-			with storage in a shared table.
-			<div align="right">
-				<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Multitenant">example</a>
-			</div>
+			<h4>Support Multiple Tenants</h4>
+			<table>
+				<tr>
+					<td valign="top">
+						Developers can design and deploy applications where
+						their
+						persistent
+						entities manage entities for multiple tenants in
+						the
+						same application
+						with storage in a shared table.
+			</td>
+					<td>
+						<ul>
+							<li>
+								<a
+									href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Multitenant">example</a>
+							</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
 
 			<h4>Externalize Mappings</h4>
-			Developers can now store mappings using a
-			<b>MetadataSource</b>
-			external to the running application so that mapping overrides and
-			extended mappings can be more dynamically integrated into deployed
-			applications.
-			<div align="right">
-				<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/MetadataSource">JPA example</a>
-			</div>
+			<table>
+				<tr>
+					<td valign="top">
+						Developers can now store mappings using a
+						<b>MetadataSource</b>
+						external to the running application so that mapping overrides and
+						extended mappings can be more dynamically integrated into deployed
+						applications.
+					</td>
+					<td>
+						<ul>
+							<li>
+								<a
+									href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/MetadataSource">JPA example</a>
+							</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
 
 			<h4>Multiple Database</h4>
-			<b>Composite Persistence Units</b>
-			(PU)
-			allows developers to access entities in different data sources
-			by
-			composing their PUs together including support for
-			relationships
-			between entities in different databases.
-			<div align="right">
-				<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Composite">example</a>
-			</div>
+			<table>
+				<tr>
+					<td valign="top">
+						<b>Composite Persistence Units</b>
+						(PU)
+						allows developers to access entities in different data sources
+						by
+						composing their PUs together including support for
+						relationships
+						between entities in different databases.
+					</td>
+					<td>
+						<ul>
+							<li>
+								<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Composite">example</a>
+							</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
 
 			<h4>Examples</h4>
 			<ul>
