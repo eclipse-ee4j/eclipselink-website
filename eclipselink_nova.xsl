@@ -122,7 +122,6 @@
 								<xsl:value-of select="@image" />
 							</xsl:attribute>
 						</img>
-						&nbsp;&nbsp;
 				</xsl:if>
 				<xsl:value-of select="@name" />
 			</h3>
