@@ -37,8 +37,9 @@
 						</ul>
 					</td>
 				</tr>
+				<tr><td colspan="3"></td></tr>
 				<tr bgcolor="#C0C0C0">
-					<td>
+					<td valign="top">
 						<h3>Multitenant</h3>
 					</td>
 					<td>Developers can design and deploy applications where their
@@ -53,6 +54,7 @@
 						</ul>
 					</td>
 				</tr>
+				<tr><td colspan="3"></td></tr>
 				<tr bgcolor="#C0C0C0">
 					<td>
 						<h3>External</h3>
