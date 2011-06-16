@@ -116,7 +116,7 @@
 			<td width="33% align="center">
 				<p style="text-align:center">
 				<a href="dbws.php">
-				<font size=+4>Database Wed Services<br/>JAX-WS and JAX-RS</font><br/>
+				<font size=+4>Database Web Services<br/>JAX-WS and JAX-RS</font><br/>
 				<img src="/eclipselink/images/Eclipselink_dbws.png" border="0" /><br/>
 				</a></p>
 			</td>
