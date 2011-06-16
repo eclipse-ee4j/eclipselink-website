@@ -237,7 +237,7 @@
 
 			<table
 				style="font-family: Tahoma,Verdana,Helvetica,sans-serif; font-size: 100%; border-color: rgb(204, 204, 204); border-collapse: collapse; padding: 5px 10px; color: black;"
-				border="1" cellpadding="5" cellspacing="0">
+				border="1" cellpadding="5" cellspacing="0" width="100%">
 
 				<tbody>
 					<tr
@@ -301,7 +301,7 @@
 			</p>
 			<table
 				style="font-family: Tahoma,Verdana,Helvetica,sans-serif; font-size: 100%; border-color: rgb(204, 204, 204); border-collapse: collapse; padding: 5px 10px; color: black;"
-				border="1" cellpadding="5" cellspacing="0">
+				border="1" cellpadding="5" cellspacing="0"  width="100%">
 
 				<tbody>
 					<tr

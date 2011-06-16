@@ -117,7 +117,7 @@
 			</xsl:if>
 			<h3>
 				<xsl:if test="@image">
-						<img width="64">
+						<img width="40">
 							<xsl:attribute name="src">
 								<xsl:value-of select="@image" />
 							</xsl:attribute>
