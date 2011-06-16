@@ -138,24 +138,6 @@
 				</li>
 			</ul>
 
-			<h4>Implement Standards</h4>
-			<ul>
-				<li>
-					JPA 2.0 (
-					<a href="http://www.jcp.org/en/jsr/detail?id=317">JSR 317</a>
-					)
-				</li>
-				<li>
-					JAXB 2.2 (
-					<a href="http://jcp.org/en/jsr/detail?id=222">JSR 222</a>
-					)
-				</li>
-				<li>
-					SDO 2.1.1(
-					<a href="http://jcp.org/en/jsr/detail?id=235">JSR 235</a>
-					)
-				</li>
-			</ul>
 		</description>
 
 	</section>
@@ -166,12 +148,31 @@
 				section this release also includes a substantial number of bug fixes
 				and enhancements. </p>
 			<ul>
-				<li><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/PLSQLStoredFunction">JPA Stored Procedure and PLSQL Support Enhancements</a></li>
-				<li><a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/ElementMappingByAttributeValue">MOXy support for mapping with predicates</a></li>
-				<li><a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/MultipleBindingsFiles">MOXy support for multiple eclipselink-oxm.xml mapping files</a></li>
-				<li><a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/XMLNameTransformer">MOXy support for custom XML name conversions</a></li>
-				<li><a href="http://wiki.eclipse.org/EclipseLink/Examples/DBWS/DBWSComplexArgStoredFunction">DBWS from StoredFunction with PL/SQL arguments</a></li>
-				<li><a href="http://wiki.eclipse.org/EclipseLink/Examples/DBWS/DBWSOverloadStoredProcedure">DBWS from overloaded Stored Procedures</a></li>
+				<li>
+					<a
+						href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/PLSQLStoredFunction">JPA Stored Procedure and PLSQL Support Enhancements</a>
+				</li>
+				<li>
+					<a
+						href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/ElementMappingByAttributeValue">MOXy support for mapping with predicates</a>
+				</li>
+				<li>
+					<a
+						href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/MultipleBindingsFiles">MOXy support for multiple eclipselink-oxm.xml mapping files
+					</a>
+				</li>
+				<li>
+					<a
+						href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/XMLNameTransformer">MOXy support for custom XML name conversions</a>
+				</li>
+				<li>
+					<a
+						href="http://wiki.eclipse.org/EclipseLink/Examples/DBWS/DBWSComplexArgStoredFunction">DBWS from StoredFunction with PL/SQL arguments</a>
+				</li>
+				<li>
+					<a
+						href="http://wiki.eclipse.org/EclipseLink/Examples/DBWS/DBWSOverloadStoredProcedure">DBWS from overloaded Stored Procedures</a>
+				</li>
 				<li>
 					<a
 						href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;target_milestone=2.3.0;product=EclipseLink;known_name=2.3%20Fixed"
@@ -243,6 +244,28 @@
 				potentially effecting users of EclipseLink 2.3.
 			</p>
 
+		</description>
+	</section>
+
+	<section class="main" name="Standards">
+		<description>
+			<p>EclipseLink remains focussed on the delivering support for the
+				latest standards. EclipseLink 2.3.0 offers certified support for:
+			</p>
+			<ul>
+				<li>
+					Java Persistence (JPA) 2.0 -
+					<a href="http://www.jcp.org/en/jsr/detail?id=317">JSR 317</a>
+				</li>
+				<li>
+					Java Architecture for XML Binding (JAXB) 2.2 -
+					<a href="http://jcp.org/en/jsr/detail?id=222">JSR 222</a>
+				</li>
+				<li>
+					Service Data Objects (SDO) 2.1.1 -
+					<a href="http://jcp.org/en/jsr/detail?id=235">JSR 235</a>
+				</li>
+			</ul>
 		</description>
 	</section>
 
