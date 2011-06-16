@@ -80,6 +80,9 @@
 								<a
 									href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/MetadataSource">JPA example</a>
 							</li>
+							<li>
+								<a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/MetadataRepository">MOXy example</a>
+							</li>
 						</ul>
 					</td>
 				</tr>
