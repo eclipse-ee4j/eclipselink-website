@@ -242,9 +242,9 @@
 		</description>
 	</section>
 
-	<section class="main" name="Standards">
+	<section class="main" name="Standards" image="/sequoyah/images/CC_code.png" >
 		<description>
-			<p>EclipseLink remains focussed on the delivering support for the
+			<p>EclipseLink remains focused on the delivering support for the
 				latest standards. EclipseLink 2.3.0 offers certified support for:
 			</p>
 			<ul>
