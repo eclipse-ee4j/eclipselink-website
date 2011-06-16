@@ -16,7 +16,7 @@
 	<section class="main" name="New and Noteworthy">
 
 		<description>
-			<table width="100%" border="1" cellspacing="10">
+			<table width="100%" border="1" cellspacing="10" cellpadding="10">
 				<tr>
 					<td>
 						<h3>Extensible</h3>
