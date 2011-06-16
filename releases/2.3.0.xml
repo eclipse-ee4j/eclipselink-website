@@ -18,18 +18,34 @@
 		<description>
 
 			<h4>Extend Entities</h4>
-			Developers can make their JPA entities or MOXy JAXB beans
-			extensible so that at runtime a set of additional extended
-			mappings can be used.
-			<div align="right">
-				<a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/Extensible">JPA example</a>, 
-				<a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/Extensible">MOXY-example</a>
-			</div>
-			
+			<table>
+				<tr>
+					<td>
+						Developers can make their JPA entities or MOXy JAXB beans
+						extensible so that at runtime a set of additional extended
+						mappings can be used.
+			</td>
+					<td>
+						<ul>
+							<li>
+								<a
+									href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/Extensible">JPA example</a>
+							</li>
+							<li>
+								<a
+									href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/Extensible">MOXY-example</a>
+							</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+
 			<h4>Multiple Tenants</h4>
 			Developers can design and deploy applications where their
-			persistent entities manage entities for multiple tenants in the
-			same application with storage in a shared table.
+			persistent
+			entities manage entities for multiple tenants in the
+			same application
+			with storage in a shared table.
 			<div align="right">
 				<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Multitenant">example</a>
 			</div>
