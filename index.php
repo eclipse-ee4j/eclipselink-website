@@ -205,6 +205,8 @@ new TWTR.Widget({
 		</div>
 		
 		<div class="sideitem">
+			<a href="/eclipsert/"><img src="/equinox/images/EclipseRT.png" alt="EclipseRT"></a>
+		<br/>
 		<script type="text/javascript" src="http://www.ohloh.net/p/13434/widgets/project_partner_badge.js"></script>
 		</div>
 </div>
