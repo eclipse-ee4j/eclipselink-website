@@ -17,7 +17,7 @@
 
 		<description>
 			<table width="100%">
-				<tr bgcolor="#C0C0C0">
+				<tr bgcolor="#E6E6E6">
 					<td>
 						<h3>Extend</h3>
 						Developers can make their JPA entities or MOXy JAXB beans
@@ -40,7 +40,7 @@
 				<tr>
 					<td colspan="3"></td>
 				</tr>
-				<tr bgcolor="#C0C0C0">
+				<tr bgcolor="#E6E6E6">
 					<td valign="top">
 						<h3>Multitenant</h3>
 						Developers can design and deploy applications where their
@@ -59,7 +59,7 @@
 				<tr>
 					<td colspan="3"></td>
 				</tr>
-				<tr bgcolor="#C0C0C0">
+				<tr bgcolor="#E6E6E6">
 					<td>
 						<h3>External</h3>
 						Developers can now store mappings using a
@@ -80,7 +80,7 @@
 				<tr>
 					<td colspan="3"></td>
 				</tr>
-				<tr bgcolor="#C0C0C0">
+				<tr bgcolor="#E6E6E6">
 					<td>
 						<h3>Compose</h3>
 
