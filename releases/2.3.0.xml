@@ -16,12 +16,7 @@
 	<section class="main" name="New and Noteworthy">
 
 		<description>
-			<table width="100%">
-				<tr>
-					<th>Feature</th>
-					<th>Description</th>
-					<th>Links</th>
-				</tr>
+			<table width="100%" border=1>
 				<tr>
 					<td>
 						<h3>Extensible</h3>
@@ -44,7 +39,7 @@
 				</tr>
 				<tr>
 					<td>
-						<h3>Multitenant</h3>
+						<h3>Multite<b></b>nant</h3>
 					</td>
 					<td>Developers can design and deploy applications where their
 						persistent entities manage entities for multiple tenants in the
@@ -62,17 +57,22 @@
 					<td>
 						<h3>Externalize</h3>
 					</td>
-					<td>Developers can now externalize mappings using a MetadataSource
-						so that mapping overides and extended mappings can be more
-						dynamically integrated into deployed applications.</td>
+					<td>Developers can now store mappings using a <b>MetadataSource</b>
+						external to the running application so that mapping overrides and
+						extended mappings can be more dynamically integrated into deployed
+						applications.</td>
 					<td>
-					<ul><li><a
-						href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/MetadataSource">JPA example</a></li></ul>
+						<ul>
+							<li>
+								<a
+									href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/MetadataSource">JPA example</a>
+							</li>
+						</ul>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<h3>Composite PU</h3>
+						<h3>Compose</h3>
 					</td>
 					<td>
 						<b>Composite Persistence Units</b>
