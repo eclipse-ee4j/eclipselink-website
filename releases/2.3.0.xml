@@ -17,8 +17,12 @@
 
 		<description>
 
-			<h4>Extend Entities</h4>
 			<table>
+				<tr>
+					<td colspan="2">
+						<h4>Extend Entities</h4>
+					</td>
+				</tr>
 				<tr>
 					<td valign="top">
 						Developers can make their JPA entities or MOXy JAXB
@@ -34,15 +38,16 @@
 							</li>
 							<li>
 								<a
-									href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/Extensible">MOXY-example</a>
+									href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/Extensible">MOXY example</a>
 							</li>
 						</ul>
 					</td>
 				</tr>
-			</table>
-
-			<h4>Support Multiple Tenants</h4>
-			<table>
+				<tr>
+					<td colspan="2">
+						<h4>Support Multiple Tenants</h4>
+					</td>
+				</tr>
 				<tr>
 					<td valign="top">
 						Developers can design and deploy applications where
@@ -62,10 +67,12 @@
 						</ul>
 					</td>
 				</tr>
-			</table>
 
-			<h4>Externalize Mappings</h4>
-			<table>
+				<tr>
+					<td colspan="2">
+						<h4>Externalize Mappings</h4>
+					</td>
+				</tr>
 				<tr>
 					<td valign="top">
 						Developers can now store mappings using a
@@ -87,10 +94,12 @@
 						</ul>
 					</td>
 				</tr>
-			</table>
 
-			<h4>Multiple Database</h4>
-			<table>
+				<tr>
+					<td colspan="2">
+						<h4>Multiple Database</h4>
+					</td>
+				</tr>
 				<tr>
 					<td valign="top">
 						<b>Composite Persistence Units</b>
