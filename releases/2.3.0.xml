@@ -3,7 +3,7 @@
 
 	<section class="title">
 		<description>
-			<h1>EclipseLink 2.3.0 Release</h1>
+			<h1>EclipseLink 2.3.0</h1>
 			<p>The EclipseLink 2.3 release focuses on increased developer
 				flexibility allowing mapped objects to be extensible and multitenant
 				as well as external storage of mappings. These features are intended
