@@ -16,87 +16,80 @@
 	<section class="main" name="New and Noteworthy">
 
 		<description>
-			<h4>JPA: Object-Relational Mapping</h4>
-			<ul>
-				<li>
-					<b>Extensible JPA Entities</b>
-					: Define and use extended mappings on-the-fly with database flex
-					columns. -
-					<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Extensibility">example</a>
-				</li>
-				<li>
-					<b>Multitenant</b>
-					: SaaS enable your application with data from
-					multiple tenants
-					stored in the same table(s). -
-					<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Multitenant">example</a>
-				</li>
-				<li>
-					<b>External MetadataSource</b>
-					: Retrieve and use object-relational mapping from outside your
-					application. -
-					<a
-						href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/MetadataSource">example</a>
-				</li>
-				<li>
-					<b>Composite Persistence Units</b>
-					: Combine multiple persistence units to provide access to entities
-					stored in different databases. -
-					<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Composite">example</a>
-				</li>
-				<li>
-					<b>Extended Stored Procedure and PL/SQL Support</b>
-					: Leverage more of your existing database features through JPA. -
-					<a
-						href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/PLSQLStoredFunction">example</a>
-				</li>
-			</ul>
-
-			<h4>MOXy: XML Binding with JAXB and SDO</h4>
-			<ul>
-				<li>
-					<b>Extensible Beans</b>
-					: Add XML Bindings on-the-fly -
-					<a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/Extensible">example</a>
-				</li>
-				<li>
-					<b>Mapping Enhancements</b>
-					: Greater flexibility for complex domains
-					<ul>
-						<li>
-							XPath Mappings with Predicates -
-							<a
-								href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/ElementMappingByAttributeValue">example</a>
-						</li>
-						<li>Multiple Bindings File Support</li>
-						<li>
-							Customized XML Name Conversions-
-							<a
-								href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/XMLNameTransformer">example</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<b>External Metadata Source</b>
-					: Retrieve and use XML binding definitions from outside your
-					application.
-				</li>
-			</ul>
-
-			<h4>DBWS: Database Web Services</h4>
-			<ul>
-				<li>
-					JAX-WS Web Service from Stored Function with complex PL/SQL
-					arguments -
-					<a
-						href="http://wiki.eclipse.org/EclipseLink/Examples/DBWS/DBWSComplexArgStoredFunction">example</a>
-				</li>
-				<li>
-					JAX-WS Web Service from overloaded Stored Procedure -
-					<a
-						href="http://wiki.eclipse.org/EclipseLink/Examples/DBWS/DBWSOverloadStoredProcedure">example</a>
-				</li>
-			</ul>
+			<table width="100%">
+				<tr>
+					<th>Feature</th>
+					<th>Description</th>
+					<th>Links</th>
+				</tr>
+				<tr>
+					<td>
+						<h3>Extensible</h3>
+					</td>
+					<td>Developers can make their JPA entities or MOXy JAXB beans
+						extensible so that at runtime a set of additional extended
+						mappings can be used.</td>
+					<td>
+						<ul>
+							<li>
+								<a
+									href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/Extensible">JPA example</a>
+							</li>
+							<li>
+								<a
+									href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/Extensible">MOXY (JAXB) example</a>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3>Multitenant</h3>
+					</td>
+					<td>Developers can design and deploy applications where their
+						persistent entities manage entities for multiple tenants in the
+						same application with storage in a shared table.</td>
+					<td>
+						<ul>
+							<li>
+								<a
+									href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Multitenant">example</a>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3>Externalize</h3>
+					</td>
+					<td>Developers can now externalize mappings using a MetadataSource
+						so that mapping overides and extended mappings can be more
+						dynamically integrated into deployed applications.</td>
+					<td>
+					<ul><li><a
+						href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/MetadataSource">JPA example</a></li></ul>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3>Composite PU</h3>
+					</td>
+					<td>
+						<b>Composite Persistence Units</b>
+						(PU)
+						allows developers to access entities in different data sources
+						by composing their PUs together including support for
+						relationships between entities in different databases.
+					</td>
+					<td>
+						<ul>
+							<li>
+								<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Composite">example</a>
+							</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
 
 			<h4>Examples</h4>
 			<ul>
