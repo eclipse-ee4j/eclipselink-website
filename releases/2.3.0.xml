@@ -54,7 +54,7 @@
 					</td>
 				</tr>
 				<tr bgcolor="#C0C0C0">
-					<td>
+					<td valign="top">
 						<h3>External</h3>
 					</td>
 					<td>Developers can now store mappings using a <b>MetadataSource</b>
