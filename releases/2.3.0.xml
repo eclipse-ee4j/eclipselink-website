@@ -289,7 +289,7 @@
 		</description>
 	</section>
 
-	<section class="main" name="Deprecated Functionality">
+	<section class="main" name="Deprecated Functionality" image="http://dev.eclipse.org/huge_icons/actions/edit-clear.png">
 		<description>
 			<p>In EclipseLink 2.3 the following features/API have been
 				deprecated. Please upgrade to the suggested alternatives to avoid
