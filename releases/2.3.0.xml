@@ -236,24 +236,6 @@
 				potentially effecting users of EclipseLink 2.3.
 			</p>
 
-			<table
-				style="font-family: Tahoma,Verdana,Helvetica,sans-serif; font-size: 100%; border-color: rgb(204, 204, 204); border-collapse: collapse; padding: 5px 10px; color: black;"
-				border="1" cellpadding="5" cellspacing="0">
-
-				<tbody>
-					<tr
-						style="background: none repeat scroll 0% 0% rgb(238, 238, 238); color: rgb(102, 102, 102);">
-						<th> Summary</th>
-						<th> Details</th>
-					</tr>
-
-					<tr>
-						<td>title</td>
-						<td>description</td>
-					</tr>
-				</tbody>
-			</table>
-
 		</description>
 	</section>
 
@@ -270,23 +252,6 @@
 				<a href="index.php">release pages</a>
 				.
 			</p>
-			<table
-				style="font-family: Tahoma,Verdana,Helvetica,sans-serif; font-size: 100%; border-color: rgb(204, 204, 204); border-collapse: collapse; padding: 5px 10px; color: black;"
-				border="1" cellpadding="5" cellspacing="0">
-
-				<tbody>
-					<tr
-						style="background: none repeat scroll 0% 0% rgb(238, 238, 238); color: rgb(102, 102, 102);">
-						<th> Summary</th>
-						<th> Details</th>
-					</tr>
-
-					<tr>
-						<td>title</td>
-						<td>description</td>
-					</tr>
-				</tbody>
-			</table>
 		</description>
 	</section>
 
