@@ -295,6 +295,12 @@
 				deprecated. Please upgrade to the suggested alternatives to avoid
 				issues in the future when these deprecated features/AIP might be
 				removed. </p>
+			<p>
+				If you are upgrading from an earlier release please check the
+				applicable
+				<a href="index.php">release pages</a>
+				.
+			</p>
 			<table
 				style="font-family: Tahoma,Verdana,Helvetica,sans-serif; font-size: 100%; border-color: rgb(204, 204, 204); border-collapse: collapse; padding: 5px 10px; color: black;"
 				border="1" cellpadding="5" cellspacing="0">
@@ -307,39 +313,8 @@
 					</tr>
 
 					<tr>
-						<td> ObjectCopyPolicy</td>
-						<td>
-							The
-							<a href="http://javadoc" class="external text" title="http://javadoc"
-								rel="nofollow">ObjectCopyPolicy</a>
-							has been replaced with the
-							<a href="http://javadoc" class="external text" title="http://javadoc"
-								rel="nofollow">CopyGroup</a>
-							. The full API from ObjectCopyPolicy is supported by CopyGroup
-							requiring only a minor class name change in user code.
-						</td>
-					</tr>
-					<tr>
-						<td> ObjectLevelReadQuery.addPartialAttribute</td>
-						<td> Partial attribute queries have been deprecated and replaced
-							with the use of FetchGroup</td>
-					</tr>
-
-					<tr>
-						<td> ReadObjectQuery.selectionKey (Vector)</td>
-						<td>
-							Replaced with the use of an object for single part keys and a
-							CacheId for composite keys. The replacement API is:
-							<a href="http://javadoc" class="external text" title="http://javadoc"
-								rel="nofollow">ReadObjectQuery#selectionId</a>
-						</td>
-					</tr>
-					<tr>
-						<td> BasicMap, BasicCollection, CollectionTable</td>
-						<td> Deprecated in 2.0, these native mappings and supported
-							configuration annotations are now supported by JPA 2.0's
-							ElementCollection mapping and supported configuration annotations
-							and orm.xml.</td>
+						<td>title</td>
+						<td>description</td>
 					</tr>
 				</tbody>
 			</table>
@@ -383,6 +358,8 @@
 			<h6 style="text-align:center">Getting Started</h6>
 			<ul>
 				<li>
+					<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
+						border="0" />
 					<a href="/eclipselink/downloads/2.3.0">
 						Download 2.3.0
 						<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
