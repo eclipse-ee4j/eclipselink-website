@@ -232,60 +232,58 @@
 		<description>
 			<p>
 				The following are known issues that have been identified as
-				potentially effecting users of EclipseLink 2.3. For a list of all
-				open bugs and enhancement requests please see the queries at
-				<a href="http:/wiki.eclipse.org/EclipseLink/Bugs">EclipseLink/Bugs</a>
-
+				potentially effecting users of EclipseLink 2.3.
 			</p>
-			<a name="JPA_2"></a>
-			<h3>
-				<span class="mw-headline">JPA </span>
-			</h3>
-			<ul>
-			</ul>
-			<p>The following bug queries can be used by find known issues with
-				specific feature areas. They return bugs reported against 2.3.
-</p>
-			<ul>
-				<li>
+
+			<table
+				style="font-family: Tahoma,Verdana,Helvetica,sans-serif; font-size: 100%; border-color: rgb(204, 204, 204); border-collapse: collapse; padding: 5px 10px; color: black;"
+				border="1" cellpadding="5" cellspacing="0">
+
+				<tbody>
+					<tr
+						style="background: none repeat scroll 0% 0% rgb(238, 238, 238); color: rgb(102, 102, 102);">
+						<th> Summary</th>
+						<th> Details</th>
+					</tr>
+
+					<tr>
+						<td>title</td>
+						<td>description</td>
+					</tr>
+				</tbody>
+			</table>
+
 					<a
 						href="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;classification=RT;query_format=advanced;version=2.3.0;product=EclipseLink"
 						class="external text"
 						title="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;classification=RT;query_format=advanced;version=2.3.0;product=EclipseLink"
-						rel="nofollow">All bugs reported against 2.3</a>
-
-					<ul>
-						<li>
+						rel="nofollow">All bugs reported against 2.3</a>. 
 							By Component:
 							<a
 								href="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;classification=RT;query_format=advanced;version=2.3.0;component=JPA;product=EclipseLink"
 								class="external text"
 								title="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;classification=RT;query_format=advanced;version=2.3.0;component=JPA;product=EclipseLink"
-								rel="nofollow">JPA</a>
+								rel="nofollow">JPA</a>, 
 							<a
 								href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;version=2.3.0;columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;component=MOXy;product=EclipseLink;classification=RT"
 								class="external text"
 								title="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;version=2.3.0;columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;component=MOXy;product=EclipseLink;classification=RT"
-								rel="nofollow">MOXy</a>
+								rel="nofollow">MOXy</a>, 
 							<a
 								href="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;classification=RT;query_format=advanced;version=2.3.0;component=SDO;product=EclipseLink"
 								class="external text"
 								title="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;classification=RT;query_format=advanced;version=2.3.0;component=SDO;product=EclipseLink"
-								rel="nofollow">SDO</a>
+								rel="nofollow">SDO</a>, 
 							<a
 								href="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;classification=RT;query_format=advanced;version=2.3.0;component=DBWS;product=EclipseLink"
 								class="external text"
 								title="https://bugs.eclipse.org/bugs/buglist.cgi?columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;classification=RT;query_format=advanced;version=2.3.0;component=DBWS;product=EclipseLink"
-								rel="nofollow">DBWS</a>
+								rel="nofollow">DBWS</a>, 
 							<a
 								href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;version=2.3.0;columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;component=Foundation;product=EclipseLink;classification=RT"
 								class="external text"
 								title="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;version=2.3.0;columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;component=Foundation;product=EclipseLink;classification=RT"
 								rel="nofollow">Foundation</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
 		</description>
 	</section>
 
