@@ -17,7 +17,7 @@
 
 		<description>
 
-			<h4>Extend</h4>
+			<h4>Extend Entities</h4>
 			Developers can make their JPA entities or MOXy JAXB beans
 			extensible so that at runtime a set of additional extended
 			mappings can be used.
@@ -26,7 +26,7 @@
 				<a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/Extensible">MOXY-example</a>
 			</div>
 			
-			<h4>Multitenant</h4>
+			<h4>Multiple Tenants</h4>
 			Developers can design and deploy applications where their
 			persistent entities manage entities for multiple tenants in the
 			same application with storage in a shared table.
@@ -34,7 +34,7 @@
 				<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Multitenant">example</a>
 			</div>
 
-			<h4>External</h4>
+			<h4>Externalize Mappings</h4>
 			Developers can now store mappings using a
 			<b>MetadataSource</b>
 			external to the running application so that mapping overrides and
@@ -44,7 +44,7 @@
 				<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/MetadataSource">JPA example</a>
 			</div>
 
-			<h4>Compose</h4>
+			<h4>Multiple Database</h4>
 			<b>Composite Persistence Units</b>
 			(PU)
 			allows developers to access entities in different data sources
