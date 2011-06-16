@@ -30,7 +30,7 @@
 						extensible so that at runtime a set of additional extended
 						mappings can be used.
 			</td>
-					<td width="50">
+					<td width="100">
 						<ul>
 							<li>
 								<a
@@ -58,7 +58,7 @@
 						same application
 						with storage in a shared table.
 			</td>
-					<td width="50">
+					<td>
 						<ul>
 							<li>
 								<a
@@ -81,7 +81,7 @@
 						extended mappings can be more dynamically integrated into deployed
 						applications.
 					</td>
-					<td width="50">
+					<td>
 						<ul>
 							<li>
 								<a
@@ -110,7 +110,7 @@
 						relationships
 						between entities in different databases.
 					</td>
-					<td width="50">
+					<td>
 						<ul>
 							<li>
 								<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Composite">example</a>
