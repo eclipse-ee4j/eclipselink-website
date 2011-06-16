@@ -16,8 +16,8 @@
 	<section class="main" name="New and Noteworthy">
 
 		<description>
-			<table width="100%" border="10" cellspacing="10" cellpadding="10">
-				<tr>
+			<table width="100%">
+				<tr bgcolor="#C0C0C0">
 					<td>
 						<h3>Extend</h3>
 					</td>
@@ -32,12 +32,12 @@
 							</li>
 							<li>
 								<a
-									href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/Extensible">MOXY (JAXB) example</a>
+									href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/Extensible">MOXY example</a>
 							</li>
 						</ul>
 					</td>
 				</tr>
-				<tr>
+				<tr bgcolor="#C0C0C0">
 					<td>
 						<h3>Multitenant</h3>
 					</td>
@@ -53,7 +53,7 @@
 						</ul>
 					</td>
 				</tr>
-				<tr>
+				<tr bgcolor="#C0C0C0">
 					<td>
 						<h3>External</h3>
 					</td>
@@ -70,7 +70,7 @@
 						</ul>
 					</td>
 				</tr>
-				<tr>
+				<tr bgcolor="#C0C0C0">
 					<td>
 						<h3>Compose</h3>
 					</td>
