@@ -228,7 +228,7 @@
 		</description>
 	</section>
 
-	<section class="main" name="Known Issues" image="http://dev.eclipse.org/huge_icons/apps/help-browser.png">
+	<section class="main" name="Known Issues" image="http://dev.eclipse.org/large_icons/apps/help-browser.png">
 		<description>
 			<p>
 				The following are known issues that have been identified as
@@ -287,7 +287,7 @@
 		</description>
 	</section>
 
-	<section class="main" name="Deprecated Functionality" image="http://dev.eclipse.org/huge_icons/actions/edit-clear.png">
+	<section class="main" name="Deprecated Functionality" image="http://dev.eclipse.org/large_icons/actions/edit-clear.png">
 		<description>
 			<p>In EclipseLink 2.3 the following features/API have been
 				deprecated. Please upgrade to the suggested alternatives to avoid
