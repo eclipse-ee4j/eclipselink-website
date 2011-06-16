@@ -120,8 +120,9 @@
 				</tr>
 			</table>
 
-			<h4>Examples</h4>
 			<ul>
+				<li>
+				</li>
 				<li>
 					<a href="http://wiki.eclipse.org/EclipseLink/Examples/MySports">MySports Example</a>
 					: New example showing new @Multitenant and @VirtualAccessMethods
@@ -163,8 +164,14 @@
 		<description>
 			<p>In addition to the features highlighted in the New and Noteworthy
 				section this release also includes a substantial number of bug fixes
-				and enhancement requests. </p>
+				and enhancements. </p>
 			<ul>
+				<li><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/PLSQLStoredFunction">JPA Stored Procedure and PLSQL Support Enhancements</a></li>
+				<li><a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/ElementMappingByAttributeValue">MOXy support for mapping with predicates</a></li>
+				<li><a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/MultipleBindingsFiles">MOXy support for multiple eclipselink-oxm.xml mapping files</a></li>
+				<li><a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/XMLNameTransformer">MOXy support for custom XML name conversions</a></li>
+				<li><a href="http://wiki.eclipse.org/EclipseLink/Examples/DBWS/DBWSComplexArgStoredFunction">DBWS from StoredFunction with PL/SQL arguments</a></li>
+				<li><a href="http://wiki.eclipse.org/EclipseLink/Examples/DBWS/DBWSOverloadStoredProcedure">DBWS from overloaded Stored Procedures</a></li>
 				<li>
 					<a
 						href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;target_milestone=2.3.0;product=EclipseLink;known_name=2.3%20Fixed"
