@@ -20,10 +20,10 @@
 				<tr bgcolor="#C0C0C0">
 					<td>
 						<h3>Extend</h3>
-					</td>
-					<td>Developers can make their JPA entities or MOXy JAXB beans
+						Developers can make their JPA entities or MOXy JAXB beans
 						extensible so that at runtime a set of additional extended
-						mappings can be used.</td>
+						mappings can be used.
+					</td>
 					<td>
 						<ul>
 							<li>
@@ -37,14 +37,16 @@
 						</ul>
 					</td>
 				</tr>
-				<tr><td colspan="3"></td></tr>
+				<tr>
+					<td colspan="3"></td>
+				</tr>
 				<tr bgcolor="#C0C0C0">
 					<td valign="top">
 						<h3>Multitenant</h3>
-					</td>
-					<td>Developers can design and deploy applications where their
+						Developers can design and deploy applications where their
 						persistent entities manage entities for multiple tenants in the
-						same application with storage in a shared table.</td>
+						same application with storage in a shared table.
+					</td>
 					<td>
 						<ul>
 							<li>
@@ -54,15 +56,18 @@
 						</ul>
 					</td>
 				</tr>
-				<tr><td colspan="3"></td></tr>
+				<tr>
+					<td colspan="3"></td>
+				</tr>
 				<tr bgcolor="#C0C0C0">
 					<td>
 						<h3>External</h3>
-					</td>
-					<td>Developers can now store mappings using a <b>MetadataSource</b>
+						Developers can now store mappings using a
+						<b>MetadataSource</b>
 						external to the running application so that mapping overrides and
 						extended mappings can be more dynamically integrated into deployed
-						applications.</td>
+						applications.
+					</td>
 					<td>
 						<ul>
 							<li>
@@ -72,12 +77,13 @@
 						</ul>
 					</td>
 				</tr>
-				<tr><td colspan="3"></td></tr>
+				<tr>
+					<td colspan="3"></td>
+				</tr>
 				<tr bgcolor="#C0C0C0">
 					<td>
 						<h3>Compose</h3>
-					</td>
-					<td>
+
 						<b>Composite Persistence Units</b>
 						(PU)
 						allows developers to access entities in different data sources
