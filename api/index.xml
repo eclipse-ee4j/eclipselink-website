@@ -38,32 +38,4 @@
 	</section>
 
 
-	<section class="sideitem">
-
-		<description>
-			<div style="text-align:center">
-				<a href="/eclipselink/jpa.php">
-					<img src="/eclipselink/images/Eclipselink_jpa.png"
-						border="0" />
-				</a>
-				<br />
-				<a href="/eclipselink/moxy.php">
-					<img src="/eclipselink/images/Eclipselink_moxy.png"
-						border="0" />
-				</a>
-				<br />
-				<a href="/eclipselink/sdo.php">
-					<img src="/eclipselink/images/Eclipselink_sdo.png"
-						border="0" />
-				</a>
-				<br />
-				<a href="/eclipselink/dbws.php">
-					<img src="/eclipselink/images/Eclipselink_dbws.png"
-						border="0" />
-				</a>
-			</div>
-		</description>
-
-	</section>
-
 </sections>
