@@ -97,7 +97,6 @@
 				<li><img src="http://marketplace.eclipse.org/sites/all/themes/nova/images/favorite.png"><a href="/eclipselink/releases/2.3.0.php">EclipseLink 2.3.0 (Indigo) released</a> - <i>June 22, 2011</i></li>
 				<li><a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.3">EclipseLink 2.1.3 released</a> - <i>April 15, 2011</i></li>
 				<li><a href="/eclipselink/releases/2.2.0.php">EclipseLink 2.2.0 released</a> - <i>February 22, 2011</i></li>
-				<li><a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.2">EclipseLink 2.1.2 released</a> - <i>December 13, 2010</i></li>
 			</ul>
 	</div>
 
