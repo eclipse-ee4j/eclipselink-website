@@ -100,12 +100,17 @@
 						<div>
 							<img src="/eclipselink/images/wiki_small.png"/>
 							<a
-								href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/MetadataSource">JPA example</a>
+								href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/MetadataSource">JPA Example</a>
 						</div>
 						<div>
 							<img src="/eclipselink/images/wiki_small.png"/>
 							<a
-								href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/MetadataRepository">MOXy example</a>
+								href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/MetadataRepository">MOXy Example</a>
+						</div>
+						<div>
+							<img src="/eclipselink/images/doc_small.png"/>
+							<a
+								href="http://wiki.eclipse.org/EclipseLink/UserGuide/MOXy/Advanced_Concepts/Refreshing_Metadata">MOXy Documentation</a>
 						</div>
 					</td>
 				</tr>
@@ -167,7 +172,7 @@
 				</li>
 				<li>
 					<a
-						href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/XMLNameTransformer">MOXy support for custom XML name conversions</a>
+						href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/XMLNameTransformer">MOXy support for custom XML name conversions</a> - <a href="http://wiki.eclipse.org/EclipseLink/UserGuide/MOXy/Advanced_Concepts/Customizing_XML_Name_Conversions">Documentation</a>
 				</li>
 				<li>
 					<a
