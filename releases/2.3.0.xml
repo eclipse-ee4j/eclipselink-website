@@ -33,13 +33,12 @@
 			</td>
 					<td width="150">
 						<div>
-							<img src="/eclipselink/images/wiki_small.png"></img>
+							<img src="/eclipselink/images/wiki_small.png"/>
 							<a
 								href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Extensibility">JPA example</a>
-							</
 						</div>
 						<div>
-							<img src="/eclipselink/images/wiki_small.png"></img>
+							<img src="/eclipselink/images/wiki_small.png"/>
 							<a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/Extensible">MOXY example</a>
 						</div>
 					</td>
@@ -62,12 +61,12 @@
 			</td>
 					<td>
 						<div>
-							<img src="/eclipselink/images/doc_small.png"></img>
+							<img src="/eclipselink/images/doc_small.png"/>
 							<a
 								href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Single-Table_Multi-Tenancy">Documentation</a>
 						</div>
 						<div>
-							<img src="/eclipselink/images/wiki_small.png"></img>
+							<img src="/eclipselink/images/wiki_small.png"/>
 							<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Multitenant">Example</a>
 						</div>
 					</td>
@@ -89,12 +88,12 @@
 					</td>
 					<td>
 						<div>
-							<img src="/eclipselink/images/wiki_small.png"></img>
+							<img src="/eclipselink/images/wiki_small.png"/>
 							<a
 								href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/MetadataSource">JPA example</a>
 						</div>
 						<div>
-							<img src="/eclipselink/images/wiki_small.png"></img>
+							<img src="/eclipselink/images/wiki_small.png"/>
 							<a
 								href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/MetadataRepository">MOXy example</a>
 						</div>
@@ -119,7 +118,7 @@
 					</td>
 					<td>
 						<div>
-							<img src="/eclipselink/images/wiki_small.png"></img>
+							<img src="/eclipselink/images/wiki_small.png" />
 							<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Composite">example</a>
 						</div>
 					</td>
