@@ -91,6 +91,16 @@
 	</div>
 
  
+	<div class="section">
+			<h3>News</h3>
+			<ul>
+				<li><b><a href="/eclipselink/releases/2.3.0.php">EclipseLink 2.3.0 (Indigo) released</a></b> - <i>June 22, 2011</i></li>
+				<li><a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.3">EclipseLink 2.1.3 released</a> - <i>April 15, 2011</i></li>
+				<li><a href="/eclipselink/releases/2.2.0.php">EclipseLink 2.2.0 released</a> - <i>February 22, 2011</i></li>
+				<li><a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.2">EclipseLink 2.1.2 released</a> - <i>December 13, 2010</i></li>
+			</ul>
+	</div>
+
 	<div class="homeitem3col">
 			<h3>Getting Started</h3>
 			<p>
@@ -116,7 +126,7 @@
 			<td width="33% align="center">
 				<p style="text-align:center">
 				<a href="dbws.php">
-				<font size=+4>Database Wed Services<br/>JAX-WS and JAX-RS</font><br/>
+				<font size=+4>Database Web Services<br/>JAX-WS and JAX-RS</font><br/>
 				<img src="/eclipselink/images/Eclipselink_dbws.png" border="0" /><br/>
 				</a></p>
 			</td>
@@ -124,18 +134,11 @@
 		</table>
 	</div>
 
-	
-	<div class="section">
-			<h3>News</h3>
-			<ul>
-				<li><a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.3">EclipseLink 2.1.3 released</a> - <i>April 15, 2011</i></li>
-				<li><a href="/eclipselink/releases/2.2.0.php">EclipseLink 2.2.0 released</a> - <i>February 22, 2011</i></li>
-				<li><a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.2">EclipseLink 2.1.2 released</a> - <i>December 13, 2010</i></li>
-			</ul>
-	</div>
-
 	<div class="section">
 			<h3>Learn More</h3>
+			<ul>
+				<li><a href="http://refcardz.dzone.com/refcardz/eclipselink-jpa">EclipseLink RefCard</a> - <i>May 30, 2011</i></li>
+			</ul>
 			<ul>
 				<li>Article: <a href="http://eclipse.dzone.com/articles/introducing-eclipselink">Introducing EclipseLink (Eclipse Zone)</a> - <i>June 30, 2008</i></li>
 			</ul>
@@ -153,8 +156,8 @@ new TWTR.Widget({
   type: 'search',
   search: 'eclipselink',
   interval: 6000,
-  title: '',
-  subject: 'Follow EclipseLink',
+  title: 'What is being said about...',
+  subject: 'EclipseLink',
   width: 'auto',
   height: 300,
   theme: {
@@ -187,6 +190,8 @@ new TWTR.Widget({
 			<ul>
 			    <li><a href="http://eclipselink.blogspot.com">EclipseLink</a></li>
 			    <li><a href="http://java-persistence.blogspot.com">Java Persistence</a></li>
+			    <li><a href="http://onpersistence.blogspot.com">On Persistence</a></li>
+			    <li><a href="http://bdoughan.blogspot.com">Java XML Binding</a></li>
 			</ul>
 		</div>
 
@@ -198,7 +203,13 @@ new TWTR.Widget({
 				<li><a href="http://www.oracle.com/technetwork/middleware/weblogic/index.html">Oracle WebLogic Server</a></li>
 			</ul>
 		</div>
-
+		
+		<div class="sideitem">
+		<div align="center">
+			<a href="/eclipsert/"><img src="/equinox/images/EclipseRT.png" alt="EclipseRT"></a>
+		</div>
+		<script type="text/javascript" src="http://www.ohloh.net/p/13434/widgets/project_partner_badge.js"></script>
+		</div>
 </div>
 
 <?
