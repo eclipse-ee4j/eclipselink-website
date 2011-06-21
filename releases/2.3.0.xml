@@ -23,7 +23,7 @@
 						<h4>Extend Entities</h4>
 					</td>
 				</tr>
-				<tr>
+				<tr style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
 					<td valign="top">
 						Developers can make their JPA entities or MOXy JAXB
 						beans
@@ -60,13 +60,13 @@
 			</td>
 					<td>
 						<div
-							style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+							style="padding:0.5em;margin:0.5em 0.5em 1em 1em;-moz-border-radius:4px;">
 							<img src="/eclipselink/images/doc_small.png"></img>
 							<a
 								href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Single-Table_Multi-Tenancy">Documentation</a>
 						</div>
 						<div
-							style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+							style="padding:0.5em;margin:0.5em 0.5em 1em 1em;-moz-border-radius:4px;">
 							<img src="/eclipselink/images/wiki_small.png"></img>
 							<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Multitenant">Example</a>
 						</div>
@@ -78,7 +78,7 @@
 						<h4>Externalize Mappings</h4>
 					</td>
 				</tr>
-				<tr>
+				<tr style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
 					<td valign="top">
 						Developers can now store mappings using a
 						<b>MetadataSource</b>
@@ -105,7 +105,7 @@
 						<h4>Multiple Database</h4>
 					</td>
 				</tr>
-				<tr>
+				<tr style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
 					<td valign="top">
 						<b>Composite Persistence Units</b>
 						(PU)
