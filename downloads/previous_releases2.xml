@@ -1,8 +1,267 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sections
-   title="Previous EclipseLink Releases">
-   <section class="main" name="Previous EclipseLink Releases">
+   title="Downloads for previous EclipseLink Releases and Patch-Sets">
+   <section class="main" name="Downloads for previous EclipseLink Releases and Patch-Sets">
       <description>
+        <a name="2.2.0"> </a>        
+         <b>EclipseLink 2.2.0 Patch Set Downloads (Released Dec 13, 2010)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
+         <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
+            <tr class="tableData">
+               <td class="packageDesc">
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.2.0/eclipselink-2.2.0.v20110202-r8913.zip">EclipseLink 2.2.0 Installer Zip (27 MB)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.2.0/eclipselink-plugins-2.2.0.v20110202-r8913.zip">EclipseLink 2.2.0 OSGi Bundles Zip (11 MB)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.2.0/eclipselink-src-2.2.0.v20110202-r8913.zip">EclipseLink 2.2.0 Source Zip (5.0 MB)</a>
+                  </div>
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>                     
+               <td width="120" class="downloadCol">
+                  <div>
+                     <a href="/eclipselink/releases/2.2.0.php">New and Noteworthy</a>
+                  </div>
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a> 
+                  </div>
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/Maven">Maven</a>
+                  </div>
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+            </tr>
+         </table>  
+     
+       <a name="2.1.2"> </a>        
+         <b>EclipseLink 2.1.2 Patch Set Downloads (Released Dec 13, 2010)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
+         <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
+            <tr class="tableData">
+               <td class="packageDesc">
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.1.2/eclipselink-2.1.2.v20101206-r8635.zip">EclipseLink 2.1.2 Installer Zip (27 MB)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.1.2/eclipselink-plugins-2.1.2.v20101206-r8635.zip">EclipseLink 2.1.2 OSGi Bundles Zip (11 MB)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.1.2/eclipselink-src-2.1.2.v20101206-r8635.zip">EclipseLink 2.1.2 Source Zip (5.0 MB)</a>
+                  </div>
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>                     
+               <td width="120" class="downloadCol">
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.2">New and Noteworthy</a>
+                  </div>
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a> 
+                  </div>
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/Maven">Maven</a>
+                  </div>
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+            </tr>
+         </table>  
+      <a name="2.1.1"> </a>        
+         <b>EclipseLink 2.1.1 Patch Set Downloads (Released Aug 26, 2010)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
+         <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
+            <tr class="tableData">
+               <td class="packageDesc">
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.1.1/eclipselink-2.1.1.v20100817-r8050.zip">EclipseLink 2.1.1 Installer Zip (27 MB)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.1.1/eclipselink-plugins-2.1.1.v20100817-r8050.zip">EclipseLink 2.1.1 OSGi Bundles Zip (11 MB)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.1.1/eclipselink-src-2.1.1.v20100817-r8050.zip">EclipseLink 2.1.1 Source Zip (5.0 MB)</a>
+                  </div>
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>              
+               
+               <td width="120" class="downloadCol">
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.1">New and Noteworthy</a>
+                  </div>
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a> 
+                  </div>
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/Maven">Maven</a>
+                  </div>
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+            </tr>
+         </table>  
+         
+        <a name="2.1.0"> </a>        
+         <b>EclipseLink 2.1.0 Patch Set Downloads (Released June 23, 2010)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
+         <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
+            <tr class="tableData">
+               <td class="packageDesc">
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.1.0/eclipselink-2.1.0.v20100614-r7608.zip">EclipseLink 2.1.0 Installer Zip (27 MB)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.1.0/eclipselink-plugins-2.1.0.v20100614-r7608.zip">EclipseLink 2.1.0 OSGi Bundles Zip (11 MB)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.1.0/eclipselink-src-2.1.0.v20100614-r7608.zip">EclipseLink 2.1.0 Source Zip (5.0 MB)</a>
+                  </div>
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>              
+               
+               <td width="120" class="downloadCol">
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.0">New and Noteworthy</a>
+                  </div>
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a> 
+                  </div>
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/Maven">Maven</a>
+                  </div>
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+            </tr>
+         </table>   
+      
+         <a name="2.0.2"> </a>        
+         <b>EclipseLink 2.0.2 Patch Set Downloads (Released April 21, 2010)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
+         <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
+            <tr class="tableData">
+               <td class="packageDesc">
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.0.2/eclipselink-2.0.2.v20100323-r6872.zip">EclipseLink 2.0.2 Installer Zip (27 MB)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.0.2/eclipselink-plugins-2.0.2.v20100323-r6872.zip">EclipseLink 2.0.2 OSGi Bundles Zip (11 MB)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.0.2/eclipselink-src-2.0.2.v20100323-r6872.zip">EclipseLink 2.0.2 Source Zip (5.0 MB)</a>
+                  </div>
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>              
+               
+               <td width="120" class="downloadCol">
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/Release/2.0.2">New and Noteworthy</a>
+                  </div>
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a> 
+                  </div>
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/Maven">Maven</a>
+                  </div>
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+            </tr>
+         </table>   
+         <a name="2.0.1"> </a>        
+      	 <b>EclipseLink 2.0.1 Patch Set Downloads (Released Feb 17, 2010)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
+         <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
+            <tr class="tableData">
+               <td class="packageDesc">
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.0.1/eclipselink-2.0.1.v20100213-r6600.zip">EclipseLink 2.0.1 Installer Zip (27 MB)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.0.1/eclipselink-plugins-2.0.1.v20100213-r6600.zip">EclipseLink 2.0.1 OSGi Bundles Zip (12 MB)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.0.1/eclipselink-src-2.0.1.v20100213-r6600.zip">EclipseLink 2.0.1 Source Zip (5 MB)</a>
+                  </div>
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+               <td width="120" class="downloadCol">
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/Release/2.0.1">Release Notes</a>
+                  </div>
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a> 
+                  </div>
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/Maven">Maven</a>
+                  </div>
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+            </tr>
+         </table>   
+         <a name="2.0.0"> </a>        
+      	 <b>EclipseLink 2.0.0 Downloads (Released Dec 10, 2009)</b>
+         <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
+            <tr class="tableData">
+               <td class="packageDesc">
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.0.0/eclipselink-2.0.0.v20091127-r5931.zip">EclipseLink 2.0.0 Installer Zip (27 MB)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.0.0/eclipselink-plugins-2.0.0.v20091127-r5931.zip">EclipseLink 2.0.0 OSGi Bundles Zip (11 MB)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.0.0/eclipselink-src-2.0.0.v20091127-r5931.zip">EclipseLink 2.0.0 Source Zip (4.9 MB)</a>
+                  </div>
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+               <td width="120" class="downloadCol">
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/Release/2.0.0">Release Notes</a>
+                  </div>
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a> 
+                  </div>
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/Maven">Maven</a>
+                  </div>
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+            </tr>
+         </table>   
+         <a name="1.2.0"> </a>        
       	 <b>EclipseLink 1.2.0 Downloads (Released Oct 23, 2009)</b>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
@@ -38,7 +297,44 @@
                </td>
             </tr>
          </table>   
-      	 <b>EclipseLink 1.1.3 Downloads (Released Oct 9, 2009)</b>
+         <a name="1.1.4"> </a>        
+      	 <b>EclipseLink 1.1.4 Patch Set Downloads (Released Sept 9th, 2010)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
+         <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
+            <tr class="tableData">
+               <td class="packageDesc">
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.1.4/eclipselink-1.1.4.v20100812-r7860.zip">EclipseLink 1.1.4 Installer Zip (28 MB)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.1.4/eclipselink-plugins-1.1.4.v20100812-r7860.zip">EclipseLink 1.1.4 OSGi Bundles Zip (12 MB)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/1.1.4/eclipselink-src-1.1.4.v20100812-r7860.zip">EclipseLink 1.1.4 Source Zip (5.2 MB)</a>
+                  </div>
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+               <td width="120" class="downloadCol">
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/Release/1.1.4">Release Notes</a>
+                  </div>
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a> 
+                  </div>
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/Maven">Maven</a>
+                  </div>
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+            </tr>
+         </table>   
+         <a name="1.1.3"> </a>        
+      	 <b>EclipseLink 1.1.3 Downloads (Released Oct 9, 2009)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
                <td class="packageDesc">
@@ -73,7 +369,8 @@
                </td>
             </tr>
          </table>   
-      	 <b>EclipseLink 1.1.2 Downloads (Released June 24, 2009)</b>
+         <a name="1.1.2"> </a>        
+      	 <b>EclipseLink 1.1.2 Downloads (Released June 24, 2009)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
                <td class="packageDesc">
@@ -108,6 +405,7 @@
                </td>
             </tr>
          </table>   
+         <a name="1.1.1"> </a>        
       	 <b>EclipseLink 1.1.1 Downloads (Released May 12, 2009)</b>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
@@ -143,6 +441,7 @@
                </td>
             </tr>
          </table>   
+         <a name="1.1.0"> </a>        
          <b>EclipseLink 1.1.0 Downloads (Released March 11, 2009)</b>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
@@ -178,6 +477,7 @@
                </td>
             </tr>
          </table>   
+         <a name="1.0.2"> </a>        
          <b>EclipseLink 1.0.2 Downloads (Released Oct 29, 2008)</b>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
@@ -216,7 +516,7 @@
                </td>
             </tr>
          </table>   
-      
+         <a name="1.0.1"> </a>        
       	 <b>EclipseLink 1.0.1 Downloads (Released Sept 08, 2008)</b>                                     
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
@@ -255,7 +555,7 @@
                </td>
             </tr>
          </table>   
-      
+         <a name="1.0"> </a>        
       	 <b>EclipseLink 1.0 Downloads (Released July 08, 2008)</b>                                     
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
@@ -291,8 +591,25 @@
                </td>
             </tr>
          </table>
-                                                                                   
          <br/>
       </description>                                                                                
    </section>
+   
+   	<section class="main" name="EclipseLink Licenses">
+		<description>
+			<p>
+				The EclipseLink Project produced contents are dual licensed under
+				the terms of the
+				<a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse
+					Public License v1.0</a>
+				and
+				<a href="http://www.eclipse.org/org/documents/edl-v10.php">Eclipse
+					Distribution License v1.0</a>
+				.
+			</p>
+			<p>
+				For the license of dependent libraries included within a distribution please refer to the about.html file within each distribution.</p>
+		</description>
+	</section>
+   
 </sections>
