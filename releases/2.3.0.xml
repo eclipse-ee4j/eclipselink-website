@@ -381,6 +381,12 @@
 				<a
 					href="http://wiki.eclipse.org/EclipseLink/Installing_and_Configuring_EclipseLink">Install Instructions</a>
 			</div>
+			<div
+				style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+				<img src="/eclipselink/images/doc_small.png" />
+				<a href="http://wiki.eclipse.org/EclipseLink/Documentation_Center">Documentation Center</a>
+			</div>
+
 		</description>
 
 	</section>
