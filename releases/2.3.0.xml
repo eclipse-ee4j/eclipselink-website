@@ -244,7 +244,8 @@
 					<a
 						href="http://www.eclipse.org/eclipselink/api/2.3/org/eclipse/persistence/config/ReferenceMode.html">ReferenceMode</a>
 					(org.eclipse.persistence.config) Enum moved from
-					org.eclipse.persistence.sessions.factories package. - <a href="http://bugs.eclipse.org/239801">[Bug 239801]</a>
+					org.eclipse.persistence.sessions.factories package. -
+					<a href="http://bugs.eclipse.org/239801">[Bug 239801]</a>
 				</li>
 			</ul>
 		</description>
@@ -285,6 +286,16 @@
 				<a href="index.php">release pages</a>
 				.
 			</p>
+			<ul>
+				<li>
+					<a href="http://bugs.eclipse.org/340074">Bug 340074:</a>
+					Deprecated use of 'javax.persistence.cacheRetrieveMode' and
+					'javax.persistence.cacheStoreMode' QueryHints to address JPA 2.0
+					spec compatibility. The hint names
+					'javax.persistence.cache.retrieveMode' and
+					'javax.persistence.cache.storeMode' should now be used.
+				</li>
+			</ul>
 		</description>
 	</section>
 
