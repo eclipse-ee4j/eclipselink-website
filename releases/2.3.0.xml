@@ -124,7 +124,8 @@
 
 	</section>
 
-	<section class="main" name=" Enhancements and Resolved Issues" image="/sequoyah/images/CC_bugs.png">
+	<section class="main" name=" Enhancements and Resolved Issues"
+		image="/sequoyah/images/CC_bugs.png">
 		<description>
 			<p>In addition to the features highlighted in the New and Noteworthy
 				section this release also includes a substantial number of bug fixes
@@ -236,13 +237,20 @@
 		<description>
 			<p>
 				The following are known issues that have been identified as
-				potentially effecting users of EclipseLink 2.3.
+				potentially effecting users of EclipseLink 2.3.0.
 			</p>
-
+			<ul>
+				<li>
+					<a
+						href="http://www.eclipse.org/eclipselink/api/2.3/org/eclipse/persistence/config/ReferenceMode.html">ReferenceMode</a>
+					(org.eclipse.persistence.config) Enum moved from
+					org.eclipse.persistence.sessions.factories package. - <a href="http://bugs.eclipse.org/239801">[Bug 239801]</a>
+				</li>
+			</ul>
 		</description>
 	</section>
 
-	<section class="main" name=" Standards" image="/sequoyah/images/CC_code.png" >
+	<section class="main" name=" Standards" image="/sequoyah/images/CC_code.png">
 		<description>
 			<p>EclipseLink remains focused on the delivering support for the
 				latest standards. EclipseLink 2.3.0 offers certified support for:
