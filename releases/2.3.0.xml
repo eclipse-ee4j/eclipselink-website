@@ -33,6 +33,11 @@
 			</td>
 					<td width="150">
 						<div>
+							<img src="/eclipselink/images/doc_small.png"/>
+							<a
+								href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Extensible_Entities">JPA Documentation</a>
+						</div>
+						<div>
 							<img src="/eclipselink/images/wiki_small.png"/>
 							<a
 								href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Extensibility">JPA example</a>
@@ -88,6 +93,11 @@
 					</td>
 					<td>
 						<div>
+							<img src="/eclipselink/images/doc_small.png"/>
+							<a
+								href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Externalized_Mappings">JPA Documentation</a>
+						</div>
+						<div>
 							<img src="/eclipselink/images/wiki_small.png"/>
 							<a
 								href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/MetadataSource">JPA example</a>
@@ -118,6 +128,11 @@
 					</td>
 					<td>
 						<div>
+							<img src="/eclipselink/images/doc_small.png"/>
+							<a
+								href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Composite_Persistence_Units">JPA Documentation</a>
+						</div>
+						<div>
 							<img src="/eclipselink/images/wiki_small.png" />
 							<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Composite">example</a>
 						</div>
@@ -139,6 +154,7 @@
 				<li>
 					<a
 						href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/PLSQLStoredFunction">JPA Stored Procedure and PLSQL Support Enhancements</a>
+						- <a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Stored_Procedure_and_PL/SQL_Support">Documentation</a>
 				</li>
 				<li>
 					<a
