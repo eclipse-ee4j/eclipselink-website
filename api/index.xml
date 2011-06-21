@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sections title="EclipseLink API JavaDocs">
 
-	<section class="title">
-		<description>
-			<h1>
-				<img src="/eclipselink/images/logo.jpg" border="0"
-					alt="EclipseLink" />
-			</h1>
-		</description>
-	</section>
-
 	<section class="main" name="EclipseLink JavaDocs">
 		<description>
 			<p>
