@@ -367,6 +367,20 @@
 				<img src="/indigo/images/indigologo_alt.png" width="100%" />
 			</a>
 			<h6 style="text-align:center" >Getting Started</h6>
+			<div
+				style="text-align:center;padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#FFFF00;-moz-border-radius:4px;">
+				<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
+					border="0" />
+				<a href="/eclipselink/downloads/2.3.0">
+					Download 2.3.0
+					<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
+						border="0" />
+				</a>
+				<div style="text-align:right">
+					<a
+						href="http://wiki.eclipse.org/EclipseLink/Installing_and_Configuring_EclipseLink">Install Instructions</a>
+				</div>
+			</div>
 		</description>
 
 	</section>
