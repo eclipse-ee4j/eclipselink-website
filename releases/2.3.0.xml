@@ -34,8 +34,7 @@
 					<td width="150">
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
-							<a
-								href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Extensible_Entities">JPA Documentation</a>
+						<!-- 	<a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Extensible_Entities">JPA Documentation</a>-->
 						</div>
 						<div>
 							<img src="/eclipselink/images/wiki_small.png" />
@@ -94,8 +93,7 @@
 					<td>
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
-							<a
-								href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Externalized_Mappings">JPA Documentation</a>
+							<!-- <a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Externalized_Mappings">JPA Documentation</a> -->
 						</div>
 						<div>
 							<img src="/eclipselink/images/wiki_small.png" />
@@ -134,8 +132,7 @@
 					<td>
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
-							<a
-								href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Composite_Persistence_Units">JPA Documentation</a>
+							<!-- <a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Composite_Persistence_Units">JPA Documentation</a>  -->
 						</div>
 						<div>
 							<img src="/eclipselink/images/wiki_small.png" />

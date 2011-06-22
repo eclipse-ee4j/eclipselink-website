@@ -3,16 +3,16 @@
    title="EclipseLink Downloads">
 
    <section class="main" name="Latest Release Downloads">
-      <a name="2.2.0"> </a>        
+      <a name="2.3.0"> </a>        
       <description>
-         <b>EclipseLink 2.2.0  (Released Feb 22, 2011)</b> - <a href="/eclipselink/release/2.2.0.php">New and Noteworthy</a> - <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a><br/>
+         <b>EclipseLink 2.3.0  (Released June 22, 2011)</b> - <a href="/eclipselink/releases/2.3.0.php">New and Noteworthy</a> - <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a><br/>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
                <td class="packageDesc">
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.2.0/eclipselink-2.2.0.v20110202-r8913.zip">EclipseLink 2.2.0 Installer Zip (28 MB)</a>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.3.0/eclipselink-2.3.0.v20110604-r9504.zip">EclipseLink 2.3.0 Installer Zip (28 MB)</a>
                   </div>
-                  This zip includes EclipseLink 2.2.0 with the single jar packaging,  source,  JavaDocs, utilities, and dependent libraries. Intended for use in Java EE and SE environments.
+                  This zip includes EclipseLink 2.3.0 with the single jar packaging,  source,  JavaDocs, utilities, and dependent libraries. Intended for use in Java EE and SE environments.
                   <div class="bottomRow">
                   </div>
                </td>
@@ -22,9 +22,9 @@
             <tr class="tableData">
                <td class="packageDesc">
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.2.0/eclipselink-plugins-2.2.0.v20110202-r8913.zip">EclipseLink 2.2.0 OSGi Bundles Zip (12 MB)</a>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.3.0/eclipselink-plugins-2.3.0.v20110604-r9504.zip">EclipseLink 2.3.0 OSGi Bundles Zip (12 MB)</a>
                   </div>
-                  Contains EclipseLink and dependency bundles.  Get the OSGI Bundle Zip to use EclipseLink 2.2.0 runtime in an OSGi container.
+                  Contains EclipseLink and dependency bundles.  Get the OSGI Bundle Zip to use EclipseLink 2.3.0 runtime in an OSGi container.
                   <div class="bottomRow">
                      <div>
                      </div>
@@ -36,7 +36,7 @@
             <tr class="tableData">
                <td class="packageDesc">
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.2.0/eclipselink-src-2.2.0.v20110202-r8913.zip">EclipseLink 2.2.0 Source Zip (5.2 MB)</a>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.3.0/eclipselink-src-2.3.0.v20110604-r9504.zip">EclipseLink 2.3.0 Source Zip (5.2 MB)</a>
                   </div>
                   Contains source code for all of eclipselink.  
                   <div class="bottomRow">
