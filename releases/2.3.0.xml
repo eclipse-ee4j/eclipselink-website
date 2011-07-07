@@ -32,10 +32,10 @@
 						mappings can be used.
 			</td>
 					<td width="150">
-						<!-- <div>
+						<div>
 							<img src="/eclipselink/images/doc_small.png" />
 						 	<a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Extensible_Entities">JPA Documentation</a>
-						</div> -->
+						</div>
 						<div>
 							<img src="/eclipselink/images/wiki_small.png" />
 							<a
@@ -130,10 +130,10 @@
 						between entities in different databases.
 					</td>
 					<td>
-						<!-- <div>
+						<div>
 							<img src="/eclipselink/images/doc_small.png" />
 							<a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Composite_Persistence_Units">JPA Documentation</a>
-						</div> -->
+						</div> 
 						<div>
 							<img src="/eclipselink/images/wiki_small.png" />
 							<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Composite">JPA Example</a>
