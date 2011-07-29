@@ -56,7 +56,7 @@
 		</tr>
 		<tr>
 			<td>
-				<div class="bigbuttonsCommunity">https://bugs.eclipse.org/bugs/show_bug.cgi?id=331234
+				<div class="bigbuttonsCommunity">
 					<a href="/eclipselink/community.php"><div class="bigbuttonsTitleLink"></div></a>
 					<span>
 						<a href="http://wiki.eclipse.org/EclipseLink">Wiki</a>,
