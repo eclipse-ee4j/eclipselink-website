@@ -9,6 +9,13 @@
 					<th>Release</th>
 					<th>Date</th>
 				</tr>
+								<tr>
+					<td>
+						<a href="2.2.1.php">2.2.1 - Indigo</a>
+					</td>
+					<td> July 29, 2011</td>
+				</tr>
+			
 				<tr>
 					<td>
 						<a href="2.3.0.php">2.3.0 - Indigo</a>
