@@ -3,7 +3,7 @@
 
 	<section class="title">
 		<description>
-			<h1>EclipseLink 2.3.1 - Nov 11 2011</h1>
+			<h1>EclipseLink 2.3.2 - Dec 9th 2011</h1>
 			<p>The EclipseLink 2.3 release focuses on increased developer
 				flexibility allowing mapped objects to be extensible and multitenant
 				as well as external storage of mappings. These features are intended
@@ -199,41 +199,41 @@
 				</li>
 				<li>
 					<a
-						href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;target_milestone=2.3.0;product=EclipseLink;known_name=2.3%20Fixed"
+						href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;target_milestone=2.3.2;product=EclipseLink;known_name=2.3.2%20Fixed"
 						class="external text"
-						title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;target_milestone=2.3.0;product=EclipseLink;known_name=2.3%20Fixed"
-						rel="nofollow">All Fixed Bugs and enhancement requests</a>
+						title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;target_milestone=2.3.2;product=EclipseLink;known_name=2.3.2%20Fixed"
+						rel="nofollow">2.3.2: All Fixed Bugs and enhancement requests</a>
 					<dl>
 						<dd>
 							Component:
 							<a
-								href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;component=Foundation;target_milestone=2.3.0;product=EclipseLink;classification=RT"
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;component=Foundation;target_milestone=2.3.2;product=EclipseLink;classification=RT"
 								class="external text"
-								title="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;component=Foundation;target_milestone=2.3.0;product=EclipseLink;classification=RT"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;component=Foundation;target_milestone=2.3.2;product=EclipseLink;classification=RT"
 								rel="nofollow">Foundation</a>
 							,
 							<a
-								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=JPA;target_milestone=2.3.0;product=EclipseLink;known_name=2.3%20Fixed"
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3.2%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=JPA;target_milestone=2.3.2;product=EclipseLink;known_name=2.3.2%20Fixed"
 								class="external text"
-								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=JPA;target_milestone=2.3.0;product=EclipseLink;known_name=2.3%20Fixed"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3.2%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=JPA;target_milestone=2.3.2;product=EclipseLink;known_name=2.3.2%20Fixed"
 								rel="nofollow">JPA</a>
 							,
 							<a
-								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=MOXy;product=EclipseLink;target_milestone=2.3.0;known_name=2.3%20Fixed"
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3.2%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=MOXy;product=EclipseLink;target_milestone=2.3.2;known_name=2.3.2%20Fixed"
 								class="external text"
-								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=MOXy;product=EclipseLink;target_milestone=2.3.0;known_name=2.3%20Fixed"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3.2%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=MOXy;product=EclipseLink;target_milestone=2.3.2;known_name=2.3.2%20Fixed"
 								rel="nofollow">MOXy</a>
 							,
 							<a
-								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=SDO;target_milestone=2.3.0;product=EclipseLink;known_name=2.3%20Fixed"
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3.2%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=SDO;target_milestone=2.3.2;product=EclipseLink;known_name=2.3.2%20Fixed"
 								class="external text"
-								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=SDO;target_milestone=2.3.0;product=EclipseLink;known_name=2.3%20Fixed"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3.2%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=SDO;target_milestone=2.3.2;product=EclipseLink;known_name=2.3.2%20Fixed"
 								rel="nofollow">SDO</a>
 							,
 							<a
-								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=DBWS;product=EclipseLink;target_milestone=2.3.0;known_name=2.3%20Fixed"
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3.2%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=DBWS;product=EclipseLink;target_milestone=2.3.2;known_name=2.3.2%20Fixed"
 								class="external text"
-								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=DBWS;product=EclipseLink;target_milestone=2.3.0;known_name=2.3%20Fixed"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3.2%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=DBWS;product=EclipseLink;target_milestone=2.3.2;known_name=2.3.2%20Fixed"
 								rel="nofollow">DBWS</a>
 							,
 							<a
@@ -243,15 +243,15 @@
 								rel="nofollow">Utils</a>
 							,
 							<a
-								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Examples;target_milestone=2.3.0;product=EclipseLink;known_name=2.3%20Fixed"
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3.2%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Examples;target_milestone=2.3.2;product=EclipseLink;known_name=2.3.2%20Fixed"
 								class="external text"
-								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Examples;target_milestone=2.3.0;product=EclipseLink;known_name=2.3%20Fixed"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3.2%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Examples;target_milestone=2.3.2;product=EclipseLink;known_name=2.3.2%20Fixed"
 								rel="nofollow">Examples</a>
 							,
 							<a
-								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Documentation;target_milestone=2.3.0;product=EclipseLink;known_name=2.3%20Fixed"
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3.2%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Documentation;target_milestone=2.3.2;product=EclipseLink;known_name=2.3.2%20Fixed"
 								class="external text"
-								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Documentation;target_milestone=2.3.0;product=EclipseLink;known_name=2.3%20Fixed"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3.2%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Documentation;target_milestone=2.3.2;product=EclipseLink;known_name=2.3.2%20Fixed"
 								rel="nofollow">Documentation</a>
 						</dd>
 					</dl>
@@ -265,24 +265,15 @@
 		<description>
 			<p>
 				The following are known issues that have been identified as
-				potentially effecting users of EclipseLink 2.3.0.
+				potentially effecting users of EclipseLink 2.3.2.
 			</p>
-			<ul>
-				<li>
-					<a
-						href="http://www.eclipse.org/eclipselink/api/2.3/org/eclipse/persistence/config/ReferenceMode.html">ReferenceMode</a>
-					(org.eclipse.persistence.config) Enum moved from
-					org.eclipse.persistence.sessions.factories package. -
-					<a href="http://bugs.eclipse.org/239801">[Bug 239801]</a>
-				</li>
-			</ul>
 		</description>
 	</section>
 
 	<section class="main" name=" Standards" image="/sequoyah/images/CC_code.png">
 		<description>
 			<p>EclipseLink remains focused on the delivering support for the
-				latest standards. EclipseLink 2.3.0 offers certified support for:
+				latest standards. EclipseLink 2.3.2 offers certified support for:
 			</p>
 			<ul>
 				<li>
@@ -369,7 +360,7 @@
 				<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
 					border="0" />
 				<a href="/eclipselink/downloads/2.3.0">
-					Download 2.3.1
+					Download 2.3.2
 					<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
 						border="0" />
 				</a>
