@@ -116,8 +116,7 @@
 					<td>
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
-							<a
-								href="TBD">Documentation</a>
+							<a href="TBD">Documentation</a>
 						</div>
 						<div>
 							<img src="/eclipselink/images/wiki_small.png" />
@@ -375,15 +374,27 @@
 			</div>
 
 			<div
-				style="text-align:center;padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#FDD017;-moz-border-radius:4px;" valign="middle" >
-				<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
-					border="0" />
-				<a href="/eclipselink/downloads/2.4.0">
-					Download 2.4
-					<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
-						border="0" />
-				</a>
+				style="text-align:center;padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#FDD017;-moz-border-radius:4px;"
+				valign="middle">
 
+				<a href="/eclipselink/downloads/2.4.0">
+					<table>
+						<tr>
+							<td>
+								<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
+									border="0" />
+							</td>
+							<td width="100%" valign="middle">
+
+								Download 2.4
+							</td>
+							<td>
+								<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
+									border="0" />
+							</td>
+						</tr>
+					</table>
+				</a>
 			</div>
 
 			<!-- div style="text-align:right"> <a href="http://wiki.eclipse.org/EclipseLink/Installing_and_Configuring_EclipseLink">Install 
