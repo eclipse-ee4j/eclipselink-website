@@ -384,8 +384,10 @@
 								<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
 									border="0" />
 							</td>
-							<td width="100%" valign="middle" align="centre" >
-								Download 2.4
+							<td width="100%" valign="middle">
+								<div style="text-align:center;size:+3">
+									Download 2.4
+								</div>
 							</td>
 							<td>
 								<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
