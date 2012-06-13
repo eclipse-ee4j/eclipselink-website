@@ -4,10 +4,15 @@
 	<section class="title">
 		<description>
 			<h1>EclipseLink 2.4.0 - Jun 22nd 2011</h1>
-			<p> WORK IN PROGESS...  The EclipseLink 2.4 release builds on the increased developer
-				flexibility and Multitenancy features first introduced in 2.3. 
-				EclipseLink now offers support for some NoSQL datasources, and 
-				adds support for accessing existing applications through rest calls,</p>
+			<p> WORK IN PROGESS... The EclipseLink 2.4 release builds on the
+				increased developer
+				flexibility and Multitenancy features first
+				introduced in 2.3.
+				EclipseLink now offers support for some NoSQL
+				datasources, and
+				adds support for accessing existing applications
+				through rest calls,
+			</p>
 		</description>
 	</section>
 
@@ -18,33 +23,42 @@
 			<table>
 				<tr>
 					<td colspan="2">
-						<h4>JPA-RS</h4>
+						<h4>RESTFul Persistence with JPA-RS</h4>
 					</td>
 				</tr>
 				<tr
 					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
 					<td valign="top">
-						A Web fragment that exposes Rest to JPA entities 
-			</td>
+						Developers using EclipseLink in their applications
+						can now simply add the JPA-RS web fragment library into their web
+						applications and get the automated exposure of a REST access that
+						exposes their persistence unit with entities being implicitly
+						converted into JSON or XML within the REST operations.
+					</td>
 					<td width="150">
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
-						 	<a href="http://wiki.eclipse.org/EclipseLink/Development/2.4.0/JPA-RS">JPA Documentation</a>
+							<a href="http://wiki.eclipse.org/EclipseLink/Development/2.4.0/JPA-RS">JPA Documentation</a>
 						</div>
 					</td>
 				</tr>
 				<tr>
 					<td colspan="2">
-						<h4>Support Multiple Tenants - table per tenant</h4>
+						<h4>Tenant Isolation by Table, Schema, or Data Source</h4>
 					</td>
 				</tr>
 				<tr
 					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
 					<td valign="top">
 						Developers can design and deploy applications where
-						their persistent entities manage entities for multiple tenants in
-						the same application with storage in multiple tables.
-			</td>
+						their persistent entities
+						manage entities for multiple tenants in
+						the same application with
+						storage in tables per tenant uniquely
+						identified by name or
+						schema. Developers can now alternatively have
+						their applications customize the data source used for different
+					</td>
 					<td>
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
@@ -66,17 +80,15 @@
 				<tr
 					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
 					<td valign="top">
-						In Oracle Databases, caches will get automatically updated when the table changes. 
+						In Oracle Databases, caches will get automatically
+						updated when the table changes.
 					</td>
 					<td>
-						<!--<div>
-							<img src="/eclipselink/images/doc_small.png" />
-							 <a href="http://wiki.eclipse.org/EclipseLink/DesignDocs/356812">JPA Documentation</a>
-						</div> -->
+						<!--<div> <img src="/eclipselink/images/doc_small.png" /> <a href="http://wiki.eclipse.org/EclipseLink/DesignDocs/356812">JPA 
+							Documentation</a> </div> -->
 						<div>
 							<img src="/eclipselink/images/wiki_small.png" />
-							<a
-								href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/DCN">JPA Example</a>
+							<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/DCN">JPA Example</a>
 						</div>
 					</td>
 				</tr>
@@ -89,13 +101,16 @@
 				<tr
 					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
 					<td valign="top">
-						Support for using EclipseLink with NoSQL Databases.  EclipseLink 2.4.0 provides initial support for Mongo and Oracle NoSQL. 
+						Support for using EclipseLink with NoSQL Databases.
+						EclipseLink 2.4.0 provides initial support for Mongo and Oracle
+						NoSQL.
 					</td>
 					<td>
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
-							<a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/NoSQL/Persistence_Units">JPA Documentation</a>
-						</div> 
+							<a
+								href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/NoSQL/Persistence_Units">JPA Documentation</a>
+						</div>
 						<div>
 							<img src="/eclipselink/images/wiki_small.png" />
 							<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/NoSQL">JPA Example</a>
@@ -113,7 +128,8 @@
 		<description>
 			<p>In addition to the features highlighted in the New and Noteworthy
 				section this release also includes a substantial number of bug fixes
-				and enhancements. </p>
+				and enhancements.
+			</p>
 			<ul>
 				<li>
 					<a
@@ -314,7 +330,7 @@
 
 		<description>
 			<a href="/juno">
-				<img src="/juno/images/juno-logo.png" alt="/juno/images/juno-logo.png"/>
+				<img src="/juno/images/juno-logo.png" alt="/juno/images/juno-logo.png" />
 			</a>
 			<h6 style="text-align:center">Getting Started</h6>
 			<div
@@ -326,14 +342,14 @@
 					<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
 						border="0" />
 				</a>
-				
+
 			</div>
-			
+
 			<div style="text-align:right">
 				<a
 					href="http://wiki.eclipse.org/EclipseLink/Installing_and_Configuring_EclipseLink">Install Instructions</a>
 			</div>
-			
+
 			<div
 				style="text-align:center;padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
 				<img src="/eclipselink/images/doc_small.png" />
