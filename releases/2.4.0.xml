@@ -101,6 +101,33 @@
 
 				<tr>
 					<td colspan="2">
+						<h4>JSON Binding</h4>
+					</td>
+				</tr>
+				<tr
+					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+					<td valign="top">
+						EclipseLink MOXy can now be used for the marshaling
+						and unmarshaling of JSON objects. Leveraging the same context and
+						mappings used within the JAXB developers can easily integrate JSON
+						usage to their applications. This is core infrastructure to the
+						JPA-RS feature.
+					</td>
+					<td>
+						<div>
+							<img src="/eclipselink/images/doc_small.png" />
+							<a
+								href="TBD">Documentation</a>
+						</div>
+						<div>
+							<img src="/eclipselink/images/wiki_small.png" />
+							<a href="wiki.eclipse.org/EclipseLink/Examples/MOXy#JSON">Examples</a>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="2">
 						<h4>Cache Invalidation from Database</h4>
 					</td>
 				</tr>
