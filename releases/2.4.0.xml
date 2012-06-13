@@ -326,7 +326,7 @@
 		</description>
 	</section>
 
-	<section class="sideitem">
+	<section class="sideitem" name="Getting Started">
 
 		<description>
 			<a href="/juno">
@@ -335,7 +335,7 @@
 					<img src="/juno/images/juno-logo.png" width="100%" />
 				</div>
 			</a>
-			<h6 style="text-align:center">Getting Started</h6>
+
 			<div
 				style="text-align:center;padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#FDD017;-moz-border-radius:4px;">
 				<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
