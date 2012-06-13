@@ -37,7 +37,7 @@
 					<td width="150">
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
-							<a href="http://wiki.eclipse.org/EclipseLink/Development/2.4.0/JPA-RS">Example</a>
+							<a href="http://wiki.eclipse.org/EclipseLink/Development/2.4.0/JPA-RS">Documentation</a>
 						</div>
 					</td>
 				</tr>
@@ -63,15 +63,11 @@
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
 							<a
-								href="http://wiki.eclipse.org/EclipseLink/DesignDocs/Multi-Tenancy/TablePerTenant">Design Documentation</a>
+								href="http://wiki.eclipse.org/EclipseLink/DesignDocs/Multi-Tenancy/TablePerTenant">Documentation</a>
 						</div>
 						<div>
 							<img src="/eclipselink/images/wiki_small.png" />
-							<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Multitenant">@Multitenant Examples</a>
-						</div>
-						<div>
-							<img src="/eclipselink/images/wiki_small.png" />
-							<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Multitenant">Datasource Override Example</a>
+							<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Multitenant">Examples</a>
 						</div>
 					</td>
 				</tr>
@@ -117,7 +113,7 @@
 						</div>
 						<div>
 							<img src="/eclipselink/images/wiki_small.png" />
-							<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/NoSQL">NoSQL Example</a>
+							<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/NoSQL">Example</a>
 						</div>
 					</td>
 				</tr>
