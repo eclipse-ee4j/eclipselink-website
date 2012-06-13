@@ -74,36 +74,17 @@
 
 				<tr>
 					<td colspan="2">
-						<h4>Database Change Event Cache Invalidation</h4>
-					</td>
-				</tr>
-				<tr
-					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
-					<td valign="top">
-						In Oracle Databases, caches will get automatically
-						updated when the table changes.
-					</td>
-					<td>
-						<!--<div> <img src="/eclipselink/images/doc_small.png" /> <a href="http://wiki.eclipse.org/EclipseLink/DesignDocs/356812">JPA 
-							Documentation</a> </div> -->
-						<div>
-							<img src="/eclipselink/images/wiki_small.png" />
-							<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/DCN">Example</a>
-						</div>
-					</td>
-				</tr>
-
-				<tr>
-					<td colspan="2">
 						<h4>No SQL support</h4>
 					</td>
 				</tr>
 				<tr
 					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
 					<td valign="top">
-						Support for using EclipseLink with NoSQL Databases.
-						EclipseLink 2.4.0 provides initial support for Mongo and Oracle
-						NoSQL.
+						Integration NoSQL data stores into an application is
+						becoming a common requirement. Doing this with a common
+						persistence solution is a goal of the EclipseLink project. This
+						release introduces EclipseLink's NoSQL support for MongoDB and
+						Oracle NoSQL.
 					</td>
 					<td>
 						<div>
@@ -117,6 +98,37 @@
 						</div>
 					</td>
 				</tr>
+
+				<tr>
+					<td colspan="2">
+						<h4>Cache Invalidation from Database</h4>
+					</td>
+				</tr>
+				<tr
+					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+					<td valign="top">
+						Configuring the invalidation of cached entities based
+						on changes applied
+						directly to the database finally allows
+						developers to build
+						systems that minimize stale data in the cache.
+						This will allow applications to more heavily rely on caching and
+						increase overall performance and scalability.
+						This release includes
+						an initial implementation that integrates Oracle
+						Database's change
+						notification.
+					</td>
+					<td>
+						<!--<div> <img src="/eclipselink/images/doc_small.png" /> <a href="http://wiki.eclipse.org/EclipseLink/DesignDocs/356812">JPA 
+							Documentation</a> </div> -->
+						<div>
+							<img src="/eclipselink/images/wiki_small.png" />
+							<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/DCN">Example</a>
+						</div>
+					</td>
+				</tr>
+
 			</table>
 
 		</description>
@@ -331,7 +343,7 @@
 		<description>
 			<div style="text-align:center;padding:0.5em;margin:0.5em 0.5em 1em 1em;">
 				<a href="/juno">
-					<img src="/juno/images/eclipse_juno242x132.jpg"  width="200"/>
+					<img src="/juno/images/eclipse_juno242x132.jpg" width="200" />
 				</a>
 			</div>
 
