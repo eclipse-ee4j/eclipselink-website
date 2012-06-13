@@ -58,6 +58,7 @@
 						identified by name or
 						schema. Developers can now alternatively have
 						their applications customize the data source used for different
+						tenant's application instances.
 					</td>
 					<td>
 						<div>
