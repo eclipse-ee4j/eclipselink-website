@@ -64,14 +64,14 @@
 }
 
 .bigbuttonsCommunity {
-	background: url("/huge_icons/categories/applications-internet.png") no-repeat;
+	background: url("/eclipselink/images/bigbutton_community.png") no-repeat;
 	width: 249px;
 	height: 77px;
 	position: relative;
 }
 
 .bigbuttonsDocumentation {
-	background: url("/huge_icons/mimetypes/x-office-book.png") no-repeat;
+	background: url("/eclipselink/images/bigbutton_documentation.png") no-repeat;
 	width: 249px;
 	height: 77px;
 	position: relative;
