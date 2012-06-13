@@ -330,7 +330,10 @@
 
 		<description>
 			<a href="/juno">
-				<img src="/juno/images/juno-logo.png" alt="/juno/images/juno-logo.png" />
+				<div
+					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+					<img src="/juno/images/juno-logo.png" alt="/juno/images/juno-logo.png" />
+				</div>
 			</a>
 			<h6 style="text-align:center">Getting Started</h6>
 			<div
