@@ -330,9 +330,7 @@
 
 		<description>
 			<a href="/juno">
-				<div align="center">
-					<img src="/juno/images/eclipse_juno242x132.jpg" width="200"/>
-				</div>
+				<img src="/juno/images/eclipse_juno242x132.jpg" width="200" />
 			</a>
 
 			<div
