@@ -385,8 +385,10 @@
 									border="0" />
 							</td>
 							<td width="100%" valign="middle">
-								<div style="text-align:center;size:+3">
-									Download 2.4
+								<div style="text-align:center">
+									<font size="+3">
+										Download 2.4
+									</font>
 								</div>
 							</td>
 							<td>
