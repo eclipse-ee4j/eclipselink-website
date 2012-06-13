@@ -3,15 +3,14 @@
 
 	<section class="title">
 		<description>
-			<h1>EclipseLink 2.4.0 - Jun 22nd 2011</h1>
-			<p> WORK IN PROGESS... The EclipseLink 2.4 release builds on the
+			<h1>EclipseLink 2.4.0 - Juno</h1>
+			<p> The EclipseLink 2.4 release builds on the
 				increased developer
-				flexibility and Multitenancy features first
+				flexibility and multitenant features first
 				introduced in 2.3.
-				EclipseLink now offers support for some NoSQL
-				datasources, and
-				adds support for accessing existing applications
-				through rest calls,
+				EclipseLink now offers support for NoSQL, REST, JSON as well as
+				additional tenant isolation modes for PaaS and SaaS cloud enabled
+				application development.
 			</p>
 		</description>
 	</section>
