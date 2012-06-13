@@ -217,7 +217,7 @@
 					<a
 						href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;target_milestone=2.4;product=EclipseLink;known_name=2.4%20Fixed"
 						class="external text"
-						title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;target_milestone=2.4;product=EclipseLink;known_name=2.4%20Fixed"
+						title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;target_milestone=2.4;product=EclipseLink;known_name=2.4%20Fixed"
 						rel="nofollow">2.4.0: All Fixed Bugs and enhancement requests</a>
 					<dl>
 						<dd>
@@ -253,9 +253,9 @@
 								rel="nofollow">DBWS</a>
 							,
 							<a
-								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Utils;target_milestone=2.3.0;product=EclipseLink;known_name=2.3%20Fixed"
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Utils;target_milestone=2.4.0;product=EclipseLink;known_name=2.4%20Fixed"
 								class="external text"
-								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Utils;target_milestone=2.3.0;product=EclipseLink;known_name=2.3%20Fixed"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Utils;target_milestone=2.4.0;product=EclipseLink;known_name=2.4%20Fixed"
 								rel="nofollow">Utils</a>
 							,
 							<a
@@ -312,7 +312,7 @@
 		image="http://dev.eclipse.org/huge_icons/actions/edit-clear.png">
 		<description>
 			<p>
-				In EclipseLink 2.3 the following features/API have been
+				In EclipseLink 2.4 the following features/API have been
 				deprecated.
 				Please upgrade to the suggested alternatives to avoid
 				issues in the
@@ -339,7 +339,7 @@
 	<section class="main" name="Retention Policy">
 		<description>
 			<p>
-				The EclipseLink 2.3 release will remain available for download
+				The EclipseLink 2.4 release will remain available for download
 				from
 				the
 				<a href="/eclipselink/downloads/index.php">primary download page</a>
