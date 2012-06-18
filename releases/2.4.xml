@@ -6,10 +6,11 @@
 			<h1>EclipseLink 2.4.0 - Juno</h1>
 			<p> The EclipseLink 2.4 release builds on the
 				increased developer
-				flexibility and multitenant features first
-				introduced in 2.3.
-				EclipseLink now offers support for NoSQL, REST, JSON as well as
-				additional tenant isolation modes for PaaS and SaaS cloud enabled
+				flexibility and multitenant features.
+				EclipseLink now offers support
+				for NoSQL, REST, JSON as well as
+				additional tenant isolation modes
+				for PaaS and SaaS cloud enabled
 				application development.
 			</p>
 		</description>
@@ -32,7 +33,10 @@
 						can now simply add the JPA-RS web fragment library into their web
 						applications and get the automated exposure of a REST access that
 						exposes their persistence unit with entities being implicitly
-						converted into JSON or XML within the REST operations.
+						converted into JSON or XML within the REST operations. This will
+						offer developers greater insight into their application's runtime
+						behaviour as well as enabling easier use in Thin Server
+						Architecture clients (HTML5 and Mobile).
 					</td>
 					<td width="150">
 						<div>
@@ -178,7 +182,8 @@
 				</li>
 				<li>
 					<a href="http://wiki.eclipse.org/EclipseLink/Examples/MySports">MySports Example</a>
-					: Example updated to include @Multitenant(TABLE_PER_TENANT) and the REST interfaces have been replaced with the usage of JPA-RS.
+					: Example updated to include @Multitenant(TABLE_PER_TENANT) and the
+					REST interfaces have been replaced with the usage of JPA-RS.
 				</li>
 				<li>
 					<a
