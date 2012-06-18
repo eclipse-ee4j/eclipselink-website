@@ -101,15 +101,14 @@
 
 				<tr>
 					<td colspan="2">
-						<h4>JSON and JAXB RI Compatibility</h4>
+						<h4>JSON</h4>
 					</td>
 				</tr>
 				<tr
 					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
 					<td valign="top">
 						EclipseLink MOXy can now be used for the marshaling
-						and unmarshaling of JSON objects as well as supporting JAXB RI
-						extensions. Leveraging the same context and
+						and unmarshaling of JSON object. Leveraging the same context and
 						mappings used within
 						the JAXB developers can easily integrate JSON
 						usage to their
@@ -180,47 +179,11 @@
 			<ul>
 				<li>
 					<a
-						href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/PLSQLStoredFunction">JPA Stored Procedure and PLSQL Support Enhancements</a>
-					-
-					<a
-						href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Stored_Procedure_and_PL/SQL_Support">Documentation</a>
-				</li>
-				<li>
-					<a
-						href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/ElementMappingByAttributeValue">MOXy support for mapping with predicates</a>
-				</li>
-				<li>
-					<a
-						href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/MultipleBindingsFiles">MOXy support for multiple eclipselink-oxm.xml mapping files
-					</a>
-				</li>
-				<li>
-					<a
-						href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/XMLNameTransformer">MOXy support for custom XML name conversions</a>
-					-
-					<a
-						href="http://wiki.eclipse.org/EclipseLink/UserGuide/MOXy/Advanced_Concepts/Customizing_XML_Name_Conversions">Documentation</a>
-				</li>
-				<li>
-					<a
-						href="http://wiki.eclipse.org/EclipseLink/Examples/DBWS/DBWSComplexArgStoredFunction">DBWS from StoredFunction with PL/SQL arguments</a>
-				</li>
-				<li>
-					<a
-						href="http://wiki.eclipse.org/EclipseLink/Examples/DBWS/DBWSOverloadStoredProcedure">DBWS from overloaded Stored Procedures</a>
+						href="http://wiki.eclipse.org/EclipseLink/Release/2.4.0/JAXB_RI_Compatibility">Support for JAXB RI Extensions</a>
 				</li>
 				<li>
 					<a href="http://wiki.eclipse.org/EclipseLink/Examples/MySports">MySports Example</a>
-					: New example showing new @Multitenant and @VirtualAccessMethods
-					features in Java EE web applications using JSF, JAX-RS, EJB and
-					JPA
-					.
-				</li>
-				<li>
-					<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA">Employee Example</a>
-					: The classic EclipseLink Employee example updated with a JSF
-					front
-					end.
+					: Example updated to include @Multitenant(TABLE_PER_TENANT)
 				</li>
 				<li>
 					<a
