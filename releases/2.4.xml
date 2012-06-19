@@ -23,7 +23,7 @@
 			<table>
 				<tr>
 					<td colspan="2">
-						<h4>RESTFul Persistence with JPA-RS</h4>
+						<h4>RESTFul Persistence</h4>
 					</td>
 				</tr>
 				<tr
@@ -47,7 +47,7 @@
 				</tr>
 				<tr>
 					<td colspan="2">
-						<h4>Tenant Isolation by Table, Schema, or Data Source</h4>
+						<h4>Tenant Isolation</h4>
 					</td>
 				</tr>
 				<tr
