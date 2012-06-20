@@ -197,24 +197,6 @@
 								class="external text"
 								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=DBWS;product=EclipseLink;target_milestone=2.4.0;known_name=2.4%20Fixed"
 								rel="nofollow">DBWS</a>
-							,
-							<a
-								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Utils;target_milestone=2.4.0;product=EclipseLink;known_name=2.4%20Fixed"
-								class="external text"
-								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Utils;target_milestone=2.4.0;product=EclipseLink;known_name=2.4%20Fixed"
-								rel="nofollow">Utils</a>
-							,
-							<a
-								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Examples;target_milestone=2.4.0;product=EclipseLink;known_name=2.4%20Fixed"
-								class="external text"
-								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Examples;target_milestone=2.4.0;product=EclipseLink;known_name=2.4%20Fixed"
-								rel="nofollow">Examples</a>
-							,
-							<a
-								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Documentation;target_milestone=2.4.0;product=EclipseLink;known_name=2.4%20Fixed"
-								class="external text"
-								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Documentation;product=EclipseLink;known_name=2.4%20Fixed"
-								rel="nofollow">Documentation</a>
 						</dd>
 					</dl>
 				</li>
