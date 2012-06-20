@@ -161,41 +161,41 @@
 				</li>
 				<li>
 					<a
-						href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;target_milestone=2.4;product=EclipseLink;known_name=2.4%20Fixed"
+						href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;target_milestone=2.4.0;product=EclipseLink;known_name=2.4%20Fixed"
 						class="external text"
-						title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;target_milestone=2.4;product=EclipseLink;known_name=2.4%20Fixed"
+						title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;target_milestone=2.4.0;product=EclipseLink;known_name=2.4%20Fixed"
 						rel="nofollow">2.4.0: All Fixed Bugs and enhancement requests</a>
 					<dl>
 						<dd>
 							Component:
 							<a
-								href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;component=Foundation;target_milestone=2.4;product=EclipseLink;classification=RT"
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;component=Foundation;target_milestone=2.4.0;product=EclipseLink;classification=RT"
 								class="external text"
-								title="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;component=Foundation;target_milestone=2.4;product=EclipseLink;classification=RT"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;component=Foundation;target_milestone=2.4.0;product=EclipseLink;classification=RT"
 								rel="nofollow">Foundation</a>
 							,
 							<a
-								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=JPA;target_milestone=2.4;product=EclipseLink;known_name=2.4%20Fixed"
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=JPA;target_milestone=2.4.0;product=EclipseLink;known_name=2.4%20Fixed"
 								class="external text"
-								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=JPA;target_milestone=2.4;product=EclipseLink;known_name=2.4%20Fixed"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=JPA;target_milestone=2.4.0;product=EclipseLink;known_name=2.4%20Fixed"
 								rel="nofollow">JPA</a>
 							,
 							<a
-								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=MOXy;product=EclipseLink;target_milestone=2.4;known_name=2.4%20Fixed"
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=MOXy;product=EclipseLink;target_milestone=2.4.0;known_name=2.4%20Fixed"
 								class="external text"
-								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=MOXy;product=EclipseLink;target_milestone=2.4;known_name=2.4%20Fixed"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=MOXy;product=EclipseLink;target_milestone=2.4.0;known_name=2.4%20Fixed"
 								rel="nofollow">MOXy</a>
 							,
 							<a
-								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=SDO;target_milestone=2.4;product=EclipseLink;known_name=2.4%20Fixed"
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=SDO;target_milestone=2.4.0;product=EclipseLink;known_name=2.4%20Fixed"
 								class="external text"
-								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=SDO;target_milestone=2.4;product=EclipseLink;known_name=2.4%20Fixed"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=SDO;target_milestone=2.4.0;product=EclipseLink;known_name=2.4%20Fixed"
 								rel="nofollow">SDO</a>
 							,
 							<a
-								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=DBWS;product=EclipseLink;target_milestone=2.4;known_name=2.4%20Fixed"
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=DBWS;product=EclipseLink;target_milestone=2.4.0;known_name=2.4%20Fixed"
 								class="external text"
-								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=DBWS;product=EclipseLink;target_milestone=2.4;known_name=2.4%20Fixed"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=DBWS;product=EclipseLink;target_milestone=2.4.0;known_name=2.4%20Fixed"
 								rel="nofollow">DBWS</a>
 							,
 							<a
@@ -205,15 +205,15 @@
 								rel="nofollow">Utils</a>
 							,
 							<a
-								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Examples;target_milestone=2.4;product=EclipseLink;known_name=2.4%20Fixed"
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Examples;target_milestone=2.4.0;product=EclipseLink;known_name=2.4%20Fixed"
 								class="external text"
-								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Examples;target_milestone=2.4;product=EclipseLink;known_name=2.4%20Fixed"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Examples;target_milestone=2.4.0;product=EclipseLink;known_name=2.4%20Fixed"
 								rel="nofollow">Examples</a>
 							,
 							<a
-								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Documentation;target_milestone=2.4;product=EclipseLink;known_name=2.4%20Fixed"
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Documentation;target_milestone=2.4.0;product=EclipseLink;known_name=2.4%20Fixed"
 								class="external text"
-								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Documentation;target_milestone=2.4;product=EclipseLink;known_name=2.4%20Fixed"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Documentation;target_milestone=2.4.0;product=EclipseLink;known_name=2.4%20Fixed"
 								rel="nofollow">Documentation</a>
 						</dd>
 					</dl>
