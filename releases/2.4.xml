@@ -159,6 +159,7 @@
 					: Example updated to include @Multitenant(TABLE_PER_TENANT) and the
 					REST interfaces have been replaced with the usage of JPA-RS.
 				</li>
+				<div align="center"><img src="2.4.0_bugs.PNG"/></div>
 				<li>
 					<a
 						href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;target_milestone=2.4.0;product=EclipseLink;known_name=2.4%20Fixed"
@@ -167,6 +168,36 @@
 						rel="nofollow">2.4.0: All Fixed Bugs and enhancement requests</a>
 					<dl>
 						<dd>
+							<table>
+							<th>
+							<td>Component</td>
+							<td>Closed in 2.4</td>
+							</th>
+							<tr>
+							<td>Foundation</td>
+							<td>36</td>
+							</tr>
+							<tr>
+							<td>Foundation</td>
+							<td>36</td>
+							</tr>
+							<tr>
+							<td>Foundation</td>
+							<td>36</td>
+							</tr>
+							<tr>
+							<td>Foundation</td>
+							<td>36</td>
+							</tr>
+							<tr>
+							<td>Utilities</td>
+							<td>36</td>
+							</tr>
+							<tr>
+							<td>Documentation</td>
+							<td>36</td>
+							</tr>
+							</table>
 							Component:
 							<a
 								href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;component=Foundation;target_milestone=2.4.0;product=EclipseLink;classification=RT"
@@ -213,7 +244,7 @@
 							<a
 								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Documentation;target_milestone=2.4.0;product=EclipseLink;known_name=2.4%20Fixed"
 								class="external text"
-								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Documentation;target_milestone=2.4.0;product=EclipseLink;known_name=2.4%20Fixed"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Documentation;product=EclipseLink;known_name=2.4%20Fixed"
 								rel="nofollow">Documentation</a>
 						</dd>
 					</dl>
