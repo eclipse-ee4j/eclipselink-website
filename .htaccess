@@ -25,4 +25,4 @@ redirect /eclipselink/maven.repo http://www.eclipse.org/downloads/download.php?r
 redirect /eclipselink/maven http://www.eclipse.org/downloads/download.php?r=1&nf=1&file=/rt/eclipselink/maven.repo
 redirect /eclipselink/project_summary http://www.eclipse.org/projects/project_summary.php?projectid=rt.eclipselink
 redirect /eclipselink/summary http://www.eclipse.org/projects/project_summary.php?projectid=rt.eclipselink
-redirect /eclipselink/release/2.4.0.php http://www.eclipse.org/eclipselink/releases/2.4.php
+redirect /eclipselink/releases/2.4.0.php http://www.eclipse.org/eclipselink/releases/2.4.php
