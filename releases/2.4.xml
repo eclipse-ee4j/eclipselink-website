@@ -29,19 +29,16 @@
 				<tr
 					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
 					<td valign="top">
-						Developers using EclipseLink in their applications
-						can now simply add the JPA-RS web fragment library into their web
-						applications and get the automated exposure of a REST access that
-						exposes their persistence unit with entities being implicitly
-						converted into JSON or XML within the REST operations. This will
-						offer developers greater insight into their application's runtime
-						behaviour as well as enabling easier use in Thin Server
-						Architecture clients (HTML5 and Mobile).
+						Java Persistence units can now be exposed over REST
+						using either JSON or XML media. This allows applications to more
+						easily expose their persistence features for direct usage within
+						Thin Server Architecture solutions including HTML5 and mobile
+						clients.
 					</td>
 					<td width="150">
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
-							<a href="http://wiki.eclipse.org/EclipseLink/Development/2.4.0/JPA-RS">Documentation</a>
+							<a href="http://wiki.eclipse.org/EclipseLink/Release/2.4.0/JPA-RS">Documentation</a>
 						</div>
 					</td>
 				</tr>
@@ -127,7 +124,8 @@
 						</div>
 						<div>
 							<img src="/eclipselink/images/wiki_small.png" />
-							<a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy#Working_with_JSON_.28NEW_in_2.4.29">Examples</a>
+							<a
+								href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy#Working_with_JSON_.28NEW_in_2.4.29">Examples</a>
 						</div>
 					</td>
 				</tr>
