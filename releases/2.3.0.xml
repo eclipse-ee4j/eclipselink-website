@@ -9,10 +9,11 @@
 				as well as external storage of mappings. These features are intended
 				to help developers address some of the challenges related to
 				developing for cloud architectures and more specifically SaaS
-				solutions.</p>
-				<table>
+				solutions.
+			</p>
+			<table>
 				<tr>
-				
+
 					<td width="450">
 						<h4>Release</h4>
 					</td>
@@ -22,9 +23,10 @@
 						</div>
 					</td>
 				</tr>
-				
-				<tr style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
-				
+
+				<tr
+					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+
 					<td width="450">
 						EclipseLink 2.3.2
 					</td>
@@ -34,8 +36,9 @@
 						</div>
 					</td>
 				</tr>
-				<tr style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
-				
+				<tr
+					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+
 					<td width="450">
 						EclipseLink 2.3.1
 					</td>
@@ -45,7 +48,8 @@
 						</div>
 					</td>
 				</tr>
-				<tr style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+				<tr
+					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
 					<td width="450">
 						EclipseLink 2.3.0
 					</td>
@@ -54,11 +58,11 @@
 							Jun 22 2011
 						</div>
 					</td>
-					
+
 				</tr>
 			</table>
-				
-								
+
+
 		</description>
 	</section>
 
@@ -79,11 +83,12 @@
 						beans
 						extensible so that at runtime a set of additional extended
 						mappings can be used.
-			</td>
+					</td>
 					<td width="150">
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
-						 	<a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Extensible_Entities">JPA Documentation</a>
+							<a
+								href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Extensible_Entities">JPA Documentation</a>
 						</div>
 						<div>
 							<img src="/eclipselink/images/wiki_small.png" />
@@ -111,7 +116,7 @@
 						the
 						same application
 						with storage in a shared table.
-			</td>
+					</td>
 					<td>
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
@@ -140,10 +145,8 @@
 						applications.
 					</td>
 					<td>
-						<!--<div>
-							<img src="/eclipselink/images/doc_small.png" />
-							 <a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Externalized_Mappings">JPA Documentation</a>
-						</div> -->
+						<!--<div> <img src="/eclipselink/images/doc_small.png" /> <a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Externalized_Mappings">JPA 
+							Documentation</a> </div> -->
 						<div>
 							<img src="/eclipselink/images/wiki_small.png" />
 							<a
@@ -181,8 +184,9 @@
 					<td>
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
-							<a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Composite_Persistence_Units">JPA Documentation</a>
-						</div> 
+							<a
+								href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Composite_Persistence_Units">JPA Documentation</a>
+						</div>
 						<div>
 							<img src="/eclipselink/images/wiki_small.png" />
 							<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Composite">JPA Example</a>
@@ -200,7 +204,8 @@
 		<description>
 			<p>In addition to the features highlighted in the New and Noteworthy
 				section this release also includes a substantial number of bug fixes
-				and enhancements. </p>
+				and enhancements.
+			</p>
 			<ul>
 				<li>
 					<a
@@ -413,20 +418,18 @@
 					<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
 						border="0" />
 				</a>
-				
+
 			</div>
 			<div
-				style="text-align:center;padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#FDD017;-moz-border-radius:4px;">
-				<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
-					border="0" />
+				style="text-align:center;padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;-moz-border-radius:4px;">
+
 				<a href="/eclipselink/downloads/previous_releases.php">
 					Download 2.3.0, 2.3.1
-					<img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png"
-						border="0" />
+
 				</a>
-				
+
 			</div>
-			
+
 			<div
 				style="text-align:center;padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
 				<img src="/eclipselink/images/doc_small.png" />
