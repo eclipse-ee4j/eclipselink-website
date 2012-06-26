@@ -10,7 +10,20 @@
 				to help developers address some of the challenges related to
 				developing for cloud architectures and more specifically SaaS
 				solutions.</p>
-				EclipseLink 2.3.2 - Dec 9th 2011
+				<table>
+				<tr
+					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+					<td valign="top">
+						EclipseLink 2.3.2
+					</td>
+					<td width="150">
+						<div>
+							Dec 9 2011
+						</div>
+					</td>
+				</tr>
+			</table>
+				
 				EclipseLink 2.3.1 - Nov 11th 2011
 				EclipseLink 2.3.0 - Jun 22nd, 2011 
 				
