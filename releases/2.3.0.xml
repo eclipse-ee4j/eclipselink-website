@@ -21,12 +21,27 @@
 							Dec 9 2011
 						</div>
 					</td>
+										<td valign="top">
+						EclipseLink 2.3.1
+					</td>
+					<td width="150", valign="right">
+						<div>
+							Nov 11 2011
+						</div>
+					</td>
+										<td valign="top">
+						EclipseLink 2.3.0
+					</td>
+					<td width="150", valign="right">
+						<div>
+							Jun 22 2011
+						</div>
+					</td>
+					
 				</tr>
 			</table>
 				
-				EclipseLink 2.3.1 - Nov 11th 2011
-				EclipseLink 2.3.0 - Jun 22nd, 2011 
-				
+								
 		</description>
 	</section>
 
