@@ -11,7 +11,8 @@
 				developing for cloud architectures and more specifically SaaS
 				solutions.</p>
 				<table>
-				<tr>
+				<tr style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+				
 					<td valign="top">
 						EclipseLink 2.3.2
 					</td>
@@ -21,7 +22,8 @@
 						</div>
 					</td>
 				</tr>
-				<tr>
+				<tr style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+				
 					<td valign="top">
 						EclipseLink 2.3.1
 					</td>
@@ -31,11 +33,11 @@
 						</div>
 					</td>
 				</tr>
-				<tr>
+				<tr style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
 					<td valign="top">
 						EclipseLink 2.3.0
 					</td>
-					<td valign="right">
+					<td width="150", valign="right">
 						<div>
 							Jun 22 2011
 						</div>
