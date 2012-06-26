@@ -243,20 +243,23 @@
 				Please upgrade to the suggested alternatives to avoid
 				issues in the
 				future when these deprecated features/AIP might be
-				removed. If you
-				are upgrading from an earlier release please check the
-				applicable
+				removed.
 				<a href="index.php">release pages</a>
 				.
 			</p>
 			<ul>
 				<li>
-					<a href="http://bugs.eclipse.org/340074">Bug 340074:</a>
-					Deprecated use of 'javax.persistence.cacheRetrieveMode' and
-					'javax.persistence.cacheStoreMode' QueryHints to address JPA 2.0
-					spec compatibility. The hint names
-					'javax.persistence.cache.retrieveMode' and
-					'javax.persistence.cache.storeMode' should now be used.
+					<a href="http://bugs.eclipse.org/380538">Bug 380538</a>
+					<a href="http://bugs.eclipse.org/381207 ">Bug 381207</a>
+					:
+					Statics previously located on JAXBContextFactory have been
+					deprecated and new values made available on JAXBContextProperties.
+				</li>
+				<li>
+					The introduction of the EclipseLink NoSQL release with 2.4
+					required some EIS API to be moved from the core bundle into the
+					NoSQL bundle. If you have been using these APIs you will need to
+					add the NoSQL bundle to your classpath.
 				</li>
 			</ul>
 		</description>
@@ -303,7 +306,7 @@
 				style="padding:0.5em;margin:0.5em 0.5em 1em 1em;background:#FDD017;-moz-border-radius:4px;"
 				valign="middle">
 
-				<a href="/eclipselink/downloads/2.4.0">
+				<a href="/eclipselink/downloads/2.4">
 					<table>
 						<tr>
 							<td>
