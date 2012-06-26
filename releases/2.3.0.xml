@@ -13,7 +13,7 @@
 				<table>
 				<tr style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
 				
-					<td valign="top">
+					<td width="300">
 						EclipseLink 2.3.2
 					</td>
 					<td valign="right">
@@ -24,7 +24,7 @@
 				</tr>
 				<tr style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
 				
-					<td valign="top">
+					<td width="300">
 						EclipseLink 2.3.1
 					</td>
 					<td valign="right">
@@ -34,7 +34,7 @@
 					</td>
 				</tr>
 				<tr style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
-					<td valign="top">
+					<td width="300">
 						EclipseLink 2.3.0
 					</td>
 					<td valign="right">
