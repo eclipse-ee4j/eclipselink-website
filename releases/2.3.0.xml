@@ -11,28 +11,31 @@
 				developing for cloud architectures and more specifically SaaS
 				solutions.</p>
 				<table>
-				<tr
-					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+				<tr>
 					<td valign="top">
 						EclipseLink 2.3.2
 					</td>
-					<td width="150", valign="right">
+					<td valign="right">
 						<div>
 							Dec 9 2011
 						</div>
 					</td>
-										<td valign="top">
+				</tr>
+				<tr>
+					<td valign="top">
 						EclipseLink 2.3.1
 					</td>
-					<td width="150", valign="right">
+					<td valign="right">
 						<div>
 							Nov 11 2011
 						</div>
 					</td>
-										<td valign="top">
+				</tr>
+				<tr>
+					<td valign="top">
 						EclipseLink 2.3.0
 					</td>
-					<td width="150", valign="right">
+					<td valign="right">
 						<div>
 							Jun 22 2011
 						</div>
