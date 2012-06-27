@@ -23,9 +23,9 @@
             <tr class="tableData">
                <td class="packageDesc">
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.4.0/eclipselink-plugins-nosq-2.4.0.v20120608-r11652.zip">EclipseLink NoSQL 2.4.0 Installer Zip (500 K)</a>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.4.0/eclipselink-plugins-nosql-2.4.0.v20120608-r11652.zip">EclipseLink NoSQL 2.4.0 Installer Zip (500 K)</a>
                   </div>
-                  This zip includes EclipseLink 2.4.0 NoSql support. This zip is to be used together with the EclipseLink zip (or EclipseLink bundles) to support NoSQL.  This zip includes source,  JavaDocs, utilities, and dependent libraries.
+                  This zip includes EclipseLink NoSql support. This zip is to be used together with the EclipseLink zip (or EclipseLink bundles) to support NoSQL.  This zip includes source,  JavaDocs, utilities, and dependent libraries.
                   <div class="bottomRow">
                   </div>
                </td>
