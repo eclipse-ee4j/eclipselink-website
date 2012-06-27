@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>@NamedStoredFunctionQuery</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.2 Build 067" />
+<meta name="date" content="2012-06-27T14:23:49Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="@NamedStoredFunctionQuery" />
+ 
+<link rel="stylesheet" type="text/css" href="../../../../dcommon/style.css" media="screen" />
+  
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="a_namedstoredfunc_queries.htm" title="Previous" type="text/html" />
+<link rel="next" href="a_namedstoredproc_queries.htm" title="Next" type="text/html" />
+</head>
+<body bgcolor="#FFFFFF">
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><strong>Java Persistence API (JPA) Extensions Reference for EclipseLink</strong> <br />
+<strong>Release 2.4.x</strong><br />
+ </font></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top" width="25%"><a href="../../index.htm"><img src="../../../../dcommon/images/information.png" alt="Go To Documentation Library" border="0" height="16" width="16" /><br />
+Documentation</a></td><td>&nbsp;</td><td><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br />Search</a>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+Contents</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr>
+<td align="center"><a href="a_namedstoredfunc_queries.htm"><img src="../../../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="a_namedstoredproc_queries.htm"><img src="../../../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header -->
+<p align="center"><font color="#FF0000">Beta Draft: 2012-06-27</font></p>
+<a id="BABFBIFE" name="BABFBIFE"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@NamedStoredFunctionQuery</font></h2>
+<p>Use <code>@NamedStoredFunctionQuery</code> to define queries that call stored functions as named queries.</p>
+<a id="sthref216" name="sthref216"></a>
+<p><strong><font face="arial, helvetica, sans-serif" color="#330099">Annotation Elements</font></strong></p>
+<p><a href="#BABFFDDG">Table 2-37</a> describes this annotation's elements.</p>
+<div class="tblhruleformalwide"><a id="sthref217" name="sthref217"></a><a id="BABFFDDG" name="BABFFDDG"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-37 @NamedStoredFunctionQuery Annotation Elements</font></em></strong></p>
+<table class="HRuleFormalWide" title="@NamedStoredFunctionQuery Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="21%" />
+<col width="*" />
+<col width="13%" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t47"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t47"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c3-t47"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t47" headers="r1c1-t47">
+<p><code>functionName</code></p>
+</td>
+<td align="left" headers="r2c1-t47 r1c2-t47">
+<p>(Required) The name of the stored function.</p>
+</td>
+<td align="left" headers="r2c1-t47 r1c3-t47"><br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t47" headers="r1c1-t47">
+<p>name</p>
+</td>
+<td align="left" headers="r3c1-t47 r1c2-t47">
+<p>(Required) The unique name that references this stored function query.</p>
+</td>
+<td align="left" headers="r3c1-t47 r1c3-t47"><br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t47" headers="r1c1-t47">
+<p><code>returnParamter</code></p>
+</td>
+<td align="left" headers="r4c1-t47 r1c2-t47">
+<p>(Required) The return value of the stored function.</p>
+</td>
+<td align="left" headers="r4c1-t47 r1c3-t47"><br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t47" headers="r1c1-t47">
+<p><code>callByIndex</code></p>
+</td>
+<td align="left" headers="r5c1-t47 r1c2-t47">
+<p>(Optional) Specifies if the stored function should be called by <strong>index</strong> or by <strong>name</strong>.</p>
+<ul>
+<li>
+<p>If by index, the parameters must be defined in the same order as the procedure on the database.</p>
+</li>
+<li>
+<p>If by name, you must use the database platform support naming procedure parameters</p>
+</li>
+</ul>
+</td>
+<td align="left" headers="r5c1-t47 r1c3-t47">
+<p>false</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t47" headers="r1c1-t47">
+<p><code>hints</code></p>
+</td>
+<td align="left" headers="r6c1-t47 r1c2-t47">
+<p>(Optional) Query hints</p>
+</td>
+<td align="left" headers="r6c1-t47 r1c3-t47"><br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t47" headers="r1c1-t47">
+<p><code>parameters</code></p>
+</td>
+<td align="left" headers="r7c1-t47 r1c2-t47">
+<p>(Optional) The parameters for the stored function.</p>
+</td>
+<td align="left" headers="r7c1-t47 r1c3-t47"><br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t47" headers="r1c1-t47">
+<p><code>resultSetMapping</code></p>
+</td>
+<td align="left" headers="r8c1-t47 r1c2-t47">
+<p>(Optional) The name of the SQLResultMapping.</p>
+</td>
+<td align="left" headers="r8c1-t47 r1c3-t47"><br /></td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref218" name="sthref218"></a>
+<p><strong><font face="arial, helvetica, sans-serif" color="#330099">Usage</font></strong></p>
+<p>You can specify <code>@NamedStoredFunctionQuery</code> on an Entity or MappedSuperclass.</p>
+<a id="sthref219" name="sthref219"></a>
+<p><strong><font face="arial, helvetica, sans-serif" color="#330099">Examples</font></strong></p>
+<p><a href="#BABHABEG">Example 2-59</a> shows how to use this annotation.</p>
+<div class="example"><a id="BABHABEG" name="BABHABEG"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-59 Using @NamedStoredFunctionQuery Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+@Entity
+@Table(name="CMP3_ADDRESS")
+ 
+<strong>@NamedStoredFunctionQuery</strong>(
+  name="StoredFunction_In",
+  functionName="StoredFunction_In",
+  parameters={
+    @StoredProcedureParameter(direction=IN, name="P_IN", queryParameter="P_IN", type=Long.class)
+    },
+  returnParameter=@StoredProcedureParameter(queryParameter="RETURN", type=Long.class)
+  )
+public class Address implements Serializable {
+...
+}
+</pre></div>
+<!-- class="example" -->
+<a id="sthref220" name="sthref220"></a>
+<p><strong><font face="arial, helvetica, sans-serif" color="#330099">See Also</font></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="a_namedstoredfunc_queries.htm#CIHJFFDI">"@NamedStoredFunctionQueries"</a></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="a_namedstoredfunc_queries.htm"><img src="../../../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="a_namedstoredproc_queries.htm"><img src="../../../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><img src="http://www.eclipse.org/eclipselink/images/logo.png" alt="EclipseLink" width="150" border="0" /><br /><img src="http://wiki.eclipse.org/images/b/bd/Elug_home_icon.png" style="padding-right:5px;" alt="EclipseLink logo">&nbsp;<a href="http://www.eclipse.org/eclipselink/">EclipseLink Home</a>&nbsp;&bull;&nbsp;<img src="http://wiki.eclipse.org/images/b/b6/Elug_pdf.png" style="padding-right:5px;" alt="PDF">&nbsp;PDF (coming soon)<br />
+ 
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top" width="25%"><a href="../../index.htm"><img src="../../../../dcommon/images/information.png" alt="Go To Documentation Library" border="0" height="16" width="16" /><br />
+Documentation</a></td><td>&nbsp;</td><td><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br />Search</a>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+Contents</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+</body>
+</html>

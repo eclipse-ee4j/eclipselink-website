@@ -1,0 +1,6 @@
+/* styles for eclipselink */
+
+.example pre {background:#eeeeee;border:1px dashed #000000;border-radius:5px;padding:5px;overflow:auto;}
+pre {background:#eeeeee;}
+table.HRuleFormalWide th {background:#cccccc;}
+table.Note {background:#FFFFC0;}
