@@ -85,14 +85,12 @@
 	
 	<div class="homeitem3col">
 		<h2>EclipseLink 2.4 Documentation</h2>
-		<p>
-			The EclipseLink project delivers a comprehensive open-source Java persistence solution addressing relational, XML, and database web services.
-		</p>
+		
 	</div>
 
  
 	<div class="section">
-			<h3>News</h3>
+			<h3>Guides</h3>
 			<ul>
 				<li><a href="/jpa/extensions/toc.html">EclipseLink JPA Extensions Guide</a></li>
 			</ul>
