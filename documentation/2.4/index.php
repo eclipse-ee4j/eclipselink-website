@@ -122,7 +122,7 @@
 				<li><a href="http://www.google.com/cse/home?cx=016171230611334810008:brtjnxzsfyg">Search EclipseLink MOXy</a></li>
 				<li><a href="http://www.google.com/coop/cse?cx=002128250543942842320%3Aqffgtrd2s3k&hl=en">Search EclipseLink WIKI</a></li>
 			</ul>
-			
+			<table width="100%" bgcolor="whitesmoke"><tr><td>
 				<div id="search" align="left">
 		<form action="http://www.google.com/cse" id="searchbox_016171230611334810008:y5kxq4rqd8s">
 		<fieldset><input type="hidden" name="cx" value="016171230611334810008:y5kxq4rqd8s" />
@@ -131,7 +131,7 @@
 		</fieldset></form>
 		<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_016171230611334810008:y5kxq4rqd8s&lang=en"></script>			
 	</div>
-			
+			</td></tr></table>
 	</div>
 
 </div>
