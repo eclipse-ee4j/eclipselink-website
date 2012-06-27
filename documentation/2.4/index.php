@@ -101,7 +101,7 @@
 	<div class="section">
 			<h3>Guides</h3>
 			<ul>
-				<li><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA">EclipseLink JPA e</a></li>
+				<li><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA">EclipseLink JPA</a></li>
 				<li><a href="jpa/extensions/toc.htm">EclipseLink JPA Extensions</a></li>
 
 				<li><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/MOXy">EclipseLink MOXy</a></li>
@@ -116,12 +116,22 @@
 
 
 	<div class="section">
-			<h3>Search</h3>
+			<h3>Documentation Search</h3>
 			<ul>
 				<li><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&hl=en">Search EclipseLink JPA</a></li>
 				<li><a href="http://www.google.com/cse/home?cx=016171230611334810008:brtjnxzsfyg">Search EclipseLink MOXy</a></li>
 				<li><a href="http://www.google.com/coop/cse?cx=002128250543942842320%3Aqffgtrd2s3k&hl=en">Search EclipseLink WIKI</a></li>
 			</ul>
+			
+				<div id="search">
+		<form action="http://www.google.com/cse" id="searchbox_016171230611334810008:y5kxq4rqd8s">
+		<fieldset><input type="hidden" name="cx" value="016171230611334810008:y5kxq4rqd8s" />
+		<input id="searchBox" type="text" name="q" size="25" />
+		<input id="searchButton" type="submit" name="sa" value="Search JPA" />
+		</fieldset></form>
+		<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_016171230611334810008:y5kxq4rqd8s&lang=en"></script>			
+	</div>
+			
 	</div>
 
 </div>
