@@ -92,7 +92,7 @@
 	<div class="section">
 			<h3>Guides</h3>
 			<ul>
-				<li><a href="jpa/extensions/toc.html">EclipseLink JPA Extensions Guide</a></li>
+				<li><a href="jpa/extensions/toc.htm">EclipseLink JPA Extensions Guide</a></li>
 			</ul>
 	</div>
 
