@@ -85,12 +85,6 @@
 	
 	<div class="homeitem3col">
 		<h2>EclipseLink 2.4 Documentation</h2>
-		
-	</div>
-
- 
-	<div class="section">
-			<h3>Release Information</h3>
 			<ul>
 				<li><a href="http://www.eclipse.org/eclipselink/releases/2.4.php">Release Notes</a></li>
 				<li><a href="http://wiki.eclipse.org/EclipseLink/Installing_and_Configuring_EclipseLink">Installation and Configuration</a></li>
@@ -98,6 +92,7 @@
 			</ul>
 	</div>
 
+ 
 	<div class="section">
 			<h3>Guides</h3>
 			<ul>
@@ -117,11 +112,7 @@
 
 	<div class="section">
 			<h3>Documentation Search</h3>
-			<ul>
-				<li><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&hl=en">Search EclipseLink JPA</a></li>
-				<li><a href="http://www.google.com/cse/home?cx=016171230611334810008:brtjnxzsfyg">Search EclipseLink MOXy</a></li>
-				<li><a href="http://www.google.com/coop/cse?cx=002128250543942842320%3Aqffgtrd2s3k&hl=en">Search EclipseLink WIKI</a></li>
-			</ul>
+			
 			<table width="100%" bgcolor="whitesmoke"><tr><td>
 				<div id="search" align="left">
 		<form action="http://www.google.com/cse" id="searchbox_016171230611334810008:y5kxq4rqd8s">
@@ -132,6 +123,12 @@
 		<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_016171230611334810008:y5kxq4rqd8s&lang=en"></script>			
 	</div>
 			</td></tr></table>
+			
+			<ul>
+				<li><a href="http://www.google.com/cse/home?cx=016171230611334810008:brtjnxzsfyg">Search EclipseLink MOXy</a></li>
+				<li><a href="http://www.google.com/coop/cse?cx=002128250543942842320%3Aqffgtrd2s3k&hl=en">Search EclipseLink WIKI</a></li>
+			</ul>
+			
 	</div>
 
 </div>
