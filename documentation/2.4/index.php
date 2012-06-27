@@ -23,7 +23,7 @@
 	# Define these here, or in _projectCommon.php for site-wide values
 	$pageKeywords	= "eclipse, project, eclipselink, persistence";
 	$pageAuthor		= "Doug Clarke";
-	$pageTitle 		= "EclipseLink Home";
+	$pageTitle 		= "EclipseLink 2.4 Documentation";
 	
 	ob_start();
 ?>
@@ -90,12 +90,39 @@
 
  
 	<div class="section">
-			<h3>Guides</h3>
+			<h3>EclipseLink 2.4 Information</h3>
 			<ul>
-				<li><a href="jpa/extensions/toc.htm">EclipseLink JPA Extensions Guide</a></li>
+				<li><a href="http://www.eclipse.org/eclipselink/releases/2.4.php">Release Notes</a></li>
+				<li><a href="http://wiki.eclipse.org/EclipseLink/Installing_and_Configuring_EclipseLink">Installation and Configuration</a></li>
+				<li><a href="http://www.eclipse.org/eclipselink/api/2.4/index.html">Java Docs</a></li>
 			</ul>
 	</div>
 
+	<div class="section">
+			<h3>Guides</h3>
+			<ul>
+				<li><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA">EclipseLink JPA e</a></li>
+				<li><a href="jpa/extensions/toc.htm">EclipseLink JPA Extensions</a></li>
+
+				<li><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/MOXy">EclipseLink MOXy</a></li>
+
+				<li><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/NoSQL">EclipseLink NoSQL</a></li>
+
+				<li><a href="http://wiki.eclipse.org/Category:SDO">EclipseLink SDO</a></li>
+
+				<li><a href="http://wiki.eclipse.org/Category:DBWS">EclipseLink DBWS</a></li>
+			</ul>
+	</div>
+
+
+	<div class="section">
+			<h3>Search</h3>
+			<ul>
+				<li><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&hl=en">Search EclipseLink JPA</a></li>
+				<li><a href="http://www.google.com/cse/home?cx=016171230611334810008:brtjnxzsfyg">Search EclipseLink MOXy</a></li>
+				<li><a href="http://www.google.com/coop/cse?cx=002128250543942842320%3Aqffgtrd2s3k&hl=en">Search EclipseLink WIKI</a></li>
+			</ul>
+	</div>
 
 </div>
 
