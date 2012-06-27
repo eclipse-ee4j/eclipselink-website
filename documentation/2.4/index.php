@@ -90,7 +90,7 @@
 
  
 	<div class="section">
-			<h3>EclipseLink 2.4 Information</h3>
+			<h3>Release Information</h3>
 			<ul>
 				<li><a href="http://www.eclipse.org/eclipselink/releases/2.4.php">Release Notes</a></li>
 				<li><a href="http://wiki.eclipse.org/EclipseLink/Installing_and_Configuring_EclipseLink">Installation and Configuration</a></li>
