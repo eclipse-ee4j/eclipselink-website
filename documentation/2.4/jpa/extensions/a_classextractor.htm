@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@ClassExtractor</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.2 Build 067" />
-<meta name="date" content="2012-06-27T14:23:48Z" />
+<meta name="date" content="2012-06-27T15:39:34Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@ClassExtractor" />
  
@@ -18,7 +18,7 @@
 <link rel="prev" href="a_changetracking.htm" title="Previous" type="text/html" />
 <link rel="next" href="a_clonecopypolicy.htm" title="Next" type="text/html" />
 </head>
-<body bgcolor="#FFFFFF">
+<body bgcolor="#FFFFFF"><?php include("../../../../dcommon/header.html"); ?>
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -30,9 +30,9 @@
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top" width="25%"><a href="../../index.htm"><img src="../../../../dcommon/images/information.png" alt="Go To Documentation Library" border="0" height="16" width="16" /><br />
-Documentation</a></td><td>&nbsp;</td><td><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br />Search</a>
+<span class="mini">Documentation</span></a></td><td>&nbsp;</td><td align="center"><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Search</span></a>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-Contents</a></td>
+<span class="mini">Contents</span></a></td>
 </tr>
 </table>
 </td>
@@ -56,7 +56,7 @@ Contents</a></td>
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@ClassExtractor</font></h2>
 <p>Use <code>@ClassExtractor</code> to define a custom class indicator in place of providing a discriminator column.</p>
 <a id="sthref65" name="sthref65"></a>
-<p><strong><font face="arial, helvetica, sans-serif" color="#330099">Annotation Elements</font></strong></p>
+<p><strong><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#BABGCAFI">Table 2-11</a> describes this annotation's elements.</p>
 <div class="tblhruleformalwide"><a id="sthref66" name="sthref66"></a><a id="BABGCAFI" name="BABGCAFI"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 2-11 @ClassExtractor Annotation Elements</font></em></strong></p>
@@ -86,11 +86,11 @@ Contents</a></td>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
 <a id="sthref67" name="sthref67"></a>
-<p><strong><font face="arial, helvetica, sans-serif" color="#330099">Usage</font></strong></p>
+<p><strong><span class="refsubsect">Usage</span></strong></p>
 <p>If you are mapping to an existing database, and the tables do not have a discriminator column you can still define inheritance using the <code>@ClassExtractor</code> annotation or <code>&lt;class-extractor&gt;</code> element. The class extractor takes a class that implements the <code>ClassExtractor</code> interface. An instance of this class is used to determine the class type to use for a database row. The class extractor must define a <code>extractClassFromRow</code> method that takes the database <code>Record</code> and <code>Session</code>.</p>
 <p>If a class extractor is used with <code>SINGLE_TABLE</code> inheritance, the rows of the class type must be able to be filtered in queries. This can be accomplished by setting an <code>onlyInstancesExpression</code> or <code>withAllSubclassesExpression</code> for branch classes. These can be set to <code>Expression</code> objects using a <code>DescriptorCustomizer</code>.</p>
 <a id="sthref68" name="sthref68"></a>
-<p><strong><font face="arial, helvetica, sans-serif" color="#330099">Examples</font></strong></p>
+<p><strong><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#BGBEDADF">Example 2-22</a>shows an example of using <code>ClassExtractor</code> to define inheritance.</p>
 <div class="example"><a id="BGBEDADF" name="BGBEDADF"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-22 Using @ClassExtractor Annotation</font></em></strong></p>
@@ -162,7 +162,7 @@ public class PreferredCustomizer implements DescriptorCustomizer {
 </pre></div>
 <!-- class="example" -->
 <a id="sthref69" name="sthref69"></a>
-<p><strong><font face="arial, helvetica, sans-serif" color="#330099">See Also</font></strong></p>
+<p><strong><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
 <li>
@@ -200,9 +200,9 @@ public class PreferredCustomizer implements DescriptorCustomizer {
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top" width="25%"><a href="../../index.htm"><img src="../../../../dcommon/images/information.png" alt="Go To Documentation Library" border="0" height="16" width="16" /><br />
-Documentation</a></td><td>&nbsp;</td><td><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br />Search</a>
+<span class="mini">Documentation</span></a></td><td>&nbsp;</td><td align="center"><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Search</span></a>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-Contents</a></td>
+<span class="mini">Contents</span></a></td>
 </tr>
 </table>
 </td>
@@ -210,5 +210,5 @@ Contents</a></td>
 </table>
 </div>
 <!-- class="footer" -->
-</body>
+<script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script></body>
 </html>

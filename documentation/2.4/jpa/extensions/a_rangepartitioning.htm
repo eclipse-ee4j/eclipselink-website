@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@RangePartitioning</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.2 Build 067" />
-<meta name="date" content="2012-06-27T14:23:49Z" />
+<meta name="date" content="2012-06-27T15:39:35Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@RangePartitioning" />
  
@@ -18,7 +18,7 @@
 <link rel="prev" href="a_rangepartition.htm" title="Previous" type="text/html" />
 <link rel="next" href="a_readonly.htm" title="Next" type="text/html" />
 </head>
-<body bgcolor="#FFFFFF">
+<body bgcolor="#FFFFFF"><?php include("../../../../dcommon/header.html"); ?>
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -30,9 +30,9 @@
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top" width="25%"><a href="../../index.htm"><img src="../../../../dcommon/images/information.png" alt="Go To Documentation Library" border="0" height="16" width="16" /><br />
-Documentation</a></td><td>&nbsp;</td><td><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br />Search</a>
+<span class="mini">Documentation</span></a></td><td>&nbsp;</td><td align="center"><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Search</span></a>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-Contents</a></td>
+<span class="mini">Contents</span></a></td>
 </tr>
 </table>
 </td>
@@ -57,7 +57,7 @@ Contents</a></td>
 <p>Use <code>@RangePartitioning</code> to partitions access to a database cluster by a field value from the object (such as the object's ID, location, or tenant).</p>
 <p>TopLink assigns each server a range of values. All write or read request for objects with a server's value are sent to that specific server. If a query does not include the field as a parameter, then it can either be sent to all server's and unioned, or left to the session's default behavior.</p>
 <a id="sthref307" name="sthref307"></a>
-<p><strong><font face="arial, helvetica, sans-serif" color="#330099">Annotation Elements</font></strong></p>
+<p><strong><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#BCGHJEBE">Table 2-53</a> describes this annotation's elements.</p>
 <div class="tblhruleformalwide"><a id="sthref308" name="sthref308"></a><a id="BCGHJEBE" name="BCGHJEBE"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 2-53 @RangePartitioning Annotation Elements</font></em></strong></p>
@@ -128,13 +128,13 @@ Contents</a></td>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
 <a id="sthref309" name="sthref309"></a>
-<p><strong><font face="arial, helvetica, sans-serif" color="#330099">Usage</font></strong></p>
+<p><strong><span class="refsubsect">Usage</span></strong></p>
 <p>Partitioning can be enabled on an Entity, relationship, query, or session/persistence unit.</p>
 <p>Partition policies are globally named to allow reuse, the partitioning policy must also be set using the <code>@Partitioned</code> annotation to be used.</p>
 <p>The persistence unit properties support adding named connection pools in addition to the existing configuration for read/write/sequence. A named connection pool must be defined for each node in the database cluster.</p>
 <p>If a transaction modifies data from multiple partitions, you should use JTA ensure proper two-phase commit of the data. You can also configure an exclusive connection in the EntityManager to ensure that only a single node is used for a single transaction.</p>
 <a id="sthref310" name="sthref310"></a>
-<p><strong><font face="arial, helvetica, sans-serif" color="#330099">Examples</font></strong></p>
+<p><strong><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#BCGIJGHH">Example 2-80</a> shows how to use the <code>@RangePartitioning</code> annotation</p>
 <div class="example"><a id="BCGIJGHH" name="BCGIJGHH"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-80 Using @RangePartitioning Annotation</font></em></strong></p>
@@ -174,7 +174,7 @@ public class Project implements Serializable {
 </pre></div>
 <!-- class="example" -->
 <a id="sthref312" name="sthref312"></a>
-<p><strong><font face="arial, helvetica, sans-serif" color="#330099">See Also</font></strong></p>
+<p><strong><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
 <li>
@@ -215,9 +215,9 @@ public class Project implements Serializable {
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top" width="25%"><a href="../../index.htm"><img src="../../../../dcommon/images/information.png" alt="Go To Documentation Library" border="0" height="16" width="16" /><br />
-Documentation</a></td><td>&nbsp;</td><td><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br />Search</a>
+<span class="mini">Documentation</span></a></td><td>&nbsp;</td><td align="center"><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Search</span></a>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-Contents</a></td>
+<span class="mini">Contents</span></a></td>
 </tr>
 </table>
 </td>
@@ -225,5 +225,5 @@ Contents</a></td>
 </table>
 </div>
 <!-- class="footer" -->
-</body>
+<script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script></body>
 </html>

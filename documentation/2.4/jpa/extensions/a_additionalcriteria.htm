@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@AdditionalCriteria</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.2 Build 067" />
-<meta name="date" content="2012-06-27T14:23:48Z" />
+<meta name="date" content="2012-06-27T15:39:34Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@AdditionalCriteria" />
  
@@ -18,7 +18,7 @@
 <link rel="prev" href="annotations_ref002.htm" title="Previous" type="text/html" />
 <link rel="next" href="a_array.htm" title="Next" type="text/html" />
 </head>
-<body bgcolor="#FFFFFF">
+<body bgcolor="#FFFFFF"><?php include("../../../../dcommon/header.html"); ?>
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -30,9 +30,9 @@
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top" width="25%"><a href="../../index.htm"><img src="../../../../dcommon/images/information.png" alt="Go To Documentation Library" border="0" height="16" width="16" /><br />
-Documentation</a></td><td>&nbsp;</td><td><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br />Search</a>
+<span class="mini">Documentation</span></a></td><td>&nbsp;</td><td align="center"><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Search</span></a>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-Contents</a></td>
+<span class="mini">Contents</span></a></td>
 </tr>
 </table>
 </td>
@@ -57,7 +57,7 @@ Contents</a></td>
 <p>Use <code>@AdditionalCriteria</code> to define parameterized views on data.</p>
 <p>You can define additional criteria on entities or mapped superclass. When specified at the mapped superclass level, the additional criteria definition applies to all inheriting entities, unless those entities define their own additional criteria, in which case those defined for the mapped superclass are ignored.</p>
 <a id="sthref7" name="sthref7"></a>
-<p><strong><font face="arial, helvetica, sans-serif" color="#330099">Annotation Elements</font></strong></p>
+<p><strong><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#CHDGJGDCxx">Table 2-1</a> describes this annotation's elements.</p>
 <div class="tblhruleformalwide"><a id="sthref8" name="sthref8"></a><a id="CHDGJGDCxx" name="CHDGJGDCxx"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 2-1 @AdditionalCriteria Annotation Elements</font></em></strong></p>
@@ -87,7 +87,7 @@ Contents</a></td>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
 <a id="sthref9" name="sthref9"></a>
-<p><strong><font face="arial, helvetica, sans-serif" color="#330099">Usage</font></strong></p>
+<p><strong><span class="refsubsect">Usage</span></strong></p>
 <p>Additional criteria can provide an additional filtering mechanism for queries. This filtering option, for example, allows you to use an existing additional <code>JOIN</code> expression defined for the entity or mapped superclass and allows you to pass parameters to it.</p>
 <p>Set additional criteria parameters through properties on the entity manager factory or on the entity manager. Properties set on the entity manager override identically named properties set on the entity manager factory. Properties must be set on an entity manager before executing a query. Do not change the properties for the lifespan of the entity manager.</p>
 <div align="center">
@@ -104,7 +104,7 @@ Additional criteria are not supported with native queries.</td>
 <br /></div>
 <!-- class="inftblnote" --></div>
 <a id="sthref10" name="sthref10"></a>
-<p><strong><font face="arial, helvetica, sans-serif" color="#330099">Examples</font></strong></p>
+<p><strong><span class="refsubsect">Examples</span></strong></p>
 <p>Specify additional criteria using the <code>@AdditionalCriteria</code> annotation or the <code>&lt;additional-criteria&gt;</code> element. The additional criteria definition supports any valid JPQL string and must use <code>this</code> as an alias to form the additional criteria. For example:</p>
 <pre xml:space="preserve" class="oac_no_warn">
 @AdditionalCriteria("this.address.city IS NOT NULL")
@@ -217,7 +217,7 @@ TopLink also provides specific history support, via <code>HistoryPolicy</code> .
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Shared Table</font></strong></p>
 <p>For a shared table, there may be inheritance in the table but not in the object model. For example, a <code>SavingsAccount</code> class may be mapped to an <code>ACCOUNT</code> table, but the <code>ACCOUNT</code> table contains both savings account data (<code>SAVINGS</code>) and checking account (<code>CHECKING</code>) data. You can use additional criteria to filter out the checking account data.</p>
 <a id="sthref19" name="sthref19"></a>
-<p><strong><font face="arial, helvetica, sans-serif" color="#330099">See Also</font></strong></p>
+<p><strong><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
 <li>
@@ -255,9 +255,9 @@ TopLink also provides specific history support, via <code>HistoryPolicy</code> .
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top" width="25%"><a href="../../index.htm"><img src="../../../../dcommon/images/information.png" alt="Go To Documentation Library" border="0" height="16" width="16" /><br />
-Documentation</a></td><td>&nbsp;</td><td><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br />Search</a>
+<span class="mini">Documentation</span></a></td><td>&nbsp;</td><td align="center"><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Search</span></a>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-Contents</a></td>
+<span class="mini">Contents</span></a></td>
 </tr>
 </table>
 </td>
@@ -265,5 +265,5 @@ Contents</a></td>
 </table>
 </div>
 <!-- class="footer" -->
-</body>
+<script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script></body>
 </html>

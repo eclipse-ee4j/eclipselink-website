@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>jdbc.fetch-size</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.2 Build 067" />
-<meta name="date" content="2012-06-27T14:23:50Z" />
+<meta name="date" content="2012-06-27T15:39:35Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="jdbc.fetch-size" />
  
@@ -18,7 +18,7 @@
 <link rel="prev" href="q_bindparameters.htm" title="Previous" type="text/html" />
 <link rel="next" href="q_jdbc_max_rows.htm" title="Next" type="text/html" />
 </head>
-<body bgcolor="#FFFFFF">
+<body bgcolor="#FFFFFF"><?php include("../../../../dcommon/header.html"); ?>
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -30,9 +30,9 @@
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top" width="25%"><a href="../../index.htm"><img src="../../../../dcommon/images/information.png" alt="Go To Documentation Library" border="0" height="16" width="16" /><br />
-Documentation</a></td><td>&nbsp;</td><td><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br />Search</a>
+<span class="mini">Documentation</span></a></td><td>&nbsp;</td><td align="center"><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Search</span></a>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-Contents</a></td>
+<span class="mini">Contents</span></a></td>
 </tr>
 </table>
 </td>
@@ -97,12 +97,12 @@ This property requires JDBC driver support.</td>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
 <a id="sthref502" name="sthref502"></a>
-<p><strong><font face="arial, helvetica, sans-serif" color="#330099">Usage</font></strong></p>
+<p><strong><span class="refsubsect">Usage</span></strong></p>
 <p>For queries that return a large number of objects, you can configure the row fetch size used in the query to improve performance by reducing the number database hits required to satisfy the selection criteria.</p>
 <p>By default, most JDBC drivers use a fetch size of 10. , so if you are reading 1000 objects, increasing the fetch size to 256 can significantly reduce the time required to fetch the query's results. The optimal fetch size is not always obvious. Usually, a fetch size of one half or one quarter of the total expected result size is optimal.</p>
 <p>If you are unsure of the result set size, incorrectly setting a fetch size too large or too small can decrease performance.</p>
 <a id="sthref503" name="sthref503"></a>
-<p><strong><font face="arial, helvetica, sans-serif" color="#330099">Examples</font></strong></p>
+<p><strong><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#CHDBEBDE">Example 4-8</a> shows how to use this hint in a JPA query.</p>
 <div class="example"><a id="CHDBEBDE" name="CHDBEBDE"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 4-8 Using jdbc.fetch-size in a JPA Query</font></em></strong></p>
@@ -121,7 +121,7 @@ This property requires JDBC driver support.</td>
 </pre></div>
 <!-- class="example" -->
 <a id="sthref504" name="sthref504"></a>
-<p><strong><font face="arial, helvetica, sans-serif" color="#330099">See Also</font></strong></p>
+<p><strong><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
 <li>
@@ -162,9 +162,9 @@ This property requires JDBC driver support.</td>
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top" width="25%"><a href="../../index.htm"><img src="../../../../dcommon/images/information.png" alt="Go To Documentation Library" border="0" height="16" width="16" /><br />
-Documentation</a></td><td>&nbsp;</td><td><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br />Search</a>
+<span class="mini">Documentation</span></a></td><td>&nbsp;</td><td align="center"><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Search</span></a>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-Contents</a></td>
+<span class="mini">Contents</span></a></td>
 </tr>
 </table>
 </td>
@@ -172,5 +172,5 @@ Contents</a></td>
 </table>
 </div>
 <!-- class="footer" -->
-</body>
+<script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script></body>
 </html>
