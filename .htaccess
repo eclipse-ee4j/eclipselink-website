@@ -18,7 +18,6 @@ RedirectMatch "/eclipselink/api/1.1.0/(.*)" http:/eclipselink/api/1.1/$1
 RedirectMatch "/eclipselink/api/1.0.1/(.*)" http:/eclipselink/api/1.0/$1
 RedirectMatch "/eclipselink/api/1.0.2/(.*)" http:/eclipselink/api/1.0/$1
 redirect /eclipselink/releases/2.4.0.php http://www.eclipse.org/eclipselink/releases/2.4.php
-redirect /eclipselink/documentation http://wiki.eclipse.org/EclipseLink/Documentation_Center
 redirect /eclipselink/downloads/2.4 http://www.eclipse.org/eclipselink/downloads/index.php
 redirect /eclipselink/downloads/2.3.2 http://www.eclipse.org/eclipselink/downloads/index.php#2.3.2
 redirect /eclipselink/downloads/2.3.1 http://www.eclipse.org/eclipselink/downloads/previous_releases.php#2.3.1
