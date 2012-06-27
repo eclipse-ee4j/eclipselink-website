@@ -125,7 +125,7 @@
 			
 				<div id="search">
 		<form action="http://www.google.com/cse" id="searchbox_016171230611334810008:y5kxq4rqd8s">
-		<fieldset><input type="hidden" name="cx" value="016171230611334810008:y5kxq4rqd8s" />
+		<fieldset><input name="cx" value="016171230611334810008:y5kxq4rqd8s" />
 		<input id="searchBox" type="text" name="q" size="25" />
 		<input id="searchButton" type="submit" name="sa" value="Search JPA" />
 		</fieldset></form>
