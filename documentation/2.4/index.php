@@ -148,21 +148,6 @@ new TWTR.Widget({
 			</ul>
 		</div>
 
-		<div class="sideitem">
-			<h6>EclipseLink Powered</h6>
-			<ul>
-				<li><a href="http://glassfish.java.net/">GlassFish Server</a></li>
-				<li><a href="http://www.oracle.com/technetwork/middleware/toplink/overview/index.html">Oracle TopLink</a></li>
-				<li><a href="http://www.oracle.com/technetwork/middleware/weblogic/index.html">Oracle WebLogic Server</a></li>
-			</ul>
-		</div>
-		
-		<div class="sideitem">
-		<div align="center">
-			<a href="/eclipsert/"><img src="/equinox/images/EclipseRT.png" alt="EclipseRT"></a>
-		</div>
-		<script type="text/javascript" src="http://www.ohloh.net/p/13434/widgets/project_partner_badge.js"></script>
-		</div>
 </div>
 
 <?
