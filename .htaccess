@@ -13,10 +13,10 @@ RedirectMatch "/eclipselink/api/2.0.1/(.*)" http:/eclipselink/api/2.0/$1
 RedirectMatch "/eclipselink/api/2.0.2/(.*)" http:/eclipselink/api/2.0/$1
 RedirectMatch "/eclipselink/api/2.1.1/(.*)" http:/eclipselink/api/2.1/$1
 RedirectMatch "/eclipselink/api/2.1.2/(.*)" http:/eclipselink/api/2.1/$1
+
 redirect /eclipselink/releases/2.4.0.php http://www.eclipse.org/eclipselink/releases/2.4.php
 redirect /eclipselink/documentation http://wiki.eclipse.org/EclipseLink/Documentation_Center
-redirect /eclipselink/api/latest http://www.eclipse.org/eclipselink/api/2.1/index.html
-redirect /eclipselink/api/trunk http://www.eclipse.org/eclipselink/api/2.2/index.html
+
 redirect /eclipselink/downloads/2.4 http://www.eclipse.org/eclipselink/downloads/index.php
 redirect /eclipselink/downloads/2.3.2 http://www.eclipse.org/eclipselink/downloads/index.php#2.3.2
 redirect /eclipselink/downloads/2.3.1 http://www.eclipse.org/eclipselink/downloads/previous_releases.php#2.3.1
@@ -28,6 +28,7 @@ redirect /eclipselink/downloads/2.0.2 http://www.eclipse.org/eclipselink/downloa
 redirect /eclipselink/downloads/2.0.1 http://www.eclipse.org/eclipselink/downloads/previous_releases.php#2.0.1
 redirect /eclipselink/downloads/2.0 http://www.eclipse.org/eclipselink/downloads/previous_releases.php#2.0.0
 redirect /eclipselink/downloads/1.2.0 http://www.eclipse.org/eclipselink/downloads/previous_releases.php#1.2.0
+
 redirect /eclipselink/maven.repo http://www.eclipse.org/downloads/download.php?r=1&nf=1&file=/rt/eclipselink/maven.repo
 redirect /eclipselink/maven http://www.eclipse.org/downloads/download.php?r=1&nf=1&file=/rt/eclipselink/maven.repo
 redirect /eclipselink/project_summary http://www.eclipse.org/projects/project_summary.php?projectid=rt.eclipselink
