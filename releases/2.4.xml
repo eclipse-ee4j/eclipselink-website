@@ -341,6 +341,12 @@
 				<a href="http://wiki.eclipse.org/EclipseLink/Examples">Examples and Tutorials</a>
 			</div>
 
+			<div
+				style="text-align:center;padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+				<img src="/eclipselink/images/wiki_small.png" />
+				<a href="/eclipselink/api/2.4/index.html">2.4 JavaDocs</a>
+			</div>
+
 		</description>
 
 	</section>
