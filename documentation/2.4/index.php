@@ -113,7 +113,7 @@
 	<div class="section">
 			<h3>Documentation Search</h3>
 			
-			<table width="100%" bgcolor="whitesmoke">
+			<table width="100%" bgcolor="#FFFFFF">
 				<tr><td width="100%" align="left">
 				<div id="search" align="left">
 		<form action="http://www.google.com/cse" id="searchbox_016171230611334810008:y5kxq4rqd8s">
