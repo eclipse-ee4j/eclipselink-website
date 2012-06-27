@@ -136,12 +136,12 @@
 			</td></tr>
 				<tr><td width="100%" align="left">
 				<div id="search" align="left">
-		<form action="http://www.google.com/cse" id="searchbox_002128250543942842320%3Aqffgtrd2s3k">
-		<fieldset><input type="hidden" name="cx" value="002128250543942842320%3Aqffgtrd2s3k" />
+		<form action="http://www.google.com/cse" id="searchbox_002128250543942842320:Aqffgtrd2s3k">
+		<fieldset><input type="hidden" name="cx" value="002128250543942842320:Aqffgtrd2s3k" />
 		<input id="searchBox" type="text" name="q" size="25" />
 		<input id="searchButton" type="submit" name="sa" value="Search Wiki" />
 		</fieldset></form>
-		<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_002128250543942842320%3Aqffgtrd2s3k&lang=en"></script>			
+		<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_002128250543942842320:Aqffgtrd2s3k&lang=en"></script>			
 	</div>
 			</td></tr>
 			</table>
