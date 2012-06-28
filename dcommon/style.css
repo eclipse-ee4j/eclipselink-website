@@ -5,22 +5,84 @@ Light purple: #CCCCFF
 
 */
 
-body {background:#ffffff;color:#000000;font-family: Arial,sans-serif;font-size:0.9em;}
+body {background:#efefef;color:#000000;font-family: Arial,sans-serif;font-size:0.9em;width:976px;margin-left:auto;margin-right:auto;}
+p {margin:0.5em 0}
 h1 {letter-spacing: -0.035em;font-size:1.8em;font-weight:normal;}
 h2 {font-size:1.4em;font-weight:normal;}
-h1, h2, h3 {border-bottom:1px solid #44166C;margin:1em 0 0.5em 0}
-
+h2 a {text-decoration:none;}
+h1, h2 {border-bottom:1px solid #44166C;margin:1.2em 0 0.5em 0;padding-bottom:5px;}
+h3 {margin:1.5em 0 0 0}
 
 .example pre {background:#eeeeee;border:1px dashed #000000;border-radius:5px;padding:5px;overflow:auto;}
 pre {background:#eeeeee;}
-table.Informal th, table.HRuleFormalWide th {background:#cccccc;padding:5px;}
+table.HRuleFormal th, table.Informal th, table.HRuleFormalWide th {background:#cccccc;padding:5px;}
 table.Note {background:#FFFFC0;}
-
-table.Note p
 
 .mini {font-size:0.8em;padding:5px;}
 
-.refsubsect {font-size:1.4em;font-weight:bold;}
-
+h3, .refsubsect {font-size:1.4em;color:#44166C;font-weight:normal;}
+p strong .refsubsect {margin:1.5em 0 0.5em 0}
 .example {margin-top:1.5em;}
 .example p {margin:0.5em 0}
+
+.ind {margin:1em auto 2em auto;width:900px;background:#ffffff;padding:1em 1em 3em 1em;-webkit-box-shadow: #666 0px 2px 3px;
+-moz-box-shadow: #666 0px 2px 3px;
+box-shadow: #666 0px 2px 3px;line-height: 1.25em;}
+.footer hr, .ind hr {display:none;}
+
+
+p.note {font-weight:bold;margin:0.5em 0}
+
+h2.refsect1 {font-size:1.6em; }
+
+.header hr {display:none;}
+.header table.navigation {position:relative;top:2.5em;}
+.footer table.navigation {position:relative;top:-6em;left:320px;}
+
+code {font-size:1.1em;background:#eeeeee;padding:0 1px;}
+
+
+
+#elpdf {position:absolute;left:0;}
+
+
+
+.elhead {padding:5px;background:url("http://www.eclipse.org/eclipselink/images/backgroundMain.png") no-repeat 0 0;height:193px;margin-left:auto;margin-right:auto;}
+#ellogo {background:url("http://www.eclipse.org/eclipselink/images/logo.png") no-repeat 0 0;width:400px;height:118px;margin-top:40px;}
+.elbutton {border: 1px solid #aaaaaa;
+padding: 5px;margin:5px;
+text-align: center; width: 220px;height:70px;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+-webkit-box-shadow: #666 0px 2px 3px;
+-moz-box-shadow: #666 0px 2px 3px;
+box-shadow: #666 0px 2px 3px;
+background: #cccccc;
+background: -webkit-gradient(linear, 0 0, 0 bottom, from(#cccccc), to(#efefef));
+background: -webkit-linear-gradient(#cccccc, #efefef);
+background: -moz-linear-gradient(#cccccc, #efefef);
+background: -ms-linear-gradient(#cccccc, #efefef);
+background: -o-linear-gradient(#cccccc, #efefef);
+background: linear-gradient(#cccccc, #efefef);
+display:table-cell; vertical-align:middle;
+}
+.elbutton:hover {border: 1px solid #aaaaaa;
+padding: 5px;
+text-align: center; width: 220px;height:70px;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+-webkit-box-shadow: #666 3px 2px 0px;
+-moz-box-shadow: #666 3px 2px 0px;
+box-shadow: #666 3px 2px 0px;
+background: #cccccc;
+background: -webkit-gradient(linear, 0 0, 0 bottom, from(#cccccc), to(#efefef));
+background: -webkit-linear-gradient(#cccccc, #efefef);
+background: -moz-linear-gradient(#cccccc, #efefef);
+background: -ms-linear-gradient(#cccccc, #efefef);
+background: -o-linear-gradient(#cccccc, #efefef);
+background: linear-gradient(#cccccc, #efefef); }
+#elbuttons {float:right;}
+.buttontitle {font-size:22px; font-weight:bold;padding:5px;}
+.buttontitle a:visited, .buttontitle a {text-decoration:none;color:#000000;}

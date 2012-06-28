@@ -5,12 +5,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
-<title>@JoinField</title>
+<title>@JoinField | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.2 Build 067" />
-<meta name="date" content="2012-06-27T15:39:34Z" />
+<meta name="date" content="2012-06-28T9:26:6Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@JoinField" />
- 
+<meta name="description" content="Java Persistence API (JPA) Extensions Reference for EclipseLink, 2.4.x" />
 <link rel="stylesheet" type="text/css" href="../../../../dcommon/style.css" media="screen" />
   
 <link rel="start" href="../../index.htm" title="Home" type="text/html" />
@@ -18,28 +18,26 @@
 <link rel="prev" href="a_joinfetch.htm" title="Previous" type="text/html" />
 <link rel="next" href="a_joinfields.htm" title="Next" type="text/html" />
 </head>
-<body bgcolor="#FFFFFF"><?php include("../../../../dcommon/header.html"); ?>
+<body bgcolor="#FFFFFF"><?php include("http://www.eclipse.org/eclipselink/dcommon/header.html"); ?>
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
-<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><strong>Java Persistence API (JPA) Extensions Reference for EclipseLink</strong> <br />
-<strong>Release 2.4.x</strong><br />
+<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><div class="booktitle"><strong>Java Persistence API (JPA) Extensions Reference for EclipseLink</strong>, 
+<strong>Release 2.4.x</strong></div><br />
  </font></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
 <td>&nbsp;</td>
-<td align="center" valign="top" width="25%"><a href="../../index.htm"><img src="../../../../dcommon/images/information.png" alt="Go To Documentation Library" border="0" height="16" width="16" /><br />
-<span class="mini">Documentation</span></a></td><td>&nbsp;</td><td align="center"><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Search</span></a>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Search</span></a></td><td>&nbsp;</td><td align="center"><img src="../../../../dcommon/images/pdf_icon.png" style="padding-right:5px;" alt="PDF"><br /><span class="mini">PDF</span>
 </tr>
 </table>
 </td>
 </tr>
 </table>
 <hr />
-<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
 <tr>
 <td align="center"><a href="a_joinfetch.htm"><img src="../../../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
 <td align="center"><a href="a_joinfields.htm"><img src="../../../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
@@ -49,14 +47,14 @@
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2012-06-27</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2012-06-28</font></p>
 <a id="CIHCAFEI" name="CIHCAFEI"></a>
 <hr />
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@JoinField</font></h2>
 <p>Use <code>@JoinField</code> to define a structured data type's foreign key field for an object mapped to NoSql data.</p>
 <a id="sthref181" name="sthref181"></a>
-<p><strong><span class="refsubsect">Annotation Elements</span></strong></p>
+<p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#CIHEHJJH">Table 2-31</a> describes this annotation's elements.</p>
 <div class="tblhruleformalwide"><a id="sthref182" name="sthref182"></a><a id="CIHEHJJH" name="CIHEHJJH"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 2-31 @JoinField Annotation Elements</font></em></strong></p>
@@ -95,13 +93,13 @@
 <br /></div>
 <!-- class="tblhruleformalwide" -->
 <a id="sthref183" name="sthref183"></a>
-<p><strong><span class="refsubsect">Usage</span></strong></p>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>The <code>@JoinField</code> annotation is a generic form of the <code>@JoinColumn</code> annotation, which is not specific to relational databases. You can use <code>@JoinField</code> to map EIS and NoSQL data.</p>
 <a id="sthref184" name="sthref184"></a>
-<p><strong><span class="refsubsect">Examples</span></strong></p>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p>Para.</p>
 <a id="sthref185" name="sthref185"></a>
-<p><strong><span class="refsubsect">See Also</span></strong></p>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
 <li>
@@ -123,7 +121,7 @@
 <col width="33%" />
 <tr>
 <td valign="bottom">
-<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
 <col width="*" />
 <col width="48%" />
 <col width="48%" />
@@ -134,17 +132,15 @@
 </tr>
 </table>
 </td>
-<td align="center" width="34%"><img src="http://www.eclipse.org/eclipselink/images/logo.png" alt="EclipseLink" width="150" border="0" /><br /><img src="http://wiki.eclipse.org/images/b/bd/Elug_home_icon.png" style="padding-right:5px;" alt="EclipseLink logo">&nbsp;<a href="http://www.eclipse.org/eclipselink/">EclipseLink Home</a>&nbsp;&bull;&nbsp;<img src="http://wiki.eclipse.org/images/b/b6/Elug_pdf.png" style="padding-right:5px;" alt="PDF">&nbsp;PDF (coming soon)<br />
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="http://www.eclipse.org/eclipselink/images/logo.png" alt="EclipseLink" width="150" border="0" /></a><br />
  
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
 <tr>
 <td>&nbsp;</td>
-<td align="center" valign="top" width="25%"><a href="../../index.htm"><img src="../../../../dcommon/images/information.png" alt="Go To Documentation Library" border="0" height="16" width="16" /><br />
-<span class="mini">Documentation</span></a></td><td>&nbsp;</td><td align="center"><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Search</span></a>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Search</span></a></td><td>&nbsp;</td><td align="center"><img src="../../../../dcommon/images/pdf_icon.png" style="padding-right:5px;" alt="PDF"><br /><span class="mini">PDF</span>
 </tr>
 </table>
 </td>

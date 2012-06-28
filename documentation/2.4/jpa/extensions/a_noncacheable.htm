@@ -5,12 +5,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
-<title>@Noncacheable</title>
+<title>@Noncacheable | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.2 Build 067" />
-<meta name="date" content="2012-06-27T15:39:34Z" />
+<meta name="date" content="2012-06-28T9:26:6Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@Noncacheable" />
- 
+<meta name="description" content="Java Persistence API (JPA) Extensions Reference for EclipseLink, 2.4.x" />
 <link rel="stylesheet" type="text/css" href="../../../../dcommon/style.css" media="screen" />
   
 <link rel="start" href="../../index.htm" title="Home" type="text/html" />
@@ -18,28 +18,26 @@
 <link rel="prev" href="a_namedstoredprocedurequery.htm" title="Previous" type="text/html" />
 <link rel="next" href="a_nosql.htm" title="Next" type="text/html" />
 </head>
-<body bgcolor="#FFFFFF"><?php include("../../../../dcommon/header.html"); ?>
+<body bgcolor="#FFFFFF"><?php include("http://www.eclipse.org/eclipselink/dcommon/header.html"); ?>
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
-<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><strong>Java Persistence API (JPA) Extensions Reference for EclipseLink</strong> <br />
-<strong>Release 2.4.x</strong><br />
+<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><div class="booktitle"><strong>Java Persistence API (JPA) Extensions Reference for EclipseLink</strong>, 
+<strong>Release 2.4.x</strong></div><br />
  </font></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
 <td>&nbsp;</td>
-<td align="center" valign="top" width="25%"><a href="../../index.htm"><img src="../../../../dcommon/images/information.png" alt="Go To Documentation Library" border="0" height="16" width="16" /><br />
-<span class="mini">Documentation</span></a></td><td>&nbsp;</td><td align="center"><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Search</span></a>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Search</span></a></td><td>&nbsp;</td><td align="center"><img src="../../../../dcommon/images/pdf_icon.png" style="padding-right:5px;" alt="PDF"><br /><span class="mini">PDF</span>
 </tr>
 </table>
 </td>
 </tr>
 </table>
 <hr />
-<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
 <tr>
 <td align="center"><a href="a_namedstoredprocedurequery.htm"><img src="../../../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
 <td align="center"><a href="a_nosql.htm"><img src="../../../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
@@ -49,23 +47,23 @@
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2012-06-27</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2012-06-28</font></p>
 <a id="CHDGEFGD" name="CHDGEFGD"></a>
 <hr />
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@Noncacheable</font></h2>
 <p>Use <code>@Noncacheable</code> to configure caching behavior for relationships. If used on a relationship, that relationship <em>will not</em> be cached, even though the parent Entity may be cached.</p>
-<a id="sthref231" name="sthref231"></a>
-<p><strong><span class="refsubsect">Annotation Elements</span></strong></p>
+<a id="sthref230" name="sthref230"></a>
+<p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p>There are no elements for this annotation.</p>
-<a id="sthref232" name="sthref232"></a>
-<p><strong><span class="refsubsect">Usage</span></strong></p>
+<a id="sthref231" name="sthref231"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>Each time TopLink retrieves the Entity, the relationship will be reloaded from the datasource. This may be useful for situations where caching of relationships is not desired or when using different EclipseLink IdentityMap types and having cached references extends the cache lifetime of related Entities using a different caching scheme. For instance Entity A references Entity B, Entity A is FullIdentityMap and Entity B is WeakIdentityMap. Without removing the caching of the relationsip the Entity B's cache effectively become a FullIdentityMap.</p>
-<a id="sthref233" name="sthref233"></a>
-<p><strong><span class="refsubsect">Examples</span></strong></p>
-<p><a href="#CHDDEGCI">Example 2-63</a> shows how to use <code>@Noncacheable</code> to create a protected cache.</p>
+<a id="sthref232" name="sthref232"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CHDDEGCI">Example 2-67</a> shows how to use <code>@Noncacheable</code> to create a protected cache.</p>
 <div class="example"><a id="CHDDEGCI" name="CHDDEGCI"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-63 Using @Noncacheable Annotation</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-67 Using @Noncacheable Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Entity
 @Cache(
@@ -82,9 +80,9 @@ public class Employee {
 }
 </pre></div>
 <!-- class="example" -->
-<p><a href="#CHDDFJCH">Example 2-64</a> shows using the <code>&lt;noncacheable&gt;</code> XML element in the <code>eclipselink-orm.xml</code> file.</p>
+<p><a href="#CHDDFJCH">Example 2-68</a> shows using the <code>&lt;noncacheable&gt;</code> XML element in the <code>eclipselink-orm.xml</code> file.</p>
 <div class="example"><a id="CHDDFJCH" name="CHDDFJCH"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-64 Using &lt;noncacheable&gt; XML</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-68 Using &lt;noncacheable&gt; XML</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0"?&gt;
 &lt;entity-mappings
@@ -104,8 +102,8 @@ public class Employee {
 &lt;/entity-mappings
 </pre></div>
 <!-- class="example" -->
-<a id="sthref234" name="sthref234"></a>
-<p><strong><span class="refsubsect">See Also</span></strong></p>
+<a id="sthref233" name="sthref233"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
 <li>
@@ -124,7 +122,7 @@ public class Employee {
 <col width="33%" />
 <tr>
 <td valign="bottom">
-<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
 <col width="*" />
 <col width="48%" />
 <col width="48%" />
@@ -135,17 +133,15 @@ public class Employee {
 </tr>
 </table>
 </td>
-<td align="center" width="34%"><img src="http://www.eclipse.org/eclipselink/images/logo.png" alt="EclipseLink" width="150" border="0" /><br /><img src="http://wiki.eclipse.org/images/b/bd/Elug_home_icon.png" style="padding-right:5px;" alt="EclipseLink logo">&nbsp;<a href="http://www.eclipse.org/eclipselink/">EclipseLink Home</a>&nbsp;&bull;&nbsp;<img src="http://wiki.eclipse.org/images/b/b6/Elug_pdf.png" style="padding-right:5px;" alt="PDF">&nbsp;PDF (coming soon)<br />
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="http://www.eclipse.org/eclipselink/images/logo.png" alt="EclipseLink" width="150" border="0" /></a><br />
  
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
 <tr>
 <td>&nbsp;</td>
-<td align="center" valign="top" width="25%"><a href="../../index.htm"><img src="../../../../dcommon/images/information.png" alt="Go To Documentation Library" border="0" height="16" width="16" /><br />
-<span class="mini">Documentation</span></a></td><td>&nbsp;</td><td align="center"><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Search</span></a>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Search</span></a></td><td>&nbsp;</td><td align="center"><img src="../../../../dcommon/images/pdf_icon.png" style="padding-right:5px;" alt="PDF"><br /><span class="mini">PDF</span>
 </tr>
 </table>
 </td>
