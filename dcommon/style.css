@@ -1,6 +1,26 @@
-/* styles for eclipselink */
+/* styles for eclipselink 
+
+Dark purple: #44166C
+Light purple: #CCCCFF
+
+*/
+
+body {background:#ffffff;color:#000000;font-family: Arial,sans-serif;font-size:0.9em;}
+h1 {letter-spacing: -0.035em;font-size:1.8em;font-weight:normal;}
+h2 {font-size:1.4em;font-weight:normal;}
+h1, h2, h3 {border-bottom:1px solid #44166C;margin:1em 0 0.5em 0}
+
 
 .example pre {background:#eeeeee;border:1px dashed #000000;border-radius:5px;padding:5px;overflow:auto;}
 pre {background:#eeeeee;}
-table.HRuleFormalWide th {background:#cccccc;}
+table.Informal th, table.HRuleFormalWide th {background:#cccccc;padding:5px;}
 table.Note {background:#FFFFC0;}
+
+table.Note p
+
+.mini {font-size:0.8em;padding:5px;}
+
+.refsubsect {font-size:1.4em;font-weight:bold;}
+
+.example {margin-top:1.5em;}
+.example p {margin:0.5em 0}
