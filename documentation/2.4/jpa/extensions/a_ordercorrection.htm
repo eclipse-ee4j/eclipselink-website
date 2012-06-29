@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@OrderCorrection | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.2 Build 067" />
-<meta name="date" content="2012-06-29T9:45:11Z" />
+<meta name="date" content="2012-06-29T11:47:14Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@OrderCorrection" />
 <meta name="description" content="Java Persistence API (JPA) Extensions Reference for EclipseLink, 2.4.x" />
@@ -97,19 +97,19 @@
 <!-- class="tblhruleformalwide" -->
 <a id="sthref257" name="sthref257"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
-<p>When using <code>@OrderCorrection</code>, you can specify how Oracle TopLink should handle invalid list orders:</p>
+<p>When using <code>@OrderCorrection</code>, you can specify how EclipseLink should handle invalid list orders:</p>
 <ul>
 <li>
-<p><code>EXCEPTION</code> &ndash; When <code>OrderCorrectionType=EXCEPTION</code>, Oracle TopLink will not correct the list. Instead, Oracle TopLink will throw a <code>QueryException</code> with error code <code>QueryException.LIST_ORDER_FIELD_WRONG_VALUE</code></p>
+<p><code>EXCEPTION</code> &ndash; When <code>OrderCorrectionType=EXCEPTION</code>, EclipseLink will not correct the list. Instead, EclipseLink will throw a <code>QueryException</code> with error code <code>QueryException.LIST_ORDER_FIELD_WRONG_VALUE</code></p>
 <p>For example, given the following list of three objects in the database:</p>
 <pre xml:space="preserve" class="oac_no_warn">
 {null, objectA}; {2, objectB}, {5, ObjectC}; 
 </pre>
-<p>When read into the application, Oracle TopLink will throw an exception.</p>
+<p>When read into the application, EclipseLink will throw an exception.</p>
 </li>
 <li>
-<p><code>READ</code> &ndash; When <code>OrderCorrectionType=READ</code>, Oracle TopLink corrects the list read into application, but does not retain any information about the invalid list order that remains in the database. Although this is not an issue in read-only uses of the list, if the list is modified and then saved into the database, the order will most likely differ from the cache and be invalid.</p>
-<p>The <code>READ</code> mode is used as the default when the mapped attribute is neither a <code>List</code> nor <code>Vector</code> (that is, it is not assignable from the Oracle TopLink internal class <code>IndirectList</code>).</p>
+<p><code>READ</code> &ndash; When <code>OrderCorrectionType=READ</code>, EclipseLink corrects the list read into application, but does not retain any information about the invalid list order that remains in the database. Although this is not an issue in read-only uses of the list, if the list is modified and then saved into the database, the order will most likely differ from the cache and be invalid.</p>
+<p>The <code>READ</code> mode is used as the default when the mapped attribute is neither a <code>List</code> nor <code>Vector</code> (that is, it is not assignable from the EclipseLink internal class <code>IndirectList</code>).</p>
 <p>For example, given the following list of three objects in the database:</p>
 <pre xml:space="preserve" class="oac_no_warn">
 {null, objectA}; {2, objectB}, {5, ObjectC}
@@ -130,8 +130,8 @@
 </ul>
 </li>
 <li>
-<p><code>READ_WRITE</code> &ndash; When <code>OrderCorrectionType=READ_WRITE</code>, Oracle TopLink corrects the order of the list read into application <em>and</em> remembers the invalid list order left in the database. If the list is updated and saved to the database, the order indexes are saved ensuring that the list order in the data base will be exactly the same as in cache (and therefore valid).</p>
-<p>The <code>READ_WRITE</code> mode is used as the default when the mapped attribute is either a <code>List</code> or <code>Vector</code> (that is, it is assignable from the Oracle TopLink internal class <code>IndirectList</code>). In JPA, if the mode is not specified, <code>READ_WRITE</code> is used by default.</p>
+<p><code>READ_WRITE</code> &ndash; When <code>OrderCorrectionType=READ_WRITE</code>, EclipseLink corrects the order of the list read into application <em>and</em> remembers the invalid list order left in the database. If the list is updated and saved to the database, the order indexes are saved ensuring that the list order in the data base will be exactly the same as in cache (and therefore valid).</p>
+<p>The <code>READ_WRITE</code> mode is used as the default when the mapped attribute is either a <code>List</code> or <code>Vector</code> (that is, it is assignable from the EclipseLink internal class <code>IndirectList</code>). In JPA, if the mode is not specified, <code>READ_WRITE</code> is used by default.</p>
 <p>For example, given the following list of three objects in the database:</p>
 <pre xml:space="preserve" class="oac_no_warn">
 {null, objectA}; {2, objectB}, {5, ObjectC}

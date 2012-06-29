@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@FetchGroup | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.2 Build 067" />
-<meta name="date" content="2012-06-29T9:45:10Z" />
+<meta name="date" content="2012-06-29T11:47:14Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@FetchGroup" />
 <meta name="description" content="Java Persistence API (JPA) Extensions Reference for EclipseLink, 2.4.x" />
@@ -109,7 +109,7 @@
 <a id="sthref138" name="sthref138"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>You should perform a careful use case analysis when using <code>@FetchGroup</code>; any gains realized from the deferred loading could be offset by the extra round-trip.</p>
-<p>Oracle TopLink supports fetch groups at two levels:</p>
+<p>EclipseLink supports fetch groups at two levels:</p>
 <ul>
 <li>
 <p>Pre-defined fetch groups at the Entity or MappedSuperclass level</p>
@@ -119,8 +119,8 @@
 </li>
 </ul>
 <p>You can use fetch groups only when using weaving or when individual classes that define them explicitly implement the <code>org.eclipse.persistence.queries.FetchGroupTracker interface</code>.</p>
-<p>When using a fetch group, you can define a subset of an object's attributes and associate the fetch group with either a <code>ReadObjectQuery</code> or <code>ReadAllQuery</code> query. When you execute the query, TopLink retrieves only the attributes in the fetch group. TopLink automatically executes a query to fetch all the attributes excluded from this subset when and if you call a get method on any one of the excluded attributes.</p>
-<p>You can define more than one fetch group for a class. You can optionally designate at most one such fetch group as the default fetch group. If you execute either a <code>ReadObjectQuery</code> or <code>ReadAllQuery</code> query without specifying a fetch group, TopLink will use the default fetch group, unless you configure the query otherwise.</p>
+<p>When using a fetch group, you can define a subset of an object's attributes and associate the fetch group with either a <code>ReadObjectQuery</code> or <code>ReadAllQuery</code> query. When you execute the query, EclipseLink retrieves only the attributes in the fetch group. EclipseLink automatically executes a query to fetch all the attributes excluded from this subset when and if you call a get method on any one of the excluded attributes.</p>
+<p>You can define more than one fetch group for a class. You can optionally designate at most one such fetch group as the default fetch group. If you execute either a <code>ReadObjectQuery</code> or <code>ReadAllQuery</code> query without specifying a fetch group, EclipseLink will use the default fetch group, unless you configure the query otherwise.</p>
 <p>You can use fetch groups in JPA projects for EJB objects, as well as for POJO classes. For POJO classes, use partial object querying.</p>
 <p>Before using fetch groups, we recommend that you perform a careful analysis of system use. In many cases, the extra queries required to load attributes not in the fetch group could well offset the gain from the partial attribute loading.</p>
 <p>Fetch groups can be used only with basic mappings configured with <code>FetchType.LAZY (partial object queries)</code>.</p>
