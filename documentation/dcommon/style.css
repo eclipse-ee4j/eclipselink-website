@@ -19,7 +19,7 @@ table.HRuleFormal th, table.Informal th, table.HRuleFormalWide th {background:#c
 table.Note {background:#FFFFC0;}
 
 .mini {font-size:0.8em;padding:5px;}
-.booktitle {font-size:1.4em;padding-top:0.5em;font-family:Times, serif;}
+.booktitle {font-size:1.4em;padding-top:0.5em;}
 
 h3, .refsubsect {font-size:1.4em;color:#44166C;font-weight:normal;}
 p strong .refsubsect {margin:1.5em 0 0.5em 0}
