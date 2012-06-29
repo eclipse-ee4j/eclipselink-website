@@ -7,18 +7,18 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@Structure | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.2 Build 067" />
-<meta name="date" content="2012-06-28T9:26:7Z" />
+<meta name="date" content="2012-06-29T9:45:11Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@Structure" />
 <meta name="description" content="Java Persistence API (JPA) Extensions Reference for EclipseLink, 2.4.x" />
-<link rel="stylesheet" type="text/css" href="../../../../dcommon/style.css" media="screen" />
-  
+<link rel="stylesheet" type="text/css" href="../../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="http://www.eclipse.org/org/documents/epl-v10.php" title="Copyright" type="text/html" />  
 <link rel="start" href="../../index.htm" title="Home" type="text/html" />
 <link rel="contents" href="toc.htm" title="Contents" type="text/html" />
 <link rel="prev" href="a_structconverters.htm" title="Previous" type="text/html" />
 <link rel="next" href="a_tenantdiscriminatorcolumn.htm" title="Next" type="text/html" />
 </head>
-<body bgcolor="#FFFFFF"><?php include("http://www.eclipse.org/eclipselink/dcommon/header.html"); ?>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe>
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -29,8 +29,8 @@
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
 <td>&nbsp;</td>
-<td align="center" valign="top"><a href="toc.htm"><img src="../../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Search</span></a></td><td>&nbsp;</td><td align="center"><img src="../../../../dcommon/images/pdf_icon.png" style="padding-right:5px;" alt="PDF"><br /><span class="mini">PDF</span>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Search</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
 </tr>
 </table>
 </td>
@@ -39,16 +39,14 @@
 <hr />
 <table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
 <tr>
-<td align="center"><a href="a_structconverters.htm"><img src="../../../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
-<td align="center"><a href="a_tenantdiscriminatorcolumn.htm"><img src="../../../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="a_structconverters.htm"><img src="../../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="a_tenantdiscriminatorcolumn.htm"><img src="../../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
 <td>&nbsp;</td>
 </tr>
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2012-06-28</font></p>
-<a id="CACIJAFA" name="CACIJAFA"></a>
+<div class="ind"><!-- End Header --><a id="CACIJAFA" name="CACIJAFA"></a>
 <hr />
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@Structure</font></h2>
@@ -61,9 +59,9 @@
 <p>Struct types are extended object-relational data-types supported by some databases. Struct types are user define types in the database such as <code>OBJECT</code> types on Oracle. Structs can normally contains Arrays (<code>VARRAY</code>) or other Struct types, and can be stored in a column or a table.</p>
 <a id="sthref361" name="sthref361"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<p><a href="#CACDBBII">Example 2-97</a> shows how to use the <code>@Structure</code> annotation. See <a href="a_struct.htm#CACCGJAJ">Example 2-92</a> to an example of using <code>@Struct</code> to map the target.</p>
+<p><a href="#CACDBBII">Example 2-94</a> shows how to use the <code>@Structure</code> annotation. See <a href="a_struct.htm#CACCGJAJ">Example 2-89</a> to an example of using <code>@Struct</code> to map the target.</p>
 <div class="example"><a id="CACDBBII" name="CACDBBII"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-97 Using @Structure Annotation</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-94 Using @Structure Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Structure
 protected Address address;
@@ -72,7 +70,7 @@ protected Address address;
 <!-- class="example" -->
 <p>You can also define structure mappings in the <code>eclipselink-orm.xml</code> file by using the <code>&lt;structure&gt;</code> element.</p>
 <div class="example"><a id="sthref362" name="sthref362"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-98 Using &lt;structure&gt; XML</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-95 Using &lt;structure&gt; XML</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;structure name="address"/&gt;
  
@@ -104,20 +102,20 @@ protected Address address;
 <col width="48%" />
 <tr>
 <td>&nbsp;</td>
-<td align="center"><a href="a_structconverters.htm"><img src="../../../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
-<td align="center"><a href="a_tenantdiscriminatorcolumn.htm"><img src="../../../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="a_structconverters.htm"><img src="../../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="a_tenantdiscriminatorcolumn.htm"><img src="../../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
 </tr>
 </table>
 </td>
-<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="http://www.eclipse.org/eclipselink/images/logo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
  
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
 <tr>
 <td>&nbsp;</td>
-<td align="center" valign="top"><a href="toc.htm"><img src="../../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Search</span></a></td><td>&nbsp;</td><td align="center"><img src="../../../../dcommon/images/pdf_icon.png" style="padding-right:5px;" alt="PDF"><br /><span class="mini">PDF</span>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Search</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
 </tr>
 </table>
 </td>
@@ -125,5 +123,5 @@ protected Address address;
 </table>
 </div>
 <!-- class="footer" -->
-<script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script></body>
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a></div><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script></body>
 </html>
