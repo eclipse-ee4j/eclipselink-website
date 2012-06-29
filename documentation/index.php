@@ -89,6 +89,7 @@
 				<li><a href="http://www.eclipse.org/eclipselink/releases/2.4.php">Release Notes</a></li>
 				<li><a href="http://wiki.eclipse.org/EclipseLink/Installing_and_Configuring_EclipseLink">Installation and Configuration</a></li>
 				<li><a href="http://www.eclipse.org/eclipselink/api/2.4/index.html">Java Docs</a></li>
+				<li><a href="2.4/jpa/extensions/toc.htm">JPA Extensions Reference</a></li>
 			</ul>
 	</div>
 
@@ -97,7 +98,7 @@
 			<h3>Guides</h3>
 			<ul>
 				<li><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA">EclipseLink JPA</a></li>
-				<li><a href="jpa/extensions/toc.htm">EclipseLink JPA Extensions</a></li>
+				<li><a href="2.4/jpa/extensions/toc.htm">EclipseLink JPA Extensions</a></li>
 
 				<li><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/MOXy">EclipseLink MOXy</a></li>
 
