@@ -64,7 +64,7 @@
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
 							<a
-								href="http://wiki.eclipse.org/EclipseLink/DesignDocs/Multi-Tenancy/TablePerTenant">Documentation</a>
+								href="../eclipselink/documentation/2.4/jpa/extensions/a_multitenant.htm">Documentation</a>
 						</div>
 						<div>
 							<img src="/eclipselink/images/wiki_small.png" />
@@ -91,7 +91,7 @@
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
 							<a
-								href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/NoSQL">Documentation</a>
+								href="../documentation/2.4/jpa/extensions/a_nosql.htm">Documentation</a>
 						</div>
 						<div>
 							<img src="/eclipselink/images/wiki_small.png" />
