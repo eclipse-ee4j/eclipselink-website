@@ -99,7 +99,7 @@
             <tr class="tableData">
                <td class="packageDesc">
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.3.3/eclipselink-2.3.3.v20111125-r10461.zip">EclipseLink 2.3.3 Installer Zip (28 MB)</a>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.3.3/eclipselink-2.3.3.v20120629-r11760.zip">EclipseLink 2.3.3 Installer Zip (28 MB)</a>
                   </div>
                   This zip includes EclipseLink 2.3.3 with the single jar packaging,  source,  JavaDocs, utilities, and dependent libraries. Intended for use in Java EE and SE environments.
                   <div class="bottomRow">
@@ -111,7 +111,7 @@
             <tr class="tableData">
                <td class="packageDesc">
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.3.3/eclipselink-plugins-2.3.3.v20111125-r10461.zip">EclipseLink 2.3.3 OSGi Bundles Zip (12 MB)</a>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.3.3/eclipselink-plugins-2.3.3.v20120629-r11760.zip">EclipseLink 2.3.3 OSGi Bundles Zip (12 MB)</a>
                   </div>
                   Contains EclipseLink and dependency bundles.  Get the OSGI Bundle Zip to use EclipseLink 2.3.3 runtime in an OSGi container.
                   <div class="bottomRow">
@@ -125,7 +125,7 @@
             <tr class="tableData">
                <td class="packageDesc">
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.3.3/eclipselink-src-2.3.3.v20111125-r10461.zip">EclipseLink 2.3.3 Source Zip (5.2 MB)</a>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.3.3/eclipselink-src-2.3.3.v20120629-r11760.zip">EclipseLink 2.3.3 Source Zip (5.2 MB)</a>
                   </div>
                   Contains source code for all of eclipselink.  
                   <div class="bottomRow">
