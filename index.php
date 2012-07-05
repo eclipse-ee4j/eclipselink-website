@@ -4,6 +4,13 @@
 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	
 	$App 	= new App();	
 	$Nav	= new Nav();	
+	$Nav->setLinkList( array() );
+$Nav->addNavSeparator( "Project Name", "/shortname" );
+$Nav->addCustomNav( "About This Project",
+    "/projects/project_summary.php?projectid=rt.eclipselink", "", 1  );
+
+	
+	
 	$Menu 	= new Menu();		
 	include($App->getProjectCommon());
 
