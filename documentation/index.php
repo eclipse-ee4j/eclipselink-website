@@ -114,7 +114,7 @@
 	<div class="section">
 			<h3>Documentation Searches</h3>
 			<p>Use this search engine to easily search <strong>all</strong> EclipseLink content hosted on eclipse.org. You can use the refinement tabs to narrow your search scope.</p>
-			  <div id="search" align="left">
+			  <div id="elsearch" align="left">
 				<div id="cse" style="width: 100%;">Loading</div>
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 <script type="text/javascript"> 
