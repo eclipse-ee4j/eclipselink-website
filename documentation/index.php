@@ -23,7 +23,7 @@
 	# Define these here, or in _projectCommon.php for site-wide values
 	$pageKeywords	= "eclipse, project, eclipselink, persistence";
 	$pageAuthor		= "Doug Clarke";
-	$pageTitle 		= "EclipseLink 2.4 Documentation";
+	$pageTitle 		= "EclipseLink Documentation Center";
 	
 	ob_start();
 ?>
@@ -45,7 +45,7 @@
 				<div class="bigbuttonsDocumentation">
 					<a href="http://wiki.eclipse.org/EclipseLink/Documentation_Center"><div class="bigbuttonsTitleLink"></div></a>
 					<span>
-						<a href="/eclipselink/documentation/2.4/index.php">Doc Center</a>,
+						<a href="/eclipselink/documentation/index.php">Doc Center</a>,
 						<a href="/eclipselink/api/2.4/index.html"> Java Docs</a>,
 						<a href="http://wiki.eclipse.org/EclipseLink/Examples"> Examples</a>,
 						<a href="http://wiki.eclipse.org/EclipseLink/FAQ"> FAQ</a>, <br/>
@@ -84,7 +84,7 @@
 <div id="midcolumn">
 	
 	<div class="homeitem3col">
-		<h2>EclipseLink 2.4 Documentation</h2>
+		<h2>EclipseLink Documentation Center</h2>
 			<ul>
 				<li><a href="http://www.eclipse.org/eclipselink/releases/2.4.php">Release Notes</a></li>
 				<li><a href="http://wiki.eclipse.org/EclipseLink/Installing_and_Configuring_EclipseLink">Installation and Configuration</a></li>
@@ -137,7 +137,7 @@
 
 		<div class="sideitem">
 			<h6>EclipseLink Search</h6>
-			<p>Use this search engine to easily find EclipseLink content (doc, examples, Javadoc, and more!).</p>
+			<p>Use this search engine to easily find <strong>any</strong> EclipseLink content (doc, examples, Javadoc, and more!).
 
 <div id="cse-search-form" style="width: 100%;">Loading</div>
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
@@ -154,7 +154,7 @@
   }, true);
 </script>
 
-			
+			</p>
 		</div>
 
 
