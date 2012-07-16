@@ -159,6 +159,30 @@ $Nav->addCustomNav( "About This Project",
 
 <div id="rightcolumn">
 
+
+		<div class="sideitem">
+			<h6>EclipseLink Search</h6>
+			<p>Use this search engine to find <strong>any</strong> EclipseLink content (doc, examples, Javadoc, and more!).
+
+<div id="cse-search-form" style="width: 100%;">Loading</div>
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript"> 
+  google.load('search', '1', {language : 'en', style : google.loader.themes.SHINY});
+  google.setOnLoadCallback(function() {
+    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(
+      '016171230611334810008:ob2bbia9swa', customSearchOptions);
+    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+    var options = new google.search.DrawOptions();
+    options.setAutoComplete(true);
+    options.enableSearchboxOnly("http://www.google.com/cse?cx=016171230611334810008:ob2bbia9swa");
+    customSearchControl.draw('cse-search-form', options);
+  }, true);
+</script>
+
+			</p>
+		</div>
+
+
 		<div class="sideitem">
 			<script src="http://widgets.twimg.com/j/2/widget.js"></script>
 <script>
