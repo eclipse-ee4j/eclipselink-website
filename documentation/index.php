@@ -86,7 +86,17 @@
 	<div class="homeitem3col">
 		<h2>EclipseLink Documentation Center</h2>
 			<ul>
-				<li><a href="http://www.eclipse.org/eclipselink/releases/2.4.php">Release Notes</a></li>
+				<li><a href="http://www.eclipse.org/eclipselink/releases/2.4.php">Release Notes</a>
+				
+				<form action="../">
+<select name="ReleaseNotes">
+    <option value="http://www.eclipse.org/eclipselink/releases/2.4.php">2.4 (Current)</option>
+    <option value="http://www.eclipse.org/eclipselink/releases/">Older releases</option>
+</select>
+<input type="button" onclick="window.open(this.form.ReleaseNotes.options[this.form.ReleaseNotes.selectedIndex].value,'_top')" value="Go">
+</form>
+				
+				</li>
 				<li><a href="http://wiki.eclipse.org/EclipseLink/Installing_and_Configuring_EclipseLink">Installation and Configuration</a></li>
 				<li><a href="http://www.eclipse.org/eclipselink/api/2.4/index.html">Java Docs</a></li>
 				<li><a href="2.4/jpa/extensions/toc.htm">JPA Extensions Reference</a></li>
