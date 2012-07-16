@@ -162,8 +162,6 @@ $Nav->addCustomNav( "About This Project",
 
 		<div class="sideitem">
 			<h6>EclipseLink Search</h6>
-			<p>Use this search engine to find <strong>any</strong> EclipseLink content (doc, examples, Javadoc, and more!).
-
 <div id="cse-search-form" style="width: 100%;">Loading</div>
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 <script type="text/javascript"> 
@@ -178,8 +176,6 @@ $Nav->addCustomNav( "About This Project",
     customSearchControl.draw('cse-search-form', options);
   }, true);
 </script>
-
-			</p>
 		</div>
 
 
