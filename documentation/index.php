@@ -86,9 +86,7 @@
 	<div class="homeitem3col">
 		<h2>EclipseLink Documentation Center</h2>
 			<ul>
-				<li><a href="http://www.eclipse.org/eclipselink/releases/2.4.php">Release Notes</a>
-				
-				<form action="../">
+				<li><form action="../"><label for="ReleaseNotes">Release Notes</label>
 <select name="ReleaseNotes">
     <option value="http://www.eclipse.org/eclipselink/releases/2.4.php">2.4 (Current)</option>
     <option value="http://www.eclipse.org/eclipselink/releases/">Older releases</option>
@@ -147,7 +145,7 @@
 
 		<div class="sideitem">
 			<h6>EclipseLink Search</h6>
-			<p>Use this search engine to easily find <strong>any</strong> EclipseLink content (doc, examples, Javadoc, and more!).
+			<p>Use this search engine to find <strong>any</strong> EclipseLink content (doc, examples, Javadoc, and more!).
 
 <div id="cse-search-form" style="width: 100%;">Loading</div>
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
