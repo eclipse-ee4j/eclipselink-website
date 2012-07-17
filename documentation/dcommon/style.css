@@ -7,7 +7,7 @@ Light purple: #CCCCFF
 
 body {background:#efefef;color:#000000;font-family: Arial,sans-serif;font-size:0.9em;width:976px;margin-left:auto;margin-right:auto;}
 p {margin:0.5em 0}
-h1 {letter-spacing: -0.035em;font-size:1.8em;font-weight:normal;}
+h1 {letter-spacing: -0.035em;font-size:1.8em;font-weight:normal;color:#330099;}
 h2 {font-size:1.4em;font-weight:normal;}
 h2 a {text-decoration:none;}
 h1, h2 {border-bottom:1px solid #44166C;margin:1.2em 0 0.5em 0;padding-bottom:5px;}
@@ -90,3 +90,15 @@ background: linear-gradient(#cccccc, #efefef); }
 #elbuttons {float:right;}
 .buttontitle {font-size:22px; font-weight:bold;padding:5px;}
 .buttontitle a:visited, .buttontitle a {text-decoration:none;color:#000000;}
+
+form.gsc-search-box {width:450px !important;margin-left:auto !important;margin-right:20px !important}
+.gsc-resultsbox-visible {padding:1em;border:1px solid #44166C;background:#ffffff;}
+.cse .gsc-control-cse, .gsc-control-cse {border:none !important;background:inherit !important;}
+
+.gsc-results .gsc-cursor-box {font-size: 1.2em;text-align: center;}
+.gsc-result:hover{background:#CCCCFF;}
+table.gsc-search-box {background:url('http://www.eclipse.org/eclipselink/documentation/dcommon/images/search.png') no-repeat left center;padding-left:20px !important;}
+input#gsc-i-id1 {border: 1px solid #CCCCFF !important;}
+
+
+span.loadingspin {padding-left:30px;background:url('http://www.eclipse.org/eclipselink/documentation/dcommon/images/loading.gif') no-repeat left center;}
