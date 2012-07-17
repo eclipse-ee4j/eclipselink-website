@@ -14,7 +14,7 @@
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  *
- * Contributors: mkeith, frostc, dclarke
+ * Contributors: mkeith, frostc, dclarke, rsapir
  *    
  *******************************************************************************/
 
@@ -113,43 +113,49 @@
 	<div class="section">
 			<h3>Documentation Search</h3>
 			
-			<table width="100%" bgcolor="#FFFFFF">
-				<tr><td width="100%" align="left">
-				<div id="search" align="left">
-		<form action="http://www.google.com/cse" id="searchbox_016171230611334810008:y5kxq4rqd8s">
-		<fieldset><input type="hidden" name="cx" value="016171230611334810008:y5kxq4rqd8s" />
-		<input id="searchBox" type="text" name="q" size="25" />
-		<input id="searchButton" type="submit" name="sa" value="Search JPA" />
-		</fieldset></form>
-		<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_016171230611334810008:y5kxq4rqd8s&lang=en"></script>			
-	</div>
-			</td></tr>
-				<tr><td width="100%" align="left">
-				<div id="search" align="left">
-		<form action="http://www.google.com/cse" id="searchbox_016171230611334810008:brtjnxzsfyg">
-		<fieldset><input type="hidden" name="cx" value="016171230611334810008:brtjnxzsfyg" />
-		<input id="searchBox" type="text" name="q" size="25" />
-		<input id="searchButton" type="submit" name="sa" value="Search MOXy" />
-		</fieldset></form>
-		<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_016171230611334810008:brtjnxzsfyg&lang=en"></script>			
-	</div>
-			</td></tr>
-				<tr><td width="100%" align="left">
-				<div id="search" align="left">
-		<form action="http://www.google.com/cse" id="searchbox_002128250543942842320:Aqffgtrd2s3k">
-		<fieldset><input type="hidden" name="cx" value="002128250543942842320:Aqffgtrd2s3k" />
-		<input id="searchBox" type="text" name="q" size="25" />
-		<input id="searchButton" type="submit" name="sa" value="Search Wiki" />
-		</fieldset></form>
-		<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_002128250543942842320:Aqffgtrd2s3k&lang=en"></script>			
-	</div>
-			</td></tr>
-			</table>
+			<p>Use this search engine to easily search <strong>all</strong> EclipseLink content hosted on eclipse.org. You can use the refinement tabs to narrow your search scope.</p>
+			  <div id="elsearch" align="left">
+				<div id="cse" style="width: 100%;">Loading</div>
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript"> 
+  google.load('search', '1', {language : 'en'});
+  google.setOnLoadCallback(function() {
+    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(
+      '016171230611334810008:ob2bbia9swa', customSearchOptions);
+    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+    var options = new google.search.DrawOptions();
+    options.setAutoComplete(true);
+    customSearchControl.draw('cse', options);
+  }, true);
+</script>
+<link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" />
+				</div>
+			</div>
+
+
 	</div>
 
 </div>
 
 <div id="rightcolumn">
+
+		<div class="sideitem">
+			<h6>EclipseLink Search</h6>
+<div id="cse-search-form" style="width: 100%;">Loading</div>
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript"> 
+  google.load('search', '1', {language : 'en', style : google.loader.themes.SHINY});
+  google.setOnLoadCallback(function() {
+    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(
+      '016171230611334810008:ob2bbia9swa', customSearchOptions);
+    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+    var options = new google.search.DrawOptions();
+    options.setAutoComplete(true);
+    options.enableSearchboxOnly("http://www.google.com/cse?cx=016171230611334810008:ob2bbia9swa");
+    customSearchControl.draw('cse-search-form', options);
+  }, true);
+</script>
+		</div>
 
 		<div class="sideitem">
 			<script src="http://widgets.twimg.com/j/2/widget.js"></script>
