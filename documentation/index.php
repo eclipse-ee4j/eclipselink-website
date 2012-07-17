@@ -95,7 +95,7 @@
 </form>
 				</li>
 				<li><form action="../"><label for="JavaDocs">Java Docs</label>
-<select name="JavaDcos">
+<select name="JavaDocs">
     <option value="http://www.eclipse.org/eclipselink/api/2.4/index.html">2.4 (Current)</option>
     <option value="http://www.eclipse.org/eclipselink/api/">Older releases</option>
 </select>
