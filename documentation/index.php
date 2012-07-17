@@ -147,7 +147,7 @@
   </div>
 </form>
 <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script></td>
-        <td><p></p>Search <strong>all</strong> Eclipselink</strong> documentation:</p>
+        <td>Search <strong>all</strong> Eclipselink</strong> documentation:
           <form action="http://www.google.com/cse" id="cse-search-box">
   <div>
     <input type="hidden" name="cx" value="016171230611334810008:ob2bbia9swa" />
