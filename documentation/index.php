@@ -93,11 +93,17 @@
 </select>
 <input type="button" onclick="window.open(this.form.ReleaseNotes.options[this.form.ReleaseNotes.selectedIndex].value,'_top')" value="Go">
 </form>
-				
+				</li>
+				<li><form action="../"><label for="JavaDocs">Java Docs</label>
+<select name="JavaDcos">
+    <option value="http://www.eclipse.org/eclipselink/api/2.4/index.html">2.4 (Current)</option>
+    <option value="http://www.eclipse.org/eclipselink/api/">Older releases</option>
+</select>
+<input type="button" onclick="window.open(this.form.JavaDocs.options[this.form.JavaDocs.selectedIndex].value,'_top')" value="Go">
+</form>
 				</li>
 				<li><a href="http://wiki.eclipse.org/EclipseLink/Installing_and_Configuring_EclipseLink">Installation and Configuration</a></li>
-				<li><a href="http://www.eclipse.org/eclipselink/api/2.4/index.html">Java Docs</a></li>
-				<li><a href="2.4/jpa/extensions/toc.htm">JPA Extensions Reference</a></li>
+				<li><a href="2.4/jpa/extensions/toc.htm">JPA Extensions Reference (2.4)</a></li>
 			</ul>
 	</div>
 
