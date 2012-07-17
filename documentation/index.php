@@ -124,7 +124,6 @@
 			</ul>
 	</div>
 
-    <link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" />
 	<div class="section">
 			<h3>Documentation Searches</h3>
 			<table width="99%" border="0" cellspacing="0" cellpadding="5">
@@ -157,6 +156,7 @@
   </div>
 </form>
 <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script></td>
+    <link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" />
 		
 		</td>
   </tr>
