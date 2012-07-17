@@ -145,9 +145,8 @@
 
 		<div class="sideitem">
 			<h6>EclipseLink Search</h6>
-			<p>Use this search engine to find <strong>any</strong> EclipseLink content (doc, examples, Javadoc, and more!).
 
-<div id="cse-search-form" style="width: 100%;">Loading</div>
+<div id="cse-search-form" style="width: 240px;">Loading</div>
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 <script type="text/javascript"> 
   google.load('search', '1', {language : 'en', style : google.loader.themes.SHINY});
@@ -161,8 +160,6 @@
     customSearchControl.draw('cse-search-form', options);
   }, true);
 </script>
-
-			</p>
 		</div>
 
 
