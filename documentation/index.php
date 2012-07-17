@@ -151,7 +151,7 @@
 		</form>
 		<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
 	</td>
-    <td>Search <strong>all</strong> Eclipselink</strong> documentation:
+    <td><p>Search <strong>all</strong> Eclipselink</strong> documentation:</p>
 		<form action="http://www.google.com/cse" id="cse-search-box">
 			<div>
 				<input type="hidden" name="cx" value="016171230611334810008:ob2bbia9swa" />
@@ -166,7 +166,7 @@
 </table>
 			
 	</div>
-
+</div>
 <div id="rightcolumn">
 
 		<div class="sideitem">
