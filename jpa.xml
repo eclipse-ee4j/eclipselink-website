@@ -82,6 +82,7 @@
 	<section class="sideitem">
 		<description>
 			<h3>Documentation</h3>
+			<li><a href="./documentation/2.4/jpa/extensions/toc.htm">EclipseLink JPA Extensions</a></li>
 			<li><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA">JPA User Guide</a></li>
 			<li><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA">JPA Examples</a></li>
 
