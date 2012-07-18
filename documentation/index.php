@@ -130,32 +130,32 @@
 <table border="0" cellspacing="0" cellpadding="5">
   <tr>
     <td>
-		<p>Search EclipseLink JPA documentation:</p>
+		<p>EclipseLink <strong>JPA</strong> documentation:</p>
 		<form action="http://www.google.com/cse" id="cse-search-box">
 			<div>
 				<input type="hidden" name="cx" value="016171230611334810008:y5kxq4rqd8s" />
-				<input type="text" name="q" size="31" />
+				<input type="text" name="q" />
 				<input type="submit" name="sa" value="Search" />
 			</div>
 		</form>
 		<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script></td>
 	</td>
     <td>
-		<p>Search EclipseLink MOXy (JAXB) documentation:</p>
+		<p>EclipseLink <strong>MOXy&nbsp;(JAXB)</strong> documentation:</p>
         <form action="http://www.google.com/cse" id="cse-search-box">
 			<div>
 				<input type="hidden" name="cx" value="016171230611334810008:brtjnxzsfyg" />
-				<input type="text" name="q" size="31" />
+				<input type="text" name="q" />
 				<input type="submit" name="sa" value="Search" />
 			</div>
 		</form>
 		<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
 	</td>
-    <td><p>Search <strong>all</strong> Eclipselink</strong> documentation:</p>
+    <td><p><strong>All</strong> Eclipselink</strong> documentation:</p>
 		<form action="http://www.google.com/cse" id="cse-search-box">
 			<div>
 				<input type="hidden" name="cx" value="016171230611334810008:ob2bbia9swa" />
-				<input type="text" name="q" size="31" />
+				<input type="text" name="q" />
 				<input type="submit" name="sa" value="Search" />
 			</div>
 		</form>
