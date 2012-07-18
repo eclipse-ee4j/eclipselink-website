@@ -126,11 +126,11 @@
 
 
 	<div class="section">
-			<h3>Documentation Searches</h3>
-<table border="0" cellspacing="0" cellpadding="5">
+			<h3>EclispeLink Documentation Searches</h3>
+<table border="0" cellspacing="0" cellpadding="5" width="100%">
   <tr>
     <td>
-		<p>EclipseLink <strong>JPA</strong> documentation:</p>
+		<p><strong>JPA</strong> documentation:</p>
 		<form action="http://www.google.com/cse" id="cse-search-box">
 			<div>
 				<input type="hidden" name="cx" value="016171230611334810008:y5kxq4rqd8s" />
@@ -141,7 +141,7 @@
 		<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script></td>
 	</td>
     <td>
-		<p>EclipseLink <strong>MOXy&nbsp;(JAXB)</strong> documentation:</p>
+		<p><strong>MOXy&nbsp;(JAXB)</strong> documentation:</p>
         <form action="http://www.google.com/cse" id="cse-search-box">
 			<div>
 				<input type="hidden" name="cx" value="016171230611334810008:brtjnxzsfyg" />
