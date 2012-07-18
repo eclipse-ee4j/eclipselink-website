@@ -126,7 +126,7 @@
 
 
 	<div class="section">
-			<h3>EclispeLink Documentation Searches</h3>
+			<h3 id="elsearches">EclispeLink Documentation Searches</h3>
 <table border="0" cellspacing="0" cellpadding="5" width="100%">
   <tr>
     <td>
