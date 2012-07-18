@@ -111,26 +111,45 @@
 
 
 	<div class="section">
-			<h3>Documentation Search</h3>
-			
-			<p>Use this search engine to easily search <strong>all</strong> EclipseLink content hosted on eclipse.org. You can use the refinement tabs to narrow your search scope.</p>
-			  <div id="elsearch" align="left">
-				<div id="cse" style="width: 100%;">Loading</div>
-<script src="http://www.google.com/jsapi" type="text/javascript"></script>
-<script type="text/javascript"> 
-  google.load('search', '1', {language : 'en'});
-  google.setOnLoadCallback(function() {
-    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(
-      '016171230611334810008:ob2bbia9swa', customSearchOptions);
-    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
-    var options = new google.search.DrawOptions();
-    options.setAutoComplete(true);
-    customSearchControl.draw('cse', options);
-  }, true);
-</script>
-<link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" />
-				</div>
+
+			<h3 id="elsearches">EclispeLink Documentation Searches</h3>
+<table border="0" cellspacing="0" cellpadding="5" width="100%">
+  <tr>
+    <td>
+		<p><strong>JPA</strong> documentation:</p>
+		<form action="http://www.google.com/cse" id="cse-search-box">
+			<div>
+				<input type="hidden" name="cx" value="016171230611334810008:y5kxq4rqd8s" />
+				<input type="text" name="q" />
+				<input type="submit" name="sa" value="Search" />
 			</div>
+		</form>
+		<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script></td>
+	</td>
+    <td>
+		<p><strong>MOXy&nbsp;(JAXB)</strong> documentation:</p>
+        <form action="http://www.google.com/cse" id="cse-search-box">
+			<div>
+				<input type="hidden" name="cx" value="016171230611334810008:brtjnxzsfyg" />
+				<input type="text" name="q" />
+				<input type="submit" name="sa" value="Search" />
+			</div>
+		</form>
+		<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
+	</td>
+    <td><p><strong>All</strong> Eclipselink</strong> documentation:</p>
+		<form action="http://www.google.com/cse" id="cse-search-box">
+			<div>
+				<input type="hidden" name="cx" value="016171230611334810008:ob2bbia9swa" />
+				<input type="text" name="q" />
+				<input type="submit" name="sa" value="Search" />
+			</div>
+		</form>
+		<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script></td>
+		<link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" />
+	</td>
+  </tr>
+</table>
 
 
 	</div>
