@@ -99,7 +99,7 @@
 				<li><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA">EclipseLink JPA</a></li>
 				<li><a href="jpa/extensions/toc.htm">EclipseLink JPA Extensions</a></li>
 
-				<li><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/MOXy">EclipseLink MOXy</a></li>
+				<li><a href="moxy/toc.htm">EclipseLink MOXy</a></li>
 
 				<li><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/NoSQL">EclipseLink NoSQL</a></li>
 
