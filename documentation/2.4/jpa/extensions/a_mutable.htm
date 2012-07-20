@@ -6,31 +6,30 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@Mutable | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.2 Build 067" />
-<meta name="date" content="2012-06-29T11:47:14Z" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
+<meta name="date" content="2012-07-20T8:40:24Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@Mutable" />
-<meta name="description" content="Java Persistence API (JPA) Extensions Reference for EclipseLink, 2.4.x" />
+<meta name="relnum" content="Release 2.4" />
 <link rel="stylesheet" type="text/css" href="../../../dcommon/style.css" media="screen" />
 <link rel="copyright" href="http://www.eclipse.org/org/documents/epl-v10.php" title="Copyright" type="text/html" />  
 <link rel="start" href="../../index.htm" title="Home" type="text/html" />
 <link rel="contents" href="toc.htm" title="Contents" type="text/html" />
 <link rel="prev" href="a_multitenant.htm" title="Previous" type="text/html" />
 <link rel="next" href="a_namedstoredfunc_queries.htm" title="Next" type="text/html" />
-</head>
-<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe>
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:4sqnhke2any', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
-<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><div class="booktitle"><strong>Java Persistence API (JPA) Extensions Reference for EclipseLink</strong>, 
-<strong>Release 2.4.x</strong></div><br />
- </font></td>
+<td align="left" valign="top"><div class="booktitle">Java Persistence API (JPA) Extensions Reference for EclipseLink, 
+Release 2.4</div></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Search</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
 </tr>
 </table>
 </td>
@@ -51,31 +50,31 @@
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@Mutable</font></h2>
 <p>Use <code>@Mutable</code> on a <code>@Basic</code> mapping to specify if the value of a complex field type can be <em>changed</em> (or not changed) instead of being <em>replaced</em>. Mutable mappings may affect the performance of change tracking; attribute change tracking can only be weaved with non-mutable mappings.</p>
-<a id="sthref207" name="sthref207"></a>
+<a id="sthref201" name="sthref201"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
-<p><a href="#CHDDHGFD">Table 2-35</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="sthref208" name="sthref208"></a><a id="CHDDHGFD" name="CHDDHGFD"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-35 @Mutable Annotation Elements</font></em></strong></p>
+<p><a href="#CHDDHGFD">Table 2-34</a> describes this annotation's elements.</p>
+<div class="tblhruleformalwide"><a id="sthref202" name="sthref202"></a><a id="CHDDHGFD" name="CHDDHGFD"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-34 @Mutable Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@Mutable Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="31%" />
 <col width="*" />
 <col width="28%" />
 <thead>
 <tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t45"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
-<th align="left" valign="bottom" id="r1c2-t45"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
-<th align="left" valign="bottom" id="r1c3-t45"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
+<th align="left" valign="bottom" id="r1c1-t44"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t44"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c3-t44"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
 </tr>
 </thead>
 <tbody>
 <tr align="left" valign="top">
-<td align="left" id="r2c1-t45" headers="r1c1-t45">
+<td align="left" id="r2c1-t44" headers="r1c1-t44">
 <p><code>boolean value</code></p>
 </td>
-<td align="left" headers="r2c1-t45 r1c2-t45">
+<td align="left" headers="r2c1-t44 r1c2-t44">
 <p>(Optional) Specify if the mapping is mutable.</p>
 </td>
-<td align="left" headers="r2c1-t45 r1c3-t45">
+<td align="left" headers="r2c1-t44 r1c3-t44">
 <p>true</p>
 </td>
 </tr>
@@ -83,17 +82,17 @@
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref209" name="sthref209"></a>
+<a id="sthref203" name="sthref203"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>Most basic types (such as <code>int</code>, <code>long</code>, <code>float</code>, <code>double</code>, <code>String</code>, and <code>BigDecimal</code>) are not mutable.</p>
 <p>By default, <code>Date</code> and <code>Calendar</code> types are assumed to be not mutable. To make these types mutable, use the <code>@Mutable</code> annotation. You can also use the global persistence property <code>eclipselink.temporal.mutable</code> to set the mappings as mutable.</p>
 <p>By default, serialized types are assumed to be mutable. You can set the <code>@Mutable</code> annotation to <code>false</code> to make these types not mutable.</p>
 <p>You can also configure mutable mappings for <code>Date</code> and <code>Calendar</code> fields in the persistence unit in the <code>persistence.xml</code> file.</p>
-<a id="sthref210" name="sthref210"></a>
+<a id="sthref204" name="sthref204"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<p><a href="#CHDDJJEE">Example 2-57</a> shows how to use the <code>@Mutable</code> annotation to specify <code>Employee</code> field <code>hireDate</code>.</p>
+<p><a href="#CHDDJJEE">Example 2-58</a> shows how to use the <code>@Mutable</code> annotation to specify <code>Employee</code> field <code>hireDate</code>.</p>
 <div class="example"><a id="CHDDJJEE" name="CHDDJJEE"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-57 Using @Mutable Annotation</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-58 Using @Mutable Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Entity
 public class Employee implements Serializable {
@@ -101,7 +100,7 @@ public class Employee implements Serializable {
 ...
 
   @Temporal(DATE)
-    @Mutable
+    <strong>@Mutable</strong>
     public Calendar getHireDate() {
     return hireDate;
   }
@@ -110,21 +109,21 @@ public class Employee implements Serializable {
  }
 </pre></div>
 <!-- class="example" -->
-<p><a href="#CHDCDIBH">Example 2-58</a> shows how to configure mutable mappings in the persistence unit <code>persistence.xml</code> file or by importing a <code>property</code> map.</p>
+<p><a href="#CHDCDIBH">Example 2-59</a> shows how to configure mutable mappings in the persistence unit <code>persistence.xml</code> file or by importing a <code>property</code> map.</p>
 <div class="example"><a id="CHDCDIBH" name="CHDCDIBH"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-58 Specifying Mutable Mappings in persistence.xml</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-59 Specifying Mutable Mappings in persistence.xml</font></em></strong></p>
 <p>Using <code>persistence.xml</code> file:</p>
 <pre xml:space="preserve" class="oac_no_warn">
-&lt;property name="eclipselink.temporal.mutable" value="true"/&gt;
+<strong>&lt;property name="eclipselink.temporal.mutable" value="true"/&gt;</strong>
 
 </pre>
 <p>Using <code>property</code> map:</p>
 <pre xml:space="preserve" class="oac_no_warn">
 import org.eclipse.persistence.config.PersistenceUnitProperties;
-propertiesMap.put(PersistenceUnitProperties.TEMPORAL_MUTABLE, "false");
+propertiesMap.put(<strong>PersistenceUnitProperties.TEMPORAL_MUTABLE, "false"</strong>);
 </pre></div>
 <!-- class="example" -->
-<a id="sthref211" name="sthref211"></a>
+<a id="sthref205" name="sthref205"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
@@ -156,14 +155,14 @@ propertiesMap.put(PersistenceUnitProperties.TEMPORAL_MUTABLE, "false");
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
- 
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2012,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../../dcommon/html/cpyr.htm"><br />
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Search</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
 </tr>
 </table>
 </td>
@@ -171,5 +170,5 @@ propertiesMap.put(PersistenceUnitProperties.TEMPORAL_MUTABLE, "false");
 </table>
 </div>
 <!-- class="footer" -->
-<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a></div><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script></body>
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
 </html>

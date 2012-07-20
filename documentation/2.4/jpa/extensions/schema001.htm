@@ -6,30 +6,29 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Overriding and Merging | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.2 Build 067" />
-<meta name="date" content="2012-06-29T11:47:16Z" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
+<meta name="date" content="2012-07-20T8:40:26Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Overriding and Merging" />
-<meta name="description" content="Java Persistence API (JPA) Extensions Reference for EclipseLink, 2.4.x" />
+<meta name="relnum" content="Release 2.4" />
 <link rel="stylesheet" type="text/css" href="../../../dcommon/style.css" media="screen" />
 <link rel="copyright" href="http://www.eclipse.org/org/documents/epl-v10.php" title="Copyright" type="text/html" />  
 <link rel="start" href="../../index.htm" title="Home" type="text/html" />
 <link rel="contents" href="toc.htm" title="Contents" type="text/html" />
 <link rel="prev" href="schema.htm" title="Previous" type="text/html" />
-</head>
-<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe>
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:4sqnhke2any', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
-<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><div class="booktitle"><strong>Java Persistence API (JPA) Extensions Reference for EclipseLink</strong>, 
-<strong>Release 2.4.x</strong></div><br />
- </font></td>
+<td align="left" valign="top"><div class="booktitle">Java Persistence API (JPA) Extensions Reference for EclipseLink, 
+Release 2.4</div></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Search</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
 </tr>
 </table>
 </td>
@@ -44,8 +43,8 @@
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header -->
-<div class="sect1"><!-- infolevel="all" infotype="General" --><a id="sthref553" name="sthref553"></a>
+<div class="ind"><!-- End Header --><a id="BGBBEIEA" name="BGBBEIEA"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Overriding and Merging</font></h1>
 <p>To override the <code>orm.xml</code> file's mapping, you must define the <code>META-INF/eclipselink-orm.xml</code> file in the project. When both <code>orm.xml</code> and <code>eclipselink-orm.xml</code> are specified, the contents of <code>eclipselink-orm.xml</code> will override <code>orm.xml</code> and any other JPA mapping file specified in the persistence unit. If there are overlapping specifications in multiple ORM files, the files are merged if they are no conflicting entities.</p>
 <div align="center">
@@ -55,7 +54,8 @@
 <tr>
 <td align="left">
 <p class="note"><img src="../../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
-The order of files defined in <code>persistence.xml</code> <em>does not</em> define the order of their processing. The files are processed, merged, and overridden as determined by the rules.</td>
+<p>The order of files defined in <code>persistence.xml</code> <em>does not</em> define the order of their processing. The files are processed, merged, and overridden as determined by the rules.</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -95,7 +95,7 @@ The order of files defined in <code>persistence.xml</code> <em>does not</em> def
 <div class="sect3">
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Persistence Unit Metadata</font></h3>
 <p>In <code>eclipselink-orm.xml</code>, a <code>persistence-unit-metadata</code> element merges or overrides the values of existing <code>persistence-unit-metadata</code> specification as defined in <a href="#BGBGIFHH">Table 5-1</a>.</p>
-<div class="tblhruleformalwide"><a id="sthref554" name="sthref554"></a><a id="BGBGIFHH" name="BGBGIFHH"></a>
+<div class="tblhruleformalwide"><a id="sthref545" name="sthref545"></a><a id="BGBGIFHH" name="BGBGIFHH"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 5-1 Overriding and Merging Persistence Unit Metadata</font></em></strong></p>
 <table class="HRuleFormalWide" title="Overriding and Merging Persistence Unit Metadata" summary="Overriding and Merging Persistence Unit Metadata" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="29%" />
@@ -103,7 +103,8 @@ The order of files defined in <code>persistence.xml</code> <em>does not</em> def
 <col width="*" />
 <thead>
 <tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t4"><font face="Arial, Helvetica, sans-serif"><strong>entity-mappings/persistence-unit-metadata</strong></font></th>
+<th align="left" valign="bottom" id="r1c1-t4"><font face="Arial, Helvetica, sans-serif"><strong>entity-mappings/<br />
+persistence-unit-metadata</strong></font></th>
 <th align="left" valign="bottom" id="r1c2-t4"><font face="Arial, Helvetica, sans-serif"><strong>Rule</strong></font></th>
 <th align="left" valign="bottom" id="r1c3-t4"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
 </tr>
@@ -111,7 +112,8 @@ The order of files defined in <code>persistence.xml</code> <em>does not</em> def
 <tbody>
 <tr align="left" valign="top">
 <td align="left" id="r2c1-t4" headers="r1c1-t4">
-<p><code>xml-mapping-metadata- complete</code></p>
+<p><code>xml-mapping-metadata-<br />
+complete</code></p>
 </td>
 <td align="left" headers="r2c1-t4 r1c2-t4">
 <p>Full override</p>
@@ -122,7 +124,8 @@ The order of files defined in <code>persistence.xml</code> <em>does not</em> def
 </tr>
 <tr align="left" valign="top">
 <td align="left" id="r3c1-t4" headers="r1c1-t4">
-<p><code>persistence-unit-defaults/schema</code></p>
+<p><code>persistence-unit-defaults/<br />
+schema</code></p>
 </td>
 <td align="left" headers="r3c1-t4 r1c2-t4">
 <p>Full override</p>
@@ -133,7 +136,8 @@ The order of files defined in <code>persistence.xml</code> <em>does not</em> def
 </tr>
 <tr align="left" valign="top">
 <td align="left" id="r4c1-t4" headers="r1c1-t4">
-<p><code>persistence-unit-defaults/catalog</code></p>
+<p><code>persistence-unit-defaults/<br />
+catalog</code></p>
 </td>
 <td align="left" headers="r4c1-t4 r1c2-t4">
 <p>Full override</p>
@@ -144,7 +148,8 @@ The order of files defined in <code>persistence.xml</code> <em>does not</em> def
 </tr>
 <tr align="left" valign="top">
 <td align="left" id="r5c1-t4" headers="r1c1-t4">
-<p><code>persistence-unit-defaults/access</code></p>
+<p><code>persistence-unit-defaults/<br />
+access</code></p>
 </td>
 <td align="left" headers="r5c1-t4 r1c2-t4">
 <p>Full override</p>
@@ -155,7 +160,8 @@ The order of files defined in <code>persistence.xml</code> <em>does not</em> def
 </tr>
 <tr align="left" valign="top">
 <td align="left" id="r6c1-t4" headers="r1c1-t4">
-<p><code>entity-mappings/persistence-unit-metadata/persistence-unit-defaults/cascade- persist</code></p>
+<p><code>entity-mappings/persistence-unit-metadata/persistence-unit-defaults/cascade-<br />
+persist</code></p>
 </td>
 <td align="left" headers="r6c1-t4 r1c2-t4">
 <p>Full override</p>
@@ -166,7 +172,8 @@ The order of files defined in <code>persistence.xml</code> <em>does not</em> def
 </tr>
 <tr align="left" valign="top">
 <td align="left" id="r7c1-t4" headers="r1c1-t4">
-<p><code>entity-mappings/persistence-unit-metadata/persistence-unit-defaults/entity- listeners</code></p>
+<p><code>entity-mappings/persistence-unit-metadata/persistence-unit-defaults/entity-<br />
+listeners</code></p>
 </td>
 <td align="left" headers="r7c1-t4 r1c2-t4">
 <p>Merge</p>
@@ -184,7 +191,7 @@ The order of files defined in <code>persistence.xml</code> <em>does not</em> def
 <div class="sect3"><!-- infolevel="all" infotype="General" -->
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Entity Mappings</font></h3>
 <p>Entities, embeddables and mapped superclasses are defined within the <code>entity-mappings</code> section. The <code>eclipselink-orm.xml</code> entities, embeddables and mapped superclasses are added to the persistence unit as defined in <a href="#BGBJEBHG">Table 5-2</a>.</p>
-<div class="tblhruleformalwide"><a id="sthref555" name="sthref555"></a><a id="BGBJEBHG" name="BGBJEBHG"></a>
+<div class="tblhruleformalwide"><a id="sthref546" name="sthref546"></a><a id="BGBJEBHG" name="BGBJEBHG"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 5-2 Overriding and Merging Entity Mappings</font></em></strong></p>
 <table class="HRuleFormalWide" title="Overriding and Merging Entity Mappings" summary="Overriding and Merging Entity Mappings" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="24%" />
@@ -306,7 +313,7 @@ The order of files defined in <code>persistence.xml</code> <em>does not</em> def
 <div class="sect3"><!-- infolevel="all" infotype="General" -->
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Mapped Superclasses</font></h3>
 <p>A mapped-superclass can be defined completely, or with specific elements to provide extensions to a mapped-superclass from another mapping file. <a href="#BGBBFABH">Table 5-3</a> lists individual override and merging rules:</p>
-<div class="tblhruleformalwide"><a id="sthref556" name="sthref556"></a><a id="BGBBFABH" name="BGBBFABH"></a>
+<div class="tblhruleformalwide"><a id="sthref547" name="sthref547"></a><a id="BGBBFABH" name="BGBBFABH"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 5-3 Overriding and Merging Mapped Superclasses</font></em></strong></p>
 <table class="HRuleFormalWide" title="Overriding and Merging Mapped Superclasses" summary="Overriding and Merging Mapped Superclasses" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="25%" />
@@ -333,7 +340,8 @@ The order of files defined in <code>persistence.xml</code> <em>does not</em> def
 </tr>
 <tr align="left" valign="top">
 <td align="left" id="r3c1-t6" headers="r1c1-t6">
-<p><code>exclude-default- listeners</code></p>
+<p><code>exclude-default-<br />
+listeners</code></p>
 </td>
 <td align="left" headers="r3c1-t6 r1c2-t6">
 <p>Full override</p>
@@ -344,7 +352,8 @@ The order of files defined in <code>persistence.xml</code> <em>does not</em> def
 </tr>
 <tr align="left" valign="top">
 <td align="left" id="r4c1-t6" headers="r1c1-t6">
-<p><code>exclude-superclass- listeners</code></p>
+<p><code>exclude-superclass-<br />
+listeners</code></p>
 </td>
 <td align="left" headers="r4c1-t6 r1c2-t6">
 <p>Full override</p>
@@ -455,7 +464,7 @@ The order of files defined in <code>persistence.xml</code> <em>does not</em> def
 </tr>
 <tr align="left" valign="top">
 <td align="left" id="r14c1-t6" headers="r1c1-t6">
-<p>class</p>
+<p><code>class</code></p>
 </td>
 <td align="left" headers="r14c1-t6 r1c2-t6">
 <p>None</p>
@@ -464,7 +473,7 @@ The order of files defined in <code>persistence.xml</code> <em>does not</em> def
 </tr>
 <tr align="left" valign="top">
 <td align="left" id="r15c1-t6" headers="r1c1-t6">
-<p>access</p>
+<p><code>access</code></p>
 </td>
 <td align="left" headers="r15c1-t6 r1c2-t6">
 <p>Full override</p>
@@ -475,7 +484,7 @@ The order of files defined in <code>persistence.xml</code> <em>does not</em> def
 </tr>
 <tr align="left" valign="top">
 <td align="left" id="r16c1-t6" headers="r1c1-t6">
-<p>metadata-complete</p>
+<p><code>metadata-complete</code></p>
 </td>
 <td align="left" headers="r16c1-t6 r1c2-t6">
 <p>Full override</p>
@@ -493,7 +502,7 @@ The order of files defined in <code>persistence.xml</code> <em>does not</em> def
 <div class="sect3"><!-- infolevel="all" infotype="General" -->
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Entity override and merging rules</font></h3>
 <p>An entity can be defined completely, or with specific elements to provide extensions to an entity from another mapping file. The following table lists individual override and merging rules:</p>
-<div class="tblhruleformalwide"><a id="sthref557" name="sthref557"></a><a id="BGBEDIBC" name="BGBEDIBC"></a>
+<div class="tblhruleformalwide"><a id="sthref548" name="sthref548"></a><a id="BGBEDIBC" name="BGBEDIBC"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 5-4 Overriding and Merging Entities</font></em></strong></p>
 <table class="HRuleFormalWide" title="Overriding and Merging Entities" summary="Overriding and Merging Entities" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="31%" />
@@ -823,7 +832,7 @@ The order of files defined in <code>persistence.xml</code> <em>does not</em> def
 <div class="sect3"><!-- infolevel="all" infotype="General" -->
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Embeddable</font></h3>
 <p>An embeddable can be defined wholly or may be defined so as to provide extensions to an embeddable from another mapping file. Therefore, we will allow the merging of that class' metadata. <a href="#BGBEDIBC">Table 5-4</a> lists the individual override rules Embeddable classes.</p>
-<div class="tblhruleformalwide"><a id="sthref558" name="sthref558"></a><a id="sthref559" name="sthref559"></a>
+<div class="tblhruleformalwide"><a id="sthref549" name="sthref549"></a><a id="sthref550" name="sthref550"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 5-5 Overriding and Merging Embeddable Classes</font></em></strong></p>
 <table class="HRuleFormalWide" title="Overriding and Merging Embeddable Classes" summary="Overriding and Merging Embeddable Classes" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="21%" />
@@ -831,7 +840,8 @@ The order of files defined in <code>persistence.xml</code> <em>does not</em> def
 <col width="*" />
 <thead>
 <tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t8"><font face="Arial, Helvetica, sans-serif"><strong>entity-mappings/embeddable</strong></font></th>
+<th align="left" valign="bottom" id="r1c1-t8"><font face="Arial, Helvetica, sans-serif"><strong>entity-mappings/<br />
+embeddable</strong></font></th>
 <th align="left" valign="bottom" id="r1c2-t8"><font face="Arial, Helvetica, sans-serif"><strong>Rule</strong></font></th>
 <th align="left" valign="bottom" id="r1c3-t8"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
 </tr>
@@ -888,8 +898,8 @@ The order of files defined in <code>persistence.xml</code> <em>does not</em> def
 <a id="BGBGFDDF" name="BGBGFDDF"></a>
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Examples of Overriding and Merging</font></h2>
-<div class="example"><a id="sthref560" name="sthref560"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 5-1 Example 1</font></em></strong></p>
+<div class="example"><a id="sthref551" name="sthref551"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 5-1 Overriding/Merging Example 1</font></em></strong></p>
 <p>In this example, your EclipseLink project contains:</p>
 <ul>
 <li>
@@ -915,8 +925,8 @@ The order of files defined in <code>persistence.xml</code> <em>does not</em> def
 </ul>
 </div>
 <!-- class="example" -->
-<div class="example"><a id="sthref561" name="sthref561"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 5-2 Example 2</font></em></strong></p>
+<div class="example"><a id="sthref552" name="sthref552"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 5-2 Overriding/Merging Example 2</font></em></strong></p>
 <p>In this example, your EclipseLink project contains:</p>
 <ul>
 <li>
@@ -956,8 +966,8 @@ The order of files defined in <code>persistence.xml</code> <em>does not</em> def
 </ul>
 </div>
 <!-- class="example" -->
-<div class="example"><a id="sthref562" name="sthref562"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 5-3 Example 3</font></em></strong></p>
+<div class="example"><a id="sthref553" name="sthref553"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 5-3 Overriding/Merging Example 3</font></em></strong></p>
 <p>In this example, your EclipseLink project contains:</p>
 <ul>
 <li>
@@ -989,8 +999,8 @@ The order of files defined in <code>persistence.xml</code> <em>does not</em> def
 </ul>
 </div>
 <!-- class="example" -->
-<div class="example"><a id="sthref563" name="sthref563"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 5-4 Example 4</font></em></strong></p>
+<div class="example"><a id="sthref554" name="sthref554"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 5-4 Overriding/Merging Example 4</font></em></strong></p>
 <p>In this example, your EclipseLink project contains:</p>
 <ul>
 <li>
@@ -1004,8 +1014,8 @@ The order of files defined in <code>persistence.xml</code> <em>does not</em> def
 <p>Results in an exception, due to conflicting specifications for mapping <strong>c</strong>.</p>
 </div>
 <!-- class="example" -->
-<div class="example"><a id="sthref564" name="sthref564"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 5-5 Example 5</font></em></strong></p>
+<div class="example"><a id="sthref555" name="sthref555"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 5-5 Overriding/Merging Example 5</font></em></strong></p>
 <p>In this example, your EclipseLink project contains:</p>
 <ul>
 <li>
@@ -1044,14 +1054,14 @@ The order of files defined in <code>persistence.xml</code> <em>does not</em> def
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
- 
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2012,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../../dcommon/html/cpyr.htm"><br />
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Search</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
 </tr>
 </table>
 </td>
@@ -1059,5 +1069,5 @@ The order of files defined in <code>persistence.xml</code> <em>does not</em> def
 </table>
 </div>
 <!-- class="footer" -->
-<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a></div><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script></body>
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
 </html>

@@ -6,31 +6,30 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@PrimaryKey | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.2 Build 067" />
-<meta name="date" content="2012-06-29T11:47:14Z" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
+<meta name="date" content="2012-07-20T8:40:24Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@PrimaryKey" />
-<meta name="description" content="Java Persistence API (JPA) Extensions Reference for EclipseLink, 2.4.x" />
+<meta name="relnum" content="Release 2.4" />
 <link rel="stylesheet" type="text/css" href="../../../dcommon/style.css" media="screen" />
 <link rel="copyright" href="http://www.eclipse.org/org/documents/epl-v10.php" title="Copyright" type="text/html" />  
 <link rel="start" href="../../index.htm" title="Home" type="text/html" />
 <link rel="contents" href="toc.htm" title="Contents" type="text/html" />
 <link rel="prev" href="a_pinnedpartitioning.htm" title="Previous" type="text/html" />
 <link rel="next" href="a_privateowned.htm" title="Next" type="text/html" />
-</head>
-<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe>
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:4sqnhke2any', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
-<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><div class="booktitle"><strong>Java Persistence API (JPA) Extensions Reference for EclipseLink</strong>, 
-<strong>Release 2.4.x</strong></div><br />
- </font></td>
+<td align="left" valign="top"><div class="booktitle">Java Persistence API (JPA) Extensions Reference for EclipseLink, 
+Release 2.4</div></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Search</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
 </tr>
 </table>
 </td>
@@ -52,48 +51,48 @@
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@PrimaryKey</font></h2>
 <p>Use <code>@PrimaryKey</code> to allow advanced configuration of the ID.</p>
 <p>A validation policy can be given that allows specifying if zero is a valid ID value. The set of primary key columns can also be specified precisely.</p>
-<a id="sthref277" name="sthref277"></a>
+<a id="sthref271" name="sthref271"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
-<p><a href="#BGEBGEAB">Table 2-48</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="sthref278" name="sthref278"></a><a id="BGEBGEAB" name="BGEBGEAB"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-48 @PrimaryKey Annotation Elements</font></em></strong></p>
+<p><a href="#BGEBGEAB">Table 2-47</a> describes this annotation's elements.</p>
+<div class="tblhruleformalwide"><a id="sthref272" name="sthref272"></a><a id="BGEBGEAB" name="BGEBGEAB"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-47 @PrimaryKey Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@PrimaryKey Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="23%" />
 <col width="*" />
 <col width="20%" />
 <thead>
 <tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t58"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
-<th align="left" valign="bottom" id="r1c2-t58"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
-<th align="left" valign="bottom" id="r1c3-t58"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
+<th align="left" valign="bottom" id="r1c1-t57"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t57"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c3-t57"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
 </tr>
 </thead>
 <tbody>
 <tr align="left" valign="top">
-<td align="left" id="r2c1-t58" headers="r1c1-t58">
+<td align="left" id="r2c1-t57" headers="r1c1-t57">
 <p><code>cacheKeyType</code></p>
 </td>
-<td align="left" headers="r2c1-t58 r1c2-t58">
+<td align="left" headers="r2c1-t57 r1c2-t57">
 <p>(Optional) Configures the cache key type to store the object in the cache.</p>
 </td>
-<td align="left" headers="r2c1-t58 r1c3-t58">
+<td align="left" headers="r2c1-t57 r1c3-t57">
 <p><code>AUTO</code></p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r3c1-t58" headers="r1c1-t58">
+<td align="left" id="r3c1-t57" headers="r1c1-t57">
 <p><code>columns</code></p>
 </td>
-<td align="left" headers="r3c1-t58 r1c2-t58">
+<td align="left" headers="r3c1-t57 r1c2-t57">
 <p>(Optional) Directly specify the primary key columns. This can be used instead of <code>@Id</code> if the primary key includes a non basic field, such as a foreign key, or a inheritance discriminator, embedded, or transformation mapped field.</p>
 </td>
-<td align="left" headers="r3c1-t58 r1c3-t58"><br /></td>
+<td align="left" headers="r3c1-t57 r1c3-t57"><br /></td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r4c1-t58" headers="r1c1-t58">
+<td align="left" id="r4c1-t57" headers="r1c1-t57">
 <p><code>validation</code></p>
 </td>
-<td align="left" headers="r4c1-t58 r1c2-t58">
+<td align="left" headers="r4c1-t57 r1c2-t57">
 <p>(Optional) Configures what ID validation is done:</p>
 <ul>
 <li>
@@ -111,7 +110,7 @@
 </ul>
 <p>By default <code>0</code> is not a valid ID value, this can be used to allow 0 id values.</p>
 </td>
-<td align="left" headers="r4c1-t58 r1c3-t58">
+<td align="left" headers="r4c1-t57 r1c3-t57">
 <p><code>ZERO</code></p>
 </td>
 </tr>
@@ -119,37 +118,38 @@
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref279" name="sthref279"></a>
+<a id="sthref273" name="sthref273"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>By default, EclipseLink interprets zero as <code>null</code> for primitive types that cannot be null (such as <code>int</code> and <code>long</code>), causing zero to be an invalid value for primary keys. You can modify this setting by using the <code>@PrimaryKey</code> annotation to configure an <code>IdValidation</code> for an entity class.</p>
-<a id="sthref280" name="sthref280"></a>
+<a id="sthref274" name="sthref274"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<p><a href="#BGEJFGAG">Example 2-77</a> shows how to use this annotation.</p>
+<p><a href="#BGEJFGAG">Example 2-78</a> shows how to use this annotation.</p>
 <div class="example"><a id="BGEJFGAG" name="BGEJFGAG"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-77 Using @PrimaryKey Annotation</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-78 Using @PrimaryKey Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
-@PrimaryKey(validation=IdValidation.ZERO)
+<strong>@PrimaryKey(validation=IdValidation.ZERO)</strong>
 public class Employee implements Serializable, Cloneable {
 ...
 }
 </pre></div>
 <!-- class="example" -->
-<p><a href="#BGEGDFHI">Example 2-78</a> shows how to use the <code>&lt;primary-key&gt;</code> element in your <code>eclipselink-orm.xml</code> file.</p>
+<p><a href="#BGEGDFHI">Example 2-79</a> shows how to use the <code>&lt;primary-key&gt;</code> element in your <code>eclipselink-orm.xml</code> file.</p>
 <div class="example"><a id="BGEGDFHI" name="BGEGDFHI"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-78 Using @&lt;primary-key&gt; XML</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-79 Using @&lt;primary-key&gt; XML</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;entity name="Employee" class="foo.Employee" access="PROPERTY"&gt;
-   &lt;primary-key validation="ZERO"/&gt;
+   <strong>&lt;primary-key validation="ZERO"/</strong>&gt;
 ...
 &lt;/entity&gt;
 </pre></div>
 <!-- class="example" -->
-<a id="sthref281" name="sthref281"></a>
+<a id="sthref275" name="sthref275"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
 <li>
-<p>"@Id" <code><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Entities/Ids/Id">http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Entities/Ids/Id</a></code></p>
+<p>"@Id"<br />
+<code><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Entities/Ids/Id">http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Entities/Ids/Id</a></code></p>
 </li>
 <li>
 <p><a href="annotations_ref001.htm#CACGCEIJ">"Entity Annotations"</a></p>
@@ -179,14 +179,14 @@ public class Employee implements Serializable, Cloneable {
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
- 
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2012,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../../dcommon/html/cpyr.htm"><br />
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Search</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
 </tr>
 </table>
 </td>
@@ -194,5 +194,5 @@ public class Employee implements Serializable, Cloneable {
 </table>
 </div>
 <!-- class="footer" -->
-<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a></div><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script></body>
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
 </html>

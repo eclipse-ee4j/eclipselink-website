@@ -5,18 +5,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
-<title>@StoredProcedureParameter | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
+<title>Java Persistence API (JPA) Extensions Reference for EclipseLink, Release 2.4 | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-07-20T8:40:24Z" />
+<meta name="date" content="2012-07-20T8:40:23Z" />
 <meta name="robots" content="noarchive" />
-<meta name="doctitle" content="@StoredProcedureParameter" />
+<meta name="doctitle" content="Java Persistence API (JPA) Extensions Reference for EclipseLink, Release 2.4" />
 <meta name="relnum" content="Release 2.4" />
 <link rel="stylesheet" type="text/css" href="../../../dcommon/style.css" media="screen" />
 <link rel="copyright" href="http://www.eclipse.org/org/documents/epl-v10.php" title="Copyright" type="text/html" />  
 <link rel="start" href="../../index.htm" title="Home" type="text/html" />
 <link rel="contents" href="toc.htm" title="Contents" type="text/html" />
-<link rel="prev" href="a_roundrobinpartitioning.htm" title="Previous" type="text/html" />
-<link rel="next" href="a_struct.htm" title="Next" type="text/html" />
+<link rel="prev" href="loe.htm" title="Previous" type="text/html" />
+<link rel="next" href="preface.htm" title="Next" type="text/html" />
 <!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
 <body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:4sqnhke2any', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
 <div class="header"><a id="top" name="top"></a>
@@ -38,144 +38,25 @@ Release 2.4</div></td>
 <hr />
 <table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
 <tr>
-<td align="center"><a href="a_roundrobinpartitioning.htm"><img src="../../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
-<td align="center"><a href="a_struct.htm"><img src="../../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="loe.htm"><img src="../../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="preface.htm"><img src="../../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
 <td>&nbsp;</td>
 </tr>
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header --><a id="CHDDEBEC" name="CHDDEBEC"></a>
-<hr />
-<div class="refsect1">
-<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@StoredProcedureParameter</font></h2>
-<p>Use <code>@StoredProcedureParameter</code> within a <code>NamedStoredProcedureQuery</code> annotation..</p>
-<a id="sthref334" name="sthref334"></a>
-<p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
-<p><a href="#CHDDEJEC">Table 2-57</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="sthref335" name="sthref335"></a><a id="CHDDEJEC" name="CHDDEJEC"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-57 @StoredProcedureParameter Annotation Elements</font></em></strong></p>
-<table class="HRuleFormalWide" title="@StoredProcedureParameter Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
-<col width="21%" />
-<col width="*" />
-<col width="14%" />
-<thead>
-<tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t68"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
-<th align="left" valign="bottom" id="r1c2-t68"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
-<th align="left" valign="bottom" id="r1c3-t68"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
-</tr>
-</thead>
-<tbody>
-<tr align="left" valign="top">
-<td align="left" id="r2c1-t68" headers="r1c1-t68">
-<p><code>queryParameter</code></p>
-</td>
-<td align="left" headers="r2c1-t68 r1c2-t68">
-<p>(Required) The query parameter name</p>
-</td>
-<td align="left" headers="r2c1-t68 r1c3-t68"><br /></td>
-</tr>
-<tr align="left" valign="top">
-<td align="left" id="r3c1-t68" headers="r1c1-t68">
-<p><code>direction</code></p>
-</td>
-<td align="left" headers="r3c1-t68 r1c2-t68">
-<p>(Optional) The direction of the stored procedure parameter:</p>
-<ul>
-<li>
-<p><code>IN</code> &ndash; Input parameter</p>
-</li>
-<li>
-<p><code>IN_OUT</code> &ndash; Input and output parameters</p>
-</li>
-<li>
-<p><code>OUT</code> &ndash; Output parameter</p>
-</li>
-<li>
-<p><code>OUT_CURSOR</code> &ndash; Output cursor</p>
-</li>
-</ul>
-</td>
-<td align="left" headers="r3c1-t68 r1c3-t68">
-<p><code>IN</code></p>
-</td>
-</tr>
-<tr align="left" valign="top">
-<td align="left" id="r4c1-t68" headers="r1c1-t68">
-<p><code>jdbcType</code></p>
-</td>
-<td align="left" headers="r4c1-t68 r1c2-t68">
-<p>(Optional) JDBC type code. This depends on the type returned from the procedure.</p>
-</td>
-<td align="left" headers="r4c1-t68 r1c3-t68">
-<p><code>-1</code></p>
-</td>
-</tr>
-<tr align="left" valign="top">
-<td align="left" id="r5c1-t68" headers="r1c1-t68">
-<p><code>jdbcTypeName</code></p>
-</td>
-<td align="left" headers="r5c1-t68 r1c2-t68">
-<p>(Optional) JDBC type name. This may be required for <code>ARRAY</code> or <code>STRUCT</code> types.</p>
-</td>
-<td align="left" headers="r5c1-t68 r1c3-t68"><br /></td>
-</tr>
-<tr align="left" valign="top">
-<td align="left" id="r6c1-t68" headers="r1c1-t68">
-<p><code>name</code></p>
-</td>
-<td align="left" headers="r6c1-t68 r1c2-t68">
-<p>(Optional) Stored procedure parameter name</p>
-</td>
-<td align="left" headers="r6c1-t68 r1c3-t68"><br /></td>
-</tr>
-<tr align="left" valign="top">
-<td align="left" id="r7c1-t68" headers="r1c1-t68">
-<p><code>optional</code></p>
-</td>
-<td align="left" headers="r7c1-t68 r1c2-t68">
-<p>(Optional) Specify if the parameter is required, or optional and defaulted by the procedure.</p>
-</td>
-<td align="left" headers="r7c1-t68 r1c3-t68">
-<p><code>false</code></p>
-</td>
-</tr>
-<tr align="left" valign="top">
-<td align="left" id="r8c1-t68" headers="r1c1-t68">
-<p><code>type</code></p>
-</td>
-<td align="left" headers="r8c1-t68 r1c2-t68">
-<p>(Optional) Type of Java class desired back from the procedure. This depends on the <code>type</code> returned from the procedure.</p>
-</td>
-<td align="left" headers="r8c1-t68 r1c3-t68">
-<p><code>void.class</code></p>
-</td>
-</tr>
-</tbody>
-</table>
-<br /></div>
-<!-- class="tblhruleformalwide" -->
-<a id="sthref336" name="sthref336"></a>
-<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
-<p>EclipseLink will throw an exception if you set more than one parameter to the <code>OUT_CURSOR</code> type.</p>
-<a id="sthref337" name="sthref337"></a>
-<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<p>See <a href="a_namedstoredprocedurequery.htm#BGBGAEFF">"@NamedStoredProcedureQuery"</a> for an example using the <code>@StoredProcedureParameter</code> annotation.</p>
-<a id="sthref338" name="sthref338"></a>
-<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
-<p>For more information:</p>
-<ul>
-<li>
-<p><a href="a_namedstoredprocedurequery.htm#BGBGAEFF">"@NamedStoredProcedureQuery"</a></p>
-</li>
-<li>
-<p>Stored Procedure Examples<br />
-<code><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/StoredProcedures">http://wiki.eclipse.org/EclipseLink/Examples/JPA/StoredProcedures</a></code></p>
-</li>
-</ul>
+<div class="ind"><!-- End Header -->
+<h1 class="docinfo"><font face="arial, helvetica, sans-serif">EclipseLink</font></h1>
+<p><span class="booktitle"><font face="arial, helvetica, sans-serif">Java Persistence API (JPA) Extensions Reference for&nbsp;EclipseLink</font></span></p>
+<p><span class="revnumber"><font face="arial, helvetica, sans-serif">Release 2.4</font></span></p>
+<p><hr style="display:block;margin:2em 0"/><span class="date" style="display:none;"><font face="arial, helvetica, sans-serif" size="-1">July 2012</font></span></p>
+<p><strong>EclipseLink Java Persistence API (JPA) Extensions Reference for EclipseLink</strong></p>
+<p>Copyright &copy; 2012 by The Eclipse Foundation under the Eclipse Public License (EPL)</p>
+<p><code><a href="http://www.eclipse.org/org/documents/epl-v10.php">http://www.eclipse.org/org/documents/epl-v10.php</a></code></p>
+<p>The initial contribution of this content was based on work copyrighted by Oracle and was submitted with permission.</p>
+<p>Print date: July 20, 2012</p>
+<p><code><a href=""></a></code></p>
 </div>
-<!-- class="refsect1" --></div>
 <!-- class="ind" -->
 <!-- Start Footer -->
 <div class="footer">
@@ -192,8 +73,8 @@ Release 2.4</div></td>
 <col width="48%" />
 <tr>
 <td>&nbsp;</td>
-<td align="center"><a href="a_roundrobinpartitioning.htm"><img src="../../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
-<td align="center"><a href="a_struct.htm"><img src="../../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="loe.htm"><img src="../../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="preface.htm"><img src="../../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
 </tr>
 </table>
 </td>

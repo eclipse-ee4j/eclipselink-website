@@ -6,31 +6,30 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@FetchGroup | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.2 Build 067" />
-<meta name="date" content="2012-06-29T11:47:14Z" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
+<meta name="date" content="2012-07-20T8:40:23Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@FetchGroup" />
-<meta name="description" content="Java Persistence API (JPA) Extensions Reference for EclipseLink, 2.4.x" />
+<meta name="relnum" content="Release 2.4" />
 <link rel="stylesheet" type="text/css" href="../../../dcommon/style.css" media="screen" />
 <link rel="copyright" href="http://www.eclipse.org/org/documents/epl-v10.php" title="Copyright" type="text/html" />  
 <link rel="start" href="../../index.htm" title="Home" type="text/html" />
 <link rel="contents" href="toc.htm" title="Contents" type="text/html" />
 <link rel="prev" href="a_fetchattribute.htm" title="Previous" type="text/html" />
 <link rel="next" href="a_fetchgroups.htm" title="Next" type="text/html" />
-</head>
-<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe>
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:4sqnhke2any', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
-<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><div class="booktitle"><strong>Java Persistence API (JPA) Extensions Reference for EclipseLink</strong>, 
-<strong>Release 2.4.x</strong></div><br />
- </font></td>
+<td align="left" valign="top"><div class="booktitle">Java Persistence API (JPA) Extensions Reference for EclipseLink, 
+Release 2.4</div></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Search</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
 </tr>
 </table>
 </td>
@@ -52,53 +51,53 @@
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@FetchGroup</font></h2>
 <p>Use <code>@FetchGroup</code> to load a group of attributes on demand, as needed.</p>
 <p>This avoids wasteful practice of loading all data of the object's attributes, if which the user is interested in only partial of them. However, it also means that the data for an attribute might not loaded from the underlying data source until an explicit access call for the attribute first occurs.</p>
-<a id="sthref136" name="sthref136"></a>
+<a id="sthref130" name="sthref130"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
-<p><a href="#BABFGBBD">Table 2-23</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="sthref137" name="sthref137"></a><a id="BABFGBBD" name="BABFGBBD"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-23 @FetchGroup Annotation Elements</font></em></strong></p>
+<p><a href="#BABFGBBD">Table 2-22</a> describes this annotation's elements.</p>
+<div class="tblhruleformalwide"><a id="sthref131" name="sthref131"></a><a id="BABFGBBD" name="BABFGBBD"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-22 @FetchGroup Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@FetchGroup Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="31%" />
 <col width="*" />
 <col width="19%" />
 <thead>
 <tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t31"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
-<th align="left" valign="bottom" id="r1c2-t31"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
-<th align="left" valign="bottom" id="r1c3-t31"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
+<th align="left" valign="bottom" id="r1c1-t30"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t30"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c3-t30"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
 </tr>
 </thead>
 <tbody>
 <tr align="left" valign="top">
-<td align="left" id="r2c1-t31" headers="r1c1-t31">
+<td align="left" id="r2c1-t30" headers="r1c1-t30">
 <p><code>FetchAttribute[] attributes</code></p>
 </td>
-<td align="left" headers="r2c1-t31 r1c2-t31">
+<td align="left" headers="r2c1-t30 r1c2-t30">
 <p>(Required) The list of attributes to fetch.</p>
 </td>
-<td align="left" headers="r2c1-t31 r1c3-t31">
+<td align="left" headers="r2c1-t30 r1c3-t30">
 <p>none</p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r3c1-t31" headers="r1c1-t31">
+<td align="left" id="r3c1-t30" headers="r1c1-t30">
 <p><code>java.lang.String name</code></p>
 </td>
-<td align="left" headers="r3c1-t31 r1c2-t31">
+<td align="left" headers="r3c1-t30 r1c2-t30">
 <p>(Required) The fetch group name.</p>
 </td>
-<td align="left" headers="r3c1-t31 r1c3-t31">
+<td align="left" headers="r3c1-t30 r1c3-t30">
 <p>none</p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r4c1-t31" headers="r1c1-t31">
+<td align="left" id="r4c1-t30" headers="r1c1-t30">
 <p><code>boolean load</code></p>
 </td>
-<td align="left" headers="r4c1-t31 r1c2-t31">
+<td align="left" headers="r4c1-t30 r1c2-t30">
 <p>(Optional) Indicates whether all relationship attributes specified in the fetch group should be loaded.</p>
 </td>
-<td align="left" headers="r4c1-t31 r1c3-t31">
+<td align="left" headers="r4c1-t30 r1c3-t30">
 <p><code>false</code></p>
 </td>
 </tr>
@@ -106,7 +105,7 @@
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref138" name="sthref138"></a>
+<a id="sthref132" name="sthref132"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>You should perform a careful use case analysis when using <code>@FetchGroup</code>; any gains realized from the deferred loading could be offset by the extra round-trip.</p>
 <p>EclipseLink supports fetch groups at two levels:</p>
@@ -125,40 +124,40 @@
 <p>Before using fetch groups, we recommend that you perform a careful analysis of system use. In many cases, the extra queries required to load attributes not in the fetch group could well offset the gain from the partial attribute loading.</p>
 <p>Fetch groups can be used only with basic mappings configured with <code>FetchType.LAZY (partial object queries)</code>.</p>
 <p>Use <code>AttributeGroup</code> to configure the use of partial entities in fetch, load, copy, and merge operations.</p>
-<a id="sthref139" name="sthref139"></a>
+<a id="sthref133" name="sthref133"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<p><a href="#BABGHDJB">Example 2-40</a> show how to use this annotation.</p>
+<p><a href="#BABGHDJB">Example 2-41</a> show how to use this annotation.</p>
 <div class="example"><a id="BABGHDJB" name="BABGHDJB"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-40 Using @FetchGroup Annotation</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-41 Using @FetchGroup Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
-@FetchGroup(name="names", attributes={
+<strong>@FetchGroup</strong>(name="names", attributes={
     @FetchAttribute(name="firstName"), 
     @FetchAttribute(name="lastName")})
 </pre></div>
 <!-- class="example" -->
-<p><a href="#BABGHDJB">Example 2-40</a> show how to use this feature in the <code>eclipselink-orm.xml</code> file.</p>
-<div class="example"><a id="sthref140" name="sthref140"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-41 Using &lt;fetch-group&gt; XML</font></em></strong></p>
+<p><a href="#BABGHDJB">Example 2-41</a> show how to use this feature in the <code>eclipselink-orm.xml</code> file.</p>
+<div class="example"><a id="sthref134" name="sthref134"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-42 Using &lt;fetch-group&gt; XML</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;entity class="model.Employee"&gt;
     &lt;secondary-table name="SALARY" /&gt;
-    &lt;fetch-group name="names"&gt;
+    <strong>&lt;fetch-group name="names"&gt;</strong>
         &lt;attribute name="firstName" /&gt;
         &lt;attribute name="lastName" /&gt;
-    &lt;/fetch-group&gt;
+    <strong>&lt;/fetch-group&gt;</strong>
 ...
 </pre></div>
 <!-- class="example" -->
-<p>You can also use a named fetch group with a query, as shown in <a href="#BABGFDJA">Example 2-42</a>.</p>
+<p>You can also use a named fetch group with a query, as shown in <a href="#BABGFDJA">Example 2-43</a>.</p>
 <div class="example"><a id="BABGFDJA" name="BABGFDJA"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-42 Using a Named Fetch Group on a Query</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-43 Using a Named Fetch Group on a Query</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 TypedQuery query = em.createQuery("SELECT e FROM Employee e", Employee.class);
  
 query.setHint(QueryHints.FETCH_GROUP_NAME, "names");
 </pre></div>
 <!-- class="example" -->
-<a id="sthref141" name="sthref141"></a>
+<a id="sthref135" name="sthref135"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
@@ -193,14 +192,14 @@ query.setHint(QueryHints.FETCH_GROUP_NAME, "names");
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
- 
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2012,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../../dcommon/html/cpyr.htm"><br />
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Search</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
 </tr>
 </table>
 </td>
@@ -208,5 +207,5 @@ query.setHint(QueryHints.FETCH_GROUP_NAME, "names");
 </table>
 </div>
 <!-- class="footer" -->
-<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a></div><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script></body>
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
 </html>

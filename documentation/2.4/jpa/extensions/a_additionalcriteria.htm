@@ -6,31 +6,30 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@AdditionalCriteria | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.2 Build 067" />
-<meta name="date" content="2012-06-29T11:47:13Z" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
+<meta name="date" content="2012-07-20T8:40:23Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@AdditionalCriteria" />
-<meta name="description" content="Java Persistence API (JPA) Extensions Reference for EclipseLink, 2.4.x" />
+<meta name="relnum" content="Release 2.4" />
 <link rel="stylesheet" type="text/css" href="../../../dcommon/style.css" media="screen" />
 <link rel="copyright" href="http://www.eclipse.org/org/documents/epl-v10.php" title="Copyright" type="text/html" />  
 <link rel="start" href="../../index.htm" title="Home" type="text/html" />
 <link rel="contents" href="toc.htm" title="Contents" type="text/html" />
 <link rel="prev" href="annotations_ref002.htm" title="Previous" type="text/html" />
 <link rel="next" href="a_array.htm" title="Next" type="text/html" />
-</head>
-<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe>
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:4sqnhke2any', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
-<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><div class="booktitle"><strong>Java Persistence API (JPA) Extensions Reference for EclipseLink</strong>, 
-<strong>Release 2.4.x</strong></div><br />
- </font></td>
+<td align="left" valign="top"><div class="booktitle">Java Persistence API (JPA) Extensions Reference for EclipseLink, 
+Release 2.4</div></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Search</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
 </tr>
 </table>
 </td>
@@ -93,7 +92,8 @@
 <tr>
 <td align="left">
 <p class="note"><img src="../../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
-Additional criteria are not supported with native queries.</td>
+<p>Additional criteria are not supported with native queries.</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -112,7 +112,7 @@ Additional criteria are not supported with native queries.</td>
 <pre xml:space="preserve" class="oac_no_warn">
 package model;
  
-@AdditionalCriteria("this.company=:COMPANY")
+<strong>@AdditionalCriteria("this.company=:COMPANY")</strong>
 public class Employee {
 
   ...
@@ -127,15 +127,32 @@ entityManager.setProperty("COMPANY", "MyCompany");
 <div class="example"><a id="CFHHBDFE" name="CFHHBDFE"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-2 Using &lt;additional-criteria&gt; XML</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
-&lt;additional-criteria&gt;
+<strong>&lt;additional-criteria&gt;</strong>
   &lt;criteria&gt;this.address.city IS NOT NULL&lt;/criteria&gt;
-&lt;/additional-criteria&gt;
+<strong>&lt;/additional-criteria&gt;</strong>
 </pre></div>
 <!-- class="example" -->
 <a id="sthref11" name="sthref11"></a>
 <p><b><font face="arial, helvetica, sans-serif" color="#330099">Uses for Additional Criteria</font></b></p>
 <p>Uses for additional criteria include:</p>
-<a id="sthref12" name="sthref12"></a>
+<ul>
+<li>
+<p><a href="#CFHJIDHD">Multitenancy</a></p>
+</li>
+<li>
+<p><a href="#CFHGBAFD">Soft Delete</a></p>
+</li>
+<li>
+<p><a href="#CFHGBBJA">Data History</a></p>
+</li>
+<li>
+<p><a href="#CFHEHFHB">Temporal Filtering</a></p>
+</li>
+<li>
+<p><a href="#CFHDEBFE">Shared Table</a></p>
+</li>
+</ul>
+<a id="CFHJIDHD" name="CFHJIDHD"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Multitenancy</font></strong></p>
 <p>In a multitenancy environment, tenants (users, clients, organizations, applications) can share database tables, but the views on the data are restricted so that tenants have access only to their own data. You can use additional criteria to configure such restrictions.</p>
 <div align="center">
@@ -145,20 +162,21 @@ entityManager.setProperty("COMPANY", "MyCompany");
 <tr>
 <td align="left">
 <p class="note"><img src="../../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
-In most cases, you use the <code><a href="a_multitenant.htm#BABIEJGD">@Multitenant</a></code> annotation in multitenancy environments instead, as shown .</td>
+<p>In most cases, you use the <code><a href="a_multitenant.htm#BABIEJGD">@Multitenant</a></code> annotation in multitenancy environments instead, as shown .</p>
+</td>
 </tr>
 </tbody>
 </table>
 <br /></div>
 <!-- class="inftblnote" --></div>
-<div class="example"><a id="sthref13" name="sthref13"></a>
+<div class="example"><a id="sthref12" name="sthref12"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-3 Multitenancy Example 1</font></em></strong></p>
 <p>The following example restricts the data for a <strong>Billing</strong> client, such as a billing application or billing organization:</p>
 <pre xml:space="preserve" class="oac_no_warn">
 @AdditionalCriteria("this.tenant = 'Billing'")
 </pre></div>
 <!-- class="example" -->
-<div class="example"><a id="sthref14" name="sthref14"></a>
+<div class="example"><a id="sthref13" name="sthref13"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-4 Multitenancy Example 2</font></em></strong></p>
 <p>The following example could be used in an application used by multiple tenants at the same time. The additional criteria is defined as:</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -178,13 +196,13 @@ Map properties = new HashMap();
 properties.put("tenant", "ACME");
 EntityManager em = factory.createEntityManager(properties);
 </pre>
-<a id="sthref15" name="sthref15"></a>
+<a id="CFHGBAFD" name="CFHGBAFD"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Soft Delete</font></strong></p>
 <p>The following example filters data that is marked as deleted (but which still exists in the table) from a query:</p>
 <pre xml:space="preserve" class="oac_no_warn">
 @AdditionalCriteria("this.isDeleted = false")
 </pre>
-<a id="sthref16" name="sthref16"></a>
+<a id="CFHGBBJA" name="CFHGBBJA"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Data History</font></strong></p>
 <p>The following example returns the current data from a query, thus filtering out any out-of-date data, for example data stored in a history table.</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -197,27 +215,31 @@ EntityManager em = factory.createEntityManager(properties);
 <tr>
 <td align="left">
 <p class="note"><img src="../../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
-EclipseLink also provides specific history support, via <code>HistoryPolicy</code> . See Tracking Changes Using History Policy at <code><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/History">http://wiki.eclipse.org/EclipseLink/Examples/JPA/History</a></code>.</td>
+<p>EclipseLink also provides specific history support, via <code>HistoryPolicy</code> . See Tracking Changes Using History Policy at <code><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/History">http://wiki.eclipse.org/EclipseLink/Examples/JPA/History</a></code>.</p>
+</td>
 </tr>
 </tbody>
 </table>
 <br /></div>
 <!-- class="inftblnote" --></div>
-<a id="sthref17" name="sthref17"></a>
+<a id="CFHEHFHB" name="CFHEHFHB"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Temporal Filtering</font></strong></p>
 <p>The following example filters on a specific date:</p>
 <pre xml:space="preserve" class="oac_no_warn">
 @AdditionalCriteria("this.startDate &lt;= :viewDate and this.endDate &gt;= :viewDate")
 </pre>
-<a id="sthref18" name="sthref18"></a>
+<a id="CFHDEBFE" name="CFHDEBFE"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Shared Table</font></strong></p>
 <p>For a shared table, there may be inheritance in the table but not in the object model. For example, a <code>SavingsAccount</code> class may be mapped to an <code>ACCOUNT</code> table, but the <code>ACCOUNT</code> table contains both savings account data (<code>SAVINGS</code>) and checking account (<code>CHECKING</code>) data. You can use additional criteria to filter out the checking account data.</p>
-<a id="sthref19" name="sthref19"></a>
+<a id="sthref14" name="sthref14"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
 <li>
 <p><a href="j_column.htm#column">"COLUMN"</a></p>
+</li>
+<li>
+<p><a href="a_multitenant.htm#BABIEJGD">"@Multitenant"</a></p>
 </li>
 </ul>
 </div>
@@ -244,14 +266,14 @@ EclipseLink also provides specific history support, via <code>HistoryPolicy</cod
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
- 
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2012,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../../dcommon/html/cpyr.htm"><br />
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" class="external text" title="http://www.google.com/cse/home?cx=016171230611334810008:y5kxq4rqd8s&amp;hl=en" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Search</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
 </tr>
 </table>
 </td>
@@ -259,10 +281,5 @@ EclipseLink also provides specific history support, via <code>HistoryPolicy</cod
 </table>
 </div>
 <!-- class="footer" -->
-<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br />Updated: <script language="JavaScript">
-<!-- Hide JavaScript...
-var LastUpdated = document.lastModified;
-document.writeln ("Updated: " + LastUpdated);
-// End Hiding -->
-</script> </div><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script></body>
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
 </html>
