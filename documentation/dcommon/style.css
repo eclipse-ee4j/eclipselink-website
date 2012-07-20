@@ -84,4 +84,4 @@ table.gsc-search-box {background:url('http://www.eclipse.org/eclipselink/documen
 input#gsc-i-id1 {border: 1px solid #CCCCFF !important;}
 span.loadingspin {padding-left:30px;background:url('http://www.eclipse.org/eclipselink/documentation/dcommon/images/loading.gif') no-repeat left center;}
 #disqus_thread {margin-top:1.0em;padding-top:5px;border-top:1px solid #e6e6e6}
-#global-nav h4 {font-size:1.0em;}
+#global-nav h4 {font-size:1.0em !important}
