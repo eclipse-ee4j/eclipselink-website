@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Mapping Privately-Owned One-to-One Relationships | EclipseLink 2.4.x EclipseLink MOXy</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
+<meta name="date" content="2012-07-20T8:20:0Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Mapping Privately-Owned One-to-One Relationships" />
+<meta name="relnum" content="Release 2.4" />
+<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="privately_owned_relationships.htm" title="Previous" type="text/html" />
+<link rel="next" href="privately_owned_relationships002.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:dt93gmwxcuc', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><div class="booktitle">Developing JAXB Applications Using EclipseLink MOXy, 
+Release 2.4</div></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_moxy.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="privately_owned_relationships.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="privately_owned_relationships002.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header --><a id="BABHAJID" name="BABHAJID"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Mapping Privately-Owned One-to-One Relationships</font></h1>
+<p>This section demonstrates several ways to map a one-to-one relationship between objects. By default, one-to-one relationships are privately-owned in JAXB &ndash; their XML content will appear nested inside the owning element. For example, a <strong>Customer</strong> with a one-to-one mapping to a <strong>PhoneNumber</strong> would be marshalled as:</p>
+<div class="example"><a id="sthref116" name="sthref116"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 6-1 Sample XML Mapping</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;customer&gt;
+   &lt;name&gt;Bob Smith&lt;/name&gt;
+   &lt;id&gt;1982812&lt;/id&gt;
+   &lt;phone-number&gt;
+      &lt;area-code&gt;613&lt;/area-code&gt;
+      &lt;number&gt;5550210&lt;/number&gt;
+      &lt;extension&gt;20016&lt;/extension&gt;
+   &lt;/phone-number&gt;
+&lt;/customer&gt;
+ 
+</pre></div>
+<!-- class="example" -->
+<div class="sect2"><a id="sthref117" name="sthref117"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Mapping to an Element</font></h2>
+<p>Given the XML schema in <a href="#BABEIBFB">Example 6-2</a>, <a href="#BABCHCJD">Figure 6-1</a> illustrates a one-to-one (1:1) relationship between two complex types.</p>
+<div class="example"><a id="BABEIBFB" name="BABEIBFB"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 6-2 Sample XML Schema</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+ 
+   &lt;xsd:element name="customer" type="customer-type"/&gt;
+ 
+   &lt;xsd:complexType name="customer-type"&gt;
+      &lt;xsd:element name="phone-number" type="phone-type"/&gt;
+   &lt;/xsd:complexType&gt;
+ 
+   &lt;xsd:complexType name="phone-type"&gt;
+      &lt;xsd:element name="area-code" type="xsd:int"/&gt;
+      &lt;xsd:element name="number" type="xsd:int"/&gt;
+      &lt;xsd:element name="extension" type="xsd:int"/&gt;
+   &lt;/xsd:complexType&gt;
+ 
+&lt;/xsd:schema&gt;
+ 
+</pre></div>
+<!-- class="example" -->
+<div class="figure"><a id="BABCHCJD" name="BABCHCJD"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Figure 6-1 One-to-one Relationship</font></em></strong></p>
+<img src="img/Onetoone.gif" alt="" title="" /><br /></div>
+<!-- class="figure" -->
+<p><a href="#BABJIIGJ">Example 6-3</a> shows how to annotate your Java class to obtain this mapping with EclipseLink. The standard JAXB <code>@XmlElement</code> annotation can be used to indicate that the associated Java field should be mapped to an XML element.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>By default, JAXB will assume all fields on your Java object are <code>@XmlElements</code>, so in many cases the annotation itself is not required. If, however, you want to customize the Java field's XML name, you can specify an <code>@XmlElement</code> annotation with a name argument.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<div class="example"><a id="BABJIIGJ" name="BABJIIGJ"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 6-3 Using the @XmlElement Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package example;
+ 
+import javax.xml.bind.annotation.*;
+ 
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Customer {
+   <strong>@XmlElement</strong>(name="phone-number")
+   private PhoneNumber phoneNumber;
+ 
+   ...
+}
+ 
+package example;
+ 
+import javax.xml.bind.annotation.*;
+ 
+@XmlAccessorType(XmlAccessType.FIELD)
+public class PhoneNumber {
+   @XmlElement(name="area-code")
+   private Integer areaCode;
+ 
+   private Integer number;
+ 
+   private Integer extension;
+ 
+   ...
+}
+ 
+</pre></div>
+<!-- class="example" -->
+<p><a href="#BABBEIFJ">Example 6-4</a> shows how to define your mapping information in an EclipseLink's XML Bindings document.</p>
+<div class="example"><a id="BABBEIFJ" name="BABBEIFJ"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 6-4 Sample XML Mapping</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+...
+&lt;java-type name="Customer"&gt;
+   &lt;xml-root-element name="customer"/&gt;
+   &lt;java-attributes&gt;
+      &lt;xml-element java-attribute="phoneNumber" name="phone-number" type="PhoneNumber"/&gt;
+   &lt;/java-attributes&gt;
+&lt;/java-type&gt;
+ 
+&lt;java-type name="PhoneNumber"&gt;
+   &lt;java-attributes&gt;
+      &lt;xml-value java-attribute="areaCode" name="area-code" type="java.lang.Integer"/&gt;
+      &lt;xml-value java-attribute="number" type="java.lang.Integer"/&gt;
+      &lt;xml-value java-attribute="extension" type="java.lang.Integer"/&gt;
+   &lt;/java-attributes&gt;
+&lt;/java-type&gt;
+...
+ 
+</pre></div>
+<!-- class="example" --></div>
+<!-- class="sect2" -->
+<div class="sect2"><a id="sthref118" name="sthref118"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Using EclipseLink's @XmlPath Annotation</font></h2>
+<p>By default, your Java attributes will be mapped to XML based on their attributes Java name, or by a name specified in an <code>@XmlElement</code> annotation. This mapping is based on XPath, and EclipseLink's <code>@XmlPath</code> annotation allows you to customize this mapping. For example, you can use it to control the nesting of your elements in XML:</p>
+<div class="example"><a id="sthref119" name="sthref119"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 6-5 Using the @XmlPath Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package example;
+ 
+import javax.xml.bind.annotation.*;
+import org.eclipse.persistence.oxm.annotations.*;
+ 
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Customer {
+   <strong>@XmlPath</strong>("contact-info/phone-number")
+   private PhoneNumber phoneNumber;
+ 
+   ...
+}
+ 
+</pre></div>
+<!-- class="example" -->
+<div class="example"><a id="sthref120" name="sthref120"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 6-6 Using EclipseLink XML Bindings</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+...
+&lt;java-type name="Customer"&gt;
+   &lt;xml-root-element name="customer"/&gt;
+   &lt;java-attributes&gt;
+      &lt;xml-element java-attribute="phoneNumber" name="phone-number"
+         type="PhoneNumber" xml-path="contact-info/phone-number"/&gt;
+   &lt;/java-attributes&gt;
+&lt;/java-type&gt;
+...
+ 
+</pre></div>
+<!-- class="example" -->
+<p>This will produce the following XML:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;customer&gt;
+   &lt;contact-info&gt;
+      &lt;phone-number&gt;
+         &lt;number&gt;555-631-2124&lt;/number&gt;
+      &lt;/phone-number&gt;
+   &lt;/contact-info&gt;
+&lt;/customer&gt;
+ 
+</pre>
+<p>You can also use <code>@XmlPath</code> to map to different occurrences of the same element in XML, by index. For example:</p>
+<div class="example"><a id="sthref121" name="sthref121"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 6-7 Using the @XmlPath Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package example;
+ 
+import javax.xml.bind.annotation.*;
+import org.eclipse.persistence.oxm.annotations.*;
+ 
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Customer {
+   @XmlPath("contact-info/phone[1]")
+   private PhoneNumber homePhone;
+   @XmlPath("contact-info/phone[2]")
+   private PhoneNumber workPhone;
+   ...
+}
+ 
+</pre></div>
+<!-- class="example" -->
+<p>will produce the following XML:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;customer&gt;
+   &lt;contact-info&gt;
+      &lt;phone&gt;
+         &lt;number&gt;555-631-2124&lt;/number&gt;
+      &lt;/phone&gt;
+      &lt;phone&gt;
+         &lt;number&gt;555-631-8298&lt;/number&gt;
+      &lt;/phone&gt;
+   &lt;/contact-info&gt;
+&lt;/customer&gt;
+ 
+</pre>
+<p>For information on using XPath in your mappings, see <a href="advanced_concepts005.htm#CHDBFCAA">"Mapping Using XPath Predicates"</a>.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="privately_owned_relationships.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="privately_owned_relationships002.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+                
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_moxy.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
+</html>

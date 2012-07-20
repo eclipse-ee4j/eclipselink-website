@@ -1,0 +1,381 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Bootstrapping from XML Schema (XSD) | EclipseLink 2.4.x EclipseLink MOXy</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
+<meta name="date" content="2012-07-20T8:20:0Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Bootstrapping from XML Schema (XSD)" />
+<meta name="relnum" content="Release 2.4" />
+<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="dynamic_jaxb002.htm" title="Previous" type="text/html" />
+<link rel="next" href="dynamic_jaxb004.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:dt93gmwxcuc', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><div class="booktitle">Developing JAXB Applications Using EclipseLink MOXy, 
+Release 2.4</div></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_moxy.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="dynamic_jaxb002.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="dynamic_jaxb004.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header --><a id="BGBDCIBC" name="BGBDCIBC"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Bootstrapping from XML Schema (XSD)</font></h1>
+<p>With EclipseLink MOXy, you can provide an existing XML schema from which to create a <code>DynamicJAXBContext</code>. EclipseLink will parse the schema and generate <code>DynamicTypes</code> for each complex type. This is achieved by use of the <code>DynamicJAXBContextFactory</code> class. A <code>DynamicJAXBContext</code> cannot be instantiated directly; it must be created through the factory API.</p>
+<p>You can pass the XML Schema to <code>DynamicJAXBContextFactory</code> by using:</p>
+<ul>
+<li>
+<p><code>java.io.InputStream</code></p>
+</li>
+<li>
+<p><code>org.w3c.dom.Node</code></p>
+</li>
+<li>
+<p><code>javax.xml.transform.Source</code></p>
+</li>
+</ul>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>EclipseLink MOXy uses Sun's XJC (XML-to-Java Compiler) APIs to parse the schema into an in-memory representation and generate dynamic types and mappings. When bootstrapping from XSD, you will need to include <code>jaxb-xjc.jar</code> (from the JAXB reference implementation) on your <strong>CLASSPATH</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>The APIs used to create a DynamicJAXBContext are as follows:</p>
+<div class="example"><a id="sthref194" name="sthref194"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 9-4 Creating a DynamicJAXBContext</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+/**
+ * Create a DynamicJAXBContext, using XML Schema as the metadata source.
+ *
+ * @param schemaStream
+ *      java.io.InputStream from which to read the XML Schema.
+ * @param resolver
+ *      An org.xml.sax.EntityResolver, used to resolve schema imports.  Can be null.
+ * @param classLoader
+ *      The application's current class loader, which will be used to first lookup
+ *      classes to see if they exist before new DynamicTypes are generated.  Can be
+ *      null, in which case Thread.currentThread().getContextClassLoader() will be used.
+ * @param properties
+ *      Map of properties to use when creating a new DynamicJAXBContext.  Can be null.
+ *
+ * @return
+ *      A new instance of DynamicJAXBContext.
+ *
+ * @throws JAXBException
+ *      if an error was encountered while creating the DynamicJAXBContext.
+ */
+public static DynamicJAXBContext createContextFromXSD(java.io.InputStream schemaStream, EntityResolver resolver,
+   ClassLoader classLoader, Map&lt;String, ?&gt; properties) throws JAXBException
+ 
+public static DynamicJAXBContext createContextFromXSD(org.w3c.dom.Node schemaDOM, EntityResolver resolver,
+   ClassLoader classLoader, Map&lt;String, ?&gt; properties) throws JAXBException
+ 
+public static DynamicJAXBContext createContextFromXSD(javax.xml.transform.Source schemaSource, EntityResolver resolver,
+   ClassLoader classLoader, Map&lt;String, ?&gt; properties) throws JAXBException
+ 
+</pre></div>
+<!-- class="example" -->
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>The classLoader parameter is your application's current class loader, and will be used to first lookup classes to see if they exist before new <code>DynamicTypes</code> are generated. The user may pass in <code>null</code> for this parameter, and <code>Thread.currentThread().getContextClassLoader()</code> will be used instead.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>This example shows how to create and marshall a new object using Dynamic MOXy.</p>
+<div class="example"><a id="sthref195" name="sthref195"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 9-5 Sample XML Schema</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xs:schema targetNamespace="example" xmlns:myns="example" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    attributeFormDefault="qualified" elementFormDefault="qualified"&gt;
+ 
+    &lt;xs:element name="customer" type="myns:customer"/&gt;
+ 
+    &lt;xs:complexType name="customer"&gt;
+        &lt;xs:sequence&gt;
+            &lt;xs:element name="first-name" type="xs:string"/&gt;
+            &lt;xs:element name="last-name" type="xs:string"/&gt;
+            &lt;xs:element name="address" type="myns:address"/&gt;
+        &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+ 
+    &lt;xs:complexType name="address"&gt;
+        &lt;xs:sequence&gt;
+            &lt;xs:element name="street" type="xs:string"/&gt;
+            &lt;xs:element name="city" type="xs:string"/&gt;
+            &lt;xs:element name="province" type="xs:string"/&gt;
+            &lt;xs:element name="postal-code" type="xs:string"/&gt;
+        &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+ 
+&lt;/xs:schema&gt;
+ 
+</pre></div>
+<!-- class="example" -->
+<p>The code snippet in <a href="#BGBFCCBC">Example 9-6</a>:</p>
+<ul>
+<li>
+<p>Passes the XML Schema to <code>DynamicJAXBContextFactory</code> to create a <code>DynamicJAXBContext</code></p>
+</li>
+<li>
+<p>Creates new <code>DynamicEntities</code> and sets their properties</p>
+</li>
+<li>
+<p>Creates a <code>JAXBMarshaller</code> and marshals the Java objects to XML</p>
+</li>
+</ul>
+<div class="example"><a id="BGBFCCBC" name="BGBFCCBC"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 9-6 Sample Application Code</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+InputStream inputStream = myClassLoader.getSystemResourceAsStream("example/resources/xsd/customer.xsd");
+DynamicJAXBContext dContext = DynamicJAXBContextFactory.createContextFromXSD(inputStream, null, myClassLoader, null);
+ 
+DynamicEntity newCustomer = dContext.newDynamicEntity("example.Customer");
+newCustomer.set("firstName", "George");
+newCustomer.set("lastName", "Jones");
+ 
+DynamicEntity newAddress = dContext.newDynamicEntity("example.Address");
+newAddress.set("street", "227 Main St.");
+newAddress.set("city", "Toronto");
+newAddress.set("province", "Ontario");
+newAddress.set("postalCode", "M5V1E6");
+ 
+newCustomer.set("address", newAddress);
+ 
+dContext.createMarshaller().marshal(newCustomer, System.out);
+ 
+</pre></div>
+<!-- class="example" -->
+<div class="sect2"><a id="sthref196" name="sthref196"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Importing Other Schemas / EntityResolvers</font></h2>
+<p>If the XML schema that you use to bootstrap imports other schemas, you must configure an <code>org.xml.sax.EntityResolver</code> to resolve the locations of the imported schemas. You can then pass the <code>EntityResolver</code> to the <code>DynamicJAXBContextFactory</code>.</p>
+<p>In <a href="#BGBIIEGH">Example 9-7</a>, each type is defined in its own schema:</p>
+<div class="example"><a id="BGBIIEGH" name="BGBIIEGH"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 9-7 Sample XML Schema</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;!-- customer.xsd --&gt;
+ 
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xs:schema xmlns:myns="example" xmlns:add="addressNamespace"
+   xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="example"&gt;
+ 
+    &lt;xs:import namespace="addressNamespace" schemaLocation="address.xsd"/&gt;
+ 
+    &lt;xs:element name="customer" type="myns:customer"/&gt;
+ 
+    &lt;xs:complexType name="customer"&gt;
+        &lt;xs:sequence&gt;
+            &lt;xs:element name="first-name" type="xs:string"/&gt;
+            &lt;xs:element name="last-name" type="xs:string"/&gt;
+            &lt;xs:element name="address" type="add:address"/&gt;
+        &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+ 
+&lt;/xs:schema&gt;
+ 
+</pre></div>
+<!-- class="example" -->
+<p>You must supply an <code>EntityResolver</code> implementation to resolve the location of the imported schema.</p>
+<p><a href="#BGBIJHID">Example 9-8</a> illustrates the <code>EntityResolver</code>:</p>
+<div class="example"><a id="BGBIJHID" name="BGBIJHID"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 9-8 Sample Application Code</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+class MyEntityResolver implements EntityResolver {
+ 
+   public InputSource resolveEntity(String publicId, String systemId) throws SAXException, IOException {
+      // Imported schemas are located in ext\appdata\xsd\
+ 
+      // Grab only the filename part from the full path
+      String filename = new File(systemId).getName();
+ 
+      // Now prepend the correct path
+      String correctedId = "ext/appdata/xsd/" + filename;
+ 
+      InputSource is = new InputSource(ClassLoader.getSystemResourceAsStream(correctedId));
+      is.setSystemId(correctedId);
+ 
+      return is;
+   }
+ 
+}
+ 
+</pre></div>
+<!-- class="example" -->
+<p>When you create the <code>DynamicJAXBContext</code>, pass the <code>EntityResolver</code> to it, as shown here:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+InputStream inputStream = ClassLoader.getSystemResourceAsStream("com/foo/sales/xsd/customer.xsd");
+DynamicJAXBContext dContext = DynamicJAXBContextFactory.createContextFromXSD(inputStream, new MyEntityResolver(), null, null);
+</pre>
+<p>If you encounter the following exception when importing another shema:</p>
+<p><code>Internal Exception: org.xml.sax.SAXParseException: schema_reference.4: Failed to read schema document '&lt;imported-schema-name&gt;', because 1) could not find the document; 2) the document could not be read; 3) the root element of the document is not &lt;xsd:schema&gt;.</code></p>
+<p>You should disable XJC's schema correctness check option, either in code:</p>
+<p><code>System.setProperty("com.sun.tools.xjc.api.impl.s2j.SchemaCompilerImpl.noCorrectnessCheck", "true")</code></p>
+<p>or from the command line:</p>
+<p><code>-Dcom.sun.tools.xjc.api.impl.s2j.SchemaCompilerImpl.noCorrect</code></p>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><a id="sthref197" name="sthref197"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Customizing Generated Mappings with XJC External Binding Customization Files</font></h2>
+<p>When bootstrapping from an XSD, you have the option to customize the mappings that will be generated through the use of XJC's External Binding Customization file format (<code>.xjb</code>). In the example below, the package name of the dynamic classes has been overridden, and the name attribute has been renamed to <code>last-name-comma-first-name</code>.</p>
+<div class="example"><a id="sthref198" name="sthref198"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 9-9 custom1.xjb File</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;jxb:bindings version="1.0" xmlns:jxb="http://java.sun.com/xml/ns/jaxb" xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+    &lt;jxb:bindings schemaLocation="employee.xsd" node="/xs:schema"&gt;
+ 
+        &lt;!-- Customize the package name that is generated for each schema --&gt;
+        &lt;jxb:schemaBindings&gt;
+            &lt;jxb:package name="com.acme.internal"/&gt;
+        &lt;/jxb:schemaBindings&gt;
+ 
+        &lt;!-- Rename the 'name' element to 'last-name-comma-first-name' --&gt;
+        &lt;jxb:bindings node="//xs:complexType[@name='person']"&gt;
+            &lt;jxb:bindings node=".//xs:element[@name='name']"&gt;
+                &lt;jxb:property name="last-name-comma-first-name"/&gt;
+            &lt;/jxb:bindings&gt;
+        &lt;/jxb:bindings&gt;
+ 
+    &lt;/jxb:bindings&gt;
+&lt;/jxb:bindings&gt;
+ 
+</pre></div>
+<!-- class="example" -->
+<p>For complete information on the External Binding Customization file format, please see <code><a href="http://download.oracle.com/docs/cd/E17802_01/webservices/webservices/docs/2.0/tutorial/doc/JAXBUsing4.html">http://download.oracle.com/docs/cd/E17802_01/webservices/webservices/docs/2.0/tutorial/doc/JAXBUsing4.html</a></code>.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>If you wish to use External Binding Customization files, you will need to use <strong>Source</strong> objects to point to your XML Schema. <strong>Sources</strong> are used to load the <code>.xjb</code> files as well, and they must all have the same System ID set.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p><a href="#BABIJDEI">Example 9-10</a> illustrates bootstrapping from an XSD, and customizing the mapping generation using two separate&nbsp;<code>.xjb</code> files.</p>
+<div class="example"><a id="BABIJDEI" name="BABIJDEI"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 9-10 Bootstrapping Example</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+String xsd = "example/resources/xsd/employee.xsd";
+String xjb1 = "example/resources/xsd/custom1.xjb";
+String xjb2 = "example/resources/xsd/custom2.xjb";
+ 
+InputStream xsdStream = classLoader.getSystemResourceAsStream(xsd);
+Source xsdSource = new StreamSource(xsdStream);
+// Set SYSTEM_ID to the filename part of the XSD
+xsdSource.setSystemId("employee.xsd");
+ 
+InputStream xjbStream = classLoader.getResourceAsStream(xjb1);
+Source xjbSource = new StreamSource(xjbStream);
+// Set SYSTEM_ID to be the same as the XSD
+xjbSource.setSystemId(xsdSource.getSystemId());
+ 
+InputStream xjbStream2 = classLoader.getResourceAsStream(xjb2);
+Source xjbSource2 = new StreamSource(xjbStream2);
+// Set SYSTEM_ID to be the same as the XSD
+xjbSource2.setSystemId(xsdSource.getSystemId());
+ 
+ArrayList&lt;Source&gt; xjbFiles = new ArrayList&lt;Source&gt;(2);
+xjbFiles.add(xjbSource);
+xjbFiles.add(xjbSource2);
+ 
+// Put XSD and XJBs into Properties
+Map&lt;String, Object&gt; properties = new HashMap&lt;String, Object&gt;();
+properties.put(DynamicJAXBContextFactory.XML_SCHEMA_KEY, xsdSource);
+properties.put(DynamicJAXBContextFactory.EXTERNAL_BINDINGS_KEY, xjbFiles);
+ 
+// Create Context
+DynamicJAXBContext jaxbContext = (DynamicJAXBContext) JAXBContext.newInstance("example", classLoader, properties);
+ 
+</pre></div>
+<!-- class="example" -->
+<p>The value of <code>EXTERNAL_BINDINGS_KEY</code> can be either a single <code>Source</code> or a <code>List&lt;Source&gt;</code>, pointing to your External Binding Customization file(s).</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="dynamic_jaxb002.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="dynamic_jaxb004.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+                
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_moxy.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
+</html>
