@@ -101,7 +101,7 @@
 
 				<li><a href="moxy/toc.htm">EclipseLink MOXy</a></li>
 
-				<li><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/NoSQL">EclipseLink NoSQL</a></li>
+				<li><a href="jpa/extensions/a_nosql.htm">EclipseLink NoSQL</a></li>
 
 				<li><a href="http://wiki.eclipse.org/Category:SDO">EclipseLink SDO</a></li>
 
