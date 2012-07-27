@@ -167,9 +167,17 @@ $Nav->addCustomNav( "About This Project",
 <script type="text/javascript"> 
   google.load('search', '1', {language : 'en', style : google.loader.themes.SHINY});
   google.setOnLoadCallback(function() {
-    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(
+    var customSearchOptions = {};
+    var customSearchControl = new google.search.CustomSearchControl(
       '016171230611334810008:ob2bbia9swa', customSearchOptions);
     customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+
+    var googleAnalyticsOptions = {};
+    googleAnalyticsOptions['queryParameter'] = 'q';
+    googleAnalyticsOptions['categoryParameter'] = '';
+    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(
+      '016171230611334810008:ob2bbia9swa', customSearchOptions);
+    
     var options = new google.search.DrawOptions();
     options.setAutoComplete(true);
     options.enableSearchboxOnly("http://www.google.com/cse?cx=016171230611334810008:ob2bbia9swa");
