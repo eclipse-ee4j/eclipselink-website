@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@ConversionValue | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-07-24T17:24:27Z" />
+<meta name="date" content="2012-08-02T9:44:0Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@ConversionValue" />
 <meta name="relnum" content="Release 2.4" />
@@ -18,7 +18,7 @@
 <link rel="prev" href="a_compositemember.htm" title="Previous" type="text/html" />
 <link rel="next" href="a_convert.htm" title="Next" type="text/html" />
 <!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
-<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:4sqnhke2any', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:4sqnhke2any', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -29,7 +29,7 @@ Release 2.4</div></td>
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
 </tr>
 </table>
 </td>
@@ -45,15 +45,15 @@ Release 2.4</div></td>
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header --><a id="CBBJAJCH" name="CBBJAJCH"></a>
+<div class="ind"><!-- End Header --><a id="CBBJAJCH" name="CBBJAJCH"></a><a id="TLJPA373" name="TLJPA373"></a>
 <hr />
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@ConversionValue</font></h2>
 <p>Use <code>@ConversionValue</code> to specify the database and object values for an <code>ObjectTypeConverter</code>.</p>
-<a id="sthref76" name="sthref76"></a>
+<a id="sthref74" name="sthref74"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#BABBEGIB">Table 2-13</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="sthref77" name="sthref77"></a><a id="BABBEGIB" name="BABBEGIB"></a>
+<div class="tblhruleformalwide"><a id="TLJPA374" name="TLJPA374"></a><a id="sthref75" name="sthref75"></a><a id="BABBEGIB" name="BABBEGIB"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 2-13 @ConversionValue Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@ConversionValue Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="23%" />
@@ -89,13 +89,13 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref78" name="sthref78"></a>
+<a id="sthref76" name="sthref76"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>The JPA specification allows you to map an <code>Enum</code> to database columns using the <code>@Enumerated</code> annotation, when the database value is either the name of the <code>Enum</code> or its ordinal value. With EclipseLink, you can also map an <code>Enum</code> to a coded value, using a converter.</p>
-<a id="sthref79" name="sthref79"></a>
+<a id="sthref77" name="sthref77"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p>In <a href="#BABFEJHJ">Example 2-29</a>, the <code>enum</code> <code>Gender(MALE, FEMALE)</code> is mapped to a single character in the database where M=MALE and F=FEMALE.</p>
-<div class="example"><a id="BABFEJHJ" name="BABFEJHJ"></a>
+<div class="example"><a id="BABFEJHJ" name="BABFEJHJ"></a><a id="TLJPA375" name="TLJPA375"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-29 Using @ConversionValue Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @ObjectTypeConverter(name = "gender", objectType = Gender.class, dataType = String.class, conversionValues = {
@@ -111,7 +111,7 @@ private Gender gender = Gender.Male;
 </pre></div>
 <!-- class="example" -->
 <p><a href="#BABIHAFA">Example 2-30</a> illustrates the same function using XML.</p>
-<div class="example"><a id="BABIHAFA" name="BABIHAFA"></a>
+<div class="example"><a id="BABIHAFA" name="BABIHAFA"></a><a id="TLJPA376" name="TLJPA376"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-30 Using &lt;conversion-value&gt; XML</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;object-type-converter name="gender" object-type="model.Gender   "data-type="java.lang.String"&gt;
@@ -127,7 +127,7 @@ private Gender gender = Gender.Male;
 &lt;/basic&gt;
 </pre></div>
 <!-- class="example" -->
-<a id="sthref80" name="sthref80"></a>
+<a id="sthref78" name="sthref78"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
@@ -166,7 +166,7 @@ private Gender gender = Gender.Male;
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
 </tr>
 </table>
 </td>

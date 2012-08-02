@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@FetchGroups | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-07-24T17:24:28Z" />
+<meta name="date" content="2012-08-02T9:44:0Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@FetchGroups" />
 <meta name="relnum" content="Release 2.4" />
@@ -18,7 +18,7 @@
 <link rel="prev" href="a_fetchgroup.htm" title="Previous" type="text/html" />
 <link rel="next" href="a_field.htm" title="Next" type="text/html" />
 <!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
-<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:4sqnhke2any', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:4sqnhke2any', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -29,7 +29,7 @@ Release 2.4</div></td>
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
 </tr>
 </table>
 </td>
@@ -45,15 +45,15 @@ Release 2.4</div></td>
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header --><a id="CHDIEBGG" name="CHDIEBGG"></a>
+<div class="ind"><!-- End Header --><a id="CHDIEBGG" name="CHDIEBGG"></a><a id="TLJPA411" name="TLJPA411"></a>
 <hr />
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@FetchGroups</font></h2>
 <p>Use <code>@FetchGroups</code> to define a group of <code>@FetchGroup</code>.</p>
-<a id="sthref136" name="sthref136"></a>
+<a id="sthref133" name="sthref133"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#BACDEJEJ">Table 2-23</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="sthref137" name="sthref137"></a><a id="BACDEJEJ" name="BACDEJEJ"></a>
+<div class="tblhruleformalwide"><a id="TLJPA412" name="TLJPA412"></a><a id="sthref134" name="sthref134"></a><a id="BACDEJEJ" name="BACDEJEJ"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 2-23 @FetchGroups Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@FetchGroups Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="31%" />
@@ -80,15 +80,15 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref138" name="sthref138"></a>
+<a id="sthref135" name="sthref135"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>You can specify <code>@FetchGroups</code> on an Entity or MappedSuperclass.</p>
 <p>You can also enable or disable fetch groups through weaving for the persistence unit.</p>
-<a id="sthref139" name="sthref139"></a>
+<a id="sthref136" name="sthref136"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p>See <a href="a_fetchgroup.htm#BABJBDEG">"@FetchGroup"</a> for an example of using fetch groups.</p>
 <p><a href="#CHDJCEHI">Example 2-44</a> shows how to configure fetch groups in the persistence unit <code>persistence.xml</code> file or by importing a <code>property</code> map.</p>
-<div class="example"><a id="CHDJCEHI" name="CHDJCEHI"></a>
+<div class="example"><a id="CHDJCEHI" name="CHDJCEHI"></a><a id="TLJPA413" name="TLJPA413"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-44 Specifying Fetch Groups in persistence.xml</font></em></strong></p>
 <p>Using <code>persistence.xml</code> file:</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -101,7 +101,7 @@ import org.eclipse.persistence.config.PersistenceUnitProperties;
 propertiesMap.put(PersistenceUnitProperties.WEAVING_FETCHGROUPS, "false");
 </pre></div>
 <!-- class="example" -->
-<a id="sthref140" name="sthref140"></a>
+<a id="sthref137" name="sthref137"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
@@ -147,7 +147,7 @@ propertiesMap.put(PersistenceUnitProperties.WEAVING_FETCHGROUPS, "false");
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
 </tr>
 </table>
 </td>

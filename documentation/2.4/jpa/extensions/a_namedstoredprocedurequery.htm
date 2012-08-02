@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@NamedStoredProcedureQuery | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-07-24T17:24:28Z" />
+<meta name="date" content="2012-08-02T9:44:0Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@NamedStoredProcedureQuery" />
 <meta name="relnum" content="Release 2.4" />
@@ -18,7 +18,7 @@
 <link rel="prev" href="a_namedstoredproc_queries.htm" title="Previous" type="text/html" />
 <link rel="next" href="a_noncacheable.htm" title="Next" type="text/html" />
 <!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
-<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:4sqnhke2any', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:4sqnhke2any', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -29,7 +29,7 @@ Release 2.4</div></td>
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
 </tr>
 </table>
 </td>
@@ -45,15 +45,15 @@ Release 2.4</div></td>
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header --><a id="BGBGAEFF" name="BGBGAEFF"></a>
+<div class="ind"><!-- End Header --><a id="BGBGAEFF" name="BGBGAEFF"></a><a id="TLJPA468" name="TLJPA468"></a>
 <hr />
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@NamedStoredProcedureQuery</font></h2>
 <p>Use <code>@NamedStoredProcedureQuery</code> to define queries that call stored procedures as named queries.</p>
-<a id="sthref219" name="sthref219"></a>
+<a id="sthref216" name="sthref216"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#BGBHHIAB">Table 2-38</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="sthref220" name="sthref220"></a><a id="BGBHHIAB" name="BGBHHIAB"></a>
+<div class="tblhruleformalwide"><a id="TLJPA469" name="TLJPA469"></a><a id="sthref217" name="sthref217"></a><a id="BGBHHIAB" name="BGBHHIAB"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 2-38 @NamedStoredProcedureQuery Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@NamedStoredProcedureQuery Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="24%" />
@@ -170,13 +170,13 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref221" name="sthref221"></a>
+<a id="sthref218" name="sthref218"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>You can specify <code>@NamedStoredProcedureQuery</code> on an Entity or MappedSuperclass.</p>
-<a id="sthref222" name="sthref222"></a>
+<a id="sthref219" name="sthref219"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#BGBJBAFD">Example 2-64</a> shows how to use <code>@NamedStoredProcedureQuery</code> to define a stored procedure.</p>
-<div class="example"><a id="BGBJBAFD" name="BGBJBAFD"></a>
+<div class="example"><a id="BGBJBAFD" name="BGBJBAFD"></a><a id="TLJPA470" name="TLJPA470"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-64 Using @NamedStoredProcedureQuery Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @<strong>NamedStoredProcedureQuery</strong>(name="findAllEmployees", procedureName="EMP_READ_ALL", resultClass=Employee.class, parameters={
@@ -188,7 +188,7 @@ public class Employee {
 </pre></div>
 <!-- class="example" -->
 <p><a href="#BGBIHIHB">Example 2-65</a> shows how to use the <code>&lt;named-stored-procedure-query&gt;</code> element in the <code>eclipselink-orm.xml</code> file.</p>
-<div class="example"><a id="BGBIHIHB" name="BGBIHIHB"></a>
+<div class="example"><a id="BGBIHIHB" name="BGBIHIHB"></a><a id="TLJPA471" name="TLJPA471"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-65 Using &lt;named-stored-procedure-query&gt; XML</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;<strong>named-stored-procedure-query</strong> name="SProcXMLInOut" result-class="Address" procedure-name="SProc_Read_XMLInOut"&gt;
@@ -197,7 +197,7 @@ public class Employee {
 &lt;/named-stored-procedure-query&gt;
 </pre></div>
 <!-- class="example" -->
-<a id="sthref223" name="sthref223"></a>
+<a id="sthref220" name="sthref220"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
@@ -240,7 +240,7 @@ public class Employee {
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
 </tr>
 </table>
 </td>

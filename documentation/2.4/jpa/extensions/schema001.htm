@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Overriding and Merging | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-07-24T17:24:29Z" />
+<meta name="date" content="2012-08-02T9:44:2Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Overriding and Merging" />
 <meta name="relnum" content="Release 2.4" />
@@ -17,7 +17,7 @@
 <link rel="contents" href="toc.htm" title="Contents" type="text/html" />
 <link rel="prev" href="schema.htm" title="Previous" type="text/html" />
 <!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
-<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:4sqnhke2any', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:4sqnhke2any', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -28,7 +28,7 @@ Release 2.4</div></td>
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
 </tr>
 </table>
 </td>
@@ -43,7 +43,7 @@ Release 2.4</div></td>
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header --><a id="BGBBEIEA" name="BGBBEIEA"></a>
+<div class="ind"><!-- End Header --><a id="BGBBEIEA" name="BGBBEIEA"></a><a id="TLJPA689" name="TLJPA689"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Overriding and Merging</font></h1>
 <p>To override the <code>orm.xml</code> file's mapping, you must define the <code>META-INF/eclipselink-orm.xml</code> file in the project. When both <code>orm.xml</code> and <code>eclipselink-orm.xml</code> are specified, the contents of <code>eclipselink-orm.xml</code> will override <code>orm.xml</code> and any other JPA mapping file specified in the persistence unit. If there are overlapping specifications in multiple ORM files, the files are merged if they are no conflicting entities.</p>
@@ -70,7 +70,7 @@ Release 2.4</div></td>
 <p><a href="#BGBGFDDF">Examples of Overriding and Merging</a></p>
 </li>
 </ul>
-<a id="BGBJBFDH" name="BGBJBFDH"></a>
+<a id="BGBJBFDH" name="BGBJBFDH"></a><a id="TLJPA690" name="TLJPA690"></a>
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Rules for Overriding and Merging</font></h2>
 <p>EclipseLink provides specific overriding and merging rules for the following elements defined in the <code>orm.xml</code> file:</p>
@@ -91,11 +91,11 @@ Release 2.4</div></td>
 <p><a href="#BGBIJGGA">Embeddable</a></p>
 </li>
 </ul>
-<a id="BGBFCDBF" name="BGBFCDBF"></a>
+<a id="BGBFCDBF" name="BGBFCDBF"></a><a id="TLJPA691" name="TLJPA691"></a>
 <div class="sect3">
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Persistence Unit Metadata</font></h3>
 <p>In <code>eclipselink-orm.xml</code>, a <code>persistence-unit-metadata</code> element merges or overrides the values of existing <code>persistence-unit-metadata</code> specification as defined in <a href="#BGBGIFHH">Table 5-1</a>.</p>
-<div class="tblhruleformalwide"><a id="sthref545" name="sthref545"></a><a id="BGBGIFHH" name="BGBGIFHH"></a>
+<div class="tblhruleformalwide"><a id="TLJPA692" name="TLJPA692"></a><a id="sthref539" name="sthref539"></a><a id="BGBGIFHH" name="BGBGIFHH"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 5-1 Overriding and Merging Persistence Unit Metadata</font></em></strong></p>
 <table class="HRuleFormalWide" title="Overriding and Merging Persistence Unit Metadata" summary="Overriding and Merging Persistence Unit Metadata" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="29%" />
@@ -187,11 +187,11 @@ listeners</code></p>
 <br /></div>
 <!-- class="tblhruleformalwide" --></div>
 <!-- class="sect3" -->
-<a id="BGBDIICB" name="BGBDIICB"></a>
+<a id="BGBDIICB" name="BGBDIICB"></a><a id="TLJPA693" name="TLJPA693"></a>
 <div class="sect3"><!-- infolevel="all" infotype="General" -->
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Entity Mappings</font></h3>
 <p>Entities, embeddables and mapped superclasses are defined within the <code>entity-mappings</code> section. The <code>eclipselink-orm.xml</code> entities, embeddables and mapped superclasses are added to the persistence unit as defined in <a href="#BGBJEBHG">Table 5-2</a>.</p>
-<div class="tblhruleformalwide"><a id="sthref546" name="sthref546"></a><a id="BGBJEBHG" name="BGBJEBHG"></a>
+<div class="tblhruleformalwide"><a id="TLJPA694" name="TLJPA694"></a><a id="sthref540" name="sthref540"></a><a id="BGBJEBHG" name="BGBJEBHG"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 5-2 Overriding and Merging Entity Mappings</font></em></strong></p>
 <table class="HRuleFormalWide" title="Overriding and Merging Entity Mappings" summary="Overriding and Merging Entity Mappings" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="24%" />
@@ -309,11 +309,11 @@ listeners</code></p>
 <br /></div>
 <!-- class="tblhruleformalwide" --></div>
 <!-- class="sect3" -->
-<a id="BGBIAAAH" name="BGBIAAAH"></a>
+<a id="BGBIAAAH" name="BGBIAAAH"></a><a id="TLJPA695" name="TLJPA695"></a>
 <div class="sect3"><!-- infolevel="all" infotype="General" -->
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Mapped Superclasses</font></h3>
 <p>A mapped-superclass can be defined completely, or with specific elements to provide extensions to a mapped-superclass from another mapping file. <a href="#BGBBFABH">Table 5-3</a> lists individual override and merging rules:</p>
-<div class="tblhruleformalwide"><a id="sthref547" name="sthref547"></a><a id="BGBBFABH" name="BGBBFABH"></a>
+<div class="tblhruleformalwide"><a id="TLJPA696" name="TLJPA696"></a><a id="sthref541" name="sthref541"></a><a id="BGBBFABH" name="BGBBFABH"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 5-3 Overriding and Merging Mapped Superclasses</font></em></strong></p>
 <table class="HRuleFormalWide" title="Overriding and Merging Mapped Superclasses" summary="Overriding and Merging Mapped Superclasses" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="25%" />
@@ -498,11 +498,11 @@ listeners</code></p>
 <br /></div>
 <!-- class="tblhruleformalwide" --></div>
 <!-- class="sect3" -->
-<a id="BGBJAIBF" name="BGBJAIBF"></a>
+<a id="BGBJAIBF" name="BGBJAIBF"></a><a id="TLJPA697" name="TLJPA697"></a>
 <div class="sect3"><!-- infolevel="all" infotype="General" -->
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Entity override and merging rules</font></h3>
 <p>An entity can be defined completely, or with specific elements to provide extensions to an entity from another mapping file. The following table lists individual override and merging rules:</p>
-<div class="tblhruleformalwide"><a id="sthref548" name="sthref548"></a><a id="BGBEDIBC" name="BGBEDIBC"></a>
+<div class="tblhruleformalwide"><a id="TLJPA698" name="TLJPA698"></a><a id="sthref542" name="sthref542"></a><a id="BGBEDIBC" name="BGBEDIBC"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 5-4 Overriding and Merging Entities</font></em></strong></p>
 <table class="HRuleFormalWide" title="Overriding and Merging Entities" summary="Overriding and Merging Entities" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="31%" />
@@ -828,11 +828,11 @@ listeners</code></p>
 <br /></div>
 <!-- class="tblhruleformalwide" --></div>
 <!-- class="sect3" -->
-<a id="BGBIJGGA" name="BGBIJGGA"></a>
+<a id="BGBIJGGA" name="BGBIJGGA"></a><a id="TLJPA699" name="TLJPA699"></a>
 <div class="sect3"><!-- infolevel="all" infotype="General" -->
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Embeddable</font></h3>
 <p>An embeddable can be defined wholly or may be defined so as to provide extensions to an embeddable from another mapping file. Therefore, we will allow the merging of that class' metadata. <a href="#BGBEDIBC">Table 5-4</a> lists the individual override rules Embeddable classes.</p>
-<div class="tblhruleformalwide"><a id="sthref549" name="sthref549"></a><a id="sthref550" name="sthref550"></a>
+<div class="tblhruleformalwide"><a id="TLJPA700" name="TLJPA700"></a><a id="sthref543" name="sthref543"></a><a id="sthref544" name="sthref544"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 5-5 Overriding and Merging Embeddable Classes</font></em></strong></p>
 <table class="HRuleFormalWide" title="Overriding and Merging Embeddable Classes" summary="Overriding and Merging Embeddable Classes" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="21%" />
@@ -895,10 +895,10 @@ embeddable</strong></font></th>
 <!-- class="tblhruleformalwide" --></div>
 <!-- class="sect3" --></div>
 <!-- class="sect2" -->
-<a id="BGBGFDDF" name="BGBGFDDF"></a>
+<a id="BGBGFDDF" name="BGBGFDDF"></a><a id="TLJPA701" name="TLJPA701"></a>
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Examples of Overriding and Merging</font></h2>
-<div class="example"><a id="sthref551" name="sthref551"></a>
+<div class="example"><a id="TLJPA702" name="TLJPA702"></a><a id="sthref545" name="sthref545"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-1 Overriding/Merging Example 1</font></em></strong></p>
 <p>In this example, your EclipseLink project contains:</p>
 <ul>
@@ -925,7 +925,7 @@ embeddable</strong></font></th>
 </ul>
 </div>
 <!-- class="example" -->
-<div class="example"><a id="sthref552" name="sthref552"></a>
+<div class="example"><a id="TLJPA703" name="TLJPA703"></a><a id="sthref546" name="sthref546"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-2 Overriding/Merging Example 2</font></em></strong></p>
 <p>In this example, your EclipseLink project contains:</p>
 <ul>
@@ -966,7 +966,7 @@ embeddable</strong></font></th>
 </ul>
 </div>
 <!-- class="example" -->
-<div class="example"><a id="sthref553" name="sthref553"></a>
+<div class="example"><a id="TLJPA704" name="TLJPA704"></a><a id="sthref547" name="sthref547"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-3 Overriding/Merging Example 3</font></em></strong></p>
 <p>In this example, your EclipseLink project contains:</p>
 <ul>
@@ -999,7 +999,7 @@ embeddable</strong></font></th>
 </ul>
 </div>
 <!-- class="example" -->
-<div class="example"><a id="sthref554" name="sthref554"></a>
+<div class="example"><a id="TLJPA705" name="TLJPA705"></a><a id="sthref548" name="sthref548"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-4 Overriding/Merging Example 4</font></em></strong></p>
 <p>In this example, your EclipseLink project contains:</p>
 <ul>
@@ -1014,7 +1014,7 @@ embeddable</strong></font></th>
 <p>Results in an exception, due to conflicting specifications for mapping <strong>c</strong>.</p>
 </div>
 <!-- class="example" -->
-<div class="example"><a id="sthref555" name="sthref555"></a>
+<div class="example"><a id="TLJPA706" name="TLJPA706"></a><a id="sthref549" name="sthref549"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-5 Overriding/Merging Example 5</font></em></strong></p>
 <p>In this example, your EclipseLink project contains:</p>
 <ul>
@@ -1061,7 +1061,7 @@ embeddable</strong></font></th>
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
 </tr>
 </table>
 </td>

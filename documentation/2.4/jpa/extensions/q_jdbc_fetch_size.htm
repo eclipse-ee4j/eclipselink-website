@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>jdbc.fetch-size | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-07-24T17:24:29Z" />
+<meta name="date" content="2012-08-02T9:44:2Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="jdbc.fetch-size" />
 <meta name="relnum" content="Release 2.4" />
@@ -18,7 +18,7 @@
 <link rel="prev" href="q_bindparameters.htm" title="Previous" type="text/html" />
 <link rel="next" href="q_jdbc_max_rows.htm" title="Next" type="text/html" />
 <!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
-<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:4sqnhke2any', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:4sqnhke2any', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -29,7 +29,7 @@ Release 2.4</div></td>
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
 </tr>
 </table>
 </td>
@@ -45,7 +45,7 @@ Release 2.4</div></td>
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header --><a id="fetchsize" name="fetchsize"></a>
+<div class="ind"><!-- End Header --><a id="fetchsize" name="fetchsize"></a><a id="TLJPA647" name="TLJPA647"></a>
 <hr />
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">jdbc.fetch-size</font></h2>
@@ -64,10 +64,10 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="inftblnote" --></div>
-<a id="sthref491" name="sthref491"></a>
+<a id="sthref485" name="sthref485"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
 <p><a href="#CHDHHCFG">Table 4-3</a> describes this query hint's valid values.</p>
-<div class="tblhruleformalwide"><a id="sthref492" name="sthref492"></a><a id="CHDHHCFG" name="CHDHHCFG"></a>
+<div class="tblhruleformalwide"><a id="TLJPA648" name="TLJPA648"></a><a id="sthref486" name="sthref486"></a><a id="CHDHHCFG" name="CHDHHCFG"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 4-3 Valid Values for eclipselink.jdbc.fetch-size</font></em></strong></p>
 <table class="HRuleFormalWide" title="Valid Values for eclipselink.jdbc.fetch-size" summary="Valid Values for this query hint" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="29%" />
@@ -92,15 +92,15 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref493" name="sthref493"></a>
+<a id="sthref487" name="sthref487"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>For queries that return a large number of objects, you can configure the row fetch size used in the query to improve performance by reducing the number database hits required to satisfy the selection criteria.</p>
 <p>By default, most JDBC drivers use a fetch size of 10. , so if you are reading 1000 objects, increasing the fetch size to 256 can significantly reduce the time required to fetch the query's results. The optimal fetch size is not always obvious. Usually, a fetch size of one half or one quarter of the total expected result size is optimal.</p>
 <p>If you are unsure of the result set size, incorrectly setting a fetch size too large or too small can decrease performance.</p>
-<a id="sthref494" name="sthref494"></a>
+<a id="sthref488" name="sthref488"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#CHDBEBDE">Example 4-8</a> shows how to use this hint in a JPA query.</p>
-<div class="example"><a id="CHDBEBDE" name="CHDBEBDE"></a>
+<div class="example"><a id="CHDBEBDE" name="CHDBEBDE"></a><a id="TLJPA649" name="TLJPA649"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 4-8 Using jdbc.fetch-size in a JPA Query</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 
@@ -108,7 +108,7 @@ Release 2.4</div></td>
 </pre></div>
 <!-- class="example" -->
 <p><a href="#CHDHFAHJ">Example 4-9</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
-<div class="example"><a id="CHDHFAHJ" name="CHDHFAHJ"></a>
+<div class="example"><a id="CHDHFAHJ" name="CHDHFAHJ"></a><a id="TLJPA650" name="TLJPA650"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 4-9 Using jdbc.fetch-size in a @QueryHint Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 
@@ -116,7 +116,7 @@ Release 2.4</div></td>
 
 </pre></div>
 <!-- class="example" -->
-<a id="sthref495" name="sthref495"></a>
+<a id="sthref489" name="sthref489"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
@@ -160,7 +160,7 @@ Release 2.4</div></td>
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
 </tr>
 </table>
 </td>

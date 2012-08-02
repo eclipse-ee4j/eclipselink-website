@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@Transformation | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-07-24T17:24:28Z" />
+<meta name="date" content="2012-08-02T9:44:1Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@Transformation" />
 <meta name="relnum" content="Release 2.4" />
@@ -18,7 +18,7 @@
 <link rel="prev" href="a_timeofday.htm" title="Previous" type="text/html" />
 <link rel="next" href="a_typeconverter.htm" title="Next" type="text/html" />
 <!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
-<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:4sqnhke2any', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:4sqnhke2any', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -29,7 +29,7 @@ Release 2.4</div></td>
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
 </tr>
 </table>
 </td>
@@ -45,15 +45,15 @@ Release 2.4</div></td>
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header --><a id="BABCJGIG" name="BABCJGIG"></a>
+<div class="ind"><!-- End Header --><a id="BABCJGIG" name="BABCJGIG"></a><a id="TLJPA567" name="TLJPA567"></a>
 <hr />
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@Transformation</font></h2>
 <p>Use <code>@Transformation</code> with a Transformation mapping to define the transformation of database columns into attribute values (unless the Transformation mapping is write-only, in which case it should have a <code>@ReadTransformer</code> annotation).</p>
-<a id="sthref381" name="sthref381"></a>
+<a id="sthref375" name="sthref375"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#BABFBEDA">Table 2-65</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="sthref382" name="sthref382"></a><a id="BABFBEDA" name="BABFBEDA"></a>
+<div class="tblhruleformalwide"><a id="TLJPA568" name="TLJPA568"></a><a id="sthref376" name="sthref376"></a><a id="BABFBEDA" name="BABFBEDA"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 2-65 @Transformation Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@Transformation Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="21%" />
@@ -101,13 +101,13 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref383" name="sthref383"></a>
+<a id="sthref377" name="sthref377"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>Unless it's a read-only mapping, either <code>WriteTransformer</code> annotation or <code>WriteTransformers</code> annotation should be specified. Each <code>WriteTransformer</code> defines transformation of the attribute value to a single database column value (column is specified in the <code>WriteTransformer</code>).</p>
-<a id="sthref384" name="sthref384"></a>
+<a id="sthref378" name="sthref378"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#BABHECGF">Example 2-101</a> shows how to use the <code>@Transformation</code> annotation.</p>
-<div class="example"><a id="BABHECGF" name="BABHECGF"></a>
+<div class="example"><a id="BABHECGF" name="BABHECGF"></a><a id="TLJPA569" name="TLJPA569"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-101 Using @Transformation Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 <strong>@Transformation(fetch=FecthType.LAZY, optional="true")</strong>
@@ -128,7 +128,7 @@ Release 2.4</div></td>
 </pre></div>
 <!-- class="example" -->
 <p><a href="#BABHCBAG">Example 2-102</a> shows the same mapping, using the <code>&lt;transformation&gt;</code> XML element in the <code>eclipselink-orm.xml</code> file.</p>
-<div class="example"><a id="BABHCBAG" name="BABHCBAG"></a>
+<div class="example"><a id="BABHCBAG" name="BABHCBAG"></a><a id="TLJPA570" name="TLJPA570"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-102 Using &lt;transformation&gt; XML</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 <strong>&lt;transformation name="normalHours" fetch="LAZY" optional="true"&gt;</strong>
@@ -149,7 +149,7 @@ Release 2.4</div></td>
 <strong>&lt;/transformation&gt;</strong>
 </pre></div>
 <!-- class="example" -->
-<a id="sthref385" name="sthref385"></a>
+<a id="sthref379" name="sthref379"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
@@ -195,7 +195,7 @@ Release 2.4</div></td>
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
 </tr>
 </table>
 </td>

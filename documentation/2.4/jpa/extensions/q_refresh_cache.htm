@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>refresh.cascade | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-07-24T17:24:29Z" />
+<meta name="date" content="2012-08-02T9:44:2Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="refresh.cascade" />
 <meta name="relnum" content="Release 2.4" />
@@ -18,7 +18,7 @@
 <link rel="prev" href="q_refresh.htm" title="Previous" type="text/html" />
 <link rel="next" href="schema.htm" title="Next" type="text/html" />
 <!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
-<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:4sqnhke2any', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:4sqnhke2any', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -29,7 +29,7 @@ Release 2.4</div></td>
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
 </tr>
 </table>
 </td>
@@ -45,15 +45,15 @@ Release 2.4</div></td>
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header --><a id="refreshcache" name="refreshcache"></a>
+<div class="ind"><!-- End Header --><a id="refreshcache" name="refreshcache"></a><a id="TLJPA684" name="TLJPA684"></a>
 <hr />
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">refresh.cascade</font></h2>
 <p>Use <code>eclipselink.refresh.cascade</code> to specify if a refresh query should cascade the refresh to relationships.</p>
-<a id="sthref539" name="sthref539"></a>
+<a id="sthref533" name="sthref533"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
 <p><a href="#CDEEGHHB">Table 4-12</a> describes this query hint's valid values.</p>
-<div class="tblhruleformalwide"><a id="sthref540" name="sthref540"></a><a id="CDEEGHHB" name="CDEEGHHB"></a>
+<div class="tblhruleformalwide"><a id="TLJPA685" name="TLJPA685"></a><a id="sthref534" name="sthref534"></a><a id="CDEEGHHB" name="CDEEGHHB"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 4-12 Valid Values for eclipselink.refresh.cascade</font></em></strong></p>
 <table class="HRuleFormalWide" title="Valid Values for eclipselink.refresh.cascade" summary="Valid Values for this query hint" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="29%" />
@@ -101,13 +101,13 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref541" name="sthref541"></a>
+<a id="sthref535" name="sthref535"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>You should also use a <code><a href="q_refresh.htm#refresh">refresh</a></code> hint in order to cause the refresh.</p>
-<a id="sthref542" name="sthref542"></a>
+<a id="sthref536" name="sthref536"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#CDEDJFBE">Example 4-26</a> shows how to use this hint in a JPA query.</p>
-<div class="example"><a id="CDEDJFBE" name="CDEDJFBE"></a>
+<div class="example"><a id="CDEDJFBE" name="CDEDJFBE"></a><a id="TLJPA686" name="TLJPA686"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 4-26 Using refresh.cascade in a JPA Query</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 import org.eclipse.persistence.config.HintValues
@@ -116,7 +116,7 @@ import org.eclipse.persistence.config.HintValues
 </pre></div>
 <!-- class="example" -->
 <p><a href="#CDEGAJFE">Example 4-27</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
-<div class="example"><a id="CDEGAJFE" name="CDEGAJFE"></a>
+<div class="example"><a id="CDEGAJFE" name="CDEGAJFE"></a><a id="TLJPA687" name="TLJPA687"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 4-27 Using refresh.cascade in a @QueryHint Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 import org.eclipse.persistence.config.HintValues;
@@ -124,7 +124,7 @@ import org.eclipse.persistence.config.HintValues;
  @QueryHint(name=QueryHints.<strong>REFRESH_CASCADE</strong>, value=CascadePolicy.CascadeAllParts);
 </pre></div>
 <!-- class="example" -->
-<a id="sthref543" name="sthref543"></a>
+<a id="sthref537" name="sthref537"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
@@ -167,7 +167,7 @@ import org.eclipse.persistence.config.HintValues;
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
 </tr>
 </table>
 </td>

@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@CacheIndex | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-07-24T17:24:27Z" />
+<meta name="date" content="2012-08-02T9:44:0Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@CacheIndex" />
 <meta name="relnum" content="Release 2.4" />
@@ -18,7 +18,7 @@
 <link rel="prev" href="a_cache.htm" title="Previous" type="text/html" />
 <link rel="next" href="a_cacheindexes.htm" title="Next" type="text/html" />
 <!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
-<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:4sqnhke2any', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:4sqnhke2any', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -29,7 +29,7 @@ Release 2.4</div></td>
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
 </tr>
 </table>
 </td>
@@ -45,15 +45,15 @@ Release 2.4</div></td>
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header --><a id="CEGFEJCH" name="CEGFEJCH"></a>
+<div class="ind"><!-- End Header --><a id="CEGFEJCH" name="CEGFEJCH"></a><a id="TLJPA340" name="TLJPA340"></a>
 <hr />
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@CacheIndex</font></h2>
 <p>Use <code>@CacheIndex</code> to define a cached index. Cache indexes are used only when caching is enabled.</p>
-<a id="sthref35" name="sthref35"></a>
+<a id="sthref33" name="sthref33"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#BABFJHIC">Table 2-5</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="sthref36" name="sthref36"></a><a id="BABFJHIC" name="BABFJHIC"></a>
+<div class="tblhruleformalwide"><a id="TLJPA341" name="TLJPA341"></a><a id="sthref34" name="sthref34"></a><a id="BABFJHIC" name="BABFJHIC"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 2-5 @CacheIndex Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@CacheIndex Annotation Elements" summary="This table describes the list of attributes for this annotation." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="21%" />
@@ -92,15 +92,15 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref37" name="sthref37"></a>
+<a id="sthref35" name="sthref35"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>A cache index allows <code>singleResult</code> queries to obtain a cache hit when querying on the indexed fields. A <code>resultList</code> query cannot obtain cache hits, as it is unknown if all of the objects are in memory, (unless the cache usage query hint is used).</p>
 <p>The index should be unique. If it is not, the first indexed object will be returned.</p>
 <p>You can use <code>@CacheIndex</code> on an Entity class or on an attribute. The column is defaulted when defined on a attribute.</p>
-<a id="sthref38" name="sthref38"></a>
+<a id="sthref36" name="sthref36"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#BABEECHH">Example 2-13</a> shows an example of using the <code>@CacheIndex</code> annotation.</p>
-<div class="example"><a id="BABEECHH" name="BABEECHH"></a>
+<div class="example"><a id="BABEECHH" name="BABEECHH"></a><a id="TLJPA342" name="TLJPA342"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-13 Using @CacheIndex Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Entity
@@ -118,7 +118,7 @@ public class Employee {
 </pre></div>
 <!-- class="example" -->
 <p><a href="#BABIHBCC">Example 2-14</a> shows an example of using the <code>&lt;cache-index&gt;</code> XML element in the <code>eclipselink-orm.xml</code> file.</p>
-<div class="example"><a id="BABIHBCC" name="BABIHBCC"></a>
+<div class="example"><a id="BABIHBCC" name="BABIHBCC"></a><a id="TLJPA343" name="TLJPA343"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-14 Using &lt;cache-index&gt; XML</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0"?&gt;
@@ -149,7 +149,7 @@ public class Employee {
 </pre></div>
 <!-- class="example" -->
 <p><a href="#BABBIAGH">Example 2-15</a> shows an example query using a cache index.</p>
-<div class="example"><a id="BABBIAGH" name="BABBIAGH"></a>
+<div class="example"><a id="BABBIAGH" name="BABBIAGH"></a><a id="TLJPA344" name="TLJPA344"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-15 Caching an Index Query</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 Query query = em.createQuery("Select e from Employee e where e.firstName = :firstName and e.lastName = :lastName");
@@ -158,7 +158,7 @@ query.setParameter("lastName", "Smith");
 Employee employee = (Employee)query.getSingleResult();
 </pre></div>
 <!-- class="example" -->
-<a id="sthref39" name="sthref39"></a>
+<a id="sthref37" name="sthref37"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
@@ -201,7 +201,7 @@ Employee employee = (Employee)query.getSingleResult();
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
 </tr>
 </table>
 </td>

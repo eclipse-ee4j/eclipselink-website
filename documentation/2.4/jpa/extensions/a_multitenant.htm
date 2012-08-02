@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@Multitenant | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-07-24T17:24:28Z" />
+<meta name="date" content="2012-08-02T9:44:0Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@Multitenant" />
 <meta name="relnum" content="Release 2.4" />
@@ -18,7 +18,7 @@
 <link rel="prev" href="a_mapkeyconvert.htm" title="Previous" type="text/html" />
 <link rel="next" href="a_mutable.htm" title="Next" type="text/html" />
 <!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
-<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:4sqnhke2any', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:4sqnhke2any', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -29,7 +29,7 @@ Release 2.4</div></td>
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
 </tr>
 </table>
 </td>
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@Multitenant</font></h2>
 <p>The <code>@Multitenant</code> annotation specifies that a given entity is shared among multiple tenants of an application. The multitenant type specifies how the data for these entities are to be stored on the database for each tenant. Multitenancy can be specified at the entity or mapped superclass level.</p>
-<a id="sthref189" name="sthref189"></a>
+<a id="sthref186" name="sthref186"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#CHDGJGDC">Table 2-33</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="sthref190" name="sthref190"></a><a id="CHDGJGDC" name="CHDGJGDC"></a>
+<div class="tblhruleformalwide"><a id="sthref187" name="sthref187"></a><a id="CHDGJGDC" name="CHDGJGDC"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 2-33 @Multitenant Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@Multitenant Annotation Elements" summary="This table describes the list of attributes for this annotation." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="31%" />
@@ -93,7 +93,7 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref191" name="sthref191"></a>
+<a id="sthref188" name="sthref188"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>To use the <code>@Multitenant</code> annotation, include the annotation with an <code>@Entity</code> or <code>@MappedSuperclass</code> annotation. For example:</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -138,10 +138,10 @@ public class Employee() {
 <br /></div>
 <!-- class="inftblnote" --></div>
 <p>For more information how to use tenant discriminator columns to configure single-table multitenancy, see <a href="a_tenantdiscriminatorcolumn.htm#CHECIDGH">"@TenantDiscriminatorColumn"</a>.</p>
-<a id="sthref192" name="sthref192"></a>
+<a id="sthref189" name="sthref189"></a>
 <h4 class="refsect3"><br /><span class="refsubsect">Examples</span></h4>
 <p>The following example uses <code>@Multitenant</code>, <code>@TenantDiscriminatorColumn</code>, and a context property to define single-table multitenancy on an entity:</p>
-<div class="example"><a id="sthref193" name="sthref193"></a>
+<div class="example"><a id="sthref190" name="sthref190"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-52 Example Using @Multitenant</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Entity 
@@ -152,7 +152,7 @@ public class Employee() {
 </pre></div>
 <!-- class="example" -->
 <p>The following example uses the <code>&lt;multitenant&gt;</code> element to specify a minimal single-table multitenancy. <code>SINGLE_TABLE</code> is the default value and therefore does not have to be specified.</p>
-<div class="example"><a id="sthref194" name="sthref194"></a>
+<div class="example"><a id="sthref191" name="sthref191"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-53 Example Using &lt;multitenant&gt;</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;entity class="model.Employee"&gt;
@@ -180,17 +180,17 @@ public class Employee() {
 <p>.</p>
 </li>
 </ul>
-<a id="sthref195" name="sthref195"></a>
+<a id="sthref192" name="sthref192"></a>
 <h4 class="refsect3"><br /><span class="refsubsect">Examples</span></h4>
 <p>The following example shows the <code>@Multitenant</code> annotation used to define table-per-tenant multitenancy on an entity. <code>@TenantTableDiscriminator(SCHEMA)</code> specifies that the discriminator table is identified by schema.</p>
-<div class="example"><a id="sthref196" name="sthref196"></a>
+<div class="example"><a id="sthref193" name="sthref193"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-54 Example Using @Multitenant with @TenantTableDiscriminator</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Entity@Table(name=&ldquo;EMP&rdquo;)@Multitenant(TABLE_PER_TENANT)@TenantTableDiscriminator(SCHEMA)public class Employee {    ...} 
 </pre></div>
 <!-- class="example" -->
 <p>The following example shows the <code>&lt;multitenant&gt;</code> element and the <code>&lt;tenant-table-discriminator&gt;</code> elements used to define a minimal table-per-tenant multitenancy.</p>
-<div class="example"><a id="sthref197" name="sthref197"></a>
+<div class="example"><a id="sthref194" name="sthref194"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-55 Example Using &lt;multitenant&gt; with &lt;tenant-table-discriminator&gt;</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;entity class="Employee"&gt;
@@ -207,7 +207,7 @@ public class Employee() {
 <h3 class="refsect2"><font face="arial, helvetica, sans-serif" color="#330099">VDP Multitenancy</font></h3>
 <p>The <code>VPD</code> (Virtual Private Database) multitanancy type specifies that the database handles the tenant filtering on all SELECT, UPDATE and DELETE queries. To use this type, the platform used with the persistence unit must support VPD.</p>
 <p>To use EclipseLink VPD multitenancy, you must first configure VPD in the database and then specify multitenancy on the entity or mapped superclass, using <code>@Multitenant</code> and <code>@TenantDiscriminatorColumn</code>:</p>
-<a id="sthref198" name="sthref198"></a>
+<a id="sthref195" name="sthref195"></a>
 <h4 class="refsect3"><br /><span class="refsubsect">Examples</span></h4>
 <p><a href="#CHDIEFCF">Example 2-56</a> shows VPD multitenancy defined on an entity. As noted above, VPD in the database must also be configured to enable VPD multitenancy. In this case, the VPD database was configured to use the USER_ID column to restrict access to specified rows by specified clients. Therefore, <code>USER_ID</code> is also specified as the tenant discriminator column for the EclipseLink multitenant operations.</p>
 <div class="example"><a id="CHDIEFCF" name="CHDIEFCF"></a>
@@ -227,7 +227,7 @@ public class Task implements Serializable {
 ...
 </pre>
 <p>The following example shows...</p>
-<div class="example"><a id="sthref199" name="sthref199"></a>
+<div class="example"><a id="sthref196" name="sthref196"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-57 Example Using &lt;multitenant&gt;</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;entity class="model.Employee"&gt; 
@@ -240,7 +240,7 @@ public class Task implements Serializable {
 </pre></div>
 <!-- class="example" -->
 <hr />
-<a id="sthref200" name="sthref200"></a>
+<a id="sthref197" name="sthref197"></a>
 <h3 class="refsect2"><br /><span class="refsubsect">See Also</span></h3>
 <ul>
 <li>
@@ -284,7 +284,7 @@ public class Task implements Serializable {
 <tr>
 <td>&nbsp;</td>
 <td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
-<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a>
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
 </tr>
 </table>
 </td>
