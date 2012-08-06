@@ -102,6 +102,7 @@
 <input type="button" onclick="window.open(this.form.JavaDocs.options[this.form.JavaDocs.selectedIndex].value,'_top')" value="Go">
 </form>
 				</li>
+				<li><a href="http://wiki.eclipse.org/EclipseLink/XSDs" title="XSDs">XML Schemas (XSDs)</a></li>
 				<li><a href="http://wiki.eclipse.org/EclipseLink/Installing_and_Configuring_EclipseLink">Installation and Configuration</a></li>
 				<li><a href="2.4/jpa/extensions/toc.htm">JPA Extensions Reference (2.4)</a></li>
 			</ul>
