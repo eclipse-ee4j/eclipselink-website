@@ -155,7 +155,7 @@
     <td><p><strong>DBWS</strong> documentation:</p>
 		<form action="http://www.google.com/cse" id="cse-search-box">
 			<div>
-				<input type="hidden" name="cx" value="016171230611334810008:ariuniyap8w" />
+				<input type="hidden" name="cx" value="016171230611334810008:nnjaqkoh3mq" />
 				<input type="text" name="q" />
 				<input type="submit" name="sa" value="Search" />
 			</div>
