@@ -137,7 +137,20 @@
 		</form>
 		<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
 	</td>
-    <td><p><strong>All</strong> Eclipselink</strong> documentation:</p>
+    <td><p><strong>DBWS</strong documentation:</p>
+		<form action="http://www.google.com/cse" id="cse-search-box">
+			<div>
+				<input type="hidden" name="cx" value="016171230611334810008:ariuniyap8w" />
+				<input type="text" name="q" />
+				<input type="submit" name="sa" value="Search" />
+			</div>
+		</form>
+		<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script></td>
+		<link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" />
+	</td>
+  </tr>
+  <tr>
+    <td><p><strong>All</strong> Eclipselink documentation:</p>
 		<form action="http://www.google.com/cse" id="cse-search-box">
 			<div>
 				<input type="hidden" name="cx" value="016171230611334810008:ob2bbia9swa" />
