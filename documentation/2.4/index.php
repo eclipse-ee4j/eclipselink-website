@@ -105,7 +105,7 @@
 
 				<li><a href="http://wiki.eclipse.org/Category:SDO">EclipseLink SDO</a></li>
 
-				<li><a href="http://wiki.eclipse.org/Category:DBWS">EclipseLink DBWS</a></li>
+				<li><a href="dbws/toc.htm">EclipseLink DBWS</a></li>
 			</ul>
 	</div>
 

@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
+<title>Description of the illustration dbwswarfile.gif</title>
+</head>
+<body>
+<p>This figure shows the typical contents of an EclipseLink DBWS service&nbsp;<code>.war</code> file.</p>
+<pre xml:space="preserve" class="oac_no_warn">
+root of war file
+    \---web-inf
+    |
+    |   web.xml
+    |
+    +---classes
+    |   +---foo                               -- optional domain classes (typically not required)
+    |   |   \---bar                              
+    |   |           Address.class
+    |   |           Employee.class
+    |   |           PhoneNumber.class
+    |   |
+    |   +---META-INF
+    |   |       eclipselink-dbws.xml
+    |   |       eclipselink-dbws-or.xml
+    |   |       eclipselink-dbws-ox.xml
+    |   |       eclipselink-dbws-sessions.xml -- name can be overridden by &lt;sessions-file&gt; entry in eclipselink-dbws.xml
+    |   |
+    |   \---_dbws
+    |           DBWSProvider.class            -- auto-generated JAX-WS 2.0 Provider
+    |
+    \---wsdl
+            eclipselink-dbws-schema.xsd
+            eclipselink-dbws.wsdl
+            swaref.xsd
+</pre>
+</body>
+</html>
