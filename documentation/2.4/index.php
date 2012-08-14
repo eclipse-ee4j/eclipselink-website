@@ -43,7 +43,7 @@
 			</td>
 			<td>
 				<div class="bigbuttonsDocumentation">
-					<a href="http://wiki.eclipse.org/EclipseLink/Documentation_Center"><div class="bigbuttonsTitleLink"></div></a>
+					<a href="/eclipselink/documentation/2.4/index.php"><div class="bigbuttonsTitleLink"></div></a>
 					<span>
 						<a href="/eclipselink/documentation/2.4/index.php">Doc Center</a>,
 						<a href="/eclipselink/api/2.4/index.html"> Java Docs</a>,
@@ -99,13 +99,13 @@
 				<li><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA">EclipseLink JPA</a></li>
 				<li><a href="jpa/extensions/toc.htm">EclipseLink JPA Extensions</a></li>
 
-				<li><a href="moxy/toc.htm">EclipseLink MOXy</a></li>
+				<li><a href="moxy/toc.htm">Developing JAXB Applications Using EclipseLink MOXy,</a></li>
 
 				<li><a href="jpa/extensions/a_nosql.htm">EclipseLink NoSQL</a></li>
 
 				<li><a href="http://wiki.eclipse.org/Category:SDO">EclipseLink SDO</a></li>
 
-				<li><a href="dbws/toc.htm">EclipseLink DBWS</a></li>
+				<li><a href="dbws/toc.htm">Developing Persistence Architectures Using EclipseLink Database Web Services</a></li>
 			</ul>
 	</div>
 
@@ -148,7 +148,19 @@
 		<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script></td>
 		<link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" />
 	</td>
+    <td><p><strong>DBWS</strong> documentation:</p>
+		<form action="http://www.google.com/cse" id="cse-search-box">
+			<div>
+				<input type="hidden" name="cx" value="016171230611334810008:nnjaqkoh3mq" />
+				<input type="text" name="q" />
+				<input type="submit" name="sa" value="Search" />
+			</div>
+		</form>
+		<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script></td>
+		<link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" />
+	</td>
   </tr>
+  <tr><td>&nbsp;</td></tr>
   <tr>
     <td><p><strong>All</strong> Eclipselink documentation:</p>
 		<form action="http://www.google.com/cse" id="cse-search-box">

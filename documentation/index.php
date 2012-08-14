@@ -113,15 +113,15 @@
 			<h3>Guides</h3>
 			<ul>
 				<li><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA">EclipseLink JPA</a></li>
-				<li><a href="2.4/jpa/extensions/toc.htm">EclipseLink JPA Extensions</a></li>
+				<li><a href="2.4/jpa/extensions/toc.htm">EclipseLink JPA Extensions Reference</a></li>
 
-				<li><a href="2.4/moxy/toc.htm">EclipseLink MOXy</a></li>
+				<li><a href="2.4/moxy/toc.htm">Developing JAXB Applications Using EclipseLink MOXy</a></li>
 
 				<li><a href="2.4/jpa/extensions/a_nosql.htm">EclipseLink NoSQL</a></li>
 
 				<li><a href="http://wiki.eclipse.org/Category:SDO">EclipseLink SDO</a></li>
 
-				<li><a href="2.4/dbws/toc.htm">EclipseLink DBWS</a></li>
+				<li><a href="2.4/dbws/toc.htm">Developing Persistence Architectures Using EclipseLink Database Web Services</a></li>
 			</ul>
 	</div>
 
@@ -164,6 +164,7 @@
 		<link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" />
 	</td>
   </tr>
+  <tr><td>&nbsp;</td></tr>
   <tr>
     <td><p><strong>All</strong> Eclipselink documentation:</p>
 		<form action="http://www.google.com/cse" id="cse-search-box">
