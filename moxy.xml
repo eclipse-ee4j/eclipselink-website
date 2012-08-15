@@ -73,7 +73,7 @@
 	<section class="sideitem">
 		<description>
 			<h3>Documentation</h3>
-			<li><a href="./documentation/2.4/moxy/toc.htm">MOXy User Guide</a></li>
+			<li><a href="./documentation/2.4/moxy/toc.htm">Developing JAXB Applications Using EclipseLink MOXy</a></li>
 			<li><a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy">MOXy Examples</a></li>
 		</description>
 	</section>

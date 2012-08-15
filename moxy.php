@@ -39,9 +39,9 @@ $html = <<<EOHTML
 			</td>
 			<td>
 				<div class="bigbuttonsDocumentation">
-					<a href="http://wiki.eclipse.org/EclipseLink/Documentation_Center"><div class="bigbuttonsTitleLink"></div></a>
+					<a href="/eclipselink/documentation/index.php"><div class="bigbuttonsTitleLink"></div></a>
 					<span>
-						<a href="http://wiki.eclipse.org/EclipseLink/Documentation_Center">Doc Center</a>,
+						<a href="/eclipselink/documentation/index.php">Doc Center</a>,
 						<a href="/eclipselink/api/index.php"> Java Docs</a>,
 						<a href="http://wiki.eclipse.org/EclipseLink/Examples"> Examples</a>,
 						<a href="http://wiki.eclipse.org/EclipseLink/FAQ"> FAQ</a>, <br/>
