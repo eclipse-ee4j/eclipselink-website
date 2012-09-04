@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Using XML Bindings | EclipseLink 2.4.x EclipseLink MOXy</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-08-02T10:0:42Z" />
+<meta name="date" content="2012-09-04T7:43:12Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Using XML Bindings" />
 <meta name="relnum" content="Release 2.4" />
@@ -176,7 +176,7 @@ Release 2.4</div></td>
 <!-- class="sect2" -->
 <div class="sect2"><a id="sthref19" name="sthref19"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Bootstrapping with XML Bindings</font></h2>
-<p>When instantiating a <code>JAXBContext</code>, links to Bindings documents are passed in via the properties parameter, using a special key, <code>JAXBContextFactory.ECLIPSELINK_OXM_XML_KEY</code>. The value of this key will be a handle to the Bindings document, in the form of one of the following:</p>
+<p>When instantiating a <code>JAXBContext</code>, links to Bindings documents are passed in via the properties parameter, using a special key, <code>JAXBContextProperties.OXM_METADATA_SOURCE</code>. The value of this key will be a handle to the Bindings document, in the form of one of the following:</p>
 <ul>
 <li>
 <p><code>java.io.File</code></p>
@@ -295,7 +295,7 @@ ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
 InputStream iStream = classLoader.getResourceAsStream("metadata/xml-bindings.xml");
  
 Map&lt;String, Object&gt; <strong>properties</strong> = new HashMap&lt;String, Object&gt;();
-properties.put(JAXBContextFactory.ECLIPSELINK_OXM_XML_KEY, iStream);
+properties.put(JAXBContextProperties.OXM_METADATA_SOURCE, iStream);
  
 JAXBContext ctx = JAXBContext.newInstance(new Class[] { Customer.class }, properties);
 
@@ -336,7 +336,7 @@ fileList.add(file1);
 fileList.add(file2);
  
 Map&lt;String, Object&gt; properties = new HashMap&lt;String, Object&gt;();
-properties.put(JAXBContextFactory.ECLIPSELINK_OXM_XML_KEY, fileList);
+properties.put(JAXBContextProperties.OXM_METADATA_SOURCE, fileList);
  
 JAXBContext ctx = JAXBContext.newInstance(new Class[] { Customer.class }, properties);
 
@@ -368,7 +368,7 @@ Map&lt;String, List&gt; metadataMap = new HashMap&lt;String, List&gt;();
 metadataMap.put("foo", fooFileList);
 metadataMap.put("bar", barFileList);
  
-properties.put(JAXBContextFactory.ECLIPSELINK_OXM_XML_KEY, metadataMap);
+properties.put(JAXBContextProperties.OXM_METADATA_SOURCE, metadataMap);
  
 JAXBContext ctx = JAXBContext.newInstance(new Class[] { Customer.class }, properties);
  

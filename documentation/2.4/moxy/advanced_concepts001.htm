@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Refreshing Metadata | EclipseLink 2.4.x EclipseLink MOXy</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-08-02T10:0:43Z" />
+<meta name="date" content="2012-09-04T7:43:14Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Refreshing Metadata" />
 <meta name="relnum" content="Release 2.4" />
@@ -94,7 +94,7 @@ Document metadataDocument = db.parse(metadataStream);
 metadataStream.close();
  
 Map&lt;String, Object&gt; props = new HashMap&lt;String, Object&gt;(1);
-props.put(JAXBContextFactory.ECLIPSELINK_OXM_XML_KEY, metadataDocument);
+props.put(JAXBContextProperties.OXM_METADATA_SOURCE, metadataDocument);
 JAXBContext context = JAXBContextFactory.createContext(new Class[] { Root.class }, props);
 ...
  
