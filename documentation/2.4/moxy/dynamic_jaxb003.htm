@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Bootstrapping from XML Schema (XSD) | EclipseLink 2.4.x EclipseLink MOXy</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-09-04T7:43:15Z" />
+<meta name="date" content="2012-09-28T10:12:16Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Bootstrapping from XML Schema (XSD)" />
 <meta name="relnum" content="Release 2.4" />
@@ -249,7 +249,7 @@ class MyEntityResolver implements EntityResolver {
 InputStream inputStream = ClassLoader.getSystemResourceAsStream("com/foo/sales/xsd/customer.xsd");
 DynamicJAXBContext dContext = DynamicJAXBContextFactory.createContextFromXSD(inputStream, new MyEntityResolver(), null, null);
 </pre>
-<p>If you encounter the following exception when importing another shema:</p>
+<p>If you encounter the following exception when importing another schema:</p>
 <p><code>Internal Exception: org.xml.sax.SAXParseException: schema_reference.4: Failed to read schema document '&lt;imported-schema-name&gt;', because 1) could not find the document; 2) the document could not be read; 3) the root element of the document is not &lt;xsd:schema&gt;.</code></p>
 <p>You should disable XJC's schema correctness check option, either in code:</p>
 <p><code>System.setProperty("com.sun.tools.xjc.api.impl.s2j.SchemaCompilerImpl.noCorrectnessCheck", "true")</code></p>
