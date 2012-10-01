@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@Index | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-08-02T9:44:0Z" />
+<meta name="date" content="2012-10-01T9:42:46Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@Index" />
 <meta name="relnum" content="Release 2.4" />
@@ -52,10 +52,10 @@ Release 2.4</div></td>
 <p>An index is a database structure defined for a table, to improve query and look-up performance for a set of columns. Use the <code>@Index</code> annotation in code or the <code>&lt;index&gt;</code> element in the <code>eclipselink-orm.xml</code> descriptor to create an index on a table.</p>
 <p>An index can be defined on an entity or on an attribute. For the entity it must define a set of columns to index.</p>
 <p>Index creation is database specific. Some databases may not support indexes. Most databases auto-index primary key and foreign key columns. Some databases support advanced index DDL options. To create more advanced index DDL, a DDL script or native query can be used.</p>
-<a id="sthref148" name="sthref148"></a>
+<a id="sthref149" name="sthref149"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#BABCGCDG">Table 2-26</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="TLJPA419" name="TLJPA419"></a><a id="sthref149" name="sthref149"></a><a id="BABCGCDG" name="BABCGCDG"></a>
+<div class="tblhruleformalwide"><a id="TLJPA419" name="TLJPA419"></a><a id="sthref150" name="sthref150"></a><a id="BABCGCDG" name="BABCGCDG"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 2-26 @Index Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@Index Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="31%" />
@@ -88,8 +88,8 @@ Release 2.4</div></td>
 <p>(Not required when annotated on a field or method) Specify the set of columns to define the index on.</p>
 </td>
 <td align="left" headers="r3c1-t34 r1c3-t34">
-<p>For an Entity, the table.</p>
-<p>For an attribute, the table and column.</p>
+<p>For an Entity, none.</p>
+<p>For an attribute, the attribute's column.</p>
 </td>
 </tr>
 <tr align="left" valign="top">
@@ -140,13 +140,14 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref150" name="sthref150"></a>
-<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <a id="sthref151" name="sthref151"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>Use <code>@Index</code> annotation to index any attributes or columns that will commonly be used in queries.</p>
+<a id="sthref152" name="sthref152"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p>This example defines three indexes, one on <strong>first name</strong>, one on <strong>last name</strong>, and a multiple column index on <strong>first name</strong> <em>and</em> <strong>last name</strong>.</p>
-<div class="example"><a id="TLJPA420" name="TLJPA420"></a><a id="sthref152" name="sthref152"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-45 Using @Index Annotation</font></em></strong></p>
+<div class="example"><a id="TLJPA420" name="TLJPA420"></a><a id="sthref153" name="sthref153"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-48 Using @Index Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Entity
 <strong>@Index(name="EMP_NAME_INDEX", columns={"F_NAME","L_NAME"})</strong>
@@ -164,8 +165,8 @@ public class Employee{
 </pre></div>
 <!-- class="example" -->
 <p>You can also create an index in the <code>eclipselink-orm.xml</code> descriptor using <code>&lt;index&gt;</code>, as shown in the following example. Define columns using the <code>&lt;column&gt;</code> subelement. All the attributes supported in the <code>@Index</code> annotation are also supported in the <code>&lt;index&gt;</code> element.</p>
-<div class="example"><a id="TLJPA421" name="TLJPA421"></a><a id="sthref153" name="sthref153"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-46 Using &lt;index&gt; XML</font></em></strong></p>
+<div class="example"><a id="TLJPA421" name="TLJPA421"></a><a id="sthref154" name="sthref154"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-49 Using &lt;index&gt; XML</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 <strong>&lt;index name="EMP_NAME_INDEX" table="EMPLOYEE" unique="true"&gt;</strong>
     &lt;column&gt;F_NAME&lt;/column&gt;
@@ -173,7 +174,7 @@ public class Employee{
 <strong>&lt;/index&gt;</strong>
 </pre></div>
 <!-- class="example" -->
-<a id="sthref154" name="sthref154"></a>
+<a id="sthref155" name="sthref155"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information see:</p>
 <ul>

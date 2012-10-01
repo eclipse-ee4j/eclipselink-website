@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>JPA Query Customization Extensions | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-08-02T9:44:2Z" />
+<meta name="date" content="2012-10-01T9:42:49Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="JPA Query Customization Extensions" />
 <meta name="relnum" content="Release 2.4" />
@@ -45,7 +45,7 @@ Release 2.4</div></td>
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header --><a id="TLJPA634" name="TLJPA634"></a><a id="sthref470" name="sthref470"></a>
+<div class="ind"><!-- End Header --><a id="TLJPA634" name="TLJPA634"></a><a id="sthref500" name="sthref500"></a>
 <h1 class="chapter"><font face="arial, helvetica, sans-serif" color="#330099"><span class="secnum">4</span> JPA Query Customization Extensions</font></h1>
 <p>You can specify EclipseLink query hints (JPA query extensions) by:</p>
 <ul>
@@ -62,46 +62,154 @@ Release 2.4</div></td>
 <p>EclipseLink supplies the following query hints:</p>
 <ul>
 <li>
-<p><a href="q_batch.htm#batch">batch</a></p>
+<p><code><a href="q_batch.htm#batch">batch</a></code></p>
 </li>
 <li>
-<p><a href="q_cacheusage.htm#cacheusage">cache-usage</a></p>
+<p><code><a href="q_batch_size.htm#BABHCJIH">batch.size</a></code></p>
 </li>
 <li>
-<p><a href="q_bindparameters.htm#bindparameters">jdbc.bind-parameters</a></p>
+<p><code><a href="q_batch_type.htm#BABFGHAA">batch.type</a></code></p>
 </li>
 <li>
-<p><a href="q_jdbc_fetch_size.htm#fetchsize">jdbc.fetch-size</a></p>
+<p><code><a href="q_cacheusage.htm#cacheusage">cache-usage</a></code></p>
 </li>
 <li>
-<p><a href="q_jdbc_max_rows.htm#maxrows">jdbc.max-rows</a></p>
+<p><code><a href="q_cache-usage_indirection-policy.htm#BABDBIDI">cache-usage.indirection-policy</a></code></p>
 </li>
 <li>
-<p><a href="q_jdbc_resultcollectiontype.htm#BABCJADG">jdbc.result-collection-type</a></p>
+<p><code><a href="p_composite_unit_member.htm#CHDHCIDH">composite-unit.member</a></code></p>
 </li>
 <li>
-<p><a href="q_jdbc_timeout.htm#timeout">jdbc.timeout</a></p>
+<p><code><a href="q_cursor.htm#BABBGFJA">cursor</a></code></p>
 </li>
 <li>
-<p><a href="q_join_fetch.htm#fetch">join-fetch</a></p>
+<p><code><a href="q_cursor_initial-size.htm#CHDJJCHG">cursor.initial-size</a></code></p>
 </li>
 <li>
-<p><a href="q_maintain_cache.htm#maintaincache">maintain-cache</a></p>
+<p><code><a href="q_cursor_page-size.htm#CACIGJGE">cursor.page-size</a></code></p>
 </li>
 <li>
-<p><a href="q_pessimistic_lock.htm#pessimisticlock">pessimistic-lock</a></p>
+<p><code><a href="q_exclusive-connection.htm#BABJFGGC">exclusive-connection</a></code></p>
 </li>
 <li>
-<p><a href="q_querytype.htm#querytype">query-type</a></p>
+<p><a href="a_fetchgroup.htm"><code>fetch-group</code></a></p>
 </li>
 <li>
-<p><a href="q_read_only.htm#readonly">read-only</a></p>
+<p><a href="a_fetchgroup.htm"><code>fetch-group.attribute</code></a></p>
 </li>
 <li>
-<p><a href="q_refresh.htm#refresh">refresh</a></p>
+<p><a href="a_fetchgroup.htm"><code>fetch-group.default</code></a></p>
 </li>
 <li>
-<p><a href="q_refresh_cache.htm#refreshcache">refresh.cascade</a></p>
+<p><a href="a_fetchgroup.htm"><code>fetch-group.load</code></a></p>
+</li>
+<li>
+<p><a href="a_fetchgroup.htm"><code>fetch-group.name</code></a></p>
+</li>
+<li>
+<p><code><a href="q_flush.htm#CBHFHGEB">flush</a></code></p>
+</li>
+<li>
+<p><code><a href="q_history.htm#CACDJCBE">history.as-of</a></code></p>
+</li>
+<li>
+<p><code><a href="q_history_as-of_scn.htm#BDCBGEJG">history.as-of.scn</a></code></p>
+</li>
+<li>
+<p><code><a href="q_inheritance_outer-join.htm#BABEDHJB">inheritance.outer-join</a></code></p>
+</li>
+<li>
+<p><code><a href="p_jdbc_allownativesql.htm#CIHHJBFB">jdbc.allow-native-sql-queries</a></code></p>
+</li>
+<li>
+<p><code><a href="q_bindparameters.htm#bindparameters">jdbc.bind-parameters</a></code></p>
+</li>
+<li>
+<p><code><a href="q_jdbc_cache-statement.htm#BABCHAFD">jdbc.cache-statement</a></code></p>
+</li>
+<li>
+<p><code><a href="q_jdbc_fetch_size.htm#fetchsize">jdbc.fetch-size</a></code></p>
+</li>
+<li>
+<p><code><a href="q_jdbc_first-result.htm#BHAGGAIA">jdbc.first-result</a></code></p>
+</li>
+<li>
+<p><code><a href="q_jdbc_max_rows.htm#maxrows">jdbc.max-rows</a></code></p>
+</li>
+<li>
+<p><code><a href="q_jdbc_native-connection.htm#CACCHBBG">jdbc.native-connection</a></code></p>
+</li>
+<li>
+<p><code><a href="q_jdbc_parameter-delimiter.htm#CHDEBFHE">jdbc.parameter-delimiter</a></code></p>
+</li>
+<li>
+<p><code><a href="q_jdbc_timeout.htm#timeout">jdbc.timeout</a></code></p>
+</li>
+<li>
+<p><code><a href="q_join_fetch.htm#fetch">join-fetch</a></code></p>
+</li>
+<li>
+<p><code><a href="q_left-join-fetch.htm#CHDEFDDC">left-join-fetch</a></code></p>
+</li>
+<li>
+<p><code><a href="q_load-group.htm#BABIJCGD">load-group</a></code></p>
+</li>
+<li>
+<p><code><a href="q_load-group_attribute.htm#CACEDHDG">load-group.attribute</a></code></p>
+</li>
+<li>
+<p><code><a href="q_maintain_cache.htm#maintaincache">maintain-cache</a></code></p>
+</li>
+<li>
+<p><code><a href="p_partitioning.htm#partitioning">partitioning</a></code></p>
+</li>
+<li>
+<p><code><a href="q_pessimistic_lock.htm#pessimisticlock">pessimistic-lock</a></code></p>
+</li>
+<li>
+<p><code><a href="q_prepare.htm#CHDGDECH">prepare</a></code></p>
+</li>
+<li>
+<p><code><a href="q_query-results-cache.htm#CHDGEADJ">query-results-cache</a></code></p>
+</li>
+<li>
+<p><code><a href="q_query-results-cache_expiry.htm#BABHGIHG">query-results-cache.expiry</a></code></p>
+</li>
+<li>
+<p><code><a href="q_query-results-cache_expiry-time-of-day.htm#CBAFBFJA">query-results-cache.expiry-time-of-day</a></code></p>
+</li>
+<li>
+<p><code><a href="q_query-results-cache_ignore-null.htm#CHDHGGBD">query-results-cache.ignore-null</a></code></p>
+</li>
+<li>
+<p><code><a href="q_query-results-cache_randomize-expiry.htm#BGBEBGHI">query-results-cache.randomize-expiry</a></code></p>
+</li>
+<li>
+<p><code><a href="q_query-results-cache_size.htm#CACJDDDG">query-results-cache.size</a></code></p>
+</li>
+<li>
+<p><code><a href="q_query-results-cache_type.htm#CACCFFDA">query-results-cache.type</a></code></p>
+</li>
+<li>
+<p><code><a href="q_querytype.htm#querytype">query-type</a></code></p>
+</li>
+<li>
+<p><a href="a_queryredirectors.htm"><code>query.redirection</code></a></p>
+</li>
+<li>
+<p><code><a href="q_read_only.htm#readonly">read-only</a></code></p>
+</li>
+<li>
+<p><code><a href="q_refresh.htm#refresh">refresh</a></code></p>
+</li>
+<li>
+<p><code><a href="q_refresh_cache.htm#refreshcache">refresh.cascade</a></code></p>
+</li>
+<li>
+<p><code><a href="q_resultcollectiontype.htm#BABCJADG">result-collection-type</a></code></p>
+</li>
+<li>
+<p><code><a href="q_sql_hint.htm#CIHHAEDE">sql.hint</a></code></p>
 </li>
 </ul>
 <p>All EclipseLink query hints are defined in the <code>QueryHints</code> class in the <code>org.eclipse.persistence.config package</code>. When you set a hint, you can set the value using the public static final field in the appropriate configuration class in <code>org.eclipse.persistence.config</code> package, including the following:</p>

@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@QueryRedirectors | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-08-02T9:44:1Z" />
+<meta name="date" content="2012-10-01T9:42:47Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@QueryRedirectors" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,100 +50,100 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@QueryRedirectors</font></h2>
 <p>Use @<code>QueryRedirectors</code> to intercept EclipseLink queries for pre- and post-processing, redirection, or performing some side effect such as auditing.</p>
-<a id="sthref285" name="sthref285"></a>
+<a id="sthref317" name="sthref317"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
-<p><a href="#CIHEBJBG">Table 2-50</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="TLJPA515" name="TLJPA515"></a><a id="sthref286" name="sthref286"></a><a id="CIHEBJBG" name="CIHEBJBG"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-50 @QueryRedirectors Annotation Elements</font></em></strong></p>
+<p><a href="#CIHEBJBG">Table 2-57</a> describes this annotation's elements.</p>
+<div class="tblhruleformalwide"><a id="TLJPA515" name="TLJPA515"></a><a id="sthref318" name="sthref318"></a><a id="CIHEBJBG" name="CIHEBJBG"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-57 @QueryRedirectors Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@QueryRedirectors Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="24%" />
 <col width="*" />
 <col width="20%" />
 <thead>
 <tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t60"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
-<th align="left" valign="bottom" id="r1c2-t60"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
-<th align="left" valign="bottom" id="r1c3-t60"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
+<th align="left" valign="bottom" id="r1c1-t68"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t68"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c3-t68"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
 </tr>
 </thead>
 <tbody>
 <tr align="left" valign="top">
-<td align="left" id="r2c1-t60" headers="r1c1-t60">
+<td align="left" id="r2c1-t68" headers="r1c1-t68">
 <p><code>allQueries</code></p>
 </td>
-<td align="left" headers="r2c1-t60 r1c2-t60">
+<td align="left" headers="r2c1-t68 r1c2-t68">
 <p>This <code>AllQueries</code> Query Redirector will be applied to any executing object query that does not have a more precise redirector (like the <code>ReadObjectQuery</code> Redirector) or a redirector set directly on the query.</p>
 </td>
-<td align="left" headers="r2c1-t60 r1c3-t60">
+<td align="left" headers="r2c1-t68 r1c3-t68">
 <p><code>void.class</code></p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r3c1-t60" headers="r1c1-t60">
+<td align="left" id="r3c1-t68" headers="r1c1-t68">
 <p><code>delete</code></p>
 </td>
-<td align="left" headers="r3c1-t60 r1c2-t60">
+<td align="left" headers="r3c1-t68 r1c2-t68">
 <p>A Default <code>Delete</code> Object Query Redirector will be applied to any executing <code>DeleteObjectQuery</code> or <code>DeleteAllQuery</code> that does not have a redirector set directly on the query.</p>
 </td>
-<td align="left" headers="r3c1-t60 r1c3-t60">
+<td align="left" headers="r3c1-t68 r1c3-t68">
 <p><code>void.class</code></p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r4c1-t60" headers="r1c1-t60">
+<td align="left" id="r4c1-t68" headers="r1c1-t68">
 <p>insert</p>
 </td>
-<td align="left" headers="r4c1-t60 r1c2-t60">
+<td align="left" headers="r4c1-t68 r1c2-t68">
 <p>A Default <code>Insert</code> Query Redirector will be applied to any executing <code>InsertObjectQuery</code> that does not have a redirector set directly on the query.</p>
 </td>
-<td align="left" headers="r4c1-t60 r1c3-t60">
+<td align="left" headers="r4c1-t68 r1c3-t68">
 <p><code>void.class</code></p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r5c1-t60" headers="r1c1-t60">
+<td align="left" id="r5c1-t68" headers="r1c1-t68">
 <p>readAll</p>
 </td>
-<td align="left" headers="r5c1-t60 r1c2-t60">
+<td align="left" headers="r5c1-t68 r1c2-t68">
 <p>A Default <code>ReadAll</code> Query Redirector will be applied to any executing <code>ReadAllQuery</code> that does not have a redirector set directly on the query.</p>
 <p>For users executing a JPA Query through the <code>getResultList()</code>, API this is the redirector that will be invoked</p>
 </td>
-<td align="left" headers="r5c1-t60 r1c3-t60">
+<td align="left" headers="r5c1-t68 r1c3-t68">
 <p><code>void.class</code></p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r6c1-t60" headers="r1c1-t60">
+<td align="left" id="r6c1-t68" headers="r1c1-t68">
 <p><code>readObject</code></p>
 </td>
-<td align="left" headers="r6c1-t60 r1c2-t60">
+<td align="left" headers="r6c1-t68 r1c2-t68">
 <p>A Default <code>ReadObject</code> Query Redirector will be applied to any executing <code>ReadObjectQuery</code> that does not have a redirector set directly on the query.</p>
 <p>For users executing a JPA Query through the <code>getSingleResult()</code> API or <code>EntityManager.find()</code>, this is the redirector that will be invoked</p>
 </td>
-<td align="left" headers="r6c1-t60 r1c3-t60">
+<td align="left" headers="r6c1-t68 r1c3-t68">
 <p><code>void.class</code></p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r7c1-t60" headers="r1c1-t60">
+<td align="left" id="r7c1-t68" headers="r1c1-t68">
 <p><code>report</code></p>
 </td>
-<td align="left" headers="r7c1-t60 r1c2-t60">
+<td align="left" headers="r7c1-t68 r1c2-t68">
 <p>A Default <code>ReportQuery</code> Redirector will be applied to any executing <code>ReportQuery</code> that does not have a redirector set directly on the query.</p>
 <p>For users executing a JPA Query that contains aggregate functions or selects multiple entities this is the redirector that will be invoked</p>
 </td>
-<td align="left" headers="r7c1-t60 r1c3-t60">
+<td align="left" headers="r7c1-t68 r1c3-t68">
 <p><code>void.class</code></p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r8c1-t60" headers="r1c1-t60">
+<td align="left" id="r8c1-t68" headers="r1c1-t68">
 <p><code>update</code></p>
 </td>
-<td align="left" headers="r8c1-t60 r1c2-t60">
+<td align="left" headers="r8c1-t68 r1c2-t68">
 <p>A Default <code>Update</code> Query Redirector will be applied to any executing UpdateObjectQuery or <code>UpdateAllQuery</code> that does not have a redirector set directly on the query. In EclipseLink an <code>UpdateObjectQuery</code> is executed whenever flushing changes to the datasource.</p>
 </td>
-<td align="left" headers="r8c1-t60 r1c3-t60">
+<td align="left" headers="r8c1-t68 r1c3-t68">
 <p><code>void.class</code></p>
 </td>
 </tr>
@@ -151,15 +151,15 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref287" name="sthref287"></a>
+<a id="sthref319" name="sthref319"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>Use <code>@QueryRedirectors</code> to extend the standard EclipseLink query functionality.</p>
 <p>You can set a <code>QueryRedirector</code> through the Query Hint <code>eclipselink.query.redirector</code> or set as a default Redirector on an Entity.</p>
-<a id="sthref288" name="sthref288"></a>
+<a id="sthref320" name="sthref320"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<p><a href="#CIHDHIIH">Example 2-81</a> shows how to use this annotation.</p>
+<p><a href="#CIHDHIIH">Example 2-91</a> shows how to use this annotation.</p>
 <div class="example"><a id="CIHDHIIH" name="CIHDHIIH"></a><a id="TLJPA516" name="TLJPA516"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-81 Using @QueryRedirectors Annotation</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-91 Using @QueryRedirectors Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 <strong>@QueryRedirectors</strong>(
     allQueries=org.queryredirectors.AllQueriesForEntity.class)
@@ -168,7 +168,7 @@ public class
 ...
 </pre></div>
 <!-- class="example" -->
-<a id="sthref289" name="sthref289"></a>
+<a id="sthref321" name="sthref321"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 </div>

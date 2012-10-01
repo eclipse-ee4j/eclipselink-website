@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>persistence-context.reference-mode | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
+<meta name="date" content="2012-10-01T9:42:52Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="persistence-context.reference-mode" />
+<meta name="relnum" content="Release 2.4" />
+<link rel="stylesheet" type="text/css" href="../../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="http://www.eclipse.org/org/documents/epl-v10.php" title="Copyright" type="text/html" />  
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="p_persistence_context_persistoncommit.htm" title="Previous" type="text/html" />
+<link rel="next" href="p_persistenceunits.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:4sqnhke2any', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><div class="booktitle">Java Persistence API (JPA) Extensions Reference for EclipseLink, 
+Release 2.4</div></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="p_persistence_context_persistoncommit.htm"><img src="../../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="p_persistenceunits.htm"><img src="../../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header --><a id="BABIAJAI" name="BABIAJAI"></a><a id="TLJPA1119" name="TLJPA1119"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">persistence-context.reference-mode</font></h2>
+<p>Use <code>eclipselink.persistence-context.reference-mode</code> to specify if hard or soft (that is, weak) references are used within the Persistence Context.</p>
+<a id="sthref1185" name="sthref1185"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#BABFGBIF">Table 5-81</a> describes this persistence property's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA1120" name="TLJPA1120"></a><a id="sthref1186" name="sthref1186"></a><a id="BABFGBIF" name="BABFGBIF"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 5-81 Valid Values for persistence-context.reference-mode</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for persistence-context.reference-mode" summary="Valid Values for this query hint" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="18%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t87"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t87"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t87" headers="r1c1-t87">
+<p><code>hard</code></p>
+</td>
+<td align="left" headers="r2c1-t87 r1c2-t87">
+<p>(Default) EclipseLink references all objects through <strong>hard</strong> references. These objects <em>will not</em> be available for garbage collection until the referencing artifact (such as the persistence context or unit of work) is released/cleared or closed.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t87" headers="r1c1-t87">
+<p><code>weak</code></p>
+</td>
+<td align="left" headers="r3c1-t87 r1c2-t87">
+<p>References to objects supporting active attribute change tracking (see <a href="a_changetracking.htm#CEGCCCCJ">"@ChangeTracking"</a>) will be held by <strong>weak</strong> references. That is, any object no longer referenced directly or indirectly will be available for garbage collection. When a change is made to a change-tracked object, that object is moved to a hard reference and will not be available for garbage collection until flushed.</p>
+<p><strong>Note</strong>: Any changes that have not been flushed in these entities will be lost.</p>
+<p>New and removed objects, as well as objects that do not support active attribute change tracking, will also be held by hard references and will not be available for garbage collection.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t87" headers="r1c1-t87">
+<p><code>force_weak</code></p>
+</td>
+<td align="left" headers="r4c1-t87 r1c2-t87">
+<p>All objects, including non-change-tracked objects, are to be held by <strong>weak</strong> references. When a change is made to a change-tracked object (see <a href="a_changetracking.htm#CEGCCCCJ">"@ChangeTracking"</a>), that object is moved to a hard reference and will not be available for garbage collection until flushed. However, any objects that do not support active attribute change tracking may be garbage collected before their changes are flushed to a database, which can potentially result in a loss of changes.</p>
+<p>New and removed objects will be held by hard references and will not be available for garbage collection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref1187" name="sthref1187"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>The property set in <code>persistence.xml</code> or passed to <code>createEntityManagerFactory</code> affects <em>all</em> <code>EntityManagers</code> created by the factory. To apply the property to <em>specific</em> <code>EntityManagers</code> pass it to <code>createEntityManager</code> method.</p>
+<a id="sthref1188" name="sthref1188"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CHDBACII">Example 5-79</a> shows how to use this property in a <code>persistence.xml</code> file.</p>
+<div class="example"><a id="CHDBACII" name="CHDBACII"></a><a id="TLJPA1011" name="TLJPA1011"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 5-79 Using persistence-context.reference-mode in persistence.xml</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;property name="eclipselink.persistence-context.reference-mode" value="FORCE_WEAK"/&gt;
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CHDBACII">Example 5-79</a> shows how to use this property in a property map.</p>
+<div class="example"><a id="TLJPA1012" name="TLJPA1012"></a><a id="sthref1189" name="sthref1189"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 5-80 Using persistence-context.reference-mode in Property Map</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.PersistenceUnitProperties;
+propertiesMap.put(PersistenceUnitProperties.PERSISTENCE_CONTEXT_REFERENCE_MODE, ReferenceMode.FORCE_WEAK);
+</pre></div>
+<!-- class="example" -->
+<a id="sthref1190" name="sthref1190"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="a_changetracking.htm#CEGCCCCJ">"@ChangeTracking"</a></p>
+</li>
+<li>
+<p>"Using EclipseLink JPA Extensions for Tracking Changes"<br />
+<code><a href="http://wiki.eclipse.org/index.php?title=Using_EclipseLink_JPA_Extensions_%28ELUG%29&amp;oldid=310588#Using_EclipseLink_JPA_Extensions_for_Tracking_Changes">http://wiki.eclipse.org/index.php?title=Using_EclipseLink_JPA_Extensions_%28ELUG%29&amp;oldid=310588#Using_EclipseLink_JPA_Extensions_for_Tracking_Changes</a></code></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="p_persistence_context_persistoncommit.htm"><img src="../../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="p_persistenceunits.htm"><img src="../../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+</td>
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
+</html>

@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@NoSql | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-08-02T9:44:0Z" />
+<meta name="date" content="2012-10-01T9:42:46Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@NoSql" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,51 +50,64 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@NoSql</font></h2>
 <p>Use <code>@NoSql</code> to specify a non-relational (that is, no SQL) data source. EclipseLink can map non-relational data to objects and access that data through JPA.</p>
-<a id="sthref225" name="sthref225"></a>
+<a id="sthref244" name="sthref244"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
-<p><a href="#BJEBBCFE">Table 2-39</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="TLJPA476" name="TLJPA476"></a><a id="sthref226" name="sthref226"></a><a id="BJEBBCFE" name="BJEBBCFE"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-39 @NoSql Annotation Elements</font></em></strong></p>
+<p><a href="#BJEBBCFE">Table 2-43</a> describes this annotation's elements.</p>
+<div class="tblhruleformalwide"><a id="TLJPA476" name="TLJPA476"></a><a id="sthref245" name="sthref245"></a><a id="BJEBBCFE" name="BJEBBCFE"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-43 @NoSql Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@NoSql Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="21%" />
 <col width="*" />
 <col width="20%" />
 <thead>
 <tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t49"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
-<th align="left" valign="bottom" id="r1c2-t49"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
-<th align="left" valign="bottom" id="r1c3-t49"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
+<th align="left" valign="bottom" id="r1c1-t53"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t53"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c3-t53"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
 </tr>
 </thead>
 <tbody>
 <tr align="left" valign="top">
-<td align="left" id="r2c1-t49" headers="r1c1-t49">
-<p><code>dataFormat</code></p>
-</td>
-<td align="left" headers="r2c1-t49 r1c2-t49">
-<p>(Optional) Defines the order of the fields contained in the database structure type.</p>
-</td>
-<td align="left" headers="r2c1-t49 r1c3-t49"><br /></td>
-</tr>
-<tr align="left" valign="top">
-<td align="left" id="r3c1-t49" headers="r1c1-t49">
+<td align="left" id="r2c1-t53" headers="r1c1-t53">
 <p><code>dataType</code></p>
 </td>
-<td align="left" headers="r3c1-t49 r1c2-t49">
-<p>(Required) The database name of the database structure type.</p>
+<td align="left" headers="r2c1-t53 r1c2-t53">
+<p>The name of the entities structure. The purpose of the <code>dataType</code> depends on the NoSQL platform used:</p>
 <ul>
 <li>
-<p><code>INDEXED</code> &ndash; Uses JCA <code>IndexedRecords</code>. Object data is decomposed into an array of field values.</p>
+<p>For MongoDB, it is the collection name that the JSON documents are stored to.</p>
 </li>
 <li>
-<p><code>MAPPED</code> &ndash; Uses JCA <code>MappedRecords</code>. Object data is decomposed into a map of key/value pairs.</p>
+<p>For Oracle NoSQL, it is the first part of the major key value.</p>
 </li>
 <li>
-<p><code>XML</code> &ndash; Uses XML data</p>
+<p>For XML files, it is the file name. and XML messaging, use <code>XML</code>.</p>
 </li>
 </ul>
 </td>
-<td align="left" headers="r3c1-t49 r1c3-t49">
+<td align="left" headers="r2c1-t53 r1c3-t53"><br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t53" headers="r1c1-t53">
+<p><code>dataFormat</code></p>
+</td>
+<td align="left" headers="r3c1-t53 r1c2-t53">
+<p>(Optional) The type structure (data format) in which the data is stored within the database:</p>
+<ul>
+<li>
+<p><code>INDEXED</code> &ndash; Maps a class to an array of values.</p>
+</li>
+<li>
+<p><code>MAPPED</code> &ndash; Maps a class to a set of nested key/value pairs, a value can be an embedded map or list.</p>
+<p>Use to map to key/value stores, JSON databases, and other structured data systems.</p>
+</li>
+<li>
+<p><code>XML</code> &ndash; Maps a class to an XML document.</p>
+<p>Use with XML data-stores, XML files, XML messaging systems, and other XML systems.</p>
+</li>
+</ul>
+</td>
+<td align="left" headers="r3c1-t53 r1c3-t53">
 <p>XML</p>
 </td>
 </tr>
@@ -102,40 +115,49 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref227" name="sthref227"></a>
+<a id="sthref246" name="sthref246"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
-<p>EclipseLink supports access to NoSQL data through the JavaEE Connector Architecture. You must use a JCA adapter (provided by EclipseLink, a third party, or custom built).</p>
-<p>EclipseLink can use non-relational data sources such as:</p>
+<p>The <code>dataFormat</code> depends on the NoSQL platform used:</p>
 <ul>
 <li>
-<p>NoSQL databases such as Oracle NoSQL, MongoDB, and so on</p>
+<p>For MongoDB, use <code>MAPPED</code>.</p>
 </li>
 <li>
-<p>XML databases</p>
+<p>For Oracle NoSQL, use <code>MAPPED</code> (for key/value data) or <code>XML</code> (for a single XML document).</p>
 </li>
 <li>
-<p>Distributed cache stores, such as Oracle Coherence</p>
-</li>
-<li>
-<p>Object databases</p>
-</li>
-<li>
-<p>Legacy databases, gateways and transaction system such as VSAM, ADA, CICS, IMS, MQSeries, Tuxedo, and so on</p>
-</li>
-<li>
-<p>ERP systems, such as SAP</p>
+<p>For XML files and XML messaging, use <code>XML</code>.</p>
 </li>
 </ul>
-<p>You can map Entity and Embeddable objects to NoSQL data.</p>
-<p>Most NoSQL data is hierarchical in form so using embeddable objects is common. Some NoSQL adaptors support XML data, so NoSQL mapped objects can use XML mappings when mapping to XML.</p>
-<a id="sthref228" name="sthref228"></a>
+<a id="TLJPA721" name="TLJPA721"></a>
+<p><b><font face="arial, helvetica, sans-serif" color="#330099">Supported Datasources</font></b></p>
+<p>EclipseLink supports several NoSQL and EIS platforms, as well as generic NoSQL and EIS datasources through the JavaEE Connector Architecture CCI (Common Client Interface) API. You can also define your own <code>EISPlatform</code> subclass and JCA adapter</p>
+<p>EclipseLink supports the following datasources:</p>
+<ul>
+<li>
+<p>MongoDB</p>
+</li>
+<li>
+<p>Oracle NoSQL</p>
+</li>
+<li>
+<p>XML Files</p>
+</li>
+<li>
+<p>JMS</p>
+</li>
+<li>
+<p>Oracle AQ</p>
+</li>
+</ul>
+<a id="sthref247" name="sthref247"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<p><a href="#BJECFBJG">Example 2-68</a> shows using <code>@NoSql</code> with an XML data source.</p>
+<p><a href="#BJECFBJG">Example 2-75</a> shows using <code>@NoSql</code> with an XML data source.</p>
 <div class="example"><a id="BJECFBJG" name="BJECFBJG"></a><a id="TLJPA477" name="TLJPA477"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-68 Using @NoSql Annotation</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-75 Using @NoSql Annotation with XML</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Entity
-<strong>@NoSQL</strong>(dataType="order")
+<strong>@NoSQL</strong><strong>(dataType="order")</strong>
 public class Order {
   @Id
   @GeneratedValue
@@ -156,7 +178,7 @@ public class Order {
 }
  
 @Embeddable
-<strong>@NoSQL</strong>(dataFormat=DataFormatType.MAPPED)
+<strong>@NoSQL</strong>
 public class OrderLine {
     @Field(name="@line-number")
     private int lineNumber;
@@ -179,13 +201,69 @@ public class OrderLine {
 &lt;order&gt;
 </pre></div>
 <!-- class="example" -->
-<a id="sthref229" name="sthref229"></a>
+<p><a href="#BJECHGJH">Example 2-76</a> shows using <code>@NoSql</code> with a JSON data source.</p>
+<div class="example"><a id="BJECHGJH" name="BJECHGJH"></a><a id="TLJPA722" name="TLJPA722"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-76 Using @NoSql Annotation with JSON</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+@Entity
+<strong>@NoSQL(dataType="orders", dataFormat=DataFormatType.MAPPED)</strong>
+public class Order {
+  @Id
+  @GeneratedValue
+  @Field(name="_id")
+  private long id;
+  @Basic
+  @Field(name="description")
+  private String description;
+  @Embedded
+  @Field(name="deliveryAddress")
+  private Address deliveryAddress
+  @ElementCollection
+  @Field(name="orderLines")
+  private List&lt;OrderLine&gt; orderLines;
+  @ManyToOne
+  @JoinField(name="customerId")
+  private Customer customer;
+}
+ 
+@Embeddable
+<strong>@NoSQL(dataFormat=DataFormatType.MAPPED)</strong>
+public class OrderLine {
+    @Field(name="lineNumber")
+    private int lineNumber;
+    @Field(name="itemName")
+    private String itemName;
+    @Field(name="quantity")
+    private int quantity;  
+}
+</pre>
+<p>This would produce the following JSON document:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+{
+  "_id": "4F99702B271B1948027FAF06",
+  "description": "widget order",
+  "deliveryAddress": {
+      "street": "1712 Hasting Street",
+      "city": "Ottawa",
+      "province": "ON",
+      "postalCode": "L5J1H5",
+  },
+  "orderLines": [
+      {"lineNumber": "1", "itemName": "widget A", "quantity": "5"},
+      {"lineNumber": "2", "itemName": "widget B", "quantity": "1"},
+      {"lineNumber": "3", "itemName": "widget C", "quantity": "2"}
+  ],
+  "customerId": "4F99702B271B1948027FAF08",
+}
+</pre></div>
+<!-- class="example" -->
+<a id="sthref248" name="sthref248"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
 <li>
 <p>@NoSQL<br />
-<code><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/NoSQL/Configuring">http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/NoSQL/Configuring</a></code></p>
+<code><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/NoSQL">http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/NoSQL</a></code></p>
 </li>
 <li>
 <p>NoSQL Persistence Units<br />
@@ -194,6 +272,17 @@ public class OrderLine {
 <li>
 <p>Examples<br />
 <code><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/NoSQL">http://wiki.eclipse.org/EclipseLink/Examples/JPA/NoSQL</a></code></p>
+</li>
+<li>
+<p><a href="p_nosql_property.htm#BABJAJAI">"nosql.property"</a></p>
+</li>
+<li>
+<p>EclipseLink Platform Incubator<br />
+<code><a href="http://wiki.eclipse.org/EclipseLink/Development/Incubator/Platform">http://wiki.eclipse.org/EclipseLink/Development/Incubator/Platform</a></code></p>
+</li>
+<li>
+<p>Supported NoSQL and EIS Datasources<br />
+<code><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/NoSQL/Supported_Data-sources">http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/NoSQL/Supported_Data-sources</a></code></p>
 </li>
 </ul>
 </div>

@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@VirtualAccessMethods | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-08-02T9:44:1Z" />
+<meta name="date" content="2012-10-01T9:42:48Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@VirtualAccessMethods" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,44 +50,44 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@VirtualAccessMethods</font></h2>
 <p>Use <code>@VirtualAccessMethods</code> to specify that a specific class contains virtual methods.</p>
-<a id="sthref415" name="sthref415"></a>
+<a id="sthref446" name="sthref446"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
-<p><a href="#CIHCCFIH">Table 2-73</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="TLJPA596" name="TLJPA596"></a><a id="sthref416" name="sthref416"></a><a id="CIHCCFIH" name="CIHCCFIH"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-73 @VirtualAccessMethods Annotation Elements</font></em></strong></p>
+<p><a href="#CIHCCFIH">Table 2-80</a> describes this annotation's elements.</p>
+<div class="tblhruleformalwide"><a id="TLJPA596" name="TLJPA596"></a><a id="sthref447" name="sthref447"></a><a id="CIHCCFIH" name="CIHCCFIH"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-80 @VirtualAccessMethods Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@VirtualAccessMethods Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="21%" />
 <col width="*" />
 <col width="20%" />
 <thead>
 <tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t85"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
-<th align="left" valign="bottom" id="r1c2-t85"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
-<th align="left" valign="bottom" id="r1c3-t85"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
+<th align="left" valign="bottom" id="r1c1-t93"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t93"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c3-t93"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
 </tr>
 </thead>
 <tbody>
 <tr align="left" valign="top">
-<td align="left" id="r2c1-t85" headers="r1c1-t85">
+<td align="left" id="r2c1-t93" headers="r1c1-t93">
 <p><code>get</code></p>
 </td>
-<td align="left" headers="r2c1-t85 r1c2-t85">
+<td align="left" headers="r2c1-t93 r1c2-t93">
 <p>(Optional) Name of the <code>getter</code> method to use for the virtual property This method must take a single <code>java.lang.String</code> parameter and return a <code>java.lang.Object</code>.</p>
 <p>If <code>get</code> is specified, you must also specify <code>set</code>.</p>
 </td>
-<td align="left" headers="r2c1-t85 r1c3-t85">
+<td align="left" headers="r2c1-t93 r1c3-t93">
 <p><code>get</code></p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r3c1-t85" headers="r1c1-t85">
+<td align="left" id="r3c1-t93" headers="r1c1-t93">
 <p>set</p>
 </td>
-<td align="left" headers="r3c1-t85 r1c2-t85">
+<td align="left" headers="r3c1-t93 r1c2-t93">
 <p>(Optional) Name of the <code>setter</code> method to use for the virtual property This method must take a <code>java.lang.String</code> parameter and a <code>java.lang.Object</code> parameter.</p>
 <p>If <code>set</code> is specified, you must also specify <code>get</code>.</p>
 </td>
-<td align="left" headers="r3c1-t85 r1c3-t85">
+<td align="left" headers="r3c1-t93 r1c3-t93">
 <p><code>set</code></p>
 </td>
 </tr>
@@ -95,14 +95,14 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref417" name="sthref417"></a>
+<a id="sthref448" name="sthref448"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>Use the <code>@VirtualAccessMethods</code> annotation to define access methods for mappings with in which <code>accessType</code>=VIRTUAL.</p>
-<a id="sthref418" name="sthref418"></a>
+<a id="sthref449" name="sthref449"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<p><a href="#CIHCCFIH">Table 2-73</a> shows an entity using property access.</p>
-<div class="example"><a id="TLJPA597" name="TLJPA597"></a><a id="sthref419" name="sthref419"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-113 Using @VirtualAccessMethods Annotation</font></em></strong></p>
+<p><a href="#CIHCCFIH">Table 2-80</a> shows an entity using property access.</p>
+<div class="example"><a id="TLJPA597" name="TLJPA597"></a><a id="sthref450" name="sthref450"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-123 Using @VirtualAccessMethods Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Entity
 <strong>  @VirtualAccessMethods</strong>
@@ -124,14 +124,14 @@ Release 2.4</div></td>
     }
 </pre></div>
 <!-- class="example" -->
-<p>In addition to using the <code>@VirtualAccessMethods</code> annotation, you can use the <code>&lt;access&gt;</code> and <code>&lt;access-method&gt;</code> elements in your <code>eclipselink-orm.xml</code> file, as shown in <a href="#CIHCJCJE">Example 2-114</a>.</p>
+<p>In addition to using the <code>@VirtualAccessMethods</code> annotation, you can use the <code>&lt;access&gt;</code> and <code>&lt;access-method&gt;</code> elements in your <code>eclipselink-orm.xml</code> file, as shown in <a href="#CIHCJCJE">Example 2-124</a>.</p>
 <div class="example"><a id="CIHCJCJE" name="CIHCJCJE"></a><a id="TLJPA598" name="TLJPA598"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-114 Using &lt;access&gt; and &lt;access-methods&gt; XML</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-124 Using &lt;access&gt; and &lt;access-methods&gt; XML</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;access&gt;VIRTUAL&lt;/access&gt;&lt;access-methods get-method="get" set-method="set"/&gt;@Entity
 </pre></div>
 <!-- class="example" -->
-<a id="sthref420" name="sthref420"></a>
+<a id="sthref451" name="sthref451"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

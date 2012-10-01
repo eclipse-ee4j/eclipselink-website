@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@FetchAttribute | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-08-02T9:44:0Z" />
+<meta name="date" content="2012-10-01T9:42:46Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@FetchAttribute" />
 <meta name="relnum" content="Release 2.4" />
@@ -95,16 +95,15 @@ Release 2.4</div></td>
 <p>You should extensively review your use cases when using fetch groups. In many cases, additional round-trips will offset any gains from deferred loading.</p>
 <a id="sthref125" name="sthref125"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<p><a href="#BABFDFHD">Example 2-40</a> shows how to use <code>@FetchAttribute</code> within a <code>@FetchGroup</code> annotation.</p>
+<p><a href="#BABFDFHD">Example 2-42</a> shows how to use <code>@FetchAttribute</code> within a <code>@FetchGroup</code> annotation.</p>
 <div class="example"><a id="BABFDFHD" name="BABFDFHD"></a><a id="TLJPA405" name="TLJPA405"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-40 Using @FetchAttribute Annotation</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-42 Using @FetchAttribute Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Entity
-@FetchGroup(name="default-fetch-group", attributes={
+@FetchGroup(name="basic-fetch-group", attributes={
         <strong>@FetchAttribute(name="id")</strong>, 
         <strong>@FetchAttribute(name="name")</strong>,
         <strong>@FetchAttribute(name="address")</strong>}) 
-@DefaultResource("default-fetch-group")
 public class Person {
  
    @Id
@@ -119,7 +118,17 @@ public class Person {
    private ContactInfo contactInfo;
 </pre></div>
 <!-- class="example" -->
-<a id="sthref126" name="sthref126"></a>
+<div class="example"><a id="sthref126" name="sthref126"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-43 Using &lt;fetch-group&gt; XML</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+<strong>&lt;fetch-group name="basic-fetch-group"&gt;</strong>
+    &lt;attribute name="id"/&gt;
+    &lt;attribute name="name"/&gt;
+    &lt;attribute name="address"/&gt;
+&lt;/fetch-group&gt;
+</pre></div>
+<!-- class="example" -->
+<a id="sthref127" name="sthref127"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

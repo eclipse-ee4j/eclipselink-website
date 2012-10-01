@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Annotation Extensions Reference | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-08-02T9:44:0Z" />
+<meta name="date" content="2012-10-01T9:42:45Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Annotation Extensions Reference" />
 <meta name="relnum" content="Release 2.4" />
@@ -15,8 +15,8 @@
 <link rel="copyright" href="http://www.eclipse.org/org/documents/epl-v10.php" title="Copyright" type="text/html" />  
 <link rel="start" href="../../index.htm" title="Home" type="text/html" />
 <link rel="contents" href="toc.htm" title="Contents" type="text/html" />
-<link rel="prev" href="intro002.htm" title="Previous" type="text/html" />
-<link rel="next" href="annotations_ref001.htm" title="Next" type="text/html" />
+<link rel="prev" href="intro.htm" title="Previous" type="text/html" />
+<link rel="next" href="a_additionalcriteria.htm" title="Next" type="text/html" />
 <!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
 <body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:4sqnhke2any', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
 <div class="header"><a id="top" name="top"></a>
@@ -38,8 +38,8 @@ Release 2.4</div></td>
 <hr />
 <table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
 <tr>
-<td align="center"><a href="intro002.htm"><img src="../../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
-<td align="center"><a href="annotations_ref001.htm"><img src="../../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="intro.htm"><img src="../../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="a_additionalcriteria.htm"><img src="../../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
 <td>&nbsp;</td>
 </tr>
 </table>
@@ -51,13 +51,593 @@ Release 2.4</div></td>
 <p>This chapter contains the following sections:</p>
 <ul>
 <li>
-<p><a href="annotations_ref001.htm#CACGDIBI">Functional Listing of Annotation Extensions</a></p>
+<p><a href="#CACGDIBI">Functional Listing of Annotation Extensions</a></p>
 </li>
 <li>
-<p><a href="annotations_ref002.htm#CACBGBJG">Alphabetical Listing of Annotation Extensions</a></p>
+<p><a href="#CACBGBJG">Alphabetical Listing of Annotation Extensions</a></p>
+</li>
+</ul>
+<a id="CACGDIBI" name="CACGDIBI"></a><a id="TLJPA307" name="TLJPA307"></a>
+<div class="sect1">
+<h2 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Functional Listing of Annotation Extensions</font></h2>
+<p>The following lists the EclipseLink annotation extensions, categorized by function:</p>
+<ul>
+<li>
+<p><a href="#CACFGAIC">Mapping Annotations</a></p>
+</li>
+<li>
+<p><a href="#CACGCEIJ">Entity Annotations</a></p>
+</li>
+<li>
+<p><a href="#CACDIEID">Converter Annotations</a></p>
+</li>
+<li>
+<p><a href="#CACGIACB">Caching Annotations</a></p>
+</li>
+<li>
+<p><a href="#CACJHFEC">Customization and Optimization Annotations</a></p>
+</li>
+<li>
+<p><a href="#CACDCCEG">Copy Policy Annotations</a></p>
+</li>
+<li>
+<p><a href="#CACGFGED">Returning Policy Annotations</a></p>
+</li>
+<li>
+<p><a href="#CACCBFFE">Stored Procedure and Function Annotations</a></p>
+</li>
+<li>
+<p><a href="#CACHIHIB">Partitioning Annotations</a></p>
+</li>
+<li>
+<p><a href="#CACDIHJI">Non-relational (NoSQL) Annotations</a></p>
+</li>
+</ul>
+<a id="CACFGAIC" name="CACFGAIC"></a><a id="TLJPA308" name="TLJPA308"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Mapping Annotations</font></h3>
+<p>EclipseLink includes the following annotation extensions for mappings:</p>
+<ul>
+<li>
+<p><a href="a_privateowned.htm#CHDDDDAI">@PrivateOwned</a></p>
+</li>
+<li>
+<p><a href="a_joinfetch.htm#CEGFFHHA">@JoinFetch</a></p>
+</li>
+<li>
+<p><a href="a_mutable.htm#CHDIFIJF">@Mutable</a></p>
+</li>
+<li>
+<p><a href="a_property.htm#BGBCHEDG">@Property</a></p>
+</li>
+<li>
+<p><a href="a_transformation.htm#BABCJGIG">@Transformation</a></p>
+</li>
+<li>
+<p><a href="a_readtransformer.htm#CHDGHHBA">@ReadTransformer</a></p>
+</li>
+<li>
+<p><a href="a_writetransformer.htm#BGBGGAEA">@WriteTransformer</a></p>
+</li>
+<li>
+<p><a href="a_writetransformers.htm#BCFCCEJF">@WriteTransformers</a></p>
 </li>
 </ul>
 </div>
+<!-- class="sect2" -->
+<a id="CACGCEIJ" name="CACGCEIJ"></a><a id="TLJPA309" name="TLJPA309"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Entity Annotations</font></h3>
+<p>EclipseLink includes the following annotation extensions for entities:</p>
+<ul>
+<li>
+<p><a href="a_additionalcriteria.htm#additionalcriteria">@AdditionalCriteria</a></p>
+</li>
+<li>
+<p><a href="a_excludedefaultmappings.htm#BEICFBDD">@ExcludeDefaultMappings</a></p>
+</li>
+<li>
+<p><a href="a_multitenant.htm#BABIEJGD">@Multitenant</a></p>
+</li>
+<li>
+<p><a href="a_readonly.htm#BGBGEFBD">@ReadOnly</a></p>
+</li>
+<li>
+<p><a href="a_optimisticlocking.htm#BCGIACHD">@OptimisticLocking</a></p>
+</li>
+<li>
+<p><a href="a_tenantdiscrim_columns.htm#CECBEBEA">@TenantDiscriminatorColumns</a></p>
+</li>
+<li>
+<p><a href="a_tenantdiscriminatorcolumn.htm#CHECIDGH">@TenantDiscriminatorColumn</a></p>
+</li>
+<li>
+<p><a href="a_tenanttablediscriminator.htm#CHDFJJEC">@TenantTableDiscriminator</a></p>
+</li>
+<li>
+<p><a href="a_struct.htm#CBBDCAHG">@Struct</a></p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="CACDIEID" name="CACDIEID"></a><a id="TLJPA310" name="TLJPA310"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Converter Annotations</font></h3>
+<p>EclipseLink includes the following annotation extensions for converting data:</p>
+<ul>
+<li>
+<p><a href="a_convert.htm#BEHGJHCD">@Convert</a></p>
+</li>
+<li>
+<p><a href="a_converter.htm#CHDEHJEB">@Converter</a></p>
+</li>
+<li>
+<p><a href="a_converters.htm#CIHEBAFB">@Converters</a></p>
+</li>
+<li>
+<p><a href="a_typeconverter.htm#CHDHCCJF">@TypeConverter</a></p>
+</li>
+<li>
+<p><a href="a_typeconverters.htm#BCFBEIAE">@TypeConverters</a></p>
+</li>
+<li>
+<p><a href="a_objecttypeconverter.htm#BGBBDGAI">@ObjectTypeConverter</a></p>
+</li>
+<li>
+<p><a href="a_objecttypeconverters.htm#CHDCHJHF">@ObjectTypeConverters</a></p>
+</li>
+<li>
+<p><a href="a_structconverter.htm#BGBJEBBB">@StructConverter</a></p>
+</li>
+<li>
+<p><a href="a_structconverters.htm#CHDCJCDE">@StructConverters</a></p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="CACGIACB" name="CACGIACB"></a><a id="TLJPA311" name="TLJPA311"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Caching Annotations</font></h3>
+<p>EclipseLink includes the following annotation extensions for caching:</p>
+<ul>
+<li>
+<p><a href="a_cache.htm#CHDBBIHE">@Cache</a></p>
+</li>
+<li>
+<p><a href="a_cacheindex.htm#CEGFEJCH">@CacheIndex</a></p>
+</li>
+<li>
+<p><a href="a_cacheindexes.htm#BABIJDDB">@CacheIndexes</a></p>
+</li>
+<li>
+<p><a href="a_cacheinterceptor.htm#BABJGDGB">@CacheInterceptor</a></p>
+</li>
+<li>
+<p><a href="a_timeofday.htm#BGBGACHC">@TimeOfDay</a></p>
+</li>
+<li>
+<p><a href="a_existencechecking.htm#BABICJEJ">@ExistenceChecking</a></p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="CACJHFEC" name="CACJHFEC"></a><a id="TLJPA312" name="TLJPA312"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Customization and Optimization Annotations</font></h3>
+<p>EclipseLink includes the following annotation extensions for customization and optimization.</p>
+<ul>
+<li>
+<p><a href="a_customizer.htm#CHDCCDGC">@Customizer</a></p>
+</li>
+<li>
+<p><a href="a_changetracking.htm#CEGCCCCJ">@ChangeTracking</a></p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="CACDCCEG" name="CACDCCEG"></a><a id="TLJPA313" name="TLJPA313"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Copy Policy Annotations</font></h3>
+<p>EclipseLink includes the following annotation extensions for copy policies:</p>
+<ul>
+<li>
+<p><a href="a_clonecopypolicy.htm#CDDJGFHA">@CloneCopyPolicy</a></p>
+</li>
+<li>
+<p><a href="a_copypolicy.htm#BGBDGCDJ">@CopyPolicy</a></p>
+</li>
+<li>
+<p><a href="a_instantiationcopypolicy.htm#CHDCJEIG">@InstantiationCopyPolicy</a></p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="CACGFGED" name="CACGFGED"></a><a id="TLJPA314" name="TLJPA314"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Returning Policy Annotations</font></h3>
+<p>EclipseLink includes the following annotation extensions for returning policies:</p>
+<ul>
+<li>
+<p><a href="a_returninsert.htm#CIHHEGJE">@ReturnInsert</a></p>
+</li>
+<li>
+<p><a href="a_returnupdate.htm#CACHDFCF">@ReturnUpdate</a></p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="CACCBFFE" name="CACCBFFE"></a><a id="TLJPA315" name="TLJPA315"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Stored Procedure and Function Annotations</font></h3>
+<p>EclipseLink includes the following annotation extensions for stored procedures and stored functions:</p>
+<ul>
+<li>
+<p><a href="a_namedplsqlstoredfunc_queries.htm#CIHJFFDI2">@NamedPLSQLStoredFunctionQueries</a></p>
+</li>
+<li>
+<p><a href="a_namedplsqlstoredfunctionquery.htm#BGBDHGJE">@NamedPLSQLStoredFunctionQuery</a></p>
+</li>
+<li>
+<p><a href="a_namedplsqlstoredproc_queries.htm#BABJCEJH3">@NamedPLSQLStoredProcedureQueries</a></p>
+</li>
+<li>
+<p><a href="a_namedplsqlstoredprocedurequery.htm#BGBDHGJE2">@NamedPLSQLStoredProcedureQuery</a></p>
+</li>
+<li>
+<p><a href="a_namedstoredfunc_queries.htm#CIHJFFDI">@NamedStoredFunctionQueries</a></p>
+</li>
+<li>
+<p><a href="a_namedstoredfunctionquery.htm#BABFBIFE">@NamedStoredFunctionQuery</a></p>
+</li>
+<li>
+<p><a href="a_namedstoredproc_queries.htm#BABJCEJH">@NamedStoredProcedureQueries</a></p>
+</li>
+<li>
+<p><a href="a_namedstoredprocedurequery.htm#BGBGAEFF">@NamedStoredProcedureQuery</a></p>
+</li>
+<li>
+<p><a href="a_plsqlparameter.htm#CHDDEBEC">@PLSQLParameter</a></p>
+</li>
+<li>
+<p><a href="a_plsqlrecord.htm#CHDBGAED">@PLSQLRecord</a></p>
+</li>
+<li>
+<p><a href="a_plsqlrecords.htm#CHDBGAED4">@PLSQLRecords</a></p>
+</li>
+<li>
+<p><a href="a_storedprocedureparameter.htm#CHDDEBEC6">@StoredProcedureParameter</a></p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="CACHIHIB" name="CACHIHIB"></a><a id="TLJPA316" name="TLJPA316"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Partitioning Annotations</font></h3>
+<p>EclipseLink includes the following annotation extensions for using partitions:</p>
+<ul>
+<li>
+<p><a href="a_hashpartitioning.htm#CEGBDBEG">@HashPartitioning</a></p>
+</li>
+<li>
+<p><a href="a_partitioned.htm#CHDDAHEB">@Partitioned</a></p>
+</li>
+<li>
+<p><a href="a_partitioning.htm#CEGDCFDA">@Partitioning</a></p>
+</li>
+<li>
+<p><a href="a_pinnedpartitioning.htm#BCGIIAFB">@PinnedPartitioning</a></p>
+</li>
+<li>
+<p><a href="a_rangepartition.htm#BABCFDAJ">@RangePartition</a></p>
+</li>
+<li>
+<p><a href="a_rangepartitioning.htm#BCGCGEIH">@RangePartitioning</a></p>
+</li>
+<li>
+<p><a href="a_replicationpartitioning.htm#BABJEFJH">@ReplicationPartitioning</a></p>
+</li>
+<li>
+<p><a href="a_roundrobinpartitioning.htm#BCGBJGFF">@RoundRobinPartitioning</a></p>
+</li>
+<li>
+<p><a href="a_unionpartitioning.htm#BCGEJFAH">@UnionPartitioning</a></p>
+</li>
+<li>
+<p><a href="a_valuepartitioning.htm#CEGHFJDJ">@ValuePartitioning</a></p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="CACDIHJI" name="CACDIHJI"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Non-relational (NoSQL) Annotations</font></h3>
+<p>EclipseLink includes the following annotation extensions for non-relational datasources:</p>
+<ul>
+<li>
+<p><a href="a_field.htm#CBHHCHAC">@Field</a></p>
+</li>
+<li>
+<p><a href="a_joinfield.htm#CIHCAFEI">@JoinField</a></p>
+</li>
+<li>
+<p><a href="a_joinfields.htm#BEIFHJJE">@JoinFields</a></p>
+</li>
+<li>
+<p><a href="a_nosql.htm#BJEIEBHC">@NoSql</a></p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CACBGBJG" name="CACBGBJG"></a><a id="TLJPA317" name="TLJPA317"></a>
+<div class="sect1">
+<h2 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Alphabetical Listing of Annotation Extensions</font></h2>
+<p>The following lists the EclipseLink annotation extensions:</p>
+<ul>
+<li>
+<p><a href="a_additionalcriteria.htm#additionalcriteria">@AdditionalCriteria</a></p>
+</li>
+<li>
+<p><a href="a_array.htm#CHDDDFDA">@Array</a></p>
+</li>
+<li>
+<p><a href="a_batchfetch.htm#CHDCCIDA">@BatchFetch</a></p>
+</li>
+<li>
+<p><a href="a_cache.htm#CHDBBIHE">@Cache</a></p>
+</li>
+<li>
+<p><a href="a_cacheindex.htm#CEGFEJCH">@CacheIndex</a></p>
+</li>
+<li>
+<p><a href="a_cacheindexes.htm#BABIJDDB">@CacheIndexes</a></p>
+</li>
+<li>
+<p><a href="a_cacheinterceptor.htm#BABJGDGB">@CacheInterceptor</a></p>
+</li>
+<li>
+<p><a href="a_cascadeondelete.htm#CIABIIEB">@CascadeOnDelete</a></p>
+</li>
+<li>
+<p><a href="a_changetracking.htm#CEGCCCCJ">@ChangeTracking</a></p>
+</li>
+<li>
+<p><a href="a_classextractor.htm#BGBHAADB">@ClassExtractor</a></p>
+</li>
+<li>
+<p><a href="a_clonecopypolicy.htm#CDDJGFHA">@CloneCopyPolicy</a></p>
+</li>
+<li>
+<p><a href="a_compositemember.htm#BGBHHCJH">@CompositeMember</a></p>
+</li>
+<li>
+<p><a href="a_conversionvalue.htm#CBBJAJCH">@ConversionValue</a></p>
+</li>
+<li>
+<p><a href="a_convert.htm#BEHGJHCD">@Convert</a></p>
+</li>
+<li>
+<p><a href="a_converter.htm#CHDEHJEB">@Converter</a></p>
+</li>
+<li>
+<p><a href="a_converters.htm#CIHEBAFB">@Converters</a></p>
+</li>
+<li>
+<p><a href="a_copypolicy.htm#BGBDGCDJ">@CopyPolicy</a></p>
+</li>
+<li>
+<p><a href="a_customizer.htm#CHDCCDGC">@Customizer</a></p>
+</li>
+<li>
+<p><a href="a_deleteall.htm#BABDDGFG">@DeleteAll</a></p>
+</li>
+<li>
+<p><a href="a_discriminatorclass.htm#CIHGDDED">@DiscriminatorClass</a></p>
+</li>
+<li>
+<p><a href="a_excludedefaultmappings.htm#BEICFBDD">@ExcludeDefaultMappings</a></p>
+</li>
+<li>
+<p><a href="a_existencechecking.htm#BABICJEJ">@ExistenceChecking</a></p>
+</li>
+<li>
+<p><a href="a_fetchattribute.htm#BABCHIGE">@FetchAttribute</a></p>
+</li>
+<li>
+<p><a href="a_fetchgroup.htm#BABJBDEG">@FetchGroup</a></p>
+</li>
+<li>
+<p><a href="a_fetchgroups.htm#CHDIEBGG">@FetchGroups</a></p>
+</li>
+<li>
+<p><a href="a_field.htm#CBHHCHAC">@Field</a></p>
+</li>
+<li>
+<p><a href="a_hashpartitioning.htm#CEGBDBEG">@HashPartitioning</a></p>
+</li>
+<li>
+<p><a href="a_index.htm#BABGIFEC">@Index</a></p>
+</li>
+<li>
+<p><a href="a_indexes.htm#CHDHGAIE">@Indexes</a></p>
+</li>
+<li>
+<p><a href="a_instantiationcopypolicy.htm#CHDCJEIG">@InstantiationCopyPolicy</a></p>
+</li>
+<li>
+<p><a href="a_joinfetch.htm#CEGFFHHA">@JoinFetch</a></p>
+</li>
+<li>
+<p><a href="a_joinfield.htm#CIHCAFEI">@JoinField</a></p>
+</li>
+<li>
+<p><a href="a_joinfields.htm#BEIFHJJE">@JoinFields</a></p>
+</li>
+<li>
+<p><a href="a_mapkeyconvert.htm#BEHBBCDB">@MapKeyConvert</a></p>
+</li>
+<li>
+<p><a href="a_multitenant.htm#BABIEJGD">@Multitenant</a></p>
+</li>
+<li>
+<p><a href="a_mutable.htm#CHDIFIJF">@Mutable</a></p>
+</li>
+<li>
+<p><a href="a_namedplsqlstoredfunctionquery.htm#BGBDHGJE">@NamedPLSQLStoredFunctionQuery</a></p>
+</li>
+<li>
+<p><a href="a_namedplsqlstoredprocedurequery.htm#BGBDHGJE2">@NamedPLSQLStoredProcedureQuery</a></p>
+</li>
+<li>
+<p><a href="a_namedstoredfunc_queries.htm#CIHJFFDI">@NamedStoredFunctionQueries</a></p>
+</li>
+<li>
+<p><a href="a_namedstoredfunctionquery.htm#BABFBIFE">@NamedStoredFunctionQuery</a></p>
+</li>
+<li>
+<p><a href="a_namedstoredproc_queries.htm#BABJCEJH">@NamedStoredProcedureQueries</a></p>
+</li>
+<li>
+<p><a href="a_namedstoredprocedurequery.htm#BGBGAEFF">@NamedStoredProcedureQuery</a></p>
+</li>
+<li>
+<p><a href="a_noncacheable.htm#CHDGEFGD">@Noncacheable</a></p>
+</li>
+<li>
+<p><a href="a_nosql.htm#BJEIEBHC">@NoSql</a></p>
+</li>
+<li>
+<p><a href="a_objecttypeconverter.htm#BGBBDGAI">@ObjectTypeConverter</a></p>
+</li>
+<li>
+<p><a href="a_objecttypeconverters.htm#CHDCHJHF">@ObjectTypeConverters</a></p>
+</li>
+<li>
+<p><a href="a_optimisticlocking.htm#BCGIACHD">@OptimisticLocking</a></p>
+</li>
+<li>
+<p><a href="a_ordercorrection.htm#CHDDIBJF">@OrderCorrection</a></p>
+</li>
+<li>
+<p><a href="a_partitioned.htm#CHDDAHEB">@Partitioned</a></p>
+</li>
+<li>
+<p><a href="a_partitioning.htm#CEGDCFDA">@Partitioning</a></p>
+</li>
+<li>
+<p><a href="a_pinnedpartitioning.htm#BCGIIAFB">@PinnedPartitioning</a></p>
+</li>
+<li>
+<p><a href="a_plsqlparameter.htm#CHDDEBEC">@PLSQLParameter</a></p>
+</li>
+<li>
+<p><a href="a_plsqlrecord.htm#CHDBGAED">@PLSQLRecord</a></p>
+</li>
+<li>
+<p><a href="a_plsqlrecords.htm#CHDBGAED4">@PLSQLRecords</a></p>
+</li>
+<li>
+<p><a href="a_primarykey.htm#BGEBBFJE">@PrimaryKey</a></p>
+</li>
+<li>
+<p><a href="a_privateowned.htm#CHDDDDAI">@PrivateOwned</a></p>
+</li>
+<li>
+<p><a href="a_properties.htm#BABJHAFD">@Properties</a></p>
+</li>
+<li>
+<p><a href="a_property.htm#BGBCHEDG">@Property</a></p>
+</li>
+<li>
+<p><a href="a_queryredirectors.htm#CIHCGHGA">@QueryRedirectors</a></p>
+</li>
+<li>
+<p><a href="a_rangepartition.htm#BABCFDAJ">@RangePartition</a></p>
+</li>
+<li>
+<p><a href="a_rangepartitioning.htm#BCGCGEIH">@RangePartitioning</a></p>
+</li>
+<li>
+<p><a href="a_readonly.htm#BGBGEFBD">@ReadOnly</a></p>
+</li>
+<li>
+<p><a href="a_readtransformer.htm#CHDGHHBA">@ReadTransformer</a></p>
+</li>
+<li>
+<p><a href="a_replicationpartitioning.htm#BABJEFJH">@ReplicationPartitioning</a></p>
+</li>
+<li>
+<p><a href="a_returninsert.htm#CIHHEGJE">@ReturnInsert</a></p>
+</li>
+<li>
+<p><a href="a_returnupdate.htm#CACHDFCF">@ReturnUpdate</a></p>
+</li>
+<li>
+<p><a href="a_roundrobinpartitioning.htm#BCGBJGFF">@RoundRobinPartitioning</a></p>
+</li>
+<li>
+<p><a href="a_storedprocedureparameter.htm#CHDDEBEC6">@StoredProcedureParameter</a></p>
+</li>
+<li>
+<p><a href="a_struct.htm#CBBDCAHG">@Struct</a></p>
+</li>
+<li>
+<p><a href="a_structconverter.htm#BGBJEBBB">@StructConverter</a></p>
+</li>
+<li>
+<p><a href="a_structconverters.htm#CHDCJCDE">@StructConverters</a></p>
+</li>
+<li>
+<p><a href="a_structure.htm#CACIJAFA">@Structure</a></p>
+</li>
+<li>
+<p><a href="a_tenantdiscrim_columns.htm#CECBEBEA">@TenantDiscriminatorColumns</a></p>
+</li>
+<li>
+<p><a href="a_tenantdiscriminatorcolumn.htm#CHECIDGH">@TenantDiscriminatorColumn</a></p>
+</li>
+<li>
+<p><a href="a_tenanttablediscriminator.htm#CHDFJJEC">@TenantTableDiscriminator</a></p>
+</li>
+<li>
+<p><a href="a_timeofday.htm#BGBGACHC">@TimeOfDay</a></p>
+</li>
+<li>
+<p><a href="a_transformation.htm#BABCJGIG">@Transformation</a></p>
+</li>
+<li>
+<p><a href="a_typeconverter.htm#CHDHCCJF">@TypeConverter</a></p>
+</li>
+<li>
+<p><a href="a_typeconverters.htm#BCFBEIAE">@TypeConverters</a></p>
+</li>
+<li>
+<p><a href="a_valuepartition.htm#CJHFCGEJ">@ValuePartition</a></p>
+</li>
+<li>
+<p><a href="a_uuidgenerator.htm#CFAFIIFC">@UuidGenerator</a></p>
+</li>
+<li>
+<p><a href="a_unionpartitioning.htm#BCGEJFAH">@UnionPartitioning</a></p>
+</li>
+<li>
+<p><a href="a_valuepartitioning.htm#CEGHFJDJ">@ValuePartitioning</a></p>
+</li>
+<li>
+<p><a href="a_variableonetoone.htm#CHDDFDGF">@VariableOneToOne</a></p>
+</li>
+<li>
+<p><a href="a_virtualaccessmethods.htm#CIHFBCFI">@VirtualAccessMethods</a></p>
+</li>
+<li>
+<p><a href="a_writetransformer.htm#BGBGGAEA">@WriteTransformer</a></p>
+</li>
+<li>
+<p><a href="a_writetransformers.htm#BCFCCEJF">@WriteTransformers</a></p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" --></div>
 <!-- class="ind" -->
 <!-- Start Footer -->
 <div class="footer">
@@ -74,8 +654,8 @@ Release 2.4</div></td>
 <col width="48%" />
 <tr>
 <td>&nbsp;</td>
-<td align="center"><a href="intro002.htm"><img src="../../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
-<td align="center"><a href="annotations_ref001.htm"><img src="../../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="intro.htm"><img src="../../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="a_additionalcriteria.htm"><img src="../../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
 </tr>
 </table>
 </td>

@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@BatchFetch | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-08-02T9:44:0Z" />
+<meta name="date" content="2012-10-01T9:42:45Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@BatchFetch" />
 <meta name="relnum" content="Release 2.4" />
@@ -72,7 +72,7 @@ Release 2.4</div></td>
 <p>size</p>
 </td>
 <td align="left" headers="r2c1-t7 r1c2-t7">
-<p>Default size of the batch fetch, used only when <code>BatchFetchType</code>=<code>IN</code> to definite number of keys in each <code>IN</code> clause</p>
+<p>Default size of the batch fetch, used only when <code>BatchFetchType</code>=<code>IN</code> to define the number of keys in each <code>IN</code> clause</p>
 </td>
 <td align="left" headers="r2c1-t7 r1c3-t7">
 <p><code>256</code> or the query's <code>pageSize</code> (for cursor queries)</p>
@@ -108,22 +108,19 @@ Release 2.4</div></td>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>Batch fetching allows for the optimal loading of a tree. Setting the <code>@BatchFetch</code> annotation on a <em>child</em> relationship of a tree structure causes EclipseLink to use a <em>single</em> SQL statement for each level.</p>
 <p>Using <code>BatchFetchType=EXISTS</code> does not require an SQL <code>DISTINCT</code> statement (which may cause issues with LOBs) and may be more efficient for some types of queries or on specific databases.</p>
-<p>When using <code>BatchFetchType=IN</code>, EclipseLink selects only objects not already in the cache. This method may work better with cursors or in situations in which you cannot use a <code>JOIN</code>. On some databases, this may only work for singleton IDs.</p>
+<p>When using <code>BatchFetchType=IN</code>, EclipseLink selects only objects not already in the cache. This method may work better with cursors or pagination, or in situations in which you cannot use a <code>JOIN</code>. On some databases, this may only work for singleton IDs.</p>
 <a id="sthref22" name="sthref22"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p>The following examples show how to use this annotation (and XML) with different batch fetch types.</p>
 <div class="example"><a id="TLJPA331" name="TLJPA331"></a><a id="sthref23" name="sthref23"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-7 Using JOIN BatchFetch Type</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
+@OneToOne
 @BatchFetch(BatchFetchType.JOIN)
-@ElementCollection()
-public Map&lt;String, String&gt; getStringMap() {
-return stringMap;
-}
- 
+private Address address;
 </pre>
 <pre xml:space="preserve" class="oac_no_warn">
-&lt;element-collection name="StringMap"&gt;
+&lt;element-collection name="stringMap"&gt;
 &lt;batch-fetch type="JOIN"&gt;
 &lt;/element-collection&gt;
  
@@ -132,14 +129,14 @@ return stringMap;
 <div class="example"><a id="TLJPA332" name="TLJPA332"></a><a id="sthref24" name="sthref24"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-8 Using EXISTS BatchFetch Type</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
-@BatchFetch(BatchFetchType.JOEXISTS)
-@ElementCollection()
+@BatchFetch(BatchFetchType.EXISTS)
+@OneToOne
 public Map&lt;String, String&gt; getStringMap() {
 return stringMap;
 }
 </pre>
 <pre xml:space="preserve" class="oac_no_warn">
-&lt;element-collection name="StringMap"&gt;
+&lt;element-collection name="stringMap"&gt;
 &lt;batch-fetch type="EXISTS"&gt;
 &lt;/element-collection&gt;
 </pre></div>
@@ -148,7 +145,7 @@ return stringMap;
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-9 Using IN BatchFetch Type</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @BatchFetch(BatchFetchType.IN, size=50)
-@ElementCollection()
+@OneToOne
 public Map&lt;String, String&gt; getStringMap() {
 return stringMap;
 }

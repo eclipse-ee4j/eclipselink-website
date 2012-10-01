@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@Array | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-08-02T9:44:0Z" />
+<meta name="date" content="2012-10-01T9:42:45Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@Array" />
 <meta name="relnum" content="Release 2.4" />
@@ -49,7 +49,7 @@ Release 2.4</div></td>
 <hr />
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@Array</font></h2>
-<p>Use <code>@Array</code> to define object-relational data types supported by specific databases, such as Oracle <code>VARRAY</code> types or PostgreSQL <code>JDBC Struct</code> types.</p>
+<p>Use <code>@Array</code> to define object-relational data types supported by specific databases, such as Oracle <code>VARRAY</code> types or PostgreSQL JDBC <code>Array</code> types.</p>
 <a id="sthref14" name="sthref14"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#CBABBAJF">Table 2-2</a> describes this annotation's elements.</p>
@@ -100,14 +100,36 @@ Release 2.4</div></td>
 <div class="example"><a id="CBABHEHD" name="CBABHEHD"></a><a id="TLJPA327" name="TLJPA327"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-5 Using @Array with Oracle VARRAY</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
-
+VARRAY DDL:
+CREATE TYPE TASKS_TYPE AS VARRAY(10) OF VARCHAR(100)
+</pre>
+<pre xml:space="preserve" class="oac_no_warn">
+@Struct
+@Entity
+public class Employee {
+    @Id
+    private long id;
+    @Array(databaseType="TASKS_TYPE")
+    private List&lt;String&gt; tasks;
+}
 </pre></div>
 <!-- class="example" -->
 <p><a href="#CBACGBDA">Example 2-6</a> shows how to use this annotation with an Postgress <code>Struct</code> type.</p>
 <div class="example"><a id="CBACGBDA" name="CBACGBDA"></a><a id="TLJPA328" name="TLJPA328"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-6 Using @Array with Postgress Struct</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
-
+DDL:
+CREATE TABLE EMPLOYEE (ID BIGINT, TASKS TEXT[])
+</pre>
+<pre xml:space="preserve" class="oac_no_warn">
+@Struct
+@Entity
+public class Employee {
+    @Id
+    private long id;
+    @Array(databaseType="TEXT[]")
+    private List&lt;String&gt; tasks;
+}
 </pre></div>
 <!-- class="example" -->
 <a id="sthref18" name="sthref18"></a>

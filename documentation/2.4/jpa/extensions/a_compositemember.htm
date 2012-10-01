@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@CompositeMember | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-08-02T9:44:0Z" />
+<meta name="date" content="2012-10-01T9:42:45Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@CompositeMember" />
 <meta name="relnum" content="Release 2.4" />
@@ -92,7 +92,7 @@ Release 2.4</div></td>
 <pre xml:space="preserve" class="oac_no_warn">
 @ElementCollection()
 @CollectionTable(name = "MBR1_RESPONS", joinColumns=@JoinColumn(name="EMP_ID"))
-<strong>@CompositeMember("composite-advanced-member_1")</strong>
+<strong>@CompositeMember("branch-database")</strong>
 @Column(name = "DESCRIPTION")
 public Collection&lt;String&gt; getResponsibilities() {
     return responsibilities;
@@ -102,7 +102,7 @@ public Collection&lt;String&gt; getResponsibilities() {
 <div class="example"><a id="TLJPA372" name="TLJPA372"></a><a id="sthref72" name="sthref72"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-28 Using &lt;composite-member&gt; XML</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
-&lt;element-collection name="responsibilities" <strong>composite-member="xml-composite-advanced-member_3"</strong>&gt;
+&lt;element-collection name="responsibilities" <strong>composite-member="branch-database"</strong>&gt;
   &lt;column name="DESCRIPTION"/&gt;
   &lt;collection-table name="XML_MBR3_RESPONS"&gt;
     &lt;join-column name="EMP_ID"/&gt;
@@ -113,6 +113,18 @@ public Collection&lt;String&gt; getResponsibilities() {
 <a id="sthref73" name="sthref73"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="p_composite_unit.htm#BIICFIDB">"composite-unit"</a></p>
+</li>
+<li>
+<p><a href="p_composite_unit_member.htm#CHDHCIDH">"composite-unit.member"</a></p>
+</li>
+<li>
+<p>"Composite Persistence Units"<br />
+<code><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Composite_Persistence_Units">http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Composite_Persistence_Units</a></code></p>
+</li>
+</ul>
 </div>
 <!-- class="refsect1" --></div>
 <!-- class="ind" -->

@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@ExistenceChecking | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-08-02T9:44:0Z" />
+<meta name="date" content="2012-10-01T9:42:46Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@ExistenceChecking" />
 <meta name="relnum" content="Release 2.4" />
@@ -49,8 +49,8 @@ Release 2.4</div></td>
 <hr />
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@ExistenceChecking</font></h2>
-<p>Use <code>@ExistenceChecking</code> to specify how EclipseLink should check to determine determine if an entity is new or exists.</p>
-<p>On <code>merge()</code> operations, use <code>@ExistenceChecking</code> to specify if EclipseLink uses only the cache to determine if an object exists, or if the object should be read (from the database or cache). By default the object will be read.</p>
+<p>Use <code>@ExistenceChecking</code> to specify how EclipseLink should check to determine if an entity is new or exists.</p>
+<p>On <code>merge()</code> operations, use <code>@ExistenceChecking</code> to specify if EclipseLink uses only the cache to determine if an object exists, or if the object should be read (from the database or cache). By default the object will be read from the database.</p>
 <a id="sthref117" name="sthref117"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#CEGHFAIB">Table 2-20</a> describes this annotation's elements.</p>
@@ -112,21 +112,30 @@ Release 2.4</div></td>
 <p><code>CHECK_CHACHE</code> &ndash; If the object's primary key does not include <code>null</code> and it is in the cache, then it must exist.</p>
 </li>
 <li>
-<p><code>CHECK_DATABASE</code> &ndash; Perform a "does exist check" on the database.</p>
+<p><code>CHECK_DATABASE</code> &ndash; Perform a <code>SELECT</code> on the database.</p>
 </li>
 </ul>
 <a id="sthref120" name="sthref120"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<p>See <a href="a_cache.htm#CHDBBIHE">"@Cache"</a> for examples of using <code>@TimeOfDay</code>.</p>
+<p><a href="#CEGDGCHF">Example 2-41</a> shows how to use this annotation.</p>
+<div class="example"><a id="CEGDGCHF" name="CEGDGCHF"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-41 Using @ExistenceChecking Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+@Entity
+@Cache(type=CacheType.HARD_WEAK,  expiryTimeOfDay=@TimeOfDay(hour=1))
+<strong>@ExistenceChecking(ExistenceType.CHECK_DATABASE)</strong>
+public  class  Employee  implements  Serializable  { 
+...
+}
+
+</pre></div>
+<!-- class="example" -->
 <a id="sthref121" name="sthref121"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
 <li>
 <p><a href="a_cache.htm#CHDBBIHE">"@Cache"</a></p>
-</li>
-<li>
-<p><a href="a_timeofday.htm#BGBGACHC">"@TimeOfDay"</a></p>
 </li>
 </ul>
 </div>

@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@ReturnUpdate | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-08-02T9:44:1Z" />
+<meta name="date" content="2012-10-01T9:42:47Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@ReturnUpdate" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,28 +50,28 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@ReturnUpdate</font></h2>
 <p>Use <code>@ReturnUpdate</code> to cause <code>UPDATE</code> operations to return values back into the object being written. This allows for table default values, trigger or stored procedures computed values to be set back into the object.</p>
-<a id="sthref319" name="sthref319"></a>
+<a id="sthref351" name="sthref351"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p>This annotation contains no elements.</p>
-<a id="sthref320" name="sthref320"></a>
+<a id="sthref352" name="sthref352"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>A <code>@ReturnUpdate</code> annotation can only be specified on a <code>Basic</code> mapping.</p>
-<a id="sthref321" name="sthref321"></a>
+<a id="sthref353" name="sthref353"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<p><a href="#CACBJIIH">Example 2-88</a> shows how to use the <code>@ReturnUpdate</code> annotation. The annotation does not accept any arguments.</p>
+<p><a href="#CACBJIIH">Example 2-98</a> shows how to use the <code>@ReturnUpdate</code> annotation. The annotation does not accept any arguments.</p>
 <div class="example"><a id="CACBJIIH" name="CACBJIIH"></a><a id="TLJPA535" name="TLJPA535"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-88 Using @ReturnUpdate Annotation</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-98 Using @ReturnUpdate Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 <strong>@ReturnUpdate</strong>
 public String getFirstName() {
     return firstName;
 }
 </pre>
-<p><a href="#CACJIJGE">Example 2-89</a> illustrates the same example as before, but uses the <code>&lt;return-update&gt;</code> element in the <code>eclipselink-orm.xml</code> mapping file.</p>
+<p><a href="#CACJIJGE">Example 2-99</a> illustrates the same example as before, but uses the <code>&lt;return-update&gt;</code> element in the <code>eclipselink-orm.xml</code> mapping file.</p>
 </div>
 <!-- class="example" -->
 <div class="example"><a id="CACJIJGE" name="CACJIJGE"></a><a id="TLJPA536" name="TLJPA536"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-89 Using &lt;return-update&gt; XML</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-99 Using &lt;return-update&gt; XML</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;basic name="firstName"&gt;
     &lt;column name="F_NAME"/&gt;
@@ -80,7 +80,7 @@ public String getFirstName() {
 
 </pre></div>
 <!-- class="example" -->
-<a id="sthref322" name="sthref322"></a>
+<a id="sthref354" name="sthref354"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

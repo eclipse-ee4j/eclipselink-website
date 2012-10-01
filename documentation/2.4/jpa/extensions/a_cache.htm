@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@Cache | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-08-02T9:44:0Z" />
+<meta name="date" content="2012-10-01T9:42:45Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@Cache" />
 <meta name="relnum" content="Release 2.4" />
@@ -49,7 +49,7 @@ Release 2.4</div></td>
 <hr />
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@Cache</font></h2>
-<p>Use <code>@Cache</code> to configure the EclipseLink object cache. By default, EclipseLink uses a shared object cache to cache all objects. You can configure the caching type and options on a per class basis to allow optimal caching.</p>
+<p>Use <code>@Cache</code> (in place of the JPA <code>@Cachable</code> annotation) to configure the EclipseLink object cache. By default, EclipseLink uses a shared object cache to cache all objects. You can configure the caching type and options on a per class basis to allow optimal caching.</p>
 <a id="sthref27" name="sthref27"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#CDEJJHDG">Table 2-4</a> describes this annotation's elements.</p>
@@ -93,7 +93,7 @@ Release 2.4</div></td>
 <p><code>CACHE</code> (not recommended)</p>
 </li>
 <li>
-<p><code>NONE</code> (not recommended, use <code>shared=false</code> instead)</p>
+<p><code>NONE</code> (not recommended, use <code>isolation=ISOLATED</code> instead)</p>
 </li>
 </ul>
 <p>You can override this attribute with these persistence unit properties:</p>
@@ -123,21 +123,24 @@ Release 2.4</div></td>
 </tr>
 <tr align="left" valign="top">
 <td align="left" id="r4c1-t8" headers="r1c1-t8">
-<p><code>shared</code></p>
+<p><code>isolation</code></p>
 </td>
 <td align="left" headers="r4c1-t8 r1c2-t8">
-<p>(Optional) Indicate whether cached instances should be in the shared cache or in a client isolated cache. This allows the shared cache (L2 cache) to be disabled.</p>
+<p>(Optional) The caching level of the Entity:</p>
 <ul>
 <li>
-<p><code>true</code> &mdash;Use shared cache for cached instances.</p>
+<p><code>shared</code> &ndash; Entity instances will be cached within the EntityManagerFactory/ServerSession level.</p>
 </li>
 <li>
-<p><code>false</code>&mdash;Use client isolated cache for cached instances (no L2 cache).</p>
+<p><code>isolated</code> &ndash; The Entity and its data is not stored in the shared cache, but is isolated to the Persistence Context/UnitOfWork or IsolatedClientSession.</p>
+</li>
+<li>
+<p><code>protected</code> &ndash; Entity state information will be cached in the shared cache, but Entity instances will not be shared.</p>
 </li>
 </ul>
 </td>
 <td align="left" headers="r4c1-t8 r1c3-t8">
-<p><code>true</code></p>
+<p><code>shared</code></p>
 </td>
 </tr>
 <tr align="left" valign="top">
@@ -148,7 +151,7 @@ Release 2.4</div></td>
 <p>(Optional) The <code>int</code> value to enable the expiration of the cached instance after a fixed period of time (milliseconds). Queries executed against the cache after this will be forced back to the database for a refreshed copy.</p>
 </td>
 <td align="left" headers="r5c1-t8 r1c3-t8">
-<p>.<code>-1</code> (no expiry)</p>
+<p>no expiry</p>
 </td>
 </tr>
 <tr align="left" valign="top">
@@ -159,7 +162,7 @@ Release 2.4</div></td>
 <p>(Optional) Specific time of day (<code>org.eclipse.persistence.annotations.TimeOfDay</code>) when the cached instance will expire. Queries executed against the cache after this will be forced back to the database for a refreshed copy.</p>
 </td>
 <td align="left" headers="r6c1-t8 r1c3-t8">
-<p><code>@TimeOfDay(specified=false)</code></p>
+<p>no expiry</p>
 </td>
 </tr>
 <tr align="left" valign="top">
@@ -209,10 +212,29 @@ Release 2.4</div></td>
 <p><code>coordinationType</code></p>
 </td>
 <td align="left" headers="r10c1-t8 r1c2-t8">
-<p>(Optional) Set this attribute to the cache coordination mode (<code>org.eclipse.persistence.annotations.CacheCoordinationType</code> enumerated type).</p>
+<p>(Optional) Set this attribute to the cache coordination mode (<code>org.eclipse.persistence.annotations.CacheCoordinationType</code> enumerated type). You must also configure cache coordination in your persistence unit properties. See <a href="persistenceproperties_ref.htm#CACDCCEG2">"Caching"</a>.</p>
 </td>
 <td align="left" headers="r10c1-t8 r1c3-t8">
-<p><code>CacheCoordinationType.SEND_OBJECT_CHANGES</code></p>
+<p><code>SEND_OBJECT_CHANGES</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t8" headers="r1c1-t8">
+<p><code>databaseChangeNotificationType</code></p>
+</td>
+<td align="left" headers="r11c1-t8 r1c2-t8">
+<p>(Optional) The database change notification mode:</p>
+<ul>
+<li>
+<p>Invalidate &ndash; Invalidates the EclipseLink cache when a database change event is received for an object.</p>
+</li>
+<li>
+<p>None &ndash; No database change events will be processed. The database event listener must also be configured for the persistence unit/session.</p>
+</li>
+</ul>
+</td>
+<td align="left" headers="r11c1-t8 r1c3-t8">
+<p><code>INVALIDATE</code></p>
 </td>
 </tr>
 </tbody>
@@ -221,6 +243,7 @@ Release 2.4</div></td>
 <!-- class="tblhruleformalwide" -->
 <a id="sthref29" name="sthref29"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>Use the <code>@Cache</code> annotation instead of the JPA <code>@Cachable</code> annotation to provide additional caching configuration.</p>
 <p>You can define the <code>@Cache</code> annotation on the following:</p>
 <ul>
 <li>
@@ -309,7 +332,6 @@ public class Employee {
 <div class="example"><a id="CDEJDBFJ" name="CDEJDBFJ"></a><a id="TLJPA338" name="TLJPA338"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-11 Using &lt;cache&gt; XML</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
-&lt;?xml version="1.0"?&gt;
 &lt;entity-mappings
   xmlns="http://www.eclipse.org/eclipselink/xsds/persistence/orm"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -326,7 +348,6 @@ public class Employee {
 <div class="example"><a id="TLJPA339" name="TLJPA339"></a><a id="sthref31" name="sthref31"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-12 Specifying Caching in persistence.xml</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;persistence xmlns="http://java.sun.com/xml/ns/persistence"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://java.sun.com/xml/ns/persistence persistence_2_0.xsd"

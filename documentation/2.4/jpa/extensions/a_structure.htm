@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@Structure | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-08-02T9:44:1Z" />
+<meta name="date" content="2012-10-01T9:42:48Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@Structure" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,17 +50,17 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@Structure</font></h2>
 <p>Use <code>@Structure</code> on a field/method to define an <code>StructureMapping</code> to an embedded <code>Struct</code> type. The target Embeddable must be mapped using the Struct annotation.</p>
-<a id="sthref347" name="sthref347"></a>
+<a id="sthref379" name="sthref379"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p>This annotation contains no elements.</p>
-<a id="sthref348" name="sthref348"></a>
+<a id="sthref380" name="sthref380"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>Struct types are extended object-relational data-types supported by some databases. Struct types are user define types in the database such as <code>OBJECT</code> types on Oracle. Structs can normally contains Arrays (<code>VARRAY</code>) or other Struct types, and can be stored in a column or a table.</p>
-<a id="sthref349" name="sthref349"></a>
+<a id="sthref381" name="sthref381"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<p><a href="#CACDBBII">Example 2-95</a> shows how to use the <code>@Structure</code> annotation. See <a href="a_struct.htm#CACCGJAJ">Example 2-90</a> to an example of using <code>@Struct</code> to map the target.</p>
+<p><a href="#CACDBBII">Example 2-105</a> shows how to use the <code>@Structure</code> annotation. See <a href="a_struct.htm#CACCGJAJ">Example 2-100</a> to an example of using <code>@Struct</code> to map the target.</p>
 <div class="example"><a id="CACDBBII" name="CACDBBII"></a><a id="TLJPA553" name="TLJPA553"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-95 Using @Structure Annotation</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-105 Using @Structure Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Structure
 protected Address address;
@@ -68,14 +68,14 @@ protected Address address;
 </pre></div>
 <!-- class="example" -->
 <p>You can also define structure mappings in the <code>eclipselink-orm.xml</code> file by using the <code>&lt;structure&gt;</code> element.</p>
-<div class="example"><a id="TLJPA554" name="TLJPA554"></a><a id="sthref350" name="sthref350"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-96 Using &lt;structure&gt; XML</font></em></strong></p>
+<div class="example"><a id="TLJPA554" name="TLJPA554"></a><a id="sthref382" name="sthref382"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-106 Using &lt;structure&gt; XML</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;structure name="address"/&gt;
  
 </pre></div>
 <!-- class="example" -->
-<a id="sthref351" name="sthref351"></a>
+<a id="sthref383" name="sthref383"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

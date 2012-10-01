@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>join-fetch | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-08-02T9:44:2Z" />
+<meta name="date" content="2012-10-01T9:42:49Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="join-fetch" />
 <meta name="relnum" content="Release 2.4" />
@@ -16,7 +16,7 @@
 <link rel="start" href="../../index.htm" title="Home" type="text/html" />
 <link rel="contents" href="toc.htm" title="Contents" type="text/html" />
 <link rel="prev" href="q_jdbc_timeout.htm" title="Previous" type="text/html" />
-<link rel="next" href="q_maintain_cache.htm" title="Next" type="text/html" />
+<link rel="next" href="q_left-join-fetch.htm" title="Next" type="text/html" />
 <!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
 <body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:4sqnhke2any', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
 <div class="header"><a id="top" name="top"></a>
@@ -39,7 +39,7 @@ Release 2.4</div></td>
 <table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
 <tr>
 <td align="center"><a href="q_jdbc_timeout.htm"><img src="../../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
-<td align="center"><a href="q_maintain_cache.htm"><img src="../../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="q_left-join-fetch.htm"><img src="../../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
 <td>&nbsp;</td>
 </tr>
 </table>
@@ -64,20 +64,20 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="inftblnote" --></div>
-<a id="sthref503" name="sthref503"></a>
+<a id="sthref626" name="sthref626"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
-<p><a href="#BABHECAC">Table 4-6</a> describes this query hint's valid values.</p>
-<div class="tblhruleformalwide"><a id="TLJPA661" name="TLJPA661"></a><a id="sthref504" name="sthref504"></a><a id="BABHECAC" name="BABHECAC"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-6 Valid Values for eclipselink.join-fetch hint</font></em></strong></p>
+<p><a href="#BABHECAC">Table 4-21</a> describes this query hint's valid values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA661" name="TLJPA661"></a><a id="sthref627" name="sthref627"></a><a id="BABHECAC" name="BABHECAC"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-21 Valid Values for eclipselink.join-fetch hint</font></em></strong></p>
 <table class="HRuleFormalWide" title="Valid Values for eclipselink.join-fetch hint" summary="Valid Values for this query hint" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <thead>
 <tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t11"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c1-t31"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
 </tr>
 </thead>
 <tbody>
 <tr align="left" valign="top">
-<td align="left" id="r2c1-t11" headers="r1c1-t11">
+<td align="left" id="r2c1-t31" headers="r1c1-t31">
 <p>A relationship path expression</p>
 </td>
 </tr>
@@ -85,24 +85,24 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref505" name="sthref505"></a>
+<a id="sthref628" name="sthref628"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>This hint is similar to <code>eclipselink.<a href="q_batch.htm#batch">batch</a></code>. Subsequent queries of related objects can be optimized in batches instead of being retrieved in one large joined read</p>
 <p>The <code>eclipselink.join-fetch</code> hint differs from JPQL joining in that it allows multilevel fetch joins.</p>
-<a id="sthref506" name="sthref506"></a>
+<a id="sthref629" name="sthref629"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<p><a href="#BABJAJBE">Example 4-14</a> shows how to use this hint in a JPA query.</p>
+<p><a href="#BABJAJBE">Example 4-40</a> shows how to use this hint in a JPA query.</p>
 <div class="example"><a id="BABJAJBE" name="BABJAJBE"></a><a id="TLJPA662" name="TLJPA662"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-14 Using join-fetch in a JPA Query</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-40 Using join-fetch in a JPA Query</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 import org.eclipse.persistence.config.HintValues;
  import org.eclipse.persistence.config.QueryHints;
  query.setHint("eclipselink.<strong>join-fetch</strong>", "e.address");
 </pre></div>
 <!-- class="example" -->
-<p><a href="#BABCAFGJ">Example 4-15</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<p><a href="#BABCAFGJ">Example 4-41</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
 <div class="example"><a id="BABCAFGJ" name="BABCAFGJ"></a><a id="TLJPA663" name="TLJPA663"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-15 Using join-fetch in a @QueryHint Annotation</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-41 Using join-fetch in a @QueryHint Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 import org.eclipse.persistence.config.HintValues;
  import org.eclipse.persistence.config.QueryHints;
@@ -110,7 +110,7 @@ import org.eclipse.persistence.config.HintValues;
 
 </pre></div>
 <!-- class="example" -->
-<a id="sthref507" name="sthref507"></a>
+<a id="sthref630" name="sthref630"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
@@ -132,6 +132,9 @@ import org.eclipse.persistence.config.HintValues;
 <li>
 <p><a href="q_batch.htm#batch">"batch"</a></p>
 </li>
+<li>
+<p><a href="q_left-join-fetch.htm#CHDEFDDC">"left-join-fetch"</a></p>
+</li>
 </ul>
 </div>
 <!-- class="refsect1" --></div>
@@ -152,7 +155,7 @@ import org.eclipse.persistence.config.HintValues;
 <tr>
 <td>&nbsp;</td>
 <td align="center"><a href="q_jdbc_timeout.htm"><img src="../../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
-<td align="center"><a href="q_maintain_cache.htm"><img src="../../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="q_left-join-fetch.htm"><img src="../../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
 </tr>
 </table>
 </td>
