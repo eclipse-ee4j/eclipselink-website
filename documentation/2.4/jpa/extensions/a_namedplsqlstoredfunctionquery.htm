@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@NamedPLSQLStoredFunctionQuery | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-10-01T9:42:46Z" />
+<meta name="date" content="2012-10-02T9:18:11Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@NamedPLSQLStoredFunctionQuery" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,90 +50,90 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@NamedPLSQLStoredFunctionQuery</font></h2>
 <p>Use <code>@NamedPLSQLStoredFunctionQuery</code> to define queries that call Oracle PLSQL stored functions as named queries</p>
-<a id="sthref213" name="sthref213"></a>
+<a id="sthref211" name="sthref211"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
-<p><a href="#BGBEAJEH">Table 2-37</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="sthref214" name="sthref214"></a><a id="BGBEAJEH" name="BGBEAJEH"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-37 @NamedPLSQLStoredFunctionQuery Annotation Elements</font></em></strong></p>
+<p><a href="#BGBEAJEH">Table 2-36</a> describes this annotation's elements.</p>
+<div class="tblhruleformalwide"><a id="sthref212" name="sthref212"></a><a id="BGBEAJEH" name="BGBEAJEH"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-36 @NamedPLSQLStoredFunctionQuery Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@NamedPLSQLStoredFunctionQuery Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="21%" />
 <col width="*" />
 <col width="13%" />
 <thead>
 <tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t47"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
-<th align="left" valign="bottom" id="r1c2-t47"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
-<th align="left" valign="bottom" id="r1c3-t47"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
+<th align="left" valign="bottom" id="r1c1-t46"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t46"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c3-t46"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
 </tr>
 </thead>
 <tbody>
 <tr align="left" valign="top">
-<td align="left" id="r2c1-t47" headers="r1c1-t47">
+<td align="left" id="r2c1-t46" headers="r1c1-t46">
 <p><code>functionName</code></p>
 </td>
-<td align="left" headers="r2c1-t47 r1c2-t47">
+<td align="left" headers="r2c1-t46 r1c2-t46">
 <p>(Required) The name of the stored function.</p>
 </td>
-<td align="left" headers="r2c1-t47 r1c3-t47"><br /></td>
+<td align="left" headers="r2c1-t46 r1c3-t46"><br /></td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r3c1-t47" headers="r1c1-t47">
+<td align="left" id="r3c1-t46" headers="r1c1-t46">
 <p><code>name</code></p>
 </td>
-<td align="left" headers="r3c1-t47 r1c2-t47">
+<td align="left" headers="r3c1-t46 r1c2-t46">
 <p>(Required) The unique name that references this stored function query.</p>
 </td>
-<td align="left" headers="r3c1-t47 r1c3-t47"><br /></td>
+<td align="left" headers="r3c1-t46 r1c3-t46"><br /></td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r4c1-t47" headers="r1c1-t47">
+<td align="left" id="r4c1-t46" headers="r1c1-t46">
 <p><code>returnParamter</code></p>
 </td>
-<td align="left" headers="r4c1-t47 r1c2-t47">
+<td align="left" headers="r4c1-t46 r1c2-t46">
 <p>(Required) The return value of the stored function.</p>
 </td>
-<td align="left" headers="r4c1-t47 r1c3-t47"><br /></td>
+<td align="left" headers="r4c1-t46 r1c3-t46"><br /></td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r5c1-t47" headers="r1c1-t47">
+<td align="left" id="r5c1-t46" headers="r1c1-t46">
 <p><code>hints</code></p>
 </td>
-<td align="left" headers="r5c1-t47 r1c2-t47">
+<td align="left" headers="r5c1-t46 r1c2-t46">
 <p>(Optional) Query hints</p>
 </td>
-<td align="left" headers="r5c1-t47 r1c3-t47"><br /></td>
+<td align="left" headers="r5c1-t46 r1c3-t46"><br /></td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r6c1-t47" headers="r1c1-t47">
+<td align="left" id="r6c1-t46" headers="r1c1-t46">
 <p><code>parameters</code></p>
 </td>
-<td align="left" headers="r6c1-t47 r1c2-t47">
+<td align="left" headers="r6c1-t46 r1c2-t46">
 <p>(Optional) The parameters for the stored function.</p>
 </td>
-<td align="left" headers="r6c1-t47 r1c3-t47"><br /></td>
+<td align="left" headers="r6c1-t46 r1c3-t46"><br /></td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r7c1-t47" headers="r1c1-t47">
+<td align="left" id="r7c1-t46" headers="r1c1-t46">
 <p><code>resultSetMapping</code></p>
 </td>
-<td align="left" headers="r7c1-t47 r1c2-t47">
+<td align="left" headers="r7c1-t46 r1c2-t46">
 <p>(Optional) The name of the <code>SQLResultMapping</code>.</p>
 </td>
-<td align="left" headers="r7c1-t47 r1c3-t47"><br /></td>
+<td align="left" headers="r7c1-t46 r1c3-t46"><br /></td>
 </tr>
 </tbody>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref215" name="sthref215"></a>
+<a id="sthref213" name="sthref213"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>This annotation adds support for complex PLSQL types such as <code>RECORD</code> and <code>TABLE</code>, that are not accessible from JDBC.</p>
 <p>You can specify <code>@NamedPLSQLStoredFunctionQuery</code> on an Entity or MappedSuperclass.</p>
-<a id="sthref216" name="sthref216"></a>
+<a id="sthref214" name="sthref214"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<p><a href="#BGBICFEB">Example 2-65</a> shows how to use this annotation.</p>
+<p><a href="#BGBICFEB">Example 2-68</a> shows how to use this annotation.</p>
 <div class="example"><a id="BGBICFEB" name="BGBICFEB"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-65 Using @NamedPLSQLStoredFunctionQuery Annotation</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-68 Using @NamedPLSQLStoredFunctionQuery Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 <strong>@NamedPLSQLStoredFunctionQuery</strong>(
     name="getEmployee", 
@@ -161,7 +161,7 @@ Release 2.4</div></td>
 public class Employee { ...}
 </pre></div>
 <!-- class="example" -->
-<a id="sthref217" name="sthref217"></a>
+<a id="sthref215" name="sthref215"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

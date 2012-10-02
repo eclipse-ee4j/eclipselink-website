@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>cache-usage | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-10-01T9:42:49Z" />
+<meta name="date" content="2012-10-02T9:18:20Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="cache-usage" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">cache-usage</font></h2>
 <p>Use <code>eclipselink.cache-usage</code> to specify how the query should interact with the EclipseLink cache.</p>
-<a id="sthref517" name="sthref517"></a>
+<a id="sthref515" name="sthref515"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
 <p><a href="#BABEIJAE">Table 4-3</a> describes this query hint's valid values.</p>
-<div class="tblhruleformalwide"><a id="TLJPA639" name="TLJPA639"></a><a id="sthref518" name="sthref518"></a><a id="BABEIJAE" name="BABEIJAE"></a>
+<div class="tblhruleformalwide"><a id="TLJPA639" name="TLJPA639"></a><a id="sthref516" name="sthref516"></a><a id="BABEIJAE" name="BABEIJAE"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 4-3 Valid Values for org.eclipse.persistence.config.CacheUsage</font></em></strong></p>
 <table class="HRuleFormalWide" title="Valid Values for org.eclipse.persistence.config.CacheUsage" summary="Valid Values for this query hint" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="29%" />
@@ -126,11 +126,11 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref519" name="sthref519"></a>
+<a id="sthref517" name="sthref517"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>EclipseLink JPA uses a shared cache assessed across the entire persistence unit. After completing an operation in a particular persistence context, EclipseLink merges the results into the shared cache, so that other persistence contexts can use the results <em>regardless of whether the entity manager and persistence context are created in Java SE or Java EE</em>.</p>
 <p>Any entity persisted or removed using the entity manager will always consistently maintained with the cache.</p>
-<a id="sthref520" name="sthref520"></a>
+<a id="sthref518" name="sthref518"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#BABCBJAH">Example 4-7</a> shows how to use this hint in a JPA query.</p>
 <div class="example"><a id="BABCBJAH" name="BABCBJAH"></a><a id="TLJPA640" name="TLJPA640"></a>
@@ -151,7 +151,7 @@ import org.eclipse.persistence.config.CacheUsage;
 
 </pre></div>
 <!-- class="example" -->
-<a id="sthref521" name="sthref521"></a>
+<a id="sthref519" name="sthref519"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

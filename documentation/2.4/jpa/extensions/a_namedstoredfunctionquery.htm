@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@NamedStoredFunctionQuery | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-10-01T9:42:46Z" />
+<meta name="date" content="2012-10-02T9:18:11Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@NamedStoredFunctionQuery" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,55 +50,55 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@NamedStoredFunctionQuery</font></h2>
 <p>Use <code>@NamedStoredFunctionQuery</code> to define queries that call stored functions as named queries.</p>
-<a id="sthref226" name="sthref226"></a>
+<a id="sthref224" name="sthref224"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
-<p><a href="#BABFFDDG">Table 2-40</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="TLJPA462" name="TLJPA462"></a><a id="sthref227" name="sthref227"></a><a id="BABFFDDG" name="BABFFDDG"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-40 @NamedStoredFunctionQuery Annotation Elements</font></em></strong></p>
+<p><a href="#BABFFDDG">Table 2-39</a> describes this annotation's elements.</p>
+<div class="tblhruleformalwide"><a id="TLJPA462" name="TLJPA462"></a><a id="sthref225" name="sthref225"></a><a id="BABFFDDG" name="BABFFDDG"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-39 @NamedStoredFunctionQuery Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@NamedStoredFunctionQuery Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="21%" />
 <col width="*" />
 <col width="13%" />
 <thead>
 <tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t50"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
-<th align="left" valign="bottom" id="r1c2-t50"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
-<th align="left" valign="bottom" id="r1c3-t50"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
+<th align="left" valign="bottom" id="r1c1-t49"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t49"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c3-t49"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
 </tr>
 </thead>
 <tbody>
 <tr align="left" valign="top">
-<td align="left" id="r2c1-t50" headers="r1c1-t50">
+<td align="left" id="r2c1-t49" headers="r1c1-t49">
 <p><code>functionName</code></p>
 </td>
-<td align="left" headers="r2c1-t50 r1c2-t50">
+<td align="left" headers="r2c1-t49 r1c2-t49">
 <p>(Required) The name of the stored function.</p>
 </td>
-<td align="left" headers="r2c1-t50 r1c3-t50"><br /></td>
+<td align="left" headers="r2c1-t49 r1c3-t49"><br /></td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r3c1-t50" headers="r1c1-t50">
+<td align="left" id="r3c1-t49" headers="r1c1-t49">
 <p>name</p>
 </td>
-<td align="left" headers="r3c1-t50 r1c2-t50">
+<td align="left" headers="r3c1-t49 r1c2-t49">
 <p>(Required) The unique name that references this stored function query.</p>
 </td>
-<td align="left" headers="r3c1-t50 r1c3-t50"><br /></td>
+<td align="left" headers="r3c1-t49 r1c3-t49"><br /></td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r4c1-t50" headers="r1c1-t50">
+<td align="left" id="r4c1-t49" headers="r1c1-t49">
 <p><code>returnParamter</code></p>
 </td>
-<td align="left" headers="r4c1-t50 r1c2-t50">
+<td align="left" headers="r4c1-t49 r1c2-t49">
 <p>(Required) The return value of the stored function.</p>
 </td>
-<td align="left" headers="r4c1-t50 r1c3-t50"><br /></td>
+<td align="left" headers="r4c1-t49 r1c3-t49"><br /></td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r5c1-t50" headers="r1c1-t50">
+<td align="left" id="r5c1-t49" headers="r1c1-t49">
 <p><code>callByIndex</code></p>
 </td>
-<td align="left" headers="r5c1-t50 r1c2-t50">
+<td align="left" headers="r5c1-t49 r1c2-t49">
 <p>(Optional) Specifies if the stored function should be called by <strong>index</strong> or by <strong>name</strong>.</p>
 <ul>
 <li>
@@ -109,49 +109,49 @@ Release 2.4</div></td>
 </li>
 </ul>
 </td>
-<td align="left" headers="r5c1-t50 r1c3-t50">
+<td align="left" headers="r5c1-t49 r1c3-t49">
 <p>false</p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r6c1-t50" headers="r1c1-t50">
+<td align="left" id="r6c1-t49" headers="r1c1-t49">
 <p><code>hints</code></p>
 </td>
-<td align="left" headers="r6c1-t50 r1c2-t50">
+<td align="left" headers="r6c1-t49 r1c2-t49">
 <p>(Optional) Query hints</p>
 </td>
-<td align="left" headers="r6c1-t50 r1c3-t50"><br /></td>
+<td align="left" headers="r6c1-t49 r1c3-t49"><br /></td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r7c1-t50" headers="r1c1-t50">
+<td align="left" id="r7c1-t49" headers="r1c1-t49">
 <p><code>parameters</code></p>
 </td>
-<td align="left" headers="r7c1-t50 r1c2-t50">
+<td align="left" headers="r7c1-t49 r1c2-t49">
 <p>(Optional) The parameters for the stored function.</p>
 </td>
-<td align="left" headers="r7c1-t50 r1c3-t50"><br /></td>
+<td align="left" headers="r7c1-t49 r1c3-t49"><br /></td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r8c1-t50" headers="r1c1-t50">
+<td align="left" id="r8c1-t49" headers="r1c1-t49">
 <p><code>resultSetMapping</code></p>
 </td>
-<td align="left" headers="r8c1-t50 r1c2-t50">
+<td align="left" headers="r8c1-t49 r1c2-t49">
 <p>(Optional) The name of the SQLResultMapping.</p>
 </td>
-<td align="left" headers="r8c1-t50 r1c3-t50"><br /></td>
+<td align="left" headers="r8c1-t49 r1c3-t49"><br /></td>
 </tr>
 </tbody>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref228" name="sthref228"></a>
+<a id="sthref226" name="sthref226"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>You can specify <code>@NamedStoredFunctionQuery</code> on an Entity or MappedSuperclass.</p>
-<a id="sthref229" name="sthref229"></a>
+<a id="sthref227" name="sthref227"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<p><a href="#BABHABEG">Example 2-68</a> shows how to use this annotation.</p>
+<p><a href="#BABHABEG">Example 2-71</a> shows how to use this annotation.</p>
 <div class="example"><a id="BABHABEG" name="BABHABEG"></a><a id="TLJPA463" name="TLJPA463"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-68 Using @NamedStoredFunctionQuery Annotation</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-71 Using @NamedStoredFunctionQuery Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Entity
 @Table(name="CMP3_ADDRESS")
@@ -169,9 +169,9 @@ public class Address implements Serializable {
 }
 </pre></div>
 <!-- class="example" -->
-<p><a href="#BABGJGJJ">Example 2-69</a> shows how to use the <code>&lt;named-stored-function-query&gt;</code> element in the <code>eclipselink-orm.xml</code> file.</p>
+<p><a href="#BABGJGJJ">Example 2-72</a> shows how to use the <code>&lt;named-stored-function-query&gt;</code> element in the <code>eclipselink-orm.xml</code> file.</p>
 <div class="example"><a id="BABGJGJJ" name="BABGJGJJ"></a><a id="TLJPA464" name="TLJPA464"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-69 Using &lt;named-stored-function-query&gt; XML</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-72 Using &lt;named-stored-function-query&gt; XML</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;<strong>named-stored-function-query</strong> name="StoredFunction_In" procedure-name="StoredFunction_In"&gt;
     &lt;parameter direction="IN" name="P_IN" query-parameter="P_IN" type="Long"/&gt;
@@ -179,7 +179,7 @@ public class Address implements Serializable {
 
 </pre></div>
 <!-- class="example" -->
-<a id="sthref230" name="sthref230"></a>
+<a id="sthref228" name="sthref228"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

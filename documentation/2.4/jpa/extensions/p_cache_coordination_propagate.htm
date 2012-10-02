@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>cache.coordination.propagate-asynchronously | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-10-01T9:42:50Z" />
+<meta name="date" content="2012-10-02T9:18:25Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="cache.coordination.propagate-asynchronously" />
 <meta name="relnum" content="Release 2.4" />
@@ -51,10 +51,10 @@ Release 2.4</div></td>
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">cache.coordination.propagate-asynchronously</font></h2>
 <p>Use <code>eclipselink.cache.coordination.propagate-asynchronously</code> to specify if the coordination broadcast should occur asynchronously with the committing thread</p>
 <p>property configures cache coordination for a clustered environment. Set if the coordination broadcast should occur asynchronously with the committing thread. This means the coordination will be complete before the thread returns from the commit of the transaction.</p>
-<a id="sthref796" name="sthref796"></a>
+<a id="sthref794" name="sthref794"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
 <p><a href="#BABBGGGD">Table 5-11</a> describes this persistence property's values.</p>
-<div class="tblhruleformalwide"><a id="TLJPA847" name="TLJPA847"></a><a id="sthref797" name="sthref797"></a><a id="BABBGGGD" name="BABBGGGD"></a>
+<div class="tblhruleformalwide"><a id="TLJPA847" name="TLJPA847"></a><a id="sthref795" name="sthref795"></a><a id="BABBGGGD" name="BABBGGGD"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 5-11 Valid Values for cache.coordination.propagate-asynchronously</font></em></strong></p>
 <table class="HRuleFormalWide" title="Valid Values for cache.coordination.propagate-asynchronously" summary="Valid Values for this query hint" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="29%" />
@@ -86,11 +86,11 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref798" name="sthref798"></a>
+<a id="sthref796" name="sthref796"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>JMS cache coordination is always asynchronous, regardless of this setting.</p>
 <p>By default, RMI cache coordination is asynchronous. Use synchronous (<code>eclipselink.cache.coordination.propagate-asynchronously</code> = <code>false</code>) to ensure that all servers are updated before the request returns.</p>
-<a id="sthref799" name="sthref799"></a>
+<a id="sthref797" name="sthref797"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#BABCBHJG">Example 5-5</a> shows how to use this property in the <code>persistence.xml</code> file.</p>
 <div class="example"><a id="BABCBHJG" name="BABCBHJG"></a><a id="TLJPA848" name="TLJPA848"></a>
@@ -99,7 +99,7 @@ Release 2.4</div></td>
 &lt;property name="<strong>eclipselink.cache.coordination.propagate-asynchronously</strong>" value="false" /&gt;
 </pre></div>
 <!-- class="example" -->
-<a id="sthref800" name="sthref800"></a>
+<a id="sthref798" name="sthref798"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

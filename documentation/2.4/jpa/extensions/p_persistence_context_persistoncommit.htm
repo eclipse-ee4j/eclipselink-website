@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>persistence-context.persist-on-commit | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-10-01T9:42:52Z" />
+<meta name="date" content="2012-10-02T9:18:35Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="persistence-context.persist-on-commit" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">persistence-context.persist-on-commit</font></h2>
 <p>Use <code>eclipselink.persistence-context.persist-on-commit</code> to specify if the <code>EntityManager</code> searches all managed objects and persists any related non-managed new objects that are cascade persist. This can be used to avoid the cost of performing this search if persist is always used for new objects.</p>
-<a id="sthref1180" name="sthref1180"></a>
+<a id="sthref1179" name="sthref1179"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
 <p><a href="#BABHIBEC">Table 5-80</a> describes this persistence property's values.</p>
-<div class="tblhruleformalwide"><a id="TLJPA1009" name="TLJPA1009"></a><a id="sthref1181" name="sthref1181"></a><a id="BABHIBEC" name="BABHIBEC"></a>
+<div class="tblhruleformalwide"><a id="TLJPA1009" name="TLJPA1009"></a><a id="sthref1180" name="sthref1180"></a><a id="BABHIBEC" name="BABHIBEC"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 5-80 Valid Values for persistence-context.persist-on-commit</font></em></strong></p>
 <table class="HRuleFormalWide" title="Valid Values for persistence-context.persist-on-commit" summary="Valid Values for this query hint" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="29%" />
@@ -83,10 +83,10 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref1182" name="sthref1182"></a>
+<a id="sthref1181" name="sthref1181"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>The property set in <code>persistence.xml</code> or passed to <code>createEntityManagerFactory</code> affects <em>all</em> <code>EntityManagers</code> created by the factory. To apply the property to <em>specific</em> <code>EntityManagers</code> pass it to <code>createEntityManager</code> method.</p>
-<a id="sthref1183" name="sthref1183"></a>
+<a id="sthref1182" name="sthref1182"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#BEHGGIEC">Example 5-78</a> shows how to use this property in the <code>persistence.xml</code> file.</p>
 <div class="example"><a id="BEHGGIEC" name="BEHGGIEC"></a><a id="TLJPA1010" name="TLJPA1010"></a>
@@ -95,7 +95,7 @@ Release 2.4</div></td>
 &lt;property name="eclipselink.persistence-context.persist-on-commit" value="false"/&gt;
 </pre></div>
 <!-- class="example" -->
-<a id="sthref1184" name="sthref1184"></a>
+<a id="sthref1183" name="sthref1183"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 </div>

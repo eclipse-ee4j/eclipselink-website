@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>pessimistic-lock | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-10-01T9:42:50Z" />
+<meta name="date" content="2012-10-02T9:18:22Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="pessimistic-lock" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">pessimistic-lock</font></h2>
 <p>Use <code>eclipselink.pessimistic-lock</code> to specify if EclipseLink uses pessimistic locking.</p>
-<a id="sthref654" name="sthref654"></a>
+<a id="sthref652" name="sthref652"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
 <p><a href="#CIHDEEDF">Table 4-26</a> describes this query hint's valid values.</p>
-<div class="tblhruleformalwide"><a id="TLJPA669" name="TLJPA669"></a><a id="sthref655" name="sthref655"></a><a id="CIHDEEDF" name="CIHDEEDF"></a>
+<div class="tblhruleformalwide"><a id="TLJPA669" name="TLJPA669"></a><a id="sthref653" name="sthref653"></a><a id="CIHDEEDF" name="CIHDEEDF"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 4-26 Valid Values for org.eclipse.persistence.config.PessimisticLock</font></em></strong></p>
 <table class="HRuleFormalWide" title="Valid Values for org.eclipse.persistence.config.PessimisticLock" summary="Valid Values for this query hint" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="29%" />
@@ -93,11 +93,11 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref656" name="sthref656"></a>
+<a id="sthref654" name="sthref654"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>The primary advantage of using pessimistic locking is that you are assured, once the lock is obtained, of a successful edit. This is desirable in highly concurrent applications in which optimistic locking may cause too many optimistic locking errors.</p>
 <p>One drawback of pessimistic locking is that it requires additional database resources, requiring the database transaction and connection to be maintained for the duration of the edit. Pessimistic locking may also cause deadlocks and lead to concurrency issues.</p>
-<a id="sthref657" name="sthref657"></a>
+<a id="sthref655" name="sthref655"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#CIHGEJFF">Example 4-47</a> shows how to use this hint in a JPA query.</p>
 <div class="example"><a id="CIHGEJFF" name="CIHGEJFF"></a><a id="TLJPA670" name="TLJPA670"></a>
@@ -118,7 +118,7 @@ import org.eclipse.persistence.config.PessimisticLock;
 
 </pre></div>
 <!-- class="example" -->
-<a id="sthref658" name="sthref658"></a>
+<a id="sthref656" name="sthref656"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>flush | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-10-01T9:42:49Z" />
+<meta name="date" content="2012-10-02T9:18:21Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="flush" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">flush</font></h2>
 <p>Use <code>eclipselink.flush</code> to specify if the query should flush the persistence context before executing.</p>
-<a id="sthref555" name="sthref555"></a>
+<a id="sthref553" name="sthref553"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
 <p><a href="#CBAGCCIH">Table 4-9</a> describes this query hint's values.</p>
-<div class="tblhruleformalwide"><a id="TLJPA752" name="TLJPA752"></a><a id="sthref556" name="sthref556"></a><a id="CBAGCCIH" name="CBAGCCIH"></a>
+<div class="tblhruleformalwide"><a id="TLJPA752" name="TLJPA752"></a><a id="sthref554" name="sthref554"></a><a id="CBAGCCIH" name="CBAGCCIH"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 4-9 Valid Values for flush</font></em></strong></p>
 <table class="HRuleFormalWide" title="Valid Values for flush" summary="Valid values for this extensiont" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="29%" />
@@ -83,26 +83,26 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref557" name="sthref557"></a>
+<a id="sthref555" name="sthref555"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>If the query may access objects that have been changed in the persistence context, you must trigger a flush in order for the query to see the changes. If the query does not require seeing the changes, you should avoid the flush in order to improve performance.</p>
 <p>You can also configure the flush-mode as a persistence unit property. See <a href="p_flush_clear_cache.htm#CDEJGBEI">"flush-clear.cache"</a> for more information.</p>
 <p>You can also use conforming to query changes without requiring a flush. See <a href="q_cacheusage.htm#cacheusage">"cache-usage"</a> for more information.</p>
-<a id="sthref558" name="sthref558"></a>
+<a id="sthref556" name="sthref556"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<div class="example"><a id="TLJPA753" name="TLJPA753"></a><a id="sthref559" name="sthref559"></a>
+<div class="example"><a id="TLJPA753" name="TLJPA753"></a><a id="sthref557" name="sthref557"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 4-19 Using flush in a JPA Query</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 
 </pre></div>
 <!-- class="example" -->
-<div class="example"><a id="TLJPA754" name="TLJPA754"></a><a id="sthref560" name="sthref560"></a>
+<div class="example"><a id="TLJPA754" name="TLJPA754"></a><a id="sthref558" name="sthref558"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 4-20 Using flush in a @QueryHint Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 
 </pre></div>
 <!-- class="example" -->
-<a id="sthref561" name="sthref561"></a>
+<a id="sthref559" name="sthref559"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

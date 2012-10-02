@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@Mutable | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-10-01T9:42:46Z" />
+<meta name="date" content="2012-10-02T9:18:11Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@Mutable" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,31 +50,31 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@Mutable</font></h2>
 <p>Use <code>@Mutable</code> on a <code>@Basic</code> mapping to specify if the value of a complex field type can be <em>changed</em> (or not changed) instead of being <em>replaced</em>. Mutable mappings may affect the performance of change tracking; attribute change tracking can only be weaved with non-mutable mappings.</p>
-<a id="sthref199" name="sthref199"></a>
+<a id="sthref197" name="sthref197"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
-<p><a href="#CHDDHGFD">Table 2-34</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="TLJPA455" name="TLJPA455"></a><a id="sthref200" name="sthref200"></a><a id="CHDDHGFD" name="CHDDHGFD"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-34 @Mutable Annotation Elements</font></em></strong></p>
+<p><a href="#CHDDHGFD">Table 2-33</a> describes this annotation's elements.</p>
+<div class="tblhruleformalwide"><a id="TLJPA455" name="TLJPA455"></a><a id="sthref198" name="sthref198"></a><a id="CHDDHGFD" name="CHDDHGFD"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-33 @Mutable Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@Mutable Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="31%" />
 <col width="*" />
 <col width="28%" />
 <thead>
 <tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t44"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
-<th align="left" valign="bottom" id="r1c2-t44"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
-<th align="left" valign="bottom" id="r1c3-t44"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
+<th align="left" valign="bottom" id="r1c1-t43"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t43"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c3-t43"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
 </tr>
 </thead>
 <tbody>
 <tr align="left" valign="top">
-<td align="left" id="r2c1-t44" headers="r1c1-t44">
+<td align="left" id="r2c1-t43" headers="r1c1-t43">
 <p><code>boolean value</code></p>
 </td>
-<td align="left" headers="r2c1-t44 r1c2-t44">
+<td align="left" headers="r2c1-t43 r1c2-t43">
 <p>(Optional) Specify if the mapping is mutable.</p>
 </td>
-<td align="left" headers="r2c1-t44 r1c3-t44">
+<td align="left" headers="r2c1-t43 r1c3-t43">
 <p>true</p>
 </td>
 </tr>
@@ -82,36 +82,36 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref201" name="sthref201"></a>
+<a id="sthref199" name="sthref199"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>Most basic types (such as <code>int</code>, <code>long</code>, <code>float</code>, <code>double</code>, <code>String</code>, and <code>BigDecimal</code>) are not mutable.</p>
 <p>By default, <code>Date</code> and <code>Calendar</code> types are assumed to be not mutable. To make these types mutable, use the <code>@Mutable</code> annotation. You can also use the global persistence property <code>eclipselink.temporal.mutable</code> to set the mappings as mutable.</p>
 <p>By default, serialized types are assumed to be mutable. You can set the <code>@Mutable</code> annotation to <code>false</code> to make these types not mutable.</p>
 <p>You can also configure mutable mappings for <code>Date</code> and <code>Calendar</code> fields in the persistence unit in the <code>persistence.xml</code> file.</p>
-<a id="sthref202" name="sthref202"></a>
+<a id="sthref200" name="sthref200"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<p><a href="#CHDDJJEE">Example 2-61</a> shows how to use the <code>@Mutable</code> annotation to specify <code>Employee</code> field <code>hireDate</code>.</p>
+<p><a href="#CHDDJJEE">Example 2-64</a> shows how to use the <code>@Mutable</code> annotation to specify <code>Employee</code> field <code>hireDate</code>.</p>
 <div class="example"><a id="CHDDJJEE" name="CHDDJJEE"></a><a id="TLJPA456" name="TLJPA456"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-61 Using @Mutable Annotation</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-64 Using @Mutable Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Entity
 public class Employee implements Serializable {
 
-...
+    ...
 
-  @Temporal(DATE)
+    @Temporal(DATE)
     <strong>@Mutable</strong>
     public Calendar getHireDate() {
-    return hireDate;
-  }
+        return hireDate;
+    }
 
 ..
- }
+}
 </pre></div>
 <!-- class="example" -->
-<p><a href="#CHDCDIBH">Example 2-62</a> shows how to configure mutable mappings in the persistence unit <code>persistence.xml</code> file or by importing a <code>property</code> map.</p>
+<p><a href="#CHDCDIBH">Example 2-65</a> shows how to configure mutable mappings in the persistence unit <code>persistence.xml</code> file or by importing a <code>property</code> map.</p>
 <div class="example"><a id="CHDCDIBH" name="CHDCDIBH"></a><a id="TLJPA457" name="TLJPA457"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-62 Specifying Mutable Mappings in persistence.xml</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-65 Specifying Mutable Mappings in persistence.xml</font></em></strong></p>
 <p>Using <code>persistence.xml</code> file:</p>
 <pre xml:space="preserve" class="oac_no_warn">
 <strong>&lt;property name="eclipselink.temporal.mutable" value="true"/&gt;</strong>
@@ -123,7 +123,7 @@ import org.eclipse.persistence.config.PersistenceUnitProperties;
 propertiesMap.put(<strong>PersistenceUnitProperties.TEMPORAL_MUTABLE, "false"</strong>);
 </pre></div>
 <!-- class="example" -->
-<a id="sthref203" name="sthref203"></a>
+<a id="sthref201" name="sthref201"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

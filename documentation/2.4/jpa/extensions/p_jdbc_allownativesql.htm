@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>jdbc.allow-native-sql-queries | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-10-01T9:42:51Z" />
+<meta name="date" content="2012-10-02T9:18:29Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="jdbc.allow-native-sql-queries" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">jdbc.allow-native-sql-queries</font></h2>
 <p>Use <code>eclipselink.jdbc.allow-native-sql-queries</code> to specify if user-defined (that is, native) SQL is allowed within a persistence unit.</p>
-<a id="sthref937" name="sthref937"></a>
+<a id="sthref936" name="sthref936"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
 <p><a href="#CIHCHAAF">Table 5-39</a> describes this persistence property's values.</p>
-<div class="tblhruleformalwide"><a id="TLJPA1090" name="TLJPA1090"></a><a id="sthref938" name="sthref938"></a><a id="CIHCHAAF" name="CIHCHAAF"></a>
+<div class="tblhruleformalwide"><a id="TLJPA1090" name="TLJPA1090"></a><a id="sthref937" name="sthref937"></a><a id="CIHCHAAF" name="CIHCHAAF"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 5-39 Valid Values for jdbc.allow-native-sql-queries</font></em></strong></p>
 <table class="HRuleFormalWide" title="Valid Values for jdbc.allow-native-sql-queries" summary="Valid Values for this query hint" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="29%" />
@@ -85,18 +85,18 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref939" name="sthref939"></a>
+<a id="sthref938" name="sthref938"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>Within a multitenant, use this option to minimize the potential impact of revealing multitenant information. By default, any persistence unit with a multitenant entity causes EclipseLink to set eclipselink.jdbc.allow-native-sql-queries as <code>false</code>.</p>
-<a id="sthref940" name="sthref940"></a>
+<a id="sthref939" name="sthref939"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<div class="example"><a id="TLJPA905" name="TLJPA905"></a><a id="sthref941" name="sthref941"></a>
+<div class="example"><a id="TLJPA905" name="TLJPA905"></a><a id="sthref940" name="sthref940"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-28 Using jdbc.allow-native-sql-queries in persistence.xml</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;property name="eclipselink.jdbc.allow-native-sql-queries" value="false" /&gt;
 </pre></div>
 <!-- class="example" -->
-<a id="sthref942" name="sthref942"></a>
+<a id="sthref941" name="sthref941"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 </div>

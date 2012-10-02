@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>partitioning | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-10-01T9:42:52Z" />
+<meta name="date" content="2012-10-02T9:18:35Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="partitioning" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">partitioning</font></h2>
 <p>Use <code>eclipselink.partitioning</code> to set the default <code>PartitioningPolicy</code> for a persistence unit. The value must be the name of an existing, defined <code>PartitioningPolicy</code>.</p>
-<a id="sthref1152" name="sthref1152"></a>
+<a id="sthref1151" name="sthref1151"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
 <p><a href="#CEGBHDDC">Table 5-75</a> describes this persistence property's values.</p>
-<div class="tblhruleformalwide"><a id="TLJPA1116" name="TLJPA1116"></a><a id="sthref1153" name="sthref1153"></a><a id="CEGBHDDC" name="CEGBHDDC"></a>
+<div class="tblhruleformalwide"><a id="TLJPA1116" name="TLJPA1116"></a><a id="sthref1152" name="sthref1152"></a><a id="CEGBHDDC" name="CEGBHDDC"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 5-75 Valid Values for partitioning</font></em></strong></p>
 <table class="HRuleFormalWide" title="Valid Values for partitioning" summary="Valid Values for this query hint" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="29%" />
@@ -77,19 +77,19 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref1154" name="sthref1154"></a>
+<a id="sthref1153" name="sthref1153"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>Use this property to partition data for a class across multiple difference databases or across a database cluster such as Oracle RAC. Partitioning may provide improved scalability by allowing multiple database machines to service requests.</p>
 <p>If multiple partitions are used to process a single transaction, use JTA (Java Transcription API) for proper XA transaction support.</p>
-<a id="sthref1155" name="sthref1155"></a>
+<a id="sthref1154" name="sthref1154"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<div class="example"><a id="TLJPA998" name="TLJPA998"></a><a id="sthref1156" name="sthref1156"></a>
+<div class="example"><a id="TLJPA998" name="TLJPA998"></a><a id="sthref1155" name="sthref1155"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-74 Using partitioning in persistence.xml</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;property name="eclipselink.partitioning" value="Replicate" /&gt;
 </pre></div>
 <!-- class="example" -->
-<a id="sthref1157" name="sthref1157"></a>
+<a id="sthref1156" name="sthref1156"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>jdbc.batch-writing | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-10-01T9:42:51Z" />
+<meta name="date" content="2012-10-02T9:18:29Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="jdbc.batch-writing" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">jdbc.batch-writing</font></h2>
 <p>Use <code>eclipselink.jdbc.batch-writing</code> to configure the type of batch-writing to use.</p>
-<a id="sthref943" name="sthref943"></a>
+<a id="sthref942" name="sthref942"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
 <p><a href="#CIHFJDIB">Table 5-40</a> describes this persistence property's values.</p>
-<div class="tblhruleformalwide"><a id="TLJPA907" name="TLJPA907"></a><a id="sthref944" name="sthref944"></a><a id="CIHFJDIB" name="CIHFJDIB"></a>
+<div class="tblhruleformalwide"><a id="TLJPA907" name="TLJPA907"></a><a id="sthref943" name="sthref943"></a><a id="CIHFJDIB" name="CIHFJDIB"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 5-40 Valid Values for jdbc.batch-writing</font></em></strong></p>
 <table class="HRuleFormalWide" title="Valid Values for jdbc.batch-writing" summary="Valid Values for this query hint" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="29%" />
@@ -102,25 +102,25 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref945" name="sthref945"></a>
+<a id="sthref944" name="sthref944"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>With batch writing, EclipseLink can optimize transactions with multiple write functions. Use <code>eclipselink.<a href="p_jdbc_batchwritingsize.htm#CIHJADHF">jdbc.batch-writing.size</a></code> to specify the batch size.</p>
-<a id="sthref946" name="sthref946"></a>
+<a id="sthref945" name="sthref945"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<div class="example"><a id="TLJPA908" name="TLJPA908"></a><a id="sthref947" name="sthref947"></a>
+<div class="example"><a id="TLJPA908" name="TLJPA908"></a><a id="sthref946" name="sthref946"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-29 Using jdbc.batch-writing in persistence.xml</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;property name="eclipselink.jdbc.batch-writing" value="Oracle-JDBC"/&gt;
 </pre></div>
 <!-- class="example" -->
-<div class="example"><a id="TLJPA909" name="TLJPA909"></a><a id="sthref948" name="sthref948"></a>
+<div class="example"><a id="TLJPA909" name="TLJPA909"></a><a id="sthref947" name="sthref947"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-30 Using jdbc.batch-writing in a Property Map</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 import org.eclipse.persistence.config.PersistenceUnitProperties;
 propertiesMap.put(PersistenceUnitProperties.BATCH_WRITING, BatchWriting.OracleJDBC);
 </pre></div>
 <!-- class="example" -->
-<a id="sthref949" name="sthref949"></a>
+<a id="sthref948" name="sthref948"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

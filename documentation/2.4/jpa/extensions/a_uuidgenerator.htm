@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@UuidGenerator | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-10-01T9:42:48Z" />
+<meta name="date" content="2012-10-02T9:18:17Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@UuidGenerator" />
 <meta name="relnum" content="Release 2.4" />
@@ -51,41 +51,41 @@ Release 2.4</div></td>
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@UuidGenerator</font></h2>
 <p>Use <code>@UuidGenerator</code> to defines a primary key generator that may be referenced by name when a generator element is specified for the <code>@GeneratedValue</code> annotation. A UUID (universally unique identifier) generator may be specified on the entity class or on the primary key field or property.</p>
 <p>The generator name is global to the persistence unit (that is, across all generator types).</p>
-<a id="sthref423" name="sthref423"></a>
+<a id="sthref421" name="sthref421"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
-<p><a href="#CFAIAHJG">Table 2-75</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="TLJPA579" name="TLJPA579"></a><a id="sthref424" name="sthref424"></a><a id="CFAIAHJG" name="CFAIAHJG"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-75 @UuidGenerator Annotation Elements</font></em></strong></p>
+<p><a href="#CFAIAHJG">Table 2-74</a> describes this annotation's elements.</p>
+<div class="tblhruleformalwide"><a id="TLJPA579" name="TLJPA579"></a><a id="sthref422" name="sthref422"></a><a id="CFAIAHJG" name="CFAIAHJG"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-74 @UuidGenerator Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@UuidGenerator Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="21%" />
 <col width="*" />
 <col width="17%" />
 <thead>
 <tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t88"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
-<th align="left" valign="bottom" id="r1c2-t88"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
-<th align="left" valign="bottom" id="r1c3-t88"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
+<th align="left" valign="bottom" id="r1c1-t87"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t87"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c3-t87"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
 </tr>
 </thead>
 <tbody>
 <tr align="left" valign="top">
-<td align="left" id="r2c1-t88" headers="r1c1-t88">
+<td align="left" id="r2c1-t87" headers="r1c1-t87">
 <p><code>name</code></p>
 </td>
-<td align="left" headers="r2c1-t88 r1c2-t88">
+<td align="left" headers="r2c1-t87 r1c2-t87">
 <p>Name of the UUID generator, must be unique for the persistence unit</p>
 </td>
-<td align="left" headers="r2c1-t88 r1c3-t88"><br /></td>
+<td align="left" headers="r2c1-t87 r1c3-t87"><br /></td>
 </tr>
 </tbody>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref425" name="sthref425"></a>
+<a id="sthref423" name="sthref423"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<p><a href="#CFADJAIF">Example 2-116</a> shows how to use this annotation.</p>
+<p><a href="#CFADJAIF">Example 2-119</a> shows how to use this annotation.</p>
 <div class="example"><a id="CFADJAIF" name="CFADJAIF"></a><a id="TLJPA580" name="TLJPA580"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-116 Using @UuidGenerator Annotation</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-119 Using @UuidGenerator Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Entity
 <strong>@UuidGenerator(name="EMP_ID_GEN")</strong>
@@ -96,9 +96,9 @@ public class Employee {
 }
 </pre></div>
 <!-- class="example" -->
-<p>You can also specify the <code>SessionCustomizer</code> and configure the named sequence in your <code>eclipselink-orm.xml</code> file, as shown in <a href="#CFAGEJHJ">Example 2-117</a>.</p>
+<p>You can also specify the <code>SessionCustomizer</code> and configure the named sequence in your <code>eclipselink-orm.xml</code> file, as shown in <a href="#CFAGEJHJ">Example 2-120</a>.</p>
 <div class="example"><a id="CFAGEJHJ" name="CFAGEJHJ"></a><a id="TLJPA581" name="TLJPA581"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-117 Using &lt;generated-value&gt; XML</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-120 Using &lt;generated-value&gt; XML</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;id name="id"&gt;
     &lt;column name="PROJ_ID" /&gt;
@@ -106,15 +106,15 @@ public class Employee {
 &lt;/id&gt;
 </pre></div>
 <!-- class="example" -->
-<p>You can also specify the named sequence at the persistence unit level (in the <code>persistence.xml</code> file) as shown in <a href="#CFAJEEEJ">Example 2-118</a>.</p>
+<p>You can also specify the named sequence at the persistence unit level (in the <code>persistence.xml</code> file) as shown in <a href="#CFAJEEEJ">Example 2-121</a>.</p>
 <div class="example"><a id="CFAJEEEJ" name="CFAJEEEJ"></a><a id="TLJPA582" name="TLJPA582"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-118 Specifying Generator in persistence.xml</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-121 Specifying Generator in persistence.xml</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;property name="eclipselink.session.customizer" value="eclipselink.example.UUIDSequence"/&gt;
 
 </pre></div>
 <!-- class="example" -->
-<a id="sthref426" name="sthref426"></a>
+<a id="sthref424" name="sthref424"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

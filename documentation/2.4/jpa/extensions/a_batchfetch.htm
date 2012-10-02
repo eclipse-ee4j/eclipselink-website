@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@BatchFetch | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-10-01T9:42:45Z" />
+<meta name="date" content="2012-10-02T9:18:6Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@BatchFetch" />
 <meta name="relnum" content="Release 2.4" />
@@ -120,9 +120,10 @@ Release 2.4</div></td>
 private Address address;
 </pre>
 <pre xml:space="preserve" class="oac_no_warn">
-&lt;element-collection name="stringMap"&gt;
-&lt;batch-fetch type="JOIN"&gt;
-&lt;/element-collection&gt;
+&lt;one-to-one name="address"&gt;
+    &lt;batch-fetch type="JOIN" /&gt;
+&lt;/one-to-one&gt;
+
  
 </pre></div>
 <!-- class="example" -->
@@ -136,9 +137,9 @@ return stringMap;
 }
 </pre>
 <pre xml:space="preserve" class="oac_no_warn">
-&lt;element-collection name="stringMap"&gt;
-&lt;batch-fetch type="EXISTS"&gt;
-&lt;/element-collection&gt;
+&lt;one-to-one name="StringMap"&gt;
+    &lt;batch-fetch type="EXISTS"/&gt;
+&lt;/one-to-one&gt;
 </pre></div>
 <!-- class="example" -->
 <div class="example"><a id="TLJPA333" name="TLJPA333"></a><a id="sthref25" name="sthref25"></a>
@@ -152,9 +153,9 @@ return stringMap;
  
 </pre>
 <pre xml:space="preserve" class="oac_no_warn">
-&lt;element-collection name="StringMap"&gt;
-&lt;batch-fetch type="IN" size="50"&gt;
-&lt;/element-collection&gt;
+&lt;one-to-one name="StringMap"&gt;
+    &lt;batch-fetch type="IN" size="50" /&gt;
+&lt;/one-to-one&gt;
 </pre></div>
 <!-- class="example" -->
 <a id="sthref26" name="sthref26"></a>

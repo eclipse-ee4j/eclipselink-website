@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@OptimisticLocking | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-10-01T9:42:47Z" />
+<meta name="date" content="2012-10-02T9:18:12Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@OptimisticLocking" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,50 +50,50 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@OptimisticLocking</font></h2>
 <p>Use <code>@OptimisticLocking</code> to specify the type of optimistic locking EclipseLink should use when updating or deleting entities.</p>
-<a id="sthref259" name="sthref259"></a>
+<a id="sthref257" name="sthref257"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
-<p><a href="#BCGEDBBI">Table 2-46</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="TLJPA486" name="TLJPA486"></a><a id="sthref260" name="sthref260"></a><a id="BCGEDBBI" name="BCGEDBBI"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-46 @OptimisticLocking Annotation Elements</font></em></strong></p>
+<p><a href="#BCGEDBBI">Table 2-45</a> describes this annotation's elements.</p>
+<div class="tblhruleformalwide"><a id="TLJPA486" name="TLJPA486"></a><a id="sthref258" name="sthref258"></a><a id="BCGEDBBI" name="BCGEDBBI"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-45 @OptimisticLocking Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@OptimisticLocking Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="24%" />
 <col width="*" />
 <col width="19%" />
 <thead>
 <tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t56"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
-<th align="left" valign="bottom" id="r1c2-t56"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
-<th align="left" valign="bottom" id="r1c3-t56"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
+<th align="left" valign="bottom" id="r1c1-t55"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t55"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c3-t55"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
 </tr>
 </thead>
 <tbody>
 <tr align="left" valign="top">
-<td align="left" id="r2c1-t56" headers="r1c1-t56">
+<td align="left" id="r2c1-t55" headers="r1c1-t55">
 <p><code>cascade</code></p>
 </td>
-<td align="left" headers="r2c1-t56 r1c2-t56">
+<td align="left" headers="r2c1-t55 r1c2-t55">
 <p>(Optional) Specify where the optimistic locking policy should cascade lock.</p>
 <p>Currently only supported with <code>VERSION_COLUMN</code> locking.</p>
 </td>
-<td align="left" headers="r2c1-t56 r1c3-t56">
+<td align="left" headers="r2c1-t55 r1c3-t55">
 <p><code>false</code></p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r3c1-t56" headers="r1c1-t56">
+<td align="left" id="r3c1-t55" headers="r1c1-t55">
 <p><code>SelectedColumns</code></p>
 </td>
-<td align="left" headers="r3c1-t56 r1c2-t56">
+<td align="left" headers="r3c1-t55 r1c2-t55">
 <p>(Optional) Specify a list of columns that will be optimistically locked.</p>
 <p>This element is required when <code>type=SELECTED_COLUMNS</code>.</p>
 </td>
-<td align="left" headers="r3c1-t56 r1c3-t56"><br /></td>
+<td align="left" headers="r3c1-t55 r1c3-t55"><br /></td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r4c1-t56" headers="r1c1-t56">
+<td align="left" id="r4c1-t55" headers="r1c1-t55">
 <p><code>type</code></p>
 </td>
-<td align="left" headers="r4c1-t56 r1c2-t56">
+<td align="left" headers="r4c1-t55 r1c2-t55">
 <p>(Optional) The type of optimistic locking policy to use:</p>
 <ul>
 <li>
@@ -110,7 +110,7 @@ Release 2.4</div></td>
 </li>
 </ul>
 </td>
-<td align="left" headers="r4c1-t56 r1c3-t56">
+<td align="left" headers="r4c1-t55 r1c3-t55">
 <p><code>VERSION_COLUMN</code></p>
 </td>
 </tr>
@@ -118,14 +118,14 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref261" name="sthref261"></a>
+<a id="sthref259" name="sthref259"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>You can specify <code>@OptimisticLocking</code> on an Entity or MappedSuperclass.</p>
-<a id="sthref262" name="sthref262"></a>
+<a id="sthref260" name="sthref260"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<p><a href="#BCGJBJFJ">Example 2-80</a> shows how to use the <code>@OptimisticLocking</code> annotation for all columns</p>
+<p><a href="#BCGJBJFJ">Example 2-83</a> shows how to use the <code>@OptimisticLocking</code> annotation for all columns</p>
 <div class="example"><a id="BCGJBJFJ" name="BCGJBJFJ"></a><a id="TLJPA487" name="TLJPA487"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-80 Using @OptimisticLocking Annotation</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-83 Using @OptimisticLocking Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Table(name = "EMPLOYEES")
   @OptimisticLocking(type=OptimisticLockingType.ALL_COLUMNS)
@@ -134,9 +134,9 @@ Release 2.4</div></td>
   }
 </pre></div>
 <!-- class="example" -->
-<p><a href="#BCGJBJFJ">Example 2-80</a> shows how to use the <code>&lt;optimistic-locking&gt;</code> element in the <code>eclipselink-orm.xml</code> file for a single column.</p>
-<div class="example"><a id="TLJPA488" name="TLJPA488"></a><a id="sthref263" name="sthref263"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-81 Using &lt;optimistic-locking&gt; XML</font></em></strong></p>
+<p><a href="#BCGJBJFJ">Example 2-83</a> shows how to use the <code>&lt;optimistic-locking&gt;</code> element in the <code>eclipselink-orm.xml</code> file for a single column.</p>
+<div class="example"><a id="TLJPA488" name="TLJPA488"></a><a id="sthref261" name="sthref261"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-84 Using &lt;optimistic-locking&gt; XML</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;entity name="Employee" class="my.Employee" access="PROPERTY" change-tracking="DEFERRED"&gt;
 ...
@@ -148,7 +148,7 @@ Release 2.4</div></td>
 &lt;/entity&gt;
 </pre></div>
 <!-- class="example" -->
-<a id="sthref264" name="sthref264"></a>
+<a id="sthref262" name="sthref262"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 </div>

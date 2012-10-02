@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>cache.coordination.rmi.packet-time-to-live | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-10-01T9:42:51Z" />
+<meta name="date" content="2012-10-02T9:18:26Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="cache.coordination.rmi.packet-time-to-live" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">cache.coordination.rmi.packet-time-to-live</font></h2>
 <p>Use <code>eclipselink.cache.coordination.rmi.packet-time-to-live</code> to set the number of hops the session announcement data packets will take before expiring. The multicast group is used to find other members of the cluster.</p>
-<a id="sthref826" name="sthref826"></a>
+<a id="sthref824" name="sthref824"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
 <p><a href="#BABHDDBG">Table 5-17</a> describes this persistence property's values.</p>
-<div class="tblhruleformalwide"><a id="TLJPA862" name="TLJPA862"></a><a id="sthref827" name="sthref827"></a><a id="BABHDDBG" name="BABHDDBG"></a>
+<div class="tblhruleformalwide"><a id="TLJPA862" name="TLJPA862"></a><a id="sthref825" name="sthref825"></a><a id="BABHDDBG" name="BABHDDBG"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 5-17 Valid Values for cache.coordination.rmi.packet-time-to-live</font></em></strong></p>
 <table class="HRuleFormalWide" title="Valid Values for cache.coordination.rmi.packet-time-to-live" summary="Valid Values for this query hint" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="17%" />
@@ -78,14 +78,14 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref828" name="sthref828"></a>
+<a id="sthref826" name="sthref826"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>If sessions are hosted on different LANs that are part of WAN, the announcement sent by one session may not reach other sessions. In this case, consult your network administrator for the correct time-to-live value or test your network by increasing the value until each session receives announcement sent by others.</p>
 <p>Use this property for RMI coordination (when <code>eclipselink.<a href="p_cache_coordination_protocol.htm#cachecoordinationprotocol">cache.coordination.protocol</a></code> = <code>rmi</code>).</p>
-<a id="sthref829" name="sthref829"></a>
+<a id="sthref827" name="sthref827"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p>See <a href="p_cache_coordination_protocol.htm#BABJDAIB">Example 5-7</a> to learn how to use this property in the <code>persistence.xml</code> file.</p>
-<a id="sthref830" name="sthref830"></a>
+<a id="sthref828" name="sthref828"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

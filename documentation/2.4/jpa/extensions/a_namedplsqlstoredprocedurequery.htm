@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@NamedPLSQLStoredProcedureQuery | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-10-01T9:42:46Z" />
+<meta name="date" content="2012-10-02T9:18:11Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@NamedPLSQLStoredProcedureQuery" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,94 +50,121 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@NamedPLSQLStoredProcedureQuery</font></h2>
 <p>Use <code>@NamedPLSQLStoredProcedureQuery</code> to define queries that call Oracle PLSQL stored procedures as named queries</p>
-<a id="sthref204" name="sthref204"></a>
+<a id="sthref202" name="sthref202"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
-<p><a href="#BGBEAJEH2">Table 2-35</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="sthref205" name="sthref205"></a><a id="BGBEAJEH2" name="BGBEAJEH2"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-35 @NamedPLSQLStoredProcedureQuery Annotation Elements</font></em></strong></p>
+<p><a href="#BGBEAJEH2">Table 2-34</a> describes this annotation's elements.</p>
+<div class="tblhruleformalwide"><a id="sthref203" name="sthref203"></a><a id="BGBEAJEH2" name="BGBEAJEH2"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-34 @NamedPLSQLStoredProcedureQuery Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@NamedPLSQLStoredProcedureQuery Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="21%" />
 <col width="*" />
 <col width="13%" />
 <thead>
 <tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t45"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
-<th align="left" valign="bottom" id="r1c2-t45"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
-<th align="left" valign="bottom" id="r1c3-t45"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
+<th align="left" valign="bottom" id="r1c1-t44"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t44"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c3-t44"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
 </tr>
 </thead>
 <tbody>
 <tr align="left" valign="top">
-<td align="left" id="r2c1-t45" headers="r1c1-t45">
+<td align="left" id="r2c1-t44" headers="r1c1-t44">
 <p><code>procedureName</code></p>
 </td>
-<td align="left" headers="r2c1-t45 r1c2-t45">
+<td align="left" headers="r2c1-t44 r1c2-t44">
 <p>(Required) The name of the stored procedure.</p>
 </td>
-<td align="left" headers="r2c1-t45 r1c3-t45"><br /></td>
+<td align="left" headers="r2c1-t44 r1c3-t44"><br /></td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r3c1-t45" headers="r1c1-t45">
+<td align="left" id="r3c1-t44" headers="r1c1-t44">
 <p><code>name</code></p>
 </td>
-<td align="left" headers="r3c1-t45 r1c2-t45">
+<td align="left" headers="r3c1-t44 r1c2-t44">
 <p>(Required) The unique name that references this stored procedure query.</p>
 </td>
-<td align="left" headers="r3c1-t45 r1c3-t45"><br /></td>
+<td align="left" headers="r3c1-t44 r1c3-t44"><br /></td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r4c1-t45" headers="r1c1-t45">
+<td align="left" id="r4c1-t44" headers="r1c1-t44">
 <p><code>resultClass</code></p>
 </td>
-<td align="left" headers="r4c1-t45 r1c2-t45">
+<td align="left" headers="r4c1-t44 r1c2-t44">
 <p>(Optional) The class of the result.</p>
 </td>
-<td align="left" headers="r4c1-t45 r1c3-t45"><br /></td>
+<td align="left" headers="r4c1-t44 r1c3-t44"><br /></td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r5c1-t45" headers="r1c1-t45">
+<td align="left" id="r5c1-t44" headers="r1c1-t44">
 <p><code>hints</code></p>
 </td>
-<td align="left" headers="r5c1-t45 r1c2-t45">
+<td align="left" headers="r5c1-t44 r1c2-t44">
 <p>(Optional) Query hints</p>
 </td>
-<td align="left" headers="r5c1-t45 r1c3-t45"><br /></td>
+<td align="left" headers="r5c1-t44 r1c3-t44"><br /></td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r6c1-t45" headers="r1c1-t45">
+<td align="left" id="r6c1-t44" headers="r1c1-t44">
 <p><code>parameters</code></p>
 </td>
-<td align="left" headers="r6c1-t45 r1c2-t45">
+<td align="left" headers="r6c1-t44 r1c2-t44">
 <p>(Optional) The parameters for the stored procedure.</p>
 </td>
-<td align="left" headers="r6c1-t45 r1c3-t45"><br /></td>
+<td align="left" headers="r6c1-t44 r1c3-t44"><br /></td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r7c1-t45" headers="r1c1-t45">
+<td align="left" id="r7c1-t44" headers="r1c1-t44">
 <p><code>resultSetMapping</code></p>
 </td>
-<td align="left" headers="r7c1-t45 r1c2-t45">
+<td align="left" headers="r7c1-t44 r1c2-t44">
 <p>(Optional) The name of the <code>SQLResultMapping</code>.</p>
 </td>
-<td align="left" headers="r7c1-t45 r1c3-t45"><br /></td>
+<td align="left" headers="r7c1-t44 r1c3-t44"><br /></td>
 </tr>
 </tbody>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref206" name="sthref206"></a>
+<a id="sthref204" name="sthref204"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>This annotation adds support for complex PLSQL types such as <code>RECORD</code> and <code>TABLE</code>, that are not accessible from JDBC.</p>
 <p>You can specify <code>@NamedPLSQLStoredProcedureQuery</code> on an Entity or MappedSuperclass.</p>
-<a id="sthref207" name="sthref207"></a>
+<a id="sthref205" name="sthref205"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<p><a href="#BGBICFEB2">Example 2-63</a> shows how to use this annotation.</p>
+<p><a href="#BGBICFEB2">Example 2-66</a> shows how to use this annotation.</p>
 <div class="example"><a id="BGBICFEB2" name="BGBICFEB2"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-63 Using @NamedPLSQLStoredProcedureQuery Annotation</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-66 Using @NamedPLSQLStoredProcedureQuery Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
+@NamedPLSQLStoredProcedureQuery(
+    name="getEmployee",
+    functionName="EMP_PKG.GET_EMP", 
+    parameters={
+        @PLSQLParameter(
+        name="EMP_OUT", 
+        direction=Direction.OUT,
+        databaseType="EMP_PKG.EMP_REC"
+    )}
+)
+@Embeddable
+@Struct(name="EMP_TYPE", fields={"F_NAME", "L_NAME", "SALARY"})
+@PLSQLRecord(
+    name="EMP_PKG.EMP_REC",
+    compatibleType="EMP_TYPE",
+    javaType=Employee.class,
+    fields={
+        @PLSQLParameter(name="F_NAME"),
+        @PLSQLParameter(name="L_NAME"),
+        @PLSQLParameter(
+            name="SALARY",
+            databaseType="NUMERIC_TYPE"
+        )
+    }
+)
+ 
+public class Employee { ...}
 </pre></div>
 <!-- class="example" -->
-<a id="sthref208" name="sthref208"></a>
+<a id="sthref206" name="sthref206"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
