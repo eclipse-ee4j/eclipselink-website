@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sections
-   title="Downloads for previous EclipseLink Releases and Patch-Sets">
+<sections title="Downloads for previous EclipseLink Releases and Patch-Sets">
    <section class="main" name="Downloads for previous EclipseLink Releases and Patch-Sets">
-
       <description>
          <a name="2.4.0"> </a>
-         <b>EclipseLink 2.4.0 (Released June 27, 2012)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
+         <b>EclipseLink 2.4.0 Downloads (Released June 27, 2012)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
                <td class="packageDesc">
@@ -156,7 +154,7 @@
          </table>
 
          <a name="2.3.0"> </a>
-         <b>EclipseLink 2.3.0 Patch Set Downloads (Released Jun 22nd, 2011)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
+         <b>EclipseLink 2.3.0 Downloads (Released Jun 22nd, 2011)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
                <td class="packageDesc">
@@ -192,8 +190,8 @@
             </tr>
          </table>
 
-        <a name="2.2.0"> </a>
-         <b>EclipseLink 2.2.0 Patch Set Downloads (Released Dec 13, 2010)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
+         <a name="2.2.0"> </a>
+         <b>EclipseLink 2.2.0 Downloads (Released Dec 13, 2010)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
                <td class="packageDesc">
@@ -229,7 +227,7 @@
             </tr>
          </table>
 
-       <a name="2.1.3"> </a>
+         <a name="2.1.3"> </a>
          <b>EclipseLink 2.1.3 Patch Set Downloads (Released April 15, 2011)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
@@ -265,7 +263,8 @@
                </td>
             </tr>
          </table>
-      <a name="2.1.1"> </a>
+
+         <a name="2.1.1"> </a>
          <b>EclipseLink 2.1.1 Patch Set Downloads (Released Aug 26, 2010)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
@@ -284,7 +283,6 @@
                      </div>
                   </div>
                </td>
-
                <td width="120" class="downloadCol">
                   <div>
                      <a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.1">New and Noteworthy</a>
@@ -303,7 +301,7 @@
             </tr>
          </table>
 
-        <a name="2.1.0"> </a>
+         <a name="2.1.0"> </a>
          <b>EclipseLink 2.1.0 Patch Set Downloads (Released June 23, 2010)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
@@ -322,7 +320,6 @@
                      </div>
                   </div>
                </td>
-
                <td width="120" class="downloadCol">
                   <div>
                      <a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.0">New and Noteworthy</a>
@@ -360,7 +357,6 @@
                      </div>
                   </div>
                </td>
-
                <td width="120" class="downloadCol">
                   <div>
                      <a href="http://wiki.eclipse.org/EclipseLink/Release/2.0.2">New and Noteworthy</a>
@@ -378,6 +374,7 @@
                </td>
             </tr>
          </table>
+
          <a name="2.0.1"> </a>
          <b>EclipseLink 2.0.1 Patch Set Downloads (Released Feb 17, 2010)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
@@ -414,6 +411,7 @@
                </td>
             </tr>
          </table>
+
          <a name="2.0.0"> </a>
          <b>EclipseLink 2.0.0 Downloads (Released Dec 10, 2009)</b>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
@@ -450,6 +448,7 @@
                </td>
             </tr>
          </table>
+
          <a name="1.2.0"> </a>
          <b>EclipseLink 1.2.0 Downloads (Released Oct 23, 2009)</b>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
@@ -486,6 +485,7 @@
                </td>
             </tr>
          </table>
+
          <a name="1.1.4"> </a>
          <b>EclipseLink 1.1.4 Patch Set Downloads (Released Sept 9th, 2010)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
@@ -522,8 +522,9 @@
                </td>
             </tr>
          </table>
+
          <a name="1.1.3"> </a>
-         <b>EclipseLink 1.1.3 Downloads (Released Oct 9, 2009)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
+         <b>EclipseLink 1.1.3 Patch Set Downloads (Released Oct 9, 2009)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
                <td class="packageDesc">
@@ -558,8 +559,9 @@
                </td>
             </tr>
          </table>
+
          <a name="1.1.2"> </a>
-         <b>EclipseLink 1.1.2 Downloads (Released June 24, 2009)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
+         <b>EclipseLink 1.1.2 Patch Set Downloads (Released June 24, 2009)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
                <td class="packageDesc">
@@ -594,8 +596,9 @@
                </td>
             </tr>
          </table>
+
          <a name="1.1.1"> </a>
-         <b>EclipseLink 1.1.1 Downloads (Released May 12, 2009)</b>
+         <b>EclipseLink 1.1.1 Patch Set Downloads (Released May 12, 2009)</b>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
                <td class="packageDesc">
@@ -630,6 +633,7 @@
                </td>
             </tr>
          </table>
+
          <a name="1.1.0"> </a>
          <b>EclipseLink 1.1.0 Downloads (Released March 11, 2009)</b>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
@@ -666,8 +670,9 @@
                </td>
             </tr>
          </table>
+
          <a name="1.0.2"> </a>
-         <b>EclipseLink 1.0.2 Downloads (Released Oct 29, 2008)</b>
+         <b>EclipseLink 1.0.2 Patch Set Downloads (Released Oct 29, 2008)</b>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
                 <td class="packageDesc">
@@ -705,8 +710,9 @@
                </td>
             </tr>
          </table>
+
          <a name="1.0.1"> </a>
-         <b>EclipseLink 1.0.1 Downloads (Released Sept 08, 2008)</b>
+         <b>EclipseLink 1.0.1 Patch Set Downloads (Released Sept 08, 2008)</b>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
                <td class="packageDesc">
@@ -744,6 +750,7 @@
                </td>
             </tr>
          </table>
+
          <a name="1.0"> </a>
          <b>EclipseLink 1.0 Downloads (Released July 08, 2008)</b>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
@@ -780,25 +787,23 @@
                </td>
             </tr>
          </table>
-         <br/>
+
       </description>
    </section>
 
-    <section class="main" name="EclipseLink Licenses">
-        <description>
-            <p>
-                The EclipseLink Project produced contents are dual licensed under
-                the terms of the
-                <a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse
-                    Public License v1.0</a>
-                and
-                <a href="http://www.eclipse.org/org/documents/edl-v10.php">Eclipse
-                    Distribution License v1.0</a>
-                .
-            </p>
-            <p>
-                For the license of dependent libraries included within a distribution please refer to the about.html file within each distribution.</p>
-        </description>
-    </section>
+   <section class="main" name="EclipseLink Licenses">
+      <description>
+         <p>
+            The EclipseLink Project produced contents are dual licensed under the terms of the
+            <a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse Public License v1.0</a>
+            and
+            <a href="http://www.eclipse.org/org/documents/edl-v10.php">Eclipse Distribution License v1.0</a>
+            .
+         </p>
+         <p>
+            For the license of dependent libraries included within a distribution please refer to the about.html file within each distribution.
+         </p>
+      </description>
+   </section>
 
 </sections>
