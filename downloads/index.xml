@@ -3,17 +3,16 @@
    title="EclipseLink Downloads">
 
    <section class="main" name="Latest Release Downloads">
-   
-         <a name="2.4.0"> </a>        
+      <a name="2.4.1"> </a>
       <description>
-         <b>EclipseLink 2.4.0 (Released June 27, 2012)</b> - <a href="/eclipselink/releases/2.4.php">New and Noteworthy</a> - <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a><br/>
+         <b>EclipseLink 2.4.1 Patch Release (Released October 10, 2012)</b> - <a href="/eclipselink/releases/2.4.php">New and Noteworthy</a> - <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a><br/>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
                <td class="packageDesc">
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.4.0/eclipselink-2.4.0.v20120608-r11652.zip">EclipseLink 2.4.0 Installer Zip (28 MB)</a>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.4.1/eclipselink-2.4.1.v20121003-ad44345.zip">EclipseLink 2.4.1 Installer Zip (37 MB)</a>
                   </div>
-                  This zip includes EclipseLink 2.4.0 with the single jar packaging,  source,  JavaDocs, utilities, and dependent libraries. Intended for use in Java EE and SE environments.
+                  This zip includes EclipseLink 2.4.1 with the single jar packaging,  source,  JavaDocs, utilities, and dependent libraries. Intended for use in Java EE and SE environments.
                   <div class="bottomRow">
                   </div>
                </td>
@@ -23,7 +22,7 @@
             <tr class="tableData">
                <td class="packageDesc">
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.4.0/eclipselink-plugins-nosql-2.4.0.v20120608-r11652.zip">EclipseLink NoSQL 2.4.0 Installer Zip (500 K)</a>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.4.1/eclipselink-plugins-nosql-2.4.1.v20121003-ad44345.zip">EclipseLink NoSQL 2.4.1 Installer Zip (400 K)</a>
                   </div>
                   This zip includes EclipseLink NoSql support. This zip is to be used together with the EclipseLink zip (or EclipseLink bundles) to support NoSQL.  This zip includes binaries, source, and Javadocs.
                   <div class="bottomRow">
@@ -35,9 +34,9 @@
             <tr class="tableData">
                <td class="packageDesc">
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.4.0/eclipselink-plugins-2.4.0.v20120608-r11652.zip">EclipseLink 2.4.0 OSGi Bundles Zip (12 MB)</a>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.4.1/eclipselink-plugins-2.4.1.v20121003-ad44345.zip">EclipseLink 2.4.1 OSGi Bundles Zip (18 MB)</a>
                   </div>
-                  Contains EclipseLink and dependency bundles.  Get the OSGI Bundle Zip to use EclipseLink 2.4.0 runtime in an OSGi container.
+                  Contains EclipseLink and dependency bundles.  Get the OSGI Bundle Zip to use EclipseLink 2.4.1 runtime in an OSGi container.
                   <div class="bottomRow">
                      <div>
                      </div>
@@ -49,85 +48,9 @@
             <tr class="tableData">
                <td class="packageDesc">
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.4.0/eclipselink-src-2.4.0.v20120608-r11652.zip">EclipseLink 2.4.0 Source Zip (5.2 MB)</a>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.4.1/eclipselink-src-2.4.1.v20121003-ad44345.zip">EclipseLink 2.4.1 Source Zip (7.1 MB)</a>
                   </div>
-                  Contains source code for all of eclipselink.  
-                  <div class="bottomRow">
-                     <div>
-                     </div>
-                  </div>
-               </td>
-               <td class="downloadCol">
-               </td>
-            </tr>
-            <tr class="tableData">
-               <td class="packageDesc">
-                  <div>
-                     <a class="packageTitle" href="http://wiki.eclipse.org/EclipseLink/Maven">EclipseLink Maven Repository</a>
-                  </div>
-                  Eclipselink.jar and it's dependencies can be downloaded from a Maven repository.
-                  <div class="bottomRow">
-                     <div>
-                     </div>
-                  </div>
-               </td>
-               <td class="downloadCol">
-               </td>
-            </tr>
-            <tr class="tableData">
-               <td class="packageDesc">
-                  <div>
-                     <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates/">EclipseLink P2 Repository</a>
-                  </div>
-                  The EclipseLink bundles can be obtained from a P2 repository for installation in a target platform or Eclipse IDE.  Copy the following URL into the update site location:  http://download.eclipse.org/rt/eclipselink/updates/ . 
-                  <div class="bottomRow">
-                     <div>
-                     </div>
-                  </div>
-               </td>
-               <td class="downloadCol">
-               </td>
-            </tr>
-            
-         </table>
-      </description>
-   
-      <a id="2.3.3"> 2.3.3 </a>        
-      <description>
-         <b>EclipseLink 2.3.3  (Released July 3, 2012)</b> - <a href="/eclipselink/releases/2.3.0.php">New and Noteworthy</a> - <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a><br/>
-         <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
-            <tr class="tableData">
-               <td class="packageDesc">
-                  <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.3.3/eclipselink-2.3.3.v20120629-r11760.zip">EclipseLink 2.3.3 Installer Zip (28 MB)</a>
-                  </div>
-                  This zip includes EclipseLink 2.3.3 with the single jar packaging,  source,  JavaDocs, utilities, and dependent libraries. Intended for use in Java EE and SE environments.
-                  <div class="bottomRow">
-                  </div>
-               </td>
-               <td class="downloadCol">
-               </td>
-            </tr>
-            <tr class="tableData">
-               <td class="packageDesc">
-                  <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.3.3/eclipselink-plugins-2.3.3.v20120629-r11760.zip">EclipseLink 2.3.3 OSGi Bundles Zip (12 MB)</a>
-                  </div>
-                  Contains EclipseLink and dependency bundles.  Get the OSGI Bundle Zip to use EclipseLink 2.3.3 runtime in an OSGi container.
-                  <div class="bottomRow">
-                     <div>
-                     </div>
-                  </div>
-               </td>
-               <td class="downloadCol">
-               </td>
-            </tr>
-            <tr class="tableData">
-               <td class="packageDesc">
-                  <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.3.3/eclipselink-src-2.3.3.v20120629-r11760.zip">EclipseLink 2.3.3 Source Zip (5.2 MB)</a>
-                  </div>
-                  Contains source code for all of eclipselink.  
+                  Contains source code for all of eclipselink.
                   <div class="bottomRow">
                      <div>
                      </div>
@@ -155,7 +78,7 @@
                   <div>
                      <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates/">EclipseLink P2 Repository</a>
                   </div>
-                  The EclipseLink bundles can be obtained from a P2 repository for installation in a target platform or Eclipse IDE.  Copy the following URL into the update site location:  http://download.eclipse.org/rt/eclipselink/updates/ . 
+                  The EclipseLink bundles can be obtained from a P2 repository for installation in a target platform or Eclipse IDE.  Copy the following URL into the update site location:  http://download.eclipse.org/rt/eclipselink/updates/ .
                   <div class="bottomRow">
                      <div>
                      </div>
@@ -164,7 +87,6 @@
                <td class="downloadCol">
                </td>
             </tr>
-            
          </table>
       </description>
    </section>
@@ -174,26 +96,26 @@
       <section name="Milestones Builds" link="milestones.php" />
       <section name="Nightly Builds" link="nightly.php" />
    </section>
-   
-	<section class="main" name="EclipseLink Licenses">
-		<description>
-			<p>
-				The EclipseLink Project's produced contents are dual-licensed under
-				the terms of the
-				<a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse
-					Public License v1.0</a>
-				and
-				<a href="http://www.eclipse.org/org/documents/edl-v10.php">Eclipse
-					Distribution License v1.0</a>
-				.
-			</p>
-			<p>
-				For the license of dependent libraries included within a distribution please refer to the about.html file within each distribution.
-		    </p>
-			<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"/> 
-            <script type="text/javascript">_uacct = "UA-1608008-2"; urchinTracker();</script> 
-		</description>
-	</section>
-   
+
+    <section class="main" name="EclipseLink Licenses">
+        <description>
+            <p>
+                The EclipseLink Project's produced contents are dual-licensed under
+                the terms of the
+                <a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse
+                    Public License v1.0</a>
+                and
+                <a href="http://www.eclipse.org/org/documents/edl-v10.php">Eclipse
+                    Distribution License v1.0</a>
+                .
+            </p>
+            <p>
+                For the license of dependent libraries included within a distribution please refer to the about.html file within each distribution.
+            </p>
+            <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"/>
+            <script type="text/javascript">_uacct = "UA-1608008-2"; urchinTracker();</script>
+        </description>
+    </section>
+
 
 </sections>
