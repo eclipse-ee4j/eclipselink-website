@@ -1,6 +1,6 @@
 <?php  																														require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());    # All on the same line to unclutter the user's desktop'
 $pageKeywords	= "EclipseLink 2.4 release";
-$pageAuthor		= "Shaun Smith, Doug Clarke based on work by Bob Fraser";
+$pageAuthor		= "Peter Krogh, Shaun Smith, Doug Clarke based on work by Bob Fraser";
 
 $root = $_SERVER['DOCUMENT_ROOT'];
 require_once ($root . '/eclipselink/common_nova.php');
@@ -45,7 +45,7 @@ $html = <<<EOHTML
 						<a href="/eclipselink/api/index.php"> Java Docs</a>,
 						<a href="http://wiki.eclipse.org/EclipseLink/Examples"> Examples</a>,
 						<a href="http://wiki.eclipse.org/EclipseLink/FAQ"> FAQ</a>, <br/>
-						<a href="/eclipselink/releases/2.4.0.php">2.4.0 New and Noteworthy</a>
+						<a href="/eclipselink/releases/2.4.php">2.4 New and Noteworthy</a>
 					</span>
 				</div>
 			</td>

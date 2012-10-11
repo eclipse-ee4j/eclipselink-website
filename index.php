@@ -21,7 +21,7 @@ $Nav->addCustomNav( "About This Project",
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  *
- * Contributors: mkeith, frostc, dclarke
+ * Contributors: mkeith, frostc, dclarke, pkrogh
  *    
  *******************************************************************************/
 
@@ -101,6 +101,7 @@ $Nav->addCustomNav( "About This Project",
 	<div class="section">
 			<h3>News</h3>
 			<ul>
+				<li><a href="/eclipselink/releases/2.4.php">EclipseLink 2.4.1 released</a> - <i>Oct 10th, 2012</i></li>
 				<li><img src="http://marketplace.eclipse.org/sites/all/themes/nova/images/favorite.png"><a href="/eclipselink/releases/2.4.php">EclipseLink 2.4.0 (Juno) released</a> - <i>June 27, 2012</i></li>
 				<li><a href="/eclipselink/releases/2.3.0.php">EclipseLink 2.3.3 released</a> - <i>July 3rd, 2012</i></li>
 				<li><a href="/eclipselink/releases/2.3.0.php">EclipseLink 2.3.2 released</a> - <i>Dec 9th, 2011</i></li>
