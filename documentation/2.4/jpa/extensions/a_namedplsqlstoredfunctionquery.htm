@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@NamedPLSQLStoredFunctionQuery | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-10-02T9:18:11Z" />
+<meta name="date" content="2012-11-05T9:7:28Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@NamedPLSQLStoredFunctionQuery" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@NamedPLSQLStoredFunctionQuery</font></h2>
 <p>Use <code>@NamedPLSQLStoredFunctionQuery</code> to define queries that call Oracle PLSQL stored functions as named queries</p>
-<a id="sthref211" name="sthref211"></a>
+<a id="sthref210" name="sthref210"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#BGBEAJEH">Table 2-36</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="sthref212" name="sthref212"></a><a id="BGBEAJEH" name="BGBEAJEH"></a>
+<div class="tblhruleformalwide"><a id="sthref211" name="sthref211"></a><a id="BGBEAJEH" name="BGBEAJEH"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 2-36 @NamedPLSQLStoredFunctionQuery Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@NamedPLSQLStoredFunctionQuery Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="21%" />
@@ -125,19 +125,20 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref213" name="sthref213"></a>
+<a id="sthref212" name="sthref212"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>This annotation adds support for complex PLSQL types such as <code>RECORD</code> and <code>TABLE</code>, that are not accessible from JDBC.</p>
 <p>You can specify <code>@NamedPLSQLStoredFunctionQuery</code> on an Entity or MappedSuperclass.</p>
-<a id="sthref214" name="sthref214"></a>
+<a id="sthref213" name="sthref213"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<p><a href="#BGBICFEB">Example 2-68</a> shows how to use this annotation.</p>
+<p><a href="#BGBICFEB">Example 2-67</a> shows how to use this annotation.</p>
 <div class="example"><a id="BGBICFEB" name="BGBICFEB"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-68 Using @NamedPLSQLStoredFunctionQuery Annotation</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-67 Using @NamedPLSQLStoredFunctionQuery Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 <strong>@NamedPLSQLStoredFunctionQuery</strong>(
     name="getEmployee", 
-    functionName="EMP_PKG.GET_EMP",    returnParameter=@PLSQLParameter(
+    functionName="EMP_PKG.GET_EMP",
+    returnParameter=@PLSQLParameter(
         name="RESULT", 
         databaseType="EMP_PKG.EMP_REC"
     )
@@ -161,7 +162,7 @@ Release 2.4</div></td>
 public class Employee { ...}
 </pre></div>
 <!-- class="example" -->
-<a id="sthref215" name="sthref215"></a>
+<a id="sthref214" name="sthref214"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

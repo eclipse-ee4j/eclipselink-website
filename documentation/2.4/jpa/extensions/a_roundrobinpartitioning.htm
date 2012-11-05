@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@RoundRobinPartitioning | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-10-02T9:18:15Z" />
+<meta name="date" content="2012-11-05T9:7:29Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@RoundRobinPartitioning" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@RoundRobinPartitioning</font></h2>
 <p>Use <code>@RoundRobinPartitioning</code> to send requests in a "round robin" fashion to the set of connection pools.</p>
-<a id="sthref353" name="sthref353"></a>
+<a id="sthref352" name="sthref352"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#BCGIBFHJ">Table 2-62</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="TLJPA538" name="TLJPA538"></a><a id="sthref354" name="sthref354"></a><a id="BCGIBFHJ" name="BCGIBFHJ"></a>
+<div class="tblhruleformalwide"><a id="TLJPA538" name="TLJPA538"></a><a id="sthref353" name="sthref353"></a><a id="BCGIBFHJ" name="BCGIBFHJ"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 2-62 @RoundRobinPartitioning Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@RoundRobinPartitioning Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="26%" />
@@ -102,16 +102,16 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref355" name="sthref355"></a>
+<a id="sthref354" name="sthref354"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>Use the <code>@RoundRobinPartitioning</code> annotation for load-balancing read queries across a cluster of database machines. Using <code>@RoundRobinPartitioning</code> requires that the full database be replicated on each machine.</p>
 <p>The data should either be read-only, or writes should be replicated on the database.</p>
 <p>The persistence unit properties support adding named connection pools in addition to the existing configuration for read/write/sequence. A named connection pool must be defined for each node in the database cluster.</p>
 <p>If a transaction modifies data from multiple partitions, you should use JTA ensure proper two-phase commit of the data. You can also configure an exclusive connection in the EntityManager to ensure that only a single node is used for a single transaction.</p>
-<a id="sthref356" name="sthref356"></a>
+<a id="sthref355" name="sthref355"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p>See <a href="a_partitioned.htm#CHDDAHEB">"@Partitioned"</a> for an example of partitioning with EclipseLink.</p>
-<a id="sthref357" name="sthref357"></a>
+<a id="sthref356" name="sthref356"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

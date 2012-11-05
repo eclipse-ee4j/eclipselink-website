@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>jdbc.native-sql | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-10-02T9:18:30Z" />
+<meta name="date" content="2012-11-05T9:7:33Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="jdbc.native-sql" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">jdbc.native-sql</font></h2>
 <p>Use <code>eclipselink.jdbc.native-sql</code> to specify if EclipseLink uses generic SLQ or includes platform-specific (that is, "native") SQL statements.</p>
-<a id="sthref990" name="sthref990"></a>
+<a id="sthref989" name="sthref989"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
 <p><a href="#CIHDBHDD">Table 5-47</a> describes this persistence property's values.</p>
-<div class="tblhruleformalwide"><a id="TLJPA934" name="TLJPA934"></a><a id="sthref991" name="sthref991"></a><a id="CIHDBHDD" name="CIHDBHDD"></a>
+<div class="tblhruleformalwide"><a id="TLJPA934" name="TLJPA934"></a><a id="sthref990" name="sthref990"></a><a id="CIHDBHDD" name="CIHDBHDD"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 5-47 Valid Values for jdbc.native-sql</font></em></strong></p>
 <table class="HRuleFormalWide" title="Valid Values for jdbc.native-sql" summary="Valid Values for this query hint" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="29%" />
@@ -85,12 +85,12 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref992" name="sthref992"></a>
+<a id="sthref991" name="sthref991"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>When using platform-specific SQL (<code>eclipselink.jdbc.native-sql</code> = <code>true</code>), EclipseLink uses platform-specific SQL to customize join syntax, date operators, using sequencing, and so on.</p>
-<a id="sthref993" name="sthref993"></a>
+<a id="sthref992" name="sthref992"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<div class="example"><a id="TLJPA935" name="TLJPA935"></a><a id="sthref994" name="sthref994"></a>
+<div class="example"><a id="TLJPA935" name="TLJPA935"></a><a id="sthref993" name="sthref993"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-42 Using jdbc.native-sql in persistence.xml</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;property name="eclipselink.jdbc.native-sql" value="true"/&gt;
@@ -98,14 +98,14 @@ Release 2.4</div></td>
  
 </pre></div>
 <!-- class="example" -->
-<div class="example"><a id="TLJPA936" name="TLJPA936"></a><a id="sthref995" name="sthref995"></a>
+<div class="example"><a id="TLJPA936" name="TLJPA936"></a><a id="sthref994" name="sthref994"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-43 Using jdbc.native-sql in Property Map</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 import org.eclipse.persistence.config.PersistenceUnitProperties;
 propertiesMap.put(PersistenceUnitProperties.NATIVE_SQL, "true");
 </pre></div>
 <!-- class="example" -->
-<a id="sthref996" name="sthref996"></a>
+<a id="sthref995" name="sthref995"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 </div>

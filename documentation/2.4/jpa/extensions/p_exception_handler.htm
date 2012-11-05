@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>exception-handler | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-10-02T9:18:28Z" />
+<meta name="date" content="2012-11-05T9:7:32Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="exception-handler" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">exception-handler</font></h2>
 <p>Use <code>eclipselink.exception-handler</code> to specify the EclipseLink exception handler class: a Java class that implements the <code>org.eclipse.persistence.exceptions.ExceptionHandler</code> interface and provides a default (zero-argument) constructor.</p>
-<a id="sthref914" name="sthref914"></a>
+<a id="sthref913" name="sthref913"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
 <p><a href="#CCHEDGHC">Table 5-35</a> describes this persistence property's values.</p>
-<div class="tblhruleformalwide"><a id="TLJPA1080" name="TLJPA1080"></a><a id="sthref915" name="sthref915"></a><a id="CCHEDGHC" name="CCHEDGHC"></a>
+<div class="tblhruleformalwide"><a id="TLJPA1080" name="TLJPA1080"></a><a id="sthref914" name="sthref914"></a><a id="CCHEDGHC" name="CCHEDGHC"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 5-35 Valid Values for exception-handler</font></em></strong></p>
 <table class="HRuleFormalWide" title="Valid Values for exception-handler" summary="Valid Values for this query hint" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="29%" />
@@ -88,10 +88,10 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref916" name="sthref916"></a>
+<a id="sthref915" name="sthref915"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>The <code>ExceptionHandler</code> class name must be fully qualified by its package name.</p>
-<a id="sthref917" name="sthref917"></a>
+<a id="sthref916" name="sthref916"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#CCHEACJI">Example 5-22</a> shows how to use this persistence property extension in the <code>persistence.xml</code> file.</p>
 <div class="example"><a id="CCHEACJI" name="CCHEACJI"></a><a id="TLJPA1081" name="TLJPA1081"></a>
@@ -107,16 +107,12 @@ Release 2.4</div></td>
 import org.eclipse.persistence.config.PersistenceUnitProperties;propertiesMap.put(PersistenceUnitProperties.<strong>EXCEPTION_HANDLER_CLASS</strong>, "my.package.MyExceptionHandler");
 </pre></div>
 <!-- class="example" -->
-<a id="sthref918" name="sthref918"></a>
+<a id="sthref917" name="sthref917"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
 <li>
 <p><a href="p_orm_throw_exceptions.htm#orm.throw.exceptions">"orm.throw.exceptions"</a></p>
-</li>
-<li>
-<p>Exception Handlers<br />
-<code><a href="http://wiki.eclipse.org/Introduction_to_EclipseLink_Sessions_%28ELUG%29#Exception_Handlers">http://wiki.eclipse.org/Introduction_to_EclipseLink_Sessions_%28ELUG%29#Exception_Handlers</a></code></p>
 </li>
 </ul>
 </div>

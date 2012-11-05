@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>persistence-context.close-on-commit | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-10-02T9:18:35Z" />
+<meta name="date" content="2012-11-05T9:7:34Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="persistence-context.close-on-commit" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">persistence-context.close-on-commit</font></h2>
 <p>Use <code>eclipselink.persistence-context.close-on-commit</code> to specify if the <code>EntityManager</code> will be closed or not used after commit (not extended).</p>
-<a id="sthref1164" name="sthref1164"></a>
+<a id="sthref1163" name="sthref1163"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
 <p><a href="#BABGIHIC">Table 5-77</a> describes this persistence property's values.</p>
-<div class="tblhruleformalwide"><a id="TLJPA1118" name="TLJPA1118"></a><a id="sthref1165" name="sthref1165"></a><a id="BABGIHIC" name="BABGIHIC"></a>
+<div class="tblhruleformalwide"><a id="TLJPA1118" name="TLJPA1118"></a><a id="sthref1164" name="sthref1164"></a><a id="BABGIHIC" name="BABGIHIC"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 5-77 Valid Values for persistence-context.close-on-commit</font></em></strong></p>
 <table class="HRuleFormalWide" title="Valid Values for persistence-context.close-on-commit" summary="Valid Values for this query hint" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="29%" />
@@ -83,13 +83,13 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref1166" name="sthref1166"></a>
+<a id="sthref1165" name="sthref1165"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>For a container managed <code>EntityManager</code> and most application managed, normally set this property to <code>false</code>, in order to avoid additional performance overhead of resuming the persistence context after a <code>commit()</code> transaction.</p>
 <p>The property set in <code>persistence.xml</code> or passed to <code>createEntityManagerFactory</code> affects <em>all</em> <code>EntityManagers</code> created by the factory. Alternatively, to apply the property to <em>specific</em> <code>EntityManagers</code>, pass it to <code>createEntityManager</code> method.</p>
-<a id="sthref1167" name="sthref1167"></a>
+<a id="sthref1166" name="sthref1166"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<a id="sthref1168" name="sthref1168"></a>
+<a id="sthref1167" name="sthref1167"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 </div>

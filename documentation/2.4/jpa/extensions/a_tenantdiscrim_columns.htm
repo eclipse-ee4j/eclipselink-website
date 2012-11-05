@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@TenantDiscriminatorColumns | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-10-02T9:18:16Z" />
+<meta name="date" content="2012-11-05T9:7:29Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@TenantDiscriminatorColumns" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@TenantDiscriminatorColumns</font></h2>
 <p>Specify multiple discriminator columns for single-table multitenancy by using the <code>@TenantDiscriminatorColumns</code> annotation to contain multiple <code>@TenantDiscriminatorColumn</code> annotations.</p>
-<a id="sthref389" name="sthref389"></a>
+<a id="sthref388" name="sthref388"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#CECFFDCB">Table 2-68</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="TLJPA560" name="TLJPA560"></a><a id="sthref390" name="sthref390"></a><a id="CECFFDCB" name="CECFFDCB"></a>
+<div class="tblhruleformalwide"><a id="TLJPA560" name="TLJPA560"></a><a id="sthref389" name="sthref389"></a><a id="CECFFDCB" name="CECFFDCB"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 2-68 @TenantDiscriminatorColumns Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@TenantDiscriminatorColumns Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="*" />
@@ -82,10 +82,10 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref391" name="sthref391"></a>
+<a id="sthref390" name="sthref390"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>You must use the <code>@TenantDiscriminatorColumns</code> annotation to contain multiple <code>@TenantDiscriminatorColumn</code> annotations. The <code>@TenantDiscriminatorColumns</code> annotation cannot be used alone, and multiple the <code>@TenantDiscriminatorColumn</code> annotations cannot be used alone, without <code>@TenantDiscriminatorColumns</code>.</p>
-<a id="sthref392" name="sthref392"></a>
+<a id="sthref391" name="sthref391"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Entity 
@@ -96,7 +96,7 @@ Release 2.4</div></td>
     @TenantDiscriminatorColumn(name = "TENANT_CODE", contextProperty = &ldquo;tenant-code)})
 </pre>
 <p>See <a href="a_tenantdiscriminatorcolumn.htm#CHECIDGH">"@TenantDiscriminatorColumn"</a> for more examples of <code>@TenantDiscriminatorColumns</code>.</p>
-<a id="sthref393" name="sthref393"></a>
+<a id="sthref392" name="sthref392"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <ul>
 <li>

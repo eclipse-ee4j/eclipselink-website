@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@Partitioned | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-10-02T9:18:13Z" />
+<meta name="date" content="2012-11-05T9:7:28Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@Partitioned" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@Partitioned</font></h2>
 <p>Use <code>@Partitioned</code> to specify a partitioning policy to use for an Entity or relationship.</p>
-<a id="sthref268" name="sthref268"></a>
+<a id="sthref267" name="sthref267"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#CHDCJBCE">Table 2-47</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="TLJPA493" name="TLJPA493"></a><a id="sthref269" name="sthref269"></a><a id="CHDCJBCE" name="CHDCJBCE"></a>
+<div class="tblhruleformalwide"><a id="TLJPA493" name="TLJPA493"></a><a id="sthref268" name="sthref268"></a><a id="CHDCJBCE" name="CHDCJBCE"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 2-47 @Partitioned Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@Partitioned Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="23%" />
@@ -72,30 +72,7 @@ Release 2.4</div></td>
 <p><code>value</code></p>
 </td>
 <td align="left" headers="r2c1-t57 r1c2-t57">
-<p>(Required) Name of the partitioning policy:</p>
-<ul>
-<li>
-<p><a href="a_hashpartitioning.htm#CEGBDBEG">@HashPartitioning</a></p>
-</li>
-<li>
-<p><a href="a_pinnedpartitioning.htm#BCGIIAFB">@PinnedPartitioning</a></p>
-</li>
-<li>
-<p><a href="a_rangepartition.htm#BABCFDAJ">@RangePartition</a></p>
-</li>
-<li>
-<p><a href="a_replicationpartitioning.htm#BABJEFJH">@ReplicationPartitioning</a></p>
-</li>
-<li>
-<p><a href="a_roundrobinpartitioning.htm#BCGBJGFF">@RoundRobinPartitioning</a></p>
-</li>
-<li>
-<p><a href="a_unionpartitioning.htm#BCGEJFAH">@UnionPartitioning</a></p>
-</li>
-<li>
-<p><a href="a_valuepartitioning.htm#CEGHFJDJ">@ValuePartitioning</a></p>
-</li>
-</ul>
+<p>(Required) Name of the partitioning policy.</p>
 </td>
 <td align="left" headers="r2c1-t57 r1c3-t57"><br /></td>
 </tr>
@@ -103,16 +80,68 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref270" name="sthref270"></a>
+<a id="sthref269" name="sthref269"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>Use partitioning to partition the data for a class across multiple databases or a database cluster (such as Oracle RAC). Partitioning can provide improved scalability by allowing multiple database machines to service requests.</p>
 <p>You can specify <code>@Partitioned</code> on an Entity, relationship, query, or session/persistence unit.</p>
-<a id="sthref271" name="sthref271"></a>
+<a id="TLJPA497" name="TLJPA497"></a>
+<p><b><font face="arial, helvetica, sans-serif" color="#330099">Partitioning Policies</font></b></p>
+<p>To configure data partitioning, use the <code>@Partitioned</code> annotation and one or more partitioning policy annotations. The annotations for defining the different kinds of policies are:</p>
+<ul>
+<li>
+<p><code><a href="a_hashpartitioning.htm#CEGBDBEG">@HashPartitioning</a></code>: Partitions access to a database cluster by the hash of a field value from the object, such as the object's ID, location, or tenant. The hash indexes into the list of connection pools/nodes. All write or read request for objects with that hash value are sent to the same server. If a query does not include the hash field as a parameter, it can be sent to all servers and unioned, or it can be left to the session's default behavior.</p>
+</li>
+<li>
+<p><code><a href="a_pinnedpartitioning.htm#BCGIIAFB">@PinnedPartitioning</a></code>: Pins requests to a single connection pool/node. This allows for vertical partitioning.</p>
+</li>
+<li>
+<p><code><a href="a_rangepartitioning.htm#BCGCGEIH">@RangePartitioning</a></code>: Partitions access to a database cluster by a field value from the object, such as the object's ID, location, or tenant. Each server is assigned a range of values. All write or read requests for objects with that value are sent to the same server. If a query does not include the field as a parameter, then it can either be sent to all server's and unioned, or left to the session's default behavior.</p>
+</li>
+<li>
+<p><code><a href="a_replicationpartitioning.htm#BABJEFJH">@ReplicationPartitioning</a></code>: Sends requests to a set of connection pools/nodes. This policy is for replicating data across a cluster of database machines. Only modification queries are replicated.</p>
+</li>
+<li>
+<p><code><a href="a_roundrobinpartitioning.htm#BCGBJGFF">@RoundRobinPartitioning</a></code>: Sends requests in a round-robin fashion to the set of connection pools/nodes. It is for load balancing read queries across a cluster of database machines. It requires that the full database be replicated on each machine, so it does not support partitioning. The data should either be read-only, or writes should be replicated.</p>
+</li>
+<li>
+<p><code><a href="a_unionpartitioning.htm#BCGEJFAH">@UnionPartitioning</a></code>: Sends queries to all connection pools and unions the results. This is for queries or relationships that span partitions when partitioning is used, such as on a <code>ManyToMany</code> cross partition relationship.</p>
+</li>
+<li>
+<p><code><a href="a_valuepartitioning.htm#CEGHFJDJ">@ValuePartitioning</a></code>: Partitions access to a database cluster by a field value from the object, such as the object's location or tenant. Each value is assigned a specific server. All write or read requests for objects with that value are sent to the same server. If a query does not include the field as a parameter, then it can be sent to all servers and unioned, or it can be left to the session's default behavior.</p>
+</li>
+<li>
+<p><code>@Partitioning</code>: Partitions access to a database cluster by a custom partitioning policy. A PartitioningPolicy class must be provided and implemented.</p>
+</li>
+</ul>
+<p>Partitioning policies are globally-named objects in a persistence unit and are reusable across multiple descriptors or queries. This improves the usability of the configuration, specifically with JPA annotations and XML.</p>
+<p>The persistence unit properties support adding named connection pools in addition to the existing configuration for read/write/sequence. A named connection pool must be defined for each node in the database cluster.</p>
+<p>If a transaction modifies data from multiple partitions, JTA should be used to ensure 2-phase commit of the data. An exclusive connection can also be configured in the EntityManager to ensure only a single node is used for a single transaction.</p>
+<a id="TLJPA498" name="TLJPA498"></a>
+<p><b><font face="arial, helvetica, sans-serif" color="#330099">Clustered Databases and Oracle RAC</font></b></p>
+<p>Some databases support clustering the database across multiple machines. Oracle RAC allows for a single database to span multiple different server nodes. Oracle RAC also supports table and node partitioning of data. A database cluster allows for any of the data to be accessed from any node in the cluster. However, it is generally it is more efficient to partition the data access to specific nodes, to reduce cross node communication.</p>
+<p>EclipseLink partitioning can be used in conjunction with a clustered database to reduce cross node communication, and improve scalability.</p>
+<p>To use partitioning with a database cluster to following is required:</p>
+<ul>
+<li>
+<p>Partition policy should not enable replication, as database cluster makes data available to all nodes.</p>
+</li>
+<li>
+<p>Partition policy should not use unions, as database cluster returns the complete query result from any node.</p>
+</li>
+<li>
+<p>A data source and EclipseLink connection pool should be defined for each node in the cluster.</p>
+</li>
+<li>
+<p>The application's data access and data partitioning should be designed to have each transaction only require access to a single node.</p>
+</li>
+<li>
+<p>Usage of an exclusive connection for an EntityManager is recommended to avoid having multiple nodes in a single transaction and avoid 2-phase commit.</p>
+</li>
+</ul>
+<a id="sthref270" name="sthref270"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<p><a href="#CHDECDGI">Example 2-86</a> shows the partition of <code>Employee</code> data by location. The two primary sites, Ottawa and Toronto, are stored on separate databases. All other locations are stored on the default database.</p>
-<p>The example project is range partitioned by its ID. Each range of ID values are stored on a different database. The employee/project relationship is an example of a cross partition relationship.</p>
-<p>To allow the employees and projects to be stored on different databases, EclipseLink uses a union policy; the join table is replicated to each database.</p>
-<div class="example"><a id="CHDECDGI" name="CHDECDGI"></a><a id="TLJPA494" name="TLJPA494"></a>
+<p><a href="#CEGHAIDJ">Example 2-86</a> shows how to partition Employee data by location. The two primary sites, <strong>Ottawa</strong> and <strong>Toronto</strong> are each stored on a separate database. All other locations are stored on the default database. Project is range partitioned by its ID, as shown in <a href="#CEGJCEIH">Example 2-87</a>. Each range of ID values are stored on a different database. The employee/project relationship is an example of a cross partition relationship. To allow the employees and projects to be stored on different databases a union policy is used and the join table is replicated to each database.</p>
+<div class="example"><a id="CEGHAIDJ" name="CEGHAIDJ"></a><a id="TLJPA499" name="TLJPA499"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-86 Using Partitioning</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Entity
@@ -129,7 +158,7 @@ Release 2.4</div></td>
             @ValuePartition(connectionPool="node2", value="Ottawa"),
             @ValuePartition(connectionPool="node3", value="Toronto")
         })
-<strong>@Partitioned("ValuePartitioningByLOCATION")</strong>
+@Partitioned("ValuePartitioningByLOCATION")
 public class Employee {
     @Id
     @Column(name = "EMP_ID")
@@ -140,11 +169,15 @@ public class Employee {
     ...
  
     @ManyToMany(cascade = { PERSIST, MERGE })
-    <strong>@Partitioned("UnionPartitioningAllNodes")</strong>
+    @Partitioned("UnionPartitioningAllNodes")
     private Collection&lt;Project&gt; projects;
     ...
 }
-
+</pre></div>
+<!-- class="example" -->
+<div class="example"><a id="CEGJCEIH" name="CEGJCEIH"></a><a id="TLJPA500" name="TLJPA500"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-87 Using @RangePartitioning</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
 @Entity
 @RangePartitioning(
         name="RangePartitioningByPROJ_ID",
@@ -156,17 +189,16 @@ public class Employee {
             @RangePartition(connectionPool="node2", startValue="1000", endValue="2000"),
             @RangePartition(connectionPool="node3", startValue="2000")
         })
-<strong>@Partitioned("RangePartitioningByPROJ_ID")</strong>
+@Partitioned("RangePartitioningByPROJ_ID")
 public class Project {
     @Id
     @Column(name="PROJ_ID")
     private Integer id;
     ...
 }
-
 </pre></div>
 <!-- class="example" -->
-<a id="sthref272" name="sthref272"></a>
+<a id="sthref271" name="sthref271"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

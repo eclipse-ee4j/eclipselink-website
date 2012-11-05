@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@BatchFetch | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-10-02T9:18:6Z" />
+<meta name="date" content="2012-11-05T9:7:27Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@BatchFetch" />
 <meta name="relnum" content="Release 2.4" />
@@ -49,7 +49,7 @@ Release 2.4</div></td>
 <hr />
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@BatchFetch</font></h2>
-<p>Use <code>@BatchFetch</code> to read objects related to a relationship mapping (such as one-to-one, one-to-many, many-to-one, many-to-many, and element collection) to be read in a single query.</p>
+<p>Use <code>@BatchFetch</code> to read objects related to a relationship mapping (such as <code>@OneToOne</code>, <code>@OneToMany</code>, <code>@ManyToMany</code>, and <code>@ElementCollection</code>) to be read in a single query.</p>
 <a id="sthref19" name="sthref19"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#CHDJBJBC">Table 2-3</a> describes this annotation's elements.</p>
@@ -106,7 +106,7 @@ Release 2.4</div></td>
 <!-- class="tblhruleformalwide" -->
 <a id="sthref21" name="sthref21"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
-<p>Batch fetching allows for the optimal loading of a tree. Setting the <code>@BatchFetch</code> annotation on a <em>child</em> relationship of a tree structure causes EclipseLink to use a <em>single</em> SQL statement for each level.</p>
+<p>Batch fetching allows for the optimal loading of a tree. Setting the <code>@BatchFetch</code> annotation on a <em>child</em> relationship of a tree structure causes EclipseLink to use a <em>single</em> SQL statement for each level. For example, consider an object with an <code>EMPLOYEE</code> and <code>PHONE</code> table in which <code>PHONE</code> has a foreign key to <code>EMPLOYEE</code>. By default, reading a list of employees' addresses by default requires <em>n</em> queries, for each employee's address. With batch fetching, you use <em>one query</em> for all the addresses.</p>
 <p>Using <code>BatchFetchType=EXISTS</code> does not require an SQL <code>DISTINCT</code> statement (which may cause issues with LOBs) and may be more efficient for some types of queries or on specific databases.</p>
 <p>When using <code>BatchFetchType=IN</code>, EclipseLink selects only objects not already in the cache. This method may work better with cursors or pagination, or in situations in which you cannot use a <code>JOIN</code>. On some databases, this may only work for singleton IDs.</p>
 <a id="sthref22" name="sthref22"></a>

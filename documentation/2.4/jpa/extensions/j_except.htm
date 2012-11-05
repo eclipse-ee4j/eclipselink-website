@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>EXCEPT | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-10-02T9:18:18Z" />
+<meta name="date" content="2012-11-05T9:7:30Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="EXCEPT" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">EXCEPT</font></h2>
 <p>When performing multiple queries, use <code>EXCEPT</code> to remove the results of a second query from the results of a first query.</p>
-<a id="sthref467" name="sthref467"></a>
+<a id="sthref466" name="sthref466"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>The <code>EXCEPT</code> function is database independent, but requires database support.</p>
-<a id="sthref468" name="sthref468"></a>
+<a id="sthref467" name="sthref467"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#BABJIEDC">Example 3-4</a> shows how to use this JPQL extension.</p>
 <div class="example"><a id="BABJIEDC" name="BABJIEDC"></a><a id="TLJPA612" name="TLJPA612"></a>
@@ -63,7 +63,7 @@ SELECT e FROM Employee e
 EXCEPT SELECT e FROM Employee e WHERE e.salary &gt; e.manager.salary
 </pre></div>
 <!-- class="example" -->
-<a id="sthref469" name="sthref469"></a>
+<a id="sthref468" name="sthref468"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

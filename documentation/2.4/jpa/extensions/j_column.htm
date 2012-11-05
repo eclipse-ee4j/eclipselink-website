@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>COLUMN | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-10-02T9:18:18Z" />
+<meta name="date" content="2012-11-05T9:7:30Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="COLUMN" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">COLUMN</font></h2>
 <p>Use <code>COLUMN</code> to access to unmapped columns in an object's table.</p>
-<a id="sthref464" name="sthref464"></a>
+<a id="sthref463" name="sthref463"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>You can use <code>COLUMN</code> to access foreign key columns, inheritance discriminators, or primitive columns (such as <code>ROWID</code>). You can also use <code>COLUMN</code> in JPQL fragments inside the <code><a href="a_additionalcriteria.htm#additionalcriteria">@AdditionalCriteria</a></code> annotation.</p>
-<a id="sthref465" name="sthref465"></a>
+<a id="sthref464" name="sthref464"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#CDCCFCBE">Example 3-2</a> shows how to use the <code>COLUMN</code> EQL.</p>
 <div class="example"><a id="CDCCFCBE" name="CDCCFCBE"></a><a id="TLJPA609" name="TLJPA609"></a>
@@ -69,7 +69,7 @@ SELECT e FROM Employee e WHERE COLUMN('MANAGER_ID', e) = :id
 SELECT e FROM Employee e WHERE COLUMN('ROWID', e) = :id
 </pre></div>
 <!-- class="example" -->
-<a id="sthref466" name="sthref466"></a>
+<a id="sthref465" name="sthref465"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

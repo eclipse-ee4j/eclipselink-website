@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@NamedPLSQLStoredProcedureQuery | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-10-02T9:18:11Z" />
+<meta name="date" content="2012-11-05T9:7:28Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@NamedPLSQLStoredProcedureQuery" />
 <meta name="relnum" content="Release 2.4" />
@@ -128,7 +128,7 @@ Release 2.4</div></td>
 <a id="sthref204" name="sthref204"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>This annotation adds support for complex PLSQL types such as <code>RECORD</code> and <code>TABLE</code>, that are not accessible from JDBC.</p>
-<p>You can specify <code>@NamedPLSQLStoredProcedureQuery</code> on an Entity or MappedSuperclass.</p>
+<p>You can specify <code>@NamedPLSQLStoredProcedureQuery</code> on an Entity, Embeddable, or MappedSuperclass.</p>
 <a id="sthref205" name="sthref205"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#BGBICFEB2">Example 2-66</a> shows how to use this annotation.</p>
@@ -140,10 +140,11 @@ Release 2.4</div></td>
     functionName="EMP_PKG.GET_EMP", 
     parameters={
         @PLSQLParameter(
-        name="EMP_OUT", 
-        direction=Direction.OUT,
-        databaseType="EMP_PKG.EMP_REC"
-    )}
+            name="EMP_OUT", 
+            direction=Direction.OUT,
+            databaseType="EMP_PKG.EMP_REC"
+        )
+    }
 )
 @Embeddable
 @Struct(name="EMP_TYPE", fields={"F_NAME", "L_NAME", "SALARY"})
