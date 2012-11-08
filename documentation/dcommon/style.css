@@ -12,7 +12,7 @@ h2 {font-size:1.4em;font-weight:normal;}
 h2 a {text-decoration:none;}
 h1, h2 {border-bottom:1px solid #44166C;margin:1.2em 0 0.5em 0;padding-bottom:5px;}
 h3 {margin:1.5em 0 0 0}
-.example pre {background:#eeeeee;border:1px dashed #000000;border-radius:5px;padding:5px;overflow:auto;}
+pre.oac_no_warn, .example pre {background:#eeeeee;border:1px dashed #000000;border-radius:5px;padding:5px;overflow:auto;}
 pre {background:#eeeeee;}
 table.HRuleFormal th, table.Informal th, table.HRuleFormalWide th {background:#cccccc;padding:5px;}
 table.Note {background:#FFFFC0;}
