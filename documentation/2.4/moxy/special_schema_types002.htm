@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Mapping to a Union Field | EclipseLink 2.4.x EclipseLink MOXy</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-11-05T10:54:46Z" />
+<meta name="date" content="2012-11-08T9:7:20Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Mapping to a Union Field" />
 <meta name="relnum" content="Release 2.4" />
@@ -69,22 +69,22 @@ Release 2.4</div></td>
 <!-- class="example" -->
 <div class="figure"><a id="sthref94" name="sthref94"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 5-1 Mapping to a Union Field</font></em></strong></p>
-<img src="img/Dxmuc.gif" alt="Mapping to a Union Field" title="Mapping to a Union Field" longdesc="img_text/Dxmuc.htm" /><br />
-<a id="sthref95" name="sthref95" href="img_text/Dxmuc.htm">Description of "Figure 5-1 Mapping to a Union Field"</a><br />
+<img src="img/dxmuc.gif" alt="Mapping to a Union Field" title="Mapping to a Union Field" longdesc="img_text/dxmuc.htm" /><br />
+<a id="sthref95" name="sthref95" href="img_text/dxmuc.htm">Description of "Figure 5-1 Mapping to a Union Field"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p><a href="#BABDEIDD">Figure 5-2</a> illustrates a mapping to a union field in an XML document that conforms to the example schema. When EclipseLink unmarshalls the XML document, it tries each of the union types until it can make a successful conversion. The first schema type in the union is <code>xsd:decimal</code>. Because <strong>10.5</strong> is a valid decimal, EclipseLink converts the value to the appropriate type.</p>
 <div class="figure"><a id="BABDEIDD" name="BABDEIDD"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 5-2 Mapping to a Union Field in an XML Document</font></em></strong></p>
-<img src="img/Dxmuv.gif" alt="Mapping to a Union Field in an XML Document" title="Mapping to a Union Field in an XML Document" longdesc="img_text/Dxmuv.htm" /><br />
-<a id="sthref96" name="sthref96" href="img_text/Dxmuv.htm">Description of "Figure 5-2 Mapping to a Union Field in an XML Document"</a><br />
+<img src="img/dxmuv.gif" alt="Mapping to a Union Field in an XML Document" title="Mapping to a Union Field in an XML Document" longdesc="img_text/dxmuv.htm" /><br />
+<a id="sthref96" name="sthref96" href="img_text/dxmuv.htm">Description of "Figure 5-2 Mapping to a Union Field in an XML Document"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p>In <a href="#BABFGEDJ">Figure 5-3</a>, the value <strong>M</strong> is <em>not</em> a valid <code>xsd:decimal</code> type, so the next union type is tried, <code>xsd:string</code>.</p>
 <div class="figure"><a id="BABFGEDJ" name="BABFGEDJ"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 5-3 Mapping to a Union Field</font></em></strong></p>
-<img src="img/Dxmuvs.gif" alt="Mapping to a Union Field" title="Mapping to a Union Field" longdesc="img_text/Dxmuvs.htm" /><br />
-<a id="sthref97" name="sthref97" href="img_text/Dxmuvs.htm">Description of "Figure 5-3 Mapping to a Union Field"</a><br />
+<img src="img/dxmuvs.gif" alt="Mapping to a Union Field" title="Mapping to a Union Field" longdesc="img_text/dxmuvs.htm" /><br />
+<a id="sthref97" name="sthref97" href="img_text/dxmuvs.htm">Description of "Figure 5-3 Mapping to a Union Field"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p>Currently, EclipseLink does not support the mapping of Unions using Annotations or OXM Metadata. However, an EclipseLink XML Customizer can be used to create the mapping.</p>
