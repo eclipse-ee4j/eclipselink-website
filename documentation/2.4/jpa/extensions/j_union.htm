@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>UNION | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-11-05T9:7:30Z" />
+<meta name="date" content="2012-12-07T10:43:2Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="UNION" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">UNION</font></h2>
 <p>Use <code>UNION</code> to combine the results of two queries into a single query.</p>
-<a id="sthref494" name="sthref494"></a>
+<a id="sthref495" name="sthref495"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>With <code>UNION</code>, the unique results from both queries will be returned. If you include the <code>ALL</code> option, the results found in both queries will be duplicated.</p>
-<a id="sthref495" name="sthref495"></a>
+<a id="sthref496" name="sthref496"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#CJHHJIDB">Example 3-15</a> shows how to use this JPQL extension.</p>
 <div class="example"><a id="CJHHJIDB" name="CJHHJIDB"></a><a id="TLJPA633" name="TLJPA633"></a>
@@ -63,7 +63,7 @@ SELECT MAX(e.salary) FROM Employee e WHERE e.address.city = :city1
 UNION SELECT MAX(e.salary) FROM Employee e WHERE e.address.city = :city2
 </pre></div>
 <!-- class="example" -->
-<a id="sthref496" name="sthref496"></a>
+<a id="sthref497" name="sthref497"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

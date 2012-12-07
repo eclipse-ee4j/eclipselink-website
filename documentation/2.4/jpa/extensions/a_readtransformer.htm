@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@ReadTransformer | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-11-05T9:7:29Z" />
+<meta name="date" content="2012-12-07T10:43:1Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@ReadTransformer" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@ReadTransformer</font></h2>
 <p>Use <code>@ReadTransformer</code> with Transformation mappings to define the transformation of the database column values into attribute values (unless the mapping is write-only).</p>
-<a id="sthref333" name="sthref333"></a>
+<a id="sthref335" name="sthref335"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#CHDGCGID">Table 2-59</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="TLJPA527" name="TLJPA527"></a><a id="sthref334" name="sthref334"></a><a id="CHDGCGID" name="CHDGCGID"></a>
+<div class="tblhruleformalwide"><a id="TLJPA527" name="TLJPA527"></a><a id="sthref336" name="sthref336"></a><a id="CHDGCGID" name="CHDGCGID"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 2-59 @ReadTransformer Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@ReadTransformer Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="23%" />
@@ -61,30 +61,30 @@ Release 2.4</div></td>
 <col width="19%" />
 <thead>
 <tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t70"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
-<th align="left" valign="bottom" id="r1c2-t70"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
-<th align="left" valign="bottom" id="r1c3-t70"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
+<th align="left" valign="bottom" id="r1c1-t71"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t71"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c3-t71"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
 </tr>
 </thead>
 <tbody>
 <tr align="left" valign="top">
-<td align="left" id="r2c1-t70" headers="r1c1-t70">
+<td align="left" id="r2c1-t71" headers="r1c1-t71">
 <p><code>method</code></p>
 </td>
-<td align="left" headers="r2c1-t70 r1c2-t70">
+<td align="left" headers="r2c1-t71 r1c2-t71">
 <p>The mapped class must have a method with this name which returns a value to be assigned to the attribute (not assigns the value to the attribute).</p>
 </td>
-<td align="left" headers="r2c1-t70 r1c3-t70"><br /></td>
+<td align="left" headers="r2c1-t71 r1c3-t71"><br /></td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r3c1-t70" headers="r1c1-t70">
+<td align="left" id="r3c1-t71" headers="r1c1-t71">
 <p>transformerClass</p>
 </td>
-<td align="left" headers="r3c1-t70 r1c2-t70">
+<td align="left" headers="r3c1-t71 r1c2-t71">
 <p>User-defined class that implements the <code>org.eclipse.persistence.mappings.transformers.AttributeTransformer</code> interface.</p>
 <p>The class will be instantiated, its <code>buildAttributeValue</code> will be used to create the value to be assigned to the attribute.</p>
 </td>
-<td align="left" headers="r3c1-t70 r1c3-t70">
+<td align="left" headers="r3c1-t71 r1c3-t71">
 <p><code>void.class</code></p>
 </td>
 </tr>
@@ -106,13 +106,13 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="inftblnote" --></div>
-<a id="sthref335" name="sthref335"></a>
+<a id="sthref337" name="sthref337"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>Also unless it's a read-only mapping, either <code>@WriteTransformer</code> annotation or <code>@WriteTransformers</code> annotation should be specified. Each <code>WriteTransformer</code> defines transformation of the attribute value to a single database column value (column is specified in the <code>WriteTransformer</code>).</p>
-<a id="sthref336" name="sthref336"></a>
+<a id="sthref338" name="sthref338"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p>See <a href="a_transformation.htm#BABHECGF">"Using @Transformation Annotation"</a> for an example of how to use the <code>@WriteTransformer annotation</code> with a Transformation mapping.</p>
-<a id="sthref337" name="sthref337"></a>
+<a id="sthref339" name="sthref339"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

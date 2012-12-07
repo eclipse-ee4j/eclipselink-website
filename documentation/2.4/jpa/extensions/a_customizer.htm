@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@Customizer | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-11-05T9:7:27Z" />
+<meta name="date" content="2012-12-07T10:43:0Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@Customizer" />
 <meta name="relnum" content="Release 2.4" />
@@ -100,7 +100,18 @@ Release 2.4</div></td>
 <!-- class="inftblnote" --></div>
 <a id="sthref101" name="sthref101"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<p><a href="#BABBFAGB">Example 2-36</a> show how to use this annotation.</p>
+<p><a href="#BABBFAGB">Example 2-36</a> show how to use the <code>@Customizer</code> annotation with the following <code>DescriptorCustomer</code>:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+public class <strong>MyCustomizer</strong> implements DescriptorCustomizer {
+  public void customize(ClassDescriptor descriptor) {
+    DirectToFieldMapping genderMapping = (DirectToFieldMapping)descriptor.getMappingForAttributeName("gender");
+    ObjectTypeConverter converter = new ObjectTypeConverter();
+    convert.addConversionValue("M", Gender.MALE);
+    convert.addConversionValue("F", Gender.FEMALE);
+    genderMapping.setConverter(converter);
+  }
+}
+</pre>
 <div class="example"><a id="BABBFAGB" name="BABBFAGB"></a><a id="TLJPA393" name="TLJPA393"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-36 Using @Customizer Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">

@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@ReturnInsert | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-11-05T9:7:29Z" />
+<meta name="date" content="2012-12-07T10:43:2Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@ReturnInsert" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,25 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@ReturnInsert</font></h2>
 <p>Use <code>@ReturnInsert</code> to cause <code>INSERT</code> operations to return values back into the object being written. This allows for table default values, trigger or stored procedures computed values to be set back into the object.</p>
-<a id="sthref343" name="sthref343"></a>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>Returning is only supported with an Oracle Database and requries an <code>INSERT RETURNING</code> clause.</p>
+<p>To use returning with other databases, a stored procedure with output parameters is used for the insert query.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<a id="sthref345" name="sthref345"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#CIHIAFFB">Table 2-61</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="TLJPA531" name="TLJPA531"></a><a id="sthref344" name="sthref344"></a><a id="CIHIAFFB" name="CIHIAFFB"></a>
+<div class="tblhruleformalwide"><a id="TLJPA531" name="TLJPA531"></a><a id="sthref346" name="sthref346"></a><a id="CIHIAFFB" name="CIHIAFFB"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 2-61 @ReturnInsert Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@ReturnInsert Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="23%" />
@@ -61,20 +76,20 @@ Release 2.4</div></td>
 <col width="20%" />
 <thead>
 <tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t73"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
-<th align="left" valign="bottom" id="r1c2-t73"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
-<th align="left" valign="bottom" id="r1c3-t73"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
+<th align="left" valign="bottom" id="r1c1-t75"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t75"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c3-t75"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
 </tr>
 </thead>
 <tbody>
 <tr align="left" valign="top">
-<td align="left" id="r2c1-t73" headers="r1c1-t73">
+<td align="left" id="r2c1-t75" headers="r1c1-t75">
 <p><code>returnOnly</code></p>
 </td>
-<td align="left" headers="r2c1-t73 r1c2-t73">
+<td align="left" headers="r2c1-t75 r1c2-t75">
 <p>(Optional) If specified (true), the mapping field will be excluded from the <code>INSERT</code> clause during SQL generation.</p>
 </td>
-<td align="left" headers="r2c1-t73 r1c3-t73">
+<td align="left" headers="r2c1-t75 r1c3-t75">
 <p>false</p>
 </td>
 </tr>
@@ -82,10 +97,10 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref345" name="sthref345"></a>
+<a id="sthref347" name="sthref347"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>A <code>@ReturnInsert</code> annotation can only be specified on a <code>Basic</code> mapping.</p>
-<a id="sthref346" name="sthref346"></a>
+<a id="sthref348" name="sthref348"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#CIHDFAFD">Example 2-99</a> shows how to use the <code>@ReturnInsert</code> annotation. If you do not use an argument, EclipseLink accepts the default value, <code>false</code>.</p>
 <div class="example"><a id="CIHDFAFD" name="CIHDFAFD"></a><a id="TLJPA532" name="TLJPA532"></a>
@@ -107,7 +122,7 @@ Release 2.4</div></td>
 &lt;/basic&gt;
 </pre></div>
 <!-- class="example" -->
-<a id="sthref347" name="sthref347"></a>
+<a id="sthref349" name="sthref349"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

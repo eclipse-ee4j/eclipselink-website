@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@Transformation | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-11-05T9:7:29Z" />
+<meta name="date" content="2012-12-07T10:43:2Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@Transformation" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@Transformation</font></h2>
 <p>Use <code>@Transformation</code> with a Transformation mapping to define the transformation of database columns into attribute values (unless the Transformation mapping is write-only, in which case it should have a <code>@ReadTransformer</code> annotation).</p>
-<a id="sthref404" name="sthref404"></a>
+<a id="sthref405" name="sthref405"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#BABFBEDA">Table 2-71</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="TLJPA568" name="TLJPA568"></a><a id="sthref405" name="sthref405"></a><a id="BABFBEDA" name="BABFBEDA"></a>
+<div class="tblhruleformalwide"><a id="TLJPA568" name="TLJPA568"></a><a id="sthref406" name="sthref406"></a><a id="BABFBEDA" name="BABFBEDA"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 2-71 @Transformation Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@Transformation Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="21%" />
@@ -61,17 +61,17 @@ Release 2.4</div></td>
 <col width="9%" />
 <thead>
 <tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t84"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
-<th align="left" valign="bottom" id="r1c2-t84"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
-<th align="left" valign="bottom" id="r1c3-t84"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
+<th align="left" valign="bottom" id="r1c1-t88"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t88"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c3-t88"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
 </tr>
 </thead>
 <tbody>
 <tr align="left" valign="top">
-<td align="left" id="r2c1-t84" headers="r1c1-t84">
+<td align="left" id="r2c1-t88" headers="r1c1-t88">
 <p><code>fetch</code></p>
 </td>
-<td align="left" headers="r2c1-t84 r1c2-t84">
+<td align="left" headers="r2c1-t88 r1c2-t88">
 <p>(Optional) Defines whether the value of the field or property should be lazily loaded or must be eagerly fetched.</p>
 <ul>
 <li>
@@ -82,18 +82,18 @@ Release 2.4</div></td>
 </li>
 </ul>
 </td>
-<td align="left" headers="r2c1-t84 r1c3-t84">
+<td align="left" headers="r2c1-t88 r1c3-t88">
 <p><code>EAGER</code></p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r3c1-t84" headers="r1c1-t84">
+<td align="left" id="r3c1-t88" headers="r1c1-t88">
 <p><code>optional</code></p>
 </td>
-<td align="left" headers="r3c1-t84 r1c2-t84">
+<td align="left" headers="r3c1-t88 r1c2-t88">
 <p>(Optional) A hint as to whether the value of the field or property may be <code>null</code>. It is disregarded for primitive types, which are considered non-optional.</p>
 </td>
-<td align="left" headers="r3c1-t84 r1c3-t84">
+<td align="left" headers="r3c1-t88 r1c3-t88">
 <p><code>true</code></p>
 </td>
 </tr>
@@ -101,10 +101,10 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref406" name="sthref406"></a>
+<a id="sthref407" name="sthref407"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>Unless it's a read-only mapping, either <code>WriteTransformer</code> annotation or <code>WriteTransformers</code> annotation should be specified. Each <code>WriteTransformer</code> defines transformation of the attribute value to a single database column value (column is specified in the <code>WriteTransformer</code>).</p>
-<a id="sthref407" name="sthref407"></a>
+<a id="sthref408" name="sthref408"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#BABHECGF">Example 2-114</a> shows how to use the <code>@Transformation</code> annotation.</p>
 <div class="example"><a id="BABHECGF" name="BABHECGF"></a><a id="TLJPA569" name="TLJPA569"></a>
@@ -149,7 +149,7 @@ Release 2.4</div></td>
 <strong>&lt;/transformation&gt;</strong>
 </pre></div>
 <!-- class="example" -->
-<a id="sthref408" name="sthref408"></a>
+<a id="sthref409" name="sthref409"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

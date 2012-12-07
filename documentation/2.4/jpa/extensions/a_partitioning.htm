@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@Partitioning | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-11-05T9:7:28Z" />
+<meta name="date" content="2012-12-07T10:43:1Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@Partitioning" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@Partitioning</font></h2>
 <p>Use <code>@Partitioning</code> to configure a custom <code>PartitioningPolicy</code>.</p>
-<a id="sthref272" name="sthref272"></a>
+<a id="sthref273" name="sthref273"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#CEGGJJDE">Table 2-48</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="TLJPA496" name="TLJPA496"></a><a id="sthref273" name="sthref273"></a><a id="CEGGJJDE" name="CEGGJJDE"></a>
+<div class="tblhruleformalwide"><a id="TLJPA496" name="TLJPA496"></a><a id="sthref274" name="sthref274"></a><a id="CEGGJJDE" name="CEGGJJDE"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 2-48 @Partitioning Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@Partitioning Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="23%" />
@@ -89,15 +89,15 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref274" name="sthref274"></a>
+<a id="sthref275" name="sthref275"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>Data partitioning allows for an application to scale its data across more than a single database machine. EclipseLink supports data partitioning at the Entity level to allow a different set of entity instances for the same class to be stored in a different physical database or different node within a database cluster. Both regular databases and clustered databases are supported. Data can be partitioned both horizontally and vertically.</p>
 <p>Partitioning can be enabled on an entity, a relationship, a query, or a persistence unit.</p>
-<a id="sthref275" name="sthref275"></a>
+<a id="sthref276" name="sthref276"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<p><a href="#CEGCEIBF">Example 2-88</a> shows a custom partitioning policy.</p>
+<p><a href="#CEGCEIBF">Example 2-89</a> shows a custom partitioning policy.</p>
 <div class="example"><a id="CEGCEIBF" name="CEGCEIBF"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-88 Using @Partitioning Annotation</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-89 Using @Partitioning Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Entity
 <strong>@Partitioning(name="order", partitioningClass=OrderPartitioningPolicy.class)</strong>
@@ -116,7 +116,7 @@ public class OrderPartitioningPolicy extends PartitioningPolicy {
 }
 </pre></div>
 <!-- class="example" -->
-<a id="sthref276" name="sthref276"></a>
+<a id="sthref277" name="sthref277"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

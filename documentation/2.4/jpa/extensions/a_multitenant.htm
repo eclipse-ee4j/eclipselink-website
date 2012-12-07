@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@Multitenant | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-11-05T9:7:28Z" />
+<meta name="date" content="2012-12-07T10:43:1Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@Multitenant" />
 <meta name="relnum" content="Release 2.4" />
@@ -117,6 +117,27 @@ public class Employee() {
 <p><a href="#CHDBFBGI">VPD Multitenancy</a></p>
 </li>
 </ul>
+<a id="sthref188" name="sthref188"></a>
+<p><strong><font face="arial, helvetica, sans-serif" color="#330099">Example</font></strong></p>
+<p><a href="#BABEHCGI">Example 2-58</a> shows a simple example of a <code>@Multitenant</code> annotation. In this example, the <strong>Player</strong> entity has rows for multiple tenants stored in its default <code>PLAYER</code> table and that the default <code>TENANT_ID</code> column is used as a discriminator along with the default context property <code>eclipselink.tenant-id</code>.</p>
+<div class="example"><a id="BABEHCGI" name="BABEHCGI"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-58 Minimal @Multitenant Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+@Entity
+@Multitenant
+public class Player  {
+}
+</pre>
+<p>To have your application use a shared <code>EntityManagerFactory</code> and have the <code>EntityManager</code> be tenant specific, your runtime code might be:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+Map&lt;String, Object&gt; emProperties = new HashMap&lt;String, Object&gt;();
+
+emProperties.set("eclipselink.tenant-id", "HTHL");
+
+EntityManager em = emf.createEntityManager(emProperties);
+</pre></div>
+<!-- class="example" -->
+<p>Review <a href="#BABICDGI">"Single-Table Multitenancy"</a>, <a href="#BABEGBIJ">"Table-Per-Tenanat Multitenancy"</a>, and <a href="#CHDBFBGI">"VPD Multitenancy"</a> for more detailed examples.</p>
 <a id="BABICDGI" name="BABICDGI"></a><a id="TLJPA709" name="TLJPA709"></a>
 <hr />
 <h3 class="refsect2"><font face="arial, helvetica, sans-serif" color="#330099">Single-Table Multitenancy</font></h3>
@@ -138,11 +159,11 @@ public class Employee() {
 <br /></div>
 <!-- class="inftblnote" --></div>
 <p>For more information how to use tenant discriminator columns to configure single-table multitenancy, see <a href="a_tenantdiscriminatorcolumn.htm#CHECIDGH">"@TenantDiscriminatorColumn"</a>.</p>
-<a id="TLJPA710" name="TLJPA710"></a><a id="sthref188" name="sthref188"></a>
+<a id="TLJPA710" name="TLJPA710"></a><a id="sthref189" name="sthref189"></a>
 <h4 class="refsect3"><br /><span class="refsubsect">Examples</span></h4>
 <p>The following example uses <code>@Multitenant</code>, <code>@TenantDiscriminatorColumn</code>, and a context property to define single-table multitenancy on an entity:</p>
-<div class="example"><a id="TLJPA711" name="TLJPA711"></a><a id="sthref189" name="sthref189"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-58 Example Using @Multitenant</font></em></strong></p>
+<div class="example"><a id="TLJPA711" name="TLJPA711"></a><a id="sthref190" name="sthref190"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-59 Example Using @Multitenant</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Entity 
 @Table(name=&ldquo;EMP&rdquo;) 
@@ -152,8 +173,8 @@ public class Employee() {
 </pre></div>
 <!-- class="example" -->
 <p>The following example uses the <code>&lt;multitenant&gt;</code> element to specify a minimal single-table multitenancy. <code>SINGLE_TABLE</code> is the default value and therefore does not have to be specified.</p>
-<div class="example"><a id="TLJPA712" name="TLJPA712"></a><a id="sthref190" name="sthref190"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-59 Example Using &lt;multitenant&gt;</font></em></strong></p>
+<div class="example"><a id="TLJPA712" name="TLJPA712"></a><a id="sthref191" name="sthref191"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-60 Example Using &lt;multitenant&gt;</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;entity class="model.Employee"&gt;
   &lt;multitenant/&gt;
@@ -179,11 +200,11 @@ public class Employee() {
 <p>A tenant table discriminator to identify and isolate the tenant's tables from other tenants' tables. The discriminator types are <code>SCHEMA</code>, <code>SUFFIX</code>, and <code>PREFIX</code>. For more information about tenant discriminator types, see <a href="a_tenanttablediscriminator.htm#CHDFJJEC">"@TenantTableDiscriminator"</a>.</p>
 </li>
 </ul>
-<a id="TLJPA714" name="TLJPA714"></a><a id="sthref191" name="sthref191"></a>
+<a id="TLJPA714" name="TLJPA714"></a><a id="sthref192" name="sthref192"></a>
 <h4 class="refsect3"><br /><span class="refsubsect">Examples</span></h4>
 <p>The following example shows the <code>@Multitenant</code> annotation used to define table-per-tenant multitenancy on an entity. <code>@TenantTableDiscriminator(SCHEMA)</code> specifies that the discriminator table is identified by schema.</p>
-<div class="example"><a id="TLJPA715" name="TLJPA715"></a><a id="sthref192" name="sthref192"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-60 Example Using @Multitenant with @TenantTableDiscriminator</font></em></strong></p>
+<div class="example"><a id="TLJPA715" name="TLJPA715"></a><a id="sthref193" name="sthref193"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-61 Example Using @Multitenant with @TenantTableDiscriminator</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Entity
 @Table(name=&ldquo;EMP&rdquo;)
@@ -195,8 +216,8 @@ public class Employee {
 </pre></div>
 <!-- class="example" -->
 <p>The following example shows the <code>&lt;multitenant&gt;</code> element and the <code>&lt;tenant-table-discriminator&gt;</code> elements used to define a minimal table-per-tenant multitenancy.</p>
-<div class="example"><a id="TLJPA716" name="TLJPA716"></a><a id="sthref193" name="sthref193"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-61 Example Using &lt;multitenant&gt; with &lt;tenant-table-discriminator&gt;</font></em></strong></p>
+<div class="example"><a id="TLJPA716" name="TLJPA716"></a><a id="sthref194" name="sthref194"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-62 Example Using &lt;multitenant&gt; with &lt;tenant-table-discriminator&gt;</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;entity class="Employee"&gt;
   &lt;multitenant type="TABLE_PER_TENANT"&gt;
@@ -212,11 +233,11 @@ public class Employee {
 <h3 class="refsect2"><font face="arial, helvetica, sans-serif" color="#330099">VPD Multitenancy</font></h3>
 <p>The <code>VPD</code> (Virtual Private Database) multitanancy type specifies that the database handles the tenant filtering on all SELECT, UPDATE and DELETE queries. To use this type, the platform used with the persistence unit must support VPD.</p>
 <p>To use EclipseLink VPD multitenancy, you must first configure VPD in the database and then specify multitenancy on the entity or mapped superclass, using <code>@Multitenant</code> and <code>@TenantDiscriminatorColumn</code>:</p>
-<a id="TLJPA718" name="TLJPA718"></a><a id="sthref194" name="sthref194"></a>
+<a id="TLJPA718" name="TLJPA718"></a><a id="sthref195" name="sthref195"></a>
 <h4 class="refsect3"><br /><span class="refsubsect">Examples</span></h4>
-<p><a href="#CHDIEFCF">Example 2-62</a> shows VPD multitenancy defined on an entity. As noted above, VPD in the database must also be configured to enable VPD multitenancy. In this case, the VPD database was configured to use the USER_ID column to restrict access to specified rows by specified clients. Therefore, <code>USER_ID</code> is also specified as the tenant discriminator column for the EclipseLink multitenant operations.</p>
+<p><a href="#CHDIEFCF">Example 2-63</a> shows VPD multitenancy defined on an entity. As noted above, VPD in the database must also be configured to enable VPD multitenancy. In this case, the VPD database was configured to use the USER_ID column to restrict access to specified rows by specified clients. Therefore, <code>USER_ID</code> is also specified as the tenant discriminator column for the EclipseLink multitenant operations.</p>
 <div class="example"><a id="CHDIEFCF" name="CHDIEFCF"></a><a id="TLJPA719" name="TLJPA719"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-62 Example Using @Multitenancy</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-63 Example Using @Multitenancy</font></em></strong></p>
 <p>The following example shows</p>
 <pre xml:space="preserve" class="oac_no_warn">
 </pre></div>
@@ -232,8 +253,8 @@ public class Task implements Serializable {
 ...
 </pre>
 <p>The following example shows...</p>
-<div class="example"><a id="TLJPA720" name="TLJPA720"></a><a id="sthref195" name="sthref195"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-63 Example Using &lt;multitenant&gt;</font></em></strong></p>
+<div class="example"><a id="TLJPA720" name="TLJPA720"></a><a id="sthref196" name="sthref196"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-64 Example Using &lt;multitenant&gt;</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;entity class="model.Employee"&gt; 
   &lt;multitenant type="VPD"&gt;
@@ -244,7 +265,7 @@ public class Task implements Serializable {
 &lt;/entity&gt;
 </pre></div>
 <!-- class="example" -->
-<a id="sthref196" name="sthref196"></a>
+<a id="sthref197" name="sthref197"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <ul>
 <li>
