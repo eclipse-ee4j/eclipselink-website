@@ -1,0 +1,967 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Implementing the Solution | EclipseLink 2.4.x Understanding EclipseLink</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
+<meta name="date" content="2012-12-07T9:39:12Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Implementing the Solution" />
+<meta name="relnum" content="Release 2.4" />
+<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="sect1test002.htm" title="Previous" type="text/html" />
+<link rel="next" href="migropenjpa002.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:mdbgdwjv8zu', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><b>EclipseLink Solutions Guide for EclipseLink</b><br />
+Release 2.4</div></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="sect1test002.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="migropenjpa002.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header -->
+<p align="center"><font color="#FF0000">Beta Draft: 2012-12-07</font></p>
+<a id="A1097430" name="A1097430"></a><a id="TLADG952" name="TLADG952"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Implementing the Solution</font></h1>
+<p>This section contains the following tasks:</p>
+<ul>
+<li>
+<p><a href="#BABGGADJ">Task 1: Prerequsites</a></p>
+</li>
+<li>
+<p><a href="#BABEHGEC">Task 2: Change the Provider and Persistence Unit Properties in persistence.xml</a></p>
+</li>
+<li>
+<p><a href="#BABGBDIG">Task 3: Convert Query Hint Names Used in Named and Dynamic Queries</a></p>
+</li>
+<li>
+<p><a href="#BABBDCJH">Task 4: Convert or Fix Nonstandard Mappings Available in OpenJPA</a></p>
+</li>
+<li>
+<p><a href="#BABBJEDH">Task 5: Convert from OpenJPA Extended Features</a></p>
+</li>
+<li>
+<p><a href="#BABBBHJJ">Task 6: Take Advantage of EclipseLink Features</a></p>
+</li>
+</ul>
+<a id="BABGGADJ" name="BABGGADJ"></a><a id="TLADG953" name="TLADG953"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 1: Prerequsites</font></h2>
+<p>EclipseLink 2.4 or later.</p>
+<p>Download EclipseLink from <code><a href="http://www.eclipse.org/eclipselink/downloads/">http://www.eclipse.org/eclipselink/downloads/</a></code>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABEHGEC" name="BABEHGEC"></a><a id="TLADG954" name="TLADG954"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 2: Change the Provider and Persistence Unit Properties in persistence.xml</font></h2>
+<p>Update the following properties in the persistence.xml file, as needed:</p>
+<a id="TLADG955" name="TLADG955"></a>
+<div class="sect3"><a id="sthref71" name="sthref71"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Provider</font></h3>
+<p>Set the JPA persistence provider to <code>org.eclipse.persistence.jpa.PersistenceProvider</code>, to ensure that EclipseLink JPA is used as the provider, in case multiple providers exist in the target container.</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;provider&gt;org.eclipse.persistence.jpa.PersistenceProvider&lt;/provider&gt;
+</pre>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>When using OpenJPA with Java SE, the provider resolver may continue to use OpenJPA, instead of the specified provider, if OpenJPA is encountered first on the classpath. If this happens, remove OpenJPA from the classpath of your application.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</div>
+<!-- class="sect3" -->
+<a id="TLADG956" name="TLADG956"></a>
+<div class="sect3"><a id="sthref72" name="sthref72"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Persistence Unit Properties</font></h3>
+<p>Persistence unit properties are a standard mechanism for providing vendor-specific configuration. The following sections list OpenJPA persistence unit properties that must be replaced when migrating from OpenJPA to EclipseLink:</p>
+<ul>
+<li>
+<p><a href="#BABFIBAE">JDBC Properties</a></p>
+</li>
+<li>
+<p><a href="#BABJBBGE">Caching Properties</a></p>
+</li>
+<li>
+<p><a href="#BABEJAHB">Diagnostic Properties</a></p>
+</li>
+<li>
+<p><a href="#BABFEHFB">Other Properties</a></p>
+</li>
+</ul>
+<p>Not all OpenJPA persistence unit properties have exact equivalents in EclipseLink, so you may have to consult the OpenJPA documenation and the EclipseLink documentation to determine a conversion strategy. For complete reference documentation on the EclipseLink extensions to standard JPA persistence properties, see "Persistence Property Extensions Reference" in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>. For complete EclipseLink Javadoc, see <em>Java API Reference for EclipseLink</em>.</p>
+<a id="BABFIBAE" name="BABFIBAE"></a><a id="TLADG957" name="TLADG957"></a>
+<div class="sect4">
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">JDBC Properties</font></h4>
+<p>JDBC properties are used to configure internal connection pooling typically used in Java SE or in containers where data sources are not available. <a href="#BABBGBDC">Table 7-1, "JDBC Persistence Unit Properties"</a> compares OpenJPA JDBC properties to the corresponding or related EclipseLink properties.</p>
+<p>For information about the EclipseLink JDBC persistence properties, see "JDBC Configuration Options" in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>In JPA 2.0 several persistence unit properties for JDBC configuration were standardized. Therefore, beginning in EclipseLink 11.1.1.2, the equivalent EclipseLink properties were deprecated and replaced by the JPA 2.x standard ones. Both are shown in the <strong>EclipseLink JPA Equivalent</strong> column of <a href="#BABBGBDC">Table 7-1</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<div class="tblhruleformalwide"><a id="TLADG958" name="TLADG958"></a><a id="sthref73" name="sthref73"></a><a id="BABBGBDC" name="BABBGBDC"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 7-1 JDBC Persistence Unit Properties</font></em></strong></p>
+<table class="HRuleFormalWide" title="JDBC Persistence Unit Properties" summary="This table describes what EclipseLink feature, class, method, etc., to use to replace the listed OpenJPA one." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="*" />
+<col width="33%" />
+<col width="33%" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t4"><font face="Arial, Helvetica, sans-serif"><strong>OpenJPA Property</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t4"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c3-t4"><font face="Arial, Helvetica, sans-serif"><strong>EclipseLink JPA Equivalent</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t4" headers="r1c1-t4">
+<p><code>openjpa.ConnectionDriverName</code></p>
+</td>
+<td align="left" headers="r2c1-t4 r1c2-t4">
+<p>The full class name of either the JDBC <code>java.sql.Driver</code> or a <code>javax.sql.DataSource</code> implementation to use to connect to the database.</p>
+</td>
+<td align="left" headers="r2c1-t4 r1c3-t4">
+<p>EclipseLink 11.1.1.0 - 11.1.1.1: <code>eclipselink.jdbc.driver</code></p>
+<p>EclipseLink 11.1.1.2 +: <a href="http://www.eclipse.org/eclipselink/api/2.4/org/eclipse/persistence/config/PersistenceUnitProperties.html#JDBC_DRIVER"><code>javax.persistence.jdbc.driver</code></a></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t4" headers="r1c1-t4">
+<p><code>openjpa.ConnectionPassword</code></p>
+</td>
+<td align="left" headers="r3c1-t4 r1c2-t4">
+<p>The password for the user, specified in the <code>ConnectionUserName</code> property.</p>
+</td>
+<td align="left" headers="r3c1-t4 r1c3-t4">
+<p>EclipseLink 11.1.1.0 - 11.1.1.1: <code>eclipselink.jdbc.password</code></p>
+<p>EclipseLink 11.1.1.2 +: <code>javax.persistence.jdbc.password</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t4" headers="r1c1-t4">
+<p><code>openjpa.ConnectionURL</code></p>
+</td>
+<td align="left" headers="r4c1-t4 r1c2-t4">
+<p>The JDBC URL for the database.</p>
+</td>
+<td align="left" headers="r4c1-t4 r1c3-t4">
+<p>EclipseLink 11.1.1.0 - 11.1.1.1: <code>eclipselink.jdbc.url</code></p>
+<p>EclipseLink 11.1.1.2 +: <code>javax.persistence.jdbc.url</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t4" headers="r1c1-t4">
+<p><code>openjpa.ConnectionUserName</code></p>
+</td>
+<td align="left" headers="r5c1-t4 r1c2-t4">
+<p>The user name to use when connecting to the database.</p>
+</td>
+<td align="left" headers="r5c1-t4 r1c3-t4">
+<p>EclipseLink 11.1.1.0 - 11.1.1.1: <code>eclipselink.jdbc.user</code></p>
+<p>EclipseLink 11.1.1.2 +: <code>javax.persistence.jdbc.user</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<p>Other JDBC issues to consider include:</p>
+<ul>
+<li>
+<p>The OpenJPA properties containing "<code>2</code>," for example <code>openjpa.Connection2DriverName</code>, are for the unmanaged connection pool. EclipseLink uses the same information for both managed and unmanaged connections. If separate login information is required for unmanaged connections, it must be configured in code.</p>
+</li>
+<li>
+<p>Connection properties and custom connectors equivalent to OpenJPA connection factories are supported through <code>DatabaseLogin</code>, <code>DatabasePlatform</code>, and custom <code>Connector</code>s. These are generally not required with containers but can be configured using a <code>SessionCustomizer</code>, if needed.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect4" -->
+<a id="BABJBBGE" name="BABJBBGE"></a><a id="TLADG959" name="TLADG959"></a>
+<div class="sect4">
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Caching Properties</font></h4>
+<p>EclipseLink uses its own shared entity caching feature instead of a data cache requiring a 3rd party implementation. <a href="#BABIFHIB">Table 7-2, "Caching Persistence Unit Properties"</a> compares OpenJPA caching properties to the corresponding or related EclipseLink properties.</p>
+<div class="tblhruleformalwide"><a id="TLADG960" name="TLADG960"></a><a id="sthref74" name="sthref74"></a><a id="BABIFHIB" name="BABIFHIB"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 7-2 Caching Persistence Unit Properties</font></em></strong></p>
+<table class="HRuleFormalWide" title="Caching Persistence Unit Properties" summary="This table describes what EclipseLink feature, class, method, etc., to use to replace the listed OpenJPA one." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="*" />
+<col width="33%" />
+<col width="33%" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t5"><font face="Arial, Helvetica, sans-serif"><strong>OpenJPA Property</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t5"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c3-t5"><font face="Arial, Helvetica, sans-serif"><strong>EclipseLink JPA Equivalent</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t5" headers="r1c1-t5">
+<p><code>openjpa.DataCache</code></p>
+</td>
+<td align="left" headers="r2c1-t5 r1c2-t5">
+<p>The data cache implementation to use for data caching.</p>
+</td>
+<td align="left" headers="r2c1-t5 r1c3-t5">
+<p>Not Required</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t5" headers="r1c1-t5">
+<p><code>openjpa.DataCacheManager</code></p>
+</td>
+<td align="left" headers="r3c1-t5 r1c2-t5">
+<p>The data cache manager to use for managing the system data caches.</p>
+</td>
+<td align="left" headers="r3c1-t5 r1c3-t5">
+<p>Not Required</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t5" headers="r1c1-t5">
+<p><code>openjpa.DataCacheTimeout</code></p>
+</td>
+<td align="left" headers="r4c1-t5 r1c2-t5">
+<p>The duration that data in the data cache is valid.</p>
+</td>
+<td align="left" headers="r4c1-t5 r1c3-t5">
+<p>EclipseLink provides expiration and invalidation per entity cache, based on the time since it was read or on the time of day. Configure these by using a <code>@Cache</code> annotation on the entity. Alternatively, specify it in <code>eclipselink-orm.xml</code>.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t5" headers="r1c1-t5">
+<p><code>openjpa.QueryCache</code></p>
+</td>
+<td align="left" headers="r5c1-t5 r1c2-t5">
+<p>The query cache implementation to use for caching of queries loaded from the data store.</p>
+</td>
+<td align="left" headers="r5c1-t5 r1c3-t5">
+<p>EclipseLink supports query result caching through the query hint <code>eclipselink.query-results-cache</code>.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t5" headers="r1c1-t5">
+<p><code>openjpa.QueryCompilationCache</code></p>
+</td>
+<td align="left" headers="r6c1-t5 r1c2-t5">
+<p>The map to use for caching data of compiled queries</p>
+</td>
+<td align="left" headers="r6c1-t5 r1c3-t5">
+<p>EclipseLink automatically caches generated SQL strings and prepared statements. The size of these caches is configurable.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" --></div>
+<!-- class="sect4" -->
+<a id="BABEJAHB" name="BABEJAHB"></a><a id="TLADG961" name="TLADG961"></a>
+<div class="sect4">
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Diagnostic Properties</font></h4>
+<p><strong><a href="#BABCCBBE">Table 7-3, "Diagnostic Properties"</a> compares the OpenJPA logging property to the corresponding EclipseLink property.</strong></p>
+<div class="tblhruleformalwide"><a id="TLADG962" name="TLADG962"></a><a id="sthref75" name="sthref75"></a><a id="BABCCBBE" name="BABCCBBE"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 7-3 Diagnostic Properties</font></em></strong></p>
+<table class="HRuleFormalWide" title="Diagnostic Properties" summary="This table describes what EclipseLink feature, class, method, etc., to use to replace the listed OpenJPA one." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="*" />
+<col width="33%" />
+<col width="33%" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t6"><font face="Arial, Helvetica, sans-serif"><strong>OpenJPA Property</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t6"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c3-t6"><font face="Arial, Helvetica, sans-serif"><strong>EclipseLink JPA Equivalent</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t6" headers="r1c1-t6">
+<p><code>openjpa.Log</code></p>
+</td>
+<td align="left" headers="r2c1-t6 r1c2-t6">
+<p>The log factory to use for logging.</p>
+</td>
+<td align="left" headers="r2c1-t6 r1c3-t6">
+<p>Use <code>eclipselink.logging.logger</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" --></div>
+<!-- class="sect4" -->
+<a id="BABFEHFB" name="BABFEHFB"></a><a id="TLADG963" name="TLADG963"></a>
+<div class="sect4">
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Other Properties</font></h4>
+<p><a href="#BABDJFEF">Table 7-4, "Other Properties"</a> compares miscellaneous other OpenJPA properties to the corresponding or related EclipseLink properties.</p>
+<div class="tblhruleformalwide"><a id="TLADG964" name="TLADG964"></a><a id="sthref76" name="sthref76"></a><a id="BABDJFEF" name="BABDJFEF"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 7-4 Other Properties</font></em></strong></p>
+<table class="HRuleFormalWide" title="Other Properties" summary="This table describes what EclipseLink feature, class, method, etc., to use to replace the listed OpenJPA one." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="*" />
+<col width="33%" />
+<col width="33%" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t7"><font face="Arial, Helvetica, sans-serif"><strong>OpenJPA Property</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t7"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c3-t7"><font face="Arial, Helvetica, sans-serif"><strong>EclipseLink JPA Equivalent</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t7" headers="r1c1-t7">
+<p><code>openjpa.AutoClear</code></p>
+</td>
+<td align="left" headers="r2c1-t7 r1c2-t7">
+<p>When to clear instance state: on entering a datastore transaction or on entering any transaction.</p>
+</td>
+<td align="left" headers="r2c1-t7 r1c3-t7"><br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t7" headers="r1c1-t7">
+<p><code>openjpa.AutoDetach</code></p>
+</td>
+<td align="left" headers="r3c1-t7 r1c2-t7">
+<p>Events that cause managed instances to be detached.</p>
+</td>
+<td align="left" headers="r3c1-t7 r1c3-t7">
+<p>Not applicable. Entities can be used with other entity mangers as detached at any time. However, they are always considered managed relative to the reading entity manger, as long as it is open and the entity has not been serialized.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t7" headers="r1c1-t7">
+<p><code>openjpa.BrokerFactory</code></p>
+</td>
+<td align="left" headers="r4c1-t7 r1c2-t7">
+<p>The broker factory to use.</p>
+</td>
+<td align="left" headers="r4c1-t7 r1c3-t7">
+<p>The EclipseLink <code>ServerSession</code> is equivalent to the OpenJPA <code>BrokerFactory</code>.</p>
+<p>Direct configuration in XML is not supported. Custom server session types are supported through API only.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t7" headers="r1c1-t7">
+<p><code>openjpa.BrokerImpl</code></p>
+</td>
+<td align="left" headers="r5c1-t7 r1c2-t7">
+<p>The broker type to use at runtime.</p>
+</td>
+<td align="left" headers="r5c1-t7 r1c3-t7">
+<p>The EclipseLink <code>UnitOfWork</code> is equivalent to the OpenJPA <code>BrokerImpl</code>.</p>
+<p>The <code>UnitOfWork</code> type cannot be customized in JPA through XML</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t7" headers="r1c1-t7">
+<p><code>openjpa.ClassResolver</code></p>
+</td>
+<td align="left" headers="r6c1-t7 r1c2-t7">
+<p>The class resolver to use to resolve class names.</p>
+</td>
+<td align="left" headers="r6c1-t7 r1c3-t7">
+<p>Specify the EclipseLink <code>eclipselink.classloader</code> to be used. Alternatively, create a custom <code>ConversionManager</code> or <code>DatabasePlatform</code> to customize conversion routines.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t7" headers="r1c1-t7">
+<p><code>openjpa.Compatibility</code></p>
+</td>
+<td align="left" headers="r7c1-t7 r1c2-t7">
+<p>Options to ensure compatibility with previous OpenJPA releases.</p>
+</td>
+<td align="left" headers="r7c1-t7 r1c3-t7">
+<p>Not required when migrating.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t7" headers="r1c1-t7">
+<p><code>openjpa.DetachState</code></p>
+</td>
+<td align="left" headers="r8c1-t7 r1c2-t7">
+<p>Determines which fields are part of the detached graph and related options.</p>
+</td>
+<td align="left" headers="r8c1-t7 r1c3-t7">
+<p>Use the JPA 2.0 <code>EntityManager</code>.<code>detach()</code> method o detach an entity. Alternatively, use a <code>CopyGroup</code> to detach a specified set of attributes and nested attributes. Serializing a partial entity loaded with a <code>FetchGroup</code> causes it to serialize the attributes that were fetched only.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t7" headers="r1c1-t7">
+<p><code>openjpa.DynamicDataStructs</code></p>
+</td>
+<td align="left" headers="r9c1-t7 r1c2-t7">
+<p>Whether to dynamically generate customized structs to hold persistent data.</p>
+</td>
+<td align="left" headers="r9c1-t7 r1c3-t7"><br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t7" headers="r1c1-t7">
+<p><code>openjpa.FetchBatchSize</code></p>
+</td>
+<td align="left" headers="r10c1-t7 r1c2-t7">
+<p>The number of rows to fetch at a time when scrolling through a result set.</p>
+</td>
+<td align="left" headers="r10c1-t7 r1c3-t7">
+<p>EclipseLink batching and joining depth and size is configurable on queries instead of globally.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t7" headers="r1c1-t7">
+<p><code>openjpa.FetchGroups</code></p>
+</td>
+<td align="left" headers="r11c1-t7 r1c2-t7">
+<p>Fetch groups to be loaded when retrieving objects from the datastore.</p>
+</td>
+<td align="left" headers="r11c1-t7 r1c3-t7">
+<p>EclipseLink's default fetch group is determined by the <code>fetchType</code> on an entity's mappings but can be customized on individual queries using the <code>eclipselink.fetch-group</code> query hint.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t7" headers="r1c1-t7">
+<p><code>openjpa.DetachState</code></p>
+</td>
+<td align="left" headers="r12c1-t7 r1c2-t7">
+<p>Determines which fields are part of the detached graph and related options.</p>
+</td>
+<td align="left" headers="r12c1-t7 r1c3-t7">
+<p>EclipseLink determines detached state based on usage along with lazy loading configurations and dynamic fetch groups. Lazy relationships can always be retrieved until the entity is truly detached through serialization or copying.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r13c1-t7" headers="r1c1-t7">
+<p><code>openjpa.FlushBeforeQueries</code></p>
+</td>
+<td align="left" headers="r13c1-t7 r1c2-t7">
+<p>Whether to flush changes made in the current transaction to the datastore before executing a query.</p>
+</td>
+<td align="left" headers="r13c1-t7 r1c3-t7">
+<p>EclipseLink relies on the standard <code>FlushMode</code> as well as its support of in-memory querying to minimize the need to flush before executing a query. For large transactions consider using <code>eclipselink.flush-clear.cache</code>.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r14c1-t7" headers="r1c1-t7">
+<p><code>openjpa.IgnoreChanges</code></p>
+</td>
+<td align="left" headers="r14c1-t7 r1c2-t7">
+<p>Avoid tracking changes</p>
+</td>
+<td align="left" headers="r14c1-t7 r1c3-t7">
+<p>EclipseLink provides similar support using <code>@ReadOnly</code> as well as the <code>eclipselink.read-only</code> query hint. These take advantage of the shared cache.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r15c1-t7" headers="r1c1-t7">
+<p><code>openjpa.Id</code></p>
+</td>
+<td align="left" headers="r15c1-t7 r1c2-t7">
+<p>Identifier for current configuration, for example, persistence unit name.</p>
+</td>
+<td align="left" headers="r15c1-t7 r1c3-t7">
+<p>Equivalent to <code>eclipselink.session-name</code> property which simplifies looking up the underlying shared session in the native <code>SessionManager</code> singleton.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r16c1-t7" headers="r1c1-t7">
+<p><code>openjpa.InverseManager</code></p>
+</td>
+<td align="left" headers="r16c1-t7 r1c2-t7">
+<p>Whether to consider changes to persistent objects made in the current transaction when evaluating queries.</p>
+</td>
+<td align="left" headers="r16c1-t7 r1c3-t7"><br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r17c1-t7" headers="r1c1-t7">
+<p><code>openjpa.LockManager</code></p>
+</td>
+<td align="left" headers="r17c1-t7 r1c2-t7">
+<p>The lock manager to use to use for acquiring locks on persistent instances during transactions.</p>
+</td>
+<td align="left" headers="r17c1-t7 r1c3-t7"><br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r18c1-t7" headers="r1c1-t7">
+<p><code>openjpa.LockTimeout</code></p>
+</td>
+<td align="left" headers="r18c1-t7 r1c2-t7">
+<p>Time to wait for an object lock before throwing an exception</p>
+</td>
+<td align="left" headers="r18c1-t7 r1c3-t7"><br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r19c1-t7" headers="r1c1-t7">
+<p><code>openjpa.ManagedRuntime</code></p>
+</td>
+<td align="left" headers="r19c1-t7 r1c2-t7">
+<p>The managed runtime implementation to use to obtain a reference to the transaction manager in an enterprise environment.</p>
+</td>
+<td align="left" headers="r19c1-t7 r1c3-t7">
+<p>This is generally supported in EclipseLink through the <code>eclipselink.target-server</code> configuration of the <code>ServerPlatform</code>, but you can configure it separately using a custom <code>ExternalTransactionController</code>.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r20c1-t7" headers="r1c1-t7">
+<p><code>openjpa.Mapping</code></p>
+</td>
+<td align="left" headers="r20c1-t7 r1c2-t7">
+<p>Name of the object-to-datastore mapping to use.</p>
+</td>
+<td align="left" headers="r20c1-t7 r1c3-t7"><br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r21c1-t7" headers="r1c1-t7">
+<p><code>openjpa.MaxFetchDepth</code></p>
+</td>
+<td align="left" headers="r21c1-t7 r1c2-t7">
+<p>The maximum depth of relations to traverse when eager fetching.</p>
+</td>
+<td align="left" headers="r21c1-t7 r1c3-t7"><br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r22c1-t7" headers="r1c1-t7">
+<p><code>openjpa.MetaDataFactory</code></p>
+</td>
+<td align="left" headers="r22c1-t7 r1c2-t7">
+<p>The metadata factory to use to store and retrieve metadata for persistent classes.</p>
+</td>
+<td align="left" headers="r22c1-t7 r1c3-t7"><br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r23c1-t7" headers="r1c1-t7">
+<p><code>openjpa.Multithreaded</code></p>
+</td>
+<td align="left" headers="r23c1-t7 r1c2-t7">
+<p>Whether persistent instances and components other than the entity manager factory are accessed by multiple threads simultaneously.</p>
+</td>
+<td align="left" headers="r23c1-t7 r1c3-t7"><br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r24c1-t7" headers="r1c1-t7">
+<p><code>openjpa.Optimistic</code></p>
+</td>
+<td align="left" headers="r24c1-t7 r1c2-t7">
+<p>Selects between optimistic and pessimistic (datastore) transactional modes.</p>
+</td>
+<td align="left" headers="r24c1-t7 r1c3-t7"><br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r25c1-t7" headers="r1c1-t7">
+<p><code>openjpa.OrphanedKeyAction</code></p>
+</td>
+<td align="left" headers="r25c1-t7 r1c2-t7">
+<p>The orphaned key action to invoke when OpenJPA discovers an orphaned datastore key.</p>
+</td>
+<td align="left" headers="r25c1-t7 r1c3-t7"><br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r26c1-t7" headers="r1c1-t7">
+<p><code>openjpa.NontransactionalRead</code></p>
+</td>
+<td align="left" headers="r26c1-t7 r1c2-t7">
+<p>Whether the runtime allows data to be read outside of a transaction.</p>
+</td>
+<td align="left" headers="r26c1-t7 r1c3-t7"><br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r27c1-t7" headers="r1c1-t7">
+<p><code>openjpa.NontransactionalWrite</code></p>
+</td>
+<td align="left" headers="r27c1-t7 r1c2-t7">
+<p>Whether persistent objects can be modified and whether persistence operations can be performed outside a transaction.</p>
+</td>
+<td align="left" headers="r27c1-t7 r1c3-t7"><br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r28c1-t7" headers="r1c1-t7">
+<p><code>openjpa.ProxyManager</code></p>
+</td>
+<td align="left" headers="r28c1-t7 r1c2-t7">
+<p>The proxy manager to use for proxying mutable second class objects.</p>
+</td>
+<td align="left" headers="r28c1-t7 r1c3-t7"><br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r29c1-t7" headers="r1c1-t7">
+<p><code>openjpa.RemoteCommitProvider</code></p>
+</td>
+<td align="left" headers="r29c1-t7 r1c2-t7">
+<p>The remote commit provider implementation to use for distributed event notification.</p>
+</td>
+<td align="left" headers="r29c1-t7 r1c3-t7"><br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r30c1-t7" headers="r1c1-t7">
+<p><code>openjpa.RestoreState</code></p>
+</td>
+<td align="left" headers="r30c1-t7 r1c2-t7">
+<p>Whether to restore managed fields to their pretransaction values when rolled back.</p>
+</td>
+<td align="left" headers="r30c1-t7 r1c3-t7"><br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r31c1-t7" headers="r1c1-t7">
+<p><code>openjpa.RetryClassRegistration</code></p>
+</td>
+<td align="left" headers="r31c1-t7 r1c2-t7">
+<p>Whether to defer registration instead of throwing an exception when a persistent class cannot be processed</p>
+</td>
+<td align="left" headers="r31c1-t7 r1c3-t7"><br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r32c1-t7" headers="r1c1-t7">
+<p><code>openjpa.SavepointManager</code></p>
+</td>
+<td align="left" headers="r32c1-t7 r1c2-t7">
+<p>The savepoint manager to use for managing transaction savepoints.</p>
+</td>
+<td align="left" headers="r32c1-t7 r1c3-t7"><br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r33c1-t7" headers="r1c1-t7">
+<p><code>openjpa.Sequence</code></p>
+</td>
+<td align="left" headers="r33c1-t7 r1c2-t7">
+<p>The kernel sequence implementation to use for the system sequence.</p>
+</td>
+<td align="left" headers="r33c1-t7 r1c3-t7"><br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r34c1-t7" headers="r1c1-t7">
+<p><code>openjpa.TransactionMode</code></p>
+</td>
+<td align="left" headers="r34c1-t7 r1c2-t7">
+<p>The default transaction mode to use.</p>
+</td>
+<td align="left" headers="r34c1-t7 r1c3-t7"><br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r35c1-t7" headers="r1c1-t7">
+<p><code>openjpa.WriteLockLevel</code></p>
+</td>
+<td align="left" headers="r35c1-t7 r1c2-t7">
+<p>The default level to use to lock objects changed during a non-optimistic transaction.</p>
+</td>
+<td align="left" headers="r35c1-t7 r1c3-t7"><br /></td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" --></div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BABGBDIG" name="BABGBDIG"></a><a id="TLADG965" name="TLADG965"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 3: Convert Query Hint Names Used in Named and Dynamic Queries</font></h2>
+<p>JPA applications can include query hints, which define provider-specific behavior. These hints can be specified in annotations, ORM XML files, or application code. The query hint names are strings and therefore do not typically force compile time dependencies on the provider. However, the <code>values</code> for these hints may introduce dependencies.</p>
+<p><a href="#BABHEADA">Table 7-5, "Query Hints"</a> compares OpenJPA query hint to the corresponding or related EclipseLink features.</p>
+<div class="tblhruleformalwide"><a id="TLADG966" name="TLADG966"></a><a id="sthref77" name="sthref77"></a><a id="BABHEADA" name="BABHEADA"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 7-5 Query Hints</font></em></strong></p>
+<table class="HRuleFormalWide" title="Query Hints" summary="This table describes what EclipseLink feature, class, method, etc., to use to replace the listed OpenJPA one." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="*" />
+<col width="33%" />
+<col width="33%" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t8"><font face="Arial, Helvetica, sans-serif"><strong>OpenJPA Property</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t8"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c3-t8"><font face="Arial, Helvetica, sans-serif"><strong>EclipseLink JPA Equivalent</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t8" headers="r1c1-t8">
+<p><code>openjpa.hint.OracleSelectHint</code></p>
+</td>
+<td align="left" headers="r2c1-t8 r1c2-t8">
+<p>Specifies an Oracle-specific query hint to be generated.</p>
+</td>
+<td align="left" headers="r2c1-t8 r1c3-t8">
+<p>Use <code>eclipselink.sql.hint</code> to include a hint in the SQL for a query.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t8" headers="r1c1-t8">
+<p><code>openjpa.FetchPlan.ReadLockMode</code></p>
+</td>
+<td align="left" headers="r3c1-t8 r1c2-t8">
+<p>Values= <code>READ</code> or <code>WRITE</code></p>
+</td>
+<td align="left" headers="r3c1-t8 r1c3-t8">
+<p>Use JPA 2.0 <code>Query.setLockMode(LockModeType)</code> to set the lock mode.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t8" headers="r1c1-t8">
+<p><code>openjpa.hint.OptimizeResultCount</code></p>
+</td>
+<td align="left" headers="r4c1-t8 r1c2-t8">
+<p>Sets the size for a query result set.</p>
+</td>
+<td align="left" headers="r4c1-t8 r1c3-t8">
+<p>Use <code>QueryHints.JDBC_FETCH_SIZE</code> to configure the JDBC fetch size for the queries result set.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t8" headers="r1c1-t8">
+<p><code>openjpa.FetchPlan.Isolation</code></p>
+</td>
+<td align="left" headers="r5c1-t8 r1c2-t8">
+<p>Specifies the isolation level using the <code>SQL WITH &lt;isolation&gt;</code> clause for those databases that support it.</p>
+</td>
+<td align="left" headers="r5c1-t8 r1c3-t8"><br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t8" headers="r1c1-t8">
+<p><code>openjpa.FetchPlan.MaxFetchDepth</code></p>
+</td>
+<td align="left" headers="r6c1-t8 r1c2-t8">
+<p>The maximum depth of relations to traverse when eager fetching.</p>
+</td>
+<td align="left" headers="r6c1-t8 r1c3-t8">
+<p>Specify <code>FetchGroup</code> depth using attributes, not numeric depth.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t8" headers="r1c1-t8">
+<p><code>openjpa.FetchPlan.FetchBatchSize</code></p>
+</td>
+<td align="left" headers="r7c1-t8 r1c2-t8">
+<p>The number of rows to fetch at once when scrolling through a result set.</p>
+</td>
+<td align="left" headers="r7c1-t8 r1c3-t8">
+<p>Use <code>Query.setMaxResultsQueryHints.JDBC_MAX_ROWS</code>.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t8" headers="r1c1-t8">
+<p><code>openjpa.FetchPlan.LockTimeOut</code></p>
+</td>
+<td align="left" headers="r8c1-t8 r1c2-t8">
+<p>Time to wait to acquire a lock.</p>
+</td>
+<td align="left" headers="r8c1-t8 r1c3-t8">
+<p>Use <code>QueryHints.PESSIMISTIC_LOCK_TIMEOUT</code>.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t8" headers="r1c1-t8">
+<p><code>openjpa.FetchPlan.EagerFetchMode</code></p>
+</td>
+<td align="left" headers="r9c1-t8 r1c2-t8">
+<p>Determines how to eager-fetch a field.</p>
+</td>
+<td align="left" headers="r9c1-t8 r1c3-t8">
+<p>EclipseLink fetch group loading is done based on the attributes specified for the fetch group. In the case of the default <code>FetchGroup</code>, loading is based on the lazy configuration of the mappings.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t8" headers="r1c1-t8">
+<p><code>openjpa.FetchPlan.SubclassFetchMode</code></p>
+</td>
+<td align="left" headers="r10c1-t8 r1c2-t8">
+<p>Determines how to eager-fetch subclass data.</p>
+</td>
+<td align="left" headers="r10c1-t8 r1c3-t8">
+<p>Fetch group attributes can be assigned to any mapped attribute in the target entity or its mapped parent classes.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" --></div>
+<!-- class="sect2" -->
+<a id="BABBDCJH" name="BABBDCJH"></a><a id="TLADG967" name="TLADG967"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 4: Convert or Fix Nonstandard Mappings Available in OpenJPA</font></h2>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>Using a JPA mapping tool such as Oracle JDeveloper or Oracle Enterprise Pack for Eclipse (OEPE) makes mapping entities easier and less error-prone. Such tools provide validation and configuration assistance to address many common mapping errors.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>The following are some mapping scenarios you might encounter when migrating from OpenJPA to EclipseLink.</p>
+<a id="TLADG968" name="TLADG968"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref78" name="sthref78"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">@Column in Relationship Mappings</font></h3>
+<p>When defining relationship mappings involving foreign keys (<code>@OneToOne</code> and <code>@ManyToOne</code>), JPA supports the specification of non-default column names using <code>@JoinColumn</code> and <code>@JoinColumns</code>. OpenJPA allows the specification of <code>@Column</code>. Since this has no defined meaning in JPA, EclipseLink throws a validation exception to assist customers in identifying this incorrect mapping configuration.</p>
+<a id="TLADG969" name="TLADG969"></a>
+<p><b><font face="arial, helvetica, sans-serif" color="#330099">Solution</font></b></p>
+<p>Convert all <code>@OneToOne</code> and <code>@ManyToOne</code> mappings that have an <code>@Column</code> configuration to use <code>@JoinColumn</code>. If the target class of the relationship has a composite identifier (primary key) you must use <code>@JoinColumns</code>.</p>
+<p>If the relationship defined by the <code>@JoinColumn</code>(s) involves columns which are also mapped as identifiers (primary key columns), make sure they are mapped with <code>@Id</code> and that the duplicate mappings are properly mapped and managed in the entity class.</p>
+</div>
+<!-- class="sect3" -->
+<a id="TLADG970" name="TLADG970"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref79" name="sthref79"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">@Transient with Relationship Mappings</font></h3>
+<p>The JPA specification does not define whether mappings (<code>@Basic</code>, <code>@OneToOne</code>, <code>@ManyToOne</code>, <code>@OneToMany</code>, <code>@ManyToMany</code>, etc.) can be specified to be transient. While OpenJPA allows this, EclipseLink correctly throws an exception. Transient configuration on an attribute is intended to prevent default mappings from being applied when calculating the mappings for an entity. With default mappings, unmapped attributes are assumed to be mapped according to the specification. <code>@Transient</code> prevents these assumptions, which may not be the desired behavior.</p>
+<a id="TLADG971" name="TLADG971"></a>
+<p><b><font face="arial, helvetica, sans-serif" color="#330099">Solution</font></b></p>
+<p>Determine which configuration you want. If you want mapping, remove <code>@Transient</code>. If the intention was to avoid the default mapping, then either remove or comment out the mapping configuration.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BABBJEDH" name="BABBJEDH"></a><a id="TLADG972" name="TLADG972"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 5: Convert from OpenJPA Extended Features</font></h2>
+<p>OpenJPA offers some extended functionality that goes beyond the JPA specification. The following sections describe these features and how you can migrate to the corresponding functionality in EclipseLink.</p>
+<a id="TLADG973" name="TLADG973"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref80" name="sthref80"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">BigCollection</font></h3>
+</div>
+<!-- class="sect3" -->
+<a id="TLADG974" name="TLADG974"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref81" name="sthref81"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">FetchPlan/Group</font></h3>
+</div>
+<!-- class="sect3" -->
+<a id="TLADG975" name="TLADG975"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref82" name="sthref82"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Inheritance Casting</font></h3>
+</div>
+<!-- class="sect3" -->
+<a id="TLADG976" name="TLADG976"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref83" name="sthref83"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Native SQL with POJO results</font></h3>
+</div>
+<!-- class="sect3" -->
+<a id="TLADG977" name="TLADG977"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref84" name="sthref84"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Detached (Serialized) entities &amp; relationships</font></h3>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BABBBHJJ" name="BABBBHJJ"></a><a id="TLADG978" name="TLADG978"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 6: Take Advantage of EclipseLink Features</font></h2>
+<p>After completing the conversion to EclipseLink JPA it is also very important to harness the additional features available. The most commonly used features include:</p>
+<ul>
+<li>
+<p><strong>Caching</strong> - Make sure you understand and optimize your cache configuration to work with your locking policies and the volatility of your underlying database tables:</p>
+<ul>
+<li>
+<p>Shared (L2) versus Isolated (EntityManager/TX)</p>
+</li>
+<li>
+<p>Shared type, size, and expiration/invalidation</p>
+</li>
+<li>
+<p>Cache coordination (where applicable)</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Query Optimization</strong> - Minimize the amount of data loaded and cached for greater performance and optimal cache usage:</p>
+<ul>
+<li>
+<p>Batch and Joined (multi-level) for graph retrieval</p>
+</li>
+<li>
+<p>Cache usage and refreshing</p>
+</li>
+<li>
+<p>Data projections for data loading on searches where full entities are not required</p>
+</li>
+<li>
+<p>Paged data/entity loading</p>
+</li>
+<li>
+<p>Fetch Groups</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Weaving</strong> - Ensure weaving is enabled for change tracking, lazy loading, and fetch groups capabilities .</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="sect1test002.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="migropenjpa002.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+                
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
+</html>

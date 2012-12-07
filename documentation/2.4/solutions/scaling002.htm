@@ -1,0 +1,613 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Implementing the Solution | EclipseLink 2.4.x Understanding EclipseLink</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
+<meta name="date" content="2012-12-07T9:39:13Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Implementing the Solution" />
+<meta name="relnum" content="Release 2.4" />
+<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="scaling001.htm" title="Previous" type="text/html" />
+<link rel="next" href="scaling003.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:mdbgdwjv8zu', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><b>EclipseLink Solutions Guide for EclipseLink</b><br />
+Release 2.4</div></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="scaling001.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="scaling003.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header -->
+<p align="center"><font color="#FF0000">Beta Draft: 2012-12-07</font></p>
+<a id="CEGHIIGG" name="CEGHIIGG"></a><a id="TLADG198" name="TLADG198"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Implementing the Solution</font></h1>
+<p>These tasks provide general instructions for ensuring that a EclipseLink application scales in an application server cluster. Complete the tasks prior to deploying an application.</p>
+<p>This section contains the following tasks:</p>
+<ul>
+<li>
+<p><a href="#CEGBHAEA">Task 1: Configure Cache Consistency</a></p>
+</li>
+<li>
+<p><a href="#CEGEHGCF">Task 2: Ensure EclipseLink Is Enabled</a></p>
+</li>
+<li>
+<p><a href="#CEGJHBBG">Task 3: Ensure All Application Servers Are Part of the Cluster</a></p>
+</li>
+<li>
+<p><a href="#BABHHAEJ">Using Data Partitioning to Scale Data</a></p>
+</li>
+</ul>
+<a id="CEGBHAEA" name="CEGBHAEA"></a><a id="TLADG199" name="TLADG199"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 1: Configure Cache Consistency</font></h2>
+<p>This task includes different configuration options that mitigate the possibility that an application might use stale data when deployed to an application server cluster. The cache coordination option is specifically designed for applications that are clustered; however, evaluate all the options and use them together (if applicable) to create a solution that results in the best application performance. Properly configuring a cache can, in some cases, eliminate the need to use cache coordination. For additional details on these options, see:</p>
+<p><code><a href="http://wiki.eclipse.org/Introduction_to_Cache_%28ELUG%29#Handling_Stale_Data">http://wiki.eclipse.org/Introduction_to_Cache_%28ELUG%29#Handling_Stale_Data</a></code></p>
+<p>The following are the configuration options:</p>
+<ul>
+<li>
+<p><a href="#CEGEDHAB">Disabling the Shared Cache</a></p>
+</li>
+<li>
+<p><a href="#CEGBGIFB">Refreshing the Cache</a></p>
+</li>
+<li>
+<p><a href="#CEGCABII">Setting Cache Expiration</a></p>
+</li>
+<li>
+<p><a href="#CEGCHFCD">Setting Optimistic Locking</a></p>
+</li>
+<li>
+<p><a href="#CEGBAIIH">Using Cache Coordination</a></p>
+</li>
+</ul>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>Oracle provides a EclipseLink and Coherence integration that allows EclipseLink to use Coherence as the L2 cache. For details on EclipseLink Grid, see</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<a id="CEGEDHAB" name="CEGEDHAB"></a><a id="TLADG200" name="TLADG200"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Disabling the Shared Cache</font></h3>
+<p>Disable the shared cache if an application does not require it. To disable the shared cache for all objects, use the <code>&lt;shared-cache-mode&gt;</code> element in the <code>persistence.xml</code> file. For example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;shared-cache-mode&gt;NONE&lt;/shared-cache-mode&gt;
+</pre>
+<p>To selectively enable or disable the shared cache, use the <code>shared</code> attribute of the <code>@Cache</code> annotation when defining an entity. For example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+@Entity
+@Cache(shared=false)
+public class Employee {
+}
+</pre></div>
+<!-- class="sect3" -->
+<a id="CEGBGIFB" name="CEGBGIFB"></a><a id="TLADG201" name="TLADG201"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Refreshing the Cache</font></h3>
+<p>Refreshing a cache reloads the cache from the database to ensure that an application is using current data. There are different ways to refresh a cache.</p>
+<p>The <code>@Cache</code> annotation provides the <code>alwaysRefresh</code> and <code>refreshOnlyIfNewer</code> attributes which force all queries that go to the database to refresh the cache:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+@Entity
+@Cache(
+   alwaysRefresh=true, 
+   refreshOnlyIfNewer=true)
+public class Employee {
+}
+</pre>
+<p>The <code>org.eclipse.persistence.jpa.JpaCache</code> interface includes several methods that remove stale objects if the cache is out of date:</p>
+<ul>
+<li>
+<p>The <code>evictAll</code> method invalidates all of the objects in the cache.</p>
+<pre xml:space="preserve" class="oac_no_warn">
+em.getEntityManagerFactory().getCache().evictAll();
+</pre></li>
+<li>
+<p>The <code>evict</code> method invalidates specific classes.</p>
+<pre xml:space="preserve" class="oac_no_warn">
+em.getEntityManagerFactory().getCache().evict(MyClass);
+</pre></li>
+<li>
+<p>The <code>clear</code> method also refreshes a cache; however, clearing the cache can cause object identity issues if any one of the cached objects is in use. Use this method only if the application no longer has references to objects held in the cache.</p>
+</li>
+</ul>
+<p>The preceding methods are passive and refresh objects only the next time the cache is accessed. To actively refresh an object, use the <code>EntityManager.</code><code>refresh</code> method. The method refreshes a single object at a time.</p>
+<p>Any one of the following methods also refreshes a cache:</p>
+<ul>
+<li>
+<p><code>Session.refreshObject</code> method</p>
+</li>
+<li>
+<p><code>DatabaseSession</code> and <code>UnitOfWork</code>: <code>refreshAndLockObject</code> methods</p>
+</li>
+<li>
+<p><code>ObjectLevelReadQuery</code>: <code>refreshIdentityMapResult</code> and <code>refreshRemoteIdentityMapResult</code> methods</p>
+</li>
+</ul>
+<p>The <code>ClassDescriptor</code> class also provides methods that refresh a cache:</p>
+<ul>
+<li>
+<p><code>setShouldAlwaysRefreshCache</code></p>
+</li>
+<li>
+<p><code>setShouldAlwaysRefreshCacheOnRemote</code></p>
+</li>
+<li>
+<p><code>setShouldDisableCacheHits</code></p>
+</li>
+<li>
+<p><code>setShouldDisableCacheHitsOnRemote</code></p>
+</li>
+<li>
+<p><code>setShouldOnlyRefreshCacheIfNewerVersion</code></p>
+</li>
+</ul>
+<p>Use these methods within the <code>addToDescriptor</code> method. For example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+public void addToDescriptor(ClassDescriptor descriptor) {
+    descriptor.setShouldRefreshCacheOnRemote(true);
+    descriptor.setShouldDisableCacheHitsOnRemote(true);
+}
+</pre>
+<p>Last, use the <code>setHint</code> method to set a query hint that triggers the query to refresh the cache. For example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+Query query = em.createQuery("Select e from Employee e");
+query.setHint("javax.persistence.cache.storeMode", "REFRESH");
+</pre></div>
+<!-- class="sect3" -->
+<a id="CEGCABII" name="CEGCABII"></a><a id="TLADG202" name="TLADG202"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Setting Cache Expiration</font></h3>
+<p>Cache expiration makes a cached object instance invalid after a specified amount of time. Any attempt to use the object causes the most up-to-date version of the object to be reloaded from the data source. Expiration can help ensure that an application is always using the most recent data. There are different ways to set expiration.</p>
+<p>The <code>@Cache</code> annotation provides the <code>expiry</code> and <code>expiryTimeOfDay</code> attributes, which remove cache instances after a specific amount of time. The <code>expiry</code> attribute is entered in milliseconds. The default value if no value is specified is <code>-1</code>, which indicates that expiry is disabled. The <code>expiryTimeOfDay</code> attribute is an instance of the <code>org.eclipse.persistence.annotations.TimeOfDay</code> interface. The following example sets the object to expire after 5 minutes:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+@Entity
+@Cache(expiry=300000)
+public class Employee {
+}
+</pre>
+<p>At the descriptor level, use the <code>ClassDescriptor.setCacheInvalidationPolicy</code> method to set a <code>CacheInvalidationPolicy</code> instance. The following invalidation policies are available:</p>
+<ul>
+<li>
+<p><code>DailyCacheInvalidationPolicy</code>: The object is automatically flagged as invalid at a specified time of day.</p>
+</li>
+<li>
+<p><code>NoExpiryCacheInvalidationPolicy</code>: The object can be flagged as invalid only by explicitly calling the <code>IdentityMapAccessor.invalidateObject</code> method.</p>
+</li>
+<li>
+<p><code>TimeToLiveCacheInvalidationPolicy</code>: The object is automatically flagged as invalid after a specified time period has elapsed since the object was read.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="CEGCHFCD" name="CEGCHFCD"></a><a id="TLADG203" name="TLADG203"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Setting Optimistic Locking</font></h3>
+<p>Optimistic locking prevents one user from writing over another user's work. Locking is important when multiple servers or multiple applications access the same data and is relevant in both single-server and multiple-server environments. In a multiple-server environment, locking is still required if an application uses cache refreshing or cache coordination. There are different ways to set optimistic locking.</p>
+<p>The <code>@OptimisticLocking</code> annotation specifies the type of optimistic locking to use when updating or deleting entities. Optimistic locking is supported on an <code>@Entity</code> or <code>@MappedSuperclass</code> annotation. The following policies are available and are set within the <code>type</code> attribute:</p>
+<ul>
+<li>
+<p><code>ALL_COLUMNS</code>: This policy compares every field in the table in the <code>WHERE</code> clause when performing an update or delete operation.</p>
+</li>
+<li>
+<p><code>CHANGED_COLUMNS</code>: This policy compares only the changed fields in the <code>WHERE</code> clause when performing an update operation. A delete operation compares only the primary key.</p>
+</li>
+<li>
+<p><code>SELECTED_COLUMNS</code>: This policy compares selected fields in the <code>WHERE</code> clause when performing an update or delete operation. The fields that are specified must be mapped and not be primary keys.</p>
+</li>
+<li>
+<p><code>VERSION_COLUMN</code>: (Default) This policy allows a single version number to be used for optimistic locking. The version field must be mapped and not be the primary key. To automatically force a version field update on a parent object when its privately owned child object's version field changes, use the <code>cascaded</code> method set to <code>true</code>. The method is set to <code>false</code> by default.</p>
+</li>
+</ul>
+<p>At the descriptor level, configure optimistic locking by using the <code>ClassDescriptor.setOptimisticLockingPolicy</code> method to set an optimistic <code>FieldsLockingPolicy</code> instance. As with the annotation, the following policies are included:</p>
+<ul>
+<li>
+<p><code>AllFieldsLockingPolicy</code>: This policy compares every field in the table in the <code>WHERE</code> clause when performing an update or delete operation.</p>
+</li>
+<li>
+<p><code>ChangedFieldsLockingPolicy</code>: This policy compares only the changed fields in the <code>WHERE</code> clause when doing an update. A delete operation only compares the primary key.</p>
+</li>
+<li>
+<p><code>SelectedFieldsLockingPolicy</code>: This policy compares selected fields in the <code>WHERE</code> clause when performing an update or delete operation. The fields specified must be mapped and not be primary keys.</p>
+</li>
+<li>
+<p><code>VersionLockingPolicy</code>: This policy allows a single version number to be used for optimistic locking. To automatically force a version field update on a parent object when its privately owned child object's version field changes, use the <code>VersionLockingPolicy.setIsCascaded</code> method set to <code>true</code>.</p>
+</li>
+<li>
+<p><code>TimestampLockingPolicy</code>: This policy allows a single version timestamp to be used for optimistic locking.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="CEGBAIIH" name="CEGBAIIH"></a><a id="TLADG204" name="TLADG204"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Using Cache Coordination</font></h3>
+<p>Cache coordination synchronizes changes among distributed sessions. Cache coordination is most useful in application server clusters where maintaining consistent data for all applications is challenging. Moreover, cache consistency becomes increasingly more difficult as the number of servers within an environment increases.</p>
+<p>Cache coordination works by broadcasting notifications of transactional object changes among sessions (<code>ServerSession</code> or persistence unit) in the cluster. Cache coordination is most useful for applications that are primarily read-based and when changes are performed by the same application operating with multiple, distributed sessions.</p>
+<p>Cache coordination significantly minimizes stale data, but does not completely eliminate the possibility that stale data might occur. In addition, cache coordination reduces the number of optimistic lock exceptions encountered in distributed architectures, and reduces the number of failed or repeated transactions in an application. However, cache coordination in no way eliminates the need for an effective locking policy. To ensure the most current data, use cache coordination with optimistic or pessimistic locking; optimistic locking is preferred.</p>
+<p>Cache coordination is supported over the Remote Method Invocation (RMI) and Java Message Service (JMS) protocols and is configured either declaratively by using persistence properties in a <code>persistence.xml</code> file or by using the cache coordination API. System properties that match the persistence properties are available as well.</p>
+<p>For additional details on cache coordination see:</p>
+<p><em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em></p>
+<a id="TLADG205" name="TLADG205"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref87" name="sthref87"></a>
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Configuring JMS Cache Coordination Using Persistence Properties</font></h4>
+<p>The following example demonstrates how to configure cache coordination in the <code>persistence.xml</code> file and uses JMS for broadcast notification. For JMS, provide a JMS topic JNDI name and topic connection factory JNDI name. The JMS topic should not be JTA-enabled and should not have persistent messages.</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;property name="eclipselink.cache.coordination.protocol" value="jms" /&gt;
+&lt;property name="eclipselink.cache.coordination.jms.topic" 
+   value="jms/EmployeeTopic" /&gt;
+&lt;property name="eclipselink.cache.coordination.jms.factory"
+   value="jms/EmployeeTopicConnectionFactory" /&gt;
+</pre>
+<p>Applications that run in a cluster generally do not require a URL because the topic provides enough to locate and use the resource. For applications that run outside the cluster, a URL is required. The following example is a URL for a WebLogic Server cluster:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;property name="eclipselink.cache.coordination.jms.host"
+   value="t3://myserver:7001/" /&gt;
+</pre>
+<p>A user name and password for accessing the servers can also be set if required. For example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;property name="eclipselink.cache.coordination.jndi.user" value="user" /&gt;
+&lt;property name="eclipselink.cache.coordination.jndi.password" value="<em>password</em>" /&gt;
+</pre></div>
+<!-- class="sect4" -->
+<a id="TLADG206" name="TLADG206"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref88" name="sthref88"></a>
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Configuring RMI Cache Coordination Using Persistence Properties</font></h4>
+<p>The following example demonstrates how to configure cache coordination in the <code>persistence.xml</code> file and uses RMI for broadcast notification:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;property name="eclipselink.cache.coordination.protocol" value="rmi" /&gt;
+</pre>
+<p>Applications that run in a cluster generally do not require a URL because JNDI is replicated and servers can look up each other. If an application runs outside of a cluster, or if JNDI is not replicated, then each server must provide its URL. This could be done through the <code>persistence.xml</code> file; however, different <code>persistence.xml</code> files (thus JAR or EAR) for each server is required, which is usually not desirable. A second option is to set the URL programmatically using the cache coordination API. For more details, see <a href="#CEGBJIFB">"Configuring Cache Coordination Using the Cache Coordination API"</a>. The final option is to set the URL as a system property on each application server. The following example sets the URL for a WebLogic Server cluster using a system property:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+-Declipselink.cache.coordination.jms.host=t3://myserver:7001/
+</pre>
+<p>A user name and password for accessing the servers can also be set if required; for example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;property name="eclipselink.cache.coordination.jndi.user" value="user" /&gt;&lt;property name="eclipselink.cache.coordination.jndi.password" value="<em>password</em>" /&gt;
+</pre>
+<p>RMI cache coordination can use either asynchronous or synchronous broadcasting notification; asynchronous is the default. Synchronous broadcasting ensures that all of the servers are updated before a request returns. The following example configures synchronous broadcasting.</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;property name="eclipselink.cache.coordination.propagate-asynchronously"
+   value="false" /&gt;
+</pre>
+<p>If multiple applications on the same server or network use cache coordination, then a separate channel can be used for each application. For example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;property name="eclipselink.cache.coordination.channel" value="EmployeeChannel" /&gt;
+</pre>
+<p>Last, if required, change the default RMI multicast socket address that allows servers to find each other. The following example explicitly configures the multicast settings:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;property name="eclipselink.cache.coordination.rmi.announcement-delay"
+   value="1000" /&gt;
+&lt;property name="eclipselink.cache.coordination.rmi.multicast-group"
+   value="239.192.0.0" /&gt;
+&lt;property name="eclipselink.cache.coordination.rmi.multicast-group.port"
+   value="3121" /&gt;
+&lt;property name="eclipselink.cache.coordination.packet-time-to-live" value="2" /&gt;
+</pre></div>
+<!-- class="sect4" -->
+<a id="CEGBJIFB" name="CEGBJIFB"></a><a id="TLADG207" name="TLADG207"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Configuring Cache Coordination Using the Cache Coordination API</font></h4>
+<p>Use the <code>CommandManager</code> interface to programmatically configure cache coordination for a session. The following example configures RMI cache configuration:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+Session.getCommandManager().setShouldPropagateAsynchronously(boolean)
+
+Session.getCommandManager().getDiscoveryManager().
+    setAnnouncementDelay()
+    setMulticastGroupAddress()
+    setMulticastPort()
+    setPacketTimeToLive()
+
+Session.getCommandManager().getTransportManager().
+    setEncryptedPassword()
+    setInitialContextFactoryName()
+    setLocalContextProperties(Hashtable)
+    setNamingServiceType() //<em>passing in one of:</em>
+        TransportManager.JNDI_NAMING_SERVICE
+        TransportManager.REGISTRY_NAMING_SERVICE
+    setPassword()
+    setRemoteContextProperties(Hashtable)
+    setShouldRemoveConnectionOnError()
+    setUserName()
+</pre></div>
+<!-- class="sect4" -->
+<a id="TLADG208" name="TLADG208"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref89" name="sthref89"></a>
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Setting Cache Synchronization</font></h4>
+<p>Cache synchronization determines how notifications of object changes are broadcast among session members. The following synchronization options are available:</p>
+<ul>
+<li>
+<p><code>SEND_OBJECT_CHANGES</code>: (Default) This option broadcasts a list of changed objects including data about the changes. This data is merged into the receiving cache.</p>
+</li>
+<li>
+<p><code>INVALIDATE_CHANGED_OBJECTS</code>: This option broadcasts a list of the identities of the objects that have changed. The receiving cache invalidates the objects rather than changing any of the data.</p>
+</li>
+<li>
+<p><code>SEND_NEW_OBJECTS_WITH_CHANGES</code>: This option is the same as the <code>SEND_OBJECT_CHANGES</code> option except it also includes any newly created objects from the transaction.</p>
+</li>
+<li>
+<p><code>NONE</code>: This option does no cache coordination.</p>
+</li>
+</ul>
+<p>The <code>@Cache</code> annotation <code>coordinationType</code> attribute is used to specify synchronization. For example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+@Entity
+@Cache(CacheCoordinationType.SEND_NEW_OBJECTS_CHANGES)
+public class Employee {
+}
+</pre>
+<p>The <code>ClassDescriptor.setCacheSynchronizationType</code> method can also be used to specify synchronization. For example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+setCacheSynchronizationType() // <em>passing in one of:</em>
+    ClassDescriptor.DO_NOT_SEND_CHANGES
+    ClassDescriptor.INVALIDATE_CHANGED_OBJECTS
+    ClassDescriptor.SEND_NEW_OBJECTS_WITH_CHANGES
+    ClassDescriptor.SEND_OBJECT_CHANGES
+</pre></div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CEGEHGCF" name="CEGEHGCF"></a><a id="TLADG209" name="TLADG209"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 2: Ensure EclipseLink Is Enabled</font></h2>
+<p>Ensure that the EclipseLink JAR files are included on the classpath of each application server in the cluster to which the EclipseLink application is deployed and configure EclipseLink as the persistence provider. For detailed instructions about setting up EclipseLink with WebLogic Server and GlassFish Server, see <a href="tlandwls.htm#BABHCJBG">Chapter 2, "Using EclipseLink with WebLogic Server,"</a> and <a href="tlandgs.htm#BABDGFIC">Chapter 3, "Using EclipseLink with GlassFish Server,"</a> respectively.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CEGJHBBG" name="CEGJHBBG"></a><a id="TLADG210" name="TLADG210"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 3: Ensure All Application Servers Are Part of the Cluster</font></h2>
+<p>Configure an application server cluster that includes each application server that hosts the EclipseLink application:</p>
+<ul>
+<li>
+<p>For WebLogic Server clustering see <em>Oracle Fusion Middleware Using Clusters for Oracle WebLogic Server</em>.</p>
+</li>
+<li>
+<p>For GlassFish Server clustering, see:</p>
+<p><code><a href="http://download.oracle.com/docs/cd/E18930_01/html/821-2426/index.html">http://download.oracle.com/docs/cd/E18930_01/html/821-2426/index.html</a></code></p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BABHHAEJ" name="BABHHAEJ"></a><a id="TLADG988" name="TLADG988"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Using Data Partitioning to Scale Data</font></h2>
+<p>Data partitioning allows an application to scale its data across more than one database machine. Data partitioning is supported at the entity level to allow a different set of entity instances for the same class to be stored in a different physical database or different node within a database cluster. Both regular databases and clustered databases are supported. Data can be partitioned both horizontally and vertically.</p>
+<p>Partitioning can be enabled on an entity, a relationship, a query, or a persistence unit. To configure data partitioning, use the <code>@Partitioned</code> annotation and one or more partitioning policy annotations. <a href="#BABBIJCD">Table 9-1</a> describes the partitioning policies</p>
+<div class="tblformal"><a id="TLADG989" name="TLADG989"></a><a id="sthref90" name="sthref90"></a><a id="BABBIJCD" name="BABBIJCD"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 9-1 Partitioning Policies</font></em></strong></p>
+<table class="Formal" title="Partitioning Policies" summary="partitioning policies" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="39%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t3"><font face="Arial, Helvetica, sans-serif"><strong>Annotation</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t3"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t3" headers="r1c1-t3">
+<p><code>@HashPartitioning</code></p>
+</td>
+<td align="left" headers="r2c1-t3 r1c2-t3">
+<p>Partitions access to a database cluster by the hash of a field value from the object, such as the object's ID, location, or tenant. The hash indexes into the list of connection pools/nodes. All write or read request for objects with that hash value are sent to the same server. If a query does not include the hash field as a parameter, it can be sent to all servers and unioned, or it can be left to the session's default behavior.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t3" headers="r1c1-t3">
+<p><code>@PinnedPartitioning</code></p>
+</td>
+<td align="left" headers="r3c1-t3 r1c2-t3">
+<p>Pins requests to a single connection pool/node. This allows for vertical partitioning.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t3" headers="r1c1-t3">
+<p><code>@RangePartitioning</code></p>
+</td>
+<td align="left" headers="r4c1-t3 r1c2-t3">
+<p>Partitions access to a database cluster by a field value from the object, such as the object's ID, location, or tenant. Each server is assigned a range of values. All write or read requests for objects with that value are sent to the same server. If a query does not include the field as a parameter, then it can either be sent to all servers and unioned, or left to the session's default behavior.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t3" headers="r1c1-t3">
+<p><code>@ReplicationPartitioning</code></p>
+</td>
+<td align="left" headers="r5c1-t3 r1c2-t3">
+<p>Sends requests to a set of connection pools/nodes. This policy is for replicating data across a cluster of database machines. Only modification queries are replicated.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t3" headers="r1c1-t3">
+<p><code>@RoundRobinPartitioning</code></p>
+</td>
+<td align="left" headers="r6c1-t3 r1c2-t3">
+<p>Sends requests in a round-robin fashion to the set of connection pools/nodes. This policy is used for load balancing read queries across a cluster of database machines. It requires that the full database be replicated on each machine, so it does not support partitioning. The data should either be read-only, or writes should be replicated.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t3" headers="r1c1-t3">
+<p><code>@UnionPartitioning</code></p>
+</td>
+<td align="left" headers="r7c1-t3 r1c2-t3">
+<p>Sends queries to all connection pools and unions the results. This is for queries or relationships that span partitions when partitioning is used, such as on a ManyToMany cross partition relationship.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t3" headers="r1c1-t3">
+<p><code>@ValuePartitioning</code></p>
+</td>
+<td align="left" headers="r8c1-t3 r1c2-t3">
+<p>Partitions access to a database cluster by a field value from the object, such as the object's location or tenant. Each value is assigned a specific server. All write or read requests for objects with that value are sent to the same server. If a query does not include the field as a parameter, then it can be sent to all servers and unioned, or it can be left to the session's default behavior.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t3" headers="r1c1-t3">
+<p><code>@Partitioning</code></p>
+</td>
+<td align="left" headers="r9c1-t3 r1c2-t3">
+<p>Partitions access to a database cluster by a custom partitioning policy. A class that extends the <code>PartitioningPolicy</code> class must be provided.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<p>Partitioning policies are globally-named objects in a persistence unit and are reusable across multiple descriptors or queries. This improves the usability of the configuration, specifically with JPA annotations and XML.</p>
+<p>The persistence unit properties support adding named connection pools in addition to the existing configuration for read/write/sequence. A named connection pool must be defined for each node in the database cluster.</p>
+<p>If a transaction modifies data from multiple partitions, JTA should be used to ensure 2-phase commit of the data. An exclusive connection can also be configured in an <code>EntityManager</code> implementation to ensure only a single node is used for a single transaction.</p>
+<p>The following example partitions the <code>Employee</code> data by location. The two primary sites, Ottawa and Toronto, are each stored on a separate database. All other locations are stored on the default database. Project is range partitioned by its ID. Each range of ID values are stored on a different database.</p>
+<pre xml:space="preserve" class="oac_no_warn">
+@Entity
+@IdClass(EmployeePK.class)
+@UnionPartitioning(
+        name="UnionPartitioningAllNodes",
+        replicateWrites=true)
+@ValuePartitioning(
+        name="ValuePartitioningByLOCATION",
+        partitionColumn=@Column(name="LOCATION"),
+        unionUnpartitionableQueries=true,
+        defaultConnectionPool="default",
+        partitions={
+            @ValuePartition(connectionPool="node2", value="Ottawa"),
+            @ValuePartition(connectionPool="node3", value="Toronto")
+        })
+@Partitioned("ValuePartitioningByLOCATION")
+public class Employee {
+    @Id
+    @Column(name = "EMP_ID")
+    private Integer id;
+     @Id
+    private String location;
+    ...
+ 
+    @ManyToMany(cascade = { PERSIST, MERGE })
+    @Partitioned("UnionPartitioningAllNodes")
+    private Collection&lt;Project&gt; projects;
+    ...
+}
+</pre>
+<p>The employee/project relationship is an example of a cross partition relationship. To allow the employees and projects to be stored on different databases a union policy is used and the join table is replicated to each database.</p>
+<pre xml:space="preserve" class="oac_no_warn">
+@Entity
+@RangePartitioning(
+        name="RangePartitioningByPROJ_ID",
+        partitionColumn=@Column(name="PROJ_ID"),
+        partitionValueType=Integer.class,
+        unionUnpartitionableQueries=true,
+        partitions={
+            @RangePartition(connectionPool="default", startValue="0",
+               endValue="1000"),
+            @RangePartition(connectionPool="node2", startValue="1000",
+               endValue="2000"),
+            @RangePartition(connectionPool="node3", startValue="2000")
+        })
+@Partitioned("RangePartitioningByPROJ_ID")
+public class Project {
+    @Id
+    @Column(name="PROJ_ID")
+    private Integer id;
+    ...
+}
+</pre>
+<a id="TLADG990" name="TLADG990"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref91" name="sthref91"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Clustered Databases and Oracle RAC</font></h3>
+<p>Some databases support clustering the database across multiple servers. Oracle Real Application Clusters (RAC) allows for a single database to span multiple different server nodes. Oracle RAC also supports table and node partitioning of data. A database cluster allows for any of the data to be accessed from any node in the cluster. However, it is generally more efficient to partition the data access to specific nodes, to reduce cross node communication. Partitioning can be used in conjunction with a clustered database to reduce cross node communication, and improve scalability. For details on using EclipseLink with Oracle RAC, see <a href="oracledb002.htm#CHDIEBBB">Using EclipseLink with Oracle RAC.</a></p>
+<p>Adhere to the following requirements when using data partitioning with a database cluster:</p>
+<ul>
+<li>
+<p>Partition policy should not enable replication, as database cluster makes data available to all nodes.</p>
+</li>
+<li>
+<p>Partition policy should not use unions, as database cluster returns the complete query result from any node.</p>
+</li>
+<li>
+<p>A <code>DataSource</code> and connection pool should be defined for each node in the cluster.</p>
+</li>
+<li>
+<p>The application's data access and data partitioning should be designed to have each transaction only require access to a single node.</p>
+</li>
+<li>
+<p>Usage of an exclusive connection for an <code>EntityManager</code> is recommended to avoid having multiple nodes in a single transaction and avoid 2-phase commit.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="scaling001.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="scaling003.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+                
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
+</html>

@@ -1,0 +1,463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Making JPA Entities Extensible | EclipseLink 2.4.x Understanding EclipseLink</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
+<meta name="date" content="2012-12-07T9:39:13Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Making JPA Entities Extensible" />
+<meta name="relnum" content="Release 2.4" />
+<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="softwareasaservice001.htm" title="Previous" type="text/html" />
+<link rel="next" href="softwareasaservice003.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:mdbgdwjv8zu', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><b>EclipseLink Solutions Guide for EclipseLink</b><br />
+Release 2.4</div></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="softwareasaservice001.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="softwareasaservice003.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header -->
+<p align="center"><font color="#FF0000">Beta Draft: 2012-12-07</font></p>
+<a id="BABFJDCF" name="BABFJDCF"></a><a id="TLADG217" name="TLADG217"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Making JPA Entities Extensible</font></h1>
+<p>Use the <code>@VirtualAccessMethods</code> annotation to specify that an entity is extensible. By using virtual properties in an extensible entity, you can specify mappings external to the entity. This allows you to modify the mappings without modifying the entity source file and without redeploying the entity's persistence unit.</p>
+<p>Extensible entities are useful in a multi-tenant (or SaaS) architecture where a shared, generic application can be used by multiple clients (tenants). Tenants have private access to their own data, and to data shared with other tenants.</p>
+<p>Using extensible entities, you can:</p>
+<ul>
+<li>
+<p>Build an application where some mappings are common to all users and some mappings are user-specific.</p>
+</li>
+<li>
+<p>Add mappings to an application after it is made available to a customer (even post-deployment).</p>
+</li>
+<li>
+<p>Use the same <code>EntityManagerFactory</code> interface to work with data after mappings have changed.</p>
+</li>
+<li>
+<p>Provide an additional source of metadata to be used by an application.</p>
+</li>
+</ul>
+<a id="TLADG218" name="TLADG218"></a>
+<div class="sect2"><a id="sthref93" name="sthref93"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Main Tasks for Creating and Supporting an Extensible JPA Entity</font></h2>
+<p>To create and support an extensible JPA entity:</p>
+<ul>
+<li>
+<p><a href="#CIAHBEAJ">Task 1: Configure the Entity</a></p>
+</li>
+<li>
+<p><a href="#CIAIJJDH">Task 2: Design the Schema</a></p>
+</li>
+<li>
+<p><a href="#CIAECEAE">Task 3: Provide Additional Mappings</a></p>
+</li>
+<li>
+<p><a href="#CIAIJHAG">Task 4: Configure Persistence Properties and the Data Repository</a></p>
+</li>
+</ul>
+<a id="CIAHBEAJ" name="CIAHBEAJ"></a><a id="TLADG219" name="TLADG219"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task 1: Configure the Entity</font></h3>
+<p>Configuring the entity consists of annotating the entity class with <code>@VirtualAccessMethods</code>, adding <code>get</code> and <code>set</code> methods for the property values, and adding a data structure to store the extended attributes and values.</p>
+<a id="TLADG220" name="TLADG220"></a>
+<div class="sect4"><a id="sthref94" name="sthref94"></a>
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Annotate the Entity Class with @VirtualAccessMethods</font></h4>
+<p>Annotate the entity with <code>@VirtualAccessMethods</code> to specify that it is extensible and to define virtual properties.</p>
+<p><a href="#CIAHBGHB">Table 10-1</a> describes the attributes available to the <code>@VirtualAccessMethods</code> annotation.</p>
+<div class="tblformal"><a id="TLADG221" name="TLADG221"></a><a id="sthref95" name="sthref95"></a><a id="CIAHBGHB" name="CIAHBGHB"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 10-1 Attributes for the @VirtualAccessMethods Annotation</font></em></strong></p>
+<table class="Formal" title="Attributes for the @VirtualAccessMethods Annotation" summary="Attributes for @VirtualAccessMethods annotation" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="17%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t2"><font face="Arial, Helvetica, sans-serif"><strong>Attribute</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t2"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t2" headers="r1c1-t2">
+<p><code>get</code></p>
+</td>
+<td align="left" headers="r2c1-t2 r1c2-t2">
+<p>The name of the <code>get</code>ter method to use for the virtual property. This method must take a single <code>java.lang.String</code> parameter and return a <code>java.lang.Object</code> parameter.</p>
+<p>Default: <code>get</code></p>
+<p>Required? No</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t2" headers="r1c1-t2">
+<p><code>set</code></p>
+</td>
+<td align="left" headers="r3c1-t2 r1c2-t2">
+<p>The name of the <code>set</code>ter method to use for the virtual property. This method must take a <code>java.lang.String</code> and a <code>java.lang.Object</code> parameter and return a <code>java.lang.Object</code> parameter.</p>
+<p>Default: <code>set</code></p>
+<p>Required? No</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></div>
+<!-- class="sect4" -->
+<a id="TLADG222" name="TLADG222"></a>
+<div class="sect4"><a id="sthref96" name="sthref96"></a>
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Add get and set Methods to the Entity</font></h4>
+<p>Add <code>get(String)</code> and <code>set(String, Object)</code> methods to the entity. The <code>get()</code> method returns a value by property name and the <code>set()</code> method stores a value by property name. The default names for these methods are <code>get</code> and <code>set</code>, and they can be overridden with the <code>@VirtualAccessMethods</code> annotation.</p>
+<p>EclipseLink weaves these methods if weaving is enabled, which provides support for lazy loading, change tracking, fetch groups, and internal optimizations. You must use the <code>get(String)</code> and <code>set(String, Object)</code> signatures, or else weaving will not work.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>Weaving is not supported when using virtual access methods with <code>OneToOne</code> mappings. If attempted, an exception will be thrown.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</div>
+<!-- class="sect4" -->
+<a id="TLADG223" name="TLADG223"></a>
+<div class="sect4"><a id="sthref97" name="sthref97"></a>
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Add a Data Structure</font></h4>
+<p>Add a data structure to store the extended attributes and values, that is, the virtual mappings. These can then be mapped to the database. See <a href="#CIAECEAE">Task 3: Provide Additional Mappings.</a></p>
+<p>A common way to store the virtual mappings is in a <code>Map</code> object (as shown in <a href="#BABJBFGB">Example 10-1</a>), but you can also use other strategies. For example you could store the virtual mappings in a directory system.</p>
+<p>When using field-based access, annotate the data structure with <code>@Transient</code> so the structure cannot be used for another mapping. When using property-based access, <code>@Transient</code> is unnecessary.</p>
+<p><a href="#BABJBFGB">Example 10-1</a> illustrates an entity class that uses property access. The @<code>Transient</code> annotation is illustrated in bold font.</p>
+<div class="example"><a id="BABJBFGB" name="BABJBFGB"></a><a id="TLADG224" name="TLADG224"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 10-1 Entity Class that Uses Property Access</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+@Entity
+@VirtualAccessMethods
+public class Customer{
+ 
+    @Id
+    private int id;
+    ...
+ 
+    <strong><code>@Transient</code></strong>
+    private Map&lt;String, Object&gt; extensions;
+ 
+    public &lt;T&gt; T get(String name) {
+        return (T) extentions.get(name);
+    }
+ 
+    public Object set(String name, Object value) {
+        return extensions.put(name, value);
+    }
+</pre></div>
+<!-- class="example" --></div>
+<!-- class="sect4" -->
+<a id="TLADG225" name="TLADG225"></a>
+<div class="sect4"><a id="sthref98" name="sthref98"></a>
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Use XML</font></h4>
+<p>As an alternative to, or in addition to, using the <code>@VirtualAccessMethods</code> annotation, you can use the <code>&lt;access&gt;</code> and <code>&lt;access-methods&gt;</code> elements, for example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;access&gt;VIRTUAL&lt;/access&gt;
+&lt;access-methods set-method="get" get-method="set"/&gt;
+</pre></div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" -->
+<a id="CIAIJJDH" name="CIAIJJDH"></a><a id="TLADG226" name="TLADG226"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task 2: Design the Schema</font></h3>
+<p>Provide database tables with extra columns for storing flexible mapping data. For example, the following <code>Customer</code> table includes two predefined columns, <code>ID</code> and <code>NAME</code>, and three flexible columns, <code>FLEX_COL1</code>, <code>FLEX_COL2</code>, <code>FLEX_COL3</code>:</p>
+<p><code>CUSTOMER</code> table</p>
+<ul>
+<li>
+<p><code>INTEGER</code> <code>ID</code></p>
+</li>
+<li>
+<p><code>VARCHAR</code> <code>NAME</code></p>
+</li>
+<li>
+<p><code>VARCHAR</code> <code>FLEX_COL1</code></p>
+</li>
+<li>
+<p><code>VARCHAR</code> <code>FLEX_COL2</code></p>
+</li>
+<li>
+<p><code>VARCHAR</code> <code>FLEX_COL3</code></p>
+</li>
+</ul>
+<p>You can then specify which of the <code>FLEX</code> columns should be used to persist an extended attribute, as described in <a href="#CIAECEAE">"Task 3: Provide Additional Mappings"</a>.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CIAECEAE" name="CIAECEAE"></a><a id="TLADG227" name="TLADG227"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task 3: Provide Additional Mappings</font></h3>
+<p>To provide additional mappings, add the mappings with the <code>column</code> and <code>access-methods</code> attributes to the <code>eclipselink-orm.xml</code> file, for example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;basic name="idNumber" attribute-type="String"&gt;
+  &lt;column name="FLEX_COL1"/&gt;
+  &lt;access-methods get-method="get" set-method="set"/&gt;
+&lt;/basic&gt;
+</pre></div>
+<!-- class="sect3" -->
+<a id="CIAIJHAG" name="CIAIJHAG"></a><a id="TLADG228" name="TLADG228"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task 4: Configure Persistence Properties and the Data Repository</font></h3>
+<p>Configure persistence unit properties to indicate that the application should retrieve the flexible mappings from the <code>eclipselink-orm.xml</code> file. You can set persistence unit properties using the <code>persistence.xml</code> file or by setting properties on the <code>EntityManagerFactory</code> interface, as described in the following sections.</p>
+<p>For more information about external mappings, see "External Mappings" in the EclipseLink documentation, at:</p>
+<p><code><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/External_Mappings">http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/External_Mappings</a></code></p>
+<a id="TLADG229" name="TLADG229"></a>
+<div class="sect4"><a id="sthref99" name="sthref99"></a>
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Configure the persistence.xml File</font></h4>
+<p>In the <code>persistence.xml</code> file, use the <code>eclipselink.metadata-source</code> property to use the default <code>eclipselink-orm.xml</code> file. Use the <code>eclipselink.metadata-source.xml.url</code> property to use a different file at the specified location, for example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;property name="eclipselink.metadata-source" value="XML"/&gt;
+&lt;property name="eclipselink.metadata-source.xml.url" value="foo://bar"/&gt;
+</pre></div>
+<!-- class="sect4" -->
+<a id="TLADG230" name="TLADG230"></a>
+<div class="sect4"><a id="sthref100" name="sthref100"></a>
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Configure EntityManagerFactory and the Metadata Repository</font></h4>
+<p>Extensions are added at bootstrap time through access to a metadata repository. The metadata repository is accessed through a class that provides methods to retrieve the metadata it holds. EclipseLink includes a metadata repository implementation that supports XML repositories.</p>
+<p>Specify the class to use and any configuration information for the metadata repository through persistence unit properties. The <code>EntityManagerFactory</code> interface integrates additional mapping information from the metadata repository into the metadata it uses to bootstrap.</p>
+<p>You can provide your own implementation of the class to access the metadata repository. Each metadata repository access class must specify an individual set of properties to use to connect to the repository.</p>
+<p>You can subclass either of the following classes:</p>
+<ul>
+<li>
+<p><code>org.eclipse.persistence.internal.jpa.extensions.MetadataRepository</code></p>
+</li>
+<li>
+<p><code>org.eclipse.persistence.internal.jpa.extensions.XMLMetadataRepository</code></p>
+</li>
+</ul>
+<p>In the following example, the properties that begin with <code>com.foo</code> are subclasses defined by the developer.</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;property name="eclipselink.metadata-source" value="com.foo.MetadataRepository"/&gt;
+&lt;property name="com.foo.MetadataRepository.location" value="foo://bar"/&gt;
+&lt;property name="com.foo.MetadataRepository.extra-data" value="foo-bar"/&gt;
+</pre></div>
+<!-- class="sect4" -->
+<a id="TLADG231" name="TLADG231"></a>
+<div class="sect4"><a id="sthref101" name="sthref101"></a>
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Refresh the Metadata Repository</font></h4>
+<p>If you change the metadata and you want an <code>EntityManager</code> instance based on the new metadata, you must call the <code>refreshMetadata()</code> method on the <code>EntityManagerFactory</code> interface to refresh the data. The next <code>EntityManager</code> instance will be based on the new metadata.</p>
+<p>The <code>refreshMetadata()</code> method takes a map of properties that can be used to override the properties previously defined for the <code>metadata-source</code> element.</p>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="TLADG232" name="TLADG232"></a>
+<div class="sect2"><a id="sthref102" name="sthref102"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Code Examples</font></h2>
+<p><a href="#CIADHIHE">Example 10-2</a> illustrates the following:</p>
+<ul>
+<li>
+<p>Field access is used for non-extension fields.</p>
+</li>
+<li>
+<p>Virtual access is used for extension fields, using defaults (<code>get(String)</code> and <code>set(String, Object)</code>).</p>
+</li>
+<li>
+<p>The <code>get(String)</code> and <code>set(String, Object)</code> methods will be woven, even if no mappings use them, because of the presence of <code>@VirtualAccessMethods</code>.</p>
+</li>
+<li>
+<p>Extensions are mapped in a portable way by specifying <code>@Transient</code>.</p>
+</li>
+</ul>
+<p>These items are illustrated in bold font.</p>
+<div class="example"><a id="CIADHIHE" name="CIADHIHE"></a><a id="TLADG233" name="TLADG233"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 10-2 Virtual Access Using Default get and set Method Names</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+@Entity
+<strong><code>@VirtualAccessMethods</code></strong>
+public class Address {
+ 
+    @Id
+    private int id;
+ 
+    <strong><code>@Transient</code></strong>
+    private Map&lt;String, Object&gt; extensions;
+ 
+    public int getId(){
+        return id;
+    }
+ 
+    <strong><code>public &lt;T&gt; T get(String name) {</code></strong>
+        <strong><code>return (T) extentions.get(name);</code></strong>
+    }
+ 
+    <strong><code>public Object set(String name, Object value) {</code></strong>
+       <strong><code> return extensions.put(name, value);</code></strong>
+    }
+. 
+.
+.
+ 
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CIAHGIEJ">Example 10-3</a> illustrates the following:</p>
+<ul>
+<li>
+<p>Field access is used for non-extension fields.</p>
+</li>
+<li>
+<p>The <code>@VirtualAccessMethods</code> annotation overrides methods to be used for getting and setting.</p>
+</li>
+<li>
+<p>The <code>get(String)</code> and <code>set(String, Object)</code> methods will be woven, even if no mappings use them, because of the presence of <code>@VirtualAccessMethods</code>.</p>
+</li>
+<li>
+<p>Extensions are mapped in a portable way by specifying <code>@Transient</code>.</p>
+</li>
+<li>
+<p>The XML for extended mapping indicates which <code>get()</code> and <code>set()</code> method to use.</p>
+</li>
+</ul>
+<p>These items are illustrated in bold font.</p>
+<div class="example"><a id="CIAHGIEJ" name="CIAHGIEJ"></a><a id="TLADG234" name="TLADG234"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 10-3 Overriding get and set Methods</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+@Entity
+<strong><code>@VirtualAccessMethods(get="getExtension", set="setExtension")</code></strong>
+public class Address {
+ 
+    @Id
+    private int id;
+ 
+    <strong><code>@Transient</code></strong>
+    private Map&lt;String, Object&gt; extensions;
+ 
+    public int getId(){
+        return id;
+    }
+ 
+    <strong><code>public &lt;T&gt; T getExtension(String name) {</code></strong>
+        <strong><code>return (T) extensions.get(name);</code></strong>
+    }
+ 
+    <strong><code>public Object setExtension(String name, Object value) {</code></strong>
+        <strong><code>return extensions.put(name, value);</code></strong>
+    }
+ 
+    ...
+ 
+    <strong><code>&lt;basic name="name" attribute-type="String"&gt;</code></strong>
+     <strong><code> &lt;column name="FLEX_1"/&gt;</code></strong>
+      <strong><code>&lt;access-methods get-method="getExtension" set-method="setExtension"/&gt;</code></strong>
+    <strong><code>&lt;/basic&gt;</code></strong>
+ 
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CIADJCIB">Example 10-4</a> illustrates the following:</p>
+<ul>
+<li>
+<p>Property access is used for non-extension fields.</p>
+</li>
+<li>
+<p>Virtual access is used for extension fields, using defaults (<code>get(String)</code> and <code>set(String, Object)</code>).</p>
+</li>
+<li>
+<p>The extensions are mapped in a portable way. <code>@Transient</code> is not required, because property access is used.</p>
+</li>
+<li>
+<p>The <code>get(String)</code> and <code>set(String, Object)</code> methods will be woven, even if no mappings use them, because of the presence of <code>@VirtualAccessMethods</code>.</p>
+</li>
+</ul>
+<p>These items are illustrated in bold font.</p>
+<div class="example"><a id="CIADJCIB" name="CIADJCIB"></a><a id="TLADG235" name="TLADG235"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 10-4 Using Property Access</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+@Entity
+<strong>@VirtualAccessMethods</strong>
+public class Address {
+ 
+    private int id;
+ 
+    private Map&lt;String, Object&gt; extensions;
+ 
+    @Id
+    public int getId(){
+        return id;
+    }
+ 
+    <strong>public &lt;T&gt; T get(String name) </strong>{
+        <strong><code>return (T) extensions.get(name);</code></strong>
+    }
+ 
+    <strong><code>public Object set(String name, Object value) {</code></strong>
+        <strong><code>return extensions.put(name, value);</code></strong>
+    }
+ 
+...
+</pre></div>
+<!-- class="example" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="softwareasaservice001.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="softwareasaservice003.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+                
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
+</html>

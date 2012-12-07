@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Using XML Metadata Representation to Override JAXB Annotations | EclipseLink 2.4.x Understanding EclipseLink</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
+<meta name="date" content="2012-12-07T9:39:13Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Using XML Metadata Representation to Override JAXB Annotations" />
+<meta name="relnum" content="Release 2.4" />
+<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="jpatoxml003.htm" title="Previous" type="text/html" />
+<link rel="next" href="jpatoxml005.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:mdbgdwjv8zu', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><b>EclipseLink Solutions Guide for EclipseLink</b><br />
+Release 2.4</div></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="jpatoxml003.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="jpatoxml005.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header -->
+<p align="center"><font color="#FF0000">Beta Draft: 2012-12-07</font></p>
+<a id="BEIJGBGA" name="BEIJGBGA"></a><a id="TLADG350" name="TLADG350"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Using XML Metadata Representation to Override JAXB Annotations</font></h1>
+<p>In addition to using Java annotations, EclipseLink provides an XML mapping configuration file called <code>eclipselink-oxm.xml</code> that you can use in place of or to override JAXB annotations in the source with an XML representation of the metadata. In addition to allowing all of the standard JAXB mapping capabilities it also includes advanced mapping types and options.</p>
+<p>An XML metadata representation is useful when:</p>
+<ul>
+<li>
+<p>You cannot modify the domain model because, for example, it come from a third party).</p>
+</li>
+<li>
+<p>You do not want to introduce compile dependencies on JAXB APIs (if you are using a version of Java that predates Java SE 6).</p>
+</li>
+<li>
+<p>You want to apply multiple JAXB mappings to a domain model (you are limited to one representation with annotations).</p>
+</li>
+<li>
+<p>Your object model already contains so many annotations from other technologies that adding more would make the class unreadable.</p>
+</li>
+</ul>
+<p>This section demonstrates how to use <code>eclipselink-oxm.xml</code> to override JAXB annotations</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>While using this mapping file enables many advanced features, it might prevent you from porting it to other JAXB implementations</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<a id="TLADG351" name="TLADG351"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref153" name="sthref153"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 1: Define Advanced Mappings in the XML</font></h2>
+<p>First, update the XML mapping file to expose the <code>eclipselink_oxm_2_3.xsd</code>. schema. <a href="#BEIDBECD">Example 12-20</a> shows how to modify the <code>&lt;xml-bindings&gt;</code> element in the mapping file to point to the correct namespace and leverage the schema. Each Java package can have one mapping file.</p>
+<div class="example"><a id="BEIDBECD" name="BEIDBECD"></a><a id="TLADG352" name="TLADG352"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 12-20 Updating XML Binding Information in the Mapping File</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0"?&gt;
+&lt;xml-bindings
+        xmlns="<strong>http://www.eclipse.org/eclipselink/xsds/persistence/oxm</strong>"
+        xmlns:xsi="<strong>http://www.w3.org/2001/XMLSchema-instance</strong>"
+        xsi:schemaLocation="<strong>http://www.eclipse.org/eclipselink/xsds/persistence/oxm  http://www.eclipse.org/eclipselink/xsds/eclipselink_oxm_2_4.xsd</strong>"
+       version="<strong>2.4</strong>"&gt;
+&lt;/xml-bindings&gt;
+</pre></div>
+<!-- class="example" --></div>
+<!-- class="sect2" -->
+<a id="TLADG353" name="TLADG353"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref154" name="sthref154"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 2: Configure Usage in JAXBContext</font></h2>
+<p>Next, pass the mapping file to <code>JAXBContext</code> in your object:</p>
+<ol>
+<li>
+<p>Specify the externalized metadata by inserting this code:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+Map&lt;String, Object&gt; properties = new HashMap&lt;String, Object&gt;(1);
+properties.put(JAXBContextProperties.OXM_METADATA_SOURCE, "org/example/oxm.xml);
+JAXBContext.newInstance("org.example', aClassLoader, properties);
+</pre></li>
+<li>
+<p>Create the properties object to pass to the <code>JAXBContext</code>. For this example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+Map&lt;String,Object&gt; properties = new HashMap&lt;String,Object&gt;();
+properties.put(JAXBContextFactory.ECLIPSELINK_OXM_XML_KEY, metadata);
+</pre></li>
+<li>
+<p>Create the <code>JAXBContext</code>. For this example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+JAXBContext.newInstance("example.order:example.customer", aClassLoader, properties);
+</pre></li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="TLADG354" name="TLADG354"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref155" name="sthref155"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 3: Specify the MOXy as the JAXB Implementation</font></h2>
+<p>You must use MOXy as your JAXB implementation. To do so, do the following:</p>
+<ol>
+<li>
+<p>Open a <code>jaxb.properties</code> file and add the following line:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+javax.xml.bind.context.factory=org.eclipse.persistence.jaxb.JAXBContextFactory
+</pre></li>
+<li>
+<p>Copy the <code>jaxb.properties</code> file to the package that contains your domain classes.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="jpatoxml003.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="jpatoxml005.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+                
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Performance Features | EclipseLink 2.4.x Understanding EclipseLink</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
+<meta name="date" content="2012-12-07T9:39:14Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Performance Features" />
+<meta name="relnum" content="Release 2.4" />
+<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="performance.htm" title="Previous" type="text/html" />
+<link rel="next" href="performance002.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:mdbgdwjv8zu', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><b>EclipseLink Solutions Guide for EclipseLink</b><br />
+Release 2.4</div></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="performance.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="performance002.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header -->
+<p align="center"><font color="#FF0000">Beta Draft: 2012-12-07</font></p>
+<a id="CHDIIAFD" name="CHDIIAFD"></a><a id="TLADG414" name="TLADG414"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Performance Features</font></h1>
+<p>EclipseLink includes a number of performance features that make it the industry's best performing and most scalable JPA implementation. These features include:</p>
+<ul>
+<li>
+<p><a href="#CHDCGIHF">Object Caching</a></p>
+</li>
+<li>
+<p><a href="#CHDJFFEJ">Querying</a></p>
+</li>
+<li>
+<p><a href="#CHDDGGFI">Mapping</a></p>
+</li>
+<li>
+<p><a href="#CHDBIBAI">Transactions</a></p>
+</li>
+<li>
+<p><a href="#CHDHFDEJ">Database</a></p>
+</li>
+<li>
+<p><a href="#CHDIICEJ">Tools</a></p>
+</li>
+</ul>
+<a id="CHDCGIHF" name="CHDCGIHF"></a><a id="TLADG415" name="TLADG415"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Object Caching</font></h2>
+<p>The EclipseLink cache is an in-memory repository that stores recently read or written objects based on class and primary key values. The cache helps improve performance by holding recently read or written objects and accessing them in-memory to minimize database access.</p>
+<p>Caching allows you to:</p>
+<ul>
+<li>
+<p>Set how long the cache lives and the time of day, a process called cache invalidation.</p>
+</li>
+<li>
+<p>Configure cache types (Weak, Soft, SoftCache, HardCache, Full) on a per entity basis.</p>
+</li>
+<li>
+<p>Configure cache size on a per entity basis.</p>
+</li>
+<li>
+<p>Coordinate clustered caches.</p>
+</li>
+</ul>
+<a id="TLADG416" name="TLADG416"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref181" name="sthref181"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Caching Annotations</font></h3>
+<p>EclipseLink defines these entity caching annotations:</p>
+<ul>
+<li>
+<p><code>@Cache</code></p>
+</li>
+<li>
+<p><code>@TimeOfDay</code></p>
+</li>
+<li>
+<p><code>@ExistenceChecking</code></p>
+</li>
+</ul>
+<p>EclipseLink also provides a number of persistence unit properties that you can specify to configure the EclipseLink cache (see "Persistence Property Extensions Reference" in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>). These properties might compliment or provide an alternative to the usage of annotations.</p>
+</div>
+<!-- class="sect3" -->
+<a id="TLADG417" name="TLADG417"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref182" name="sthref182"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Using the @Cache Annotation</font></h3>
+<p>EclipseLink uses identity maps to cache objects in order to enhance performance, as well as maintain object identity. You can control the cache and its behavior by using the <code>@Cache</code> annotation in your entity classes. <a href="#CHDBDCBC">Example 15-1</a> shows how to implement this annotation.</p>
+<div class="example"><a id="CHDBDCBC" name="CHDBDCBC"></a><a id="TLADG418" name="TLADG418"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-1 Using the @Cache Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+@Entity
+ @Table(name="EMPLOYEE")
+ <strong>@Cache (</strong>
+     <strong>type=CacheType.WEAK,</strong>
+     <strong>isolated=false,</strong>
+     <strong>expiry=600000,</strong>
+     <strong>alwaysRefresh=true,</strong>
+     <strong>disableHits=true,</strong>
+     <strong>coordinationType=INVALIDATE_CHANGED_OBJECTS</strong>
+     <strong>)</strong>
+ public class Employee implements Serializable {
+     ...
+ }
+</pre></div>
+<!-- class="example" -->
+<p>For more information about object caching and using the <code>@Cache</code> annotation, see "@Cache" in the <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CHDJFFEJ" name="CHDJFFEJ"></a><a id="TLADG419" name="TLADG419"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Querying</font></h2>
+<p>The scope of a query, the amount of data returned, and how that data is returned can all affect the performance of a EclipseLink-enabled application. EclipseLink query mechanisms enhance query performance by providing these features:</p>
+<ul>
+<li>
+<p><a href="#CHDEHHHD">Read-only Queries</a></p>
+</li>
+<li>
+<p><a href="#CHDEGCHH">Join Fetching</a></p>
+</li>
+<li>
+<p><a href="#CHDFHFEB">Batch Reading</a></p>
+</li>
+<li>
+<p><a href="#CHDDJCAC">Fetch Size</a></p>
+</li>
+<li>
+<p><a href="#CHDIEBJE">Pagination</a></p>
+</li>
+<li>
+<p><a href="#CHDBGFAI">Cache Usage</a></p>
+</li>
+</ul>
+<p>This section describes how these features improve performance.</p>
+<a id="CHDEHHHD" name="CHDEHHHD"></a><a id="TLADG420" name="TLADG420"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Read-only Queries</font></h3>
+<p>EclipseLink uses the <code>eclipselink.read-only</code> hint, <code>QueryHint</code> (<code>@QueryHint</code>) to retrieve read-only results back from a query. On nontransactional read operations, where the requested entity types are stored in the shared cache, you can request that the shared instance be returned instead of a detached copy.</p>
+<p>For more information about read-only queries, see the documentation for the read-only hint in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDEGCHH" name="CHDEGCHH"></a><a id="TLADG421" name="TLADG421"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Join Fetching</font></h3>
+<p>Join Fetching enhances performance by enabling the joining and reading of the related objects in the same query as the source object. Enable Join Fetching by using the <code>@JoinFetch</code> annotation, as shown in <a href="#CHDBICAF">Example 15-2</a>. This example shows how the <code>@JoinFetch</code> annotation specifies the <code>Employee</code> field <code>managedEmployees</code>.</p>
+<div class="example"><a id="CHDBICAF" name="CHDBICAF"></a><a id="TLADG422" name="TLADG422"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-2 Enabling JoinFetching</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+@Entity
+ public class Employee implements Serializable {
+     ...
+     @OneToMany(cascade=ALL, mappedBy="owner")
+   <strong>  @JoinFetch(value=OUTER)</strong>
+     public Collection&lt;Employee&gt; getManagedEmployees() {
+         return managedEmployees;
+     }
+     ...
+ }
+</pre></div>
+<!-- class="example" -->
+<p>For more details on Join Fetching, see "@JoinFetch" in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDFHFEB" name="CHDFHFEB"></a><a id="TLADG423" name="TLADG423"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Batch Reading</font></h3>
+<p>The <code>eclipselink.batch</code> hint supplies EclipseLink with batching information so subsequent queries of related objects can be optimized in batches instead of being retrieved one-by-one or in one large joined read. Batch reading is more efficient than joining because it avoids reading duplicate data. Batching is only allowed on queries that have a single object in their select clause.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDDJCAC" name="CHDDJCAC"></a><a id="TLADG424" name="TLADG424"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Fetch Size</font></h3>
+<p>If you have large queries that return a large number of objects you can improve performance by reducing the number database hits required to satisfy the selection criteria. To do this, use the The <code>eclipselink.jdbc.fetch-size</code> hint. This hint specifies the number of rows that should be fetched from the database when more rows are required (depending on the JDBC driver support level). Most JDBC drivers default to a fetch size of 10, so if you are reading 1000 objects, increasing the fetch size to 256 can significantly reduce the time required to fetch the query's results. The optimal fetch size is not always obvious. Usually, a fetch size of one half or one quarter of the total expected result size is optimal. Note that if you are unsure of the result set size, incorrectly setting a fetch size too large or too small can decrease performance.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDIEBJE" name="CHDIEBJE"></a><a id="TLADG425" name="TLADG425"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Pagination</font></h3>
+<p>Slow paging can result in significant application overhead; however, EclipseLink includes a variety of solutions for improving paging results; for example, you can:</p>
+<ul>
+<li>
+<p>Configure the first and maximum number of rows to retrieve when executing a query.</p>
+</li>
+<li>
+<p>Perform a query on the database for all of the ID values that match the criteria and then use these values to retrieve specific sets.</p>
+</li>
+<li>
+<p>Configure EclipseLink to return a <code>ScrollableCursor</code> object from a query by using query hints. This returns a database cursor on the query's result set and allows the client to scroll through the results page by page.</p>
+</li>
+</ul>
+<p>For details on improving paging performance, see "How to use EclipseLink Pagination" in the EclipseLink online documentation, at:</p>
+<p><code><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Pagination#How_to_use_EclipseLink_Pagination">http://wiki.eclipse.org/EclipseLink/Examples/JPA/Pagination#How_to_use_EclipseLink_Pagination</a></code></p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDBGFAI" name="CHDBGFAI"></a><a id="TLADG426" name="TLADG426"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Cache Usage</font></h3>
+<p>EclipseLink uses a shared cache mechanism that is scoped to the entire persistence unit. When operations are completed in a particular persistence context, the results are merged back into the shared cache so that other persistence contexts can use them. This happens regardless of whether the entity manager and persistence context are created in Java SE or Java EE. Any entity persisted or removed using the entity manager will always be kept consistent with the cache.</p>
+<p>You can specify how the query should interact with the EclipseLink cache by using the <code>eclipselink.cache-usage</code> hint. For more information, see "cache usage" in t<em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CHDDGGFI" name="CHDDGGFI"></a><a id="TLADG427" name="TLADG427"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Mapping</font></h2>
+<p>Mapping performance is enhanced by these features:</p>
+<ul>
+<li>
+<p><a href="#CHDDJHCG">Read-Only Objects</a></p>
+</li>
+<li>
+<p><a href="#CHDIJAAH">Weaving</a></p>
+</li>
+</ul>
+<p>This section describes these features.</p>
+<a id="CHDDJHCG" name="CHDDJHCG"></a><a id="TLADG429" name="TLADG429"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Read-Only Objects</font></h3>
+<p>When you declare a class read-only, clones of that class are neither created nor merged greatly improving performance. You can declare a class as read-only within the context of a unit of work by using the <code>addReadOnlyClass()</code> method.</p>
+<ul>
+<li>
+<p>To configure a read-only class for a single unit of work, specify that class as the argument to <code>addReadOnlyClass()</code>:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+myUnitofWork.<strong>addReadOnlyClass(B.class)</strong>;
+</pre></li>
+<li>
+<p>To configure multiple classes as read-only, add them to a vector and specify that vector as the argument to <code>addReadOnlyClass()</code>:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+myUnitOfWork.<strong>addReadOnlyClasses(myVectorOfClasses)</strong>;
+</pre></li>
+</ul>
+<p>For more information about using read-only objects to enhance performance, see "@ReadOnly" in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDIJAAH" name="CHDIJAAH"></a><a id="TLADG430" name="TLADG430"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Weaving</font></h3>
+<p>Weaving is a technique of manipulating the byte-code of compiled Java classes. The EclipseLink JPA persistence provider uses weaving to enhance both JPA entities and Plain Old Java Object (POJO) classes for such things as lazy loading, change tracking, fetch groups, and internal optimizations.Weaving can be performed either dynamically at runtime, when entities are loaded, or statically at compile time by post-processing the entity <code>.class</code> files. By default, EclipseLink uses dynamic weaving whenever possible. This includes inside an Java EE 5/6 application server and in Java SE when the EclipseLink agent is configured. Dynamic weaving is recommended as it is easy to configure and does not require any changes to a project's build process</p>
+<p>For details on how to use weaving to enhance application performance, see "weaving" in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CHDBIBAI" name="CHDBIBAI"></a><a id="TLADG431" name="TLADG431"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Transactions</font></h2>
+<p>To optimize performance during data transactions, use change tracking,. Change tracking allows you to tune the way EclipseLink detects changes that occur during a transaction. You should choose the strategy based on the usage and data modification patterns of the entity type as different types may have different access patterns and hence different settings, and so on.</p>
+<p>Enable change tracking by using the <code>@ChangeTracking</code> annotation, as shown in <a href="#CHDJDDFA">Example 15-3</a>.</p>
+<div class="example"><a id="CHDJDDFA" name="CHDJDDFA"></a><a id="TLADG432" name="TLADG432"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-3 Enabling Change Tracking</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+@Entity
+@Table(name="EMPLOYEE")
+<strong>@ChangeTracking(OBJECT)</strong> (
+public class Employee implements Serializable {
+    ...
+}
+</pre></div>
+<!-- class="example" -->
+<p>For more details on change tracking, see "@ChangeTracking" in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDHFDEJ" name="CHDHFDEJ"></a><a id="TLADG433" name="TLADG433"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Database</font></h2>
+<p>Database performance features in EclipseLink include:</p>
+<ul>
+<li>
+<p><a href="#CHDJFFHG">Connection Pooling</a></p>
+</li>
+<li>
+<p><a href="#CHDHECDD">Parameterized SQL and Statement Caching</a></p>
+</li>
+<li>
+<p><a href="#CHDHDFAD">Batch Writing</a></p>
+</li>
+</ul>
+<p>This section describes these features.</p>
+<a id="CHDJFFHG" name="CHDJFFHG"></a><a id="TLADG434" name="TLADG434"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Connection Pooling</font></h3>
+<p>Establishing a connection to a data source can be time-consuming, so reusing such connections in a connection pool can improve performance. EclipseLink uses connection pools to manage and share the connections used by server and client sessions. This feature reduces the number of connections required and allows your application to support many clients.</p>
+<p>By default, EclipseLink sessions use internal connection pools. These pools allow you to optimize the creation of read connections for applications that read data only to display it and only infrequently modify data. The also allow you to use Workbench to configure the default (write) and read connection pools and to create additional connection pools for object identity or any other purpose.</p>
+<p>In addition to internal connection pools, you can also configure EclipseLink to use any of these types of connection pools:</p>
+<ul>
+<li>
+<p>External connection pools; you must use this type of connection pool to integrate with external transaction controller (JTA).</p>
+</li>
+<li>
+<p>Default (write) and read connection pools;</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>Sequence connection pools; Use these types of pools when your application requires table sequencing (that is, non-native sequencing) and you are using an external transaction controller. Application-specific connection pools; These are connection pools that you can create and use for any application purpose, provided you are using internal EclipseLink connection pools in a session.</p>
+</li>
+</ul>
+<p>For more information about using connection pools with EclipseLink, see the following topics in <em>EclipseLink Concepts</em>:</p>
+<ul>
+<li>
+<p>"Understanding Connections"</p>
+</li>
+<li>
+<p>"Understanding Connection Pools"</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="CHDHECDD" name="CHDHECDD"></a><a id="TLADG435" name="TLADG435"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Parameterized SQL and Statement Caching</font></h3>
+<p>Parameterized SQL can prevent the overall length of an SQL query from exceeding the statement length limit that your JDBC driver or database server imposes. Using parameterized SQL along with prepared statement caching can improve performance by reducing the number of times the database SQL engine parses and prepares SQL for a frequently called query</p>
+<p>By default, EclipseLink enables parameterized SQL but not prepared statement caching. You should enable statement caching either in EclipseLink when using an internal connection pool or in the data source when using an external connection pool and want to specify a statement cache size appropriate for your application.</p>
+<p>To enable parameterized SQL, add this line to the <code>persistence.xml</code> file that is in the same path as your domain classes:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;property name="eclipselink.jdbc.bind-parameters" value="true"/&gt;
+</pre>
+<p>To disable parameterized SQL, change <code>value=</code> to <code>false</code>.</p>
+<p>For more information about using parameterized SQL and statement caching, see "jdbc.bind-parameters" in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDHDFAD" name="CHDHDFAD"></a><a id="TLADG436" name="TLADG436"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Batch Writing</font></h3>
+<p>Batch writing helps optimize transactions with multiple write operations. Batch writing is enabled by using the EclipseLink JDBC extension batch-writing. You set one of the following parameter this property into the session at deployment time:</p>
+<ul>
+<li>
+<p>JDBC; Use JDBC batch writing.</p>
+</li>
+<li>
+<p>Buffered; Do not use either JDBC batch writing nor native platform batch writing.</p>
+</li>
+<li>
+<p>Oracle-JDBC; Use both JDBC batch writing and Oracle native platform batch writing and use <code>OracleJDBC</code> in your property map.</p>
+</li>
+<li>
+<p>None; Disable batch writing.</p>
+</li>
+</ul>
+<p>For more information about batch writing, see "jdbc.batch-writing" in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CHDIICEJ" name="CHDIICEJ"></a><a id="TLADG437" name="TLADG437"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Tools</font></h2>
+<p>EclipseLink provides monitoring and optimization tools, as described in <a href="performance002.htm#CHDFIECF">Monitoring and Optimizing EclipseLink-Enable Applications</a>.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="performance.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="performance002.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+                
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
+</html>

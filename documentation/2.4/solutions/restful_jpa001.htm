@@ -1,0 +1,491 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Introduction to the Solution | EclipseLink 2.4.x Understanding EclipseLink</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
+<meta name="date" content="2012-12-07T9:39:14Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Introduction to the Solution" />
+<meta name="relnum" content="Release 2.4" />
+<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="restful_jpa.htm" title="Previous" type="text/html" />
+<link rel="next" href="restful_jpa002.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:mdbgdwjv8zu', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><b>EclipseLink Solutions Guide for EclipseLink</b><br />
+Release 2.4</div></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="restful_jpa.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="restful_jpa002.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header -->
+<p align="center"><font color="#FF0000">Beta Draft: 2012-12-07</font></p>
+<a id="A1585838" name="A1585838"></a><a id="TLADG814" name="TLADG814"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Introduction to the Solution</font></h1>
+<p>REpresentational State Transfer (REST) defines a set of architectural principles for distributed systems, in which Web Services are viewed as resources. Those resources are identified by URIs and can be addressed and transferred using the HTTP protocol. REST can be used with a number of technologies, including JPA. HTTP methods are used to access and perform operations on resources.</p>
+<p>You can use the Java API for RESTful Web Services (JAX-RS) to develop applications that use the REST architecture, by using annotations to define resources and the actions that can be performed on those resources. The "RESTful Service Example" at <code><a href="wiki.eclipse.org/EclipseLink/Examples/REST/GettingStarted">wiki.eclipse.org/EclipseLink/Examples/REST/GettingStarted</a></code> gives an example using this approach to interact with JPA persistence units.</p>
+<p>However, EclipseLink provides an API that makes it easier to implement REST, without the need to use JAX-RS directly. EclipseLink Java Persistence API for RESTful Web Services (JPA-RS) can be used to interact with JPA persistence units and EJB session bean methods without explicitly writing JAX-RS code, thus providing a simple way to expose these Java EE capabilities through REST.</p>
+<p>JPA-RS is made available via a web fragment, which extends the capabilities of a web application. The REST functionality is made available by including the JPA-RS jar in the WEB-INF/lib folder of a web application.</p>
+<p>JPA-RS runtime provides access to all persistence units packaged in the same application that it is running in as well as any dynamic persistence unit that is provisioned within it.</p>
+<a id="A1656101" name="A1656101"></a>
+<div class="sect2">
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Implementing the Solution</font></h2>
+<p>This section contains the following tasks for exposing JPA entities using JPA-RS:</p>
+<ul>
+<li>
+<p><a href="#CHDCIBDG">Step 1: Prerequisites</a></p>
+</li>
+<li>
+<p><a href="#CHDGGJJJ">Step 2: Create and Configure the Application</a></p>
+</li>
+<li>
+<p><a href="#CHDBHBAC">Step 3: Understand JPA-RS URI Basics</a></p>
+</li>
+<li>
+<p><a href="#CHDCIHEG">Step 4: Issue Client Calls for Operations on the Persistence Unit</a></p>
+</li>
+<li>
+<p><a href="#CHDBIIFF">Step 5: Represent Entities Using JPA, JAXB, or JSON</a></p>
+</li>
+<li>
+<p><a href="#CHDGJEDF">Step 6: Implement Security</a></p>
+</li>
+</ul>
+<a id="CHDCIBDG" name="CHDCIBDG"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Step 1: Prerequisites</font></h3>
+<p>To implement and use EclipseLink JPA-RS, you need:</p>
+<ul>
+<li>
+<p>Either of the following Java EE application servers:</p>
+<ul>
+<li>
+<p>Oracle WebLogic Server 12<em>c</em> Release 1 (12.1.2) or later.</p>
+</li>
+<li>
+<p>Glassfish Server 3.1.2 or later.</p>
+</li>
+</ul>
+<p>These servers include:</p>
+<ul>
+<li>
+<p>EclipseLink 2.4 or later, configured as the persistence provider.</p>
+</li>
+<li>
+<p>Jersey, the reference implementation of the Java API for RESTful Web Services (JAX-RS) 1.0.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>The <code>org.eclipse.persistence.jpars</code><em><code>_version</code></em><code>.jar</code> file. This file is included in the EclipseLink distributions from the Eclipse foundation, at <code><a href="http://www.eclipse.org/eclipselink/downloads/">http://www.eclipse.org/eclipselink/downloads/</a></code>:</p>
+<ul>
+<li>
+<p>In the installer distribution, the file is located in <code>eclipselink\jlib\jpa\</code>.</p>
+</li>
+<li>
+<p>In the bundles distribution, the file is located with the other bundles.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Any compliant Java Database Connectivity (JDBC) database, including Oracle Database, Oracle Database Express Edition (Oracle Database XE), or MySQL. These instructions are based on Oracle Database XE 11g Release 2.</p>
+<p>For the certification matrix, see</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="CHDGGJJJ" name="CHDGGJJJ"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Step 2: Create and Configure the Application</font></h3>
+<p>JPA-RS is designed to function with a standard JPA application, with little extra work required beyond enabling JPA-RS, as described below:</p>
+<ol>
+<li><a id="CHDIFBID" name="CHDIFBID"></a>
+<p>Develop an application using one or more standard JPA persistence units, package it in a WAR/EAR file, and deploy it normally.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>Weaving is required for several features to work: providing relationships as links, editing relationships, and dealing with lazy x-1 relationships. Either deploy to a Java EE compliant server or statically weave your classes.</p>
+<p>Lazy x-1 relationships are only supported when using the JPA RS default mapping strategy, which returns those mappings as links by using read-only mappings for the JSON/XML support and providing the links through a weaved attribute.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</li>
+<li><a id="CHDDHCHE" name="CHDDHCHE"></a>
+<p>Include the JPA-RS servlet in the EAR/WAR containing the application. (For instructions on downloading, see.<a href="#CHDCIBDG">Step 1: Prerequisites</a>)</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>The JPA-RS JAR file includes a <code>web-fragment.xml</code> file that identifies the JPA-RS servlet and defines the root URI for the RESTful service.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>Add the <code>org.eclipse.persistence.jpars_</code><em><code>version_no</code></em><code>.jar</code> file to the WAR/EAR containing the application, under <code>WEB-INF/lib</code>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="CHDBHBAC" name="CHDBHBAC"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Step 3: Understand JPA-RS URI Basics</font></h3>
+<p>URIs used for making HTTP calls for JPA-RS follow these standard patterns:</p>
+<ul>
+<li>
+<p>The base URL for JPA-RS for an application is: <code>http://</code><em><code>server</code></em><code>:</code><em><code>port</code></em>/<em><code>application-name</code></em><code>/persistence/</code></p>
+</li>
+<li>
+<p>For base operations on the persistence unit, add the persistence unit name:</p>
+<p><code>/persistence/{unit-name}</code></p>
+</li>
+<li>
+<p>For specific types of operations, add the type of operation, for example:</p>
+<ul>
+<li>
+<p>Entity operations: <code>/persistence/{unit-name}/entity</code></p>
+</li>
+<li>
+<p>Query operations: <code>/persistence/{unit-name}/query</code></p>
+</li>
+<li>
+<p>Single result query operations: <code>/persistence/{unit-name}/querySingleResult</code></p>
+</li>
+<li>
+<p>Metadata operations: <code>/persistence/{unit-name}/metadata</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>For complete documentation on how to construct these URIs, see <a href="restful_jpa003.htm#CHDEGJIG">HTTP Request Reference for JPA-RS.</a></p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDCIHEG" name="CHDCIHEG"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Step 4: Issue Client Calls for Operations on the Persistence Unit</font></h3>
+<p>Clients use HTTP calls to perform operations on persistence units in a deployed application. The requirements and options for constructing the calls are described <a href="restful_jpa003.htm#CHDEGJIG">HTTP Request Reference for JPA-RS.</a></p>
+<a id="CHDCDFHG" name="CHDCDFHG"></a>
+<div class="sect4">
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Specify Media Format in the Header</font></h4>
+<p>This REST interface can handle both XML and JSON representations of data. The caller is responsible for using HTTP header values to indicate the format of the content:</p>
+<ul>
+<li>
+<p><code>Content-Type = application/json</code> indicates that the content being sent is JSON</p>
+</li>
+<li>
+<p><code>Content-Type = application/xml</code> indicates that the content being sent is XML</p>
+</li>
+<li>
+<p><code>Accept = application/json</code> indicates that the expected&nbsp;format of the result is JSON</p>
+</li>
+<li>
+<p><code>Accept = application/xml</code> indicates that the expected&nbsp;format of the result is XML</p>
+</li>
+</ul>
+<p>If no header value is specified, JSON is used by default. If <code>Content-type</code> is specified and <code>Accept</code> is not specified, the returned format matches the <code>Content-type</code> passed in.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>In many REST utilities, the <code>Accept</code> value is defaulted to <code>application/xml</code>. In those cases, you must configure this value explicitly, if you want JSON.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</div>
+<!-- class="sect4" -->
+<a id="CHDIJCEC" name="CHDIJCEC"></a>
+<div class="sect4">
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Configure Web Caching (Optional)</font></h4>
+<p>EclipseLink provides internal caching, but you can also cache the results from REST URI calls. The results can be cached at various points between the initiating server and the user, including the browser. This caching is determined by URI structure and the HTTP header information in the response from the REST calls. Generally only <code>GET</code> call responses are cached, so these must be addressed carefully to ensure the proper caching information is provided and the correct information is returned.</p>
+</div>
+<!-- class="sect4" -->
+<a id="CHDGBJGH" name="CHDGBJGH"></a>
+<div class="sect4">
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">About Logging</font></h4>
+<p>Messages related to JPA-RS operations are logged to a logger called <code>org.eclipse.persistence.jpars</code>. Most messages are logged at the <code>FINE</code> level. Exception stacks are logged at <code>FINER</code>.</p>
+<p>Messages related to operations within <code>EntityManager</code>s, <code>EntityManagerFactory</code>s and <code>JAXBContext</code>s are logged in the same manner as other EclipseLink logging.</p>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" -->
+<a id="CHDBIIFF" name="CHDBIIFF"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Step 5: Represent Entities Using JPA, JAXB, or JSON</font></h3>
+<p>Entities in JPA-RS are represented in two ways:</p>
+<ul>
+<li>
+<p><strong>As JPA Entities</strong> - The mappings of the JPA entities must be represented in the typical EclipseLink JPA fashion, using either annotations or XML files. These mappings are used to interact with the data source.</p>
+</li>
+<li>
+<p><strong>As JAXB/JSON</strong> - No specific mapping information is required when using JAXB/JSON. By default, JPA-RS uses the JAXB defaults (defined in the JAXB specification) to map to JAXB/JSON. You can optionally provide JAXB annotations on the classes to alter the way the objects are mapped. Additionally, the persistence unit property <code>eclipselink.jpa-rs.oxm</code> can be specified in a persistence unit's <code>persistence.xml</code> to specify XML-defined JAXB mappings.</p>
+</li>
+</ul>
+<div class="sect4"><a id="sthref195" name="sthref195"></a>
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Relationships</font></h4>
+<p>In general, JAXB default mappings are sufficient to allow information exchange using JSON/JAXB. There are, however, some special cases when dealing with relationships.</p>
+<a id="sthref196" name="sthref196"></a>
+<p><b><font face="arial, helvetica, sans-serif" color="#330099">Bidirectional Relationships and Cycles</font></b></p>
+<p>Bidirectional relationships are typical in JPA and are easy to represent in a database using foreign keys. They are more difficult to represent in a XML or JSON document using standard JAXB. However, the EclipseLink JAXB implementation provides a way to define an inverse relationship. Inverse relationships are not directly written to XML or JSON but are populated when the XML or JSON is unmarshalled. <em>The way this is handles is as follows:</em></p>
+<p>JPA bidirectional relationships are defined to have an owning side and a non-owning side. JPA mapping provides a <code>mapped-by</code> attribute that defines which is which. JPA-RS defaults the owning side to be an inverse relationship. As a result, when an object with an owned-relationship is read or written, that relationship is ignored.</p>
+<p>Consider the following pseudo-code:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+  @Entity
+  ClassA{
+ 
+  @Id
+  int id
+ 
+  @OneToOne
+  myB
+ 
+}
+ 
+ 
+  @Entity
+  ClassB{
+ 
+  @Id
+  int id
+ 
+  @OneToOne(mappedby="myB")
+  myA
+ 
+}
+</pre>
+<p>If the objects are identified as follows...</p>
+<ul>
+<li>
+<p><code>A1</code> with <code>id=1</code> and <code>myB = B1</code></p>
+</li>
+<li>
+<p><code>B1</code> with <code>id=11</code> and <code>myA = A1</code></p>
+</li>
+</ul>
+<p>...the following JSON cooresponds to those objects:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+  A {
+    id:1
+  }
+ 
+  B {
+    id:11
+    myA: {
+      id: 1
+    }
+  }
+</pre>
+<p>Cycles can be difficult to detect, and JPA-RS requires that you provide JAXB mappings. That allows EclipseLink to resolve cycles in the cases where they can cause problems. In general, issues arise only when you try to create a group of new objects that include a cycle. To avoid problems in such cases, choose one of the mappings in the cycle and map it as <code>XMLTransient</code>.</p>
+<a id="CHDBDBHJ" name="CHDBDBHJ"></a>
+<p><b><font face="arial, helvetica, sans-serif" color="#330099">Pass By Reference, Pass By Value</font></b></p>
+<p>JPA-RS allows relationship objects to be passed either by value or by reference.</p>
+<p>To pass an object by value, create typical JSON or XML that represents the object. The following JSON passes <code>myA</code> by value:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+  B {
+    id:11
+    myA {
+      id: 1
+    }
+  }
+</pre>
+<p>To pass an object by reference, use a <code>link</code>. The link represents the JPA-RS call necessary to get that object. The following JSON passes <code>myA</code> by reference:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+  B {
+    id:11
+    myA {
+      _link:{
+          href: "http://localhost:8080/app/persistence/pu/entity/A/1"
+          method: "GET"
+          rel: "self"
+      }
+    }
+  }
+</pre>
+<p>Lists can mix and match items represented by reference and by value.</p>
+<p>JPA-RS read operations currently return all relationships by reference.</p>
+</div>
+<!-- class="sect4" -->
+<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref197" name="sthref197"></a>
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Sample JSON</font></h4>
+<p>The following example shows JSON that can be sent to JPA-RS in a regular-expression-like syntax:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+  &lt;code&gt;
+  {
+    numericAttribute: 1
+    stringAttribute: "auction1"
+    dateAttribute: 12-09-16
+    singleRelatedItem: RELATED_ITEM?
+      listRelatedItem:
+      {
+          RELATED_ITEM*
+      }
+  }
+ 
+ 
+  RELATED_ITEM =
+ 
+      {
+        numericAttribute: 11
+        stringAttribute: "myName"
+      }
+ 
+  OR
+ 
+      _link {
+        rel="self", 
+        href=LINK_HREF, 
+        method="GET"
+     }
+</pre>
+<p>The following JSON represents an entity called <code>StaticAuction</code> with several directly mapped fields and a collection of an entity called <code>Bid</code>.</p>
+<pre xml:space="preserve" class="oac_no_warn">
+  {
+    "description": "Auction 1",
+    "endPrice": 0,
+    "id": 2,
+    "image": "auction1.jpg",
+    "name": "A1",
+    "sold": false,
+    "startPrice": 100,
+    "_relationships": [(1)
+      {
+        "_link": {
+        "href": "http://localhost:8080/eclipselink.jpars.test/persistence/auction-static/entity/StaticAuction/2/bids",
+        "rel": "bids"
+        }
+      }
+      ],
+    "bids": [(2)
+      {
+        "_link": {
+       "href": "http://localhost:8080/eclipselink.jpars.test/persistence/auction-static/entity/StaticBid/5",
+        "method": "GET",
+        "rel": "self"
+      }
+    },
+    {
+      "_link": {
+        "href": "http://localhost:8080/eclipselink.jpars.test/persistence/auction-static/entity/StaticBid/6",
+        "method": "GET",
+        "rel": "self"
+      }
+    }
+  ]
+  }
+</pre>
+<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref198" name="sthref198"></a>
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Sample XML</font></h4>
+<p>XML representation mimics the JSON representation. The following is sample XML for an entity called <code>StaticAuction</code>, with several directly mapped attributes and a list of an entity called <code>Bid</code>.</p>
+<pre xml:space="preserve" class="oac_no_warn">
+  &lt;staticAuction xmlns:atom="http://www.w3.org/2005/Atom"&gt;
+    &lt;description&gt;Auction 1&lt;/description&gt;
+    &lt;endPrice&gt;0.0&lt;/endPrice&gt;
+    &lt;id&gt;2&lt;/id&gt;
+    &lt;image&gt;auction1.jpg&lt;/image&gt;
+    &lt;name&gt;A1&lt;/name&gt;
+    &lt;sold&gt;false&lt;/sold&gt;
+    &lt;startPrice&gt;100.0&lt;/startPrice&gt;
+    &lt;_relationships&gt;
+      &lt;_link href="http://localhost:8080/eclipselink.jpars.test/persistence/auction-static/entity/StaticAuction/2/bids" rel="bids" /&gt;
+    &lt;/_relationships&gt;
+    &lt;bids&gt;
+      &lt;_link href="http://localhost:8080/eclipselink.jpars.test/persistence/auction-static/entity/StaticBid/5" method="GET" rel="self" /&gt;
+    &lt;/bids&gt;
+    &lt;bids&gt;
+      &lt;_link href="http://localhost:8080/eclipselink.jpars.test/persistence/auction-static/entity/StaticBid/6" method="GET" rel="self" /&gt;
+    &lt;/bids&gt;
+  &lt;/staticAuction&gt; 
+</pre></div>
+<!-- class="sect4" --></div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" -->
+<a id="CHDGJEDF" name="CHDGJEDF"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Step 6: Implement Security</font></h3>
+<p>Secure JPA-RS through typical REST security mechanisms.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="restful_jpa.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="restful_jpa002.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+                
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
+</html>
