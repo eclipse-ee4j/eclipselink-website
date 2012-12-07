@@ -22,7 +22,7 @@
 	
 	# Define these here, or in _projectCommon.php for site-wide values
 	$pageKeywords	= "eclipse, project, eclipselink, persistence";
-	$pageAuthor		= "Doug Clarke";
+	$pageAuthor		= "Rick Sapir";
 	$pageTitle 		= "EclipseLink Documentation Center";
 	
 	ob_start();
@@ -104,7 +104,6 @@
 				</li>
 				<li><a href="http://wiki.eclipse.org/EclipseLink/XSDs" title="XSDs">XML Schemas (XSDs)</a></li>
 				<li><a href="http://wiki.eclipse.org/EclipseLink/Installing_and_Configuring_EclipseLink">Installation and Configuration</a></li>
-				<li><a href="2.4/jpa/extensions/toc.htm">JPA Extensions Reference (2.4)</a></li>
 			</ul>
 	</div>
 
@@ -112,7 +111,10 @@
 	<div class="section">
 			<h3>Guides</h3>
 			<ul>
-				<li><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA">EclipseLink JPA</a></li>
+				<li><a href="2.4/jpa/concepts/toc.htm">EclipseLink Concepts Guide</a></li>
+				
+				<li><a href="2.4/jpa/solutions/toc.htm">EclipseLink Solutions Guide</a></li>
+				
 				<li><a href="2.4/jpa/extensions/toc.htm">EclipseLink JPA Extensions Reference</a></li>
 
 				<li><a href="2.4/moxy/toc.htm">Developing JAXB Applications Using EclipseLink MOXy</a></li>
