@@ -111,7 +111,7 @@
 	<div class="section">
 			<h3>Guides</h3>
 			<ul>
-				<li><a href="2.4/concepts/toc.htm">EclipseLink Concepts Guide</a></li>
+				<li><a href="2.4/concepts/toc.htm">Understanding EclipseLink (Concepts Guide)</a></li>
 				
 				<li><a href="2.4/solutions/toc.htm">EclipseLink Solutions Guide</a></li>
 				
@@ -164,6 +164,33 @@
 		</form>
 		<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script></td>
 		<link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" />
+	</td>
+  </tr>
+  <tr><td>&nbsp;</td></tr>
+  <tr>
+    <td>
+		<p><strong>Concepts</strong> guide:</p>
+		<form action="http://www.google.com/cse" id="cse-search-box">
+			<div>
+				<input type="hidden" name="cx" value="016171230611334810008:mdbgdwjv8zu" />
+				<input type="text" name="q" />
+				<input type="submit" name="sa" value="Search" />
+			</div>
+		</form>
+		<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script></td>
+	</td>
+    <td>
+		<p><strong>Solutions</strong> guide:</p>
+        <form action="http://www.google.com/cse" id="cse-search-box">
+			<div>
+				<input type="hidden" name="cx" value="016171230611334810008:enkkfjmsqju" />
+				<input type="text" name="q" />
+				<input type="submit" name="sa" value="Search" />
+			</div>
+		</form>
+		<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
+	</td>
+    <td>
 	</td>
   </tr>
   <tr><td>&nbsp;</td></tr>
