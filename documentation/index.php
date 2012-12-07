@@ -111,9 +111,9 @@
 	<div class="section">
 			<h3>Guides</h3>
 			<ul>
-				<li><a href="2.4/jpa/concepts/toc.htm">EclipseLink Concepts Guide</a></li>
+				<li><a href="2.4/concepts/toc.htm">EclipseLink Concepts Guide</a></li>
 				
-				<li><a href="2.4/jpa/solutions/toc.htm">EclipseLink Solutions Guide</a></li>
+				<li><a href="2.4/solutions/toc.htm">EclipseLink Solutions Guide</a></li>
 				
 				<li><a href="2.4/jpa/extensions/toc.htm">EclipseLink JPA Extensions Reference</a></li>
 
