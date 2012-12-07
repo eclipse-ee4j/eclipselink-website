@@ -96,15 +96,15 @@
 	<div class="section">
 			<h3>Guides</h3>
 			<ul>
-				<li><a href="2.4/concepts/toc.htm">Understanding EclipseLink (Concepts Guide)</a></li>
+				<li><a href="concepts/toc.htm">Understanding EclipseLink (Concepts Guide)</a></li>
 				
-				<li><a href="2.4/solutions/toc.htm">EclipseLink Solutions Guide</a></li>
+				<li><a href="solutions/toc.htm">EclipseLink Solutions Guide</a></li>
 				
-				<li><a href="2.4/jpa/extensions/toc.htm">EclipseLink JPA Extensions Reference</a></li>
+				<li><a href="jpa/extensions/toc.htm">EclipseLink JPA Extensions Reference</a></li>
 
-				<li><a href="2.4/moxy/toc.htm">Developing JAXB Applications Using EclipseLink MOXy</a></li>
+				<li><a href="moxy/toc.htm">Developing JAXB Applications Using EclipseLink MOXy</a></li>
 
-				<li><a href="2.4/jpa/extensions/a_nosql.htm">EclipseLink NoSQL</a></li>
+				<li><a href="jpa/extensions/a_nosql.htm">EclipseLink NoSQL</a></li>
 
 				<li><a href="http://wiki.eclipse.org/Category:SDO">EclipseLink SDO</a></li>
 
