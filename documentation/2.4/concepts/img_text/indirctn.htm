@@ -1,0 +1,13 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
+<title>Description of the illustration indirctn.gif</title>
+</head>
+<body>
+<p>This illustration shows an <code>Order</code> class that contains attributes <code>orderId</code>, <code>lineItems</code>, and <code>customerId</code>. The <code>lineItems</code> attribute is a reference to a collection of dependent <code>LineItem</code> objects. Without indirection, reading the <code>Order</code> object also reads the dependent collection of <code>LineItem</code> objects. With indirection, reading the <code>Order</code> object does not read the dependent collection of <code>LineItem</code> objects: the <code>lineItems</code> attribute refers to an indirection object. You can access other attributes (such as <code>customerId</code>), but EclipseLink reads the dependent <code>LineItem</code> objects only if and when you access the <code>lineItems</code> attribute.</p>
+</body>
+</html>

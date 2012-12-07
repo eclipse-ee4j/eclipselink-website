@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>About EclipseLink Metadata | EclipseLink 2.4.x Understanding EclipseLink</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
+<meta name="date" content="2012-12-07T9:24:25Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="About EclipseLink Metadata" />
+<meta name="relnum" content="Release 2.4" />
+<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="app_dev005.htm" title="Previous" type="text/html" />
+<link rel="next" href="app_dev007.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:mdbgdwjv8zu', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><div class="booktitle">Understanding EclipseLink, 
+Release 2.4</div></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="app_dev005.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="app_dev007.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header -->
+<p align="center"><font color="#FF0000">Beta Draft: 2012-12-07</font></p>
+<a id="CHEDICEE" name="CHEDICEE"></a><a id="OTLCG91207" name="OTLCG91207"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">About EclipseLink Metadata</font></h1>
+<p>The EclipseLink metadata is the bridge between the development of an application and its deployed run-time environment. Capture the metadata using the following:</p>
+<ul>
+<li>
+<p>Annotations, <code>persistence.xml</code>, <code>orm.xml</code>, <code>eclipselink-orm.xml</code>, and annotation and <code>persistence.xml</code> property extensions: the persistence provider interprets all these sources of metadata to create an in-memory session and project at run time.</p>
+</li>
+<li>
+<p>Java and the EclipseLink API (this approach is the most labor-intensive).</p>
+</li>
+</ul>
+<p>The metadata lets you pass configuration information into the run-time environment. The run-time environment uses the information in conjunction with the persistent classes (Java objects or entities) and the code written with the EclipseLink API, to complete the application.</p>
+<p>For more information, see "Overriding and Merging" in Java Persistence API (JPA) Extensions Reference for EclipseLink.</p>
+<div class="figure"><a id="OTLCG91208" name="OTLCG91208"></a><a id="sthref31" name="sthref31"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Figure 3-2 EclipseLink Metadata</font></em></strong></p>
+<img src="img/meta.gif" alt="Description of Figure 3-2 follows" title="Description of Figure 3-2 follows" longdesc="img_text/meta.htm" /><br />
+<a id="sthref32" name="sthref32" href="img_text/meta.htm">Description of "Figure 3-2 EclipseLink Metadata"</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>This section describes the following:</p>
+<ul>
+<li>
+<p><a href="#BABDDBIJ">Advantages of the EclipseLink Metadata Architecture</a></p>
+</li>
+<li>
+<p><a href="#BABEECEF">Creating Project Metadata</a></p>
+</li>
+<li>
+<p><a href="#BABHHGDE">Creating Session Metadata</a></p>
+</li>
+</ul>
+<a id="BABDDBIJ" name="BABDDBIJ"></a><a id="OTLCG91209" name="OTLCG91209"></a>
+<div class="sect2">
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Advantages of the EclipseLink Metadata Architecture</font></h2>
+<p>The EclipseLink metadata architecture provides many important benefits, including the following:</p>
+<ul>
+<li>
+<p>Stores mapping information in XML&mdash;not in the domain model objects</p>
+</li>
+<li>
+<p>By using the metadata, EclipseLink does not intrude in the object model or the database schema</p>
+</li>
+<li>
+<p>Allows you to design the object model as needed, without forcing any specific design</p>
+</li>
+<li>
+<p>Allows DBAs to design the database as needed, without forcing any specific design</p>
+</li>
+<li>
+<p>Does not rely on code-generation (which can cause serious design, implementation, and maintenance issues)</p>
+</li>
+<li>
+<p>Is unobtrusive: adapts to the object model and database schema, rather than requiring you to design their object model or database schema to suit EclipseLink</p>
+</li>
+</ul>
+<p>Using EclipseLink JPA, you have the flexibility of expressing persistence metadata using standard JPA annotations, deployment XML, or both and you can optionally take advantage of EclipseLink JPA annotation and <code>persistence.xml</code> property extensions.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABEECEF" name="BABEECEF"></a><a id="OTLCG91210" name="OTLCG91210"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Creating Project Metadata</font></h2>
+<p>A EclipseLink project contains the mapping metadata that the EclipseLink runtime uses to map objects to a data source. The project is the primary object used by the EclipseLink runtime.</p>
+<p>This section describes the principal contents of project metadata, including the following:</p>
+<ul>
+<li>
+<p><a href="#BABIECAI">Descriptors and Mappings</a></p>
+</li>
+<li>
+<p><a href="#BABIEAJE">Data Source Login Information</a></p>
+</li>
+</ul>
+<p>For Object-relational mapping, the EclipseLink runtime constructs an in-memory project based on any combination of JPA annotations, <code>persistence.xml</code>, <code>orm.xml</code>, and EclipseLink JPA annotation and <code>persistence.xml</code> property extensions.</p>
+<p>For Object-XML mapping, the EclipseLink runtime uses a combination of JAXB annotations and <code>eclipselink-oxm</code> bindings. See "Overriding and Merging" in Java Persistence API (JPA) Extensions Reference for EclipseLink.</p>
+<a id="BABIECAI" name="BABIECAI"></a><a id="OTLCG91211" name="OTLCG91211"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Descriptors and Mappings</font></h3>
+<p>EclipseLink maps persistent entities to the database in the application, using the descriptors and mappings you build with JDeveloper. These tools support several approaches to project development, including the following:</p>
+<ul>
+<li>
+<p>Importing classes and tables for mapping</p>
+</li>
+<li>
+<p>Importing classes and generating tables and mappings</p>
+</li>
+<li>
+<p>Importing tables and generating classes and mappings</p>
+</li>
+<li>
+<p>Creating both class and table definitions</p>
+</li>
+</ul>
+<p>The most common solution is to develop the persistent entities using a development tool, such as a modeling tool or an integrated development environment (IDE) like JDeveloper, and to develop the relational model through appropriate relational design tools. You then use JDeveloper to construct mappings that relate these two models.</p>
+<p>Although JDeveloper offers the ability to generate persistent entities or the relational model components for an application, these utilities are intended only to assist in rapid initial development strategies&ndash;not complete round-trip application development.</p>
+<p>For more information, see <a href="descriptors.htm#CHECEAAE">Chapter 6, "Understanding Descriptors"</a> and <a href="mappingintro.htm#CHDFEJIJ">Chapter 7, "Understanding Mappings"</a>.</p>
+<a id="BABJDHHB" name="BABJDHHB"></a><a id="OTLCG91212" name="OTLCG91212"></a>
+<div class="sect4">
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Amending Descriptors</font></h4>
+<p>An amendment method lets you customize EclipseLink Descriptor metadata at runtime before login occurs. The amendment class and method can be specified through EclipseLink Descriptor API.</p>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" -->
+<a id="BABIEAJE" name="BABIEAJE"></a><a id="OTLCG91213" name="OTLCG91213"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Data Source Login Information</font></h3>
+<p>For POJO projects, you configure a session login in the session metadata that specifies the information required to access the data source.</p>
+<p>For more information, see <a href="#BABHHGDE">Creating Session Metadata.</a></p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BABHHGDE" name="BABHHGDE"></a><a id="OTLCG91214" name="OTLCG91214"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Creating Session Metadata</font></h2>
+<p>A EclipseLink session contains the information required to access the data source. The session is the primary object used by your application to access the features of the EclipseLink runtime.</p>
+<p>Using EclipseLink JPA, the EclipseLink runtime constructs an in-memory session based on any combination of JPA annotations, <code>persistence.xml</code>, <code>orm.xml</code>, and EclipseLink JPA annotation and <code>persistence.xml</code> property extensions. The use of a <code>sessions.xml</code> file is optional. See "Overriding and Merging" in Java Persistence API (JPA) Extensions Reference for EclipseLink.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="app_dev005.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="app_dev007.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+<font size="-2">Copyright&nbsp;&copy;&nbsp;,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
+</html>

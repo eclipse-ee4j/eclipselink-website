@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>About JPA Applications on the NoSQL Platform | EclipseLink 2.4.x Understanding EclipseLink</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
+<meta name="date" content="2012-12-07T9:24:26Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="About JPA Applications on the NoSQL Platform" />
+<meta name="relnum" content="Release 2.4" />
+<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="nosql002.htm" title="Previous" type="text/html" />
+<link rel="next" href="nosql004.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:mdbgdwjv8zu', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><div class="booktitle">Understanding EclipseLink, 
+Release 2.4</div></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="nosql002.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="nosql004.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header -->
+<p align="center"><font color="#FF0000">Beta Draft: 2012-12-07</font></p>
+<a id="BJEEAGCG" name="BJEEAGCG"></a><a id="OTLCG94426" name="OTLCG94426"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">About JPA Applications on the NoSQL Platform</font></h1>
+<p>Mapping to NoSQL data is configured through the EclipseLink <code>@NoSql</code> annotation, and <code>&lt;no-sql&gt;</code> XML element. <code>@NoSql</code> defines the class as mapping to non-relational data. <code>@NoSql</code> can be specified with <code>@Entity</code> or <code>@Embeddable</code> classes.</p>
+<p>The <code>@NoSql</code> annotation defines a <code>dataType</code> and a <code>dataFormat</code> attribute. The <code>dataType</code> attribute is the name for the entity's structure; the meaning of the <code>dataType</code> is dependent on the NoSQL platform. For MongoDB, it is the collection name that the JSON documents are stored to. For Oracle NoSQL the <code>dataType</code> is the first part of the major key value. For the XML file adapter it is the file name.</p>
+<p>The <code>dataFormat</code> attribute specifies the type of structure the data is stored as. The <code>dataFormat</code> attribute is defined by the <code>DataFormatType</code> <code>enum</code>.</p>
+<p>For examples of configuring an application with the <code>@NoSql</code> annotaion, see "@NoSql" in <em>Java Persistence API (JPA) Extensions Reference for EclipseLinkk</em></p>
+<a id="OTLCG94429" name="OTLCG94429"></a>
+<div class="sect2"><a id="sthref113" name="sthref113"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Mapping Restrictions on JPA Annotations</font></h2>
+<p>NoSQL supports most JPA annotations and others have different restrictions than mapping relational data.</p>
+<a id="OTLCG94430" name="OTLCG94430"></a>
+<p><b><font face="arial, helvetica, sans-serif" color="#330099">Supported mapping annotations:</font></b></p>
+<ul>
+<li>
+<p><code>@Entity</code>&mdash;defines a root level object in the NoSQL data-store.</p>
+</li>
+<li>
+<p><code>@Embeddable</code>&mdash;defines an object embedded in another object's data structure.</p>
+</li>
+<li>
+<p><code>@Basic</code>, <code>@Temporal</code>, <code>@Enumerated</code>, <code>@Lob</code></p>
+</li>
+<li>
+<p><code>@Convert</code>, <code>@Converter</code>, <code>@TypeConverter</code>, <code>@ObjectTypeConverter</code></p>
+</li>
+<li>
+<p><code>@Access</code>, <code>@Transient</code>, <code>@Mutable</code></p>
+</li>
+<li>
+<p><code>@Id</code>, <code>@EmbeddedId</code></p>
+</li>
+<li>
+<p><code>@GeneratedValue</code>, <code>@UuidGenerator</code></p>
+</li>
+<li>
+<p><code>@Version</code>&mdash;is supported, but dependent on the NoSQL data-source to validate version write conflicts.</p>
+</li>
+<li>
+<p><code>@Embedded</code>&mdash;defines a reference that will be embedded in the parent's data structure as a nested structure.</p>
+</li>
+<li>
+<p><code>@ElementCollection</code>&mdash;defines a collection of values or embeddables that will be embedded in the parent's data structure as a list of nested structures.</p>
+</li>
+<li>
+<p><code>@OneToOne</code>, <code>@ManyToOne</code>&mdash;define a relationship to another root level object stored as a foreign key in the source object's data structure.</p>
+</li>
+<li>
+<p><code>@OneToMany</code>, <code>@ManyToMany</code>&mdash;define a relationship to a collection of other root level object stored as a list of foreign keys in the source object's data structure.</p>
+</li>
+<li>
+<p><code>@Inheritance</code>, <code>@MappedSuperclass</code>, <code>@ClassExtractor</code></p>
+</li>
+<li>
+<p><code>@Cacheable</code>, <code>@Cache</code>, <code>@ReadOnly</code>, <code>@Noncacheable</code></p>
+</li>
+<li>
+<p><code>@NamedQuery</code>&mdash;is supported on NoSQL data-sources that support querying.</p>
+</li>
+<li>
+<p><code>@NamedNativeQuery</code>&mdash;is supported on NoSQL data-sources that support native querying. The query language is not SQL, but specific to the NoSQL data-store.</p>
+</li>
+<li>
+<p><code>@EntityListeners</code>, <code>@PrePersist</code>, <code>@PreUpdate</code>, <code>@PreRemove</code>, <code>@PreLoad</code>, <code>@PostPersist,</code> <code>@PostUpdate</code>, <code>@PostRemove</code>, <code>@PostLoad</code></p>
+</li>
+<li>
+<p><code>@Customizer</code></p>
+</li>
+</ul>
+<a id="OTLCG94431" name="OTLCG94431"></a>
+<p><b><font face="arial, helvetica, sans-serif" color="#330099">Unsupported mapping annotations:</font></b></p>
+<ul>
+<li>
+<p><code>@Table</code>, <code>@SecondaryTable</code>&mdash;are not supported, as objects are not mapped to tables, it is replaced by the dataType on the <code>@NoSql</code> annotation.</p>
+</li>
+<li>
+<p><code>@Column</code>&mdash;<code>@Field</code> should be used, as data is not stored in table columns, however <code>@Column</code> is still allowed, but just the name will be used.</p>
+</li>
+<li>
+<p><code>@JoinColumn</code>&mdash;is not supported; it is replaced by <code>@JoinField</code>.</p>
+</li>
+<li>
+<p><code>@JoinTable</code>&mdash;is not required or supported; OneToManys and ManyToManys are stored as collections of Ids embedded in the source object's data structure.</p>
+</li>
+<li>
+<p><code>@CollectionTable</code>&mdash;is not required or supported; ElementCollections are embedded in the parent object's data structure.</p>
+</li>
+<li>
+<p><code>@MapKeyColumn</code>, <code>@MapKeyClass</code>, <code>@MapKeyJoinColumn</code>&mdash;are not currently supported.</p>
+</li>
+<li>
+<p><code>@OrderBy</code>, <code>@OrderColumn</code>&mdash;are not normally required or supported, as order is normally maintained by the object's data structure.</p>
+</li>
+<li>
+<p><code>@SequenceGenerator</code>, <code>@TableGenerator</code>&mdash;are not directly supported.</p>
+</li>
+<li>
+<p><code>@AttributeOverride</code>, <code>@AssociationOverride</code>&mdash;are supported with inheritance, but are not supported or required with embedded relationships as embedded objects are nested in their parent object's data structure, not flattened as in the case of relational data.</p>
+</li>
+<li>
+<p><code>@JoinFetch</code>, <code>@BatchFetch</code>&mdash;are not supported.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="nosql002.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="nosql004.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+<font size="-2">Copyright&nbsp;&copy;&nbsp;,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
+</html>

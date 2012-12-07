@@ -1,0 +1,389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>About JPA Mapping Types | EclipseLink 2.4.x Understanding EclipseLink</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
+<meta name="date" content="2012-12-07T9:24:26Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="About JPA Mapping Types" />
+<meta name="relnum" content="Release 2.4" />
+<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="mappingintro004.htm" title="Previous" type="text/html" />
+<link rel="next" href="data_access.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:mdbgdwjv8zu', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><div class="booktitle">Understanding EclipseLink, 
+Release 2.4</div></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="mappingintro004.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="data_access.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header -->
+<p align="center"><font color="#FF0000">Beta Draft: 2012-12-07</font></p>
+<a id="A7964325" name="A7964325"></a><a id="OTLCG94305" name="OTLCG94305"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">About JPA Mapping Types</font></h1>
+<p>To map entity classes to relational tables you must configure a mapping per persistent field. The following sections describe EclipeLink's JPA mapping types:</p>
+<ul>
+<li>
+<p><a href="#CEGGDAJJ">Basic Mappings</a></p>
+</li>
+<li>
+<p><a href="#CEGJFEAH">Default Conversions and Converters</a></p>
+</li>
+<li>
+<p><a href="#CEGGABIA">Collection Mappings</a></p>
+</li>
+<li>
+<p><a href="#CEGDIIIB">Using Optimistic Locking</a></p>
+</li>
+</ul>
+<a id="CEGGDAJJ" name="CEGGDAJJ"></a><a id="OTLCG94306" name="OTLCG94306"></a>
+<div class="sect2">
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Basic Mappings</font></h2>
+<p>Simple Java types are mapped as part of the immediate state of an entity in its fields or properties. Mappings of simple Java types are called basic mappings.</p>
+<p>By default, the EclipseLink persistence provider automatically configures a basic mapping for simple types.</p>
+<p>Use the following annotations to fine-tune how your application implements these mappings:</p>
+<ul>
+<li>
+<p><code>@Basic</code></p>
+</li>
+<li>
+<p><code>@Enumerated</code></p>
+</li>
+<li>
+<p><code>@Temporal</code></p>
+</li>
+<li>
+<p><code>@Lob</code></p>
+</li>
+<li>
+<p><code>@Transient</code></p>
+</li>
+<li>
+<p><code>@Column</code></p>
+</li>
+<li>
+<p>Lazy Basics (See <a href="mappingintro001.htm#CEGBCJAG">Using Lazy Loading</a>)</p>
+</li>
+</ul>
+<p>For all mapping types there are a common set of options:</p>
+<ul>
+<li>
+<p>Read-Only: Specifies that the mapping should populate the value on read and copy. Required when multiple mappings share the same database column.</p>
+</li>
+<li>
+<p>Converters: Allows custom data types and data conversions to be used with most mapping types</p>
+<ul>
+<li>
+<p>Annotations: <code>@Converter</code>, <code>@TypeConverter</code>, <code>@ObjectTypeConverter</code>, <code>@StructConverter</code>, <code>@Convert</code></p>
+</li>
+<li>
+<p>External Metadata: <code>&lt;converter&gt;</code>, <code>&lt;type-converter&gt;</code>, <code>&lt;object-type-converter&gt;</code>, <code>&lt;struct-converter&gt;</code>, <code>&lt;convert&gt;</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>For more information on these annotations, see <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CEGJFEAH" name="CEGJFEAH"></a><a id="OTLCG94307" name="OTLCG94307"></a>
+<div class="sect2">
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Default Conversions and Converters</font></h2>
+<p>EclipseLink defines the following converter annotations (in addition to JPA-defined annotations):</p>
+<ul>
+<li>
+<p><code>@Converter</code></p>
+</li>
+<li>
+<p><code>@TypeConverter</code></p>
+</li>
+<li>
+<p><code>@ObjectTypeConverter</code></p>
+</li>
+<li>
+<p><code>@StructConverter</code></p>
+</li>
+<li>
+<p><code>@Convert</code></p>
+</li>
+</ul>
+<p>The EclipseLink persistence provider searches the converter annotations in the following order:</p>
+<ul>
+<li>
+<p><code>@Convert</code></p>
+</li>
+<li>
+<p><code>@Enumerated</code></p>
+</li>
+<li>
+<p><code>@Lob</code></p>
+</li>
+<li>
+<p><code>@Temporal</code></p>
+</li>
+<li>
+<p>Serialized (automatic)</p>
+</li>
+</ul>
+<p>You can define converters at the class, field and property level. You can specify EclipseLink converters on the following types of classes:</p>
+<ul>
+<li>
+<p><code>@Entity</code></p>
+</li>
+<li>
+<p><code>@MappedSuperclass</code></p>
+</li>
+<li>
+<p><code>@Embeddable</code></p>
+</li>
+</ul>
+<p>You can use EclipseLink converters with the following mappings:</p>
+<ul>
+<li>
+<p><code>@Basic</code></p>
+</li>
+<li>
+<p><code>@Id</code></p>
+</li>
+<li>
+<p><code>@Version</code></p>
+</li>
+<li>
+<p><code>@BasicMap</code></p>
+</li>
+<li>
+<p><code>@BasicCollection</code></p>
+</li>
+</ul>
+<p>If you specify a converter with any other type of mapping annotation, EclipseLink will throw an exception.</p>
+<p>For more information on these annotations, see <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CEGGABIA" name="CEGGABIA"></a><a id="OTLCG94308" name="OTLCG94308"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Collection Mappings</font></h2>
+<p>You can access additional advanced mappings and mapping options through the EclipseLink descriptor and mapping API using a <code>DescriptorCustomizer</code> class.</p>
+<ul>
+<li>
+<p><a href="#CEGIGCIJ">One-to-Many Mapping</a></p>
+</li>
+<li>
+<p><a href="#CEGJCHEB">Many-to-Many Mapping</a></p>
+</li>
+</ul>
+<a id="CEGIGCIJ" name="CEGIGCIJ"></a><a id="OTLCG94309" name="OTLCG94309"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">One-to-Many Mapping</font></h3>
+<p>One-to-many mappings are used to represent the relationship between a single source object and a collection of target objects. They are a good example of something that is simple to implement in Java using a Collection (or other collection types) of target objects, but difficult to implement using relational databases.</p>
+<p>In a Java Collection, the owner references its parts. In a relational database, the parts reference their owner. Relational databases use this implementation to make querying more efficient.</p>
+<div class="figure"><a id="OTLCG94310" name="OTLCG94310"></a><a id="sthref54" name="sthref54"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Figure 7-13 One-to-Many Relationships</font></em></strong></p>
+<img src="img/onetomany_map_fig.gif" alt="This figure illustrates the one-to-many relationship." title="This figure illustrates the one-to-many relationship." longdesc="img_text/onetomany_map_fig.htm" /><br />
+<a id="sthref55" name="sthref55" href="img_text/onetomany_map_fig.htm">Description of "Figure 7-13 One-to-Many Relationships"</a><br />
+<br /></div>
+<!-- class="figure" -->
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>The phone attribute shown in the One-to-Many Relationships is of type Vector. You can use a Collection interface (or any class that implements the Collection interface) for declaring the collection attribute.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<a id="OTLCG94311" name="OTLCG94311"></a>
+<div class="sect4"><a id="sthref56" name="sthref56"></a>
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">JPA Mapping</font></h4>
+<p>By default, JPA automatically defines a OneToMany mapping for a many-valued association with one-to-many multiplicity.</p>
+<p>Use the <code>@OneToMany</code> annotation to do the following:</p>
+<ul>
+<li>
+<p>configure the fetch type to <code>EAGER</code></p>
+</li>
+<li>
+<p>configure the associated target entity, because the Collection used is not defined using generics</p>
+</li>
+<li>
+<p>configure the operations that must be cascaded to the target of the association: for example, if the owning entity is removed, ensure that the target of the association is also removed</p>
+</li>
+<li>
+<p>configure the details of the join table used by the persistence provider for unidirectional one-to-many relationships. For a one-to-many using a <code>mappedBy</code> or <code>JoinColumn</code>, the deletion of the related objects is cascaded on the database. For a one-to-many using a <code>JoinTable</code>, the deletion of the join table is cascaded on the database (target objects cannot be cascaded even if private because of constraint direction).</p>
+</li>
+</ul>
+<p>For more information, see Section 11.1.23 "JoinTable Annotation" in the JPA Specification.</p>
+<p><code><a href="http://jcp.org/en/jsr/detail?id=317">http://jcp.org/en/jsr/detail?id=317</a></code></p>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" -->
+<a id="CEGJCHEB" name="CEGJCHEB"></a><a id="OTLCG94312" name="OTLCG94312"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Many-to-Many Mapping</font></h3>
+<p>Many-to-many mappings represent the relationships between a collection of source objects and a collection of target objects. They require the creation of an intermediate table for managing the associations between the source and target records.</p>
+<p><a href="#CEGIHDED">Figure 7-14</a> illustrates a many-to-many mapping in Java and in relational database tables.</p>
+<div class="figure"><a id="CEGIHDED" name="CEGIHDED"></a><a id="OTLCG94313" name="OTLCG94313"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Figure 7-14 Many-to-many Relationships</font></em></strong></p>
+<img src="img/mmmapfig.gif" alt="Many-to-many Relationships" title="Many-to-many Relationships" longdesc="img_text/mmmapfig.htm" /><br />
+<a id="sthref57" name="sthref57" href="img_text/mmmapfig.htm">Description of "Figure 7-14 Many-to-many Relationships"</a><br />
+<br /></div>
+<!-- class="figure" -->
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>For the projects attribute shown in the Many-to-many Relationships you can use a Collection interface (or any class that implements the Collection interface) for declaring the collection attribute.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<a id="CEGFEIFF" name="CEGFEIFF"></a><a id="OTLCG94314" name="OTLCG94314"></a>
+<div class="sect4">
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">JPA Mapping</font></h4>
+<p>By default, JPA automatically defines a ManyToMany mapping for a many-valued association with many-to-many multiplicity.</p>
+<p>Use the <code>@ManyToMany</code> annotation to do the following:</p>
+<ul>
+<li>
+<p>configure the Fetch Type to <code>EAGER</code>;</p>
+</li>
+<li>
+<p>configure the mapping to forbid null values (for nonprimitive types) in case null values are inappropriate for your application;</p>
+</li>
+<li>
+<p>configure the associated target entity because the Collection used is not defined using generics;</p>
+</li>
+<li>
+<p>configure the operations that must be cascaded to the target of the association (for example, if the owning entity is removed, ensure that the target of the association is also removed).</p>
+</li>
+</ul>
+<p>For a list of supported attributes for the <code>@ManyToMany</code> annotation, see the Java Persistence specification:</p>
+<p><code><a href="http://jcp.org/en/jsr/detail?id=317">http://jcp.org/en/jsr/detail?id=317</a></code></p>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CEGDIIIB" name="CEGDIIIB"></a><a id="OTLCG94315" name="OTLCG94315"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Using Optimistic Locking</font></h2>
+<p>Oracle recommends using EclipseLink optimistic locking. With optimistic locking, all users have read access to the data. When a user attempts to write a change, the application checks to ensure the data has not changed since the user read the data.</p>
+<a id="OTLCG94317" name="OTLCG94317"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref58" name="sthref58"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Optimistic Locking in a Stateless Environment</font></h3>
+<p>In a stateless environment, take care to avoid processing out-of-date (stale) data. A common strategy for avoiding stale data is to implement optimistic locking, and store the optimistic lock values in the object. This solution requires careful implementation if the stateless application serializes the objects, or sends the contents of the object to the client in an alternative format. In this case, transport the optimistic lock values to the client in the HTTP contents of an edit page. You must then use the returned values in any write transaction to ensure that the data did not change while the client was performing its work.</p>
+<p>You can use optimistic version locking or optimistic field locking policies. We recommend using version locking policies.</p>
+</div>
+<!-- class="sect3" -->
+<a id="OTLCG94318" name="OTLCG94318"></a>
+<div class="sect3"><a id="sthref59" name="sthref59"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Optimistic Version Locking</font></h3>
+<p>Use the @Version annotation to enable the JPA-managed optimistic locking by specifying the version field or property of an entity class that serves as its optimistic lock value (recommended).</p>
+<p>When choosing a version field or property, ensure that the following is true:</p>
+<ul>
+<li>
+<p>there is only one version field or property per entity;</p>
+</li>
+<li>
+<p>you choose a property or field persisted to the primary table;</p>
+</li>
+<li>
+<p>your application does not modify the version property or field.</p>
+</li>
+</ul>
+<p>For more information, see Section 11.1.45 "Table Annotation" in the JPA Specification.</p>
+<p><code><a href="http://jcp.org/en/jsr/detail?id=317">http://jcp.org/en/jsr/detail?id=317</a></code></p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>The field or property type must either be a numeric type (such as <code>Number</code>, <code>long</code>, <code>int</code>, <code>BigDecimal</code>, and so on), or a <code>java.sql.Timestamp</code>. EclipseLink recommends using a numeric type.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>The <code>@Version</code> annotation does not have attributes. The <code>@Version</code> annotation supports the use of EclipseLink converters. See <a href="#CEGJFEAH">Default Conversions and Converters.</a></p>
+<p>For more information, see Section 11.1.9 "Column Annotation" in the JPA Specification.</p>
+<p><code><a href="http://jcp.org/en/jsr/detail?id=317">http://jcp.org/en/jsr/detail?id=317</a></code></p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="mappingintro004.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="data_access.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+<font size="-2">Copyright&nbsp;&copy;&nbsp;,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
+</html>
