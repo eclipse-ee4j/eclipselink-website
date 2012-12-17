@@ -89,7 +89,7 @@ Release 2.4</div></td>
 <td align="left" headers="r4c1-t33 r1c2-t33">
 <p>EclipseLink will attempt to <code>DROP</code> all tables, then <code>CREATE</code> all tables. If any issues are encountered, EclipseLink will follow the default behavior of your specific database and JDBC driver combination, then continue with the next statement</p>
 <p>This is useful in development if the schema frequently changes or during testing when the existing data needs to be cleared.</p>
-<p><strong>Note</strong>: Using <code>drop-and-create</code> will remove all of the data in the tables when they are dropped. You should never use option on a production schema that has valuable data in the database. If the schema changed dramatically, there could be old constraints in the database that prevent the dropping of the old tables. This may require the old schema to be dropped through another mechanism</p>
+<p><strong>Note</strong>: Using <code>drop-and-create-tables</code> will remove all of the data in the tables when they are dropped. You should never use option on a production schema that has valuable data in the database. If the schema changed dramatically, there could be old constraints in the database that prevent the dropping of the old tables. This may require the old schema to be dropped through another mechanism</p>
 </td>
 </tr>
 <tr align="left" valign="top">
