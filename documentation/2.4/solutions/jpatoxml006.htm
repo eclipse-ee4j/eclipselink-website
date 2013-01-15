@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Using Dynamic JAXB/MOXy | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-12-13T9:16:51Z" />
+<meta name="date" content="2013-01-15T10:52:23Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Using Dynamic JAXB/MOXy" />
 <meta name="relnum" content="Release 2.4" />
@@ -46,7 +46,7 @@ Release 2.4</div></td>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2012-12-13</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-01-15</font></p>
 <a id="BEIHCDIB" name="BEIHCDIB"></a><a id="TLADG368" name="TLADG368"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Using Dynamic JAXB/MOXy</font></h1>
@@ -80,11 +80,11 @@ Release 2.4</div></td>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 1: Bootstrap a Dynamic JAXBContext from an XML Schema</font></h2>
 <p>This example demonstrates how to bootstrap a dynamic <code>JAXBContext</code> from an XML Schema.</p>
 <a id="TLADG370" name="TLADG370"></a>
-<div class="sect3"><a id="sthref158" name="sthref158"></a>
+<div class="sect3"><a id="sthref130" name="sthref130"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Bootstrapping from an XML Schema</font></h3>
-<p>Use the <code>DynamicJAXBContextFactory</code> to create a dynamic <code>JAXBContext</code>. <a href="#BEIJDEFA">Example 12-26</a> to bootstrap a <code>DynamicJAXBContext</code> from the <code>customer.xsd</code> schema (<a href="#BEIBCJFF">Example 12-27</a>) by using <code>createContextFromXSD()</code>.</p>
+<p>Use the <code>DynamicJAXBContextFactory</code> to create a dynamic <code>JAXBContext</code>. <a href="#BEIJDEFA">Example 14-26</a> to bootstrap a <code>DynamicJAXBContext</code> from the <code>customer.xsd</code> schema (<a href="#BEIBCJFF">Example 14-27</a>) by using <code>createContextFromXSD()</code>.</p>
 <div class="example"><a id="BEIJDEFA" name="BEIJDEFA"></a><a id="TLADG371" name="TLADG371"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 12-26 Specifying the Input Stream and Creating the DynamicJAXBContext</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 14-26 Specifying the Input Stream and Creating the DynamicJAXBContext</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 import java.io.FileInputStream;
  
@@ -103,11 +103,11 @@ public class Demo {
 </div>
 <!-- class="sect3" -->
 <a id="TLADG372" name="TLADG372"></a>
-<div class="sect3"><a id="sthref159" name="sthref159"></a>
+<div class="sect3"><a id="sthref131" name="sthref131"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">The XML Schema</font></h3>
-<p><a href="#BEIBCJFF">Example 12-27</a> shows the <code>customer.xsd</code> schema that represents the metadata for the dynamic JAXBContext you are bootstrapping.</p>
+<p><a href="#BEIBCJFF">Example 14-27</a> shows the <code>customer.xsd</code> schema that represents the metadata for the dynamic JAXBContext you are bootstrapping.</p>
 <div class="example"><a id="BEIBCJFF" name="BEIBCJFF"></a><a id="TLADG373" name="TLADG373"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 12-27 Sample XML Schema Document</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 14-27 Sample XML Schema Document</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;xsd:schema 
    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
@@ -136,15 +136,15 @@ public class Demo {
 <!-- class="example" --></div>
 <!-- class="sect3" -->
 <a id="TLADG374" name="TLADG374"></a>
-<div class="sect3"><a id="sthref160" name="sthref160"></a>
+<div class="sect3"><a id="sthref132" name="sthref132"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Handling Schema Import/Includes</font></h3>
 <p>To bootstrap <code>DynamicJAXBContext</code> from an XML schema that contains imports of other schemas, you need to configure an <code>org.xml.sax.EntityResolver</code> to resolve the locations of the imported schemas and pass the <code>EntityResolver</code> to <code>DynamicJAXBContextFactory</code>.</p>
-<p>The following example shows two schema documents, <code>customer.xsd</code> (<a href="#BEIJBFAG">Example 12-28</a>) and <code>address.xsd</code> <a href="#BEIDIAJB">Example 12-29</a>). You can see that <code>customer.xsd</code> imports <code>address.xsd</code> by using the statement:</p>
+<p>The following example shows two schema documents, <code>customer.xsd</code> (<a href="#BEIJBFAG">Example 14-28</a>) and <code>address.xsd</code> <a href="#BEIDIAJB">Example 14-29</a>). You can see that <code>customer.xsd</code> imports <code>address.xsd</code> by using the statement:</p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;xsd:import namespace="http://www.example.org/address" schemaLocation="address.xsd"/&gt;
 </pre>
 <div class="example"><a id="BEIJBFAG" name="BEIJBFAG"></a><a id="TLADG375" name="TLADG375"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 12-28 customer.xsd</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 14-28 customer.xsd</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
@@ -168,7 +168,7 @@ public class Demo {
 </pre></div>
 <!-- class="example" -->
 <div class="example"><a id="BEIDIAJB" name="BEIDIAJB"></a><a id="TLADG376" name="TLADG376"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 12-29 address.xsd</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 14-29 address.xsd</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
     xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
@@ -188,14 +188,14 @@ public class Demo {
 <!-- class="example" --></div>
 <!-- class="sect3" -->
 <a id="TLADG377" name="TLADG377"></a>
-<div class="sect3"><a id="sthref161" name="sthref161"></a>
+<div class="sect3"><a id="sthref133" name="sthref133"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Implementing and Passing an EntityResolver</font></h3>
 <p>If you want to bootstrap <code>DynamicJAXBContext</code> from the <code>customer.xsd</code> schema, you need to pass an entity resolver. Do the following:</p>
 <ol>
 <li>
-<p>To resolve the locations of the imported schemas, you need to implement an <code>entityResolver</code> by supplying the code shown in <a href="#BEIBCJAB">Example 12-30</a>.</p>
+<p>To resolve the locations of the imported schemas, you need to implement an <code>entityResolver</code> by supplying the code shown in <a href="#BEIBCJAB">Example 14-30</a>.</p>
 <div class="example"><a id="BEIBCJAB" name="BEIBCJAB"></a><a id="TLADG378" name="TLADG378"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 12-30 Implementing an EntityResolver</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 14-30 Implementing an EntityResolver</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 class MyEntityResolver implements EntityResolver {
 
@@ -218,9 +218,9 @@ class MyEntityResolver implements EntityResolver {
 </pre></div>
 <!-- class="example" --></li>
 <li>
-<p>After you implement your <code>DynamicJAXBContext</code>, pass the <code>EntityResolver</code>, as shown in <a href="#BEIHGJAA">Example 12-31</a>.</p>
+<p>After you implement your <code>DynamicJAXBContext</code>, pass the <code>EntityResolver</code>, as shown in <a href="#BEIHGJAA">Example 14-31</a>.</p>
 <div class="example"><a id="BEIHGJAA" name="BEIHGJAA"></a><a id="TLADG379" name="TLADG379"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 12-31 Passing in the Entityresolver</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 14-31 Passing in the Entityresolver</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 FileInputStream xsdInputStream = new FileInputStream(<strong>"src/example/customer.xsd"</strong>);
 DynamicJAXBContext jaxbContext = 
@@ -231,7 +231,7 @@ DynamicJAXBContext jaxbContext =
 </div>
 <!-- class="sect3" -->
 <a id="TLADG380" name="TLADG380"></a>
-<div class="sect3"><a id="sthref162" name="sthref162"></a>
+<div class="sect3"><a id="sthref134" name="sthref134"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Error Handling</font></h3>
 <p>You might see the following exception when importing another schema:</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -253,7 +253,7 @@ System.setProperty("<strong>com.sun.tools.xjc.api.impl.s2j.SchemaCompilerImpl.no
 </div>
 <!-- class="sect3" -->
 <a id="TLADG381" name="TLADG381"></a>
-<div class="sect3"><a id="sthref163" name="sthref163"></a>
+<div class="sect3"><a id="sthref135" name="sthref135"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Specifying a ClassLoader</font></h3>
 <p>Use your application's current class loader as the <code>classLoader</code> parameter. This parameter verifies that specified classes exist before new <code>DynamicTypes</code> are generated. In most cases you can pass <code>null</code> for this parameter and use <code>Thread.currentThread().getContextClassLoader()</code> instead.</p>
 </div>
@@ -264,11 +264,11 @@ System.setProperty("<strong>com.sun.tools.xjc.api.impl.s2j.SchemaCompilerImpl.no
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 2: Create Dynamic Entities and Marshal Them to XML</font></h2>
 <p>This example shows how to create dynamic entities and marshal then to XML.</p>
 <a id="TLADG383" name="TLADG383"></a>
-<div class="sect3"><a id="sthref164" name="sthref164"></a>
+<div class="sect3"><a id="sthref136" name="sthref136"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Creating the Dynamic Entities</font></h3>
 <p>Use the <code>DynamicJAXBContext</code> to create instances of <code>DynamicEntity</code>. The entity and property names correspond to the class and property names&mdash;in this case, the <code>customer</code> and <code>address</code>&mdash;that would have been generated if you had used static JAXB.</p>
-<div class="example"><a id="TLADG384" name="TLADG384"></a><a id="sthref165" name="sthref165"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 12-32 Creating the Dynamic Entity</font></em></strong></p>
+<div class="example"><a id="TLADG384" name="TLADG384"></a><a id="sthref137" name="sthref137"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 14-32 Creating the Dynamic Entity</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 <strong>DynamicEntity customer = jaxbContext.newDynamicEntity("org.example.Customer");</strong>
 customer.set("name", "Jane Doe");
@@ -280,19 +280,19 @@ customer.set("address", address);
 <!-- class="example" --></div>
 <!-- class="sect3" -->
 <a id="TLADG385" name="TLADG385"></a>
-<div class="sect3"><a id="sthref166" name="sthref166"></a>
+<div class="sect3"><a id="sthref138" name="sthref138"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Marshalling the Dynamic Entities to XML</font></h3>
 <p>The marshaller obtained from the <code>DynamicJAXBContext</code> is a standard marshaller and can be used normally to marshal instances of DynamicEntity.</p>
-<div class="example"><a id="TLADG386" name="TLADG386"></a><a id="sthref167" name="sthref167"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 12-33 Standard Dynamic JAXB Marshaller</font></em></strong></p>
+<div class="example"><a id="TLADG386" name="TLADG386"></a><a id="sthref139" name="sthref139"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 14-33 Standard Dynamic JAXB Marshaller</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 <strong>Marshaller marshaller = jaxbContext.createMarshaller()</strong>;
 marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);marshaller.marshal(customer, System.out);
 </pre></div>
 <!-- class="example" -->
-<p><a href="#BEIDBCBF">Example 12-34</a> shows the resultant XML document:</p>
+<p><a href="#BEIDBCBF">Example 14-34</a> shows the resultant XML document:</p>
 <div class="example"><a id="BEIDBCBF" name="BEIDBCBF"></a><a id="TLADG387" name="TLADG387"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 12-34 Updated XML Document Showing &lt;address&gt; Element and Its Attributes</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 14-34 Updated XML Document Showing &lt;address&gt; Element and Its Attributes</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;customer xmlns="www.example.org"&gt;
@@ -309,13 +309,13 @@ marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);marshaller.marsha
 <a id="BEIGCBBH" name="BEIGCBBH"></a><a id="TLADG388" name="TLADG388"></a>
 <div class="sect2">
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 3: Unmarshal the Dynamic Entities from XML</font></h2>
-<p>In this example shows how to unmarshal from XML the dynamic entities you created in <a href="#BEIDHGHI">Task 2: Create Dynamic Entities and Marshal Them to XML</a>. The XML in reference is shown in <a href="#BEIDBCBF">Example 12-34</a>.</p>
+<p>In this example shows how to unmarshal from XML the dynamic entities you created in <a href="#BEIDHGHI">Task 2: Create Dynamic Entities and Marshal Them to XML</a>. The XML in reference is shown in <a href="#BEIDBCBF">Example 14-34</a>.</p>
 <a id="TLADG389" name="TLADG389"></a>
-<div class="sect3"><a id="sthref168" name="sthref168"></a>
+<div class="sect3"><a id="sthref140" name="sthref140"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Unmarshal DynamicEntities from XML</font></h3>
 <p>The Unmarshaller obtained from the <code>DynamicJAXBContext</code> is a standard unmarshaller, and can be used normally to unmarshal instances of <code>DynamicEntity</code>.</p>
-<div class="example"><a id="TLADG390" name="TLADG390"></a><a id="sthref169" name="sthref169"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 12-35 Standard Dynamic JAXB Unmarshaller</font></em></strong></p>
+<div class="example"><a id="TLADG390" name="TLADG390"></a><a id="sthref141" name="sthref141"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 14-35 Standard Dynamic JAXB Unmarshaller</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 FileInputStream xmlInputStream = new FileInputStream("src/example/dynamic/customer.xml");
 <strong>Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();</strong>
@@ -324,7 +324,7 @@ DynamicEntity customer = (DynamicEntity) unmarshaller.unmarshal(xmlInputStream);
 <!-- class="example" --></div>
 <!-- class="sect3" -->
 <a id="TLADG391" name="TLADG391"></a>
-<div class="sect3"><a id="sthref170" name="sthref170"></a>
+<div class="sect3"><a id="sthref142" name="sthref142"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Get Data from the Dynamic Entity</font></h3>
 <p>Next, specify which data in the dynamic entity to obtain. Specify this value by using <code>System.out.println()</code> and passing in the entity name. <code>DynamicEntity</code> offers property-based data access; for example, <code>get("name")</code> instead of <code>getName()</code>:</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -332,11 +332,11 @@ System.out.println(<strong>customer.&lt;String&gt;get("name")</strong>);
 </pre></div>
 <!-- class="sect3" -->
 <a id="TLADG392" name="TLADG392"></a>
-<div class="sect3"><a id="sthref171" name="sthref171"></a>
+<div class="sect3"><a id="sthref143" name="sthref143"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Use DynamicType to Introspect Dynamic Entity</font></h3>
-<p>Instances of <code>DynamicEntity</code> have a corresponding <code>DynamicType</code>, which you can use to introspect the <code>DynamicEntity</code>, as shown in <a href="#BEIDDBCC">Example 12-36</a>.</p>
+<p>Instances of <code>DynamicEntity</code> have a corresponding <code>DynamicType</code>, which you can use to introspect the <code>DynamicEntity</code>, as shown in <a href="#BEIDDBCC">Example 14-36</a>.</p>
 <div class="example"><a id="BEIDDBCC" name="BEIDDBCC"></a><a id="TLADG393" name="TLADG393"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 12-36</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 14-36</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 DynamicType addressType = jaxbContext.getDynamicType(<strong>"org.example.Address"</strong>);
  

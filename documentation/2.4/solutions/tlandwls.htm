@@ -7,8 +7,8 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Using EclipseLink with WebLogic Server | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-12-13T9:16:49Z" />
-<meta name="description" content="This chapter introduces how EclipseLink can be used as the persistence provider for EclipseLink Java Persistence API (JPA) 2.0 applications deployed to Oracle WebLogic Server." />
+<meta name="date" content="2013-01-15T10:52:10Z" />
+<meta name="description" content="This chapter describes how to use EclipseLink as the persistence provider for applications deployed to Oracle WebLogic Server." />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Using EclipseLink with WebLogic Server" />
 <meta name="relnum" content="Release 2.4" />
@@ -16,7 +16,7 @@
 <link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
 <link rel="start" href="../../index.htm" title="Home" type="text/html" />
 <link rel="contents" href="toc.htm" title="Contents" type="text/html" />
-<link rel="prev" href="install003.htm" title="Previous" type="text/html" />
+<link rel="prev" href="install004.htm" title="Previous" type="text/html" />
 <link rel="next" href="tlandwls001.htm" title="Next" type="text/html" />
 <!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
 <body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:enkkfjmsqju', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
@@ -39,7 +39,7 @@ Release 2.4</div></td>
 <hr />
 <table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
 <tr>
-<td align="center"><a href="install003.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="install004.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
 <td align="center"><a href="tlandwls001.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
 <td>&nbsp;</td>
 </tr>
@@ -47,11 +47,11 @@ Release 2.4</div></td>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header --><a id="BABHCJBG" name="BABHCJBG"></a><a id="TLADG111" name="TLADG111"></a>
-<p align="center"><font color="#FF0000">Beta Draft: 2012-12-13</font></p>
-<h1 class="chapter"><font face="arial, helvetica, sans-serif" color="#330099"><span class="secnum">2</span> Using EclipseLink with WebLogic Server</font></h1>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-01-15</font></p>
+<h1 class="chapter"><font face="arial, helvetica, sans-serif" color="#330099"><span class="secnum">3</span> Using EclipseLink with WebLogic Server</font></h1>
 <a id="TLADG112" name="TLADG112"></a>
-<p>This chapter introduces how EclipseLink can be used as the persistence provider for EclipseLink Java Persistence API (JPA) 2.0 applications deployed to Oracle WebLogic Server.</p>
-<p>This chapter contains the following sections:</p>
+<p>This chapter describes how to use EclipseLink as the persistence provider for applications deployed to Oracle WebLogic Server.</p>
+<p>The chapter contains the following sections:</p>
 <ul>
 <li>
 <p><a href="tlandwls001.htm#BABCIJEE">Introduction to the Solution</a></p>
@@ -65,7 +65,7 @@ Release 2.4</div></td>
 </ul>
 <a id="TLADG889" name="TLADG889"></a>
 <p><b><font face="arial, helvetica, sans-serif" color="#330099">Use Case</font></b></p>
-<p>WebLogic Server developers, administrators, and user want to take advantage of all the persistence services provided by EclipseLink.</p>
+<p>WebLogic Server developers, administrators, and user want to take advantage of all the persistence and transformation services provided by EclipseLink.</p>
 <a id="TLADG890" name="TLADG890"></a>
 <p><b><font face="arial, helvetica, sans-serif" color="#330099">Solution</font></b></p>
 <p>While WebLogic Server can use other persistence providers and EclipseLink can be used with other application servers, using WebLogic Server with EclipseLink provides a number of advantages.</p>
@@ -73,7 +73,21 @@ Release 2.4</div></td>
 <p><b><font face="arial, helvetica, sans-serif" color="#330099">Components</font></b></p>
 <ul>
 <li>
-<p>WebLogic Server 12<em>c</em> or later.</p>
+<p>WebLogic Server 12<em>c</em> or later. WebLogic Server includes EclipseLink.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>EclipseLink's core functionality is provided by EclipseLink, the open source persistence framework from the Eclipse Foundation. EclipseLink implements Java Persistence API (JPA), Java Architecture for XML Binding (JAXB), and other standards-based persistence technologies, plus extensions to those standards. EclipseLink includes all of EclipseLink, plus additional functionality from Oracle.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
 </li>
 <li>
 <p>A compliant Java Database Connectivity (JDBC) database including Oracle Database, Oracle Express, MySQL, and so on.</p>
@@ -113,7 +127,7 @@ Release 2.4</div></td>
 <col width="48%" />
 <tr>
 <td>&nbsp;</td>
-<td align="center"><a href="install003.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="install004.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
 <td align="center"><a href="tlandwls001.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
 </tr>
 </table>

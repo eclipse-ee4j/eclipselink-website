@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Main Tasks | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-12-13T9:16:50Z" />
+<meta name="date" content="2013-01-15T10:52:15Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Main Tasks" />
 <meta name="relnum" content="Release 2.4" />
@@ -46,7 +46,7 @@ Release 2.4</div></td>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2012-12-13</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-01-15</font></p>
 <a id="BGBBIHFB" name="BGBBIHFB"></a><a id="TLADG462" name="TLADG462"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Main Tasks</font></h1>
@@ -68,7 +68,8 @@ Release 2.4</div></td>
 <p><a href="#BGBGDHBH">Task 5: Convert Hibernate API to EclipseLink API</a></p>
 </li>
 </ul>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref62" name="sthref62"></a>
+<a id="TLADG1114" name="TLADG1114"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref60" name="sthref60"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 1: Prerequisites</font></h2>
 <p>EclipseLink 2.4 or later.</p>
 <p>Download EclipseLink from <code><a href="http://www.eclipse.org/eclipselink/downloads/">http://www.eclipse.org/eclipselink/downloads/</a></code>.</p>
@@ -78,9 +79,9 @@ Release 2.4</div></td>
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 1: Convert the Hibernate Entity Annotation</font></h2>
 <p>The Hibernate entity annotation, defined by the <code>org.hibernate.annotations.Entity</code> class, adds additional metadata beyond what is defined by the JPA standard <code>@Entity</code> annotation.</p>
-<p><a href="#BGBJIHJB">Example 6-1</a> illustrates a sample Hibernate entity annotation. The example uses the <code>selectBeforeUpdate</code>, <code>dynamicInsert</code>, <code>dynamicUpdate</code>, <code>optimisticLock</code>, and <code>polymophism</code> attributes. Note that the Hibernate entity annotation also defines <code>mutable</code> and <code>persister</code> attributes, which are not used in this example.</p>
+<p><a href="#BGBJIHJB">Example 7-1</a> illustrates a sample Hibernate entity annotation. The example uses the <code>selectBeforeUpdate</code>, <code>dynamicInsert</code>, <code>dynamicUpdate</code>, <code>optimisticLock</code>, and <code>polymophism</code> attributes. Note that the Hibernate entity annotation also defines <code>mutable</code> and <code>persister</code> attributes, which are not used in this example.</p>
 <div class="example"><a id="BGBJIHJB" name="BGBJIHJB"></a><a id="TLADG464" name="TLADG464"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 6-1 Sample Hibernate Entity Annotation</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 7-1 Sample Hibernate Entity Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @org.hibernate.annotations.Entity(
      selectBeforeUpdate = true,
@@ -93,19 +94,19 @@ Release 2.4</div></td>
 <p>The following sections describe how EclipseLink handles selects, locks, polymorphism, and dynamic updates and inserts. For more information, see "EclipseLink/Examples/JPA/Migration/Hibernate/V3Annotations" in the Eclipselink documentation, at:</p>
 <p><code><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Migration/Hibernate/V3Annotations">http://wiki.eclipse.org/EclipseLink/Examples/JPA/Migration/Hibernate/V3Annotations</a></code></p>
 <a id="TLADG465" name="TLADG465"></a>
-<div class="sect3"><a id="sthref63" name="sthref63"></a>
+<div class="sect3"><a id="sthref61" name="sthref61"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Convert the SelectBeforeUpdate, dynamicInsert and dynamicUpdate Attributes</font></h3>
 <p>In Hibernate, the <code>selectBeforeUpdate</code> attribute specifies that Hibernate should never perform a SQL update unless it is certain that an object is actually modified. The <code>dynamicInsert</code> attribute specifies that the <code>INSERT</code> <code>SQL</code> statement should be generated at runtime and contain only the columns whose values are not null. The <code>dynamicUpdate</code> attribute specifies that the <code>UPDATE</code> <code>SQL</code> statement should be generated at runtime and can contain only those columns whose values have changed.</p>
 <p>By default, EclipseLink will always insert all mapped columns and will update only the columns that have changed. If alternative operations are required, then the queries used for these operations can be customized by using Java code, SQL, or stored procedures.</p>
 </div>
 <!-- class="sect3" -->
 <a id="TLADG466" name="TLADG466"></a>
-<div class="sect3"><a id="sthref64" name="sthref64"></a>
+<div class="sect3"><a id="sthref62" name="sthref62"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Convert the OptimisticLock Attribute</font></h3>
 <p>In Hibernate, the <code>optimisticLock</code> attribute determines the optimistic locking strategy.</p>
-<p>EclipseLink's optimistic locking functionality supports all of the Hibernate locking types and more. <a href="#BGBFBBCE">Table 6-1</a> translates locking types from Hibernate's <code>@Entity(optimisticLock)</code> attributes into EclipseLink locking policies. These policies can be configured either with the EclipseLink <code>@OptimisticLocking</code> annotation or in the EclipseLink <code>orm.xml</code> file. For more information, see @OptimisticLocking.</p>
-<div class="tblhruleformalwide"><a id="TLADG467" name="TLADG467"></a><a id="sthref65" name="sthref65"></a><a id="BGBFBBCE" name="BGBFBBCE"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 6-1 Translating Hibernate's OptimisticLock to EclipseLink's OptimisticLocking</font></em></strong></p>
+<p>EclipseLink's optimistic locking functionality supports all of the Hibernate locking types and more. <a href="#BGBFBBCE">Table 7-1</a> translates locking types from Hibernate's <code>@Entity(optimisticLock)</code> attributes into EclipseLink locking policies. These policies can be configured either with the EclipseLink <code>@OptimisticLocking</code> annotation or in the EclipseLink <code>orm.xml</code> file. For more information, see @OptimisticLocking.</p>
+<div class="tblhruleformalwide"><a id="TLADG467" name="TLADG467"></a><a id="sthref63" name="sthref63"></a><a id="BGBFBBCE" name="BGBFBBCE"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 7-1 Translating Hibernate's OptimisticLock to EclipseLink's OptimisticLocking</font></em></strong></p>
 <table class="HRuleFormalWide" title="Translating Hibernate's OptimisticLock to EclipseLink's OptimisticLocking" summary="Transforming Hibernate&rsquo;s OptimisticLock to EclipseLink&rsquo;s OptimisticLocking" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="26%" />
 <col width="22%" />
@@ -176,9 +177,9 @@ Release 2.4</div></td>
 <a id="BGBCJCBF" name="BGBCJCBF"></a><a id="TLADG468" name="TLADG468"></a>
 <div class="sect2">
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 2: Convert the Hibernate Custom Sequence Generator Annotation</font></h2>
-<p>In Hibernate, the <code>@GeneratedValue</code> annotation defines the identifier generation strategy. The <code>@GenericGenerator</code> allows you to define a Hibernate-specific ID generator. <a href="#BGBHCBDG">Example 6-2</a> illustrates a custom generator for sequence values.</p>
+<p>In Hibernate, the <code>@GeneratedValue</code> annotation defines the identifier generation strategy. The <code>@GenericGenerator</code> allows you to define a Hibernate-specific ID generator. <a href="#BGBHCBDG">Example 7-2</a> illustrates a custom generator for sequence values.</p>
 <div class="example"><a id="BGBHCBDG" name="BGBHCBDG"></a><a id="TLADG469" name="TLADG469"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 6-2 Custom Generator for Sequence Values</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 7-2 Custom Generator for Sequence Values</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 .
 .
@@ -193,7 +194,7 @@ Release 2.4</div></td>
  
 </pre></div>
 <!-- class="example" -->
-<p>In EclipseLink, a custom sequence generator can be implemented and registered by using the <code>@GeneratedValue</code> annotation. For more information, see <a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/CustomSequencing">"How to use Custom Sequencing (i.e., UUID)"</a> in the EclipseLink documentation, at:</p>
+<p>In EclipseLink, a custom sequence generator can be implemented and registered by using the <code>@GeneratedValue</code> annotation. For more information, see <a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/CustomSequencing">"How to use Custom Sequencing"</a> in the EclipseLink documentation, at:</p>
 <p><code><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/CustomSequencing">http://wiki.eclipse.org/EclipseLink/Examples/JPA/CustomSequencing</a></code></p>
 </div>
 <!-- class="sect2" -->
@@ -202,10 +203,10 @@ Release 2.4</div></td>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 3: Convert Hibernate Mapping Annotations</font></h2>
 <p>The following sections describe how to convert various Hibernate annotations to EclipseLink annotations.</p>
 <a id="TLADG471" name="TLADG471"></a>
-<div class="sect3"><a id="sthref66" name="sthref66"></a>
+<div class="sect3"><a id="sthref64" name="sthref64"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Convert the @ForeignKey Annotation</font></h3>
 <p>In Hibernate, the <code>@ForeignKey</code> annotation allows you to define the name of the foreign key to be used during schema generation.</p>
-<p>EclipseLink does generate reasonable names for foriegn keys, but does not provide an annotation or <code>eclipselink-orm.xml</code> support for specifying the name to use. When migrating, the recommended solution is to have EclipseLink generate the schema (DDL) commands to a script file instead of directly on the database. The script can then be customized to use different names prior to being executed.</p>
+<p>EclipseLink does generate reasonable names for foreign keys, but does not provide an annotation or <code>eclipselink-orm.xml</code> support for specifying the name to use. When migrating, the recommended solution is to have EclipseLink generate the schema (DDL) commands to a script file instead of directly on the database. The script can then be customized to use different names prior to being executed.</p>
 <div align="center">
 <div class="inftblnote"><br />
 <table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
@@ -223,19 +224,18 @@ Release 2.4</div></td>
 </div>
 <!-- class="sect3" -->
 <a id="TLADG472" name="TLADG472"></a>
-<div class="sect3"><a id="sthref67" name="sthref67"></a>
+<div class="sect3"><a id="sthref65" name="sthref65"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Convert the @Cache Annotation</font></h3>
-<p>In Hibernate, the <code>@Cache</code> annotation configures the caching of entities and relationships. Because EclipseLink uses an entity cache instead of a data cache, the relationships are automatically cached. In these cases, the <code>@Cache</code> annotation should be removed during migration.When the <code>@Cache</code> annotation is used on an entity, its behavior is similar to the EclipseLink <code>@Cache</code> annotation. For more information about the <code>@Cache</code> annotation and equivalent <code>eclipselink-orm.xml</code> configuration values, see <a href="http://wiki.eclipse.org/Using_EclipseLink_JPA_Extensions_%28ELUG%29#Using_EclipseLink_JPA_Extensions_for_Entity_Caching">"Eclipse User Guide on JPA Extensions" in the EclipseLink documentation, at:</a></p>
-<p><code><a href="http://wiki.eclipse.org/Using_EclipseLink_JPA_Extensions_%28ELUG%29#Using_EclipseLink_JPA_Extensions_for_Entity_Caching">http://wiki.eclipse.org/Using_EclipseLink_JPA_Extensions_%28ELUG%29#Using_EclipseLink_JPA_Extensions_for_Entity_Caching</a></code></p>
+<p>In Hibernate, the <code>@Cache</code> annotation configures the caching of entities and relationships. Because EclipseLink uses an entity cache instead of a data cache, the relationships are automatically cached. In these cases, the <code>@Cache</code> annotation should be removed during migration.When the <code>@Cache</code> annotation is used on an entity, its behavior is similar to the EclipseLink <code>@Cache</code> annotation. For more information about the <code>@Cache</code> annotation and equivalent <code>eclipselink-orm.xml</code> configuration values, see Java Persistence API (JPA) Extensions Reference for EclipseLink.</p>
 </div>
 <!-- class="sect3" --></div>
 <!-- class="sect2" -->
 <a id="BGBGAGJD" name="BGBGAGJD"></a><a id="TLADG473" name="TLADG473"></a>
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 4: Modify the persistence.xml File</font></h2>
-<p>The <code>persistence.xml</code> file is the deployment descriptor file for JPA persistence. It specifies the persistence units, and declares the managed persistence classes, the object-relational mapping, and the database connection details. <a href="#BGBBIHAD">Example 6-3</a> illustrates a <code>persistence.xml</code> file for an application that uses Hibernate. Hibernate-specfific values appear in bold font.</p>
+<p>The <code>persistence.xml</code> file is the deployment descriptor file for JPA persistence. It specifies the persistence units, and declares the managed persistence classes, the object-relational mapping, and the database connection details. <a href="#BGBBIHAD">Example 7-3</a> illustrates a <code>persistence.xml</code> file for an application that uses Hibernate. Hibernate-specific values appear in bold font.</p>
 <div class="example"><a id="BGBBIHAD" name="BGBBIHAD"></a><a id="TLADG474" name="TLADG474"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 6-3 Persistence File for an Application that Uses Hibernate</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 7-3 Persistence File for an Application that Uses Hibernate</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;persistence&gt;
    &lt;persistence-unit name="helloworld"&gt;
@@ -250,11 +250,11 @@ Release 2.4</div></td>
 </pre></div>
 <!-- class="example" -->
 <a id="TLADG475" name="TLADG475"></a>
-<div class="sect3"><a id="sthref68" name="sthref68"></a>
+<div class="sect3"><a id="sthref66" name="sthref66"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Modified persistence.xml File</font></h3>
-<p><a href="#BGBHEIEJ">Example 6-4</a> illustrates a <code>persistence.xml</code> file modified for an application that uses EclipseLink. Key differences include the value for the persistence provider. For EclipseLink, this value is <code>org.eclipse.persistence.jpa.PersistenceProvider</code>. The names of EclipseLink-specific properties are typically be prefixed by <code>eclipselink</code>, for example, <code>eclipselink.target-database</code>. EclipseLink-specific values appear in bold font.</p>
+<p><a href="#BGBHEIEJ">Example 7-4</a> illustrates a <code>persistence.xml</code> file modified for an application that uses EclipseLink. Key differences include the value for the persistence provider. For EclipseLink, this value is <code>org.eclipse.persistence.jpa.PersistenceProvider</code>. The names of EclipseLink-specific properties are typically be prefixed by <code>eclipselink</code>, for example, <code>eclipselink.target-database</code>. EclipseLink-specific values appear in bold font.</p>
 <div class="example"><a id="BGBHEIEJ" name="BGBHEIEJ"></a><a id="TLADG476" name="TLADG476"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 6-4 Persistence File Modified for EclipseLink</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 7-4 Persistence File Modified for EclipseLink</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;xml version="1.0" encoding="UTF-8"?&gt;
 &lt;persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" 
@@ -263,12 +263,11 @@ Release 2.4</div></td>
   &lt;persistence-unit name="helloworld"&gt;
     <strong><code>&lt;provider&gt;org.eclipse.persistence.jpa.PersistenceProvider&lt;/provider&gt;</code></strong>
     &lt;jta-data-source&gt;java:/DefaultDS&lt;/jta-data-source&gt;
-    &lt;!-- Entities must be specified for EclipseLink weaving --&gt;
+    &lt;!-- For Java SE applications, entity classes must be specified for EclipseLink weaving. For Java EE applications, the classes are found automatically. --&gt;
     &lt;class&gt;Todo&lt;/class&gt;
     &lt;properties&gt;
       <strong><code>&lt;property name="eclipselink.ddl-generation" value="drop-and-create-tables"/&gt;</code></strong>
      <strong><code> &lt;property name="eclipselink.ddl-generation.output-mode" value="database"/&gt;</code></strong>
-      <strong><code>&lt;property name="eclipselink.weaving" value="false"/&gt;</code></strong>
       <strong><code>&lt;property name="eclipselink.logging.level" value="FINE"/&gt;</code></strong>
     &lt;/properties&gt;
   &lt;/persistence-unit&gt;
@@ -277,86 +276,116 @@ Release 2.4</div></td>
 <!-- class="example" --></div>
 <!-- class="sect3" -->
 <a id="TLADG477" name="TLADG477"></a>
-<div class="sect3"><a id="sthref69" name="sthref69"></a>
-<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Drop and Create the Database</font></h3>
+<div class="sect3"><a id="sthref67" name="sthref67"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Drop and Create the Database Tables</font></h3>
 <p>For production environments, you would usually have the schema set up on the database. The following properties defined in the persistence unit are more suitable for examples and demonstrations. These properties will instruct EclipseLink to automatically drop and create database tables. Any previously existing tables will be removed.</p>
+<p>To use the Drop and Create Database Tables feature, add the following properties to the <code>persistence.xml</code> file.</p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;property name="eclipselink.ddl-generation" value="drop-and-create-tables"/&gt;
-&lt;property name="eclipselink.ddl-generation.output-mode" value="database"/&gt;
-</pre></div>
+ &lt;property name="eclipselink.ddl-generation.output-mode" value="database"/&gt;
+</pre>
+<p>For more information on this feature, see the <code>drop-and-create-tables</code> entry in "ddl-generation" in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+</div>
+<!-- class="sect3" -->
+<a id="TLADG1115" name="TLADG1115"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref68" name="sthref68"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Create or Extend Database Tables</font></h3>
+<p>The Create or Extend Database Tables feature allows you match the database schema to the object model by creating new database tables or by modifying existing tables. You can modify existing tables by specifying field name changes and by add and removing fields.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>In the current release, the Create or Extend Database Tables feature will not rename or delete existing columns. It will only add missing table columns.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>The Create or Extend Database Tables feature reduces the need to repopulate test data. You avoid the need to use the Drop and Create Database Tables feature when the schema changes, due to changes in the object model. The Create or Extend Database Tables feature can also be used with extensibility to add table columns.</p>
+<p>To use the Create or Extend Database Tables feature, add the following properties to the <code>persistence.xml</code> file. When the context is loaded, EclipseLink will query the database for each table required in the persistence unit and use the results to determine if the table needs to be created or extended.</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;property name="eclipselink.ddl-generation" value="create-or-extend-tables" /&gt;
+ &lt;property name="eclipselink.ddl-generation.output-mode" value="database" /&gt;
+</pre>
+<p>For more information on this feature, see the <code>create-or-extend-tables</code> entry in "ddl-generation" in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+</div>
 <!-- class="sect3" --></div>
 <!-- class="sect2" -->
 <a id="BGBGDHBH" name="BGBGDHBH"></a><a id="TLADG478" name="TLADG478"></a>
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 5: Convert Hibernate API to EclipseLink API</font></h2>
-<p><a href="#BGBDAHCF">Table 6-2</a> describes the Hibernate classes that are commonly used in a JPA project and their equivalent EclipseLink (JPA) interfaces. All of the Hibernate classes are in the <code>org.hibernate</code> package. All of the JPA interfaces (and the <code>Persistence</code> class) are in the <code>javax.persistence</code> package.</p>
+<p><a href="#BGBDAHCF">Table 7-2</a> describes the Hibernate classes that are commonly used in a JPA project and their equivalent EclipseLink (JPA) interfaces. All of the Hibernate classes are in the <code>org.hibernate</code> package. All of the JPA interfaces (and the <code>Persistence</code> class) are in the <code>javax.persistence</code> package.</p>
 <p>For information about the EclipseLink API, see <em>Java API Reference for EclipseLink</em>.</p>
-<div class="tblhruleformalwide"><a id="TLADG479" name="TLADG479"></a><a id="sthref70" name="sthref70"></a><a id="BGBDAHCF" name="BGBDAHCF"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 6-2 Hibernate Classes and Equivalent JPA Interfaces</font></em></strong></p>
+<div class="tblhruleformalwide"><a id="TLADG479" name="TLADG479"></a><a id="sthref69" name="sthref69"></a><a id="BGBDAHCF" name="BGBDAHCF"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 7-2 Hibernate Classes and Equivalent JPA Interfaces</font></em></strong></p>
 <table class="HRuleFormalWide" title="Hibernate Classes and Equivalent JPA Interfaces" summary="Hibernate Classes and Equivalent JPA Interfaces" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="21%" />
 <col width="27%" />
 <col width="*" />
 <thead>
 <tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t4"><font face="Arial, Helvetica, sans-serif"><strong>org.hibernate</strong></font></th>
-<th align="left" valign="bottom" id="r1c2-t4"><font face="Arial, Helvetica, sans-serif"><strong>javax.persistence</strong></font></th>
-<th align="left" valign="bottom" id="r1c3-t4"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c1-t5"><font face="Arial, Helvetica, sans-serif"><strong>org.hibernate</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t5"><font face="Arial, Helvetica, sans-serif"><strong>javax.persistence</strong></font></th>
+<th align="left" valign="bottom" id="r1c3-t5"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
 </tr>
 </thead>
 <tbody>
 <tr align="left" valign="top">
-<td align="left" id="r2c1-t4" headers="r1c1-t4">
+<td align="left" id="r2c1-t5" headers="r1c1-t5">
 <p><code>cfg.Configuration</code></p>
 </td>
-<td align="left" headers="r2c1-t4 r1c2-t4">
+<td align="left" headers="r2c1-t5 r1c2-t5">
 <p><code>Persistence</code></p>
 </td>
-<td align="left" headers="r2c1-t4 r1c3-t4">
+<td align="left" headers="r2c1-t5 r1c3-t5">
 <p>Provides a bootstrap class that configures the session factory (in Hibernate) or the entity manager factory (in JPA). It is generally used to create a single session (or entity manager) factory for the JVM.</p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r3c1-t4" headers="r1c1-t4">
+<td align="left" id="r3c1-t5" headers="r1c1-t5">
 <p><code>SessionFactory</code></p>
 </td>
-<td align="left" headers="r3c1-t4 r1c2-t4">
+<td align="left" headers="r3c1-t5 r1c2-t5">
 <p><code>EntityManagerFactory</code></p>
 </td>
-<td align="left" headers="r3c1-t4 r1c3-t4">
+<td align="left" headers="r3c1-t5 r1c3-t5">
 <p>Provides APIs to open Hibernate sessions (or JPA entity managers) to process a user request. Generally, a session (or entity manager) is opened per thread processing client requests.</p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r4c1-t4" headers="r1c1-t4">
+<td align="left" id="r4c1-t5" headers="r1c1-t5">
 <p><code>Session</code></p>
 </td>
-<td align="left" headers="r4c1-t4 r1c2-t4">
+<td align="left" headers="r4c1-t5 r1c2-t5">
 <p><code>EntityManager</code></p>
 </td>
-<td align="left" headers="r4c1-t4 r1c3-t4">
+<td align="left" headers="r4c1-t5 r1c3-t5">
 <p>Provides APIs to store and load entities to and from the database. It also provides APIs to get a transaction and create a query.</p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r5c1-t4" headers="r1c1-t4">
+<td align="left" id="r5c1-t5" headers="r1c1-t5">
 <p><code>Transaction</code></p>
 </td>
-<td align="left" headers="r5c1-t4 r1c2-t4">
+<td align="left" headers="r5c1-t5 r1c2-t5">
 <p><code>EntityTransaction</code></p>
 </td>
-<td align="left" headers="r5c1-t4 r1c3-t4">
+<td align="left" headers="r5c1-t5 r1c3-t5">
 <p>Provides APIs to manage transactions.</p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r6c1-t4" headers="r1c1-t4">
+<td align="left" id="r6c1-t5" headers="r1c1-t5">
 <p><code>Query</code></p>
 </td>
-<td align="left" headers="r6c1-t4 r1c2-t4">
+<td align="left" headers="r6c1-t5 r1c2-t5">
 <p><code>Query</code></p>
 </td>
-<td align="left" headers="r6c1-t4 r1c3-t4">
+<td align="left" headers="r6c1-t5 r1c3-t5">
 <p>Provides APIs to execute queries.</p>
 </td>
 </tr>

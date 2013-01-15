@@ -1,0 +1,370 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Installing EclipseLink OSGi | EclipseLink 2.4.x Understanding EclipseLink</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
+<meta name="date" content="2013-01-15T10:52:10Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Installing EclipseLink OSGi" />
+<meta name="relnum" content="Release 2.4" />
+<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="install003.htm" title="Previous" type="text/html" />
+<link rel="next" href="tlandwls.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:enkkfjmsqju', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><b>EclipseLink Solutions Guide for EclipseLink</b><br />
+Release 2.4</div></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="install003.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="tlandwls.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header -->
+<p align="center"><font color="#FF0000">Beta Draft: 2013-01-15</font></p>
+<a id="CHDJBFEA" name="CHDJBFEA"></a><a id="TLADG1096" name="TLADG1096"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Installing EclipseLink OSGi</font></h1>
+<p>EclipseLink OSGi bundles are made available both as a zip and via an Eclipse P2 update site. See the following for download and installation instructions.</p>
+<ul>
+<li>
+<p><a href="#CHDFHDAB">Alternative 1: Install EclipseLink OSGi from the Zip File</a></p>
+</li>
+<li>
+<p><a href="#CHDJDICF">Alternative 2: Install EclipseLink OSGi in PDE from an Eclipse P2 Update Site</a></p>
+</li>
+</ul>
+<a id="CHDFHDAB" name="CHDFHDAB"></a><a id="TLADG1098" name="TLADG1098"></a>
+<div class="sect2">
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Alternative 1: Install EclipseLink OSGi from the Zip File</font></h2>
+<p>To download and install the zip file distribution, do the following:</p>
+<ol>
+<li>
+<p>Download the EclispeLink OSGI bundle zip file from <code><a href="http://www.eclipse.org/eclipselink/downloads/">http://www.eclipse.org/eclipselink/downloads/</a></code>.</p>
+</li>
+<li>
+<p>Unpack the downloaded zip file in the desired installation directory. You can do either of the following:</p>
+<ul>
+<li>
+<p>Add the installation directory to a target platform.</p>
+</li>
+<li>
+<p>If you are developing in Eclipse with PDE, you can place the downloaded bundles into your &lt;<em><code>ECLIPSE_HOME</code></em>&gt;<code>\dropins</code> folder. However, the approach described in <a href="#CHDJDICF">Alternative 2: Install EclipseLink OSGi in PDE from an Eclipse P2 Update Site</a> is recommended.</p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDJDICF" name="CHDJDICF"></a><a id="TLADG1099" name="TLADG1099"></a>
+<div class="sect2">
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Alternative 2: Install EclipseLink OSGi in PDE from an Eclipse P2 Update Site</font></h2>
+<p>The Eclipse Plug-in Development Environment (PDE) provides tools to create, develop, test, debug, build and deploy Eclipse plug-ins, fragments, features, update sites and RCP products. PDE also provides comprehensive OSGi tooling. For more information about PDE, see "PDE" at <code><a href="http://www.eclipse.org/pde/">http://www.eclipse.org/pde/</a></code>.</p>
+<div class="sect3"><a id="sthref12" name="sthref12"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Prerequisites</font></h3>
+<p>To use PDE, PDE must be installed on your computer. PDE ships with the Eclipse SDK, which can be downloaded from the Eclipse project downloads page <code>http://www.eclipse.org/downloads/</code>. For installation instructions, see "Eclipse Installation" at <code>http://wiki.eclipse.org/Eclipse/Installation</code>.</p>
+<p>If you already have an installation of Eclipse that does not include PDE (for example, Eclipde IDE for Java Developers), you can install it using the Install New Software Wizard in the Eclipse IDE. Filter the results for "Eclipse plug-in development environment." PDE is listed as "Eclipse plug-in development environment" under the "General Purpose Tools" category.</p>
+</div>
+<!-- class="sect3" -->
+<div class="sect3"><a id="sthref13" name="sthref13"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Installing the OSGi Bundles</font></h3>
+<p>To Install EclipseLink OSGi in PDE from an Eclipse P2 update site, do the following:</p>
+<ol>
+<li>
+<p>Start the Eclipse IDE.</p>
+</li>
+<li>
+<p>From the <strong>Window</strong> menu, choose <strong>Preferences</strong>, then choose <strong>Plug-in Development &gt; Target Platform</strong>.</p>
+</li>
+<li>
+<p>On the Target Platform page, click <strong>Add</strong> to create a new target platform definition.</p>
+</li>
+<li>
+<p>Select <strong>Nothing: Start with an empty target definition</strong>, then click <strong>Next</strong>.</p>
+</li>
+<li>
+<p>On the Target Content page, select the Locations tab, the click <strong>Add</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Software Site</strong> and then click '<strong>Next</strong>.</p>
+</li>
+<li>
+<p>On the Add Software Site page, specify the update site from the <strong>Work with</strong> list of P2 repositories, for example, <code>Juno - http://download.eclipse.org/releases/juno/</code>.</p>
+<p>If the desired repository is not in the list, click <code><a href="Add">Add</a></code> to add it, and then select the repository.</p>
+</li>
+<li>
+<p>Once the feature list has been populated, expand the <strong>EclipseRT Target Platform Components</strong> category, select <strong>EclipseLink Target Components</strong>, and then click <strong>Finish</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Name</strong> field on the Target Content page, change the name of the new target platform to reflect its contents, for example, "EclipseLink 2.4," then click <strong>Finish</strong>.</p>
+</li>
+<li>
+<p>On the Target Platform page, select the newly defined target as the default and click <strong>OK</strong>.</p>
+</li>
+</ol>
+<p>In the Plug-ins view of the Plug-in Development perspective you will see all of the bundles in your target platform. Note that bundles EclipseLink requires have also been downloaded and installed by P2, for example, Equinox (<code>org.eclipse.osgi</code>).</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="TLADG1100" name="TLADG1100"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref14" name="sthref14"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">EclipseLink OSGi Bundles</font></h2>
+<p>The following tables list the bundles included with EclipseLink OSGi.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>The names of the bundle files include suffixes with a release and build number. Those numbers vary depending upon the release you download.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<div class="tblhruleformalwide"><a id="TLADG1101" name="TLADG1101"></a><a id="sthref15" name="sthref15"></a><a id="sthref16" name="sthref16"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-1 EclipseLink Core Functionality</font></em></strong></p>
+<table class="HRuleFormalWide" title="EclipseLink Core Functionality" summary="This table lists and describes the bundles for EclipseLink core functionality." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="25%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t4"><font face="Arial, Helvetica, sans-serif"><strong>Bundle</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t4"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t4" headers="r1c1-t4">
+<p><code>org.eclipse.persistence.core</code></p>
+</td>
+<td align="left" headers="r2c1-t4 r1c2-t4">
+<p>This bundle provides EclipseLink's core library. All other EclipseLink bundles (JPA, MOXy, SDO) are dependent on this bundle.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t4" headers="r1c1-t4">
+<p><code>org.eclipse.persistence.asm</code></p>
+</td>
+<td align="left" headers="r3c1-t4 r1c2-t4">
+<p>This bundle provides EclipseLink's version of the ASM library used for byte-code weaving in the core, JPA, SDO and MOXy bundles. It is required when using any of those bundles.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t4" headers="r1c1-t4">
+<p><code>org.eclipse.persistence.antlr</code></p>
+</td>
+<td align="left" headers="r4c1-t4 r1c2-t4">
+<p>This bundle provides EclipseLink's version of the ANTLR library used for JPQL parsing in the JPA and core bundles. It is required when using JPA.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t4" headers="r1c1-t4">
+<p>org<code>.eclipse.persistence.oracle</code></p>
+</td>
+<td align="left" headers="r5c1-t4 r1c2-t4">
+<p>This bundle provides support for extended Oracle database features (Timestamp extensions, Spatial types, Oracle XML Parser, XDB, Advanced Queueing, XDK, Oracle LOBs).</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t4" headers="r1c1-t4">
+<p><code>javax.activation</code></p>
+<p><code>javax.jms</code></p>
+<p><code>javax.mail</code></p>
+<p><code>javax.resource</code></p>
+<p><code>javax.servlet</code></p>
+<p><code>javax.transaction</code></p>
+<p><code>javax.xml.rpc</code></p>
+<p><code>javax.xml.soap</code></p>
+<p><code>javax.xml.stream</code></p>
+<p><code>javax.xml.ws</code></p>
+</td>
+<td align="left" headers="r6c1-t4 r1c2-t4">
+<p>These bundles contain classes from Java specification. They have been converted to bundle format so they can be used in OSGi. Depending on the OSGi environment whether the running OSGi Environment EclipseLink contains those versions of the libraries listed, these bundles may or may not be necessary.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<div class="tblhruleformalwide"><a id="TLADG1102" name="TLADG1102"></a><a id="sthref17" name="sthref17"></a><a id="sthref18" name="sthref18"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-2 EclipseLink JPA</font></em></strong></p>
+<table class="HRuleFormalWide" title="EclipseLink JPA" summary="This table lists and describes the bundles for EclipseLink JPA." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="25%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t5"><font face="Arial, Helvetica, sans-serif"><strong>Bundle</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t5"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t5" headers="r1c1-t5">
+<p><code>javax.persistence</code></p>
+</td>
+<td align="left" headers="r2c1-t5 r1c2-t5">
+<p>This bundle contains versions of the javax.persistence and javax.persistence.spi classes that have been updated to be OSGi friendly. OSGi users must use this bundle for performing OSGi-based JPA.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t5" headers="r1c1-t5">
+<p><code>org.eclipse.persistence.jpa</code></p>
+</td>
+<td align="left" headers="r3c1-t5 r1c2-t5">
+<p>This bundle supports JPA functionality along with Extended JPA support using EclipseLink's annotations, PU properties, and query hints. The bundle also supports partial and complete EclipseLink-ORM.XML extensions of JPA.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t5" headers="r1c1-t5">
+<p><code>org.eclipse.persistence.jpa.osgi</code></p>
+</td>
+<td align="left" headers="r4c1-t5 r1c2-t5">
+<p>This bundle provides support for using JPA in OSGi</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t5" headers="r1c1-t5">
+<p><code>org.eclipse.persistence.jpa.equinox</code></p>
+<p><code>org.eclipse.persistence.jpa.equinox.weaving</code></p>
+</td>
+<td align="left" headers="r5c1-t5 r1c2-t5">
+<p>These bundles implement byte code weaving support when running on Equinox, the Eclipse implementation of the OSGi R4 core framework specification, including a set of bundles that implement various optional OSGi services and other infrastructure for running OSGi-based systems. For information about Equinox, see <code>http://www.eclipse.org/equinox</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<div class="tblhruleformalwide"><a id="TLADG1103" name="TLADG1103"></a><a id="sthref19" name="sthref19"></a><a id="sthref20" name="sthref20"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-3 EclipseLink MOXy</font></em></strong></p>
+<table class="HRuleFormalWide" title="EclipseLink MOXy" summary="This table lists and describes the bundles for EclipseLink MOXy" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="25%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t6"><font face="Arial, Helvetica, sans-serif"><strong>Bundle</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t6"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t6" headers="r1c1-t6">
+<p><code>org.eclipse.persistence.moxy</code></p>
+</td>
+<td align="left" headers="r2c1-t6 r1c2-t6">
+<p>This bundle supports JAXB 2.0 using annotations and XML mapping file.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t6" headers="r1c1-t6">
+<p><code>javax.xml.bind</code></p>
+</td>
+<td align="left" headers="r3c1-t6 r1c2-t6">
+<p>This bundle contains the specification classes and interfaces augmented with support for discovering JAXB provider services.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<div class="tblhruleformalwide"><a id="TLADG1104" name="TLADG1104"></a><a id="sthref21" name="sthref21"></a><a id="sthref22" name="sthref22"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-4 EclipseLink SDO</font></em></strong></p>
+<table class="HRuleFormalWide" title="EclipseLink SDO" summary="This table lists and describes the bundles for EclipseLink SDO" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="25%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t7"><font face="Arial, Helvetica, sans-serif"><strong>Bundle</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t7"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t7" headers="r1c1-t7">
+<p><code>org.eclipse.persistence.sdo</code></p>
+</td>
+<td align="left" headers="r2c1-t7 r1c2-t7">
+<p>This bundle supports Eclipse persistence SDO 2.1 classes.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t7" headers="r1c1-t7">
+<p><code>commonj.sdo</code></p>
+</td>
+<td align="left" headers="r3c1-t7 r1c2-t7">
+<p>This bundle provides common SDO 2.1 classes.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="install003.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="tlandwls.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+                
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
+</html>

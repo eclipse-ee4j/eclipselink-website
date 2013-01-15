@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Implementing the Solution | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-12-13T9:16:49Z" />
+<meta name="date" content="2013-01-15T10:52:10Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Implementing the Solution" />
 <meta name="relnum" content="Release 2.4" />
@@ -46,17 +46,14 @@ Release 2.4</div></td>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2012-12-13</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-01-15</font></p>
 <a id="BABEDCEI" name="BABEDCEI"></a><a id="TLADG118" name="TLADG118"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Implementing the Solution</font></h1>
-<p>To run EclipseLink JPA applications in WebLogic Server, you must configure WebLogic Server and coordinate certain settings in it and in your application, as described in the following tasks.</p>
+<p>To run EclipseLink JPA applications in WebLogic Server, you must configure WebLogic Server and coordinate certain settings in it and in your application, as described in the following tasks:</p>
 <ul>
 <li>
 <p><a href="#BABJHCFG">Task 1: Prerequisites</a></p>
-</li>
-<li>
-<p><a href="#BABBEEFB">Task 2: Update the Release of EclipseLink in WebLogic Server (Optional)</a></p>
 </li>
 <li>
 <p><a href="#BABJDGGE">Task 3: Configure JMX MBean Extensions in WebLogic Server</a></p>
@@ -103,87 +100,6 @@ Release 2.4</div></td>
 <p>For JDeveloper, see <code><a href="http://www.oracle.com/technetwork/developer-tools/jdev/downloads/index.html">http://www.oracle.com/technetwork/developer-tools/jdev/downloads/index.html</a></code>. For Oracle Enterprise Pack for Eclipse, see <code><a href="http://www.oracle.com/technetwork/developer-tools/eclipse/overview/index.html">http://www.oracle.com/technetwork/developer-tools/eclipse/overview/index.html</a></code>. For NetBeans, see <code><a href="http://www.oracle.com/us/products/tools/050845.html">http://www.oracle.com/us/products/tools/050845.html</a></code>.</p>
 </li>
 </ul>
-</div>
-<!-- class="sect2" -->
-<a id="BABBEEFB" name="BABBEEFB"></a><a id="TLADG121" name="TLADG121"></a>
-<div class="sect2">
-<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 2: Update the Release of EclipseLink in WebLogic Server (Optional)</font></h2>
-<p>EclipseLink includes all the <a href="http://wiki.eclipse.org/EclipseLink">EclipseLink</a> libraries, which provide the support for JPA, MOXy, DBWS, and other persistence and transformation services. The release of EclipseLink included in EclipseLink may not be the most current available from the Eclipse Foundation. However, you can upgrade the EclipseLink release by using the WebLogic Server filtering class loader and the shared library feature.</p>
-<p>The <code>FilteringClassLoader</code> class provides a mechanism for configuring deployment descriptors to specify that certain packages are always loaded from the application, rather than being loaded by the system class loader. You can use this mechanism to specify that a newer release of EclipseLink be used by an application. For more information about filtering class loaders, see "Using a Filtering Classloader" in <em>Oracle Fusion Middleware Developing Applications for Oracle WebLogic Server</em>.</p>
-<p>A shared library is a Java EE module that can be shared by multiple enterprise applications. A shared library is deployed to a WebLogic Server target, and it can then be referenced by applications. Upon deployment, WebLogic Server merges the contents of the shared library with the application. In addition, because shared libraries can be packaged as standard Java EE archives, any descriptors are also merged with the application at deployment. For more information about WebLogic Server shared libraries, see "Creating Shared Java EE Libraries and Optional Packages" in <em>Oracle Fusion Middleware Developing Applications for Oracle WebLogic Server</em>.</p>
-<p>To update the release of EclipseLink used by applications deployed to WebLogic Server, do the following:</p>
-<ol>
-<li>
-<p>Download the <code>eclipselink-</code><em><code>release_no</code></em><code>.zip</code> file for the EclipseLink release you want from the EclipseLink website at <code><a href="http://www.eclipse.org/eclipselink/downloads/index.php">http://www.eclipse.org/eclipselink/downloads/index.php</a></code>.</p>
-</li>
-<li>
-<p>Prepare the shared library as a standard Java EE Enterprise Archive (EAR), named, for example, <code>eclipselink-shared-lib.ear</code>, containing the following items:</p>
-<pre xml:space="preserve" class="oac_no_warn">
-META-INF/weblogic-application.xml
-META-INF/application.xml
-lib/eclipselink.jar
-</pre>
-<p>For more information about creating EARs, see "Creating and Configuring Web Applications" in <em>Oracle Fusion Middleware Developing Web Applications, Servlets, and JSPs for Oracle WebLogic Server</em>.</p>
-</li>
-<li>
-<p>In the application's <code>weblogic-application.xml</code> descriptor file, add a <code>prefer-application-packages</code> element, with the subelement <code>&lt;package-name&gt;org.eclipse.persistence.*&lt;/package-name&gt;</code>, as follows:</p>
-<pre xml:space="preserve" class="oac_no_warn">
-&lt;weblogic-application&gt;
-  &lt;prefer-application-packages&gt;
-    &lt;package-name&gt;org.eclipse.persistence.*&lt;/package-name&gt;
-  &lt;/prefer-application-packages&gt;
-&lt;/weblogic-application&gt;
-</pre></li>
-<li>
-<p>Create an <code>application.xml</code> file for the application. This file is necessary to support the runtime library merging. The minimum configuration is as follows:</p>
-<pre xml:space="preserve" class="oac_no_warn">
-&lt;application&gt;
-  &lt;display-name&gt;eclipselink-shared-lib&lt;/display-name&gt;
-  &lt;module&gt;
-        &lt;java&gt;&lt;/java&gt;
-  &lt;/module&gt;
-&lt;/application&gt;
-</pre></li>
-<li>
-<p>Add the extension name, the specification version, and the implementation version to the EAR's <code>META-INF/MANIFEST.MF</code> file. For example, if you are using Apache Ant, you can do the following:</p>
-<pre xml:space="preserve" class="oac_no_warn">
-&lt;target name="package" depends="prepare"&gt;
-    &lt;jar destfile="dist/${ant.project.name}.ear"&gt;
-        &lt;metainf dir="etc" includes="*.xml"/&gt;
-        &lt;manifest&gt;
-            &lt;attribute name="Extension-Name" value="eclipselink"/&gt;
-            &lt;attribute name="Specification-Version" value="2.0"/&gt;
-            &lt;attribute name="Implementation-Version" value="2.2.0"/&gt;
-        &lt;/manifest&gt;
-        &lt;fileset dir="build" includes="**/*"/&gt;
-    &lt;/jar&gt;       
-&lt;/target&gt;
-</pre>
-<p>At deployment time, WebLogic Server uses the attributes as metadata for the deployed shared library.</p>
-<p>The final EAR file should look like this:</p>
-<pre xml:space="preserve" class="oac_no_warn">
-META-INF/
-META-INF/MANIFEST.MF
-META-INF/application.xml
-META-INF/weblogic-application.xml
-lib/
-lib/eclipselink.jar
-</pre></li>
-<li>
-<p>Deploy the <code>eclipselink-shared-lib.ear</code> file to WebLogic Server. This results in a new library being available on the server, <code>eclipselink#2.0@2.2.0</code>.</p>
-</li>
-<li>
-<p>In the <code>weblogic-application.xml</code> file of any applications that will use the updated release of EclipseLink, add a reference to the shared library, as follows:</p>
-<pre xml:space="preserve" class="oac_no_warn">
-&lt;weblogic-application&gt;
-    &lt;library-ref&gt;
-        &lt;library-name&gt;eclipselink&lt;/library-name&gt;
-        &lt;specification-version&gt;2.0&lt;/specification-version&gt;
-        &lt;implementation-version&gt;2.2.0&lt;/implementation-version&gt;
-    &lt;/library-ref&gt;
-&lt;/weblogic-application&gt;
-</pre></li>
-</ol>
 </div>
 <!-- class="sect2" -->
 <a id="BABJDGGE" name="BABJDGGE"></a><a id="TLADG122" name="TLADG122"></a>
@@ -259,9 +175,9 @@ lib/eclipselink.jar
 <div class="sect3"><a id="sthref24" name="sthref24"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">How the Logging Integration Works</font></h3>
 <p>By default, the WebLogic Server logging implementation is injected into the persistence context, which results in all EclipseLink logging messages being produced according to the WebLogic Server logging configuration.</p>
-<p>As a result of this integration, EclipseLink logging levels are converted to WebLogic Server logging levels as shown in <a href="#BABCAIDJ">Table 2-1</a>.</p>
+<p>As a result of this integration, EclipseLink logging levels are converted to WebLogic Server logging levels as shown in <a href="#BABCAIDJ">Table 3-1</a>.</p>
 <div class="tblformal"><a id="TLADG125" name="TLADG125"></a><a id="sthref25" name="sthref25"></a><a id="BABCAIDJ" name="BABCAIDJ"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-1 Mapping of EclipseLink Logging Levels to WebLogic Server Logging Levels</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 3-1 Mapping of EclipseLink Logging Levels to WebLogic Server Logging Levels</font></em></strong></p>
 <table class="Formal" title="Mapping of EclipseLink Logging Levels to WebLogic Server Logging Levels" summary="This table shows how EclipseLink logging levels map to WebLogic Server logging levels." dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
 <col width="41%" />
 <col width="*" />
@@ -324,9 +240,9 @@ lib/eclipselink.jar
 </table>
 <br /></div>
 <!-- class="tblformal" -->
-<p>WebLogic Server logging levels are mapped to EclipseLink levels as shown in <a href="#BABHEBHF">Table 2-2</a>.</p>
+<p>WebLogic Server logging levels are mapped to EclipseLink levels as shown in <a href="#BABHEBHF">Table 3-2</a>.</p>
 <div class="tblformal"><a id="TLADG126" name="TLADG126"></a><a id="sthref26" name="sthref26"></a><a id="BABHEBHF" name="BABHEBHF"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-2 Mapping of WebLogic Server Logging Levels to EclipseLink Logging Levels</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 3-2 Mapping of WebLogic Server Logging Levels to EclipseLink Logging Levels</font></em></strong></p>
 <table class="Formal" title="Mapping of WebLogic Server Logging Levels to EclipseLink Logging Levels" summary="This table shows how WebLogic Server logging levels map to EclipseLink logging levels." dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
 <col width="41%" />
 <col width="*" />
@@ -439,7 +355,6 @@ lib/eclipselink.jar
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 5: Add Persistence to Your Java Application Using EclipseLink</font></h2>
 <p>Using EclipseLink JPA to provide persistence for an application is the fundamental task presumed by all the other tasks described in this chapter; yet the actual JPA programming practice is mostly outside the scope of this guide. WebLogic Server imposes no special requirements on your EclipseLink application, other than the details described in this chapter.</p>
-<p>That is because EclipseLink is based on EclipseLink, the open source persistence project from the Eclipse Foundation. EclipseLink 2.<em>n</em> is the reference implementation of the <em>Java Persistence API, Version 2.0</em> specification. EclipseLink includes all of the EclipseLink Java Archive (JAR) files, plus additional Oracle tools and features. Therefore, you can take advantage of the full range of features and functionality provided by JPA and EclipseLink when using EclipseLink to add the persistence layer to your Java applications.</p>
 <p>This chapter describes features, settings, and tasks that are specific to using EclipseLink (runtime and API) with WebLogic Server. For information about developing, packaging, and deploying a Java application using JPA, see the following:</p>
 <ul>
 <li>
@@ -574,9 +489,9 @@ lib/eclipselink.jar
 <a id="BABBHEBJ" name="BABBHEBJ"></a><a id="TLADG136" name="TLADG136"></a>
 <div class="sect4"><!-- infolevel="all" infotype="General" -->
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Configure the persistence.xml File</font></h4>
-<p>In the <code>persistence.xml</code> file, specify that <code>transaction-type</code> is <code>JTA</code>, and provide the name of the data source in the <code>jta-data-source</code> element (prefaced by <code>jdbc/</code> or not), as shown in <a href="#BABCFFHC">Example 2-1</a>:</p>
+<p>In the <code>persistence.xml</code> file, specify that <code>transaction-type</code> is <code>JTA</code>, and provide the name of the data source in the <code>jta-data-source</code> element (prefaced by <code>jdbc/</code> or not), as shown in <a href="#BABCFFHC">Example 3-1</a>:</p>
 <div class="example"><a id="BABCFFHC" name="BABCFFHC"></a><a id="TLADG137" name="TLADG137"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-1 persistence.xml File With JNDI Data Source Using JTA</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 3-1 persistence.xml File With JNDI Data Source Using JTA</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 ...
   &lt;persistence-unit name="example" <strong>transaction-type="JTA"</strong>&gt;
@@ -607,9 +522,9 @@ lib/eclipselink.jar
 <a id="BABDBBAE" name="BABDBBAE"></a><a id="TLADG139" name="TLADG139"></a>
 <div class="sect4">
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Specify that the Data Source Is Application-Scoped</font></h4>
-<p>To define an application-scoped data source, create a <em><code>name</code></em><code>-jdbc.xml</code> JDBC module file and place it in the <code>META-INF</code> folder of the application's EAR file. In that file, add <code>&lt;scope&gt;Application&lt;/scope&gt;</code> to the <code>jdbc-data-source-params</code> section, as shown in <a href="#BABDAEFC">Example 2-2</a>.</p>
+<p>To define an application-scoped data source, create a <em><code>name</code></em><code>-jdbc.xml</code> JDBC module file and place it in the <code>META-INF</code> folder of the application's EAR file. In that file, add <code>&lt;scope&gt;Application&lt;/scope&gt;</code> to the <code>jdbc-data-source-params</code> section, as shown in <a href="#BABDAEFC">Example 3-2</a>.</p>
 <div class="example"><a id="BABDAEFC" name="BABDAEFC"></a><a id="TLADG140" name="TLADG140"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-2 JDBC Data Source Defined in the <em>name</em>-jdbc.xml File</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 3-2 JDBC Data Source Defined in the <em>name</em>-jdbc.xml File</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;jdbc-data-source ...&gt;
 ... 
@@ -648,9 +563,9 @@ lib/eclipselink.jar
 <a id="BABCGDDA" name="BABCGDDA"></a><a id="TLADG141" name="TLADG141"></a>
 <div class="sect4">
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Add the JDBC Module to the WebLogic Server Application Configuration</font></h4>
-<p>Add a reference to the JDBC module in the <code>/META-INF/weblogic-application.xml</code> application deployment descriptor in the EAR file, as shown in <a href="#BABCJEDI">Example 2-3</a>. This registers the data source for use in the application.</p>
+<p>Add a reference to the JDBC module in the <code>/META-INF/weblogic-application.xml</code> application deployment descriptor in the EAR file, as shown in <a href="#BABCJEDI">Example 3-3</a>. This registers the data source for use in the application.</p>
 <div class="example"><a id="BABCJEDI" name="BABCJEDI"></a><a id="TLADG142" name="TLADG142"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-3 JDBC Module Defined in the weblogic-application.xml File</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 3-3 JDBC Module Defined in the weblogic-application.xml File</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;wls:module&gt;
   &lt;wls:name&gt;SimpleAppScopedDS&lt;/wls:name&gt;
@@ -665,10 +580,10 @@ lib/eclipselink.jar
 <a id="BABHFJED" name="BABHFJED"></a><a id="TLADG143" name="TLADG143"></a>
 <div class="sect4">
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Configure the JPA Persistence Unit to Use the JTA Data Source</font></h4>
-<p>To make it possible for EclipseLink runtime to lazily look up an application-scoped data source, you must specify an additional data source property in the definition of the persistence unit in the <code>persistence.xml</code> file. For a JTA data source, add a fully qualified <code>javax.persistence.jtaDataSource</code> property, with the value <code>java:/app/jdbc/</code><em><code>data_source_name</code></em>, as shown in <a href="#BABFIHHE">Example 2-4</a>.</p>
+<p>To make it possible for EclipseLink runtime to lazily look up an application-scoped data source, you must specify an additional data source property in the definition of the persistence unit in the <code>persistence.xml</code> file. For a JTA data source, add a fully qualified <code>javax.persistence.jtaDataSource</code> property, with the value <code>java:/app/jdbc/</code><em><code>data_source_name</code></em>, as shown in <a href="#BABFIHHE">Example 3-4</a>.</p>
 <p>The values of the <code>&lt;jta-data-source&gt;</code> and <code>&lt;javax.persistence.jtaDataSource&gt;</code> properties must match.</p>
 <div class="example"><a id="BABFIHHE" name="BABFIHHE"></a><a id="TLADG144" name="TLADG144"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-4 JTA Data Source Definition in the persistence.xml File</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 3-4 JTA Data Source Definition in the persistence.xml File</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="windows-1252" ?&gt;
 &lt;persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -691,9 +606,9 @@ lib/eclipselink.jar
 <a id="BABCGGEJ" name="BABCGGEJ"></a><a id="TLADG145" name="TLADG145"></a>
 <div class="sect3"><!-- infolevel="all" infotype="General" -->
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Configure a non-JTA Data Source and Manage Transactions in the Application</font></h3>
-<p>To configure a non-JTA data source managed by the application, follow the procedures described in <a href="#BABFIHAE">Configure an Application-Scoped JTA Data Source,</a> but configure the JPA persistence unit to use a non-JTA data source by specifying a not-JTA data source, as shown in <a href="#BABHFADF">Example 2-5</a>.</p>
+<p>To configure a non-JTA data source managed by the application, follow the procedures described in <a href="#BABFIHAE">Configure an Application-Scoped JTA Data Source,</a> but configure the JPA persistence unit to use a non-JTA data source by specifying a not-JTA data source, as shown in <a href="#BABHFADF">Example 3-5</a>.</p>
 <div class="example"><a id="BABHFADF" name="BABHFADF"></a><a id="TLADG146" name="TLADG146"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-5 non-JTA Data Source Definition in the persistence.xml File</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 3-5 non-JTA Data Source Definition in the persistence.xml File</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="windows-1252" ?&gt;
 &lt;persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -743,9 +658,9 @@ lib/eclipselink.jar
 </ul>
 </li>
 </ol>
-<p><a href="#CHDDDDIE">Example 2-6</a> shows the values that must be shared in the domain's <code>config.xml</code> file and the application's <code>persistence.xml</code> file.</p>
+<p><a href="#CHDDDDIE">Example 3-6</a> shows the values that must be shared in the domain's <code>config.xml</code> file and the application's <code>persistence.xml</code> file.</p>
 <div class="example"><a id="CHDDDDIE" name="CHDDDDIE"></a><a id="TLADG148" name="TLADG148"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-6 Server Domain config.xml File</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 3-6 Server Domain config.xml File</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 ...
 &lt;domain...&gt;
@@ -777,9 +692,9 @@ lib/eclipselink.jar
 </ul>
 </li>
 <li>
-<p>Copy the files, as shown in <a href="#BABGIJJJ">Table 2-3</a> and <a href="#BABGEIFF">Table 2-4</a>.</p>
+<p>Copy the files, as shown in <a href="#BABGIJJJ">Table 3-3</a> and <a href="#BABGEIFF">Table 3-4</a>.</p>
 <div class="tblhruleformal"><a id="TLADG150" name="TLADG150"></a><a id="sthref30" name="sthref30"></a><a id="BABGIJJJ" name="BABGIJJJ"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-3 File to Support Oracle Spatial</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 3-3 File to Support Oracle Spatial</font></em></strong></p>
 <table class="HRuleFormal" title="File to Support Oracle Spatial" summary="This table shows the files to import to support Oracle Spatial." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="23%" />
 <col width="*" />
@@ -808,7 +723,7 @@ lib/eclipselink.jar
 <br /></div>
 <!-- class="tblhruleformal" -->
 <div class="tblhruleformal"><a id="TLADG151" name="TLADG151"></a><a id="sthref31" name="sthref31"></a><a id="BABGEIFF" name="BABGEIFF"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-4 Files to Support Oracle XDB</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 3-4 Files to Support Oracle XDB</font></em></strong></p>
 <table class="HRuleFormal" title="Files to Support Oracle XDB" summary="This table shows the files to import to support Oracle XDB" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="23%" />
 <col width="*" />

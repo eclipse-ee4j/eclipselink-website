@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Performance Features | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-12-13T9:16:51Z" />
+<meta name="date" content="2013-01-15T10:52:27Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Performance Features" />
 <meta name="relnum" content="Release 2.4" />
@@ -46,7 +46,7 @@ Release 2.4</div></td>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2012-12-13</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-01-15</font></p>
 <a id="CHDIIAFD" name="CHDIIAFD"></a><a id="TLADG414" name="TLADG414"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Performance Features</font></h1>
@@ -91,7 +91,7 @@ Release 2.4</div></td>
 </li>
 </ul>
 <a id="TLADG416" name="TLADG416"></a>
-<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref181" name="sthref181"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref152" name="sthref152"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Caching Annotations</font></h3>
 <p>EclipseLink defines these entity caching annotations:</p>
 <ul>
@@ -109,11 +109,11 @@ Release 2.4</div></td>
 </div>
 <!-- class="sect3" -->
 <a id="TLADG417" name="TLADG417"></a>
-<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref182" name="sthref182"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref153" name="sthref153"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Using the @Cache Annotation</font></h3>
-<p>EclipseLink uses identity maps to cache objects in order to enhance performance, as well as maintain object identity. You can control the cache and its behavior by using the <code>@Cache</code> annotation in your entity classes. <a href="#CHDBDCBC">Example 15-1</a> shows how to implement this annotation.</p>
+<p>EclipseLink uses identity maps to cache objects in order to enhance performance, as well as maintain object identity. You can control the cache and its behavior by using the <code>@Cache</code> annotation in your entity classes. <a href="#CHDBDCBC">Example 17-1</a> shows how to implement this annotation.</p>
 <div class="example"><a id="CHDBDCBC" name="CHDBDCBC"></a><a id="TLADG418" name="TLADG418"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-1 Using the @Cache Annotation</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 17-1 Using the @Cache Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Entity
  @Table(name="EMPLOYEE")
@@ -169,9 +169,9 @@ Release 2.4</div></td>
 <a id="CHDEGCHH" name="CHDEGCHH"></a><a id="TLADG421" name="TLADG421"></a>
 <div class="sect3"><!-- infolevel="all" infotype="General" -->
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Join Fetching</font></h3>
-<p>Join Fetching enhances performance by enabling the joining and reading of the related objects in the same query as the source object. Enable Join Fetching by using the <code>@JoinFetch</code> annotation, as shown in <a href="#CHDBICAF">Example 15-2</a>. This example shows how the <code>@JoinFetch</code> annotation specifies the <code>Employee</code> field <code>managedEmployees</code>.</p>
+<p>Join Fetching enhances performance by enabling the joining and reading of the related objects in the same query as the source object. Enable Join Fetching by using the <code>@JoinFetch</code> annotation, as shown in <a href="#CHDBICAF">Example 17-2</a>. This example shows how the <code>@JoinFetch</code> annotation specifies the <code>Employee</code> field <code>managedEmployees</code>.</p>
 <div class="example"><a id="CHDBICAF" name="CHDBICAF"></a><a id="TLADG422" name="TLADG422"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-2 Enabling JoinFetching</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 17-2 Enabling JoinFetching</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Entity
  public class Employee implements Serializable {
@@ -271,9 +271,9 @@ myUnitOfWork.<strong>addReadOnlyClasses(myVectorOfClasses)</strong>;
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Transactions</font></h2>
 <p>To optimize performance during data transactions, use change tracking,. Change tracking allows you to tune the way EclipseLink detects changes that occur during a transaction. You should choose the strategy based on the usage and data modification patterns of the entity type as different types may have different access patterns and hence different settings, and so on.</p>
-<p>Enable change tracking by using the <code>@ChangeTracking</code> annotation, as shown in <a href="#CHDJDDFA">Example 15-3</a>.</p>
+<p>Enable change tracking by using the <code>@ChangeTracking</code> annotation, as shown in <a href="#CHDJDDFA">Example 17-3</a>.</p>
 <div class="example"><a id="CHDJDDFA" name="CHDJDDFA"></a><a id="TLADG432" name="TLADG432"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-3 Enabling Change Tracking</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 17-3 Enabling Change Tracking</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Entity
 @Table(name="EMPLOYEE")
@@ -370,7 +370,7 @@ public class Employee implements Serializable {
 <a id="CHDIICEJ" name="CHDIICEJ"></a><a id="TLADG437" name="TLADG437"></a>
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Tools</font></h2>
-<p>EclipseLink provides monitoring and optimization tools, as described in <a href="performance002.htm#CHDFIECF">Monitoring and Optimizing EclipseLink-Enable Applications</a>.</p>
+<p>EclipseLink provides monitoring and optimization tools, as described in <a href="performance002.htm#CHDFIECF">Monitoring and Optimizing EclipseLink-Enabled Applications</a>.</p>
 </div>
 <!-- class="sect2" --></div>
 <!-- class="sect1" --></div>

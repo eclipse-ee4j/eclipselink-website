@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Using VPD Multi-Tenancy | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-12-13T9:16:51Z" />
+<meta name="date" content="2013-01-15T10:52:21Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Using VPD Multi-Tenancy" />
 <meta name="relnum" content="Release 2.4" />
@@ -46,7 +46,7 @@ Release 2.4</div></td>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2012-12-13</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-01-15</font></p>
 <a id="CHDJEBAC" name="CHDJEBAC"></a><a id="TLADG501" name="TLADG501"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Using VPD Multi-Tenancy</font></h1>
@@ -54,10 +54,10 @@ Release 2.4</div></td>
 <p>For example, the Oracle Virtual Private Database supports security policies that control database access at the row and column level. Oracle VPD adds a dynamic <code>WHERE</code> clause to SQL statements issued against the table, view, or synonym to which the security policy was applied.</p>
 <p>Oracle Virtual Private Database enforces security directly on the database tables, views, or synonyms. Because security policies are attached directly to these database objects, and the policies are automatically applied whenever a user accesses data, there is no way to bypass security.</p>
 <p>When a user directly or indirectly accesses a table, view, or synonym that is protected with an Oracle Virtual Private Database policy, Oracle Database dynamically modifies the SQL statement of the user. This modification creates a WHERE condition (called a predicate) returned by a function implementing the security policy. Oracle Virtual Private Database modifies the statement dynamically, transparently to the user, using any condition that can be expressed in or returned by a function. Oracle Virtual Private Database policies can be applied to SELECT, INSERT, UPDATE, INDEX, and DELETE statements.</p>
-<p>When using EclipseLink VPD multitanancy, the database handles the tenant filtering on all SELECT, UPDATE and DELETE queries.</p>
+<p>When using EclipseLink VPD multitanancy, the database handles the tenant filtering on all SELECT, INSERT, UPDATE, INDEX and DELETE queries.</p>
 <p>To use EclipseLink VPD multi-tenancy, you must first configure VPD in the database and then specify multi-tenancy on the entity or mapped superclass, as shown in the following example, using <code>@Multitenant</code> and <code>@TenantDiscriminatorColumn</code>:</p>
 <a id="TLADG626" name="TLADG626"></a>
-<div class="sect2"><a id="sthref132" name="sthref132"></a>
+<div class="sect2"><a id="sthref104" name="sthref104"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Main Tasks for Using VPD Multi-Tenancy</font></h2>
 <p>The following tasks provide instructions for using VPD multi-tenancy with Oracle Virtual Private Database:</p>
 <ul>
@@ -68,19 +68,16 @@ Release 2.4</div></td>
 <p><a href="#CHDDFBFC">Task 2: Configure the Virtual Private Database</a></p>
 </li>
 <li>
-<p><a href="#CHDBIFCA">Task 3: Identify the Client in the Context</a></p>
+<p><a href="#CHDICCHE">Task 3: Configure the Entity or Mapped Superclass</a></p>
 </li>
 <li>
-<p><a href="#CHDICCHE">Task 4: Configure the Entity or Mapped Superclass</a></p>
+<p><a href="#CHDDJIAE">Task 4: Disable Criteria Generation</a></p>
 </li>
 <li>
-<p><a href="#CHDDJIAE">Task 5: Disable Criteria Generation</a></p>
-</li>
-<li>
-<p><a href="#CHDIIJEB">Task 6: Configure persistence.xml</a></p>
+<p><a href="#CHDIIJEB">Task 5: Configure persistence.xml</a></p>
 </li>
 </ul>
-<a id="CHDDEDCJ" name="CHDDEDCJ"></a>
+<a id="CHDDEDCJ" name="CHDDEDCJ"></a><a id="TLADG1130" name="TLADG1130"></a>
 <div class="sect3"><!-- infolevel="all" infotype="General" -->
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task 1: Prerequisites</font></h3>
 <p>To implement and use VPD multi-tenancy, you need:</p>
@@ -113,34 +110,13 @@ CREATE OR REPLACE FUNCTION ident_func (p_schema IN VARCHAR2 DEFAULT NULL, p_obje
     END;
 </pre></div>
 <!-- class="sect3" -->
-<a id="CHDBIFCA" name="CHDBIFCA"></a><a id="TLADG628" name="TLADG628"></a>
-<div class="sect3"><!-- infolevel="all" infotype="General" -->
-<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task 3: Identify the Client in the Context</font></h3>
-<p>In the application, use a <code>postAcquireExclusiveConnection</code> event to identify the client to the database. The following code sets the <code>client_identifier</code> variable in the <code>userenv</code> context to the value in the <code>tenant.id</code> property:</p>
-<pre xml:space="preserve" class="oac_no_warn">
-public void postAcquireExclusiveConnection(SessionEvent event) {
-         SQLCall call = new SQLCall("CALL DBMS_SESSION.SET_IDENTIFIER('" + event.getSession().getProperty("tenant.id") + "')");
-         event.getSession().executeNonSelectingCall(call);
-    }
-</pre>
-<p>Use <code>preReleaseExclusiveConnection</code> to clear the <code>IDENTIFIER</code>:</p>
-<pre xml:space="preserve" class="oac_no_warn">
-public void preReleaseExclusiveConnection(SessionEvent event) {
-        SQLCall call = new SQLCall("CALL DBMS_SESSION.CLEAR_IDENTIFIER()");
-        event.getSession().executeNonSelectingCall(call);
-     }
-}
-</pre>
-<pre xml:space="preserve" class="oac_no_warn">
-</pre></div>
-<!-- class="sect3" -->
 <a id="CHDICCHE" name="CHDICCHE"></a><a id="TLADG629" name="TLADG629"></a>
 <div class="sect3"><!-- infolevel="all" infotype="General" -->
-<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task 4: Configure the Entity or Mapped Superclass</font></h3>
-<p>As described above, VPD is configured to use the <code>USER_ID</code> column to limit access to rows. Therfore, you must tell EclipseLink to auto-populate the <code>USER_ID</code> column on inserts. The following code uses EclipseLink multi-tenancy and specifies that the client identifier is passed in to the entity managers using a property called <code>tenant.id</code>. Because the filtering is done by VPD on the database, you must turn off caching on this entity to avoid leakage across users.</p>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task 3: Configure the Entity or Mapped Superclass</font></h3>
+<p>As described above, VPD is configured to use the <code>USER_ID</code> column to limit access to rows. Therefore, you must tell EclipseLink to auto-populate the <code>USER_ID</code> column on inserts. The following code uses EclipseLink multi-tenancy and specifies that the client identifier is passed in to the entity managers using a property called <code>tenant.id</code>. Because the filtering is done by VPD on the database, you must turn off caching on this entity to avoid leakage across users.</p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Entity
-@Multitenant
+@Multitenant(VPD)
 @TenantDiscriminatorColumn(name = "USER_ID", contextProperty = "tenant.id")
 @Cacheable(false)
  
@@ -151,17 +127,21 @@ public class Task implements Serializable {
 <!-- class="sect3" -->
 <a id="CHDDJIAE" name="CHDDJIAE"></a><a id="TLADG630" name="TLADG630"></a>
 <div class="sect3"><!-- infolevel="all" infotype="General" -->
-<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task 5: Disable Criteria Generation</font></h3>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task 4: Disable Criteria Generation</font></h3>
 <p>When single-table and table-per-tenant multi-tenancy are enabled, a client identifier is auto appended to any generated SQL. However, when VPD is used to limit the access to data, the auto-appending of the identifier should be turned off.</p>
-<p>Beginning with EclipseLink 12c Release 1 (12.1.2), disable criteria generation as follows:</p>
+<p>Beginning with EclipseLink 2.4, disable criteria generation as follows:</p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Multitenant(includeCriteria=false)
 @TenantDiscriminatorColumn(name = "USER_ID", contextProperty = "tenant.id")
+</pre>
+<p>In EclipseLink 2.3.1, you must run the following codefrom a <code>SessionCustomizer</code>:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+session.getDescriptor(Task.class).getQueryManager().setIncludeTenantCriteria(false);
 </pre></div>
 <!-- class="sect3" -->
 <a id="CHDIIJEB" name="CHDIIJEB"></a><a id="TLADG631" name="TLADG631"></a>
 <div class="sect3"><!-- infolevel="all" infotype="General" -->
-<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task 6: Configure persistence.xml</font></h3>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task 5: Configure persistence.xml</font></h3>
 <p>Add the following properties to <code>persistence.xml</code>.</p>
 <p>Include the following to set and clear the VPD identifier:</p>
 <pre xml:space="preserve" class="oac_no_warn">

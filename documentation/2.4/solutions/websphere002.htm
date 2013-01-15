@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Implementing the Solution | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-12-13T9:16:50Z" />
+<meta name="date" content="2013-01-15T10:52:13Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Implementing the Solution" />
 <meta name="relnum" content="Release 2.4" />
@@ -46,7 +46,7 @@ Release 2.4</div></td>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2012-12-13</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-01-15</font></p>
 <a id="A1584318" name="A1584318"></a><a id="TLADG770" name="TLADG770"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Implementing the Solution</font></h1>
@@ -88,13 +88,13 @@ Release 2.4</div></td>
 </ul>
 </div>
 <!-- class="sect2" -->
-<a id="CEGCHAJB" name="CEGCHAJB"></a>
+<a id="CEGCHAJB" name="CEGCHAJB"></a><a id="TLADG1105" name="TLADG1105"></a>
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 2: Configure Persistence Units</font></h2>
-<p>Configure persistence units to use EclipseLink (EclipseLink library) as the persistence provider and to use WebSphere as the target server.</p>
-<p><a href="#CEGCBJCA">Example 4-1</a> shows a sample configuration for a container-managed persistence unit.</p>
-<div class="example"><a id="CEGCBJCA" name="CEGCBJCA"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-1 Sample persistence.xml for a container-managed persistence unit</font></em></strong></p>
+<p>Configure persistence units to use EclipseLink as the persistence provider and to use WebSphere as the target server.</p>
+<p><a href="#CEGCBJCA">Example 5-1</a> shows a sample configuration for a container-managed persistence unit.</p>
+<div class="example"><a id="CEGCBJCA" name="CEGCBJCA"></a><a id="TLADG1106" name="TLADG1106"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 5-1 Sample persistence.xml for a container-managed persistence unit</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;persistence xmlns="http://java.sun.com/xml/ns/persistence" 
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
@@ -116,9 +116,9 @@ Release 2.4</div></td>
 &lt;/persistence&gt;
 </pre></div>
 <!-- class="example" -->
-<p><a href="#CEGBBBJE">Example 4-2</a> shows a sample configuration for an application-managed persistence unit.</p>
-<div class="example"><a id="CEGBBBJE" name="CEGBBBJE"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-2 Sample persistence.xml for an application-managed persistence unit</font></em></strong></p>
+<p><a href="#CEGBBBJE">Example 5-2</a> shows a sample configuration for an application-managed persistence unit.</p>
+<div class="example"><a id="CEGBBBJE" name="CEGBBBJE"></a><a id="TLADG1107" name="TLADG1107"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 5-2 Sample persistence.xml for an application-managed persistence unit</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence persistence_1_0.xsd" version="1.0"&gt;
     &lt;persistence-unit name="default" transaction-type="RESOURCE_LOCAL"&gt;
@@ -148,7 +148,7 @@ Release 2.4</div></td>
 </ul>
 </div>
 <!-- class="sect2" -->
-<a id="CEGCGFJB" name="CEGCGFJB"></a>
+<a id="CEGCGFJB" name="CEGCGFJB"></a><a id="TLADG1108" name="TLADG1108"></a>
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 3: Configure the Server and the Application to Use EclipseLink</font></h2>
 <p>The following are typical scenarios for using EclipseLink with the application server:</p>
@@ -163,7 +163,7 @@ Release 2.4</div></td>
 <p><a href="#CEGJBCHB"><strong>Package EclipseLink in the WAR</strong></a></p>
 </li>
 </ul>
-<a id="CEGFHBBI" name="CEGFHBBI"></a>
+<a id="CEGFHBBI" name="CEGFHBBI"></a><a id="TLADG1109" name="TLADG1109"></a>
 <div class="sect3">
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Modify Server to Make EclipseLink Available Globally</font></h3>
 <p>You can make EclipseLink available globally for both container-managed and application-managed persistence units in either of the following ways:</p>
@@ -175,7 +175,7 @@ Release 2.4</div></td>
 <p><a href="#CEGGCCFC">Option 2: Add EclipseLink as a Server Library Extension</a></p>
 </li>
 </ul>
-<a id="CEGGAEGJ" name="CEGGAEGJ"></a>
+<a id="CEGGAEGJ" name="CEGGAEGJ"></a><a id="TLADG1110" name="TLADG1110"></a>
 <p><b><font face="arial, helvetica, sans-serif" color="#330099">Option 1: Create a Global Shared Library (Recommended)</font></b></p>
 <ol>
 <li><a id="CEGDEIEC" name="CEGDEIEC"></a>
@@ -187,7 +187,7 @@ Release 2.4</div></td>
 </li>
 <li>
 <p><code>xmlparserv2.jar</code></p>
-<p>Find this file in the <em><code>TOPLINK_INSTALLATION</code></em><code>\toplink\modules</code> directory created by the EclipseLink quick installer.</p>
+<p>Find this file in the <em><code>TOPLINK_INSTALLATION</code></em><code>\toplink\modules</code> directory created by the s quick installer.</p>
 </li>
 <li>
 <p>If you use Oracle Database features such as <code>NCHAR</code>, <code>XMLTYPE</code>, and <code>MDSYS.SDO_GEOMETRY</code> with JPA, you must also include <code>xdb.jar</code> and <code>sdoapi.jar</code> in the shared library. Those files are available in your Oracle Database distribution.</p>
@@ -200,12 +200,12 @@ Release 2.4</div></td>
 <p>See the WebSphere documentation for instructions on how to use WebSphere to associate the shared library with an application.</p>
 </li>
 </ol>
-<a id="CEGGCCFC" name="CEGGCCFC"></a>
+<a id="CEGGCCFC" name="CEGGCCFC"></a><a id="TLADG1111" name="TLADG1111"></a>
 <p><b><font face="arial, helvetica, sans-serif" color="#330099">Option 2: Add EclipseLink as a Server Library Extension</font></b></p>
 <p>To add EclipseLink as a server libary extension, copy <code>eclipselink.jar</code> and the other JAR file(s) listed in Option 1, above, to the <em><code>WAS_HOME</code></em><code>\lib\ext</code> directory.</p>
 </div>
 <!-- class="sect3" -->
-<a id="CEGFFJEA" name="CEGFFJEA"></a>
+<a id="CEGFFJEA" name="CEGFFJEA"></a><a id="TLADG1112" name="TLADG1112"></a>
 <div class="sect3">
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Package EclipseLink in the Application EAR</font></h3>
 <p>You can also implement container-managed persistence by adding <code>eclipselink.jar</code> in the application EAR, without making any modifications to the server configuration. In this case, the persistence unit is managed by <code>@PersistenceContext</code> entity manager proxy injection on a stateless session bean. The following instructions show a example of this approach.</p>
@@ -226,15 +226,12 @@ Class-Path: APP-INF/lib/eclipselink.jar
 <p>Configure the class loader to load the classes with the application class loader first.</p>
 </li>
 <li>
-<p>Configure persistence in the EAR so that the persistence unit is managed by the container.</p>
-</li>
-<li>
-<p>Deploy and start the application. See the IBM WebSphere documenation for instructions.</p>
+<p>Deploy and start the application. See the IBM WebSphere documentation for instructions.</p>
 </li>
 </ol>
 </div>
 <!-- class="sect3" -->
-<a id="CEGJBCHB" name="CEGJBCHB"></a>
+<a id="CEGJBCHB" name="CEGJBCHB"></a><a id="TLADG1113" name="TLADG1113"></a>
 <div class="sect3"><!-- infolevel="all" infotype="General" -->
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Package EclipseLink in the WAR</font></h3>
 <p>If you do not or cannot implement container-managed persistence, as described in the previous two scenarios, you can create an application managed entity manager. In this case, all library configuration and classloader scope changes must be done inside the EAR itself.</p>
@@ -245,9 +242,6 @@ Class-Path: APP-INF/lib/eclipselink.jar
 </li>
 <li>
 <p>Configure the class loader order for your application to load the classes with the application class loader first. See the WebSphere documentation for instructions on setting class loader order using the Administrative console.</p>
-</li>
-<li>
-<p>Configure persistence in the application EAR, using any of the following:</p>
 </li>
 <li>
 <p>Deploy and start the application. See the IBM WebSphere documenation for instructions.</p>

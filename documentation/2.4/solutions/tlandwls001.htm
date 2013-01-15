@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Introduction to the Solution | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-12-13T9:16:49Z" />
+<meta name="date" content="2013-01-15T10:52:10Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Introduction to the Solution" />
 <meta name="relnum" content="Release 2.4" />
@@ -46,13 +46,14 @@ Release 2.4</div></td>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2012-12-13</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-01-15</font></p>
 <a id="BABCIJEE" name="BABCIJEE"></a><a id="TLADG113" name="TLADG113"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Introduction to the Solution</font></h1>
 <p>WebLogic Server is a scalable, enterprise-ready Java Platform, Enterprise Edition (Java EE platform) application server. WebLogic Server's complete implementation of the Java EE 6 specification provides a standard set of APIs for creating distributed Java applications that can access a wide variety of services, such as databases, messaging services, and connections to external enterprise systems. In addition to the Java EE implementation, WebLogic Server enables enterprises to deploy critical applications in a robust, secure, highly available, and scalable environment. These features allow enterprises to configure clusters of WebLogic Server instances to distribute load, and provide extra capacity in case of hardware or other failures. For more details about these and other WebLogic Server features, see <em>Introduction to WebLogic Server</em>.</p>
+<p>EclipseLink provides APIs and a run-time environment for implementing the persistence layer of Java EE applications (as well as Java SE applications).</p>
 <a id="TLADG114" name="TLADG114"></a>
-<div class="sect2"><a id="sthref21" name="sthref21"></a>
+<div class="sect2"><a id="sthref23" name="sthref23"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Advantages to Using EclipseLink with WebLogic Server</font></h2>
 <p>While WebLogic Server can use other persistence providers and EclipseLink can be used with other application servers, using WebLogic Server with EclipseLink provides a number of advantages:</p>
 <ul>
@@ -63,59 +64,14 @@ Release 2.4</div></td>
 <p>The EclipseLink implementation of Java Architecture for XML Binding (JAXB) is the default JAXB implementation in WebLogic Server. EclipseLink fully implements JAXB and also includes other advanced features. By default, you can take advantage of EclipseLink JAXB in Java API for XML Web Services (JAX-WS) and Java API for RESTful Web Services (JAX-RS) applications.</p>
 </li>
 <li>
-<p>Oracle WebLogic Suite includes Oracle Coherence, which is a Java-based in-memory data-grid product that provides data caching, data replication, and distributed computing services. WebLogic Server and Coherence are tightly integrated and allow applications to use Coherence data caches. WebLogic Server applications can use EclipseLink Grid, which is an integration between EclipseLink and Coherence that allows EclipseLink to use Coherence as a level 2 (L2) cache and persistence layer for entities. How to use these integrations is beyond the scope of this guide. See <em>Oracle Coherence Developer's Guide</em> and <em>Integrating Oracle Coherence</em> for more information.</p>
-<div align="center">
-<div class="inftblnote"><br />
-<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
-<tbody>
-<tr>
-<td align="left">
-<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
-<p>You can also obtain Coherence as a separately licensed product to use WebLogic Server Standard Edition and WebLogic Server Enterprise Edition.</p>
-</td>
-</tr>
-</tbody>
-</table>
-<br /></div>
-<!-- class="inftblnote" --></div>
-</li>
-<li>
 <p>EclipseLink logging integration in WebLogic Server provides a comprehensive, integrated logging infrastructure. See <a href="tlandwls002.htm#BABIIEHD">Task 4: Use or Reconfigure the Logging Integration.</a></p>
-</li>
-<li>
-<p>WebLogic Server supports Oracle Application Development Framework (Oracle ADF), an end-to-end Java EE framework, based on Struts and JavaServer Faces (JSF). Oracle ADF simplifies application development by providing infrastructure services and a visual and declarative development experience. EclipseLink and Oracle ADF together provide a complete Java EE application infrastructure. How to use Orcle ADF is beyond the scope of this guide. See <em>Oracle Fusion Middleware Fusion Developer's Guide for Oracle Application Development Framework</em>.</p>
-</li>
-<li>
-<p>WebLogic Server, EclipseLink, and Oracle ADF are all integrated with Oracle JDeveloper, Oracle's integrated development environment (IDE) that provides support for modeling, developing, debugging, optimizing, and deploying Java EE applications, including applications that use EclipseLink as the persistence provider and that are deployed to WebLogic Server. How to use JDeveloper is beyond the scope of this guide. See <code><a href="http://www.oracle.com/technetwork/developer-tools/jdev/overview/index.html">http://www.oracle.com/technetwork/developer-tools/jdev/overview/index.html</a></code> for general information about JDeveloper. For information about JDeveloper tasks, see the JDeveloper online help in the JDeveloper IDE.</p>
 </li>
 </ul>
 </div>
 <!-- class="sect2" -->
-<a id="TLADG115" name="TLADG115"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref22" name="sthref22"></a>
-<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">EclipseLink and Other Fusion Middleware Products</font></h2>
-<p><a href="#BABDIEHI">Figure 2-1</a> shows how WebLogic Server and EclipseLink are related to and used with other Oracle products. You might use the products together as follows:</p>
-<ul>
-<li>
-<p>Use JDeveloper (or Oracle Enterprise Pack for Eclipse or NetBeans) to develop Java EE applications.</p>
-</li>
-<li>
-<p>Use EclipseLink as the persistence provider.</p>
-</li>
-<li>
-<p>Use WebLogic as the application server.</p>
-</li>
-<li>
-<p>Use the Oracle database for persisting data from EclipseLink JPA applications or XML for persisting data from EclipseLink MOXy applications.</p>
-</li>
-</ul>
-<div class="figure"><a id="BABDIEHI" name="BABDIEHI"></a><a id="TLADG116" name="TLADG116"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Figure 2-1 Relationship of WebLogic Server, EclipseLink, and Related Products</font></em></strong></p>
-<img src="img/wls_tl_stack.png" alt="Description of Figure 2-1 follows" title="Description of Figure 2-1 follows" longdesc="img_text/wls_tl_stack.htm" /><br />
-<a id="sthref23" name="sthref23" href="img_text/wls_tl_stack.htm">Description of "Figure 2-1 Relationship of WebLogic Server, EclipseLink, and Related Products "</a><br />
-<br /></div>
-<!-- class="figure" --></div>
-<!-- class="sect2" --></div>
+&gt;
+<p>This graphic shows how WebLogic Server, EclipseLink, Coherence and EclipseLink Grid are related to each other and to the data source(s). A box representing WebLogic Suite contains Coherence and a box containing WebLogic Server, which contains EclipseLink, which contains EclipseLink Grid and EclipseLink. Above this box is a box containing JDeveloper, which points to EclipseLink and EclipseLink. Below the box is the Oracle Database, which points to EclipseLink and WebLogic Server.</p>
+</div>
 <!-- class="sect1" --></div>
 <!-- class="ind" -->
 <!-- Start Footer -->

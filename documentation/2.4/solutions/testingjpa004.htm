@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Using Weaving | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-12-13T9:16:51Z" />
+<meta name="date" content="2013-01-15T10:52:26Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Using Weaving" />
 <meta name="relnum" content="Release 2.4" />
@@ -46,30 +46,33 @@ Release 2.4</div></td>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2012-12-13</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-01-15</font></p>
 <a id="CHDEECDB" name="CHDEECDB"></a><a id="TLADG1084" name="TLADG1084"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Using Weaving</font></h1>
 <p>Weaving is a technique of manipulating the byte-code of compiled Java classes.</p>
 <p>EclipseLink uses weaving to enhance Plain Old Java Object (POJO) classes and JPA entities with many features such lazy loading, change tracking, fetch groups, and internal optimizations.</p>
 <a id="TLADG1085" name="TLADG1085"></a>
-<div class="sect2"><a id="sthref178" name="sthref178"></a>
+<div class="sect2"><a id="sthref149" name="sthref149"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">How to Disable or Enable Weaving in a Java SE Environment</font></h2>
 <p>In a Java SE environment weaving is not enabled by default. This can affect LAZY One-To-One, Many-To-One and Basic relationships. It also has a major effect on performance and disable attribute change tracking.</p>
 <p>To enable weaving in Java SE, the EclipseLink agent must be used when starting the Java VM.</p>
 <pre xml:space="preserve" class="oac_no_warn">
- java -javaagent:eclipselink.jar
+java -javaagent:eclipselink.jar
 </pre>
-<p>Spring could also be used to allow JPA weaving in Java SE.</p>
+<p>Spring could also be used to allow JPA weaving in Java SE. See <code><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/JPASpring">http://wiki.eclipse.org/EclipseLink/Examples/JPA/JPASpring</a></code> for more information.</p>
 <p>Static weaving can also be used, by including the following persistence property,</p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;property name="eclipselink.weaving" value="static"/&gt;
-</pre></div>
+
+</pre>
+<p>See "weaving" in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em> for more information.</p>
+</div>
 <!-- class="sect2" -->
 <a id="TLADG1086" name="TLADG1086"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref179" name="sthref179"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref150" name="sthref150"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">How to Disable or Enable Weaving in a Java EE Environment</font></h2>
-<p>In a Java EE environment weaving is enabled by default (on any JEE EJB 3.0 fully compliant application server, such as Weblogic, Webspehere, and Glassfish. JBoss does not allow weaving so you must use static weaving or Spring).</p>
+<p>In a Java EE environment weaving is enabled by default (on any Java EE 5 or greater fully compliant application server, such as Weblogic, Webspehere, and Glassfish. JBoss does not allow weaving so you must use static weaving or Spring).</p>
 <p>To disable weaving the weaving persistence unit property can be used,</p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;property name="eclipselink.weaving" value="false"&gt;

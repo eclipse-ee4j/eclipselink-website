@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Implementing the Solution | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-12-13T9:16:50Z" />
+<meta name="date" content="2013-01-15T10:52:13Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Implementing the Solution" />
 <meta name="relnum" content="Release 2.4" />
@@ -46,11 +46,11 @@ Release 2.4</div></td>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2012-12-13</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-01-15</font></p>
 <a id="BEIBJBCF" name="BEIBJBCF"></a><a id="TLADG747" name="TLADG747"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Implementing the Solution</font></h1>
-<p>To develop, deploy and run EclipseLink application in JBoss Application Server 7, you must create EclipseLink as a module of JBoss. You must also create other modules, such as a JDBC driver, etc., in order to run applications.</p>
+<p>To develop, deploy and run EclipseLink applications in JBoss Application Server 7, you must create EclipseLink as a module of JBoss. You must also create other modules, such as a JDBC driver, etc., in order to run applications.</p>
 <p>This section contains the following tasks for using EclipseLink with JBoss 7.1:</p>
 <ul>
 <li>
@@ -126,7 +126,7 @@ Release 2.4</div></td>
 <p><em><code>JBOSS_ HOME</code></em><code>\modules\org\eclipse\persistence\main</code></p>
 </li>
 <li>
-<p>Copy <code>eclipselink.jar</code> to the directory created in step <a href="#BEIJEJDJ">1</a>.</p>
+<p>Copy <code>eclipselink.jar</code> to the directory created in step <a href="#BEIJEJDJ">1</a>. (The <code>eclipselink.jar</code> file is located in the <code>eclipselink/jlib</code> directory of the <code>eclipselink-</code><em><code>ver_no</code></em><code>.zip</code> file.)</p>
 </li>
 <li>
 <p>Create a <code>module.xml</code> file in the directory created in step <a href="#BEIJEJDJ">1</a>, with the following content:</p>
@@ -159,15 +159,15 @@ Release 2.4</div></td>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 3: Add ojdbc6.jar as a Module in JBoss</font></h2>
 <p>Add the Oracle thin driver <code>ojdbc6.jar</code> as a module within JBoss, as follows:</p>
 <ol>
-<li>
+<li><a id="BEIBFGCF" name="BEIBFGCF"></a>
 <p>Create the module directory:</p>
 <p><em><code>JBOSS_ HOME</code></em><code>\modules\com\oracle\ojdbc6\main</code></p>
 </li>
 <li>
-<p>Copy <code>ojdbc6.jar</code> to the module directory created in step .</p>
+<p>Copy <code>ojdbc6.jar</code> to the module directory created in step <a href="#BEIBFGCF">1</a>.</p>
 </li>
 <li>
-<p>Create a <code>module.xml</code> file in the module directory created in step , with the following contents:</p>
+<p>Create a <code>module.xml</code> file in the module directory created in step <a href="#BEIBFGCF">1</a>, with the following contents:</p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;module xmlns="urn:jboss:module:1.1" name="com.oracle.ojdbc6"&gt;
     &lt;resources&gt;
