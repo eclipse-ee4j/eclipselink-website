@@ -115,7 +115,7 @@
 				
 				
 				<form action="../"><label for="Concepts">Understanding EclipseLink (Concepts Guide)</label>
-<select name="ReleaseNotes">
+<select name="Concepts">
     <option value="http://www.eclipse.org/eclipselink/documentation/2.5/concepts/toc.htm"> 2.5 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.4/concepts/toc.htm"> 2.4 </option>
 </select>
