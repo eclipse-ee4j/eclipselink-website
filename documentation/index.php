@@ -111,7 +111,16 @@
 	<div class="section">
 			<h3>Guides</h3>
 			<ul>
-				<li><a href="2.4/concepts/toc.htm">Understanding EclipseLink (Concepts Guide)</a></li>
+				<li>
+				
+				
+				<form action="../"><label for="Concepts">Understanding EclipseLink (Concepts Guide)</label>
+<select name="ReleaseNotes">
+    <option value="2.5/concepts/toc.htm">2.5</option>
+    <option value="2.4/concepts/toc.htm">2.4</option>
+</select>
+<input type="button" onclick="window.open(this.form.Concepts.options[this.form.Concepts.selectedIndex].value,'_top')" value="Go">
+</form></li>
 				
 				<li><a href="2.4/solutions/toc.htm">EclipseLink Solutions Guide</a></li>
 				
