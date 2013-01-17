@@ -116,8 +116,8 @@
 				
 				<form action="../"><label for="Concepts">Understanding EclipseLink (Concepts Guide)</label>
 <select name="ReleaseNotes">
-    <option value="2.5/concepts/toc.htm">2.5</option>
-    <option value="2.4/concepts/toc.htm">2.4</option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.5/concepts/toc.htm"> 2.5 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.4/concepts/toc.htm"> 2.4 </option>
 </select>
 <input type="button" onclick="window.open(this.form.Concepts.options[this.form.Concepts.selectedIndex].value,'_top')" value="Go">
 </form></li>
