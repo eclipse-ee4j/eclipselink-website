@@ -43,9 +43,9 @@
 			</td>
 			<td>
 				<div class="bigbuttonsDocumentation">
-					<a href="/eclipselink/documentation/2.4/index.php"><div class="bigbuttonsTitleLink"></div></a>
+					<a href="/eclipselink/documentation/index.php"><div class="bigbuttonsTitleLink"></div></a>
 					<span>
-						<a href="/eclipselink/documentation/2.4/index.php">Doc Center</a>,
+						<a href="/eclipselink/documentation/2.4/index.php">Guides</a>,
 						<a href="/eclipselink/api/2.4/index.html"> Java Docs</a>,
 						<a href="http://wiki.eclipse.org/EclipseLink/Examples"> Examples</a>,
 						<a href="http://wiki.eclipse.org/EclipseLink/FAQ"> FAQ</a>, <br/>
