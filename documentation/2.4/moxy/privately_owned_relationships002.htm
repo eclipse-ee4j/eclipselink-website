@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Mapping Privately Owned One-to-Many Relationships | EclipseLink 2.4.x EclipseLink MOXy</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-11-08T9:7:20Z" />
+<meta name="date" content="2013-01-28T9:11:27Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Mapping Privately Owned One-to-Many Relationships" />
 <meta name="relnum" content="Release 2.4" />
@@ -45,12 +45,12 @@ Release 2.4</div></td>
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header --><a id="BABGFHAG" name="BABGFHAG"></a>
+<div class="ind"><!-- End Header --><a id="BABGFHAG" name="BABGFHAG"></a><a id="TLJAX335" name="TLJAX335"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Mapping Privately Owned One-to-Many Relationships</font></h1>
 <p>This section illustrates how to map one-to-many relationships with EclipseLink.</p>
 <p>The schema in <a href="#BABJAAGI">Example 6-8</a> a typical one-to-many (1:M) relationship between Customer and PhoneNumber, as shown in <a href="#BABGDJID">Figure 6-2</a>.</p>
-<div class="example"><a id="BABJAAGI" name="BABJAAGI"></a>
+<div class="example"><a id="BABJAAGI" name="BABJAAGI"></a><a id="TLJAX336" name="TLJAX336"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 6-8 Sample XML Mapping</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -77,14 +77,15 @@ Release 2.4</div></td>
  
 </pre></div>
 <!-- class="example" -->
-<div class="figure"><a id="BABGDJID" name="BABGDJID"></a>
+<div class="figure"><a id="BABGDJID" name="BABGDJID"></a><a id="TLJAX337" name="TLJAX337"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 6-2 One-to-many Relationship</font></em></strong></p>
 <img src="img/ccxm.gif" alt="" title="" /><br /></div>
 <!-- class="figure" -->
+<a id="TLJAX338" name="TLJAX338"></a>
 <div class="sect2"><a id="sthref122" name="sthref122"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Mapping to Elements</font></h2>
 <p><a href="#BABECFHA">Example 6-9</a> shows how to annotate your Java class to obtain this mapping with EclipseLink. The standard JAXB <code>@XmlElement</code> annotation, when used on a Collection or array field, can achieve this.</p>
-<div class="example"><a id="BABECFHA" name="BABECFHA"></a>
+<div class="example"><a id="BABECFHA" name="BABECFHA"></a><a id="TLJAX339" name="TLJAX339"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 6-9 Using the @XmlElement Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
@@ -121,7 +122,7 @@ public class PhoneNumber {
 </pre></div>
 <!-- class="example" -->
 <p><a href="#BABGEFHC">Example 6-10</a> shows how to define your mapping information in EclipseLink's OXM metadata format.</p>
-<div class="example"><a id="BABGEFHC" name="BABGEFHC"></a>
+<div class="example"><a id="BABGEFHC" name="BABGEFHC"></a><a id="TLJAX340" name="TLJAX340"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 6-10 Sample XML Mapping</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 ...
@@ -145,10 +146,11 @@ public class PhoneNumber {
 </pre></div>
 <!-- class="example" --></div>
 <!-- class="sect2" -->
+<a id="TLJAX341" name="TLJAX341"></a>
 <div class="sect2"><a id="sthref123" name="sthref123"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Grouping Elements using the @XmlElementWrapper Annotation</font></h2>
 <p>To make the elements of the Collection appear inside a grouping element, you can use <code>@XmlElementWrapper</code>:</p>
-<div class="example"><a id="sthref124" name="sthref124"></a>
+<div class="example"><a id="TLJAX342" name="TLJAX342"></a><a id="sthref124" name="sthref124"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 6-11 Using the @XmlElementWrapper Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;

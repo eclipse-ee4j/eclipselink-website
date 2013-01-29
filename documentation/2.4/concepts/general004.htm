@@ -5,18 +5,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
-<title>Key Tools | EclipseLink 2.4.x Understanding EclipseLink</title>
+<title>Key Components | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-12-07T9:24:24Z" />
+<meta name="date" content="2013-01-28T11:56:42Z" />
 <meta name="robots" content="noarchive" />
-<meta name="doctitle" content="Key Tools" />
+<meta name="doctitle" content="Key Components" />
 <meta name="relnum" content="Release 2.4" />
 <link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
 <link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
 <link rel="start" href="../../index.htm" title="Home" type="text/html" />
 <link rel="contents" href="toc.htm" title="Contents" type="text/html" />
 <link rel="prev" href="general003.htm" title="Previous" type="text/html" />
-<link rel="next" href="blocks.htm" title="Next" type="text/html" />
+<link rel="next" href="general005.htm" title="Next" type="text/html" />
 <!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
 <body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:mdbgdwjv8zu', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
 <div class="header"><a id="top" name="top"></a>
@@ -39,61 +39,147 @@ Release 2.4</div></td>
 <table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
 <tr>
 <td align="center"><a href="general003.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
-<td align="center"><a href="blocks.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="general005.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
 <td>&nbsp;</td>
 </tr>
 </table>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2012-12-07</font></p>
-<a id="CHDDDGEH" name="CHDDDGEH"></a><a id="OTLCG94470" name="OTLCG94470"></a>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-01-28</font></p>
+<a id="CHDIEEHG" name="CHDIEEHG"></a><a id="OTLCG114" name="OTLCG114"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
-<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Key Tools</font></h1>
-<p>This section describes the support for EclipseLink provided by Oracle JDeveloper, Eclipse, and NetBeans development environments. Any tooling is compatible with EclipseLink, but these offer specific integration.</p>
-<p>This section contains the following subsections:</p>
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Key Components</font></h1>
+<p>illustrates the components contained by EclipseLink. The following sections describe the components.</p>
+<div class="figure"><a id="CHDGIFIA" name="CHDGIFIA"></a><a id="OTLCG115" name="OTLCG115"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Figure 1-1 EclipseLink Components</font></em></strong></p>
+<img src="img/otlcg_jd_002_eclipselink.png" alt="This figure is described in the text." title="This figure is described in the text." longdesc="img_text/otlcg_jd_002_eclipselink.htm" /><br />
+<a id="sthref7" name="sthref7" href="img_text/otlcg_jd_002_eclipselink.htm">Description of "Figure 1-1 EclipseLink Components"</a><br />
+<br /></div>
+<!-- class="figure" -->
+<a id="OTLCG116" name="OTLCG116"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref8" name="sthref8"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">EclipseLink Core and API</font></h2>
+<p>The EclipseLink Core provides the runtime component. Access to the runtime component can be obtained directly through the EclipseLink API. The runtime environment is not a separate or external process&mdash;it is embedded within the application. Application calls invoke EclipseLink to provide persistence behavior. This function enables transactional and thread-safe access to shared database connections and cached objects.</p>
+<p>The EclipseLink API component provides the reference implementation for JPA 2.0 (JSR-317). The <code>org.eclipse.persistence.*</code> classes encapsulate the EclipseLink API and provide extensions beyond the specification. These extensions include EclipseLink-specific properties and annotations. For more information on the API, properties and extensions, see <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+<p>The JAXB APIs are included in Java SE 6. In the <code>eclipselink.jar</code> file, the <code>org.eclipse.persistence.jaxb.*</code> classes encapsulate the EclipseLink support for JAXB.</p>
+</div>
+<!-- class="sect2" -->
+<a id="OTLCG117" name="OTLCG117"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref9" name="sthref9"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Object-Relational (JPA 2.0) Component</font></h2>
+<p>JPA simplifies Java persistence. It provides an object-relational mapping approach that lets you declaratively define how to map Java objects to relational database tables in a standard, portable way. JPA works both inside a Java EE application server and outside an EJB container in a Java Standard Edition (Java SE) application. The main features included in the 2.0 JPA update are:</p>
 <ul>
 <li>
-<p><a href="#BABGBABF">Oracle JDeveloper</a></p>
+<p>Expanded object/relational mapping functionality</p>
+<ul>
+<li>
+<p>Support for collections of embedded objects</p>
 </li>
 <li>
-<p><a href="#BABDFFCB">Eclipse</a></p>
+<p>Multiple levels of embedded objects</p>
 </li>
 <li>
-<p><a href="#BABCCIDI">NetBeans</a></p>
+<p>Ordered lists</p>
+</li>
+<li>
+<p>Combinations of access types</p>
 </li>
 </ul>
-<a id="BABGBABF" name="BABGBABF"></a><a id="OTLCG166" name="OTLCG166"></a>
-<div class="sect2">
-<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Oracle JDeveloper</font></h2>
-<p>Oracle JDeveloper is a Java EE development environment with end-to-end support to develop, debug, and deploy e-business applications and web services.</p>
-<p>For JDeveloper information and downloads, see:</p>
-<p><code><a href="http://www.oracle.com/us/products/tools/019657.htm">http://www.oracle.com/us/products/tools/019657.htm</a></code></p>
-<p>JDeveloper includes a number of features to aid in the development of applications that use EclipseLink. These features include wizards to reverse engineer JPA entities from database tables and to generate EJB 3.0 Session Beans with <code>EntityManager</code> injection. It also includes methods for querying JPA entities and to test client generation.</p>
-<p>Oracle JDeveloper's EclipseLink Editor enables you to quickly and easily configure and map your Java classes, EJB, and JPA entities to different data sources, including relational databases and XML schemas without using code. The EclipseLink editor supports multiple standards, including JPA.</p>
-<p>DBWSBuilder script (included in EclipseLink install) can be used to run the DBWSBuilder utility to generate the Web service. JDeveloper uses the API provided, but does not use the DBWSBuilder script directly.</p>
-<p>For more information on Oracle JDeveloper's EclipseLink editor, see JDeveloper online help.</p>
+</li>
+<li>
+<p>A criteria query API</p>
+</li>
+<li>
+<p>Standardization of query "hints"</p>
+</li>
+<li>
+<p>Standardization of additional metadata to support DDL generation</p>
+</li>
+<li>
+<p>Support for validation</p>
+</li>
+</ul>
 </div>
 <!-- class="sect2" -->
-<a id="BABDFFCB" name="BABDFFCB"></a><a id="OTLCG168" name="OTLCG168"></a>
-<div class="sect2">
-<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Eclipse</font></h2>
-<p>The Eclipse IDE provides a number of features and utilities to help you create, run, and maintain applications that use JPA. These capabilities are extended if you install OEPE.</p>
-<p>For Eclipse IDE information and downloads, see:</p>
-<p><code><a href="http://www.oracle.com/technetwork/developer-tools/eclipse/overview/index.html">http://www.oracle.com/technetwork/developer-tools/eclipse/overview/index.html</a></code></p>
-<p>The Dali Java Persistence Tools Project provides extensible frameworks and tools for defining and editing object-relational mappings for JPA entities. JPA mapping support focuses on minimizing the complexity of mapping by providing entity generation wizards, design-time validation, and a robust UI for entity and persistence unit configuration.</p>
-<p>For Dali information and downloads, see:</p>
-<p><code><a href="http://www.eclipse.org/webtools/dali">http://www.eclipse.org/webtools/dali</a></code></p>
-<p>Other tools and utilities from the Oracle, open source, and third party vendor communities are available from the Eclipse Marketplace.</p>
-<p><code><a href="http://marketplace.eclipse.org/">http://marketplace.eclipse.org/</a></code></p>
+<a id="OTLCG118" name="OTLCG118"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref10" name="sthref10"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Object-XML (JAXB 2.2) Component</font></h2>
+<p>Object-XML, also known as <em>MOXy</em>, is an EclipseLink component that enables you to bind Java classes to XML schemas. Object-XML implements JAXB which lets you provide mapping information through annotations. Support for storing the mappings in XML format is provided by MOXy. The many advanced mappings that are available enable you to handle complex XML structures without having to mirror the schema in your Java class model.</p>
+<p>The objects produced by the EclipseLink JAXB compiler are Java POJO models. They are generated with the necessary annotations required by the JAXB specification. The JAXB runtime API can be used to marshal and unmarshal objects.</p>
+<p>When using Object-XML as the JAXB provider, no metadata is required to convert your existing object model to XML. You can supply metadata (using annotations or XML) only when you must fine-tune the XML representation of the model.</p>
+<p>Using EclipseLink Object-XML, you can manipulate XML in the following ways:</p>
+<ul>
+<li>
+<p>Generate a Java Model from an XML schema</p>
+</li>
+<li>
+<p>Specify the EclipseLink MOXy JAXB runtime</p>
+</li>
+<li>
+<p>Use JAXB to manipulate XML</p>
+</li>
+<li>
+<p>Generate an XML schema from a Java model</p>
+</li>
+</ul>
+<p>For more information on Object-XML and these use cases, see <em>Developing Persistence Architectures Using EclipseLink MOXy Developer's Guide</em>.</p>
+<p>EclipseLink provides maximum flexibility with the ability to control how your object model is mapped to an XML schema. There are many advantages to having control over your own object model:</p>
+<ul>
+<li>
+<p>You can design the domain classes specifically for your application using the appropriate patterns and practices.</p>
+</li>
+<li>
+<p>You can use XPath-based mapping. This prevents the need for having a 1-to-1 relationship between classes and XML schema types. For more information, see <em>Developing Persistence Architectures Using EclipseLink MOXy Developer's Guide</em>.</p>
+</li>
+<li>
+<p>You can instantiate objects in a way that is appropriate to your application.</p>
+</li>
+<li>
+<p>You can control your own class path dependencies. Most JAXB implementations put vendor specific code in the generated classes that add class path dependencies to your application.</p>
+</li>
+</ul>
+<p>One of the key advantages of EclipseLink is that the mapping information can be stored externally and does not require any changes to the Java classes or XML schema. This means that you can map your domain objects to more than one schema, or if your schema changes, you can update the mapping metadata instead of modifying your domain classes. This is also useful when mapping third-party classes, because you might not have access to the source to add annotations.</p>
+<a id="OTLCG119" name="OTLCG119"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref11" name="sthref11"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">SDO Component</font></h3>
+<p>The Service Data Objects (SDO) component provides the reference implementation of Service Data Objects version 2.1.1. The reference implementation is described in <a href="http://jcp.org/en/home/index">JSR-235</a>. The SDO implementation incorporates the reference implementation and provides additional features primarily used for converting Java objects to XML, and for building and using data object models that can be incorporated into service architectures.</p>
+<p>SDO provides you with the following capabilities:</p>
+<ul>
+<li>
+<p>Use of the SDO APIs</p>
+</li>
+<li>
+<p>Conversion an XML Schema</p>
+</li>
+<li>
+<p>Customization of your XSD for SDO usage</p>
+</li>
+<li>
+<p>Use of dynamic data objects to manipulate XML</p>
+</li>
+<li>
+<p>Use of static data objects</p>
+<ul>
+<li>
+<p>Run the SDO compiler&mdash;generate type safe data objects</p>
+</li>
+<li>
+<p>Use type safe data objects to manipulate XML</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>For more information, see "Getting Started with EclipseLink SDO" in the EclipseLink documentation:</p>
+<p><code><a href="http://www.eclipse.org/eclipselink/moxy.php">http://www.eclipse.org/eclipselink/moxy.php</a></code></p>
 </div>
+<!-- class="sect3" --></div>
 <!-- class="sect2" -->
-<a id="BABCCIDI" name="BABCCIDI"></a><a id="OTLCG169" name="OTLCG169"></a>
-<div class="sect2">
-<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">NetBeans</font></h2>
-<p>NetBeans IDE bundles Oracle GlassFish Server, which includes EclipseLink. The IDE provides full support for JPA-based code development. This support includes entity class wizards for constructing entities and editor hints to ensure that entities conform to the JPA specification. NetBeans also provides a persistence unit editor for constructing a <code>persistence.xml</code> file.</p>
-<p>For NetBeans information and downloads, see:</p>
-<p><code><a href="http://netbeans.org/index.html">http://netbeans.org/index.html</a></code></p>
+<a id="CHDIGIDF" name="CHDIGIDF"></a><a id="OTLCG120" name="OTLCG120"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Database Web Services Component</font></h2>
+<p>Database Web Services (DBWS) enables simple and efficient access to relational database artifacts by using a web service. It provides Java EE-compliant client-neutral access to the database without having to write Java code. DBWS extends EclipseLink's core capabilities while using existing ORM and OXM components.</p>
+<p>DBWS has a runtime provider component that takes a service descriptor (along with related deployment artifacts) and realizes it as a JAX-WS 2.0 Web service. The runtime provider uses EclipseLink to bridge between the database and the XML SOAP Messages used by web service clients. For information on DBWS architecture, see <em>Developing Persistence Architectures Using EclipseLink Database Web Services Developer's Guide</em>.</p>
 </div>
 <!-- class="sect2" --></div>
 <!-- class="sect1" --></div>
@@ -114,7 +200,7 @@ Release 2.4</div></td>
 <tr>
 <td>&nbsp;</td>
 <td align="center"><a href="general003.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
-<td align="center"><a href="blocks.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="general005.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
 </tr>
 </table>
 </td>

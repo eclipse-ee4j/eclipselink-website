@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Making JPA Entities Extensible | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-15T10:52:19Z" />
+<meta name="date" content="2013-01-28T11:31:58Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Making JPA Entities Extensible" />
 <meta name="relnum" content="Release 2.4" />
@@ -45,9 +45,7 @@ Release 2.4</div></td>
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-01-15</font></p>
-<a id="BABFJDCF" name="BABFJDCF"></a><a id="TLADG217" name="TLADG217"></a>
+<div class="ind"><!-- End Header --><a id="BABFJDCF" name="BABFJDCF"></a><a id="TLADG217" name="TLADG217"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Making JPA Entities Extensible</font></h1>
 <p>Use the <code>@VirtualAccessMethods</code> annotation to specify that an entity is extensible. By using virtual properties in an extensible entity, you can specify mappings external to the entity. This allows you to modify the mappings without modifying the entity source file and without redeploying the entity's persistence unit.</p>
@@ -68,7 +66,7 @@ Release 2.4</div></td>
 </li>
 </ul>
 <a id="TLADG218" name="TLADG218"></a>
-<div class="sect2"><a id="sthref77" name="sthref77"></a>
+<div class="sect2"><a id="sthref65" name="sthref65"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Main Tasks for Creating and Supporting an Extensible JPA Entity</font></h2>
 <p>To create and support an extensible JPA entity:</p>
 <ul>
@@ -108,7 +106,7 @@ Release 2.4</div></td>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Annotate the Entity Class with @VirtualAccessMethods</font></h4>
 <p>Annotate the entity with <code>@VirtualAccessMethods</code> to specify that it is extensible and to define virtual properties.</p>
 <p><a href="#CIAHBGHB">Table 11-1</a> describes the attributes available to the <code>@VirtualAccessMethods</code> annotation.</p>
-<div class="tblformal"><a id="TLADG221" name="TLADG221"></a><a id="sthref78" name="sthref78"></a><a id="CIAHBGHB" name="CIAHBGHB"></a>
+<div class="tblformal"><a id="TLADG221" name="TLADG221"></a><a id="sthref66" name="sthref66"></a><a id="CIAHBGHB" name="CIAHBGHB"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 11-1 Attributes for the @VirtualAccessMethods Annotation</font></em></strong></p>
 <table class="Formal" title="Attributes for the @VirtualAccessMethods Annotation" summary="Attributes for @VirtualAccessMethods annotation" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
 <col width="17%" />
@@ -260,7 +258,7 @@ public class Customer{
 <p>Configure persistence unit properties to indicate that the application should retrieve the flexible mappings from the <code>eclipselink-orm.xml</code> file. You can set persistence unit properties using the <code>persistence.xml</code> file or by setting properties on the <code>EntityManagerFactory</code> interface, as described in the following sections.</p>
 <p>For more information about external mappings, see <a href="metadatasource.htm#BABGDEGB">Chapter 12, "Using an External MetaData Source."</a></p>
 <a id="TLADG229" name="TLADG229"></a>
-<div class="sect4"><a id="sthref79" name="sthref79"></a>
+<div class="sect4"><a id="sthref67" name="sthref67"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Configure the persistence.xml File</font></h4>
 <p>In the <code>persistence.xml</code> file, use the <code>eclipselink.metadata-source</code> property to use the default <code>eclipselink-orm.xml</code> file. Use the <code>eclipselink.metadata-source.xml.url</code> property to use a different file at the specified location, for example:</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -269,7 +267,7 @@ public class Customer{
 </pre></div>
 <!-- class="sect4" -->
 <a id="TLADG230" name="TLADG230"></a>
-<div class="sect4"><a id="sthref80" name="sthref80"></a>
+<div class="sect4"><a id="sthref68" name="sthref68"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Configure EntityManagerFactory and the Metadata Repository</font></h4>
 <p>Extensions are added at bootstrap time through access to a metadata repository. The metadata repository is accessed through a class that provides methods to retrieve the metadata it holds. EclipseLink includes a metadata repository implementation that supports XML repositories.</p>
 <p>Specify the class to use and any configuration information for the metadata repository through persistence unit properties. The <code>EntityManagerFactory</code> interface integrates additional mapping information from the metadata repository into the metadata it uses to bootstrap.</p>
@@ -291,7 +289,7 @@ public class Customer{
 </pre></div>
 <!-- class="sect4" -->
 <a id="TLADG231" name="TLADG231"></a>
-<div class="sect4"><a id="sthref81" name="sthref81"></a>
+<div class="sect4"><a id="sthref69" name="sthref69"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Refresh the Metadata Repository</font></h4>
 <p>If you change the metadata and you want an <code>EntityManager</code> instance based on the new metadata, you must call the <code>refreshMetadata()</code> method on the <code>EntityManagerFactory</code> interface to refresh the data. The next <code>EntityManager</code> instance will be based on the new metadata.</p>
 <p>The <code>refreshMetadata()</code> method takes a map of properties that can be used to override the properties previously defined for the <code>metadata-source</code> element.</p>
@@ -300,7 +298,7 @@ public class Customer{
 <!-- class="sect3" --></div>
 <!-- class="sect2" -->
 <a id="TLADG232" name="TLADG232"></a>
-<div class="sect2"><a id="sthref82" name="sthref82"></a>
+<div class="sect2"><a id="sthref70" name="sthref70"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Code Examples</font></h2>
 <p><a href="#CIADHIHE">Example 11-2</a> illustrates the following:</p>
 <ul>

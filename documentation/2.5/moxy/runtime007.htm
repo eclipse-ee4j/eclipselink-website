@@ -1,0 +1,319 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Understanding Events | EclipseLink 2.5.x EclipseLink MOXy</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
+<meta name="date" content="2013-01-28T9:6:43Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Understanding Events" />
+<meta name="relnum" content="Release 2.5" />
+<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="runtime006.htm" title="Previous" type="text/html" />
+<link rel="next" href="runtime008.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:dt93gmwxcuc', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><div class="booktitle">Developing JAXB Applications Using EclipseLink MOXy, 
+Release 2.5</div></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_moxy.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="runtime006.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="runtime008.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header -->
+<p align="center"><font color="#FF0000">Beta Draft: 2013-01-28</font></p>
+<a id="CACHJIHB" name="CACHJIHB"></a><a id="TLJAX177" name="TLJAX177"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Understanding Events</font></h1>
+<p>JAXB offers several mechanisms to get event callbacks during the marshalling and unmarshalling processes. You can specify callback methods directly on your mapped objects, or define separate <code>Listener</code> classes and register them with the JAXB runtime.</p>
+<a id="TLJAX178" name="TLJAX178"></a>
+<div class="sect2"><a id="sthref50" name="sthref50"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Adding Event Listener Methods on JAXB Mapped Objects</font></h2>
+<p>On any of your objects you have mapped with JAXB, you have the option of specifying some special methods to allow you to receive event notification when that object is marshalled or unmarshalled. The methods must have the following signatures:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+/**
+ * Invoked by Marshaller after it has created an instance of this object.
+ */
+void beforeMarshal(Marshaller m);
+ 
+/**
+ * Invoked by Marshaller after it has marshalled all properties of this object.
+ */
+void afterMarshal(Marshaller m);
+ 
+/**
+ * This method is called immediately after the object is created and before the unmarshalling of this 
+ * object begins. The callback provides an opportunity to initialize JavaBean properties prior to unmarshalling.
+ */
+void beforeUnmarshal(Unmarshaller u, Object parent);
+ 
+/**
+ * This method is called after all the properties (except IDREF) are unmarshalled for this object, 
+ * but before this object is set to the parent object.
+ */
+void afterUnmarshal(Unmarshaller u, Object parent);
+ 
+</pre>
+<p>The following example shows how to write to a log every time a <strong>Company</strong> object is processed.</p>
+<div class="example"><a id="TLJAX179" name="TLJAX179"></a><a id="sthref51" name="sthref51"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-29 Sample Event Listener</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package example;
+ 
+import java.util.Date;
+import java.util.logging.Logger;
+import javax.xml.bind.annotation.*;
+ 
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Company {
+ 
+   @XmlAttribute
+   private String id;
+ 
+   void beforeMarshal(Marshaller m) {
+      Logger.getLogger("example").info("COMPANY:[id=" + id + "] " + Thread.currentThread());
+   }
+ 
+   void afterMarshal(Marshaller m) {
+      Logger.getLogger("example").info("COMPANY:[id=" + id + "] " + Thread.currentThread());
+   }
+ 
+   void beforeUnmarshal(Unmarshaller u, Object parent) {
+      Logger.getLogger("example").info("COMPANY:[id=" + id + "] " + Thread.currentThread());
+   }
+ 
+   void afterUnmarshal(Unmarshaller u, Object parent) {
+      Logger.getLogger("example").info("COMPANY:[id=" + id + "] " + Thread.currentThread());
+   }
+ 
+}
+</pre></div>
+<!-- class="example" --></div>
+<!-- class="sect2" -->
+<a id="TLJAX180" name="TLJAX180"></a>
+<div class="sect2"><a id="sthref52" name="sthref52"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Registering Listeners on Marshallers and Unmarshallers</font></h2>
+<p>JAXB's Marshaller and Unmarshaller interfaces both define a <code>setListener()</code> method, which allows you to set your own custom Listener to intercept marshal and unmarshal events.</p>
+<pre xml:space="preserve" class="oac_no_warn">
+package javax.xml.bind;
+ 
+public interface Marshaller {
+   ...
+   public static abstract class Listener {
+     /**
+      * Callback method invoked before marshalling from source to XML.
+      *
+      * This method is invoked just before marshalling process starts to marshal source.
+      * Note that if the class of source defines its own beforeMarshal method,
+      * the class specific callback method is invoked just before this method is invoked.
+      *
+      * @param source instance of JAXB mapped class prior to marshalling from it.
+      */
+      public void beforeMarshal(Object source) {}
+ 
+     /**
+      * Callback method invoked after marshalling source to XML.
+      *
+      * This method is invoked after source and all its descendants have been marshalled.
+      * Note that if the class of source defines its own afterMarshal method,
+      * the class specific callback method is invoked just before this method is invoked.
+      *
+      * @param source instance of JAXB mapped class after marshalling it.
+      */
+      public void afterMarshal(Object source) {}
+   }
+}
+ 
+package javax.xml.bind;
+ 
+public interface Unmarshaller {
+   ...
+   public static abstract class Listener {
+ 
+     /**
+      * Callback method invoked before unmarshalling into target.
+      *
+      * This method is invoked immediately after target was created and
+      * before the unmarshalling of this object begins. Note that
+      * if the class of target defines its own beforeUnmarsha method,
+      * the class specific callback method is invoked before this method is invoked.
+      *
+      * @param target non-null instance of JAXB mapped class prior to unmarshalling into it.
+      * @param parent instance of JAXB mapped class that will eventually reference target.
+      *               null when target is root element.
+      */
+      public void beforeUnmarshal(Object target, Object parent) {}
+ 
+     /**
+      * Callback method invoked after unmarshalling XML data into target.
+      *
+      * This method is invoked after all the properties (except IDREF) are unmarshalled into target,
+      * but before target is set into its parent object.
+      * Note that if the class of target defines its own afterUnmarshal method,
+      * the class specific callback method is invoked before this method is invoked.
+      *
+      * @param target non-null instance of JAXB mapped class prior to unmarshalling into it.
+      * @param parent instance of JAXB mapped class that will reference target.
+      *               null when target is root element.
+      */
+      public void afterUnmarshal(Object target, Object parent) {}
+   }
+}
+ 
+</pre>
+<p>This example performs the same logging as above, but using generic <code>Listener</code> classes. This makes it easier to log all JAXB objects in the system.</p>
+<div class="example"><a id="TLJAX181" name="TLJAX181"></a><a id="sthref53" name="sthref53"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-30 Logging with the Listener Class</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package example;
+ 
+import java.util.logging.Logger;
+ 
+private class MarshalLogger extends Marshaller.Listener {
+   @Override
+   public void afterMarshal(Object source) {
+      Logger.getLogger("example").info(source + " "   + Thread.currentThread());
+   }
+ 
+   @Override
+   public void beforeMarshal(Object source) {
+      Logger.getLogger("example").info(source + " "   + Thread.currentThread());
+   }
+}
+ 
+package example;
+ 
+import java.util.logging.Logger;
+ 
+private class UnmarshalLogger extends Unmarshaller.Listener {
+   @Override
+   public void afterUnmarshal(Object target, Object parent) {
+      Logger.getLogger("example").info(target + " "   + Thread.currentThread());
+   }
+ 
+   @Override
+   public void beforeUnmarshal(Object target, Object parent) {
+      Logger.getLogger("example").info(target + " "   + Thread.currentThread());
+   }
+}
+</pre></div>
+<!-- class="example" -->
+<p>The following code sets up the listeners:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+Marshaller marshaller = jaxbContext.createMarshaller();
+marshaller.setListener(new MarshalLogger());
+ 
+Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+unmarshaller.setListener(new UnmarshalLogger());
+ 
+</pre>
+<p>An example of a typical marshal/unmarshal example, showing both the class-level and Marshaller/Unmarshaller-level event output:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+Jun 2, 2011 6:31:59 PM example.Company beforeMarshal
+INFO: COMPANY:[id=Zoltrix] Thread[main,5,main]
+Jun 2, 2011 6:31:59 PM example.Tester$MarshalLogger beforeMarshal
+INFO: example.Company@10e790c Thread[main,5,main]
+Jun 2, 2011 6:31:59 PM example.Tester$MarshalLogger beforeMarshal
+INFO: example.Employee@1db7df8 Thread[main,5,main]
+Jun 2, 2011 6:31:59 PM example.Tester$MarshalLogger afterMarshal
+INFO: example.Employee@1db7df8 Thread[main,5,main]
+Jun 2, 2011 6:31:59 PM example.Tester$MarshalLogger beforeMarshal
+INFO: example.Employee@3570b0 Thread[main,5,main]
+Jun 2, 2011 6:31:59 PM example.Tester$MarshalLogger afterMarshal
+INFO: example.Employee@3570b0 Thread[main,5,main]
+Jun 2, 2011 6:31:59 PM example.Tester$MarshalLogger beforeMarshal
+INFO: example.Employee@79717e Thread[main,5,main]
+Jun 2, 2011 6:31:59 PM example.Tester$MarshalLogger afterMarshal
+INFO: example.Employee@79717e Thread[main,5,main]
+Jun 2, 2011 6:31:59 PM example.Company afterMarshal
+INFO: COMPANY:[id=Zoltrix] Thread[main,5,main]
+Jun 2, 2011 6:31:59 PM example.Tester$MarshalLogger afterMarshal
+INFO: example.Company@10e790c Thread[main,5,main]
+Jun 2, 2011 6:31:59 PM example.Company beforeUnmarshal
+INFO: COMPANY:[id=null] Thread[main,5,main]
+Jun 2, 2011 6:31:59 PM example.Tester$UnmarshalLogger beforeUnmarshal
+INFO: example.Company@f0c0d3 Thread[main,5,main]
+Jun 2, 2011 6:31:59 PM example.Tester$UnmarshalLogger beforeUnmarshal
+INFO: example.Employee@4f80d6 Thread[main,5,main]
+Jun 2, 2011 6:31:59 PM example.Tester$UnmarshalLogger afterUnmarshal
+INFO: example.Employee@4f80d6 Thread[main,5,main]
+Jun 2, 2011 6:31:59 PM example.Tester$UnmarshalLogger beforeUnmarshal
+INFO: example.Employee@1ea0252 Thread[main,5,main]
+Jun 2, 2011 6:31:59 PM example.Tester$UnmarshalLogger afterUnmarshal
+INFO: example.Employee@1ea0252 Thread[main,5,main]
+Jun 2, 2011 6:31:59 PM example.Tester$UnmarshalLogger beforeUnmarshal
+INFO: example.Employee@3e89c3 Thread[main,5,main]
+Jun 2, 2011 6:31:59 PM example.Tester$UnmarshalLogger afterUnmarshal
+INFO: example.Employee@3e89c3 Thread[main,5,main]
+Jun 2, 2011 6:31:59 PM example.Company afterUnmarshal
+INFO: COMPANY:[id=Zoltrix] Thread[main,5,main]
+Jun 2, 2011 6:31:59 PM example.Tester$UnmarshalLogger afterUnmarshal
+INFO: example.Company@f0c0d3 Thread[main,5,main]
+</pre></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="runtime006.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="runtime008.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2013,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_moxy.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
+</html>

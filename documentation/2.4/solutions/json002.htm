@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Implementing the Solution | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-15T10:52:25Z" />
+<meta name="date" content="2013-01-28T11:31:59Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Implementing the Solution" />
 <meta name="relnum" content="Release 2.4" />
@@ -45,9 +45,7 @@ Release 2.4</div></td>
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-01-15</font></p>
-<a id="A1584696" name="A1584696"></a><a id="TLADG763" name="TLADG763"></a>
+<div class="ind"><!-- End Header --><a id="A1584696" name="A1584696"></a><a id="TLADG763" name="TLADG763"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Implementing the Solution</font></h1>
 <p>This section contains the following tasks for converting objects to and from JSON documents.</p>
@@ -230,33 +228,23 @@ StreamSource json = new StreamSource(new File("src/org/example/input.json"));
 <a id="CHDDIFFD" name="CHDDIFFD"></a><a id="TLADG766" name="TLADG766"></a>
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 3: Specifying JSON Data Types</font></h2>
-<p>JSON does not use attributes; anything mapped with a <code>@XmlAttribute</code> annotation will be marshalled as an element. By default, EclipseLink triggers <em>both</em> the attribute and element events, thereby allowing either the mapped attribute or element to handle the value.</p>
-<p>You can override this behavior by using the <code>JSON_ATTRIBUTE_PREFIX</code> property to specify an attribute prefix, as shown in <a href="#BABEFCED">Example 15-7</a>. EclipseLink prepends the prefix to the attribute name during marshal and will recognize it during unmarshal.</p>
-<p>In the example below the <code>number</code> field is mapped as an attribute with the prefix <strong>@</strong>.</p>
+<p>Although XML has a single datatype, JSON differentiates between strings, numbers, and booleans. EclipseLink supports these datatypes automatically, as shown in <a href="#BABEFCED">Example 15-7</a></p>
 <div class="example"><a id="BABEFCED" name="BABEFCED"></a><a id="TLADG1139" name="TLADG1139"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-7 Using a Prefix</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-7 Using JSON Data Types</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
-jsonUnmarshaller.setProperty(UnmarshallerProperties.JSON_ATTRIBUTE_PREFIX, "<strong>@</strong>");
-jsonMarshaller.setProperty(MarshallerProperties.JSON_ATTRIBUTE_PREFIX, "<strong>@</strong>") ;
+public class Address {
  
-</pre>
-<pre xml:space="preserve" class="oac_no_warn">
-{
-   "phone" : {
-      "area-code" : "613",
-      "<strong>@number</strong>" : "1234567"
-   }
+   private int id;
+   private String city;
+   private boolean isMailingAddress;
+ 
 }
-</pre></div>
-<!-- class="example" -->
-<p>You can also set the <code>JSON_ATTRIBUTE_PREFIX</code> property in the Map used when creating the <code>JAXBContext</code>, as shown in <a href="#CHDEGAAG">Example 15-8</a>. All marshallers and unmarshalers created from the context will use the specified prefix.</p>
-<div class="example"><a id="CHDEGAAG" name="CHDEGAAG"></a><a id="TLADG1140" name="TLADG1140"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-8 Setting a Prefix in a Map</font></em></strong></p>
-<pre xml:space="preserve" class="oac_no_warn">
-Map&lt;String, Object&gt; properties = new HashMap&lt;String, Object&gt;();
-properties.put(JAXBContextProperties.JSON_ATTRIBUTE_PREFIX, "@");
  
-JAXBContext ctx = JAXBContext.newInstance(new Class[] { Phone.class }, properties);
+{
+   "id" : 1,
+   "city" : "Ottawa",
+   "isMailingAddress" : true
+}
 </pre></div>
 <!-- class="example" --></div>
 <!-- class="sect2" -->
@@ -264,10 +252,10 @@ JAXBContext ctx = JAXBContext.newInstance(new Class[] { Phone.class }, propertie
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 4: Supporting Attributes</font></h2>
 <p>JSON does not use attributes; anything mapped with a <code>@XmlAttribute</code> annotation will be marshalled as an element. By default, EclipseLink triggers <em>both</em> the attribute and element events, thereby allowing either the mapped attribute or element to handle the value.</p>
-<p>You can override this behavior by using the <code>JSON_ATTRIBUTE_PREFIX</code> property to specify an attribute prefix, as shown in <a href="#BABEFCED">Example 15-7</a>. EclipseLink prepends the prefix to the attribute name during marshal and will recognize it during unmarshal.</p>
+<p>You can override this behavior by using the <code>JSON_ATTRIBUTE_PREFIX</code> property to specify an attribute prefix, as shown in <a href="#CHDICAHE">Example 15-8</a>. EclipseLink prepends the prefix to the attribute name during marshal and will recognize it during unmarshal.</p>
 <p>In the example below the <code>number</code> field is mapped as an attribute with the prefix <strong>@</strong>.</p>
 <div class="example"><a id="CHDICAHE" name="CHDICAHE"></a><a id="TLADG1142" name="TLADG1142"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-9 Using a Prefix</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-8 Using a Prefix</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 jsonUnmarshaller.setProperty(UnmarshallerProperties.JSON_ATTRIBUTE_PREFIX, "<strong>@</strong>");
 jsonMarshaller.setProperty(MarshallerProperties.JSON_ATTRIBUTE_PREFIX, "<strong>@</strong>") ;
@@ -282,9 +270,9 @@ jsonMarshaller.setProperty(MarshallerProperties.JSON_ATTRIBUTE_PREFIX, "<strong>
 }
 </pre></div>
 <!-- class="example" -->
-<p>You can also set the <code>JSON_ATTRIBUTE_PREFIX</code> property in the Map used when creating the <code>JAXBContext</code>, as shown in <a href="#CHDIIHGC">Example 15-10</a>. All marshallers and unmarshalers created from the context will use the specified prefix.</p>
+<p>You can also set the <code>JSON_ATTRIBUTE_PREFIX</code> property in the Map used when creating the <code>JAXBContext</code>, as shown in <a href="#CHDIIHGC">Example 15-9</a>. All marshallers and unmarshalers created from the context will use the specified prefix.</p>
 <div class="example"><a id="CHDIIHGC" name="CHDIIHGC"></a><a id="TLADG1143" name="TLADG1143"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-10 Setting a Prefix in a Map</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-9 Setting a Prefix in a Map</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 Map&lt;String, Object&gt; properties = new HashMap&lt;String, Object&gt;();
 properties.put(JAXBContextProperties.JSON_ATTRIBUTE_PREFIX, "@");
@@ -296,16 +284,16 @@ JAXBContext ctx = JAXBContext.newInstance(new Class[] { Phone.class }, propertie
 <a id="CHDJEHFB" name="CHDJEHFB"></a><a id="TLADG1144" name="TLADG1144"></a>
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 5: Supporting no Root Element</font></h2>
-<p>EclipseLink supports JSON documents without a root element. By default, if no <code>@XmlRootElement</code> annotation exists, the marshalled JSON document will not have a root element. You can override this behavior (that is omit the root element from the JSON output, even if the <code>@XmlRootElement</code> <em>is</em> specified) by setting the <code>JSON_INCLUDE_ROOT</code> property when marshalling a document, as shown in <a href="#CHDEAEJA">Example 15-11</a>.</p>
+<p>EclipseLink supports JSON documents without a root element. By default, if no <code>@XmlRootElement</code> annotation exists, the marshalled JSON document will not have a root element. You can override this behavior (that is omit the root element from the JSON output, even if the <code>@XmlRootElement</code> <em>is</em> specified) by setting the <code>JSON_INCLUDE_ROOT</code> property when marshalling a document, as shown in <a href="#CHDEAEJA">Example 15-10</a>.</p>
 <div class="example"><a id="CHDEAEJA" name="CHDEAEJA"></a><a id="TLADG1145" name="TLADG1145"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-11 Marshalling no Root Element Documents</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-10 Marshalling no Root Element Documents</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 marshaller.setProperty(MarshallerProperties.JSON_INCLUDE_ROOT, false);
 </pre></div>
 <!-- class="example" -->
-<p>When unmarshaling a document with no root elements, you should specify the class to which to unmarshal, as shown in <a href="#CHDJAJBJ">Example 15-12</a>.</p>
+<p>When unmarshaling a document with no root elements, you should specify the class to which to unmarshal, as shown in <a href="#CHDJAJBJ">Example 15-11</a>.</p>
 <div class="example"><a id="CHDJAJBJ" name="CHDJAJBJ"></a><a id="TLADG1146" name="TLADG1146"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-12 Unmarshalling no Root Element Documents</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-11 Unmarshalling no Root Element Documents</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 unmarshaller.setProperty(UnmarshallerProperties.JSON_INCLUDE_ROOT, false);
 JAXBElement&lt;SearchResults&gt; jaxbElement = unmarshaller.unmarshal(source, SearchResults.class);
@@ -328,13 +316,13 @@ JAXBElement&lt;SearchResults&gt; jaxbElement = unmarshaller.unmarshal(source, Se
 </div>
 <!-- class="sect2" -->
 <a id="TLADG1147" name="TLADG1147"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref145" name="sthref145"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref133" name="sthref133"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 5 Using Namespaces</font></h2>
 <p>Because JSON does not use namespces, by default all namespaces and prefixes are ignored when marshaling and unmarshaling. In some cases, this may be an issue if you have multiple mappings with the same local name &ndash; there will be no way to distinguish between the mappings.</p>
 <p>With EclipseLink, you can supply a Map of namespace-to-prefix (or an instance of <code>NamespacePrefixMapper</code>) to the Marshaller and Unmarshaller. The namespace prefix will appear in the marshalled document prepended to the element name. EclipseLink will recognize the prefix during an unmarshal operation and the resulting Java objects will be placed in the proper namespaces.</p>
-<p><a href="#CHDCEBBJ">Example 15-13</a> shows how to use the <code>NAMESPACE_PREFIX_MAPPER</code> property.</p>
+<p><a href="#CHDCEBBJ">Example 15-12</a> shows how to use the <code>NAMESPACE_PREFIX_MAPPER</code> property.</p>
 <div class="example"><a id="CHDCEBBJ" name="CHDCEBBJ"></a><a id="TLADG1148" name="TLADG1148"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-13 Using Namesapces</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-12 Using Namesapces</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 Map&lt;String, String&gt; namespaces = new HashMap&lt;String, String&gt;();
 namespaces.put("namespace1", "ns1");
@@ -362,9 +350,9 @@ jsonUnmarshaller.setProperty(UnmarshallerProperties.JSON_NAMESPACE_SEPARATOR, ':
 <a id="CHDJIGDD" name="CHDJIGDD"></a><a id="TLADG1149" name="TLADG1149"></a>
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 6: Using Collections</font></h2>
-<p>By default, when marshalling to JSON, EclipseLink marshals empty collections as <code>[&nbsp;]</code>, as shown in <a href="#CHDDJCJA">Example 15-14</a>.</p>
+<p>By default, when marshalling to JSON, EclipseLink marshals empty collections as <code>[&nbsp;]</code>, as shown in <a href="#CHDDJCJA">Example 15-13</a>.</p>
 <div class="example"><a id="CHDDJCJA" name="CHDDJCJA"></a><a id="TLADG1150" name="TLADG1150"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-14 Marshalling Empty Collections</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-13 Marshalling Empty Collections</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 {
    "phone" : {
@@ -426,9 +414,9 @@ unmarshaller.unmarshal(json, Root.class);
 <a id="CHDIHBIF" name="CHDIHBIF"></a><a id="TLADG1152" name="TLADG1152"></a>
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 8: Wrapping Text Values</font></h2>
-<p>JAXB supports one or more <code>@XmlAttributes</code> on <code>@XmlValue classes</code>, as shown in <a href="#CHDBHJHF">Example 15-15</a>.</p>
+<p>JAXB supports one or more <code>@XmlAttributes</code> on <code>@XmlValue classes</code>, as shown in <a href="#CHDBHJHF">Example 15-14</a>.</p>
 <div class="example"><a id="CHDBHJHF" name="CHDBHJHF"></a><a id="TLADG1153" name="TLADG1153"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-15 Using @XmlAttributes</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-14 Using @XmlAttributes</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 public class Phone {
  
@@ -450,9 +438,9 @@ public class Phone {
 }
 </pre></div>
 <!-- class="example" -->
-<p>To produce a valid JSON document, EclipseLink uses a <code>value</code> wrapper, as shown in <a href="#CHDFFIIH">Example 15-16</a>.</p>
+<p>To produce a valid JSON document, EclipseLink uses a <code>value</code> wrapper, as shown in <a href="#CHDFFIIH">Example 15-15</a>.</p>
 <div class="example"><a id="CHDFFIIH" name="CHDFFIIH"></a><a id="TLADG1154" name="TLADG1154"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-16 Using a value Wrapper</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-15 Using a value Wrapper</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 {
    "employee" : { 
@@ -472,9 +460,9 @@ public class Phone {
 }
 </pre></div>
 <!-- class="example" -->
-<p>By default, EclipseLink uses <strong>value</strong> as the name of the wrapper. Use the <code>JSON_VALUE_WRAPPER</code> property to customize the name of the value wrapper, as shown in <a href="#CHDCFBHH">Example 15-17</a>.</p>
+<p>By default, EclipseLink uses <strong>value</strong> as the name of the wrapper. Use the <code>JSON_VALUE_WRAPPER</code> property to customize the name of the value wrapper, as shown in <a href="#CHDCFBHH">Example 15-16</a>.</p>
 <div class="example"><a id="CHDCFBHH" name="CHDCFBHH"></a><a id="TLADG1155" name="TLADG1155"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-17 Customizing the Name of the Value Wrapper</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-16 Customizing the Name of the Value Wrapper</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 jsonMarshaller.setProperty(MarshallerProperties.JSON_VALUE_WRAPPER, "$");
 jsonUnmarshaller.setProperty(UnmarshallerProperties.JSON_VALUE_WRAPPER, "$");
@@ -499,9 +487,9 @@ jsonUnmarshaller.setProperty(UnmarshallerProperties.JSON_VALUE_WRAPPER, "$");
 }
 </pre></div>
 <!-- class="example" -->
-<p>You can also specify the <code>JSON_VALUE_WRAPPER</code> property in the <code>Map</code> of the properties used when you create the <code>JAXBContext</code>, as shown in <a href="#CHDEDDAA">Example 15-18</a>.</p>
+<p>You can also specify the <code>JSON_VALUE_WRAPPER</code> property in the <code>Map</code> of the properties used when you create the <code>JAXBContext</code>, as shown in <a href="#CHDEDDAA">Example 15-17</a>.</p>
 <div class="example"><a id="CHDEDDAA" name="CHDEDDAA"></a><a id="TLADG1156" name="TLADG1156"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-18 Using a Map</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-17 Using a Map</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 Map&lt;String, Object&gt; properties = new HashMap&lt;String, Object&gt;();
 properties.put(JAXBContextProperties.JSON_VALUE_WRAPPER, "$");

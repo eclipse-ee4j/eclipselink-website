@@ -104,9 +104,9 @@
 
 				<li><a href="moxy/toc.htm">Developing JAXB Applications Using EclipseLink MOXy</a></li>
 
-				<li><a href="jpa/extensions/a_nosql.htm">EclipseLink NoSQL</a></li>
+				<li><a href="concepts/nosql.htm">EclipseLink NoSQL</a></li>
 
-				<li><a href="http://wiki.eclipse.org/Category:SDO">EclipseLink SDO</a></li>
+				<li><a href="http://www.eclipse.org/eclipselink/moxy.php">EclipseLink SDO</a></li>
 
 				<li><a href="dbws/toc.htm">Developing Persistence Architectures Using EclipseLink Database Web Services</a></li>
 			</ul>

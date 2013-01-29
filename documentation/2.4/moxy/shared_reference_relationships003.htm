@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Using the Embedded Key Class | EclipseLink 2.4.x EclipseLink MOXy</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-11-08T9:7:20Z" />
+<meta name="date" content="2013-01-28T9:11:27Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Using the Embedded Key Class" />
 <meta name="relnum" content="Release 2.4" />
@@ -45,12 +45,12 @@ Release 2.4</div></td>
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header -->
+<div class="ind"><!-- End Header --><a id="TLJAX350" name="TLJAX350"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" --><a id="sthref129" name="sthref129"></a>
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Using the Embedded Key Class</font></h1>
 <p>With JAXB, you can derive an XML representation from a set of JPA entities, when a JPA entity has an embedded ID class.</p>
 <p>In <a href="#BABIJHJI">Example 7-4</a>, the <code>EmployeeId</code> is the embedded ID of the <strong>Employee</strong> class:</p>
-<div class="example"><a id="BABIJHJI" name="BABIJHJI"></a>
+<div class="example"><a id="BABIJHJI" name="BABIJHJI"></a><a id="TLJAX351" name="TLJAX351"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 7-4 Sample Embedded ID</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Entity
@@ -99,7 +99,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
  
 </pre>
 <p><a href="#BABHCDEJ">Example 7-5</a> uses the EclipseLink extension <code>@XmlCustomizer</code> which extends the JAXB specification. Because the contact attribute is a bidirectional relationship, it includes the EclipseLink extension <code>@XmlInverseReference</code>.</p>
-<div class="example"><a id="BABHCDEJ" name="BABHCDEJ"></a>
+<div class="example"><a id="BABHCDEJ" name="BABHCDEJ"></a><a id="TLJAX352" name="TLJAX352"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 7-5 Using the @XmlCustomizer Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Entity
@@ -119,7 +119,7 @@ public class Employee {
 </pre></div>
 <!-- class="example" -->
 <p>To embed the content of the <strong>EmployeeId</strong> class in the complex type corresponding to the <strong>Employee</strong> class, change the XPath on the mapping for the <code>id</code> property to be <em>self</em> or<strong>&nbsp;.&nbsp;</strong>. Then specify the XPath to the XML nodes which represent the ID.</p>
-<div class="example"><a id="sthref130" name="sthref130"></a>
+<div class="example"><a id="TLJAX353" name="TLJAX353"></a><a id="sthref130" name="sthref130"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 7-6 Changing the XPath</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 import org.eclipse.persistence.config.DescriptorCustomizer;
@@ -142,7 +142,7 @@ public class EmployeeCustomizer implements DescriptorCustomizer {
 </pre></div>
 <!-- class="example" -->
 <p>If the target object had a single ID then we would use <code>@XmlIDREF</code>. Since the target object has a compound key, we will mark the field <code>@XmlTransient</code>, and use the EclipseLink extension <code>@XmlCustomizer</code> to set up the mapping.</p>
-<div class="example"><a id="sthref131" name="sthref131"></a>
+<div class="example"><a id="TLJAX354" name="TLJAX354"></a><a id="sthref131" name="sthref131"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 7-7 Using the @XmlTransient Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Entity

@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>About the Persistence Unit | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-12-07T9:24:25Z" />
+<meta name="date" content="2013-01-28T11:56:43Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="About the Persistence Unit" />
 <meta name="relnum" content="Release 2.4" />
@@ -16,7 +16,7 @@
 <link rel="start" href="../../index.htm" title="Home" type="text/html" />
 <link rel="contents" href="toc.htm" title="Contents" type="text/html" />
 <link rel="prev" href="appdeployment001.htm" title="Previous" type="text/html" />
-<link rel="next" href="descriptors.htm" title="Next" type="text/html" />
+<link rel="next" href="appdeployment003.htm" title="Next" type="text/html" />
 <!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
 <body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:mdbgdwjv8zu', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
 <div class="header"><a id="top" name="top"></a>
@@ -39,19 +39,19 @@ Release 2.4</div></td>
 <table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
 <tr>
 <td align="center"><a href="appdeployment001.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
-<td align="center"><a href="descriptors.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="appdeployment003.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
 <td>&nbsp;</td>
 </tr>
 </table>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2012-12-07</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-01-28</font></p>
 <a id="BABHCJDG" name="BABHCJDG"></a><a id="OTLCG94288" name="OTLCG94288"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">About the Persistence Unit</font></h1>
 <p>A persistence unit defines the details that are required when you acquire an entity manager. To package your EclipseLink JPA application, you must configure the persistence unit during the creation of the <code>persistence.xml</code> file. Define each persistence unit in a <code>persistence-unit</code> element in the <code>persistence.xml</code> file.</p>
-<p>Use the <code>persistence.xml</code> file to package your entities. Once you chose a packaging strategy, place the <code>persistence.xml</code> file in the <code>META-INF</code> directory of the archive of your choice. The following sections provide more detail on how to specify the persistence unit. For more information and examples, see "persistence.xml file" in the JPA Specification. For information on EclipseLink extensions to the persistence.xml file, see "Persistence Property Extensions Reference" in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+<p>Use the <code>persistence.xml</code> file to package your entities. Once you chose a packaging strategy, place the <code>persistence.xml</code> file in the <code>META-INF</code> directory of the archive of your choice. The following sections provide more detail on how to specify the persistence unit. For more information and examples, see "persistence.xml file" in the <a href="http://jcp.org/en/jsr/detail?id=317">JPA Specification</a>. For information on EclipseLink extensions to the persistence.xml file, see "Persistence Property Extensions Reference" in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
 <ul>
 <li>
 <p><a href="#BGBCGCBI">About the Persistence Unit Name</a></p>
@@ -72,10 +72,10 @@ Release 2.4</div></td>
 <p><a href="#BGBDCBJJ">About the Deployment Classpath</a></p>
 </li>
 <li>
-<p><a href="#BGBJGHBG">What You May Need to Know About Persistence Unit Packaging Options</a></p>
+<p><a href="#BGBJGHBG">About Persistence Unit Packaging Options</a></p>
 </li>
 <li>
-<p><a href="#BGBCJBGD">What You May Need to Know About the Persistence Unit Scope</a></p>
+<p><a href="#BGBCJBGD">About the Persistence Unit Scope</a></p>
 </li>
 </ul>
 <a id="BGBCGCBI" name="BGBCGCBI"></a><a id="OTLCG94291" name="OTLCG94291"></a>
@@ -104,7 +104,7 @@ Release 2.4</div></td>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">About Managed Classes</font></h2>
 <p>Typically, you put all of the entities and other managed classes in a single JAR file, along with the persistence.xml file in the <code>META-INF</code> directory, and one or more mapping files (when you store metadata in XML).</p>
 <p>At the time the EclipseLink persistence provider processes the persistence unit, it determines which set of entities, mapped superclasses, and embedded objects each particular persistence unit will manage.</p>
-<p>At deployment time, EclipseLink persistence provider may obtain managed classes from any of the following sources. A managed class will be included if it is one of the following:</p>
+<p>At deployment time, the EclipseLink persistence provider may obtain managed classes from any of the following sources. A managed class will be included if it is one of the following:</p>
 <ul>
 <li>
 <p>Local classes: the classes annotated with <code>@Entity</code>, <code>@MappedSuperclass</code> or <code>@Embeddable</code> in the deployment unit in which its <code>persistence.xml</code> file was packaged. For more information, see <a href="http://jcp.org/en/jsr/detail?id=317">"Entity" in the JPA Specification</a>.</p>
@@ -115,7 +115,7 @@ Release 2.4</div></td>
 <tr>
 <td align="left">
 <p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
-<p>If you are deploying your application in the Java EE environment, the application server itself, not the EclipseLink persistence provider, will discover local classes.In the Java SE environment, you can use the <code>exclude-unlisted-classes</code> element to <code>false</code> to enable this functionality&mdash;EclipseLink persistence provider will attempt to find local classes if you set this element to false. See <a href="http://jcp.org/en/jsr/detail?id=317">"mapping-file, jar-file, class, exclude-unlisted-classes" in the JPA Specification</a>.</p>
+<p>If you are deploying your application in the Java EE environment, the application server itself, not the EclipseLink persistence provider, will discover local classes. In the Java SE environment, you can use the <code>exclude-unlisted-classes</code> element to <code>false</code> to enable this functionality&mdash;EclipseLink persistence provider will attempt to find local classes if you set this element to false. See <a href="http://jcp.org/en/jsr/detail?id=317">"mapping-file, jar-file, class, exclude-unlisted-classes" in the JPA Specification</a>.</p>
 </td>
 </tr>
 </tbody>
@@ -174,7 +174,7 @@ Release 2.4</div></td>
 <!-- class="sect2" -->
 <a id="BGBJGHBG" name="BGBJGHBG"></a><a id="OTLCG94297" name="OTLCG94297"></a>
 <div class="sect2">
-<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">What You May Need to Know About Persistence Unit Packaging Options</font></h2>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">About Persistence Unit Packaging Options</font></h2>
 <p>Java EE allows for persistence support in a variety of packaging configurations. You can deploy your application to the following module types:</p>
 <ul>
 <li>
@@ -193,7 +193,7 @@ Release 2.4</div></td>
 <!-- class="sect2" -->
 <a id="BGBCJBGD" name="BGBCJBGD"></a><a id="OTLCG94298" name="OTLCG94298"></a>
 <div class="sect2">
-<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">What You May Need to Know About the Persistence Unit Scope</font></h2>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">About the Persistence Unit Scope</font></h2>
 <p>You can define any number of persistence units in single <code>persistence.xml</code> file. The following are the rules for using defined and packaged persistence units:</p>
 <ul>
 <li>
@@ -224,7 +224,7 @@ Release 2.4</div></td>
 <tr>
 <td>&nbsp;</td>
 <td align="center"><a href="appdeployment001.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
-<td align="center"><a href="descriptors.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="appdeployment003.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
 </tr>
 </table>
 </td>

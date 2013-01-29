@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Understanding Static and Dynamic Entities | EclipseLink 2.4.x EclipseLink MOXy</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-11-08T9:7:21Z" />
+<meta name="date" content="2013-01-28T9:11:28Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Understanding Static and Dynamic Entities" />
 <meta name="relnum" content="Release 2.4" />
@@ -45,16 +45,16 @@ Release 2.4</div></td>
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header --><a id="BABCDJDF" name="BABCDJDF"></a>
+<div class="ind"><!-- End Header --><a id="BABCDJDF" name="BABCDJDF"></a><a id="TLJAX441" name="TLJAX441"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Understanding Static and Dynamic Entities</font></h1>
 <p>There are two high-level ways to use EclipseLink JAXB: using pre-existing Java classes (<a href="#BABEGGEF">Using Static MOXy</a>), or using EclipseLink-generated in-memory Java classes (<a href="#BABJEIAF">Using Dynamic MOXy</a>).</p>
-<a id="BABEGGEF" name="BABEGGEF"></a>
+<a id="BABEGGEF" name="BABEGGEF"></a><a id="TLJAX442" name="TLJAX442"></a>
 <div class="sect2">
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Using Static MOXy</font></h2>
 <p>The most common way to use EclipseLink JAXB is with existing Java classes, mapped to XML using Java annotations and/or EclipseLink OXM metadata. These classes might be ones that you have written yourself, or they could be generated from an XML Schema using the XJC compiler tool.</p>
 <p>Using this approach, you will be dealing with your actual domain objects when converting to and from XML. <a href="#BGBHHJEC">Example 9-1</a> shows a simple Java class that can be used with JAXB.</p>
-<div class="example"><a id="BGBHHJEC" name="BGBHHJEC"></a>
+<div class="example"><a id="BGBHHJEC" name="BGBHHJEC"></a><a id="TLJAX443" name="TLJAX443"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 9-1 Sample Java Class</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 import javax.xml.bind.annotation.XmlAttribute;
@@ -89,7 +89,7 @@ public class Customer {
 <br /></div>
 <!-- class="inftblnote" --></div>
 <p><a href="#BABDJDHH">Example 9-2</a> demonstrates how to unmarshal, modify, and marshal an object using static JAXB:</p>
-<div class="example"><a id="BABDJDHH" name="BABDJDHH"></a>
+<div class="example"><a id="BABDJDHH" name="BABDJDHH"></a><a id="TLJAX444" name="TLJAX444"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 9-2 Marshalling and Unmarshalling Example</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 JAXBContext jaxbContext = JAXBContext.newInstance(Customer.class, Address.class);
@@ -105,7 +105,7 @@ jaxbContext.createMarshaller().marshal(customer, System.out);
 </pre></div>
 <!-- class="example" --></div>
 <!-- class="sect2" -->
-<a id="BABJEIAF" name="BABJEIAF"></a>
+<a id="BABJEIAF" name="BABJEIAF"></a><a id="TLJAX445" name="TLJAX445"></a>
 <div class="sect2">
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Using Dynamic MOXy</font></h2>
 <p>With EclipseLink Dynamic MOXy, you can bootstrap a <code>JAXBContext</code> from a variety of metadata sources and use existing JAXB APIs to marshal and unmarshal data&hellip;<em>without having compiled Java class files on the classpath</em>. This allows you to alter the metadata as needed, without having to update and recompile the previously-generated Java source code.</p>
@@ -118,6 +118,7 @@ jaxbContext.createMarshaller().marshal(customer, System.out);
 <p>You do not want to deal with concrete Java domain classes.</p>
 </li>
 </ul>
+<a id="TLJAX446" name="TLJAX446"></a>
 <div class="sect3"><a id="sthref192" name="sthref192"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Using Dynamic Entities</font></h3>
 <p>Instead of using actual Java classes (such as <code>Customer.class</code> or <code>Address.class</code>), Dynamic MOXy uses a simple <code>get(propertyName)</code>/<code>set(propertyName, propertyValue)</code> API to manipulate data. EclipseLink generates (in memory) a <code>DynamicType</code> associated with each <code>DynamicEntity</code>.</p>
@@ -136,7 +137,7 @@ jaxbContext.createMarshaller().marshal(customer, System.out);
 <br /></div>
 <!-- class="inftblnote" --></div>
 <p><a href="#BABDIAJG">Example 9-3</a> demonstrates how to unmarshal, modify, and marshal an object using dynamic JAXB:</p>
-<div class="example"><a id="BABDIAJG" name="BABDIAJG"></a>
+<div class="example"><a id="BABDIAJG" name="BABDIAJG"></a><a id="TLJAX447" name="TLJAX447"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 9-3 Marshalling and Unmarshalling Example</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 DynamicJAXBContext dynamicJAXBContext = DynamicJAXBContextFactory.createContextFromXSD(xsdInputStream, null, myClassLoader, null);

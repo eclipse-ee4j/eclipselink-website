@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Using an XmlAdapter | EclipseLink 2.4.x EclipseLink MOXy</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-11-08T9:7:21Z" />
+<meta name="date" content="2013-01-28T9:11:28Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Using an XmlAdapter" />
 <meta name="relnum" content="Release 2.4" />
@@ -45,7 +45,7 @@ Release 2.4</div></td>
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header --><a id="CHDCEDIG" name="CHDCEDIG"></a>
+<div class="ind"><!-- End Header --><a id="CHDCEDIG" name="CHDCEDIG"></a><a id="TLJAX418" name="TLJAX418"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Using an XmlAdapter</font></h1>
 <p>Some Java classes may not be well suited for use with JAXB and at first glance may seem "unmappable" &ndash; for example, classes that do not have a default <code>no-arg</code> constructor, or classes for which an XML representation cannot be automatically determined. Using JAXB's <code>XmlAdapter</code>, you can define custom code to convert the unmappable class into something that JAXB can handle. Then, you can use the <code>@XmlJavaTypeAdapter</code> annotation to indicate that your adapter should be used when working with the unmappable class.</p>
@@ -59,7 +59,7 @@ Release 2.4</div></td>
 </li>
 </ul>
 <p>The outline of an XmlAdapter class is as follows:</p>
-<div class="example"><a id="sthref175" name="sthref175"></a>
+<div class="example"><a id="TLJAX419" name="TLJAX419"></a><a id="sthref175" name="sthref175"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-32 XmlAdapter Class Outline</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 public class AdapterName extends XmlAdapter&lt;ValueType, BoundType&gt; {
@@ -76,10 +76,11 @@ public class AdapterName extends XmlAdapter&lt;ValueType, BoundType&gt; {
  
 </pre></div>
 <!-- class="example" -->
+<a id="TLJAX420" name="TLJAX420"></a>
 <div class="sect2"><a id="sthref176" name="sthref176"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Using java.util.Currency</font></h2>
 <p>Our first example will use the following domain class:</p>
-<div class="example"><a id="sthref177" name="sthref177"></a>
+<div class="example"><a id="TLJAX421" name="TLJAX421"></a><a id="sthref177" name="sthref177"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-33 Sample Domain Class</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
@@ -102,7 +103,7 @@ public class PurchaseOrder {
 </pre></div>
 <!-- class="example" -->
 <p>Here, the <strong>Currency</strong> cannot be automatically mapped with JAXB because it does not contain a no-argument constructor. However, we can write an adapter that will convert the <strong>Currency</strong> into something that JAXB does know how to handle &ndash; a simple <code>String</code>. Luckily, in this case the <strong>Currency's</strong> <code>toString()</code> method returns the currency code, which can also be used to create a new <strong>Currency</strong>:</p>
-<div class="example"><a id="sthref178" name="sthref178"></a>
+<div class="example"><a id="TLJAX422" name="TLJAX422"></a><a id="sthref178" name="sthref178"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-34 Using an Adapter</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
@@ -134,7 +135,7 @@ public class CurrencyAdapter extends XmlAdapter&lt;String, Currency&gt; {
 </pre></div>
 <!-- class="example" -->
 <p>To indicate that our adapter should be used for the <strong>Currency</strong> property, we annotate it with <code>@XmlJavaTypeAdapter</code> and provide the class name of our adapter:</p>
-<div class="example"><a id="sthref179" name="sthref179"></a>
+<div class="example"><a id="TLJAX423" name="TLJAX423"></a><a id="sthref179" name="sthref179"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-35 Using the @XmlJavaTypeAdapter Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
@@ -158,10 +159,11 @@ public class PurchaseOrder {
 </pre></div>
 <!-- class="example" --></div>
 <!-- class="sect2" -->
+<a id="TLJAX424" name="TLJAX424"></a>
 <div class="sect2"><a id="sthref180" name="sthref180"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Using java.awt.Point</font></h2>
 <p>Sometimes the best way to handle an unmappable class is to write a "stand-in" class which <em>can</em> be mapped with JAXB, and convert between the two classes in the <code>XmlAdapter</code>. In this example, we want to use the <strong>Point</strong> class. Because of that class' <code>getLocation()</code> method (which JAXB will pickup automatically and map), an infinite loop will occur during marshalling. Because we cannot change the <strong>Point</strong> class, we will write a new class, <strong>MyPoint</strong>, and use it in the adapter.</p>
-<div class="example"><a id="sthref181" name="sthref181"></a>
+<div class="example"><a id="TLJAX425" name="TLJAX425"></a><a id="sthref181" name="sthref181"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-36 Using java.awt.Point</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
@@ -213,7 +215,7 @@ public class MyPointAdapter extends XmlAdapter&lt;MyPoint, Point&gt; {
 </pre></div>
 <!-- class="example" -->
 <p>Finally, our <strong>Point</strong> properties are marked with <code>@XmlJavaTypeAdapter</code>:</p>
-<div class="example"><a id="CHDBBDAC" name="CHDBBDAC"></a>
+<div class="example"><a id="CHDBBDAC" name="CHDBBDAC"></a><a id="TLJAX426" name="TLJAX426"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-37 Using the @XmlJavaTypeAdapter Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
@@ -239,6 +241,7 @@ public class Zone {
 </pre></div>
 <!-- class="example" --></div>
 <!-- class="sect2" -->
+<a id="TLJAX427" name="TLJAX427"></a>
 <div class="sect2"><a id="sthref182" name="sthref182"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Specifying Package-Level Adapters</font></h2>
 <p>In <a href="#CHDBBDAC">Example 8-37</a>, we annotated both <strong>Point</strong> properties with the <code>@XmlJavaTypeAdapter</code> annotation. If you have many of these types of properties &ndash; for example, in other domain classes &ndash; it can be more convenient to specify the <strong>@XmlJavaTypeAdapters</strong> at the package level.</p>
@@ -252,6 +255,7 @@ package example;
  
 </pre></div>
 <!-- class="sect2" -->
+<a id="TLJAX428" name="TLJAX428"></a>
 <div class="sect2"><a id="sthref183" name="sthref183"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Specifying Class-Level @XmlJavaTypeAdapters</font></h2>
 <p>If you have a Java class and you would like to always use an <code>XmlAdapter</code> during marshalling and unmarshalling, then you can specify the <code>@XmlJavaTypeAdapter</code> directly at the class level:</p>

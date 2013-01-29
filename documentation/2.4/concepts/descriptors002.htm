@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Object-Relational Descriptor Concepts | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-12-07T9:24:25Z" />
+<meta name="date" content="2013-01-28T11:56:43Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Object-Relational Descriptor Concepts" />
 <meta name="relnum" content="Release 2.4" />
@@ -46,7 +46,7 @@ Release 2.4</div></td>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2012-12-07</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-01-28</font></p>
 <a id="CHDIJDHB" name="CHDIJDHB"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Object-Relational Descriptor Concepts</font></h1>
@@ -74,7 +74,7 @@ Release 2.4</div></td>
 <p>You can define more than one fetch group for a class. You can optionally designate at most one such fetch group as the default fetch group. If you execute either a <code>ReadObjectQuery</code> or <code>ReadAllQuery</code> query without specifying a fetch group, EclipseLink will use the default fetch group, unless you configure the query otherwise.</p>
 <p>Before using fetch groups, Oracle recommends that you perform a careful analysis of system use. In many cases, the extra queries required to load attributes not in the fetch group could well offset the gain from the partial attribute loading.</p>
 <p>Fetch groups can be used only with basic mappings configured with <code>FetchType.LAZY (partial object queries)</code>.</p>
-<p>EclipseLink introduces the <code>AttributeGroup</code> that can be used to configure the use of partial entities in fetch, load, copy, and merge operations.</p>
+<p>EclipseLink uses the <code>AttributeGroup</code> that can be used to configure the use of partial entities in fetch, load, copy, and merge operations.</p>
 <ul>
 <li>
 <p>Fetch: Control which attributes and their associated columns are retrieved from the database</p>
@@ -89,7 +89,7 @@ Release 2.4</div></td>
 <p>Merge: Merge only those attributes fetched, loaded, or copied into an entity</p>
 </li>
 </ul>
-<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref36" name="sthref36"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref35" name="sthref35"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">AttributeGroup Types and Operations</font></h3>
 <p>The following sections describe the possible <code>AttributeGroup</code> types and operations.</p>
 <ul>
@@ -211,13 +211,13 @@ Release 2.4</div></td>
 <p>With object-relational mapping, you can configure a descriptor with any of the following locking policies to control concurrent access to a domain object:</p>
 <ul>
 <li>
-<p>Optimistic&ndash;All users have read access to the data. When a user attempts to make a change, the application checks to ensure the data has not changed since the user read the data.</p>
+<p>Optimistic&mdash;All users have read access to the data. When a user attempts to make a change, the application checks to ensure the data has not changed since the user read the data.</p>
 </li>
 <li>
-<p>Pessimistic&ndash;The first user who accesses the data with the purpose of updating it locks the data until completing the update.</p>
+<p>Pessimistic&mdash;The first user who accesses the data with the purpose of updating it locks the data until completing the update.</p>
 </li>
 <li>
-<p>No locking&ndash;The application does not prevent users overwriting each other's changes.</p>
+<p>No locking&mdash;The application does not prevent users overwriting each other's changes.</p>
 </li>
 </ul>
 <p>Oracle recommends using optimistic locking for most types of applications to ensure that users do not overwrite each other's changes.</p>
@@ -319,7 +319,7 @@ Release 2.4</div></td>
 <div class="figure"><a id="CHEEBGIH" name="CHEEBGIH"></a><a id="OTLCG92083" name="OTLCG92083"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 6-2 Optimistic Version Locking Policies and Cascading Example</font></em></strong></p>
 <img src="img/oplckcas.gif" alt="Description of Figure 6-2 follows" title="Description of Figure 6-2 follows" longdesc="img_text/oplckcas.htm" /><br />
-<a id="sthref37" name="sthref37" href="img_text/oplckcas.htm">Description of "Figure 6-2 Optimistic Version Locking Policies and Cascading Example"</a><br />
+<a id="sthref36" name="sthref36" href="img_text/oplckcas.htm">Description of "Figure 6-2 Optimistic Version Locking Policies and Cascading Example"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p>In this example, <code>ObjectA</code> privately owns <code>ObjectB</code>, and <code>ObjectB</code> privately owns <code>ObjectC</code>, and <code>ObjectC</code> privately owns <code>ObjectD</code>.</p>
@@ -403,7 +403,7 @@ Release 2.4</div></td>
 </div>
 <!-- class="sect4" -->
 <a id="OTLCG92089" name="OTLCG92089"></a>
-<div class="sect4"><a id="sthref38" name="sthref38"></a>
+<div class="sect4"><a id="sthref37" name="sthref37"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Applying Pessimistic Locking in an Application</font></h4>
 <p>If you are using pessimistic locking, you must use the unit of work to start a database transaction before the object is read. You must hold this unit of work and database transaction while the client is editing the object and until the client updates the object. You must use this same unit of work to update the object.</p>
 </div>

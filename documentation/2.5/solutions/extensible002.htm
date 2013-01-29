@@ -1,0 +1,546 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Making JAXB Beans Extensible | EclipseLink 2.5.x Understanding EclipseLink</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
+<meta name="date" content="2013-01-28T11:35:48Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Making JAXB Beans Extensible" />
+<meta name="relnum" content="Release 2.4" />
+<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="extensible001.htm" title="Previous" type="text/html" />
+<link rel="next" href="extensible003.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:enkkfjmsqju', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><b>EclipseLink Solutions Guide for EclipseLink</b><br />
+Release 2.5</div></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="extensible001.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="extensible003.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header -->
+<p align="center"><font color="#FF0000">Beta Draft: 2013-01-28</font></p>
+<a id="BABHGCJB" name="BABHGCJB"></a><a id="TLADG236" name="TLADG236"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Making JAXB Beans Extensible</font></h1>
+<p>Use the <code>@XmlVirtualAccessMethods</code> annotation to specify that a JAXB bean is extensible. By using virtual properties in an extensible bean, you can specify mappings external to the bean. This allows you to modify the mappings without modifying the bean source file and without redeploying the bean's persistence unit.</p>
+<p>In a multi-tenant (or SaaS) architecture, a single application runs on a server, serving multiple client organizations (tenants). Good multi-tenant applications allow per-tenant customizations. When these customizations are made to data, it can be difficult for the binding layer to handle them. JAXB is designed to work with domain models that have real fields and properties. EclipseLink extensions to JAXB introduce the concept of virtual properties which can easily handle this use case. Virtual properties are defined by the Object-XML metadata file, and provide a way to extend a class without modifying the source.</p>
+<p>This section has the following subsections:</p>
+<ul>
+<li>
+<p><a href="#CIAFIAAF">Main Steps</a></p>
+</li>
+<li>
+<p><a href="#CIAEDJHB">Code Examples</a></p>
+</li>
+</ul>
+<a id="CIAFIAAF" name="CIAFIAAF"></a><a id="TLADG237" name="TLADG237"></a>
+<div class="sect2">
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Main Steps</font></h2>
+<p>To create and support an extensible JAXB bean:</p>
+<ul>
+<li>
+<p><a href="#CIAEGGCB">Task 1: Configure the Bean</a></p>
+</li>
+<li>
+<p><a href="#CIAIDAED">Task 2: Provide Additional Mappings</a></p>
+</li>
+</ul>
+<a id="CIAEGGCB" name="CIAEGGCB"></a><a id="TLADG238" name="TLADG238"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task 1: Configure the Bean</font></h3>
+<p>Configure the bean by annotating the bean class with the <code>@XmlVirtualAccessMethods</code>, adding <code>get</code> and <code>set</code> methods for the property values, and adding a data structure to store the extended attributes and values. Alternatively, you can use the <code>&lt;xml-virtual-access-methods&gt;</code> element in <code>eclipselink-orm.xml</code>.</p>
+<a id="TLADG239" name="TLADG239"></a>
+<div class="sect4"><a id="sthref71" name="sthref71"></a>
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Annotate the Bean Class with @Xml VirtualAccessMethods</font></h4>
+<p>Annotate the bean with <code>@XmlVirtualAccessMethods</code> to specify that it is extensible and to define virtual properties.</p>
+<p><a href="#CIAFAFCH">Table 11-2</a> describes the attributes available to the <code>@XmlVirtualAccessMethods</code> annotation.</p>
+<div class="tblformal"><a id="TLADG240" name="TLADG240"></a><a id="sthref72" name="sthref72"></a><a id="CIAFAFCH" name="CIAFAFCH"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 11-2 Attributes for the @XmlVirtualAccessMethods Annotation</font></em></strong></p>
+<table class="Formal" title="Attributes for the @XmlVirtualAccessMethods Annotation" summary="Attributes for the @XmlVirtualAccessMethods Annotation" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t4"><font face="Arial, Helvetica, sans-serif"><strong>Attribute</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t4"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t4" headers="r1c1-t4">
+<p><code>get</code></p>
+</td>
+<td align="left" headers="r2c1-t4 r1c2-t4">
+<p>The name of the getter method to use for the virtual property. This method must take a single <code>java.lang.String</code> parameter and return a <code>java.lang.Object</code>.</p>
+<p>Default: <code>get</code></p>
+<p>Required? No</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t4" headers="r1c1-t4">
+<p><code>set</code></p>
+</td>
+<td align="left" headers="r3c1-t4 r1c2-t4">
+<p>The name of the setter method to use for the virtual property. This method must take a <code>java.lang.String</code> and a <code>java.lang.Object</code> parameter and return a <code>java.lang.Object</code> parameter.</p>
+<p>Default: <code>set</code></p>
+<p>Required? No</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></div>
+<!-- class="sect4" -->
+<a id="TLADG241" name="TLADG241"></a>
+<div class="sect4"><a id="sthref73" name="sthref73"></a>
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Add get and set Methods to the Bean</font></h4>
+<p>Add <code>get(String)</code> and <code>set(String, Object)</code> methods to the bean. The <code>get()</code> method returns a value by property name and the <code>set()</code> method stores a value by property name. The default names for these methods are <code>get</code> and <code>set</code>, and they can be overridden with the <code>@XmlVirtualAccessMethods</code> annotation.</p>
+</div>
+<!-- class="sect4" -->
+<a id="TLADG242" name="TLADG242"></a>
+<div class="sect4"><a id="sthref74" name="sthref74"></a>
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Define Virtual Attribute Storage</font></h4>
+<p>Add a data structure to store the extended attributes and values, that is, the virtual mappings. These can then be mapped to the database. See <a href="#CIAIDAED">"Task 2: Provide Additional Mappings"</a>.</p>
+<p>A common way to store the virtual mappings is in a <code>Map</code>, but you can use other ways, as well. For example you could store the virtual mappings in a directory system.</p>
+<p>When using field-based access, annotate the data structure with <code>@XmlTransient</code> so it cannot use it for another mapping. When using property-based access, <code>@XmlTransient</code> is unnecessary.</p>
+</div>
+<!-- class="sect4" -->
+<a id="TLADG243" name="TLADG243"></a>
+<div class="sect4"><a id="sthref75" name="sthref75"></a>
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Use XML</font></h4>
+<p>As an alternative to, or in addition to, using <code>@XmlVirtualAccessMethods</code>, you can use the XML equivalents, for example:</p>
+<ul>
+<li>
+<p>XML to enable virtual access methods using <code>get</code> and <code>set</code>:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;xml-virtual-access-methods/&gt;
+</pre></li>
+<li>
+<p>XML to enable virtual access methods using <code>put</code> instead of <code>set</code> (default):</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;xml-virtual-access-methods set-method="put"/&gt;
+</pre></li>
+<li>
+<p>XML to enable virtual access methods using <code>retrieve</code> instead of <code>get</code> (default):</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;xml-virtual-access-methods get-method="retrieve"/&gt;
+</pre></li>
+<li>
+<p>XML to enable virtual access methods using <code>retrieve</code> and <code>put</code> instead of <code>get</code> and <code>set</code> (default):</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;xml-virtual-access-methods get-method="retrieve" set-method="put"/&gt;
+</pre></li>
+</ul>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" -->
+<a id="CIAIDAED" name="CIAIDAED"></a><a id="TLADG244" name="TLADG244"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task 2: Provide Additional Mappings</font></h3>
+<p>To provide additional mappings, add the mappings to the <code>eclipselink-oxm.xml</code> file, for example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;xml-element java-attribute="idNumber"/&gt; 
+</pre></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CIAEDJHB" name="CIAEDJHB"></a><a id="TLADG245" name="TLADG245"></a>
+<div class="sect2">
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Code Examples</font></h2>
+<p>The examples in this section illustrate how to use extensible JAXB beans. The example begins with the creation of a base class that other classes can extend. In this case the extensible classes are for <code>Customers</code> and <code>PhoneNumbers</code>. Mapping files are created for two separate tenants. Even though both tenants share several real properties, they will define virtual properties that are unique to their requirements.</p>
+<a id="TLADG246" name="TLADG246"></a>
+<div class="sect3"><a id="sthref76" name="sthref76"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Basic Setup</font></h3>
+<p><a href="#CIAHDEGG">Example 11-5</a> illustrates a base class, <code>ExtensibleBase</code>, which other extensible classes can extend. In the example, the use of the <code>@XmlTransient</code> annotation prevents <code>ExtensibleBase</code> from being mapped as an inheritance relationship. The real properties represent the parts of the model that will be common to all tenants. The per-tenant extensions will be represented as virtual properties.</p>
+<div class="example"><a id="CIAHDEGG" name="CIAHDEGG"></a><a id="TLADG247" name="TLADG247"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 11-5 A Base Class for Extensible Classes</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package examples.virtual;
+ 
+import java.util.HashMap;
+import java.util.Map;
+ 
+import javax.xml.bind.annotation.XmlTransient;
+ 
+import org.eclipse.persistence.oxm.annotations.XmlVirtualAccessMethods;
+ 
+<strong><code>@XmlTransient</code></strong>
+<strong><code>@XmlVirtualAccessMethods(setMethod="put")</code></strong>
+public class ExtensibleBase {
+ 
+    private Map&lt;String, Object&gt; extensions = new HashMap&lt;String, Object&gt;();
+ 
+    <strong><code>public &lt;T&gt; T get(String property) {</code></strong>
+        <strong><code>return (T) extensions.get(property);</code></strong>
+    }
+ 
+    public void put(String property, Object value) {
+        extensions.put(property, value);
+    }
+}
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CIAECFAH">Example 11-6</a> illustrates the definition of a <code>Customer</code> class. The <code>Customer</code> class is extensible because it inherits from a domain class that has been annotated with <code>@XmlVirtualAccessMethods</code>.</p>
+<div class="example"><a id="CIAECFAH" name="CIAECFAH"></a><a id="TLADG248" name="TLADG248"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 11-6 An Extensible Customer Class</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package examples.virtual;
+ 
+import javax.xml.bind.annotation.XmlRootElement;
+ 
+@XmlRootElement
+<strong><code>public class Customer extends ExtensibleBase </code></strong>{
+ 
+    private String firstName;
+    private String lastName;
+    private Address billingAddress;
+ 
+    public String getFirstName() {
+        return firstName;
+    }
+ 
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+ 
+    public String getLastName() {
+        return lastName;
+    }
+ 
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+ 
+    public Address getBillingAddress() {
+        return billingAddress;
+    }
+ 
+    public void setBillingAddress(Address billingAddress) {
+        this.billingAddress = billingAddress;
+    }
+ 
+}
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CIAGABCC">Example 11-7</a> illustrates an <code>Address</code> class. It is not necessary for every class in your model to be extensible. In this example, the <code>Address</code> class does not have any virtual properties.</p>
+<div class="example"><a id="CIAGABCC" name="CIAGABCC"></a><a id="TLADG249" name="TLADG249"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 11-7 A Nonextensible Address Class</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package examples.virtual;
+ 
+public class Address {
+ 
+    private String street;
+ 
+    public String getStreet() {
+        return street;
+    }
+ 
+    public void setStreet(String street) {
+        this.street = street;
+    }
+ 
+}
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CIAEEBIG">Example 11-8</a> illustrates a <code>PhoneNumber</code> class. Like <code>Customer</code>, <code>PhoneNumber</code> will be an extensible class.</p>
+<div class="example"><a id="CIAEEBIG" name="CIAEEBIG"></a><a id="TLADG250" name="TLADG250"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 11-8 An Extensible PhoneNumber Class</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package examples.virtual;
+ 
+import javax.xml.bind.annotation.XmlValue;
+ 
+<strong><code>public class PhoneNumber extends ExtensibleBase </code></strong>{
+ 
+    private String number;
+ 
+    @XmlValue
+    public String getNumber() {
+        return number;
+    }
+ 
+    public void setNumber(String number) {
+        this.number = number;
+    }
+ 
+}
+</pre></div>
+<!-- class="example" --></div>
+<!-- class="sect3" -->
+<a id="TLADG251" name="TLADG251"></a>
+<div class="sect3"><a id="sthref77" name="sthref77"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Define the Tenants</font></h3>
+<p>The examples in this section define two separate tenants. Even though both tenants share several real properties, the corresponding XML representation can be quite different due to virtual properties.</p>
+<a id="TLADG252" name="TLADG252"></a>
+<p><b><font face="arial, helvetica, sans-serif" color="#330099">Tenant 1</font></b></p>
+<p>The first tenant is an online sporting goods store that requires the following extensions to its model:</p>
+<ul>
+<li>
+<p>Customer ID</p>
+</li>
+<li>
+<p>Customer's middle name</p>
+</li>
+<li>
+<p>Shipping address</p>
+</li>
+<li>
+<p>A collection of contact phone numbers</p>
+</li>
+<li>
+<p>Type of phone number (that is, home, work, or cell)</p>
+</li>
+</ul>
+<p>The metadata for the virtual properties is captured in the <code>eclipselink-oxm.xml</code> mapping file or in files using the <code>eclipselink-orm.xml</code> schema.. Virtual properties are mapped in the same way as real properties. Some additional information is required, including type (since this cannot be determined through reflection), and for collection properties, a container type. The virtual properties defined below for <code>Customer</code> are <code>middleName</code>, <code>shippingAddress</code>, and <code>phoneNumbers</code>. For <code>PhoneNumber</code>, the virtual property is the <code>type</code> property.</p>
+<p><a href="#CIAJHHAJ">Example 11-9</a> illustrates the <code>binding-tenant1.xml</code> mapping file.</p>
+<div class="example"><a id="CIAJHHAJ" name="CIAJHHAJ"></a><a id="TLADG253" name="TLADG253"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 11-9 Defining Virtual Properties for Tenant 1</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0"?&gt;
+&lt;xml-bindings
+    xmlns="http://www.eclipse.org/eclipselink/xsds/persistence/oxm"
+    package-name="examples.virtual"&gt;
+    &lt;java-types&gt;
+        &lt;java-type name="Customer"&gt;
+            &lt;xml-type prop-order="firstName middleName lastName billingAddress shippingAddress phoneNumbers"/&gt;
+            &lt;java-attributes&gt;
+                &lt;xml-attribute
+                    java-attribute="id"
+                    type="java.lang.Integer"/&gt;
+                &lt;xml-element
+                    java-attribute="middleName"
+                    type="java.lang.String"/&gt;
+                &lt;xml-element
+                    java-attribute="shippingAddress"
+                    type="examples.virtual.Address"/&gt;
+                &lt;xml-element
+                    java-attribute="phoneNumbers"
+                    name="phoneNumber"
+                    type="examples.virtual.PhoneNumber"
+                    container-type="java.util.List"/&gt;
+            &lt;/java-attributes&gt;
+        &lt;/java-type&gt;
+        &lt;java-type name="PhoneNumber"&gt;
+            &lt;java-attributes&gt;
+                &lt;xml-attribute
+                    java-attribute="type"
+                    type="java.lang.String"/&gt;
+            &lt;/java-attributes&gt;
+        &lt;/java-type&gt;
+    &lt;/java-types&gt;
+&lt;/xml-bindings&gt;
+</pre></div>
+<!-- class="example" -->
+<p>The <code>get</code> and <code>set</code> methods are used on the domain model to interact with the real properties and the accessors defined on the <code>@XmlVirtualAccessMethods</code> annotation are used to interact with the virtual properties. The normal JAXB mechanisms are used for marshal and unmarshal operations. <a href="#CIAIIDAD">Example 11-10</a> illustrates the <code>Customer</code> class code for tenant 1 to obtain the data associated with virtual properties.</p>
+<div class="example"><a id="CIAIIDAD" name="CIAIIDAD"></a><a id="TLADG254" name="TLADG254"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 11-10 Tenant 1 Code to Provide the Data Associated with Virtual Properties</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+...
+Customer customer = new Customer();
+ 
+//Set Customer's real properties
+customer.setFirstName("Jane");
+customer.setLastName("Doe");
+ 
+Address billingAddress = new Address();
+billingAddress.setStreet("1 Billing Street");
+customer.setBillingAddress(billingAddress);
+ 
+//Set Customer's virtual 'middleName' property
+customer.put("middleName", "Anne");
+ 
+//Set Customer's virtual 'shippingAddress' property
+Address shippingAddress = new Address();
+shippingAddress.setStreet("2 Shipping Road");
+customer.put("shippingAddress", shippingAddress);
+ 
+List&lt;PhoneNumber&gt; phoneNumbers = new ArrayList&lt;PhoneNumber&gt;();
+customer.put("phoneNumbers", phoneNumbers);
+ 
+PhoneNumber workPhoneNumber = new PhoneNumber();
+workPhoneNumber.setNumber("555-WORK");
+//Set the PhoneNumber's virtual 'type' property
+workPhoneNumber.put("type", "WORK");
+phoneNumbers.add(workPhoneNumber);
+ 
+PhoneNumber homePhoneNumber = new PhoneNumber();
+homePhoneNumber.setNumber("555-HOME");
+//Set the PhoneNumber's virtual 'type' property
+homePhoneNumber.put("type", "HOME");
+phoneNumbers.add(homePhoneNumber);
+ 
+Map&lt;String, Object&gt; properties = new HashMap&lt;String, Object&gt;();
+<strong><code>properties.put(JAXBContextFactory.ECLIPSELINK_OXM_XML_KEY, "examples/virtual/binding-tenant1.xml");</code></strong>
+JAXBContext jc = JAXBContext.newInstance(new Class[] {Customer.class, Address.class}, properties);
+ 
+Marshaller marshaller = jc.createMarshaller();
+marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+marshaller.marshal(customer, System.out);
+...
+ 
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CIAECIAH">Example 11-11</a> illustrates the XML output from the <code>Customer</code> class for tenant 1.</p>
+<div class="example"><a id="CIAECIAH" name="CIAECIAH"></a><a id="TLADG255" name="TLADG255"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 11-11 XML Output from the Customer Class for Tenant 1</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;customer&gt;
+   &lt;firstName&gt;Jane&lt;/firstName&gt;
+   &lt;middleName&gt;Anne&lt;/middleName&gt;
+   &lt;lastName&gt;Doe&lt;/lastName&gt;
+   &lt;billingAddress&gt;
+      &lt;street&gt;1 Billing Street&lt;/street&gt;
+   &lt;/billingAddress&gt;
+   &lt;shippingAddress&gt;
+      &lt;street&gt;2 Shipping Road&lt;/street&gt;
+   &lt;/shippingAddress&gt;
+   &lt;phoneNumber type="WORK"&gt;555-WORK&lt;/phoneNumber&gt;
+   &lt;phoneNumber type="HOME"&gt;555-HOME&lt;/phoneNumber&gt;
+&lt;/customer&gt;
+</pre></div>
+<!-- class="example" -->
+<a id="TLADG256" name="TLADG256"></a>
+<p><b><font face="arial, helvetica, sans-serif" color="#330099">Tenant 2</font></b></p>
+<p>The second tenant is a streaming media provider that offers on-demand movies and music to its subscribers. It requires a different set of extensions to the core model:</p>
+<ul>
+<li>
+<p>A single contact phone number</p>
+</li>
+</ul>
+<p>For this tenant, the mapping file is also used to customize the mapping of the real properties.</p>
+<p><a href="#CIAGBEGJ">Example 11-12</a> illustrates the <code>binding-tenant2.xml</code> mapping file.</p>
+<div class="example"><a id="CIAGBEGJ" name="CIAGBEGJ"></a><a id="TLADG257" name="TLADG257"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 11-12 Defining Virtual Properties for Tenant 2</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0"?&gt;
+&lt;xml-bindings
+    xmlns="http://www.eclipse.org/eclipselink/xsds/persistence/oxm"
+    package-name="examples.virtual"&gt;
+    &lt;xml-schema namespace="urn:tenant1" element-form-default="QUALIFIED"/&gt;
+    &lt;java-types&gt;
+        &lt;java-type name="Customer"&gt;
+            &lt;xml-type prop-order="firstName lastName billingAddress phoneNumber"/&gt;
+            &lt;java-attributes&gt;
+                &lt;xml-attribute java-attribute="firstName"/&gt;
+                &lt;xml-attribute java-attribute="lastName"/&gt;
+                &lt;xml-element java-attribute="billingAddress" name="address"/&gt;
+               <strong><code> &lt;xml-element</code></strong>
+                    <strong><code>java-attribute="phoneNumber"</code></strong>
+                    <strong><code>type="examples.virtual.PhoneNumber"/&gt;</code></strong>
+            &lt;/java-attributes&gt;
+        &lt;/java-type&gt;
+    &lt;/java-types&gt;
+&lt;/xml-bindings&gt;
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CIACHCHF">Example 11-13</a> illustrates the tenant 2 <code>Customer</code> class code to obtain the data associated with virtual properties.</p>
+<div class="example"><a id="CIACHCHF" name="CIACHCHF"></a><a id="TLADG258" name="TLADG258"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 11-13 Tenant 2 Code to Provide the Data Associated with Virtual Properties</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+...
+Customer customer = new Customer();
+customer.setFirstName("Jane");
+customer.setLastName("Doe");
+ 
+Address billingAddress = new Address();
+billingAddress.setStreet("1 Billing Street");
+customer.setBillingAddress(billingAddress);
+ 
+PhoneNumber phoneNumber = new PhoneNumber();
+phoneNumber.setNumber("555-WORK");
+customer.put("phoneNumber", phoneNumber);
+ 
+Map&lt;String, Object&gt; properties = new HashMap&lt;String, Object&gt;();
+<strong><code>properties.put(JAXBContextFactory.ECLIPSELINK_OXM_XML_KEY, "examples/virtual/binding-tenant2.xml");</code></strong>
+JAXBContext jc = JAXBContext.newInstance(new Class[] {Customer.class, Address.class}, properties);
+ 
+Marshaller marshaller = jc.createMarshaller();
+marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+marshaller.marshal(customer, System.out);
+...
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CIAGDDIG">Example 11-14</a> illustrates the XML output from the <code>Customer</code> class for tenant 2.</p>
+<div class="example"><a id="CIAGDDIG" name="CIAGDDIG"></a><a id="TLADG259" name="TLADG259"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 11-14 XML Output from the Customer Class for Tenant 2</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;customer xmlns="urn:tenant1" firstName="Jane" lastName="Doe"&gt;
+   &lt;address&gt;
+      &lt;street&gt;1 Billing Street&lt;/street&gt;
+   &lt;/address&gt;
+   &lt;phoneNumber&gt;555-WORK&lt;/phoneNumber&gt;
+&lt;/customer&gt;
+</pre></div>
+<!-- class="example" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="extensible001.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="extensible003.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+                
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
+</html>

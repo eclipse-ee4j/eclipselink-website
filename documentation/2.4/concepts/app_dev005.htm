@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>About Persisting Objects | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-12-07T9:24:25Z" />
+<meta name="date" content="2013-01-28T11:56:43Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="About Persisting Objects" />
 <meta name="relnum" content="Release 2.4" />
@@ -46,11 +46,11 @@ Release 2.4</div></td>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2012-12-07</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-01-28</font></p>
 <a id="BABFEDHA" name="BABFEDHA"></a><a id="OTLCG91195" name="OTLCG91195"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">About Persisting Objects</font></h1>
-<p>This section includes a brief description of relational mapping and provides information and restrictions to guide object and relational modeling. This information is useful when building EclipseLink applications.</p>
+<p>This section includes a brief description of relational mapping and provides information and restrictions to guide object and relational modeling. This information is useful when building applications.</p>
 <p>This section includes information on the following:</p>
 <ul>
 <li>
@@ -90,7 +90,7 @@ Release 2.4</div></td>
 <a id="BABEIFFG" name="BABEIFFG"></a><a id="OTLCG91196" name="OTLCG91196"></a>
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Application Object Model</font></h2>
-<p>Object modeling refers to the design of the Java classes that represent your application objects. With EclipseLink, you can use your favorite integrated development environment (IDE) or Unified Modeling Language (UML) modeling tool to define and create your application object model.</p>
+<p>Object modeling refers to the design of the Java classes that represent your application objects. You can use your favorite integrated development environment (IDE) or Unified Modeling Language (UML) modeling tool to define and create your application object model.</p>
 <p>Any class that registers a descriptor with EclipseLink database sessions is called a persistent class. EclipseLink does not require that persistent classes provide public accessor methods for any private or protected attributes stored in the database. Refer to <a href="app_dev003.htm#BABDHDIA">Persistent Class Requirements</a> for more information.</p>
 </div>
 <!-- class="sect2" -->
@@ -98,7 +98,7 @@ Release 2.4</div></td>
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Data Storage Schema</font></h2>
 <p>Your data storage schema refers to the design that you implement to organize the persistent data in your application. This schema refers to the data itself&mdash;not the actual data source (such as a relational database or nonrelational legacy system).</p>
-<p>During the design phase of the EclipseLink application development process, you should decide how to implement the classes in the data source. When integrating existing data source information, you must determine how the classes relate to the existing data. If no legacy information exists to integrate, decide how you will store each class, then create the necessary schema. For more information, see <a href="app_dev001.htm#BABJDEEG">Typical Development Stages.</a></p>
+<p>During the design phase of the application development process, you should decide how to implement the classes in the data source. When integrating existing data source information, you must determine how the classes relate to the existing data. If no legacy information exists to integrate, decide how you will store each class, then create the necessary schema. For more information, see <a href="app_dev001.htm#BABJDEEG">Typical Development Stages.</a></p>
 </div>
 <!-- class="sect2" -->
 <a id="BABDCJDH" name="BABDCJDH"></a><a id="OTLCG91198" name="OTLCG91198"></a>
@@ -112,7 +112,7 @@ Release 2.4</div></td>
 <a id="BABFEIHF" name="BABFEIHF"></a><a id="OTLCG91199" name="OTLCG91199"></a>
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Mappings</font></h2>
-<p>EclipseLink uses metadata to describe how objects and beans map to the data source. This approach isolates persistence information from the object model&mdash;you are free to design their ideal object model, and DBAs are free to design their ideal schema. For more information, see <a href="app_dev006.htm#CHEDICEE">About EclipseLink Metadata</a>.</p>
+<p>EclipseLink uses metadata to describe how objects and beans map to the data source. This approach isolates persistence information from the object model&mdash;you are free to design their ideal object model, and DBAs are free to design their ideal schema. For more information, see <a href="app_dev006.htm#CHEDICEE">About Metadata</a>.</p>
 <p>At run time, EclipseLink uses the metadata to seamlessly and dynamically interact with the data source, as required by the application.</p>
 <p>EclipseLink provides an extensive mapping hierarchy that supports the wide variety of data types and references that an object model might contain. For more information, see <a href="mappingintro.htm#CHDFEJIJ">Chapter 7, "Understanding Mappings."</a></p>
 </div>
@@ -189,7 +189,7 @@ Release 2.4</div></td>
 <p>Generating source code into or wrapping the object model</p>
 </li>
 </ul>
-<p>See <a href="app_dev003.htm#BABCCAHJ">Building and Using the Persistence Layer</a> for additional information on this nonintrusive approach. See also <a href="app_dev006.htm#CHEDICEE">About EclipseLink Metadata.</a></p>
+<p>See <a href="app_dev003.htm#BABCCAHJ">Building and Using the Persistence Layer</a> for additional information on this nonintrusive approach. See also <a href="app_dev006.htm#CHEDICEE">About Metadata.</a></p>
 </div>
 <!-- class="sect2" -->
 <a id="BABCCDGC" name="BABCCDGC"></a><a id="OTLCG91205" name="OTLCG91205"></a>
@@ -224,13 +224,13 @@ Release 2.4</div></td>
 <p>By default, EclipseLink assumes the following:</p>
 <ul>
 <li>
-<p>all <code>TransformationMapping</code> instances are mutable;</p>
+<p>all <code>TransformationMapping</code> instances are mutable</p>
 </li>
 <li>
-<p>all JPA <code>@Basic</code> mapping types, except <code>Serializable</code> types, are immutable (including <code>Date</code> and <code>Calendar</code> types);</p>
+<p>all JPA <code>@Basic</code> mapping types, except <code>Serializable</code> types, are immutable (including <code>Date</code> and <code>Calendar</code> types)</p>
 </li>
 <li>
-<p>all JPA <code>@Basic</code> mapping <code>Serializable</code> types are mutable.</p>
+<p>all JPA <code>@Basic</code> mapping <code>Serializable</code> types are mutable</p>
 </li>
 </ul>
 <p>Whether a value is immutable or mutable largely depends on how your application uses your persistent classes. For example, by default, EclipseLink assumes that a persistent field of type <code>Date</code> is immutable: this means that as long as the value of the field has the same object ID, EclipseLink assumes that the value has not changed. If your application uses the set methods of the <code>Date</code> class, you can change the state of the <code>Date</code> object value without changing its object ID. This prevents EclipseLink from detecting the change. To avoid this, you can configure a mapping as mutable: this tells EclipseLink to examine the state of the persistent value, not just its object ID.</p>

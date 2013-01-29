@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Mapping Collections of Simple Values | EclipseLink 2.4.x EclipseLink MOXy</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-11-08T9:7:20Z" />
+<meta name="date" content="2013-01-28T9:11:27Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Mapping Collections of Simple Values" />
 <meta name="relnum" content="Release 2.4" />
@@ -45,7 +45,7 @@ Release 2.4</div></td>
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header --><a id="CHDHEDHA" name="CHDHEDHA"></a>
+<div class="ind"><!-- End Header --><a id="CHDHEDHA" name="CHDHEDHA"></a><a id="TLJAX256" name="TLJAX256"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Mapping Collections of Simple Values</font></h1>
 <p>This section demonstrates several ways to map a collection of simple Java values directly to XML text nodes.</p>
@@ -63,11 +63,11 @@ Release 2.4</div></td>
 <p><a href="#CHDDGGJC">Mapping a Collection of XmlAttributes or XmlValues</a></p>
 </li>
 </ul>
-<a id="CHDEBEAH" name="CHDEBEAH"></a>
+<a id="CHDEBEAH" name="CHDEBEAH"></a><a id="TLJAX257" name="TLJAX257"></a>
 <div class="sect2">
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Mapping to Text Nodes</font></h2>
 <p>Given the XML schema in <a href="#CHDJIJBH">Example 4-25</a>, <a href="#CHDBIDCE">Figure 4-10</a> illustrates the mapping of a Java collection to elements in a corresponding XML document.</p>
-<div class="example"><a id="CHDJIJBH" name="CHDJIJBH"></a>
+<div class="example"><a id="CHDJIJBH" name="CHDJIJBH"></a><a id="TLJAX258" name="TLJAX258"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 4-25 Sample XML Schema</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -85,14 +85,14 @@ Release 2.4</div></td>
  
 </pre></div>
 <!-- class="example" -->
-<div class="figure"><a id="CHDBIDCE" name="CHDBIDCE"></a>
+<div class="figure"><a id="CHDBIDCE" name="CHDBIDCE"></a><a id="TLJAX259" name="TLJAX259"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 4-10 XML Direct Collection Mapping to Text Nodes</font></em></strong></p>
 <img src="img/dc.gif" alt="XML Direct Collection Mapping to Text Nodes" title="XML Direct Collection Mapping to Text Nodes" longdesc="img_text/dc.htm" /><br />
 <a id="sthref74" name="sthref74" href="img_text/dc.htm">Description of "Figure 4-10 XML Direct Collection Mapping to Text Nodes"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p><a href="#CHDBHGHJ">Example 4-26</a> shows how to annotate your Java class to obtain this mapping with EclipseLink. All that is needed is the standard JAXB <code>@XmlElement</code> annotation.</p>
-<div class="example"><a id="CHDBHGHJ" name="CHDBHGHJ"></a>
+<div class="example"><a id="CHDBHGHJ" name="CHDBHGHJ"></a><a id="TLJAX260" name="TLJAX260"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 4-26 Using the @XmlElement Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
@@ -111,7 +111,7 @@ public class Customer {
 </pre></div>
 <!-- class="example" -->
 <p><a href="#CHDGCGDF">Example 4-27</a> shows how to define your mapping information in EclipseLink's OXM metadata format.</p>
-<div class="example"><a id="CHDGCGDF" name="CHDGCGDF"></a>
+<div class="example"><a id="CHDGCGDF" name="CHDGCGDF"></a><a id="TLJAX261" name="TLJAX261"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 4-27 Sample XML Mapping</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 ...
@@ -126,11 +126,11 @@ public class Customer {
 </pre></div>
 <!-- class="example" --></div>
 <!-- class="sect2" -->
-<a id="CHDHHIBD" name="CHDHHIBD"></a>
+<a id="CHDHHIBD" name="CHDHHIBD"></a><a id="TLJAX262" name="TLJAX262"></a>
 <div class="sect2">
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Mapping to Text Nodes with a Grouping Element</font></h2>
 <p>Given the XML schema in <a href="#CHDBDBEH">Example 4-28</a>, <a href="#CHDDEJFD">Figure 4-11</a> illustrates the mapping of a Java collection to elements in a corresponding XML document, using a grouping element to organize the elements of the collection.</p>
-<div class="example"><a id="CHDBDBEH" name="CHDBDBEH"></a>
+<div class="example"><a id="CHDBDBEH" name="CHDBDBEH"></a><a id="TLJAX263" name="TLJAX263"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 4-28 Sample XML Schema</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -148,14 +148,14 @@ public class Customer {
  
 </pre></div>
 <!-- class="example" -->
-<div class="figure"><a id="CHDDEJFD" name="CHDDEJFD"></a>
+<div class="figure"><a id="CHDDEJFD" name="CHDDEJFD"></a><a id="TLJAX264" name="TLJAX264"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 4-11 XML Direct Collection Mapping to Text Nodes with a Grouping Element</font></em></strong></p>
 <img src="img/dcge.gif" alt="XML Direct Collection Mapping to Text Nodes with a Grouping Element" title="XML Direct Collection Mapping to Text Nodes with a Grouping Element" longdesc="img_text/dcge.htm" /><br />
 <a id="sthref75" name="sthref75" href="img_text/dcge.htm">Description of "Figure 4-11 XML Direct Collection Mapping to Text Nodes with a Grouping Element"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p><a href="#CHDBHBIF">Example 4-29</a> shows how to annotate your Java class to obtain this mapping with EclipseLink. We specify the grouping element with the <code>@XmlElementWrapper</code> annotation.</p>
-<div class="example"><a id="CHDBHBIF" name="CHDBHBIF"></a>
+<div class="example"><a id="CHDBHBIF" name="CHDBHBIF"></a><a id="TLJAX265" name="TLJAX265"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 4-29 Using the @XmlElementWrapper Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
@@ -175,7 +175,7 @@ public class Customer {
 </pre></div>
 <!-- class="example" -->
 <p><a href="#CHDFCAGG">Example 4-30</a> shows how to define your mapping information in EclipseLink's OXM metadata format.</p>
-<div class="example"><a id="CHDFCAGG" name="CHDFCAGG"></a>
+<div class="example"><a id="CHDFCAGG" name="CHDFCAGG"></a><a id="TLJAX266" name="TLJAX266"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 4-30 Sample XML Mapping</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 ...
@@ -192,11 +192,11 @@ public class Customer {
 </pre></div>
 <!-- class="example" --></div>
 <!-- class="sect2" -->
-<a id="CHDIHAGJ" name="CHDIHAGJ"></a>
+<a id="CHDIHAGJ" name="CHDIHAGJ"></a><a id="TLJAX267" name="TLJAX267"></a>
 <div class="sect2">
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Mapping to a List Element</font></h2>
 <p>Given the XML schema in <a href="#CHDGBCBI">Example 4-31</a>, <a href="#CHDGBHHE">Figure 4-12</a> illustrates a mapping to an <code>xsd:list</code> type in a corresponding XML document. Using this mapping, you can represent the collection of simple Java objects as a <code>String</code> of white space delimited tokens in XML. Here, the tasks list contains three entries: <strong>Design</strong>, <strong>Code</strong> and <strong>Test</strong>.</p>
-<div class="example"><a id="CHDGBCBI" name="CHDGBCBI"></a>
+<div class="example"><a id="CHDGBCBI" name="CHDGBCBI"></a><a id="TLJAX268" name="TLJAX268"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 4-31 Sample XML Schema</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -218,14 +218,14 @@ public class Customer {
  
 </pre></div>
 <!-- class="example" -->
-<div class="figure"><a id="CHDGBHHE" name="CHDGBHHE"></a>
+<div class="figure"><a id="CHDGBHHE" name="CHDGBHHE"></a><a id="TLJAX269" name="TLJAX269"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 4-12 XML Direct Mapping to a List Field</font></em></strong></p>
 <img src="img/dcxmstn.gif" alt="XMLDirect Mapping to a List Field" title="XMLDirect Mapping to a List Field" longdesc="img_text/dcxmstn.htm" /><br />
 <a id="sthref76" name="sthref76" href="img_text/dcxmstn.htm">Description of "Figure 4-12 XML Direct Mapping to a List Field"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p><a href="#CHDHDGFF">Example 4-32</a> shows how to annotate your Java class to obtain this mapping with EclipseLink.</p>
-<div class="example"><a id="CHDHDGFF" name="CHDHDGFF"></a>
+<div class="example"><a id="CHDHDGFF" name="CHDHDGFF"></a><a id="TLJAX270" name="TLJAX270"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 4-32 Using the @XmlList Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
@@ -244,7 +244,7 @@ public class Employee {
 </pre></div>
 <!-- class="example" -->
 <p><a href="#CHDEIEDI">Example 4-33</a> shows how to define your mapping information in EclipseLink's OXM metadata format.</p>
-<div class="example"><a id="CHDEIEDI" name="CHDEIEDI"></a>
+<div class="example"><a id="CHDEIEDI" name="CHDEIEDI"></a><a id="TLJAX271" name="TLJAX271"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 4-33 Sample XML Mapping</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 ...
@@ -259,11 +259,11 @@ public class Employee {
 </pre></div>
 <!-- class="example" --></div>
 <!-- class="sect2" -->
-<a id="CHDDGGJC" name="CHDDGGJC"></a>
+<a id="CHDDGGJC" name="CHDDGGJC"></a><a id="TLJAX272" name="TLJAX272"></a>
 <div class="sect2">
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Mapping a Collection of XmlAttributes or XmlValues</font></h2>
 <p><code>@XmlList</code> can also be used in conjunction with <code>@XmlAttribute</code> or <code>@XmlValue</code>, as shown in <a href="#CHDGGBBB">Example 4-34</a>. The collection will be represented as a space-separated string in the attribute.</p>
-<div class="example"><a id="CHDGGBBB" name="CHDGGBBB"></a>
+<div class="example"><a id="CHDGGBBB" name="CHDGGBBB"></a><a id="TLJAX273" name="TLJAX273"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 4-34 Java Annotations</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
@@ -296,7 +296,7 @@ public class PhoneNumbers {
  
 </pre></div>
 <!-- class="example" -->
-<div class="example"><a id="sthref77" name="sthref77"></a>
+<div class="example"><a id="TLJAX274" name="TLJAX274"></a><a id="sthref77" name="sthref77"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 4-35 EclipseLink OXM Metadata</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
  
@@ -320,7 +320,7 @@ public class PhoneNumbers {
  
 </pre></div>
 <!-- class="example" -->
-<div class="example"><a id="sthref78" name="sthref78"></a>
+<div class="example"><a id="TLJAX275" name="TLJAX275"></a><a id="sthref78" name="sthref78"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 4-36 Example XML Documents</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;customer ids="726 1982 1989 2991"/&gt;

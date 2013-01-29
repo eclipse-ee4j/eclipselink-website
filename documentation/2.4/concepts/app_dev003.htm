@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Building and Using the Persistence Layer | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-12-07T9:24:25Z" />
+<meta name="date" content="2013-01-28T11:56:43Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Building and Using the Persistence Layer" />
 <meta name="relnum" content="Release 2.4" />
@@ -46,7 +46,7 @@ Release 2.4</div></td>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2012-12-07</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-01-28</font></p>
 <a id="BABCCAHJ" name="BABCCAHJ"></a><a id="OTLCG91175" name="OTLCG91175"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Building and Using the Persistence Layer</font></h1>
@@ -91,7 +91,7 @@ Release 2.4</div></td>
 <a id="CCHHEIFG" name="CCHHEIFG"></a><a id="OTLCG91179" name="OTLCG91179"></a>
 <div class="sect3"><!-- infolevel="all" infotype="General" -->
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Using EclipseLink Metadata Java API</font></h3>
-<p>Persistence layer components may be coded or generated as Java. To use Java code, you must manually write code for each element of the EclipseLink project including: project, login, platform, descriptors, and mappings. This may be more efficient if your application is model-based and relies heavily on code generation.</p>
+<p>Persistence layer components may be coded or generated as Java. To use Java code, you must manually write code for each element of the project including: project, login, platform, descriptors, and mappings. This may be more efficient if your application is model-based and relies heavily on code generation.</p>
 </div>
 <!-- class="sect3" -->
 <a id="CCHJBHDG" name="CCHJBHDG"></a><a id="OTLCG91180" name="OTLCG91180"></a>
@@ -142,22 +142,16 @@ Release 2.4</div></td>
 <p><a href="#BABFEEGF">Mapping Metadata</a></p>
 </li>
 <li>
-<p><a href="#BABCFEED">Session</a></p>
-</li>
-<li>
 <p><a href="#BABBGFHF">Cache</a></p>
 </li>
 <li>
 <p><a href="#BABJDGGH">Queries and Expressions</a></p>
 </li>
-<li>
-<p><a href="#BABFHCAH">Transactions</a></p>
-</li>
 </ul>
 <a id="BABFEEGF" name="BABFEEGF"></a><a id="OTLCG91184" name="OTLCG91184"></a>
 <div class="sect3"><!-- infolevel="all" infotype="General" -->
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Mapping Metadata</font></h3>
-<p>The EclipseLink application metadata model is based on the EclipseLink project. The project includes descriptors, mappings, and various policies that customize the run-time capabilities. You associate this mapping and configuration information with a particular data source and application by referencing the project from a session.</p>
+<p>The EclipseLink application metadata model is based on the project. The project includes descriptors, mappings, and various policies that customize the run-time capabilities. You associate this mapping and configuration information with a particular data source and application by referencing the project from a session.</p>
 <p>For more information, see the following:</p>
 <ul>
 <li>
@@ -170,15 +164,6 @@ Release 2.4</div></td>
 <p><a href="mappingintro.htm#CHDFEJIJ">Chapter 7, "Understanding Mappings"</a></p>
 </li>
 </ul>
-</div>
-<!-- class="sect3" -->
-<a id="BABCFEED" name="BABCFEED"></a><a id="OTLCG91185" name="OTLCG91185"></a>
-<div class="sect3"><!-- infolevel="all" infotype="General" -->
-<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Session</font></h3>
-<p>EclipseLink uses sessions as the primary interface between the client application and EclipseLink, and represents the connection to the underlying data source.</p>
-<p>EclipseLink offers several different session types, each optimized for different design requirements and architectures. The most commonly used session is the server session, a session that clients access on the server through a client session. The server session provides a shared cache and shared connection resources. You define a session with session metadata.</p>
-<p>For EclipseLink JPA projects, the <code>EntityManagerFactory</code> represents (wraps) the session.</p>
-<p>For more information, see <a href="app_dev006.htm#BABHHGDE">Creating Session Metadata</a>.</p>
 </div>
 <!-- class="sect3" -->
 <a id="BABBGFHF" name="BABBGFHF"></a><a id="OTLCG91186" name="OTLCG91186"></a>
@@ -210,7 +195,7 @@ Release 2.4</div></td>
 </li>
 </ul>
 <p>With these options, you can build any type of query. Oracle recommends using named queries to define application queries. Named queries are held in the project metadata and referenced by name. This simplifies application development and encapsulates the queries to reduce maintenance costs.</p>
-<p>For Object-relational architectures, you are free to use any of the query options regardless of the persistent entity type. Alternatively, you can build queries in code, using the EclipseLink API. Note,</p>
+<p>For Object-relational architectures, you are free to use any of the query options regardless of the persistent entity type. Alternatively, you can build queries in code, using the EclipseLink API.</p>
 <div align="center">
 <div class="inftblnote"><br />
 <table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
@@ -225,16 +210,7 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="inftblnote" --></div>
-<p>For more information, see <a href="queries.htm#CHDGGCJB">Chapter 10, "Understanding EclipseLink Queries"</a> and <a href="expressions.htm#CHDCAIGD">Chapter 11, "Understanding EclipseLink Expressions."</a></p>
-</div>
-<!-- class="sect3" -->
-<a id="BABFHCAH" name="BABFHCAH"></a><a id="OTLCG91188" name="OTLCG91188"></a>
-<div class="sect3"><!-- infolevel="all" infotype="General" -->
-<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Transactions</font></h3>
-<p>For Object-relational architectures, EclipseLink provides the ability to write transactional code isolated from the underlying database and schema by using a <strong>unit of work</strong>, a specific transactional session.</p>
-<p>The unit of work isolates changes in a transaction from other threads until it successfully commits the changes to the database. Unlike other transaction mechanisms, the unit of work automatically manages changes to the objects in the transaction, the order of the changes, and changes that might invalidate other EclipseLink caches. The unit of work manages these issues by calculating a minimal change set, ordering the database calls to comply with referential integrity rules and deadlock avoidance, and merging changed objects into the shared cache. In a clustered environment, the unit of work also synchronizes changes with the other servers in the coordinated cache.</p>
-<p>If an application uses entities, you do not access the unit of work API directly, but you still benefit from its features: the integration between the EclipseLink runtime and the Java EE container automatically uses the unit of work to the application's best advantage.</p>
-<p>For more information, see <a href="queries.htm#CHDGGCJB">Chapter 10, "Understanding EclipseLink Queries."</a></p>
+<p>For more information, see <a href="queries.htm#CHDGGCJB">Chapter 10, "Understanding Queries"</a> and <a href="expressions.htm#CHDCAIGD">Chapter 11, "Understanding EclipseLink Expressions."</a></p>
 </div>
 <!-- class="sect3" --></div>
 <!-- class="sect2" --></div>

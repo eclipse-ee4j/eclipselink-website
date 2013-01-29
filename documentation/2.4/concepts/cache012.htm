@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>About Cache Coordination | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-12-07T9:24:26Z" />
+<meta name="date" content="2013-01-28T11:56:45Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="About Cache Coordination" />
 <meta name="relnum" content="Release 2.4" />
@@ -46,7 +46,7 @@ Release 2.4</div></td>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2012-12-07</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-01-28</font></p>
 <a id="CDEIBJCE" name="CDEIBJCE"></a><a id="OTLCG94339" name="OTLCG94339"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">About Cache Coordination</font></h1>
@@ -71,7 +71,7 @@ Release 2.4</div></td>
 <div class="figure"><a id="CDEIJFHB" name="CDEIJFHB"></a><a id="OTLCG94340" name="OTLCG94340"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 9-3 Coordinated Session Caches</font></em></strong></p>
 <img src="img/cachcord.gif" alt="Description of Figure 9-3 follows" title="Description of Figure 9-3 follows" longdesc="img_text/cachcord.htm" /><br />
-<a id="sthref70" name="sthref70" href="img_text/cachcord.htm">Description of "Figure 9-3 Coordinated Session Caches"</a><br />
+<a id="sthref69" name="sthref69" href="img_text/cachcord.htm">Description of "Figure 9-3 Coordinated Session Caches"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p>When sessions are distributed, that is, when an application contains multiple sessions (in the same JVM, in multiple JVMs, possibly on different servers), as long as the servers hosting the sessions are interconnected on the network, sessions can participate in cache coordination. Coordinated cache types that require discovery services also require the servers to support User Datagram Protocol (UDP) communication and multicast configuration. For more information, see <a href="#CDEGAJJB">Coordinated Cache Architecture.</a></p>
@@ -193,7 +193,7 @@ Release 2.4</div></td>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Coordinated Cache and Clustering</font></h2>
 <p>An application cluster is a set of middle tier server machines or VMs servicing requests for a single application, or set of applications. Multiple servers are used to increase the scalability of the application and/or to provide fault tolerance and high availability. Typically the same application will be deployed to all of the servers in the cluster and application requests will be load balanced across the set of servers. The application cluster will access a single database, or a database cluster. An application cluster may allow new servers to be added to increase scalability, and for servers to be removed such as for updates and servicing.</p>
 <p>Application clusters can consist of Java EE servers, Web containers, or Java server applications.</p>
-<p>EclipseLink can function in any clustered environment. The main issue in a clustered environment is utilizing a shared persistence unit (L2) cache. If you are using a shared cache (enabled by default in EclipseLink), then each server will maintain its own cache, and each caches data can get out of sync with the other servers and the database.</p>
+<p>EclipseLink can function in any clustered environment. The main issue in a clustered environment is utilizing a shared persistence unit (L2) cache. If you are using a shared cache (enabled by default in EclipseLink projects), then each server will maintain its own cache, and each caches data can get out of sync with the other servers and the database.</p>
 <p>EclipseLink provides cache coordination in a clustered environment to ensure the servers caches are is sync.</p>
 <p>There are also many other solutions to caching in a clustered environment, including:</p>
 <ul>

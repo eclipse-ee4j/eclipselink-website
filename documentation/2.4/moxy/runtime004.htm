@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Using MetadataSource | EclipseLink 2.4.x EclipseLink MOXy</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-11-08T9:7:19Z" />
+<meta name="date" content="2013-01-28T9:11:26Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Using MetadataSource" />
 <meta name="relnum" content="Release 2.4" />
@@ -45,10 +45,11 @@ Release 2.4</div></td>
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header --><a id="CACDDJHJ" name="CACDDJHJ"></a>
+<div class="ind"><!-- End Header --><a id="CACDDJHJ" name="CACDDJHJ"></a><a id="TLJAX156" name="TLJAX156"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Using MetadataSource</font></h1>
 <p>The <code>MetadataSource</code>, introduced in EclipseLink 2.3, is responsible for serving up EclipseLink metadata. This allows you to store mapping information outside of your application and have it retrieved when the application's <code>JAXBContext</code> is being created or refreshed.</p>
+<a id="TLJAX157" name="TLJAX157"></a>
 <div class="sect2"><a id="sthref33" name="sthref33"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Implementing a MetadataSource</font></h2>
 <p>To implement your own <code>MetadataSource</code>, you can:</p>
@@ -61,7 +62,7 @@ Release 2.4</div></td>
 </li>
 </ul>
 <p>In either case, you will be responsible for implementing the following method:</p>
-<div class="example"><a id="sthref34" name="sthref34"></a>
+<div class="example"><a id="TLJAX158" name="TLJAX158"></a><a id="sthref34" name="sthref34"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-20 Implementing the XMlBindings Method</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 /**
@@ -75,10 +76,11 @@ XmlBindings getXmlBindings(Map&lt;String, ?&gt; properties, ClassLoader classLoa
 </pre></div>
 <!-- class="example" --></div>
 <!-- class="sect2" -->
+<a id="TLJAX159" name="TLJAX159"></a>
 <div class="sect2"><a id="sthref35" name="sthref35"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Using an XmlBindings Object</font></h2>
 <p>Internally, EclipseLink metadata is stored in an <code>XmlBindings</code> object, which itself is mapped with JAXB. This means that you can actually use a JAXB unmarshaller to read external metadata and create an <code>XmlBindings</code> from it:</p>
-<div class="example"><a id="sthref36" name="sthref36"></a>
+<div class="example"><a id="TLJAX160" name="TLJAX160"></a><a id="sthref36" name="sthref36"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-21 Sample XmlBindings Object</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
@@ -91,10 +93,11 @@ XmlBindings bindings = (XmlBindings) xmlBindingsContext.createUnmarshaller().unm
 </pre></div>
 <!-- class="example" --></div>
 <!-- class="sect2" -->
+<a id="TLJAX161" name="TLJAX161"></a>
 <div class="sect2"><a id="sthref37" name="sthref37"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Specifying the MetadataSource</font></h2>
 <p>To use a <code>MetadataSource</code> in creating a <code>JAXBContext</code>, add it to the properties map with the key <code>JAXBContextProperties.OXM_METADATA_SOURCE</code>:</p>
-<div class="example"><a id="sthref38" name="sthref38"></a>
+<div class="example"><a id="TLJAX162" name="TLJAX162"></a><a id="sthref38" name="sthref38"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-22 Adding MetadataSource to the Properties Map</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 MetadataSource metadataSource = new MyMetadataSource();
@@ -106,10 +109,11 @@ JAXBContext jc = JAXBContext.newInstance(new Class[] { Customer.class }, propert
 </pre></div>
 <!-- class="example" --></div>
 <!-- class="sect2" -->
+<a id="TLJAX163" name="TLJAX163"></a>
 <div class="sect2"><a id="sthref39" name="sthref39"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">MetadataSource Example</font></h2>
 <p>The following example creates an <code>XmlBindings</code> object by unmarshalling from a URL:</p>
-<div class="example"><a id="sthref40" name="sthref40"></a>
+<div class="example"><a id="TLJAX164" name="TLJAX164"></a><a id="sthref40" name="sthref40"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-23 Sample XmlBindings Object</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
@@ -153,10 +157,11 @@ public class MyMetadataSource extends MetadataSourceAdapter {
 </pre></div>
 <!-- class="example" --></div>
 <!-- class="sect2" -->
+<a id="TLJAX165" name="TLJAX165"></a>
 <div class="sect2"><a id="sthref41" name="sthref41"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Building XmlBindings Programatically</font></h2>
 <p>You also have the option of building your own <code>XmlBindings</code> object from scratch in code. The example below modifies the <code>pCode</code> field of the <strong>Address</strong> class to use a locale-specific name:</p>
-<div class="example"><a id="sthref42" name="sthref42"></a>
+<div class="example"><a id="TLJAX166" name="TLJAX166"></a><a id="sthref42" name="sthref42"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-24 Sample XmlBindings Object</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;

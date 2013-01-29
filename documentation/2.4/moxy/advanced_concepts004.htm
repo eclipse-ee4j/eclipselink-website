@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Using Extensible MOXy | EclipseLink 2.4.x EclipseLink MOXy</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-11-08T9:7:21Z" />
+<meta name="date" content="2013-01-28T9:11:28Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Using Extensible MOXy" />
 <meta name="relnum" content="Release 2.4" />
@@ -45,16 +45,17 @@ Release 2.4</div></td>
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header --><a id="CHDIHFEE" name="CHDIHFEE"></a>
+<div class="ind"><!-- End Header --><a id="CHDIHFEE" name="CHDIHFEE"></a><a id="TLJAX393" name="TLJAX393"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Using Extensible MOXy</font></h1>
 <p>In a multi-tenant architecture, a single application runs on a server serving multiple client organizations (tenants). Good multi-tenant applications allow per-tenant customizations. When these customizations are made to data, it can be difficult for the binding layer to handle them.</p>
 <p>JAXB is designed to work with domain models that have <em>real</em> fields and properties. EclipseLink MOXy virtual properties provide a way to extend a class without modifying the source.</p>
+<a id="TLJAX394" name="TLJAX394"></a>
 <div class="sect2"><a id="sthref155" name="sthref155"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Using the @XmlVirtualAccessMethods Annotation</font></h2>
 <p>The <code>@XmlVirtualAccessMethods</code> annotation is used to specify that a class is extensible. An extensible class is required to have a <code>get</code> method that returns a value by property name, and a <code>set</code> method that stores a value by property name. The default names for these methods are <code>get</code> and <code>set</code>, and can be overridden with the <code>@XmlVirtualAccessMethods</code> annotation.</p>
 <p>Since we will have multiple extensible classes in this example, we'll configure a base class for this behavior that extensible classes can extend. We will use the <code>@XmlTransient</code> annotation to prevent <code>ExtensibleBase</code> from being mapped as an inheritance relationship. The <em>real</em> properties represent the parts of the model that will be common to all tenants. The per-tenant extensions will be represented as <em>virtual</em> properties.</p>
-<div class="example"><a id="sthref156" name="sthref156"></a>
+<div class="example"><a id="TLJAX395" name="TLJAX395"></a><a id="sthref156" name="sthref156"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-16 Sample ExtensibleBase</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package examples.virtual;
@@ -83,7 +84,7 @@ public class ExtensibleBase {
  
 </pre></div>
 <!-- class="example" -->
-<div class="example"><a id="sthref157" name="sthref157"></a>
+<div class="example"><a id="TLJAX396" name="TLJAX396"></a><a id="sthref157" name="sthref157"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-17 Customer</font></em></strong></p>
 <p>The <strong>Customer</strong> class will be extensible since it inherits from a domain class that has been annotated with <code>@XmlVirtualAccessMethods</code>.</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -126,7 +127,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  
 </pre></div>
 <!-- class="example" -->
-<div class="example"><a id="sthref158" name="sthref158"></a>
+<div class="example"><a id="TLJAX397" name="TLJAX397"></a><a id="sthref158" name="sthref158"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-18 Address</font></em></strong></p>
 <p>It is not necessary to have every class in your model be extensible. In this example the <strong>Address</strong> class will not have any virtual properties.</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -148,7 +149,7 @@ public class <strong>Address</strong> {
  
 </pre></div>
 <!-- class="example" -->
-<div class="example"><a id="sthref159" name="sthref159"></a>
+<div class="example"><a id="TLJAX398" name="TLJAX398"></a><a id="sthref159" name="sthref159"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-19 PhoneNumber</font></em></strong></p>
 <p>Like <strong>Customer</strong>, <strong>PhoneNumber</strong> will be an extensible class.</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -174,6 +175,7 @@ import javax.xml.bind.annotation.XmlValue;
 </pre></div>
 <!-- class="example" --></div>
 <!-- class="sect2" -->
+<a id="TLJAX399" name="TLJAX399"></a>
 <div class="sect2"><a id="sthref160" name="sthref160"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Creating Tenant 1</font></h2>
 <p>The first tenant is an online sporting goods store that requires the following extensions to the model:</p>
@@ -196,7 +198,7 @@ import javax.xml.bind.annotation.XmlValue;
 </ul>
 <p>The metadata for the virtual properties is supplied through MOXy's XML mapping file. Virtual properties are mapped in the same way as real properties. Some additional information is required including type (since this cannot be determined via reflection), and for collection properties a container type.</p>
 <p>The virtual properties defined in <a href="#CHDFBEGH">Example 8-20</a> for <strong>Customer</strong> are: <strong>middleName</strong>, <strong>shippingAddress</strong>, and <strong>phoneNumbers</strong>. For <strong>PhoneNumber</strong> the virtual property is the <code>type</code> property.</p>
-<div class="example"><a id="CHDFBEGH" name="CHDFBEGH"></a>
+<div class="example"><a id="CHDFBEGH" name="CHDFBEGH"></a><a id="TLJAX400" name="TLJAX400"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-20 binding-tenant1.xml</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0"?&gt;
@@ -279,7 +281,7 @@ marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 marshaller.marshal(customer, System.out);
  
 </pre>
-<div class="example"><a id="sthref161" name="sthref161"></a>
+<div class="example"><a id="TLJAX401" name="TLJAX401"></a><a id="sthref161" name="sthref161"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-21 Output</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -299,11 +301,12 @@ marshaller.marshal(customer, System.out);
 </pre></div>
 <!-- class="example" --></div>
 <!-- class="sect2" -->
+<a id="TLJAX402" name="TLJAX402"></a>
 <div class="sect2"><a id="sthref162" name="sthref162"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Creating Tenant 2</font></h2>
 <p>The second tenant is a streaming media provider that offers on-demand movies and music to it's subscribers. It requires a different set of extensions to the core model: a single contact phone number</p>
 <p>For this tenant we will also leverage the mapping file to customize the mapping of the real properties, as shown in <a href="#CHDIFJGA">Example 8-22</a>:</p>
-<div class="example"><a id="CHDIFJGA" name="CHDIFJGA"></a>
+<div class="example"><a id="CHDIFJGA" name="CHDIFJGA"></a><a id="TLJAX403" name="TLJAX403"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-22 binding-tenant2.xml</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0"?&gt;
@@ -349,7 +352,7 @@ Marshaller marshaller = jc.createMarshaller();
 marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 marshaller.marshal(customer, System.out);
 </pre>
-<div class="example"><a id="sthref163" name="sthref163"></a>
+<div class="example"><a id="TLJAX404" name="TLJAX404"></a><a id="sthref163" name="sthref163"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-23 Output</font></em></strong></p>
 <p>Note that even though both tenants share several real properties, the corresponding XML representation can be quite different due to virtual properties:</p>
 <pre xml:space="preserve" class="oac_no_warn">

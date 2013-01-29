@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>What You Need to Know First | EclipseLink 2.5.x Understanding EclipseLink</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
+<meta name="date" content="2013-01-28T11:35:47Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="What You Need to Know First" />
+<meta name="relnum" content="Release 2.4" />
+<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="intro001.htm" title="Previous" type="text/html" />
+<link rel="next" href="sect1test.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:enkkfjmsqju', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><b>EclipseLink Solutions Guide for EclipseLink</b><br />
+Release 2.5</div></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="intro001.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="sect1test.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header -->
+<p align="center"><font color="#FF0000">Beta Draft: 2013-01-28</font></p>
+<a id="TLADG109" name="TLADG109"></a>
+<div class="sect1"><a id="sthref9" name="sthref9"></a>
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">What You Need to Know First</font></h1>
+<p>To make good use of this guide, you should already be familiar with the following:</p>
+<ul>
+<li>
+<p>The concepts and programming practices of the Java SE platform and the Java EE platform. In the current release, EclipseLink supports Java EE 6. For more information, see the following.</p>
+<p><strong>Java</strong></p>
+<ul>
+<li>
+<p>Java home page: <code><a href="http://www.oracle.com/us/technologies/java/index.html">http://www.oracle.com/us/technologies/java/index.html</a></code></p>
+</li>
+<li>
+<p>Java EE 5 Tutorial: <code><a href="http://download.oracle.com/javaee/5/tutorial/doc/bnbpy.html">http://download.oracle.com/javaee/5/tutorial/doc/bnbpy.html</a></code></p>
+</li>
+<li>
+<p>Java EE 6 Tutorial: <code><a href="http://download.oracle.com/javaee/6/tutorial/doc/bnbpy.html">http://download.oracle.com/javaee/6/tutorial/doc/bnbpy.html</a></code></p>
+</li>
+<li>
+<p>Any of the thousands of books and websites devoted to Java.</p>
+</li>
+</ul>
+<p><strong>Eclipse Integrated Development Environment</strong></p>
+<ul>
+<li>
+<p>Eclipse IDE: <code><a href="http://www.eclipse.org/">http://www.eclipse.org/</a></code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>EclipseLink from the Eclipse Foundation</p>
+<ul>
+<li>
+<p>EclipseLink project home: <code><a href="http://wiki.eclipse.org/EclipseLink">http://wiki.eclipse.org/EclipseLink</a></code></p>
+</li>
+<li>
+<p>EclipseLink Documentation Center: <code><a href="http://wiki.eclipse.org/EclipseLink/Documentation_Center">http://wiki.eclipse.org/EclipseLink/Documentation_Center</a></code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>If you are working with EclipseLink JPA, you should be familiar with the concepts and programming practices of JPA 2.1, as specified in the <em>Java Persistence API, Version 2.1</em> specification at <code><a href="http://jcp.org/en/jsr/detail?id=338">http://jcp.org/en/jsr/detail?id=338</a></code>.</p>
+</li>
+<li>
+<p>If you are working with EclipseLink JAXB, you should be familiar with the concepts and programming practices of JAXB 2.0, as specified in the <em>The Java Architecture for XML Binding (JAXB) 2.0</em> specification at <code><a href="http://jcp.org/en/jsr/detail?id=222">http://jcp.org/en/jsr/detail?id=222</a></code>.</p>
+</li>
+<li>
+<p>If you are using JSON data-interchange format, you should be familiar with the concepts and programming practices of JSON, as described at <code><a href="http://www.json.org/">http://www.json.org/</a></code>. For XML, see <code><a href="http://www.w3.org/XML/">http://www.w3.org/XML/</a></code></p>
+</li>
+<li>
+<p>If you are working with EclipseLink MOXy, you should be familiar with the concepts and programming practices of JAXB 2.0, as specified in the <em>The Java Architecture for XML Binding (JAXB) 2.0</em> specification at <code><a href="http://jcp.org/en/jsr/detail?id=222">http://jcp.org/en/jsr/detail?id=222</a></code>. If you are using the JavaScript Object Notation (JSON) data-interchange format, you should be familiar with the concepts and programming practices of JSON, as described at <code><a href="http://www.json.org/">http://www.json.org/</a></code>. For XML, see <code><a href="http://www.w3.org/XML/">http://www.w3.org/XML/</a></code></p>
+</li>
+<li>
+<p>If you are working with EclipseLink DBWS, you should be familiar with the concepts and programming practices of JAX-WS 2.0, as specified in the Java <em>API for XML-Based Web Services (JAX-WS) 2.0</em> specification at <code><a href="http://jcp.org/en/jsr/detail?id=224">http://jcp.org/en/jsr/detail?id=224</a></code>.</p>
+</li>
+<li>
+<p>If you are working with REpresentational State Transfer (REST) service, you should be familiar with concepts and programming practices of REST, as specified in "JSR 311: JAX-RS: The JavaTM API for RESTful Web Services" at <code><a href="http://jcp.org/en/jsr/detail?id=311">http://jcp.org/en/jsr/detail?id=311</a></code>.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="intro001.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="sect1test.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+                
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
+</html>

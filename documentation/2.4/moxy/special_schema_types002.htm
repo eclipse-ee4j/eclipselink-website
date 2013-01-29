@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Mapping to a Union Field | EclipseLink 2.4.x EclipseLink MOXy</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-11-08T9:7:20Z" />
+<meta name="date" content="2013-01-28T9:11:27Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Mapping to a Union Field" />
 <meta name="relnum" content="Release 2.4" />
@@ -45,11 +45,11 @@ Release 2.4</div></td>
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header --><a id="BABFFEHF" name="BABFFEHF"></a>
+<div class="ind"><!-- End Header --><a id="BABFFEHF" name="BABFFEHF"></a><a id="TLJAX298" name="TLJAX298"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Mapping to a Union Field</font></h1>
 <p>The following XML schema and class diagram show a typical use of an XML Schema Union:</p>
-<div class="example"><a id="sthref93" name="sthref93"></a>
+<div class="example"><a id="TLJAX299" name="TLJAX299"></a><a id="sthref93" name="sthref93"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-4 XML Schema Union</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -67,21 +67,21 @@ Release 2.4</div></td>
  
 </pre></div>
 <!-- class="example" -->
-<div class="figure"><a id="sthref94" name="sthref94"></a>
+<div class="figure"><a id="TLJAX300" name="TLJAX300"></a><a id="sthref94" name="sthref94"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 5-1 Mapping to a Union Field</font></em></strong></p>
 <img src="img/dxmuc.gif" alt="Mapping to a Union Field" title="Mapping to a Union Field" longdesc="img_text/dxmuc.htm" /><br />
 <a id="sthref95" name="sthref95" href="img_text/dxmuc.htm">Description of "Figure 5-1 Mapping to a Union Field"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p><a href="#BABDEIDD">Figure 5-2</a> illustrates a mapping to a union field in an XML document that conforms to the example schema. When EclipseLink unmarshalls the XML document, it tries each of the union types until it can make a successful conversion. The first schema type in the union is <code>xsd:decimal</code>. Because <strong>10.5</strong> is a valid decimal, EclipseLink converts the value to the appropriate type.</p>
-<div class="figure"><a id="BABDEIDD" name="BABDEIDD"></a>
+<div class="figure"><a id="BABDEIDD" name="BABDEIDD"></a><a id="TLJAX301" name="TLJAX301"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 5-2 Mapping to a Union Field in an XML Document</font></em></strong></p>
 <img src="img/dxmuv.gif" alt="Mapping to a Union Field in an XML Document" title="Mapping to a Union Field in an XML Document" longdesc="img_text/dxmuv.htm" /><br />
 <a id="sthref96" name="sthref96" href="img_text/dxmuv.htm">Description of "Figure 5-2 Mapping to a Union Field in an XML Document"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p>In <a href="#BABFGEDJ">Figure 5-3</a>, the value <strong>M</strong> is <em>not</em> a valid <code>xsd:decimal</code> type, so the next union type is tried, <code>xsd:string</code>.</p>
-<div class="figure"><a id="BABFGEDJ" name="BABFGEDJ"></a>
+<div class="figure"><a id="BABFGEDJ" name="BABFGEDJ"></a><a id="TLJAX302" name="TLJAX302"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 5-3 Mapping to a Union Field</font></em></strong></p>
 <img src="img/dxmuvs.gif" alt="Mapping to a Union Field" title="Mapping to a Union Field" longdesc="img_text/dxmuvs.htm" /><br />
 <a id="sthref97" name="sthref97" href="img_text/dxmuvs.htm">Description of "Figure 5-3 Mapping to a Union Field"</a><br />
@@ -89,7 +89,7 @@ Release 2.4</div></td>
 <!-- class="figure" -->
 <p>Currently, EclipseLink does not support the mapping of Unions using Annotations or OXM Metadata. However, an EclipseLink XML Customizer can be used to create the mapping.</p>
 <p>First, we annotate the <code>shoeSize</code> attribute with <code>@XmlTransient</code>, to avoid automatically generating a mapping for it. We also include an <code>@XmlCustomizer</code> annotation; the <code>CustomerCustomizer</code> class will create the Union mapping in code.</p>
-<div class="example"><a id="sthref98" name="sthref98"></a>
+<div class="example"><a id="TLJAX303" name="TLJAX303"></a><a id="sthref98" name="sthref98"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-5 Using an EclipseLink Customizer</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
@@ -110,7 +110,7 @@ public class Customer {
 </pre></div>
 <!-- class="example" -->
 <p>The <code>CustomerCustomizer</code> class can be used to manually add a mapping to the <code>shoeSize</code> attribute. In <a href="#CHDEDAIJ">Example 5-6</a>, an <code>XMLUnionField</code> is configured on the mapping, and the possible Union member types are added by calling <code>addSchemaType()</code>:</p>
-<div class="example"><a id="CHDEDAIJ" name="CHDEDAIJ"></a>
+<div class="example"><a id="CHDEDAIJ" name="CHDEDAIJ"></a><a id="TLJAX304" name="TLJAX304"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-6 Mapping a Union Field</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
@@ -140,6 +140,7 @@ public class CustomerCustomizer implements DescriptorCustomizer {
  
 </pre></div>
 <!-- class="example" -->
+<a id="TLJAX305" name="TLJAX305"></a>
 <div class="sect2"><a id="sthref99" name="sthref99"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Understanding Conversion Order</font></h2>
 <p>The order of the calls to <code>addSchemaType()</code> is important; when converting an XML value into Java, EclipseLink will attempt the conversions in the order that they were added to the field, and return as soon as a successful conversion is made. For example, when unmarshalling a <code>shoeSize</code> of <strong>10.5</strong>:</p>
@@ -161,6 +162,7 @@ shoeSizeField.addSchemaType(XMLConstants.DECIMAL_QNAME);
 <p>The shoeSize value will be a <code>String</code> <strong>("10.5")</strong>.</p>
 </div>
 <!-- class="sect2" -->
+<a id="TLJAX306" name="TLJAX306"></a>
 <div class="sect2"><a id="sthref100" name="sthref100"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Customizing Conversion Classes</font></h2>
 <p>EclipseLink uses a set of default conversions to create a value for the Java attribute (in this case, <code>xsd:decimal</code> will be converted into a <code>BigDecimal</code>). You can override this behavior in Java code using the XMLUnionField method addConversion. For example, if you want your Java object to store <code>shoeSize</code> as a <code>Float</code>:</p>

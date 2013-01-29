@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>HTTP Request Reference for JPA-RS | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-15T10:52:27Z" />
+<meta name="date" content="2013-01-28T11:31:59Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="HTTP Request Reference for JPA-RS" />
 <meta name="relnum" content="Release 2.4" />
@@ -45,9 +45,7 @@ Release 2.4</div></td>
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-01-15</font></p>
-<a id="CHDEGJIG" name="CHDEGJIG"></a><a id="TLADG1172" name="TLADG1172"></a>
+<div class="ind"><!-- End Header --><a id="CHDEGJIG" name="CHDEGJIG"></a><a id="TLADG1172" name="TLADG1172"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">HTTP Request Reference for JPA-RS</font></h1>
 <p>The following types of RESTful operations can be used with JPA via HTTP when using JPA-RS.</p>
@@ -96,7 +94,7 @@ Release 2.4</div></td>
 <a id="CHDEBJID" name="CHDEBJID"></a><a id="TLADG1174" name="TLADG1174"></a>
 <hr />
 <h2 class="refsect2"><font face="arial, helvetica, sans-serif" color="#330099">FIND</font></h2>
-<a id="sthref169" name="sthref169"></a>
+<a id="sthref158" name="sthref158"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">HTTP Request Syntax</font></strong></p>
 <p><code>GET /persistence/{unit-name}/entity/{type}/{id}</code> <em><code>hints</code></em></p>
 <p>where:</p>
@@ -108,13 +106,13 @@ Release 2.4</div></td>
 <p><em><code>hints</code></em> are specified using HTTP query parameters, with the key being the name of the EclipseLink query hint</p>
 </li>
 </ul>
-<a id="sthref170" name="sthref170"></a>
+<a id="sthref159" name="sthref159"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Example</font></strong></p>
 <p><code>GET http://localhost:8080/persistence/ExamplePU/entity/Foo/1</code></p>
-<a id="sthref171" name="sthref171"></a>
+<a id="sthref160" name="sthref160"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Produces</font></strong></p>
 <p>JSON or XML</p>
-<a id="sthref172" name="sthref172"></a>
+<a id="sthref161" name="sthref161"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Response</font></strong></p>
 <ul>
 <li>
@@ -124,7 +122,7 @@ Release 2.4</div></td>
 <p><code>NOT_FOUND</code> if the entity does not exist</p>
 </li>
 </ul>
-<a id="sthref173" name="sthref173"></a>
+<a id="sthref162" name="sthref162"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>The <code>EntityManager.find</code> API is as follows:</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -132,19 +130,19 @@ public &lt;T&gt; T find(Class&lt;T&gt; entityClass, Object primaryKey);
 public &lt;T&gt; T find(Class&lt;T&gt; entityClass, Object primaryKey, Map&lt;String, Object&gt; properties);
 </pre>
 <p>Hints specified in the request are put into the <code>properties</code>. For example, see below.</p>
-<a id="sthref174" name="sthref174"></a>
+<a id="sthref163" name="sthref163"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Composite Keys</font></strong></p>
 <p>Composite keys are supported. The <code>+</code> character is reserved and therefore cannot be used in fields that represent keys. Composite keys are separated using the <code>+</code> character and should be specified in an order corresponding to the Java default sorting of the attribute names.</p>
 <p>For example, consider an entity <code>Phone</code>, with attributes <code>extB</code>=<code>123</code> and <code>extA</code>=<code>321</code>. The URL to find the entity is:</p>
 <p><code>http://localhost:8080/persistence/ExamplePU/entity/Phone/321+123</code></p>
 <p>The <code>321</code> comes before the <code>123</code> because <code>extA</code> comes before <code>extB</code> when sorted in Java.</p>
-<a id="sthref175" name="sthref175"></a>
+<a id="sthref164" name="sthref164"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Result Caching</font></strong></p>
 <p>Default EclipseLink and HTTP caching is enabled and configured through standard means.</p>
 <a id="CHDJGEFH" name="CHDJGEFH"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Refresh</font></strong></p>
 <p>The <code>EntityManager.refresh</code> operation can be invoked using the <code>find</code> with the query hint for <code>Refresh</code>.</p>
-<a id="sthref176" name="sthref176"></a>
+<a id="sthref165" name="sthref165"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Attributes</font></strong></p>
 <p>Navigating into the attributes of an entity (for example, to get the <code>Address</code> entity associated with an employee in a single URL) is supported to one level, for example:</p>
 <p><code>/persistence/{unit-name}/entity/{type}/{id}/{relationship}</code> will work</p>
@@ -153,60 +151,60 @@ public &lt;T&gt; T find(Class&lt;T&gt; entityClass, Object primaryKey, Map&lt;St
 <a id="CHDCIIIG" name="CHDCIIIG"></a><a id="TLADG1175" name="TLADG1175"></a>
 <hr />
 <h2 class="refsect2"><font face="arial, helvetica, sans-serif" color="#330099">PERSIST</font></h2>
-<a id="sthref177" name="sthref177"></a>
+<a id="sthref166" name="sthref166"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">HTTP Request Syntax</font></strong></p>
 <p><code>PUT /persistence/{unit-name}/entity/{type}</code></p>
-<a id="sthref178" name="sthref178"></a>
+<a id="sthref167" name="sthref167"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Example</font></strong></p>
 <p><code>PUT http://localhost:8080/persistence/ExamplePU/entity/Foo</code></p>
-<a id="sthref179" name="sthref179"></a>
+<a id="sthref168" name="sthref168"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Consumes</font></strong></p>
 <p>JSON or XML</p>
-<a id="sthref180" name="sthref180"></a>
+<a id="sthref169" name="sthref169"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Payload</font></strong></p>
 <p>Entity</p>
-<a id="sthref181" name="sthref181"></a>
+<a id="sthref170" name="sthref170"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Produces</font></strong></p>
 <p>JSON or XML</p>
-<a id="sthref182" name="sthref182"></a>
+<a id="sthref171" name="sthref171"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Response</font></strong></p>
 <p>Payload containing the entity returned by the persist operation</p>
-<a id="sthref183" name="sthref183"></a>
+<a id="sthref172" name="sthref172"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p><code>PUT</code> is required to be itempotent. As a result, it will fail if called with an object that expects the server to provide an ID field. Typically this will occur if the metadata specifies a generated key and the field that contains that key is unpopulated.</p>
 <a id="CHDGJGDD" name="CHDGJGDD"></a><a id="TLADG1176" name="TLADG1176"></a>
 <hr />
 <h2 class="refsect2"><font face="arial, helvetica, sans-serif" color="#330099">MERGE</font></h2>
-<a id="sthref184" name="sthref184"></a>
+<a id="sthref173" name="sthref173"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">HTTP Request Syntax</font></strong></p>
 <p><code>POST /persistence/{unit-name}/entity/{type}</code></p>
-<a id="sthref185" name="sthref185"></a>
+<a id="sthref174" name="sthref174"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Example</font></strong></p>
 <p><code>POST http://localhost:8080/persistence/ExamplePU/entity/Foo</code></p>
-<a id="sthref186" name="sthref186"></a>
+<a id="sthref175" name="sthref175"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Consumes</font></strong></p>
 <p>JSON or XML</p>
-<a id="sthref187" name="sthref187"></a>
+<a id="sthref176" name="sthref176"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Payload</font></strong></p>
 <p>Entity</p>
-<a id="sthref188" name="sthref188"></a>
+<a id="sthref177" name="sthref177"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Produces</font></strong></p>
 <p>JSON or XML</p>
-<a id="sthref189" name="sthref189"></a>
+<a id="sthref178" name="sthref178"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Response</font></strong></p>
 <p>Payload containing the entity returned by the merge operation.</p>
 <p>Merge takes an object graph and makes it part of the persistence context through comparison. It compares the object and all related objects to the ones that already exist and issues <code>INSERT</code>s, <code>UPDATE</code>s, and <code>DELETE</code>s to put the object in the persistence context.</p>
 <a id="CHDDDDAB" name="CHDDDDAB"></a><a id="TLADG1177" name="TLADG1177"></a>
 <hr />
 <h2 class="refsect2"><font face="arial, helvetica, sans-serif" color="#330099">DELETE</font></h2>
-<a id="sthref190" name="sthref190"></a>
+<a id="sthref179" name="sthref179"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">HTTP Request Syntax</font></strong></p>
 <p><code>DELETE /persistence/{unit-name}/entity/{type}{id}</code></p>
 <p>where <code>{id}</code> is defined using HTTP query parameters</p>
-<a id="sthref191" name="sthref191"></a>
+<a id="sthref180" name="sthref180"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Example</font></strong></p>
 <p><code>DELETE http://localhost:8080/persistence/ExamplePU/entity/Foo?id=1</code></p>
-<a id="sthref192" name="sthref192"></a>
+<a id="sthref181" name="sthref181"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Response</font></strong></p>
 <p><code>OK</code></p>
 </div>
@@ -233,7 +231,7 @@ public &lt;T&gt; T find(Class&lt;T&gt; entityClass, Object primaryKey, Map&lt;St
 <hr />
 <h2 class="refsect2"><font face="arial, helvetica, sans-serif" color="#330099">READ</font></h2>
 <p>Use this operation to get the values of a relationship.</p>
-<a id="sthref193" name="sthref193"></a>
+<a id="sthref182" name="sthref182"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">HTTP Request Syntax</font></strong></p>
 <p><code>GET /persistence/{unit-name}/entity/{type}/{id}/{relationship}</code></p>
 <p>where:</p>
@@ -245,13 +243,13 @@ public &lt;T&gt; T find(Class&lt;T&gt; entityClass, Object primaryKey, Map&lt;St
 <p><code>{relationship}</code> is the JPA name of the relationship.</p>
 </li>
 </ul>
-<a id="sthref194" name="sthref194"></a>
+<a id="sthref183" name="sthref183"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Example</font></strong></p>
 <p><code>GET http://localhost:8080/persistence/ExamplePU/entity/Foo/1/myRelationship</code></p>
-<a id="sthref195" name="sthref195"></a>
+<a id="sthref184" name="sthref184"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Produces</font></strong></p>
 <p>JSON or XML</p>
-<a id="sthref196" name="sthref196"></a>
+<a id="sthref185" name="sthref185"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Response</font></strong></p>
 <ul>
 <li>
@@ -265,19 +263,19 @@ public &lt;T&gt; T find(Class&lt;T&gt; entityClass, Object primaryKey, Map&lt;St
 <hr />
 <h2 class="refsect2"><font face="arial, helvetica, sans-serif" color="#330099">ADD</font></h2>
 <p>Use this operation to add to a list or replace the value of an x-1 relationship.</p>
-<a id="sthref197" name="sthref197"></a>
+<a id="sthref186" name="sthref186"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">HTTP Request Syntax</font></strong></p>
 <p><code>POST /persistence/{unit-name}/entity/{type}/{id}/{relationship}{partner}</code></p>
-<a id="sthref198" name="sthref198"></a>
+<a id="sthref187" name="sthref187"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p>For unidirectional relationships, <code>{partner}</code> is not required, for example:</p>
 <p><code>POST http://localhost:8080/persistence/ExamplePU/entity/Foo/1/myRelationship</code></p>
 <p>For bi-directional relationships, you must provide the name of the attribute that makes up the opposite side of the relationship. For example, to update an <code>Auction.bid</code> where the opposite side of the relationship is <code>Bid.auction</code>, use the following:</p>
 <p><code>POST http://localhost:8080/persistence/ExamplePU/entity/Foo/1/myRelationship;partner=bid</code></p>
-<a id="sthref199" name="sthref199"></a>
+<a id="sthref188" name="sthref188"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Consumes</font></strong></p>
 <p>JSON or XML</p>
-<a id="sthref200" name="sthref200"></a>
+<a id="sthref189" name="sthref189"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Payload</font></strong></p>
 <p>Entity with the new value.</p>
 <div align="center">
@@ -294,26 +292,26 @@ public &lt;T&gt; T find(Class&lt;T&gt; entityClass, Object primaryKey, Map&lt;St
 </table>
 <br /></div>
 <!-- class="inftblnote" --></div>
-<a id="sthref201" name="sthref201"></a>
+<a id="sthref190" name="sthref190"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Produces</font></strong></p>
 <p>JSON or XML</p>
-<a id="sthref202" name="sthref202"></a>
+<a id="sthref191" name="sthref191"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Response</font></strong></p>
 <p>Payload containing the entity with the added element</p>
 <a id="CHDDGAII" name="CHDDGAII"></a><a id="TLADG1181" name="TLADG1181"></a>
 <hr />
 <h2 class="refsect2"><font face="arial, helvetica, sans-serif" color="#330099">REMOVE</font></h2>
 <p>Use this operation to remove a specific entity from the list or a null on an x-1 relationship.</p>
-<a id="sthref203" name="sthref203"></a>
+<a id="sthref192" name="sthref192"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">HTTP Request Syntax</font></strong></p>
 <p><code>DELETE /persistence/{unit-name}/entity/{type}/{id}/{relationship}</code></p>
-<a id="sthref204" name="sthref204"></a>
+<a id="sthref193" name="sthref193"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Example</font></strong></p>
 <p><code>DELETE http://localhost:8080/persistence/ExamplePU/entity/Foo/1/myRelationship</code></p>
-<a id="sthref205" name="sthref205"></a>
+<a id="sthref194" name="sthref194"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Consumes</font></strong></p>
 <p>JSON or XML</p>
-<a id="sthref206" name="sthref206"></a>
+<a id="sthref195" name="sthref195"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Payload</font></strong></p>
 <p>The entity to be removed</p>
 <div align="center">
@@ -330,10 +328,10 @@ public &lt;T&gt; T find(Class&lt;T&gt; entityClass, Object primaryKey, Map&lt;St
 </table>
 <br /></div>
 <!-- class="inftblnote" --></div>
-<a id="sthref207" name="sthref207"></a>
+<a id="sthref196" name="sthref196"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Produces</font></strong></p>
 <p>JSON or XML</p>
-<a id="sthref208" name="sthref208"></a>
+<a id="sthref197" name="sthref197"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Response</font></strong></p>
 <ul>
 <li>
@@ -364,7 +362,7 @@ public &lt;T&gt; T find(Class&lt;T&gt; entityClass, Object primaryKey, Map&lt;St
 <a id="CHDBDEBE" name="CHDBDEBE"></a><a id="TLADG1183" name="TLADG1183"></a>
 <hr />
 <h2 class="refsect2"><font face="arial, helvetica, sans-serif" color="#330099">Query Returning List of Results</font></h2>
-<a id="sthref209" name="sthref209"></a>
+<a id="sthref198" name="sthref198"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">HTTP Request Syntax</font></strong></p>
 <p><code>GET /persistence/{unit-name}/query/{name}</code> <em><code>parameters</code></em> <em><code>hints</code></em></p>
 <p>where:</p>
@@ -376,20 +374,20 @@ public &lt;T&gt; T find(Class&lt;T&gt; entityClass, Object primaryKey, Map&lt;St
 <p><em><code>hints</code></em> are specified using HTTP query parameters and with the key being the name of the EclipseLink query hint</p>
 </li>
 </ul>
-<a id="sthref210" name="sthref210"></a>
+<a id="sthref199" name="sthref199"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><code>GET http://localhost:8080/persistence/ExamplePU/query/Foo.findByName;name=myname</code></p>
 <p><code>GET http://localhost:8080/persistence/ExamplePU/query/Foo.findByName;name=myname?eclipselink.jdbc.max-results=500</code></p>
-<a id="sthref211" name="sthref211"></a>
+<a id="sthref200" name="sthref200"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Produces</font></strong></p>
 <p>JSON or XML</p>
-<a id="sthref212" name="sthref212"></a>
+<a id="sthref201" name="sthref201"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Response</font></strong></p>
 <p>A payload containing a list of entities.</p>
 <a id="CHDIHEJJ" name="CHDIHEJJ"></a><a id="TLADG1184" name="TLADG1184"></a>
 <hr />
 <h2 class="refsect2"><font face="arial, helvetica, sans-serif" color="#330099">Update/Delete Query</font></h2>
-<a id="sthref213" name="sthref213"></a>
+<a id="sthref202" name="sthref202"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">HTTP Request Syntax</font></strong></p>
 <p><code>POST /persistence/{unit-name}/query/{name}</code> <em><code>parameters</code></em> <em><code>hints</code></em></p>
 <p>where:</p>
@@ -401,14 +399,14 @@ public &lt;T&gt; T find(Class&lt;T&gt; entityClass, Object primaryKey, Map&lt;St
 <p><em><code>hints</code></em> are specified using HTTP query parameters and with the key being the name of the EclipseLink query hint</p>
 </li>
 </ul>
-<a id="sthref214" name="sthref214"></a>
+<a id="sthref203" name="sthref203"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><code>POST http://localhost:8080/persistence/ExamplePU/query/Foo.deleteAllByName;name=myname</code></p>
 <p><code>POST http://localhost:8080/persistence/ExamplePU/query/Foo.updateName;name=myname?eclipselink.jdbc.max-results=500</code></p>
-<a id="sthref215" name="sthref215"></a>
+<a id="sthref204" name="sthref204"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Produces</font></strong></p>
 <p><code>application/octet-stream</code></p>
-<a id="sthref216" name="sthref216"></a>
+<a id="sthref205" name="sthref205"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Response</font></strong></p>
 <p>A payload containing the number of entities updated or deleted</p>
 </div>
@@ -417,7 +415,7 @@ public &lt;T&gt; T find(Class&lt;T&gt; entityClass, Object primaryKey, Map&lt;St
 <hr />
 <div class="refsect1">
 <h1 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">Single Result Queries</font></h1>
-<a id="sthref217" name="sthref217"></a>
+<a id="sthref206" name="sthref206"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">HTTP Request Syntax</font></strong></p>
 <p><code>GET /persistence/{unit-name}/querySingleResult/{name}</code> <em><code>parameters</code></em> <em><code>hints</code></em></p>
 <p>where:</p>
@@ -429,13 +427,13 @@ public &lt;T&gt; T find(Class&lt;T&gt; entityClass, Object primaryKey, Map&lt;St
 <p><em><code>hints</code></em> are specified using HTTP query parameters and with the key being the name of the EclipseLink query hint</p>
 </li>
 </ul>
-<a id="sthref218" name="sthref218"></a>
+<a id="sthref207" name="sthref207"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Example</font></strong></p>
 <p><code>GET http://localhost:8080/persistence/ExamplePU/querySingleResult/Foo.findByName;name=myname</code></p>
-<a id="sthref219" name="sthref219"></a>
+<a id="sthref208" name="sthref208"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Produces</font></strong></p>
 <p>JSON or XML</p>
-<a id="sthref220" name="sthref220"></a>
+<a id="sthref209" name="sthref209"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Response</font></strong></p>
 <p>A payload containing an entity</p>
 </div>
@@ -456,16 +454,16 @@ public &lt;T&gt; T find(Class&lt;T&gt; entityClass, Object primaryKey, Map&lt;St
 <a id="CHDCCFCI" name="CHDCCFCI"></a><a id="TLADG1187" name="TLADG1187"></a>
 <hr />
 <h2 class="refsect2"><font face="arial, helvetica, sans-serif" color="#330099">List Existing Persistence Units</font></h2>
-<a id="sthref221" name="sthref221"></a>
+<a id="sthref210" name="sthref210"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">HTTP Request Syntax</font></strong></p>
 <p><code>GET /persistence</code></p>
-<a id="sthref222" name="sthref222"></a>
+<a id="sthref211" name="sthref211"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Example</font></strong></p>
 <p><code>GET http://localhost:8080/persistence/</code></p>
-<a id="sthref223" name="sthref223"></a>
+<a id="sthref212" name="sthref212"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Produces</font></strong></p>
 <p>JSON</p>
-<a id="sthref224" name="sthref224"></a>
+<a id="sthref213" name="sthref213"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Response</font></strong></p>
 <p>A payload containing a list of persistence unit names and links to metadata about them. For example,</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -485,7 +483,7 @@ public &lt;T&gt; T find(Class&lt;T&gt; entityClass, Object primaryKey, Map&lt;St
 <a id="CHDIJEAE" name="CHDIJEAE"></a><a id="TLADG1188" name="TLADG1188"></a>
 <hr />
 <h2 class="refsect2"><font face="arial, helvetica, sans-serif" color="#330099">Call a Session Bean</font></h2>
-<a id="sthref225" name="sthref225"></a>
+<a id="sthref214" name="sthref214"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">HTTP Request Syntax</font></strong></p>
 <p><code>POST /persistence</code></p>
 <p>where the payload is a <code>SessionBeanCall</code> JSON or XML object containing the following information:</p>
@@ -525,7 +523,7 @@ public &lt;T&gt; T find(Class&lt;T&gt; entityClass, Object primaryKey, Map&lt;St
 </table>
 <br /></div>
 <!-- class="inftblnote" --></div>
-<a id="sthref226" name="sthref226"></a>
+<a id="sthref215" name="sthref215"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Produces</font></strong></p>
 <ul>
 <li>
@@ -535,7 +533,7 @@ public &lt;T&gt; T find(Class&lt;T&gt; entityClass, Object primaryKey, Map&lt;St
 <p>For queries that return single fields, returns the type associated with the field</p>
 </li>
 </ul>
-<a id="sthref227" name="sthref227"></a>
+<a id="sthref216" name="sthref216"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Response</font></strong></p>
 <ul>
 <li>
@@ -566,16 +564,16 @@ public &lt;T&gt; T find(Class&lt;T&gt; entityClass, Object primaryKey, Map&lt;St
 <a id="CHDGHGHB" name="CHDGHGHB"></a><a id="TLADG1190" name="TLADG1190"></a>
 <hr />
 <h2 class="refsect2"><font face="arial, helvetica, sans-serif" color="#330099">List Types in a Persistence Unit</font></h2>
-<a id="sthref228" name="sthref228"></a>
+<a id="sthref217" name="sthref217"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">HTTP Request Syntax</font></strong></p>
 <p><code>GET /persistence/{unit-name}/metadata</code></p>
-<a id="sthref229" name="sthref229"></a>
+<a id="sthref218" name="sthref218"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Example</font></strong></p>
 <p><code>GET http://localhost:8080/persistence/ExamplePU/metadata</code></p>
-<a id="sthref230" name="sthref230"></a>
+<a id="sthref219" name="sthref219"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Produces</font></strong></p>
 <p>JSON</p>
-<a id="sthref231" name="sthref231"></a>
+<a id="sthref220" name="sthref220"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Response</font></strong></p>
 <ul>
 <li>
@@ -610,16 +608,16 @@ public &lt;T&gt; T find(Class&lt;T&gt; entityClass, Object primaryKey, Map&lt;St
 <a id="CHDGEFIJ" name="CHDGEFIJ"></a><a id="TLADG1191" name="TLADG1191"></a>
 <hr />
 <h2 class="refsect2"><font face="arial, helvetica, sans-serif" color="#330099">List Queries in a Persistence Unit</font></h2>
-<a id="sthref232" name="sthref232"></a>
+<a id="sthref221" name="sthref221"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">HTTP Request Syntax</font></strong></p>
 <p><code>GET /persistence/{unit-name}/metadata/query</code></p>
-<a id="sthref233" name="sthref233"></a>
+<a id="sthref222" name="sthref222"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Example</font></strong></p>
 <p><code>GET http://localhost:8080/persistence/ExamplePU/metadata/query</code></p>
-<a id="sthref234" name="sthref234"></a>
+<a id="sthref223" name="sthref223"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Produces</font></strong></p>
 <p>JSON</p>
-<a id="sthref235" name="sthref235"></a>
+<a id="sthref224" name="sthref224"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Response</font></strong></p>
 <ul>
 <li>
@@ -655,16 +653,16 @@ public &lt;T&gt; T find(Class&lt;T&gt; entityClass, Object primaryKey, Map&lt;St
 <a id="CHDJBAFI" name="CHDJBAFI"></a><a id="TLADG1192" name="TLADG1192"></a>
 <hr />
 <h2 class="refsect2"><font face="arial, helvetica, sans-serif" color="#330099">Describe a Specific Entity</font></h2>
-<a id="sthref236" name="sthref236"></a>
+<a id="sthref225" name="sthref225"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">HTTP Request Syntax</font></strong></p>
 <p><code>GET /persistence/{unit-name}/metadata/entity/</code> <em><code>type</code></em></p>
-<a id="sthref237" name="sthref237"></a>
+<a id="sthref226" name="sthref226"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Example</font></strong></p>
 <p><code>GET http://localhost:8080/persistence/ExamplePU/metadata/entity/MyEntity</code></p>
-<a id="sthref238" name="sthref238"></a>
+<a id="sthref227" name="sthref227"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Produces</font></strong></p>
 <p>JSON</p>
-<a id="sthref239" name="sthref239"></a>
+<a id="sthref228" name="sthref228"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Response</font></strong></p>
 <ul>
 <li>

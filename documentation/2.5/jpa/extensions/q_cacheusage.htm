@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>cache-usage | EclipseLink 2.5.x Java Persistence API (JPA) Extensions Reference</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
+<meta name="date" content="2013-01-28T8:35:45Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="cache-usage" />
+<meta name="relnum" content="Release 2.5" />
+<link rel="stylesheet" type="text/css" href="../../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="http://www.eclipse.org/org/documents/epl-v10.php" title="Copyright" type="text/html" />  
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="q_batch_type.htm" title="Previous" type="text/html" />
+<link rel="next" href="q_cache-usage_indirection-policy.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:4sqnhke2any', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><div class="booktitle">Java Persistence API (JPA) Extensions Reference for EclipseLink, 
+Release 2.5</div></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="q_batch_type.htm"><img src="../../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="q_cache-usage_indirection-policy.htm"><img src="../../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header --><a id="cacheusage" name="cacheusage"></a><a id="TLJPA638" name="TLJPA638"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">cache-usage</font></h2>
+<p>Use <code>eclipselink.cache-usage</code> to specify how the query should interact with the EclipseLink cache.</p>
+<a id="sthref515" name="sthref515"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#BABEIJAE">Table 4-3</a> describes this query hint's valid values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA639" name="TLJPA639"></a><a id="sthref516" name="sthref516"></a><a id="BABEIJAE" name="BABEIJAE"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-3 Valid Values for org.eclipse.persistence.config.CacheUsage</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for org.eclipse.persistence.config.CacheUsage" summary="Valid Values for this query hint" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t5"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t5"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t5" headers="r1c1-t5">
+<p><code>DoNotCheckCache</code></p>
+</td>
+<td align="left" headers="r2c1-t5 r1c2-t5">
+<p>Always go to the database.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t5" headers="r1c1-t5">
+<p><code>CheckCacheByExactPrimaryKey</code></p>
+</td>
+<td align="left" headers="r3c1-t5 r1c2-t5">
+<p>If a read-object query contains an expression where the primary key is the only comparison, you can obtain a cache hit if you process the expression against the object in memory</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t5" headers="r1c1-t5">
+<p><code>CheckCacheByPrimaryKey</code></p>
+</td>
+<td align="left" headers="r4c1-t5 r1c2-t5">
+<p>If a read-object query contains an expression that compares at least the primary key, you can obtain a cache hit if you process the expression against the objects in memory.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t5" headers="r1c1-t5">
+<p><code>CheckCacheThenDatabase</code></p>
+</td>
+<td align="left" headers="r5c1-t5 r1c2-t5">
+<p>You can configure any read-object query to check the cache completely before you resort to accessing the database.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t5" headers="r1c1-t5">
+<p><code>CheckCacheOnly</code></p>
+</td>
+<td align="left" headers="r6c1-t5 r1c2-t5">
+<p>You can configure any read-all query to check only the parent session cache (shared cache) and return the result from it without accessing the database.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t5" headers="r1c1-t5">
+<p><code>ConformResultsInUnitOfWork</code></p>
+</td>
+<td align="left" headers="r7c1-t5 r1c2-t5">
+<p>You can configure any read-object or read-all query within the context of a unit of work to conform the results with the changes to the object made within that unit of work. This includes new objects, deleted objects and changed objects.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t5" headers="r1c1-t5">
+<p><code>UseEntityDefault</code></p>
+</td>
+<td align="left" headers="r8c1-t5 r1c2-t5">
+<p>(Default) Use the cache configuration as specified by the EclipseLink descriptor API for this entity.</p>
+<p><strong>Note</strong>: The entity default value is to not check the cache (<code>DoNotCheckCache</code>). The query will access the database and synchronize with the cache. Unless refresh has been set on the query, the cached objects will be returned without being refreshed from the database. EclipseLink does not support the cache usage for native queries or queries that have complex result sets such as returning data or multiple objects.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref517" name="sthref517"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>EclipseLink JPA uses a shared cache assessed across the entire persistence unit. After completing an operation in a particular persistence context, EclipseLink merges the results into the shared cache, so that other persistence contexts can use the results <em>regardless of whether the entity manager and persistence context are created in Java SE or Java EE</em>.</p>
+<p>Any entity persisted or removed using the entity manager will always consistently maintained with the cache.</p>
+<a id="sthref518" name="sthref518"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#BABCBJAH">Example 4-7</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="BABCBJAH" name="BABCBJAH"></a><a id="TLJPA640" name="TLJPA640"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-7 Using cache-usage in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.CacheUsage;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint(QueryHints.CACHE_USAGE, CacheUsage.CheckCacheOnly);
+</pre></div>
+<!-- class="example" -->
+<p><a href="#BABBFCGD">Example 4-8</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="BABBFCGD" name="BABBFCGD"></a><a id="TLJPA641" name="TLJPA641"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-8 Using cache-usage in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.CacheUsage;
+ import org.eclipse.persistence.config.TargetDatabase;
+ @QueryHint(name=QueryHints.CACHE_USAGE, value=CacheUsage.CheckCacheOnly);
+
+</pre></div>
+<!-- class="example" -->
+<a id="sthref519" name="sthref519"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p>"EclipseLink" JPA Query Hints<br />
+<code><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Querying/Query_Hints">http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Querying/Query_Hints</a></code></p>
+</li>
+<li>
+<p><a href="q_cache-usage_indirection-policy.htm#BABDBIDI">"cache-usage.indirection-policy"</a></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="q_batch_type.htm"><img src="../../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="q_cache-usage_indirection-policy.htm"><img src="../../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2012,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../../dcommon/html/cpyr.htm"><br />
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2012, 2013 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
+</html>

@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>About Explicit Query Refreshes | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-12-07T9:24:26Z" />
+<meta name="date" content="2013-01-28T11:56:45Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="About Explicit Query Refreshes" />
 <meta name="relnum" content="Release 2.4" />
@@ -46,7 +46,7 @@ Release 2.4</div></td>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2012-12-07</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-01-28</font></p>
 <a id="i1128663" name="i1128663"></a><a id="OTLCG93810" name="OTLCG93810"></a>
 <div class="sect1">
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">About Explicit Query Refreshes</font></h1>
@@ -64,7 +64,7 @@ Release 2.4</div></td>
 </li>
 </ol>
 <a id="OTLCG93811" name="OTLCG93811"></a>
-<div class="sect2"><a id="sthref67" name="sthref67"></a>
+<div class="sect2"><a id="sthref66" name="sthref66"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Refresh Policy</font></h2>
 <p>When you execute a query, if the required objects are in the cache, EclipseLink returns the cached objects without checking the database for a more recent version. This reduces the number of objects that EclipseLink must build from database results, and is optimal for noncoordinated cache environments. However, this may not always be the best strategy for a coordinated cache environment.</p>
 <p>To override this behavior, set a refresh policy that specifies that the objects from the database always take precedence over objects in the cache. This updates the cached objects with the data from the database.</p>

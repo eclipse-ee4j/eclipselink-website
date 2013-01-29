@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>About Connections | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-12-07T9:24:26Z" />
+<meta name="date" content="2013-01-28T11:56:44Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="About Connections" />
 <meta name="relnum" content="Release 2.4" />
@@ -46,13 +46,13 @@ Release 2.4</div></td>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2012-12-07</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-01-28</font></p>
 <a id="CHDJBIGE" name="CHDJBIGE"></a><a id="OTLCG93610" name="OTLCG93610"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">About Connections</font></h1>
 <p>A connection is an object that provides access to a data source by way of the driver you configure your application to use. Relational projects use JDBC to connect to the data source; EIS projects use JCA. EclipseLink uses the interface <code>org.eclipse.persistence.internal.databaseaccess.Accessor</code> to wrap data source connections. This interface is accessible from certain events.</p>
 <p>Typically, when using a server session, EclipseLink uses a different connection for both reading and writing. This lets you use nontransactional connections for reading and avoid maintaining connections when not required.</p>
-<p>By default, a EclipseLink server session acquires connections lazily: that is, only during the commit operation of a unit of work. Alternatively, you can configure EclipseLink to acquire a write connections at the time you acquire a client sessions.</p>
+<p>By default, an EclipseLink server session acquires connections lazily: that is, only during the commit operation of a unit of work. Alternatively, you can configure EclipseLink to acquire a write connections at the time you acquire a client sessions.</p>
 <p>Connections can be allocated from internal or external connection pools.</p>
 </div>
 <!-- class="sect1" --></div>

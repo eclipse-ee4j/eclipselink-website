@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Multiple Mappings for a Single Property | EclipseLink 2.4.x EclipseLink MOXy</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-11-08T9:7:20Z" />
+<meta name="date" content="2013-01-28T9:11:27Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Multiple Mappings for a Single Property" />
 <meta name="relnum" content="Release 2.4" />
@@ -45,14 +45,15 @@ Release 2.4</div></td>
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header --><a id="CHDICAAI" name="CHDICAAI"></a>
+<div class="ind"><!-- End Header --><a id="CHDICAAI" name="CHDICAAI"></a><a id="TLJAX276" name="TLJAX276"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Multiple Mappings for a Single Property</font></h1>
 <p>Standard JAXB can have at most one mapping per Java field. Since EclipseLink MOXy 2.3, multiple mappings can be created for a single property using OXM metadata, with the caveat that at most one mapping will be readable (the rest will be "write-only").</p>
+<a id="TLJAX277" name="TLJAX277"></a>
 <div class="sect2"><a id="sthref79" name="sthref79"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Example</font></h2>
 <p>This example will use the following Java class:</p>
-<div class="example"><a id="sthref80" name="sthref80"></a>
+<div class="example"><a id="TLJAX278" name="TLJAX278"></a><a id="sthref80" name="sthref80"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 4-37 Sample Java Class</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
@@ -72,7 +73,7 @@ public class CustomQuoteRequest {
 </pre></div>
 <!-- class="example" -->
 <p><a href="#CHDEDBIB">Example 4-38</a> shows how to define multiple mappings for the <code>currencyPairCode</code> in EclipseLink's OXM metadata format. Note that the second mapping has specified <code>write-only="true</code>".</p>
-<div class="example"><a id="CHDEDBIB" name="CHDEDBIB"></a>
+<div class="example"><a id="CHDEDBIB" name="CHDEDBIB"></a><a id="TLJAX279" name="TLJAX279"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 4-38 Sample XML Schema</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 ...
@@ -89,10 +90,11 @@ public class CustomQuoteRequest {
 </pre></div>
 <!-- class="example" --></div>
 <!-- class="sect2" -->
+<a id="TLJAX280" name="TLJAX280"></a>
 <div class="sect2"><a id="sthref81" name="sthref81"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">XML Output</font></h2>
 <p><a href="#CHDEIEJF">Example 4-39</a> shows an example <code>CustomQuoteRequest</code> marshalled to XML.</p>
-<div class="example"><a id="CHDEIEJF" name="CHDEIEJF"></a>
+<div class="example"><a id="CHDEIEJF" name="CHDEIEJF"></a><a id="TLJAX281" name="TLJAX281"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 4-39 Resulting XML</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;

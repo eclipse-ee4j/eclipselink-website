@@ -112,27 +112,58 @@
 			<h3>Guides</h3>
 			<ul>
 				<li>
-				
-				
-				<form action="../"><label for="Concepts">Understanding EclipseLink (Concepts Guide)</label>
-<select name="Concepts">
+<form action="../"><label for="Concepts">Understanding EclipseLink (Concepts Guide)</label>
+  <select name="Concepts">
     <option value="http://www.eclipse.org/eclipselink/documentation/2.5/concepts/toc.htm"> 2.5 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.4/concepts/toc.htm"> 2.4 </option>
-</select>
-<input type="button" onclick="window.open(this.form.Concepts.options[this.form.Concepts.selectedIndex].value,'_top')" value="Go">
-</form></li>
+  </select>
+  <input type="button" onclick="window.open(this.form.Concepts.options[this.form.Concepts.selectedIndex].value,'_top')" value="Go">
+</form>
+ 				</li>
 				
-				<li><a href="2.4/solutions/toc.htm">EclipseLink Solutions Guide</a></li>
+				<li>
+<form action="../"><label for="solutions">EclipseLink Solutions Guide</label>
+  <select name="Solutions">
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.5/solutions/toc.htm"> 2.5 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.4/solutions/toc.htm"> 2.4 </option>
+  </select>
+  <input type="button" onclick="window.open(this.form.Solutions.options[this.form.Solutions.selectedIndex].value,'_top')" value="Go">
+</form>
+				</li>
 				
-				<li><a href="2.4/jpa/extensions/toc.htm">EclipseLink JPA Extensions Reference</a></li>
+				<li>
+<form action="../"><label for="solutions">EclipseLink JPA Extensions Reference</label>
+  <select name="JPA">
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.5/jpa/extensions/toc.htm"> 2.5 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.4/jpa/extensions/toc.htm"> 2.4 </option>
+  </select>
+  <input type="button" onclick="window.open(this.form.JPA.options[this.form.JPA.selectedIndex].value,'_top')" value="Go">
+</form>
+				</li>
 
-				<li><a href="2.4/moxy/toc.htm">Developing JAXB Applications Using EclipseLink MOXy</a></li>
+				<li>
+<form action="../"><label for="solutions">Developing JAXB Applications Using EclipseLink MOXy</label>
+  <select name="MOXy">
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.5/moxy/toc.htm"> 2.5 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.4/moxy/toc.htm"> 2.4 </option>
+  </select>
+  <input type="button" onclick="window.open(this.form.MOXy.options[this.form.MOXy.selectedIndex].value,'_top')" value="Go">
+</form>
+				</li>
 
 				<li><a href="2.4/jpa/extensions/a_nosql.htm">EclipseLink NoSQL</a></li>
 
 				<li><a href="http://wiki.eclipse.org/Category:SDO">EclipseLink SDO</a></li>
 
-				<li><a href="2.4/dbws/toc.htm">Developing Persistence Architectures Using EclipseLink Database Web Services</a></li>
+				<li><a href=""></a>
+<form action="../"><label for="solutions">Developing Persistence Architectures Using EclipseLink Database Web Services</label>
+  <select name="dbws">
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.5/dbws/toc.htm"> 2.5 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.4/dbws/toc.htm"> 2.4 </option>
+  </select>
+  <input type="button" onclick="window.open(this.form.dbws.options[this.form.dbws.selectedIndex].value,'_top')" value="Go">
+</form>
+				</li>
 			</ul>
 	</div>
 

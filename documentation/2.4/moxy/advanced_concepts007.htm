@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Using XML Transformations | EclipseLink 2.4.x EclipseLink MOXy</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-11-08T9:7:21Z" />
+<meta name="date" content="2013-01-28T9:11:28Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Using XML Transformations" />
 <meta name="relnum" content="Release 2.4" />
@@ -45,7 +45,7 @@ Release 2.4</div></td>
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header --><a id="CHDFFEFF" name="CHDFFEFF"></a>
+<div class="ind"><!-- End Header --><a id="CHDFFEFF" name="CHDFFEFF"></a><a id="TLJAX429" name="TLJAX429"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Using XML Transformations</font></h1>
 <p>In many cases, you can use MOXy's <code>@XmlTransformation</code> annotation to give you considerably more control over the marshalling and unmarshalling of your objects. <code>@XmlTransformation</code> can be used to create a custom mapping where one or more XML nodes can be used to create the value for the Java attribute.</p>
@@ -83,7 +83,7 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="inftblnote" --></div>
-<div class="example"><a id="sthref184" name="sthref184"></a>
+<div class="example"><a id="TLJAX430" name="TLJAX430"></a><a id="sthref184" name="sthref184"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-38 Mapping Example</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
  
@@ -121,10 +121,11 @@ public class ElemB {
  
 </pre></div>
 <!-- class="example" -->
+<a id="TLJAX431" name="TLJAX431"></a>
 <div class="sect2"><a id="sthref185" name="sthref185"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Using an AttributeTransformer</font></h2>
 <p>Use an <code>AttributeTransformer</code> to construct the Java attribute value:</p>
-<div class="example"><a id="sthref186" name="sthref186"></a>
+<div class="example"><a id="TLJAX432" name="TLJAX432"></a><a id="sthref186" name="sthref186"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-39 Sample AttributeTransfomer</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
@@ -170,6 +171,7 @@ public class DateAttributeTransformer implements <strong>AttributeTransformer </
 </pre></div>
 <!-- class="example" --></div>
 <!-- class="sect2" -->
+<a id="TLJAX433" name="TLJAX433"></a>
 <div class="sect2"><a id="sthref187" name="sthref187"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Using a FieldTransformer</font></h2>
 <p>Use a <code>FieldTransformer</code> to construct the XML field value from the Java object.</p>
@@ -177,7 +179,7 @@ public class DateAttributeTransformer implements <strong>AttributeTransformer </
 <ul>
 <li>
 <p>The first write transformer writes the year, month, and day in <strong>yyMMdd</strong> format:</p>
-<div class="example"><a id="sthref188" name="sthref188"></a>
+<div class="example"><a id="TLJAX434" name="TLJAX434"></a><a id="sthref188" name="sthref188"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-40 First Write Transformer</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
@@ -208,7 +210,7 @@ public class DateFieldTransformer implements FieldTransformer {
 <!-- class="example" --></li>
 <li>
 <p>The second write transformer writes out the hour, minutes, and seconds in <strong>HHmmss</strong> format.</p>
-<div class="example"><a id="sthref189" name="sthref189"></a>
+<div class="example"><a id="TLJAX435" name="TLJAX435"></a><a id="sthref189" name="sthref189"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-41 Second Write Transformer</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;

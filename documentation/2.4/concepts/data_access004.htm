@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>About Authentication | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-12-07T9:24:26Z" />
+<meta name="date" content="2013-01-28T11:56:44Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="About Authentication" />
 <meta name="relnum" content="Release 2.4" />
@@ -46,7 +46,7 @@ Release 2.4</div></td>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2012-12-07</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-01-28</font></p>
 <a id="CHDBFFGG" name="CHDBFFGG"></a><a id="OTLCG93605" name="OTLCG93605"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">About Authentication</font></h1>
@@ -67,7 +67,7 @@ Release 2.4</div></td>
 <a id="CHDEIDHF" name="CHDEIDHF"></a><a id="OTLCG93606" name="OTLCG93606"></a>
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Simple JDBC Authentication</font></h2>
-<p>When you configure a EclipseLink database login with a user name and password, EclipseLink provides these credentials to the JDBC driver that you configure your application to use.</p>
+<p>When you configure an EclipseLink database login with a user name and password, EclipseLink provides these credentials to the JDBC driver that you configure your application to use.</p>
 <p>By default, EclipseLink writes passwords to and reads them from the <code>sessions.xml</code> file in encrypted form using JCE encryption. Optionally, you can configure a different encryption class.</p>
 </div>
 <!-- class="sect2" -->
@@ -136,9 +136,9 @@ Release 2.4</div></td>
 <a id="CHDFCJDB" name="CHDFCJDB"></a><a id="OTLCG93608" name="OTLCG93608"></a>
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Auditing</font></h2>
-<p>Regardless of what type of authentication you choose, EclipseLink logs the name of the user associated with all database operations. <a href="#CHDHDDGJ">Example 8-1</a> shows the <code>CONFIG</code> level EclipseLink logs when a <code>ServerSession</code> connects through the main connection for the sample user "scott", and a <code>ClientSession</code> uses proxy connection "jeff".</p>
+<p>Regardless of what type of authentication you choose, EclipseLink logs the name of the user associated with all database operations. <a href="#CHDHDDGJ">Example 8-1</a> shows the <code>CONFIG</code> level EclipseLink logs when a <code>ServerSession</code> connects through the main connection for the sample user "scott", and a <code>ClientSession</code> uses proxy connection "jeff"</p>
 <div class="example"><a id="CHDHDDGJ" name="CHDHDDGJ"></a><a id="OTLCG93609" name="OTLCG93609"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 8-1 EclipseLink Logs with Oracle Database Proxy Authentication</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 8-1 Logs with Oracle Database Proxy Authentication</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 [EclipseLink Config]--ServerSession(13)--Connection(14)--Thread(Thread[main,5,main])--connecting(DatabaseLogin( platform=&gt;Oracle9Platform   user name=&gt; "scott" connector=&gt;OracleJDBC10_1_0_2ProxyConnector datasource name=&gt;DS))
 [EclipseLink Config]--ServerSession(13)--Connection(34)--Thread(Thread[main,5,main])--Connected: jdbc:oracle:thin:@localhost:1521:orcl

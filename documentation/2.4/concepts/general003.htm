@@ -5,11 +5,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
-<title>Key Components | EclipseLink 2.4.x Understanding EclipseLink</title>
+<title>Key Concepts | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-12-07T9:24:24Z" />
+<meta name="date" content="2013-01-28T11:56:42Z" />
 <meta name="robots" content="noarchive" />
-<meta name="doctitle" content="Key Components" />
+<meta name="doctitle" content="Key Concepts" />
 <meta name="relnum" content="Release 2.4" />
 <link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
 <link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
@@ -46,144 +46,130 @@ Release 2.4</div></td>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2012-12-07</font></p>
-<a id="CHDIEEHG" name="CHDIEEHG"></a><a id="OTLCG114" name="OTLCG114"></a>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-01-28</font></p>
+<a id="CHDBJDEC" name="CHDBJDEC"></a><a id="OTLCG94460" name="OTLCG94460"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
-<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Key Components</font></h1>
-<p>illustrates the components contained by EclipseLink. The following sections describe the components.</p>
-<div class="figure"><a id="CHDGIFIA" name="CHDGIFIA"></a><a id="OTLCG115" name="OTLCG115"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Figure 1-1 EclipseLink Components</font></em></strong></p>
-<img src="img/otlcg_jd_002_eclipselink.png" alt="This figure is described in the text." title="This figure is described in the text." longdesc="img_text/otlcg_jd_002_eclipselink.htm" /><br />
-<a id="sthref8" name="sthref8" href="img_text/otlcg_jd_002_eclipselink.htm">Description of "Figure 1-1 EclipseLink Components"</a><br />
-<br /></div>
-<!-- class="figure" -->
-<a id="OTLCG116" name="OTLCG116"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref9" name="sthref9"></a>
-<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">EclipseLink Core</font></h2>
-<p>The EclipseLink Core provides the EclipseLink runtime component. Access to the runtime component can be obtained directly through the EclipseLink API. The runtime environment is not a separate or external process&mdash;it is embedded within the application. Application calls invoke EclipseLink to provide persistence behavior. This function enables transactional and thread-safe access to shared database connections and cached objects. For more information, see <a href="#CHDBCJCF">EclipseLink/EclipseLink API</a>.</p>
-<a id="CHDBCJCF" name="CHDBCJCF"></a><a id="OTLCG132" name="OTLCG132"></a>
-<div class="sect3">
-<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">EclipseLink/EclipseLink API</font></h3>
-<p>The EclipseLink API component of EclipseLink provides the reference implementation for JPA 2.0 (JSR-317). The <code>org.eclipse.persistence.*</code> classes encapsulate the EclipseLink API and provide extensions beyond the specification. These extensions include EclipseLink-specific properties and annotations. For more information on the API, properties and extensions, see <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
-<p>The JAXB APIs are included in Java SE 6. In the <code>eclipselink.jar</code> file, the <code>org.eclipse.persistence.jaxb.*</code> classes encapsulate the EclipseLink support for JAXB.</p>
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Key Concepts</font></h1>
+<p>This section provides a brief introduction to several of the key concepts described in this documentation. The key concepts highlighted in this section are as follows:</p>
+<ul>
+<li>
+<p><a href="#CHDBJIJE">EclipseLink Metadata</a></p>
+</li>
+<li>
+<p><a href="#CHDGEFJG">Entities</a></p>
+</li>
+<li>
+<p><a href="#CHDBABAD">Descriptors</a></p>
+</li>
+<li>
+<p><a href="#CHDFGCJF">Mappings</a></p>
+</li>
+<li>
+<p><a href="#CHDFFJIA">Data Access</a></p>
+</li>
+<li>
+<p><a href="#CHDEEBFG">Caching</a></p>
+</li>
+<li>
+<p><a href="#CHDBJIEA">Queries</a></p>
+</li>
+<li>
+<p><a href="#CHDJJFCE">Expression Framework</a></p>
+</li>
+<li>
+<p><a href="#CHDGCGDD">NoSQL Databases</a></p>
+</li>
+<li>
+<p><a href="#CHDBIEJD">Performance Monitoring and Profiling</a></p>
+</li>
+</ul>
+<a id="CHDBJIJE" name="CHDBJIJE"></a><a id="OTLCG113" name="OTLCG113"></a>
+<div class="sect2">
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">EclipseLink Metadata</font></h2>
+<p>EclipseLink metadata is the bridge between the development of an application and its deployed runtime environment. You can capture the metadata using:</p>
+<ul>
+<li>
+<p>JPA annotations in Java files and the JPA-defined properties in the <code>persistence.xml</code>, <code>eclipselink-orm.xml</code>, and <code>orm.xml</code> files.</p>
+<p>Metadata is also captured by EclipseLink JPA annotations and property extensions in the <code>persistence.xml</code> file. The <code>eclipselink-orm.xml</code> file can also be used to specify property extensions beyond the JPA specification.</p>
+</li>
+<li>
+<p>JAXB annotations in Java files and JAXB-defined properties in the <code>eclipselink-oxm.xml</code> file.</p>
+<p>The <code>eclipselink-oxm.xml</code> file can be used to define property extensions beyond the JAXB specification.</p>
+</li>
+<li>
+<p>Java and the EclipseLink API.</p>
+</li>
+</ul>
+<p>The metadata lets you pass configuration information into the runtime environment. The runtime environment uses the information in conjunction with the persistent classes, such as Java objects, JPA entities, and the code written with the EclipseLink API, to complete the application. See <a href="blocks001.htm#CHDIADII">"Adding Metadata Using Annotations"</a> for more information. See also <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+<p>Mappings can be stored external to the application. This can be as simple as making the <code>eclipselink-orm.xml</code> or <code>eclipselink-oxm.xml</code> file with the additional mapping information available on a web server as a file. It can also be more complex involving a server process that stores the mapping information and allows the information to be updated dynamically. For more information, see "EclipseLink/Examples/JPA/MetadataSource" in the EclipseLink documentation.</p>
+<p><code><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/MetadataSource">http://wiki.eclipse.org/EclipseLink/Examples/JPA/MetadataSource</a></code></p>
 </div>
-<!-- class="sect3" --></div>
 <!-- class="sect2" -->
-<a id="OTLCG117" name="OTLCG117"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref10" name="sthref10"></a>
-<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Object-Relational (JPA 2.0) Component</font></h2>
-<p>JPA simplifies Java persistence. It provides an object-relational mapping approach that lets you declaratively define how to map Java objects to relational database tables in a standard, portable way. JPA works both inside a Java EE application server and outside an EJB container in a Java Standard Edition (Java SE) application. The main features included in the 2.0 JPA update are:</p>
-<ul>
-<li>
-<p>Expanded object/relational mapping functionality</p>
-<ul>
-<li>
-<p>Support for collections of embedded objects</p>
-</li>
-<li>
-<p>Multiple levels of embedded objects</p>
-</li>
-<li>
-<p>Ordered lists</p>
-</li>
-<li>
-<p>Combinations of access types</p>
-</li>
-</ul>
-</li>
-<li>
-<p>A criteria query API</p>
-</li>
-<li>
-<p>Standardization of query "hints"</p>
-</li>
-<li>
-<p>Standardization of additional metadata to support DDL generation</p>
-</li>
-<li>
-<p>Support for validation</p>
-</li>
-</ul>
-</div>
-<!-- class="sect2" -->
-<a id="OTLCG118" name="OTLCG118"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref11" name="sthref11"></a>
-<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Object-XML (JAXB 2.2) Component</font></h2>
-<p>Object-XML, also known as <em>MOXy</em>, is an EclipseLink component that enables you to bind Java classes to XML schemas. Object-XML implements JAXB which lets you provide mapping information through annotations. Support for storing the mappings in XML format is provided by MOXy. The many advanced mappings that are available enable you to handle complex XML structures without having to mirror the schema in your Java class model.</p>
-<p>The objects produced by the EclipseLink JAXB compiler are Java POJO models. They are generated with the necessary annotations required by the JAXB specification. The JAXB runtime API can be used to marshal and unmarshal objects.</p>
-<p>When using Object-XML as the JAXB provider, no metadata is required to convert your existing object model to XML. You can supply metadata (using annotations or XML) only when you must fine-tune the XML representation of the model.</p>
-<p>Using EclipseLink Object-XML, you can manipulate XML in the following ways:</p>
-<ul>
-<li>
-<p>Generate a Java Model from an XML schema</p>
-</li>
-<li>
-<p>Specify the EclipseLink MOXy JAXB runtime</p>
-</li>
-<li>
-<p>Use JAXB to manipulate XML</p>
-</li>
-<li>
-<p>Generate an XML schema from a Java model</p>
-</li>
-</ul>
-<p>For more information on Object-XML and these use cases, see <em>Developing Persistence Architectures Using EclipseLink MOXy Developer's Guide</em>.</p>
-<p>EclipseLink provides maximum flexibility with the ability to control how your object model is mapped to an XML schema. There are many advantages to having control over your own object model:</p>
-<ul>
-<li>
-<p>You can design the domain classes specifically for your application using the appropriate patterns and practices.</p>
-</li>
-<li>
-<p>You can use XPath-based mapping. This prevents the need for having a 1-to-1 relationship between classes and XML schema types. For more information, see <em>Developing Persistence Architectures Using EclipseLink MOXy Developer's Guide</em>.</p>
-</li>
-<li>
-<p>You can instantiate objects in a way that is appropriate to your application.</p>
-</li>
-<li>
-<p>You can control your own class path dependencies. Most JAXB implementations put vendor specific code in the generated classes that add class path dependencies to your application.</p>
-</li>
-</ul>
-<p>One of the key advantages of EclipseLink is that the mapping information can be stored externally and does not require any changes to the Java classes or XML schema. This means that you can map your domain objects to more than one schema, or if your schema changes, you can update the mapping metadata instead of modifying your domain classes. This is also useful when mapping third-party classes, because you might not have access to the source to add annotations.</p>
-<a id="OTLCG119" name="OTLCG119"></a>
-<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref12" name="sthref12"></a>
-<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">EclipseLink SDO Component</font></h3>
-<p>The Service Data Objects (SDO) component provides the reference implementation of Service Data Objects version 2.1.1. The reference implementation is described in <a href="http://jcp.org/en/home/index">JSR-235</a>. The EclipseLink SDO implementation incorporates the reference implementation and provides additional features primarily used for converting Java objects to XML, and for building and using data object models that can be incorporated into service architectures.</p>
-<p>EclipseLink SDO provides you with the following capabilities:</p>
-<ul>
-<li>
-<p>Use of the SDO APIs</p>
-</li>
-<li>
-<p>Conversion an XML Schema</p>
-</li>
-<li>
-<p>Customization of your XSD for SDO usage</p>
-</li>
-<li>
-<p>Use of dynamic data objects to manipulate XML</p>
-</li>
-<li>
-<p>Use of static data objects</p>
-<ul>
-<li>
-<p>Run the SDO compiler&mdash;generate type safe data objects</p>
-</li>
-<li>
-<p>Use type safe data objects to manipulate XML</p>
-</li>
-</ul>
-</li>
-</ul>
-<p>For more information, see "Getting Started with EclipseLink SDO" in the EclipseLink documentation:</p>
-<p><code><a href="http://www.eclipse.org/eclipselink/moxy.php">http://www.eclipse.org/eclipselink/moxy.php</a></code></p>
-</div>
-<!-- class="sect3" --></div>
-<!-- class="sect2" -->
-<a id="CHDIGIDF" name="CHDIGIDF"></a><a id="OTLCG120" name="OTLCG120"></a>
+<a id="CHDGEFJG" name="CHDGEFJG"></a><a id="OTLCG94461" name="OTLCG94461"></a>
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
-<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Database Web Services Component</font></h2>
-<p>EclipseLink Database Web Services (DBWS) enables simple and efficient access to relational database artifacts by using a web service. It provides Java EE-compliant client-neutral access to the database without having to write Java code. EclipseLink DBWS extends EclipseLink's core capabilities while using existing ORM and OXM components.</p>
-<p>EclipseLink DBWS has a runtime provider component that takes a service descriptor (along with related deployment artifacts) and realizes it as a JAX-WS 2.0 Web service. The runtime provider uses EclipseLink to bridge between the database and the XML SOAP Messages used by web service clients. For information on DBWS architecture, see <em>Developing Persistence Architectures Using EclipseLink Database Web Services Developer's Guide</em>.</p>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Entities</font></h2>
+<p>An entity is a persistence domain object. Typically, an entity represents a table in a relational database, and each entity instance corresponds to a row in the table. The primary programming artifact of an entity is the entity class, although entities can use helper classes.</p>
+<p>The persistent state of an entity is represented either through persistent fields or persistent properties. These fields or properties use object/relational mapping annotations to map the entities and entity relationships to the relational data in the underlying data store.</p>
+<p>See <a href="entities.htm#CIHGAJCF">Chapter 4, "Understanding Entities."</a></p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDBABAD" name="CHDBABAD"></a><a id="OTLCG94462" name="OTLCG94462"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Descriptors</font></h2>
+<p>Descriptors describe how a Java class relates to a data source representation. They relate object classes to the data source at the data model level. For example, persistent class attributes may map to database columns.</p>
+<p>EclipseLink uses descriptors to store the information that describes how an instance of a particular class can be represented in a data source. Descriptors are used internally by EclipseLink, and are defined through annotations, XML, or in IDEs such as JDeveloper or Eclipse, then read at run time.</p>
+<p>See <a href="descriptors.htm#CHECEAAE">Chapter 6, "Understanding Descriptors."</a></p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDFGCJF" name="CHDFGCJF"></a><a id="OTLCG94463" name="OTLCG94463"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Mappings</font></h2>
+<p>Mappings describe how individual object attributes relate to a data source representation. Mappings can involve a complex transformation or a direct entry.</p>
+<p>EclipseLink uses mappings to determine how to transform data between object and data source representations. Mappings are used internally by EclipseLink, and are defined through annotations, XML, or in IDEs such as Eclipse, then read from the project XML file at run time.</p>
+<p>See <a href="mappingintro.htm#CHDFEJIJ">Chapter 7, "Understanding Mappings."</a></p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDFFJIA" name="CHDFFJIA"></a><a id="OTLCG94464" name="OTLCG94464"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Data Access</font></h2>
+<p>A data source platform includes options specific to a particular data source including binding, use of native SQL, use of batch writing, and sequencing.</p>
+<p>See <a href="data_access.htm#CHDJBDEA">Chapter 8, "Understanding Data Access."</a></p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDEEBFG" name="CHDEEBFG"></a><a id="OTLCG94465" name="OTLCG94465"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Caching</font></h2>
+<p>The EclipseLink cache is an in-memory repository that stores recently read or written objects based on class and primary key values. The cache is used to improve performance by avoiding unnecessary trips to the database, manage locking and cache isolation level, and manage object identity.</p>
+<p>See <a href="cache.htm#CDEFHHEH">Chapter 9, "Understanding Caching."</a></p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDBJIEA" name="CHDBJIEA"></a><a id="OTLCG94466" name="OTLCG94466"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Queries</font></h2>
+<p>You can to create, read, update, and delete persistent objects or data using queries in both Java EE and non-Java EE applications for both relational and nonrelational data sources. Queries can be made at the object level or data level.</p>
+<p>A number of query languages are supported, such as Java Persistence Query Language (JPQL), SQL, and the Expression Framework. The Java Persistence Criteria API can also be used to define dynamic queries through the construction of object-based query definition objects, rather than use of the string-based approach of JPQL.</p>
+<p>See <a href="queries.htm#CHDGGCJB">Chapter 10, "Understanding Queries."</a></p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDJJFCE" name="CHDJJFCE"></a><a id="OTLCG94467" name="OTLCG94467"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Expression Framework</font></h2>
+<p>By using the EclipseLink Expressions framework, you can specify query search criteria based on your domain object model. Expressions offer a number of advantages over SQL. For example, expressions are easier to maintain, changes to descriptors or database tables do not affect the querying structures in the application, they enhance readability by standardizing the <code>Query</code> interface, and they simplify complex operations.</p>
+<p>See <a href="expressions.htm#CHDCAIGD">Chapter 11, "Understanding EclipseLink Expressions."</a></p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDGCGDD" name="CHDGCGDD"></a><a id="OTLCG94468" name="OTLCG94468"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">NoSQL Databases</font></h2>
+<p>NoSQL is a classification of database systems that do not support the SQL standard. These include document databases, key-value stores, and various other non-standard databases. Persistence of Java objects to NoSQL databases is supported through the Java Persistence API (JPA). EclipseLink's native API is also supported with NoSQL databases.</p>
+<p>See <a href="nosql.htm#BJEIGBFD">Chapter 12, "Understanding Non-relational Data Sources."</a></p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDBIEJD" name="CHDBIEJD"></a><a id="OTLCG94469" name="OTLCG94469"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Performance Monitoring and Profiling</font></h2>
+<p>A diverse set of features is provided to measure and optimize application performance. You can enable or disable most features in the descriptors or session, making any resulting performance gains global. Tools are provided for performance profiling and performance, fetch group, and query monitoring.</p>
+<p>See <a href="monitoring.htm#BABHHIEG">Chapter 13, "Understanding Performance Monitoring and Profiling."</a></p>
 </div>
 <!-- class="sect2" --></div>
 <!-- class="sect1" --></div>

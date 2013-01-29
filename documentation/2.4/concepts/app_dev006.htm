@@ -5,11 +5,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
-<title>About EclipseLink Metadata | EclipseLink 2.4.x Understanding EclipseLink</title>
+<title>About Metadata | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-12-07T9:24:25Z" />
+<meta name="date" content="2013-01-28T11:56:43Z" />
 <meta name="robots" content="noarchive" />
-<meta name="doctitle" content="About EclipseLink Metadata" />
+<meta name="doctitle" content="About Metadata" />
 <meta name="relnum" content="Release 2.4" />
 <link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
 <link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
@@ -46,14 +46,14 @@ Release 2.4</div></td>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2012-12-07</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-01-28</font></p>
 <a id="CHEDICEE" name="CHEDICEE"></a><a id="OTLCG91207" name="OTLCG91207"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
-<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">About EclipseLink Metadata</font></h1>
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">About Metadata</font></h1>
 <p>The EclipseLink metadata is the bridge between the development of an application and its deployed run-time environment. Capture the metadata using the following:</p>
 <ul>
 <li>
-<p>Annotations, <code>persistence.xml</code>, <code>orm.xml</code>, <code>eclipselink-orm.xml</code>, and annotation and <code>persistence.xml</code> property extensions: the persistence provider interprets all these sources of metadata to create an in-memory session and project at run time.</p>
+<p>Annotations, <code>persistence.xml</code>, <code>orm.xml</code>, <code>eclipselink-orm.xml</code>, <code>eclipselink-oxm.xml</code>, and annotation and <code>persistence.xml</code> property extensions. The persistence provider interprets all these sources of metadata to create an in-memory session and project at run time.</p>
 </li>
 <li>
 <p>Java and the EclipseLink API (this approach is the most labor-intensive).</p>
@@ -61,16 +61,16 @@ Release 2.4</div></td>
 </ul>
 <p>The metadata lets you pass configuration information into the run-time environment. The run-time environment uses the information in conjunction with the persistent classes (Java objects or entities) and the code written with the EclipseLink API, to complete the application.</p>
 <p>For more information, see "Overriding and Merging" in Java Persistence API (JPA) Extensions Reference for EclipseLink.</p>
-<div class="figure"><a id="OTLCG91208" name="OTLCG91208"></a><a id="sthref31" name="sthref31"></a>
+<div class="figure"><a id="OTLCG91208" name="OTLCG91208"></a><a id="sthref30" name="sthref30"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 3-2 EclipseLink Metadata</font></em></strong></p>
 <img src="img/meta.gif" alt="Description of Figure 3-2 follows" title="Description of Figure 3-2 follows" longdesc="img_text/meta.htm" /><br />
-<a id="sthref32" name="sthref32" href="img_text/meta.htm">Description of "Figure 3-2 EclipseLink Metadata"</a><br />
+<a id="sthref31" name="sthref31" href="img_text/meta.htm">Description of "Figure 3-2 EclipseLink Metadata"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p>This section describes the following:</p>
 <ul>
 <li>
-<p><a href="#BABDDBIJ">Advantages of the EclipseLink Metadata Architecture</a></p>
+<p><a href="#BABDDBIJ">Advantages of the Metadata Architecture</a></p>
 </li>
 <li>
 <p><a href="#BABEECEF">Creating Project Metadata</a></p>
@@ -81,7 +81,7 @@ Release 2.4</div></td>
 </ul>
 <a id="BABDDBIJ" name="BABDDBIJ"></a><a id="OTLCG91209" name="OTLCG91209"></a>
 <div class="sect2">
-<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Advantages of the EclipseLink Metadata Architecture</font></h2>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Advantages of the Metadata Architecture</font></h2>
 <p>The EclipseLink metadata architecture provides many important benefits, including the following:</p>
 <ul>
 <li>
@@ -109,7 +109,7 @@ Release 2.4</div></td>
 <a id="BABEECEF" name="BABEECEF"></a><a id="OTLCG91210" name="OTLCG91210"></a>
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Creating Project Metadata</font></h2>
-<p>A EclipseLink project contains the mapping metadata that the EclipseLink runtime uses to map objects to a data source. The project is the primary object used by the EclipseLink runtime.</p>
+<p>A project contains the mapping metadata that the EclipseLink runtime uses to map objects to a data source. The project is the primary object used by the EclipseLink runtime.</p>
 <p>This section describes the principal contents of project metadata, including the following:</p>
 <ul>
 <li>
@@ -120,7 +120,7 @@ Release 2.4</div></td>
 </li>
 </ul>
 <p>For Object-relational mapping, the EclipseLink runtime constructs an in-memory project based on any combination of JPA annotations, <code>persistence.xml</code>, <code>orm.xml</code>, and EclipseLink JPA annotation and <code>persistence.xml</code> property extensions.</p>
-<p>For Object-XML mapping, the EclipseLink runtime uses a combination of JAXB annotations and <code>eclipselink-oxm</code> bindings. See "Overriding and Merging" in Java Persistence API (JPA) Extensions Reference for EclipseLink.</p>
+<p>For Object-XML mapping, the EclipseLink runtime uses a combination of JAXB annotations and <code>eclipselink-oxm</code> bindings. See "Overriding and Merging" in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
 <a id="BABIECAI" name="BABIECAI"></a><a id="OTLCG91211" name="OTLCG91211"></a>
 <div class="sect3">
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Descriptors and Mappings</font></h3>
@@ -142,12 +142,7 @@ Release 2.4</div></td>
 <p>The most common solution is to develop the persistent entities using a development tool, such as a modeling tool or an integrated development environment (IDE) like JDeveloper, and to develop the relational model through appropriate relational design tools. You then use JDeveloper to construct mappings that relate these two models.</p>
 <p>Although JDeveloper offers the ability to generate persistent entities or the relational model components for an application, these utilities are intended only to assist in rapid initial development strategies&ndash;not complete round-trip application development.</p>
 <p>For more information, see <a href="descriptors.htm#CHECEAAE">Chapter 6, "Understanding Descriptors"</a> and <a href="mappingintro.htm#CHDFEJIJ">Chapter 7, "Understanding Mappings"</a>.</p>
-<a id="BABJDHHB" name="BABJDHHB"></a><a id="OTLCG91212" name="OTLCG91212"></a>
-<div class="sect4">
-<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Amending Descriptors</font></h4>
-<p>An amendment method lets you customize EclipseLink Descriptor metadata at runtime before login occurs. The amendment class and method can be specified through EclipseLink Descriptor API.</p>
 </div>
-<!-- class="sect4" --></div>
 <!-- class="sect3" -->
 <a id="BABIEAJE" name="BABIEAJE"></a><a id="OTLCG91213" name="OTLCG91213"></a>
 <div class="sect3"><!-- infolevel="all" infotype="General" -->

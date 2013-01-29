@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Query Concepts | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2012-12-07T9:24:26Z" />
+<meta name="date" content="2013-01-28T11:56:45Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Query Concepts" />
 <meta name="relnum" content="Release 2.4" />
@@ -46,7 +46,7 @@ Release 2.4</div></td>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2012-12-07</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-01-28</font></p>
 <a id="CACIGEIH" name="CACIGEIH"></a><a id="OTLCG93989" name="OTLCG93989"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Query Concepts</font></h1>
@@ -62,7 +62,7 @@ Release 2.4</div></td>
 <p>Manage the results returned by the action (if any).</p>
 </li>
 </ul>
-<p>Specific to EclipseLink, you must also consider how the query affects the EclipseLink cache.</p>
+<p>You must also consider how the query affects the EclipseLink cache.</p>
 <p>This section introduces query concepts unique to EclipseLink, including the following:</p>
 <ul>
 <li>
@@ -90,7 +90,7 @@ Release 2.4</div></td>
 <a id="CACJBFHJ" name="CACJBFHJ"></a><a id="OTLCG93990" name="OTLCG93990"></a>
 <div class="sect2">
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Call Objects</font></h2>
-<p>In EclipseLink, the <code>Call</code> object encapsulates an operation or action on a data source. EclipseLink provides a variety of <code>Call</code> types such as structured query language (SQL), Enterprise Java Beans Query Language (EJB&nbsp;QL), Java Persistence Query Language (JP&nbsp;QL), and Extensible Markup Language (XML).</p>
+<p>The <code>Call</code> object encapsulates an operation or action on a data source. The EclipseLink API provides a variety of <code>Call</code> types such as structured query language (SQL), Java Persistence Query Language (JPQL), and Extensible Markup Language (XML).</p>
 <p>You can execute a <code>Call</code> directly or in the context of a <code>DatabaseQuery</code>.</p>
 </div>
 <!-- class="sect2" -->
@@ -103,7 +103,7 @@ Release 2.4</div></td>
 <a id="CACIAFDF" name="CACIAFDF"></a><a id="OTLCG93992" name="OTLCG93992"></a>
 <div class="sect2">
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Data-Level and Object-Level Queries</font></h2>
-<p>In EclipseLink, queries can be defined for objects or data, as follows:</p>
+<p>Qqueries can be defined for objects or data, as follows:</p>
 <ul>
 <li>
 <p><strong>Object-level</strong> queries are object-specific and return data as objects in your domain model. They are the preferred type of query for mapped data. By far, object-level <code>DatabaseQuery</code> queries are the most common query used in EclipseLink.</p>
@@ -130,7 +130,7 @@ Release 2.4</div></td>
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">EclipseLink Expressions</font></h2>
 <p>EclipseLink expressions let you specify query search criteria based on your domain object model. When you execute the query, EclipseLink translates these search criteria into the appropriate query language for your platform.</p>
-<p>EclipseLink provides the following two public classes to support expressions:</p>
+<p>The EclipseLink API provides the following two public classes to support expressions:</p>
 <ul>
 <li>
 <p>The <code>Expression</code> class represents an expression that can be anything from a simple constant to a complex clause with boolean logic. You can manipulate, group, and integrate expressions.</p>
@@ -139,7 +139,7 @@ Release 2.4</div></td>
 <p>The <code>ExpressionBuilder</code> class is the factory for constructing new expressions.</p>
 </li>
 </ul>
-<p>You can specify a selection criterion as an <code>Expression</code> with <code>DatabaseQuery</code> method <code>setSelectionCriteria</code>, and in a finder that takes an <code>Expression</code> .</p>
+<p>You can specify a selection criterion as an <code>Expression</code> with <code>DatabaseQuery</code> method <code>setSelectionCriteria</code>, and in a finder that takes an <code>Expression</code>.</p>
 <p>For more information about using EclipseLink expressions, see <a href="expressions.htm#CHDCAIGD">Chapter 11, "Understanding EclipseLink Expressions"</a>.</p>
 </div>
 <!-- class="sect2" -->

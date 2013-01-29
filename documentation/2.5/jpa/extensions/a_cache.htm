@@ -1,0 +1,409 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>@Cache | EclipseLink 2.5.x Java Persistence API (JPA) Extensions Reference</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
+<meta name="date" content="2013-01-28T8:35:43Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="@Cache" />
+<meta name="relnum" content="Release 2.5" />
+<link rel="stylesheet" type="text/css" href="../../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="http://www.eclipse.org/org/documents/epl-v10.php" title="Copyright" type="text/html" />  
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="a_batchfetch.htm" title="Previous" type="text/html" />
+<link rel="next" href="a_cacheindex.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:4sqnhke2any', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><div class="booktitle">Java Persistence API (JPA) Extensions Reference for EclipseLink, 
+Release 2.5</div></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="a_batchfetch.htm"><img src="../../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="a_cacheindex.htm"><img src="../../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header --><a id="CHDBBIHE" name="CHDBBIHE"></a><a id="TLJPA334" name="TLJPA334"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@Cache</font></h2>
+<p>Use <code>@Cache</code> (in place of the JPA <code>@Cachable</code> annotation) to configure the EclipseLink object cache. By default, EclipseLink uses a shared object cache to cache all objects. You can configure the caching type and options on a per class basis to allow optimal caching.</p>
+<a id="sthref27" name="sthref27"></a>
+<p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
+<p><a href="#CDEJJHDG">Table 2-4</a> describes this annotation's elements.</p>
+<div class="tblhruleformalwide"><a id="TLJPA335" name="TLJPA335"></a><a id="sthref28" name="sthref28"></a><a id="CDEJJHDG" name="CDEJJHDG"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-4 @Cache Annotation Elements</font></em></strong></p>
+<table class="HRuleFormalWide" title="@Cache Annotation Elements" summary="This table describes the list of attributes for this annotation." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="21%" />
+<col width="*" />
+<col width="30%" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t8"><font face="Arial, Helvetica, sans-serif"><strong>Annotation Element</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t8"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c3-t8"><font face="Arial, Helvetica, sans-serif"><strong>Default</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t8" headers="r1c1-t8">
+<p><code>type</code></p>
+</td>
+<td align="left" headers="r2c1-t8 r1c2-t8">
+<p>(Optional) Set this attribute to the type (<code>org.eclipse.persistence.annotations.CacheType</code> enumerated type) of the cache that you will be using:</p>
+<ul>
+<li>
+<p><code>FULL</code></p>
+</li>
+<li>
+<p><code>WEAK</code></p>
+</li>
+<li>
+<p><code>SOFT</code></p>
+</li>
+<li>
+<p><code>SOFT_WEAK</code></p>
+</li>
+<li>
+<p><code>HARD_WEAK</code></p>
+</li>
+<li>
+<p><code>CACHE</code> (not recommended)</p>
+</li>
+<li>
+<p><code>NONE</code> (not recommended, use <code>isolation=ISOLATED</code> instead)</p>
+</li>
+</ul>
+<p>You can override this attribute with these persistence unit properties:</p>
+<ul>
+<li>
+<p><code>eclipselink.cache.type.&lt;</code><em><code>ENTITY</code></em><code>&gt;</code></p>
+</li>
+<li>
+<p><code>eclipselink.cache.type.default</code></p>
+</li>
+</ul>
+</td>
+<td align="left" headers="r2c1-t8 r1c3-t8">
+<p><code>CacheType.SOFT_WEAK</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t8" headers="r1c1-t8">
+<p><code>size</code></p>
+</td>
+<td align="left" headers="r3c1-t8 r1c2-t8">
+<p>(Optional) Set this attribute to an int value to define the size of cache to use (number of objects).</p>
+</td>
+<td align="left" headers="r3c1-t8 r1c3-t8">
+<p><code>100</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t8" headers="r1c1-t8">
+<p><code>isolation</code></p>
+</td>
+<td align="left" headers="r4c1-t8 r1c2-t8">
+<p>(Optional) The caching level of the Entity:</p>
+<ul>
+<li>
+<p><code>shared</code> &ndash; Entity instances will be cached within the EntityManagerFactory/ServerSession level.</p>
+</li>
+<li>
+<p><code>isolated</code> &ndash; The Entity and its data is not stored in the shared cache, but is isolated to the Persistence Context/UnitOfWork or IsolatedClientSession.</p>
+</li>
+<li>
+<p><code>protected</code> &ndash; Entity state information will be cached in the shared cache, but Entity instances will not be shared.</p>
+</li>
+</ul>
+</td>
+<td align="left" headers="r4c1-t8 r1c3-t8">
+<p><code>shared</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t8" headers="r1c1-t8">
+<p><code>expiry</code></p>
+</td>
+<td align="left" headers="r5c1-t8 r1c2-t8">
+<p>(Optional) The <code>int</code> value to enable the expiration of the cached instance after a fixed period of time (milliseconds). Queries executed against the cache after this will be forced back to the database for a refreshed copy.</p>
+</td>
+<td align="left" headers="r5c1-t8 r1c3-t8">
+<p>no expiry</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t8" headers="r1c1-t8">
+<p><code>expiryTimeOfDay</code></p>
+</td>
+<td align="left" headers="r6c1-t8 r1c2-t8">
+<p>(Optional) Specific time of day (<code>org.eclipse.persistence.annotations.TimeOfDay</code>) when the cached instance will expire. Queries executed against the cache after this will be forced back to the database for a refreshed copy.</p>
+</td>
+<td align="left" headers="r6c1-t8 r1c3-t8">
+<p>no expiry</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t8" headers="r1c1-t8">
+<p><code>alwaysRefresh</code></p>
+</td>
+<td align="left" headers="r7c1-t8 r1c2-t8">
+<p>(Optional) Set to a boolean value of true to force all queries that go to the database to always refresh the cache</p>
+</td>
+<td align="left" headers="r7c1-t8 r1c3-t8">
+<p><code>false</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t8" headers="r1c1-t8">
+<p><code>refreshOnlyIfNewer</code></p>
+</td>
+<td align="left" headers="r8c1-t8 r1c2-t8">
+<p>(Optional) Set to a boolean value of <code>true</code> to force all queries that go to the database to refresh the cache only if the data received from the database by a query is newer than the data in the cache (as determined by the optimistic locking field).</p>
+<p><strong>Note:</strong></p>
+<ul>
+<li>
+<p>This option only applies if one of the other refreshing options, such as <code>alwaysRefresh</code>, is already enabled.</p>
+</li>
+<li>
+<p>A version field is necessary to apply this feature.</p>
+</li>
+</ul>
+</td>
+<td align="left" headers="r8c1-t8 r1c3-t8">
+<p><code>false</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t8" headers="r1c1-t8">
+<p><code>disableHits</code></p>
+</td>
+<td align="left" headers="r9c1-t8 r1c2-t8">
+<p>(Optional) Set to a boolean value of true to force all queries to bypass the cache for hits, but still resolve against the cache for identity. This forces all queries to hit the database.</p>
+</td>
+<td align="left" headers="r9c1-t8 r1c3-t8">
+<p><code>false</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t8" headers="r1c1-t8">
+<p><code>coordinationType</code></p>
+</td>
+<td align="left" headers="r10c1-t8 r1c2-t8">
+<p>(Optional) Set this attribute to the cache coordination mode (<code>org.eclipse.persistence.annotations.CacheCoordinationType</code> enumerated type). You must also configure cache coordination in your persistence unit properties. See <a href="persistenceproperties_ref.htm#CACDCCEG2">"Caching"</a>.</p>
+</td>
+<td align="left" headers="r10c1-t8 r1c3-t8">
+<p><code>SEND_OBJECT_CHANGES</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t8" headers="r1c1-t8">
+<p><code>databaseChangeNotificationType</code></p>
+</td>
+<td align="left" headers="r11c1-t8 r1c2-t8">
+<p>(Optional) The database change notification mode:</p>
+<ul>
+<li>
+<p>Invalidate &ndash; Invalidates the EclipseLink cache when a database change event is received for an object.</p>
+</li>
+<li>
+<p>None &ndash; No database change events will be processed. The database event listener must also be configured for the persistence unit/session.</p>
+</li>
+</ul>
+</td>
+<td align="left" headers="r11c1-t8 r1c3-t8">
+<p><code>INVALIDATE</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref29" name="sthref29"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>Use the <code>@Cache</code> annotation instead of the JPA <code>@Cachable</code> annotation to provide additional caching configuration.</p>
+<p>You can define the <code>@Cache</code> annotation on the following:</p>
+<ul>
+<li>
+<p><code>@Entity</code></p>
+</li>
+<li>
+<p><code>@MappedSuperclass</code></p>
+</li>
+<li>
+<p>the root of the inheritance hierarchy (if applicable)</p>
+</li>
+</ul>
+<p>If you define the <code>@Cache</code> annotation on an inheritance subclass, the annotation will be ignored. If you define the <code>@Cache</code> annotation on <code>@Embeddable</code> EclipseLink will throw an exception.</p>
+<a id="TLJPA336" name="TLJPA336"></a>
+<p><b><font face="arial, helvetica, sans-serif" color="#330099">Caching in EclipseLink</font></b></p>
+<p>The EclipseLink cache is an in-memory repository that stores recently read or written objects based on class and primary key values. EclipseLink uses the cache to do the following:</p>
+<ul>
+<li>
+<p>Improve performance by holding recently read or written objects and accessing them in-memory to minimize database access.</p>
+</li>
+<li>
+<p>Manage locking and isolation level.</p>
+</li>
+<li>
+<p>Manage object identity.</p>
+</li>
+</ul>
+<p>For more information about the EclipseLink cache and its default behavior, see:</p>
+<ul>
+<li>
+<p>"Caching Overview"<br />
+<code>http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic JPA Development/Caching/Caching Overview</code></p>
+</li>
+</ul>
+<p>EclipseLink defines the following entity caching annotations:</p>
+<ul>
+<li>
+<p><code>@Cache</code></p>
+</li>
+<li>
+<p><code><a href="a_timeofday.htm#BGBGACHC">@TimeOfDay</a></code></p>
+</li>
+<li>
+<p><code><a href="a_existencechecking.htm#BABICJEJ">@ExistenceChecking</a></code></p>
+</li>
+</ul>
+<p>EclipseLink also provides a number of persistence unit properties that you can specify to configure the cache. These properties may compliment or provide an alternative to the usage of annotations.</p>
+<p>For more information, see <a href="persistenceproperties_ref.htm#CACDCCEG2">"Caching"</a>.</p>
+<a id="sthref30" name="sthref30"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CHDEEGCI">Example 2-10</a> illustrates an <code>@Cache</code> annotation.</p>
+<div class="example"><a id="CHDEEGCI" name="CHDEEGCI"></a><a id="TLJPA337" name="TLJPA337"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-10 Using @Cache Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+...
+@Entity
+@Cache(
+  type=CacheType.SOFT, // Cache everything until the JVM decides memory is low.
+  size=64000  // Use 64,000 as the initial cache size.
+  expiry=36000000,  // 10 minutes
+  coordinationType=CacheCoordinationType.INVALIDATE_CHANGED_OBJECTS  // if cache coordination is used, only send invalidation messages.
+)
+public class Employee {
+  ...
+} 
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CDEJDBFJ">Example 2-11</a> shows how to use this annotation in the <code>eclipselink-orm.xml</code> file.</p>
+<div class="example"><a id="CDEJDBFJ" name="CDEJDBFJ"></a><a id="TLJPA338" name="TLJPA338"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-11 Using &lt;cache&gt; XML</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;entity-mappings
+  xmlns="http://www.eclipse.org/eclipselink/xsds/persistence/orm"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.eclipse.org/eclipselink/xsds/persistence/orm 
+  http://www.eclipse.org/eclipselink/xsds/eclipselink_orm_2_4.xsd"
+  version="2.4"&gt;
+    &lt;entity name="Employee" class="org.acme.Employee" access="FIELD"&gt;
+      &lt;cache type="SOFT" size="64000" expiry="36000000" coordination-type="INVALIDATE_CHANGED_OBJECTS"/&gt;
+    &lt;/entity&gt;
+&lt;/entity-mappings&gt;
+</pre></div>
+<!-- class="example" -->
+<p>You can also specify caching properties at the persistence unit level (in the <code>persistence.xml</code> file) as shown here:</p>
+<div class="example"><a id="TLJPA339" name="TLJPA339"></a><a id="sthref31" name="sthref31"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-12 Specifying Caching in persistence.xml</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;persistence xmlns="http://java.sun.com/xml/ns/persistence"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/persistence persistence_2_0.xsd"
+  version="2.0"&gt;
+    &lt;persistence-unit name="acme" transaction-type="RESOURCE_LOCAL"&gt;
+      &lt;provider&gt;org.eclipse.persistence.jpa.PersistenceProvider&lt;/provider&gt;
+        &lt;exclude-unlisted-classes&gt;false&lt;/exclude-unlisted-classes&gt;
+        &lt;properties&gt;
+          &lt;property name="eclipselink.cache.shared.default" value="false"/&gt;
+          &lt;property name="eclipselink.cache.shared.Employee" value="true"/&gt;
+          &lt;property name="eclipselink.cache.type.Employee" value="SOFT"/&gt;
+          &lt;property name="eclipselink.cache.size.Employee" value="64000"/&gt;
+        &lt;/properties&gt;
+    &lt;/persistence-unit&gt;
+&lt;/persistence&gt;
+</pre></div>
+<!-- class="example" -->
+<a id="sthref32" name="sthref32"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="a_existencechecking.htm#BABICJEJ">"@ExistenceChecking"</a></p>
+</li>
+<li>
+<p><a href="a_timeofday.htm#BGBGACHC">"@TimeOfDay"</a></p>
+</li>
+<li>
+<p><a href="a_cacheinterceptor.htm#BABJGDGB">"@CacheInterceptor"</a></p>
+</li>
+<li>
+<p>"Configuring Caching"<br />
+<code><a href=""></a></code></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="a_batchfetch.htm"><img src="../../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="a_cacheindex.htm"><img src="../../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2012,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../../dcommon/html/cpyr.htm"><br />
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2012, 2013 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
+</html>
