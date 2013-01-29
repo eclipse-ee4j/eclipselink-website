@@ -151,11 +151,27 @@
 </form>
 				</li>
 
-				<li><a href="2.4/jpa/extensions/a_nosql.htm">EclipseLink NoSQL</a></li>
+				<li>
+<form action="../"><label for="solutions">EclipseLink NoSQL</label>
+  <select name="nosql">
+    <option value="2.5/concepts/nosql.htm"> 2.5 </option>
+    <option value="2.4/jpa/extensions/a_nosql.htm"> 2.4 </option>
+  </select>
+  <input type="button" onclick="window.open(this.form.nosql.options[this.form.nosql.selectedIndex].value,'_top')" value="Go">
+</form>
+				</li>
 
-				<li><a href="http://wiki.eclipse.org/Category:SDO">EclipseLink SDO</a></li>
+				<li>
+<form action="../"><label for="solutions">EclipseLink SDO</label>
+  <select name="sdo">
+    <option value="http://www.eclipse.org/eclipselink/moxy.php"> 2.5 </option>
+    <option value="http://wiki.eclipse.org/Category:SDO"> 2.4 </option>
+  </select>
+  <input type="button" onclick="window.open(this.form.sdo.options[this.form.sdo.selectedIndex].value,'_top')" value="Go">
+</form>				
+				</li>
 
-				<li><a href=""></a>
+				<li>
 <form action="../"><label for="solutions">Developing Persistence Architectures Using EclipseLink Database Web Services</label>
   <select name="dbws">
     <option value="http://www.eclipse.org/eclipselink/documentation/2.5/dbws/toc.htm"> 2.5 </option>
