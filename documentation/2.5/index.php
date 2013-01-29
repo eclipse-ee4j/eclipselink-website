@@ -45,7 +45,6 @@
 				<div class="bigbuttonsDocumentation">
 					<a href="/eclipselink/documentation/index.php"><div class="bigbuttonsTitleLink"></div></a>
 					<span>
-						<a href="/eclipselink/documentation/2.5/index.php">Docs</a>,
 						<a href="/eclipselink/api/2.5/index.html"> Java Docs</a>,
 						<a href="http://wiki.eclipse.org/EclipseLink/Examples"> Examples</a>,
 						<a href="http://wiki.eclipse.org/EclipseLink/FAQ"> FAQ</a>, <br/>
@@ -86,9 +85,9 @@
 	<div class="homeitem3col">
 		<h2>EclipseLink 2.5 Documentation (draft)</h2>
 			<ul>
-				<li><a href="http://www.eclipse.org/eclipselink/releases/2.5.php">Release Notes</a></li>
-				<li><a href="http://wiki.eclipse.org/EclipseLink/Installing_and_Configuring_EclipseLink">Installation and Configuration</a></li>
-				<li><a href="http://www.eclipse.org/eclipselink/api/2.5/index.html">Java Docs</a></li>
+				<li><!-- <a href="http://www.eclipse.org/eclipselink/releases/2.5.php"> -->Release Notes</a></li>
+				<li><a href="solutions/install.htm">Installation and Configuration</a></li>
+				<li><!-- <a href="http://www.eclipse.org/eclipselink/api/2.5/index.html"> -->Java Docs</a></li>
 			</ul>
 	</div>
 
