@@ -84,15 +84,19 @@
 			<h3>Documentation</h3>
 
 				<li>
-<a href="http://www.eclipse.org/eclipselink/documentation">Understanding EclipseLink (Concepts Guide)</a>
+<a href="http://www.eclipse.org/eclipselink/documentation">Concepts Guide</a>
  				</li>
 				
 				<li>
-<a href="http://www.eclipse.org/eclipselink/documentation">EclipseLink Solutions Guide</a>
+<a href="http://www.eclipse.org/eclipselink/documentation">Solutions Guide</a>
 				</li>
 				
 				<li>
-<a href="http://www.eclipse.org/eclipselink/documentation">EclipseLink JPA Extensions Reference</a>
+<a href="http://www.eclipse.org/eclipselink/documentation">Extensions Reference</a>
+				</li>
+	
+				<li>
+<a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA">Examples</a>
 				</li>
 
 			<h3>JPA Resources</h3>
