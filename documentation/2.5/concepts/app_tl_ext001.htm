@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Database Support | EclipseLink 2.5.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T11:58:11Z" />
+<meta name="date" content="2013-01-29T16:49:8Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Database Support" />
 <meta name="relnum" content="Release 2.4" />
@@ -46,7 +46,7 @@ Release 2.5</div></td>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-01-28</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-01-29</font></p>
 <a id="A1095976" name="A1095976"></a><a id="OTLCG94454" name="OTLCG94454"></a>
 <div class="sect1">
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Database Support</font></h1>
@@ -391,23 +391,34 @@ Release 2.5</div></td>
 </tr>
 <tr align="left" valign="top">
 <td align="left" id="r19c1-t2" headers="r1c1-t2">
-<p>PointBase</p>
+<p>PervasivePlatform</p>
 </td>
 <td align="left" headers="r19c1-t2 r1c2-t2">
-<p><code>org.eclipse.persistence.platform.database.PointBasePlatform</code></p>
+<p><code>org.eclipse.persistence.platform.database.PervasivePlatform</code></p>
 </td>
 <td align="left" headers="r19c1-t2 r1c3-t2">
-<p>Provides PointBase database-specific behavior.</p>
+<p>Provides Pervasive PSQL-specific behavior.</p>
 </td>
 </tr>
 <tr align="left" valign="top">
 <td align="left" id="r20c1-t2" headers="r1c1-t2">
-<p>PostgreSQL</p>
+<p>PointBase</p>
 </td>
 <td align="left" headers="r20c1-t2 r1c2-t2">
-<p><code>org.eclipse.persistence.platform.database.PostgreSQLPlatform</code></p>
+<p><code>org.eclipse.persistence.platform.database.PointBasePlatform</code></p>
 </td>
 <td align="left" headers="r20c1-t2 r1c3-t2">
+<p>Provides PointBase database-specific behavior.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r21c1-t2" headers="r1c1-t2">
+<p>PostgreSQL</p>
+</td>
+<td align="left" headers="r21c1-t2 r1c2-t2">
+<p><code>org.eclipse.persistence.platform.database.PostgreSQLPlatform</code></p>
+</td>
+<td align="left" headers="r21c1-t2 r1c3-t2">
 <p>Provides PostgreSQL database-specific behavior, including:</p>
 <ul>
 <li>
@@ -433,35 +444,35 @@ Release 2.5</div></td>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r21c1-t2" headers="r1c1-t2">
+<td align="left" id="r22c1-t2" headers="r1c1-t2">
 <p>SAP MaxDB</p>
 </td>
-<td align="left" headers="r21c1-t2 r1c2-t2">
+<td align="left" headers="r22c1-t2 r1c2-t2">
 <p><code>org.eclipse.persistence.platform.database.MaxDBPlatform</code></p>
 </td>
-<td align="left" headers="r21c1-t2 r1c3-t2">
+<td align="left" headers="r22c1-t2 r1c3-t2">
 <p>Provides MaxDB database-specific behavior.</p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r22c1-t2" headers="r1c1-t2">
+<td align="left" id="r23c1-t2" headers="r1c1-t2">
 <p>SAP SyBase SQLAnywhere</p>
 </td>
-<td align="left" headers="r22c1-t2 r1c2-t2">
+<td align="left" headers="r23c1-t2 r1c2-t2">
 <p><code>org.eclipse.persistence.platform.database.SQLAnywherePlatform</code></p>
 </td>
-<td align="left" headers="r22c1-t2 r1c3-t2">
+<td align="left" headers="r23c1-t2 r1c3-t2">
 <p>Provides SQL Anywhere-specific behavior.</p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r23c1-t2" headers="r1c1-t2">
+<td align="left" id="r24c1-t2" headers="r1c1-t2">
 <p>Sybase</p>
 </td>
-<td align="left" headers="r23c1-t2 r1c2-t2">
+<td align="left" headers="r24c1-t2 r1c2-t2">
 <p><code>org.eclipse.persistence.platform.database.SybasePlatform</code></p>
 </td>
-<td align="left" headers="r23c1-t2 r1c3-t2">
+<td align="left" headers="r24c1-t2 r1c3-t2">
 <p>Provides Sybase-specific behavior, including:</p>
 <ul>
 <li>
@@ -474,13 +485,13 @@ Release 2.5</div></td>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r24c1-t2" headers="r1c1-t2">
+<td align="left" id="r25c1-t2" headers="r1c1-t2">
 <p>Fujitsu Symfoware</p>
 </td>
-<td align="left" headers="r24c1-t2 r1c2-t2">
+<td align="left" headers="r25c1-t2 r1c2-t2">
 <p><code>org.eclipse.persistence.platform.database.SymfowarePlatform</code></p>
 </td>
-<td align="left" headers="r24c1-t2 r1c3-t2">
+<td align="left" headers="r25c1-t2 r1c3-t2">
 <p>Provides Symfoware-specific behavior, including:</p>
 <ul>
 <li>
