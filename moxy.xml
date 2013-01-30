@@ -73,7 +73,19 @@
 	<section class="sideitem">
 		<description>
 			<h3>Documentation</h3>
-			<li><a href="./documentation/2.4/moxy/toc.htm">Developing JAXB Applications Using EclipseLink MOXy</a></li>
+			
+				<li>
+<a href="http://www.eclipse.org/eclipselink/documentation">Understanding EclipseLink (Concepts Guide)</a>
+ 				</li>
+				
+				<li>
+<a href="http://www.eclipse.org/eclipselink/documentation">EclipseLink Solutions Guide</a>
+				</li>
+				
+				<li>
+<a href="http://www.eclipse.org/eclipselink/documentation">Developing JAXB Applications Using EclipseLink MOXy</a>
+				</li>
+
 			<li><a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy">MOXy Examples</a></li>
 		</description>
 	</section>
