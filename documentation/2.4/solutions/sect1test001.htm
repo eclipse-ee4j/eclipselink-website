@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Introduction to the Solution | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T11:31:58Z" />
+<meta name="date" content="2013-01-30T11:13:6Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Introduction to the Solution" />
 <meta name="relnum" content="Release 2.4" />
@@ -48,9 +48,9 @@ Release 2.4</div></td>
 <div class="ind"><!-- End Header --><a id="BCGDFFJG" name="BCGDFFJG"></a><a id="TLADG907" name="TLADG907"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Introduction to the Solution</font></h1>
-<p>"Native" EclipseLink ORM refers to the API, configuration files, and tools for object-relational mapping that evolved in EclipseLink before the Java Persistence API (JPA) standardized an object-relational mapping API. Full JPA support was introduced in EclipseLink 10<em>g</em> (10.1.3.1.0), via EclipseLink Essentials. However, native EclipseLink continued to be supported.</p>
-<p>Prior to the EclipseLink 11<em>g</em> (11.1.1) release, Oracle contributed the EclipseLink source code--including EclipseLink JPA and native EclipseLink--to the Eclipse Foundation, where it was used to form the basis of the open-source EclipseLink persistence services project. Then, in EclipseLink 11<em>g</em> Release 1 (11.1.1), Oracle started to include EclipseLink in EclipseLink, providing EclipseLink's core functionality.</p>
-<p>EclipseLink developers using EclipseLink versions 11.1.1.0.0 though 11.1.1.6.0 have access to native EclipseLink ORM in either the proprietary Oracle <code>toplink.jar</code> or in the EclipseLink <code>eclipselink.jar</code>. In <code>toplink.jar</code>, the classes are in packages whose names start with <code>oracle.toplink.*</code>. In <code>eclipselink.jar</code>, those package names begin instead with <code>org.eclipselink.persistence.</code>.</p>
+<p>"Native" TopLink ORM refers to the API, configuration files, and tools for object-relational mapping that evolved in TopLink before the Java Persistence API (JPA) standardized an object-relational mapping API. Full JPA support was introduced in Oracle TopLink 10<em>g</em> (10.1.3.1.0), via TopLink Essentials. However, native TopLink continued to be supported.</p>
+<p>Prior to the TopLink 11<em>g</em> (11.1.1) release, Oracle contributed the TopLink source code--including TopLink JPA and native TopLink--to the Eclipse Foundation, where it was used to form the basis of the open-source EclipseLink persistence services project. Then, in TopLink 11<em>g</em> Release 1 (11.1.1), Oracle started to include EclipseLink in TopLink, providing TopLink's core functionality.</p>
+<p>EclipseLink developers using TopLink versions 11.1.1.0.0 though 11.1.1.6.0 have access to native TopLink ORM in either the proprietary Oracle <code>toplink.jar</code> or in the EclipseLink <code>eclipselink.jar</code>. In <code>toplink.jar</code>, the classes are in packages whose names start with <code>oracle.toplink.*</code>. In <code>eclipselink.jar</code>, those package names begin instead with <code>org.eclipselink.persistence.</code>.</p>
 <div align="center">
 <div class="inftblnote"><br />
 <table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
@@ -58,7 +58,7 @@ Release 2.4</div></td>
 <tr>
 <td align="left">
 <p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
-<p>The <code>toplink.jar</code> file was deprecated in EclipseLink 11<em>g</em> and is no long shipped with EclipseLink 12<em>c</em>. It is recommended that you migrate off <code>oracle.toplink.*</code> in EclipseLink 11<em>g</em>.</p>
+<p>The <code>toplink.jar</code> file was deprecated in TopLink 11<em>g</em> and is no long shipped with TopLink 12<em>c</em>. It is recommended that you migrate off <code>oracle.toplink.*</code> in TopLink 11<em>g</em>.</p>
 </td>
 </tr>
 </tbody>
@@ -74,7 +74,7 @@ Release 2.4</div></td>
 <tr>
 <td align="left">
 <p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
-<p>Following the instructions in this chapter will update your application to use the current EclipseLink code base. Doing so retains the design and functionality of your application as originally implemented. However, thse instructions do not describe how to convert a native EclipseLink-based application to use JPA or any of the other persistence services in current versions of EclipseLink. See the other EclipseLink documenation sources for that information.</p>
+<p>Following the instructions in this chapter will update your application to use the current EclipseLink code base. Doing so retains the design and functionality of your application as originally implemented. However, thse instructions do not describe how to convert a native TopLink-based application to use JPA or any of the other persistence services in current versions of EclipseLink. See the other EclipseLink documenation sources for that information.</p>
 </td>
 </tr>
 </tbody>
