@@ -82,9 +82,39 @@
 	<section class="sideitem">
 		<description>
 			<h3>Documentation</h3>
-			<li><a href="./documentation/2.4/jpa/extensions/toc.htm">EclipseLink JPA Extensions</a></li>
-			<li><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA">JPA User Guide</a></li>
-			<li><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA">JPA Examples</a></li>
+
+				<li>
+<form action="../"><label for="Concepts">Understanding EclipseLink (Concepts Guide)</label>
+  <select name="Concepts">
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.5/concepts/toc.htm"> 2.5 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.4/concepts/toc.htm" selected="selected"> 2.4 </option>
+  </select>
+  <input type="button" onclick="window.open(this.form.Concepts.options[this.form.Concepts.selectedIndex].value,'_top')" value="Go">
+</form>
+ 				</li>
+				
+				<li>
+<form action="../"><label for="solutions">EclipseLink Solutions Guide</label>
+  <select name="Solutions">
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.5/solutions/toc.htm"> 2.5 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.4/solutions/toc.htm" selected="selected"> 2.4 </option>
+  </select>
+  <input type="button" onclick="window.open(this.form.Solutions.options[this.form.Solutions.selectedIndex].value,'_top')" value="Go">
+</form>
+				</li>
+				
+				<li>
+<form action="../"><label for="solutions">EclipseLink JPA Extensions Reference</label>
+  <select name="JPA">
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.5/jpa/extensions/toc.htm"> 2.5 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.4/jpa/extensions/toc.htm" selected="selected"> 2.4 </option>
+  </select>
+  <input type="button" onclick="window.open(this.form.JPA.options[this.form.JPA.selectedIndex].value,'_top')" value="Go">
+</form>
+				</li>
+
+
+
 
 			<h3>JPA Resources</h3>
 			<li>
