@@ -21,7 +21,7 @@
 	$localVersion = false;
 	
 	# Define these here, or in _projectCommon.php for site-wide values
-	$pageKeywords	= "eclipse, project, eclipselink, persistence";
+	$pageKeywords	= "eclipse, project, eclipselink, persistence, jpa, jaxb, moxy, ox, or, j2eee";
 	$pageAuthor		= "Rick Sapir";
 	$pageTitle 		= "EclipseLink 2.5 Documentation";
 	

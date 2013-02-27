@@ -5,24 +5,25 @@
 <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
-<title>Specifying JSON Bindings | EclipseLink 2.5.x EclipseLink MOXy</title>
+<title>Specifying JSON Bindings | EclipseLink 2.5 EclipseLink MOXy</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T9:6:44Z" />
+<meta name="date" content="2013-02-27T7:55:20Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Specifying JSON Bindings" />
 <meta name="relnum" content="Release 2.5" />
-<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<meta name="partnum" content=" " />
 <link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
 <link rel="start" href="../../index.htm" title="Home" type="text/html" />
 <link rel="contents" href="toc.htm" title="Contents" type="text/html" />
 <link rel="prev" href="json002.htm" title="Previous" type="text/html" />
 <!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
-<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:dt93gmwxcuc', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:1hjujor5_fg', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
-<td align="left" valign="top"><div class="booktitle">Developing JAXB Applications Using EclipseLink MOXy, 
-Release 2.5</div></td>
+<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><b>EclipseLink Developing JAXB Applications Using EclipseLink</b><br />
+<b>Release 2.5</b><br />
+ </font></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -44,7 +45,7 @@ Release 2.5</div></td>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-01-28</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-02-27</font></p>
 <a id="BABEADAH" name="BABEADAH"></a><a id="TLJAX471" name="TLJAX471"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Specifying JSON Bindings</font></h1>
@@ -145,7 +146,7 @@ StreamSource json = new StreamSource(new File("src/org/example/input.json"));
 </pre></div>
 <!-- class="example" -->
 <a id="TLJAX477" name="TLJAX477"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref202" name="sthref202"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref201" name="sthref201"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Specifying JSON Data Types</font></h2>
 <p>Although XML has a single datatype, JSON differentiates between strings, numbers, and booleans. EclipseLink supports these datatypes automatically, as shown in <a href="#BABGFFEH">Example 10-7</a></p>
 <div class="example"><a id="BABGFFEH" name="BABGFFEH"></a><a id="TLJAX478" name="TLJAX478"></a>
@@ -170,7 +171,7 @@ public class Address {
 <!-- class="example" --></div>
 <!-- class="sect2" -->
 <a id="TLJAX479" name="TLJAX479"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref203" name="sthref203"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref202" name="sthref202"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Supporting Attributes</font></h2>
 <p>JSON does not use attributes; anything mapped with a <code>@XmlAttribute</code> annotation will be marshalled as an element. By default, EclipseLink triggers <em>both</em> the attribute and element events, thereby allowing either the mapped attribute or element to handle the value.</p>
 <p>You can override this behavior by using the <code>JSON_ATTRIBUTE_PREFIX</code> property to specify an attribute prefix, as shown in <a href="#BABEFCED">Example 10-8</a>. EclipseLink prepends the prefix to the attribute name during marshal and will recognize it during unmarshal.</p>
@@ -203,7 +204,7 @@ JAXBContext ctx = JAXBContext.newInstance(new Class[] { Phone.class }, propertie
 <!-- class="example" --></div>
 <!-- class="sect2" -->
 <a id="TLJAX482" name="TLJAX482"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref204" name="sthref204"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref203" name="sthref203"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Supporting no Root Element</font></h2>
 <p>EclipseLink supports JSON documents without a root element. By default, if no <code>@XmlRootElement</code> annotation exists, the marshalled JSON document will not have a root element. You can override this behavior (that is omit the root element from the JSON output, even if the <code>@XmlRootElement</code> <em>is</em> specified) by setting the <code>JSON_INCLUDE_ROOT</code> property when marshalling a document, as shown in <a href="#BABECFAI">Example 10-10</a>.</p>
 <div class="example"><a id="BABECFAI" name="BABECFAI"></a><a id="TLJAX483" name="TLJAX483"></a>
@@ -213,7 +214,7 @@ marshaller.setProperty(MarshallerProperties.JSON_INCLUDE_ROOT, false);
 </pre></div>
 <!-- class="example" -->
 <p>When unmarshaling a document with no root elements, you should set the <code>JSON_INCLUDE_ROOT</code> property as shown in <a href="#BABECFAI">Example 10-10</a>.</p>
-<div class="example"><a id="TLJAX484" name="TLJAX484"></a><a id="sthref205" name="sthref205"></a>
+<div class="example"><a id="TLJAX484" name="TLJAX484"></a><a id="sthref204" name="sthref204"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 10-11 Unmarshalling no Root Element Documents</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 unmarshaller.setProperty(UnmarshallerProperties.JSON_INCLUDE_ROOT, false);
@@ -237,7 +238,7 @@ JAXBElement&lt;SearchResults&gt; jaxbElement = unmarshaller.unmarshal(source, Se
 </div>
 <!-- class="sect2" -->
 <a id="TLJAX485" name="TLJAX485"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref206" name="sthref206"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref205" name="sthref205"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Using Namespaces</font></h2>
 <p>Because JSON does not use namespces, by default all namespaces and prefixes are ignored when marshaling and unmarshaling. In some cases, this may be an issue if you have multiple mappings with the same local name &ndash; there will be no way to distinguish between the mappings.</p>
 <p>With EclipseLink, you can supply a Map of namespace-to-prefix (or an instance of <code>NamespacePrefixMapper</code>) to the Marshaller and Unmarshaller. The namespace prefix will appear in the marshalled document prepended to the element name. EclipseLink will recognize the prefix during an unmarshal operation and the resulting Java objects will be placed in the proper namespaces.</p>
@@ -269,7 +270,7 @@ jsonUnmarshaller.setProperty(UnmarshallerProperties.JSON_NAMESPACE_SEPARATOR, ':
 </pre></div>
 <!-- class="sect2" -->
 <a id="TLJAX487" name="TLJAX487"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref207" name="sthref207"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref206" name="sthref206"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Using Collections</font></h2>
 <p>By default, when marshalling to JSON, EclipseLink marshals empty collections as <code>[&nbsp;]</code>, as shown in <a href="#BABFJGGE">Example 10-13</a>.</p>
 <div class="example"><a id="BABFJGGE" name="BABFJGGE"></a><a id="TLJAX488" name="TLJAX488"></a>
@@ -296,7 +297,7 @@ jsonMarshaller.setProperty(MarshallerProperties.JSON_MARSHAL_EMPTY_COLLECTIONS, 
 </pre></div>
 <!-- class="sect2" -->
 <a id="TLJAX489" name="TLJAX489"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref208" name="sthref208"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref207" name="sthref207"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Mapping Root-Level Collections</font></h2>
 <p>If you use the <code>@XmlRootElement(name="root")</code> annotation to specify a root level, the JSON document can be marshaled as:</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -333,7 +334,7 @@ unmarshaller.unmarshal(json, Root.class);
 </pre></div>
 <!-- class="sect2" -->
 <a id="TLJAX490" name="TLJAX490"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref209" name="sthref209"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref208" name="sthref208"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Wrapping XML Values</font></h2>
 <p>JAXB supports one or more <code>@XmlAttributes</code> on <code>@XmlValue classes</code>, as shown in <a href="#BABCDADE">Example 10-14</a></p>
 <div class="example"><a id="BABCDADE" name="BABCDADE"></a><a id="TLJAX491" name="TLJAX491"></a>
@@ -446,7 +447,7 @@ Unmarshaller jsonUnmarshaller = ctx.createUnmarshaller();
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-<font size="-2">Copyright&nbsp;&copy;&nbsp;2013,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
+<font size="-2">Copyright&nbsp;&copy;&nbsp;1997, 2013,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
@@ -461,5 +462,5 @@ Unmarshaller jsonUnmarshaller = ctx.createUnmarshaller();
 </table>
 </div>
 <!-- class="footer" -->
-<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
+<div id="copyright">Copyright &copy; 2013 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
 </html>

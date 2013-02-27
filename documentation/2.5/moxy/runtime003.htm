@@ -5,25 +5,26 @@
 <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
-<title>Using XML Bindings | EclipseLink 2.5.x EclipseLink MOXy</title>
+<title>Using XML Bindings | EclipseLink 2.5 EclipseLink MOXy</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T9:6:42Z" />
+<meta name="date" content="2013-02-27T7:55:17Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Using XML Bindings" />
 <meta name="relnum" content="Release 2.5" />
-<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<meta name="partnum" content=" " />
 <link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
 <link rel="start" href="../../index.htm" title="Home" type="text/html" />
 <link rel="contents" href="toc.htm" title="Contents" type="text/html" />
 <link rel="prev" href="runtime002.htm" title="Previous" type="text/html" />
 <link rel="next" href="runtime004.htm" title="Next" type="text/html" />
 <!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
-<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:dt93gmwxcuc', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:1hjujor5_fg', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
-<td align="left" valign="top"><div class="booktitle">Developing JAXB Applications Using EclipseLink MOXy, 
-Release 2.5</div></td>
+<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><b>EclipseLink Developing JAXB Applications Using EclipseLink</b><br />
+<b>Release 2.5</b><br />
+ </font></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -46,7 +47,7 @@ Release 2.5</div></td>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-01-28</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-02-27</font></p>
 <a id="CACHCHAE" name="CACHCHAE"></a><a id="TLJAX136" name="TLJAX136"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Using XML Bindings</font></h1>
@@ -64,7 +65,7 @@ Release 2.5</div></td>
 </ul>
 <p>This section describes the XML Bindings format and demonstrates some basic use cases.</p>
 <a id="TLJAX137" name="TLJAX137"></a>
-<div class="sect2"><a id="sthref16" name="sthref16"></a>
+<div class="sect2"><a id="sthref15" name="sthref15"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Understanding the XML Bindings Format</font></h2>
 <p>An XML Bindings document is XML that specifies Java type information, mapping information, context-wide properties &ndash; everything you need to define your JAXB system. An example Bindings document is shown in <a href="#CACDBJHE">Example 2-9</a>.</p>
 <div class="example"><a id="CACDBJHE" name="CACDBJHE"></a><a id="TLJAX138" name="TLJAX138"></a>
@@ -120,7 +121,7 @@ Release 2.5</div></td>
  &lt;/xml-bindings&gt;
 </pre></div>
 <!-- class="example" -->
-<div class="tblhruleformal"><a id="TLJAX139" name="TLJAX139"></a><a id="sthref17" name="sthref17"></a><a id="sthref18" name="sthref18"></a>
+<div class="tblhruleformal"><a id="TLJAX139" name="TLJAX139"></a><a id="sthref16" name="sthref16"></a><a id="sthref17" name="sthref17"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 2-1 Binding Document Attributes</font></em></strong></p>
 <table class="HRuleFormal" title="Binding Document Attributes" summary="Binding Document Attributes" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="25%" />
@@ -178,7 +179,7 @@ Release 2.5</div></td>
 <!-- class="tblhruleformal" --></div>
 <!-- class="sect2" -->
 <a id="TLJAX140" name="TLJAX140"></a>
-<div class="sect2"><a id="sthref19" name="sthref19"></a>
+<div class="sect2"><a id="sthref18" name="sthref18"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Bootstrapping with XML Bindings</font></h2>
 <p>When instantiating a <code>JAXBContext</code>, links to Bindings documents are passed in via the properties parameter, using a special key, <code>JAXBContextProperties.OXM_METADATA_SOURCE</code>. The value of this key will be a handle to the Bindings document, in the form of one of the following:</p>
 <ul>
@@ -222,7 +223,7 @@ Release 2.5</div></td>
 </div>
 <!-- class="sect2" -->
 <a id="TLJAX141" name="TLJAX141"></a>
-<div class="sect2"><a id="sthref20" name="sthref20"></a>
+<div class="sect2"><a id="sthref19" name="sthref19"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Using XML Bindings with Annotations</font></h2>
 <p>The most typical use of an XML Bindings document is in conjunction with JAXB annotations. You may have situation where you are not permitted to edit your Java domain classes, but want to add additional mapping functionality. Or, you may wish to avoid importing any EclipseLink code into your domain model, but still take advantage of MOXy's advanced mapping features. When Bindings metadata is provided during context creation, its mapping information will be combined with any JAXB annotation information.</p>
 <p>For example, consider the simple JAXB domain class and its default JAXB XML representation shown in <a href="#CACJAIBJ">Example 2-10</a>.</p>
@@ -293,7 +294,7 @@ public class Customer {
 </pre></div>
 <!-- class="example" -->
 <p>The Bindings must then be provided during JAXB context creation. Bindings information is passed in via the <code>properties</code> argument:</p>
-<div class="example"><a id="TLJAX144" name="TLJAX144"></a><a id="sthref21" name="sthref21"></a>
+<div class="example"><a id="TLJAX144" name="TLJAX144"></a><a id="sthref20" name="sthref20"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-12 Providing Bindings</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
@@ -327,10 +328,10 @@ JAXBContext ctx = JAXBContext.newInstance(new Class[] { Customer.class }, proper
 </pre></div>
 <!-- class="sect2" -->
 <a id="TLJAX145" name="TLJAX145"></a>
-<div class="sect2"><a id="sthref22" name="sthref22"></a>
+<div class="sect2"><a id="sthref21" name="sthref21"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Using Multiple Bindings Documents</font></h2>
 <p>Starting with version 2.3, EclipseLink allows you to use mapping information from multiple XML Bindings documents. Using this approach, you can split your metadata up as you wish.</p>
-<div class="example"><a id="TLJAX146" name="TLJAX146"></a><a id="sthref23" name="sthref23"></a>
+<div class="example"><a id="TLJAX146" name="TLJAX146"></a><a id="sthref22" name="sthref22"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-13 Using a List of XML Bindings:</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 ...
@@ -351,7 +352,7 @@ JAXBContext ctx = JAXBContext.newInstance(new Class[] { Customer.class }, proper
 </pre></div>
 <!-- class="example" -->
 <p>When using a List of Bindings documents, each one must define the package attribute of <code>&lt;xml-bindings&gt;</code>, to indicate the package for each set of Bindings.</p>
-<div class="example"><a id="TLJAX147" name="TLJAX147"></a><a id="sthref24" name="sthref24"></a>
+<div class="example"><a id="TLJAX147" name="TLJAX147"></a><a id="sthref23" name="sthref23"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-14 Using a Map for multiple packages:</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 ...
@@ -383,7 +384,7 @@ JAXBContext ctx = JAXBContext.newInstance(new Class[] { Customer.class }, proper
 <!-- class="example" --></div>
 <!-- class="sect2" -->
 <a id="TLJAX148" name="TLJAX148"></a>
-<div class="sect2"><a id="sthref25" name="sthref25"></a>
+<div class="sect2"><a id="sthref24" name="sthref24"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Understanding Override Rules</font></h2>
 <p>When multiple sources of metadata are encountered for the same package, a unified set of mappings will be created by merging the complete set of metadata. First, the annotations from the Java class will be processed, and then any XML Bindings information will be applied. The order that Bindings are specified is relevant; values in subsequent documents will override the ones defined in previous ones.</p>
 <p>The following rules will be used for merging:</p>
@@ -466,13 +467,13 @@ JAXBContext ctx = JAXBContext.newInstance(new Class[] { Customer.class }, proper
 </div>
 <!-- class="sect2" -->
 <a id="TLJAX149" name="TLJAX149"></a>
-<div class="sect2"><a id="sthref26" name="sthref26"></a>
+<div class="sect2"><a id="sthref25" name="sthref25"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Using Complete Metadata</font></h2>
 <p>If you would like to store all of your metadata in XML Bindings and ignore any JAXB annotations in your Java class, you can include the <code>xml-mapping-metadata-complete</code> attribute in the <code>&lt;xml-bindings&gt;</code> element of your Bindings document. Default JAXB mappings will still be generated (the same as if you were using a completely un-annotated class with JAXB), and then any mapping data defined in the XML Bindings will be applied.</p>
 <p>This could be used, for example, to map the same Java class to two completely different XML representations: the annotations on the actual Java class would define the first XML representation, and then a second XML representation could be defined in an XML Bindings document with <code>xml-mapping-metadata-complete="true"</code>. This would essentially give you a "blank canvas" to remap your Java class.</p>
 <p>If you would like to ignore the default mappings that JAXB generates, you can specify <code>xml-accessor-type="NONE"</code> in your <code>&lt;java-type&gt;</code> element. Using this approach, only mappings that are explicitly defined in Bindings document will be applied.</p>
 <p>Using the <strong>Customer</strong> example from above, the following examples demonstrate the XML representations that will be generated when using <code>xml-mapping-metadata-complet</code>e:</p>
-<div class="example"><a id="TLJAX150" name="TLJAX150"></a><a id="sthref27" name="sthref27"></a>
+<div class="example"><a id="TLJAX150" name="TLJAX150"></a><a id="sthref26" name="sthref26"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-15 Sample Customer Class</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
@@ -491,7 +492,7 @@ public class Customer {
 }
 </pre></div>
 <!-- class="example" -->
-<div class="example"><a id="TLJAX151" name="TLJAX151"></a><a id="sthref28" name="sthref28"></a>
+<div class="example"><a id="TLJAX151" name="TLJAX151"></a><a id="sthref27" name="sthref27"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-16 XML Bindings</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="US-ASCII"?&gt;
@@ -511,7 +512,7 @@ public class Customer {
 
 </pre></div>
 <!-- class="example" -->
-<div class="example"><a id="TLJAX152" name="TLJAX152"></a><a id="sthref29" name="sthref29"></a>
+<div class="example"><a id="TLJAX152" name="TLJAX152"></a><a id="sthref28" name="sthref28"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-17 XML Representation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -534,7 +535,7 @@ public class Customer {
 <p>Default JAXB mappings are generated for <code>picture</code> and <code>salary</code></p>
 </li>
 </ul>
-<div class="example"><a id="TLJAX153" name="TLJAX153"></a><a id="sthref30" name="sthref30"></a>
+<div class="example"><a id="TLJAX153" name="TLJAX153"></a><a id="sthref29" name="sthref29"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-18 XML Bindings (with xml-accessor-type="NONE")</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="US-ASCII"?&gt;
@@ -553,7 +554,7 @@ public class Customer {
 &lt;/xml-bindings&gt;
 </pre></div>
 <!-- class="example" -->
-<div class="example"><a id="TLJAX154" name="TLJAX154"></a><a id="sthref31" name="sthref31"></a>
+<div class="example"><a id="TLJAX154" name="TLJAX154"></a><a id="sthref30" name="sthref30"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-19 XML Representation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -573,7 +574,7 @@ public class Customer {
 </div>
 <!-- class="sect2" -->
 <a id="TLJAX155" name="TLJAX155"></a>
-<div class="sect2"><a id="sthref32" name="sthref32"></a>
+<div class="sect2"><a id="sthref31" name="sthref31"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Using Virtual Mappings</font></h2>
 <p>XML Bindings can also be used to specify virtual mappings &ndash; mappings that do not correspond to a concrete Java field. For example, you might want to use a <code>HashMap</code> as the underlying structure to hold data for certain mappings. For information on using Virtual Mappings, see <a href="advanced_concepts003.htm#CHDJHCCE">"Using Virtual Access Methods"</a>.</p>
 </div>
@@ -601,7 +602,7 @@ public class Customer {
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-<font size="-2">Copyright&nbsp;&copy;&nbsp;2013,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
+<font size="-2">Copyright&nbsp;&copy;&nbsp;1997, 2013,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
@@ -616,5 +617,5 @@ public class Customer {
 </table>
 </div>
 <!-- class="footer" -->
-<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
+<div id="copyright">Copyright &copy; 2013 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
 </html>

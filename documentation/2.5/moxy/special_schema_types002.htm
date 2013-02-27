@@ -5,25 +5,26 @@
 <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
-<title>Mapping to a Union Field | EclipseLink 2.5.x EclipseLink MOXy</title>
+<title>Mapping to a Union Field | EclipseLink 2.5 EclipseLink MOXy</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T9:6:43Z" />
+<meta name="date" content="2013-02-27T7:55:19Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Mapping to a Union Field" />
 <meta name="relnum" content="Release 2.5" />
-<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<meta name="partnum" content=" " />
 <link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
 <link rel="start" href="../../index.htm" title="Home" type="text/html" />
 <link rel="contents" href="toc.htm" title="Contents" type="text/html" />
 <link rel="prev" href="special_schema_types001.htm" title="Previous" type="text/html" />
 <link rel="next" href="special_schema_types003.htm" title="Next" type="text/html" />
 <!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
-<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:dt93gmwxcuc', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:1hjujor5_fg', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
-<td align="left" valign="top"><div class="booktitle">Developing JAXB Applications Using EclipseLink MOXy, 
-Release 2.5</div></td>
+<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><b>EclipseLink Developing JAXB Applications Using EclipseLink</b><br />
+<b>Release 2.5</b><br />
+ </font></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -46,12 +47,12 @@ Release 2.5</div></td>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-01-28</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-02-27</font></p>
 <a id="BABFFEHF" name="BABFFEHF"></a><a id="TLJAX298" name="TLJAX298"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Mapping to a Union Field</font></h1>
 <p>The following XML schema and class diagram show a typical use of an XML Schema Union:</p>
-<div class="example"><a id="TLJAX299" name="TLJAX299"></a><a id="sthref93" name="sthref93"></a>
+<div class="example"><a id="TLJAX299" name="TLJAX299"></a><a id="sthref92" name="sthref92"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-4 XML Schema Union</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -69,29 +70,29 @@ Release 2.5</div></td>
  
 </pre></div>
 <!-- class="example" -->
-<div class="figure"><a id="TLJAX300" name="TLJAX300"></a><a id="sthref94" name="sthref94"></a>
+<div class="figure"><a id="TLJAX300" name="TLJAX300"></a><a id="sthref93" name="sthref93"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 5-1 Mapping to a Union Field</font></em></strong></p>
 <img src="img/dxmuc.gif" alt="Mapping to a Union Field" title="Mapping to a Union Field" longdesc="img_text/dxmuc.htm" /><br />
-<a id="sthref95" name="sthref95" href="img_text/dxmuc.htm">Description of "Figure 5-1 Mapping to a Union Field"</a><br />
+<a id="sthref94" name="sthref94" href="img_text/dxmuc.htm">Description of "Figure 5-1 Mapping to a Union Field"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p><a href="#BABDEIDD">Figure 5-2</a> illustrates a mapping to a union field in an XML document that conforms to the example schema. When EclipseLink unmarshalls the XML document, it tries each of the union types until it can make a successful conversion. The first schema type in the union is <code>xsd:decimal</code>. Because <strong>10.5</strong> is a valid decimal, EclipseLink converts the value to the appropriate type.</p>
 <div class="figure"><a id="BABDEIDD" name="BABDEIDD"></a><a id="TLJAX301" name="TLJAX301"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 5-2 Mapping to a Union Field in an XML Document</font></em></strong></p>
 <img src="img/dxmuv.gif" alt="Mapping to a Union Field in an XML Document" title="Mapping to a Union Field in an XML Document" longdesc="img_text/dxmuv.htm" /><br />
-<a id="sthref96" name="sthref96" href="img_text/dxmuv.htm">Description of "Figure 5-2 Mapping to a Union Field in an XML Document"</a><br />
+<a id="sthref95" name="sthref95" href="img_text/dxmuv.htm">Description of "Figure 5-2 Mapping to a Union Field in an XML Document"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p>In <a href="#BABFGEDJ">Figure 5-3</a>, the value <strong>M</strong> is <em>not</em> a valid <code>xsd:decimal</code> type, so the next union type is tried, <code>xsd:string</code>.</p>
 <div class="figure"><a id="BABFGEDJ" name="BABFGEDJ"></a><a id="TLJAX302" name="TLJAX302"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 5-3 Mapping to a Union Field</font></em></strong></p>
 <img src="img/dxmuvs.gif" alt="Mapping to a Union Field" title="Mapping to a Union Field" longdesc="img_text/dxmuvs.htm" /><br />
-<a id="sthref97" name="sthref97" href="img_text/dxmuvs.htm">Description of "Figure 5-3 Mapping to a Union Field"</a><br />
+<a id="sthref96" name="sthref96" href="img_text/dxmuvs.htm">Description of "Figure 5-3 Mapping to a Union Field"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p>Currently, EclipseLink does not support the mapping of Unions using Annotations or OXM Metadata. However, an EclipseLink XML Customizer can be used to create the mapping.</p>
 <p>First, we annotate the <code>shoeSize</code> attribute with <code>@XmlTransient</code>, to avoid automatically generating a mapping for it. We also include an <code>@XmlCustomizer</code> annotation; the <code>CustomerCustomizer</code> class will create the Union mapping in code.</p>
-<div class="example"><a id="TLJAX303" name="TLJAX303"></a><a id="sthref98" name="sthref98"></a>
+<div class="example"><a id="TLJAX303" name="TLJAX303"></a><a id="sthref97" name="sthref97"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-5 Using an EclipseLink Customizer</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
@@ -143,7 +144,7 @@ public class CustomerCustomizer implements DescriptorCustomizer {
 </pre></div>
 <!-- class="example" -->
 <a id="TLJAX305" name="TLJAX305"></a>
-<div class="sect2"><a id="sthref99" name="sthref99"></a>
+<div class="sect2"><a id="sthref98" name="sthref98"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Understanding Conversion Order</font></h2>
 <p>The order of the calls to <code>addSchemaType()</code> is important; when converting an XML value into Java, EclipseLink will attempt the conversions in the order that they were added to the field, and return as soon as a successful conversion is made. For example, when unmarshalling a <code>shoeSize</code> of <strong>10.5</strong>:</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -165,7 +166,7 @@ shoeSizeField.addSchemaType(XMLConstants.DECIMAL_QNAME);
 </div>
 <!-- class="sect2" -->
 <a id="TLJAX306" name="TLJAX306"></a>
-<div class="sect2"><a id="sthref100" name="sthref100"></a>
+<div class="sect2"><a id="sthref99" name="sthref99"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Customizing Conversion Classes</font></h2>
 <p>EclipseLink uses a set of default conversions to create a value for the Java attribute (in this case, <code>xsd:decimal</code> will be converted into a <code>BigDecimal</code>). You can override this behavior in Java code using the XMLUnionField method addConversion. For example, if you want your Java object to store <code>shoeSize</code> as a <code>Float</code>:</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -195,7 +196,7 @@ shoeSizeField.addConversion(XMLConstants.DECIMAL_QNAME, Float.class);
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-<font size="-2">Copyright&nbsp;&copy;&nbsp;2013,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
+<font size="-2">Copyright&nbsp;&copy;&nbsp;1997, 2013,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
@@ -210,5 +211,5 @@ shoeSizeField.addConversion(XMLConstants.DECIMAL_QNAME, Float.class);
 </table>
 </div>
 <!-- class="footer" -->
-<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
+<div id="copyright">Copyright &copy; 2013 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
 </html>
