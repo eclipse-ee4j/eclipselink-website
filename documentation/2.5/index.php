@@ -87,7 +87,7 @@
 			<ul>
 				<li><!-- <a href="http://www.eclipse.org/eclipselink/releases/2.5.php"> -->Release Notes</a></li>
 				<li><a href="solutions/install.htm">Installation and Configuration</a></li>
-				<li><!-- <a href="http://www.eclipse.org/eclipselink/api/2.5/index.html"> -->Java Docs</a></li>
+				<li> <a href="http://www.eclipse.org/eclipselink/api/2.5/index.html"> Java Docs</a></li>
 			</ul>
 	</div>
 
