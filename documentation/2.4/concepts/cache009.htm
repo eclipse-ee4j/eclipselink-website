@@ -5,12 +5,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
-<title>About Isolated Client Sessions | EclipseLink 2.4.x Understanding EclipseLink</title>
+<title>About Cache Locking and Transaction Isolation | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T11:56:45Z" />
+<meta name="date" content="2013-03-04T10:51:26Z" />
 <meta name="robots" content="noarchive" />
-<meta name="doctitle" content="About Isolated Client Sessions" />
-<meta name="relnum" content="Release 2.4" />
+<meta name="doctitle" content="About Cache Locking and Transaction Isolation" />
+<meta name="relnum" content="2.4" />
 <link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
 <link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
 <link rel="start" href="../../index.htm" title="Home" type="text/html" />
@@ -23,7 +23,7 @@
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
 <td align="left" valign="top"><div class="booktitle">Understanding EclipseLink, 
-Release 2.4</div></td>
+<b>2.4</b><br /></font></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -46,52 +46,11 @@ Release 2.4</div></td>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-01-28</font></p>
-<a id="A7975656" name="A7975656"></a><a id="OTLCG94337" name="OTLCG94337"></a>
-<div class="sect1">
-<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">About Isolated Client Sessions</font></h1>
-<p>This caching technique always goes to the database for the initial read operation of an object whose descriptor is configured as isolated. By avoiding the shared session cache, you do not need to use the more complicated descriptor and query APIs to disable cache hits or always refresh.</p>
-<p>An isolated client session is a special type of client session that provides its own session cache. This session cache is isolated from the shared session cache of its parent server session. See <a href="cache001.htm#CDEBIHCH">Isolated Cache</a> for more information on isolated caches.</p>
-<p>If you configure one or more classes as isolated in your EclipseLink project, then all client sessions that you acquire from a parent server session will be isolated client sessions.</p>
-<p><a href="#CDEDBDAI">Figure 9-2</a> illustrates the relationship between a parent server session's shared session cache and its child isolated client sessions.</p>
-<div class="figure"><a id="CDEDBDAI" name="CDEDBDAI"></a><a id="OTLCG94338" name="OTLCG94338"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Figure 9-2 Isolated Client Sessions</font></em></strong></p>
-<img src="img/isolses.gif" alt="This figure illuistrates isolated client sessions." title="This figure illuistrates isolated client sessions." longdesc="img_text/isolses.htm" /><br />
-<a id="sthref68" name="sthref68" href="img_text/isolses.htm">Description of "Figure 9-2 Isolated Client Sessions"</a><br />
-<br /></div>
-<!-- class="figure" -->
-<p>Each isolated client session owns an initially empty cache. Identity maps are used exclusively for isolated objects that the isolated client session accesses while it is active. The isolated client session's isolated session cache is discarded when the isolated client session is released.</p>
-<p>When you use an isolated client session to read an isolated class, the client session reads the isolated object directly from the database and stores it in that client session's isolated session cache. When you use the client session to read a shared class, the client session reads the shared object from the parent server session's shared session cache. If the shared object is not in the parent server session's shared session cache, it will read it from the database and store it in the parent server session's shared session cache.</p>
-<p>Isolated objects in an isolated client session's isolated session cache may reference shared objects in the parent server session's shared session cache. However, shared objects in the parent server session's shared session cache cannot reference isolated objects in an isolated client session's isolated session cache.</p>
-<div align="center">
-<div class="inftblnote"><br />
-<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
-<tbody>
-<tr>
-<td align="left">
-<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
-<p>You cannot define mappings from shared classes to isolated classes.</p>
-</td>
-</tr>
-</tbody>
-</table>
-<br /></div>
-<!-- class="inftblnote" --></div>
-<p>Client sessions can access the data source using a connection pool or an exclusive connection. To use an exclusive connection, acquire the isolated client session using a <code>ConnectionPolicy</code>. Using an exclusive connection provides improved user-based security for reads and writes. Named queries can also use an exclusive connection).</p>
-<div align="center">
-<div class="inftblnote"><br />
-<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
-<tbody>
-<tr>
-<td align="left">
-<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
-<p>If an isolated session contains an exclusive connection, you must release the session when you are finished using it. Oracle does not recommend relying on the finalizer to release the connection when the session is garbage-collected. If you are using an active unit of work in a JTA transaction, you do not need to release the client session&ndash;-the unit of work will release it after the JTA transaction completes.</p>
-</td>
-</tr>
-</tbody>
-</table>
-<br /></div>
-<!-- class="inftblnote" --></div>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-03-04</font></p>
+<a id="CHEFHDAJ" name="CHEFHDAJ"></a><a id="OTLCG93815" name="OTLCG93815"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">About Cache Locking and Transaction Isolation</font></h1>
+<p>By default, EclipseLink optimizes concurrency to minimize cache locking during read or write operations. Use the default EclipseLink transaction isolation configuration unless you have a very specific reason to change it.</p>
 </div>
 <!-- class="sect1" --></div>
 <!-- class="ind" -->
@@ -116,7 +75,7 @@ Release 2.4</div></td>
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-<font size="-2">Copyright&nbsp;&copy;&nbsp;,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
+                
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">

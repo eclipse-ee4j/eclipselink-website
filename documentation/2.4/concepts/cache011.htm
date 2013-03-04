@@ -5,25 +5,25 @@
 <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
-<title>About Cache Optimization | EclipseLink 2.4.x Understanding EclipseLink</title>
+<title>About Cache Coordination | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T11:56:45Z" />
+<meta name="date" content="2013-03-04T10:51:26Z" />
 <meta name="robots" content="noarchive" />
-<meta name="doctitle" content="About Cache Optimization" />
-<meta name="relnum" content="Release 2.4" />
+<meta name="doctitle" content="About Cache Coordination" />
+<meta name="relnum" content="2.4" />
 <link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
 <link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
 <link rel="start" href="../../index.htm" title="Home" type="text/html" />
 <link rel="contents" href="toc.htm" title="Contents" type="text/html" />
 <link rel="prev" href="cache010.htm" title="Previous" type="text/html" />
-<link rel="next" href="cache012.htm" title="Next" type="text/html" />
+<link rel="next" href="queries.htm" title="Next" type="text/html" />
 <!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
 <body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:mdbgdwjv8zu', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
 <td align="left" valign="top"><div class="booktitle">Understanding EclipseLink, 
-Release 2.4</div></td>
+<b>2.4</b><br /></font></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -39,19 +39,282 @@ Release 2.4</div></td>
 <table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
 <tr>
 <td align="center"><a href="cache010.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
-<td align="center"><a href="cache012.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="queries.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
 <td>&nbsp;</td>
 </tr>
 </table>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-01-28</font></p>
-<a id="CHEECFJE" name="CHEECFJE"></a><a id="OTLCG93816" name="OTLCG93816"></a>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-03-04</font></p>
+<a id="CDEIBJCE" name="CDEIBJCE"></a><a id="OTLCG94339" name="OTLCG94339"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
-<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">About Cache Optimization</font></h1>
-<p>Tune the EclipseLink cache for each class to help eliminate the need for distributed cache coordination. Always tune these settings before implementing cache coordination. For more information, see "Monitoring and Optimizing EclipseLink-Enabled Applications" in <em>Solutions Guide for EclipseLink</em>.</p>
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">About Cache Coordination</font></h1>
+<p>The need to maintain up-to-date data for all applications is a key design challenge for building a distributed application. The difficulty of this increases as the number of servers within an environment increases. EclipseLink provides a distributed cache coordination feature that ensures data in distributed applications remains current.</p>
+<p>Cache coordination reduces the number of optimistic lock exceptions encountered in a distributed architecture, and decreases the number of failed or repeated transactions in an application. However, cache coordination in no way eliminates the need for an effective locking policy. To effectively ensure working with up-to-date data, cache coordination must be used with optimistic or pessimistic locking. Oracle recommends that you use cache coordination with an optimistic locking policy.</p>
+<p>You can use cache invalidation to improve cache coordination efficiency. For more information, see <a href="cache006.htm#CHEEHFCI">About Cache Expiration and Invalidation</a>.</p>
+<p>As <a href="#CDEIJFHB">Figure 9-2</a> shows, cache coordination is a session feature that allows multiple, possibly distributed, instances of a session to broadcast object changes among each other so that each session's cache is either kept up-to-date or notified that the cache must update an object from the data source the next time it is read.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>You cannot use isolated client sessions with cache coordination. For more information, see <a href="cache001.htm#CDEEGICF">Shared, Isolated, Protected, Weak, and Read-only Caches.</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<div class="figure"><a id="CDEIJFHB" name="CDEIJFHB"></a><a id="OTLCG94340" name="OTLCG94340"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Figure 9-2 Coordinated Session Caches</font></em></strong></p>
+<img src="img/cachcord.gif" alt="Description of Figure 9-2 follows" title="Description of Figure 9-2 follows" longdesc="img_text/cachcord.htm" /><br />
+<a id="sthref68" name="sthref68" href="img_text/cachcord.htm">Description of "Figure 9-2 Coordinated Session Caches"</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>When sessions are distributed, that is, when an application contains multiple sessions (in the same JVM, in multiple JVMs, possibly on different servers), as long as the servers hosting the sessions are interconnected on the network, sessions can participate in cache coordination. Coordinated cache types that require discovery services also require the servers to support User Datagram Protocol (UDP) communication and multicast configuration. For more information, see <a href="#CDEECFJH">Coordinated Cache Architecture and Types.</a></p>
+<p>This section describes the following:</p>
+<ul>
+<li>
+<p><a href="#CDEDBJCJ">When to Use Cache Coordination</a></p>
+</li>
+<li>
+<p><a href="#CDEECFJH">Coordinated Cache Architecture and Types</a></p>
+</li>
+<li>
+<p><a href="#CDEECFJG">Custom Coordinated Cache</a></p>
+</li>
+<li>
+<p><a href="#CDEGDGAA">Coordinated Cache and Clustering</a></p>
+</li>
+</ul>
+<a id="CDEDBJCJ" name="CDEDBJCJ"></a><a id="OTLCG94341" name="OTLCG94341"></a>
+<div class="sect2">
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">When to Use Cache Coordination</font></h2>
+<p>Cache coordination can enhance performance and reduce the likelihood of stale data for applications that have the following characteristics:</p>
+<ul>
+<li>
+<p>Changes are all being performed by the same Java application operating with multiple, distributed sessions</p>
+</li>
+<li>
+<p>Primarily read-based</p>
+</li>
+<li>
+<p>Regularly requests and updates the same objects</p>
+</li>
+</ul>
+<p>To maximize performance, avoid cache coordination for applications that do not have these characteristics.</p>
+<p>For other options to reduce the likelihood of stale data, see <a href="cache004.htm#CHEEACDJ">About Handling Stale Data.</a></p>
 </div>
+<!-- class="sect2" -->
+<a id="CDEECFJH" name="CDEECFJH"></a><a id="OTLCG94346" name="OTLCG94346"></a>
+<div class="sect2">
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Coordinated Cache Architecture and Types</font></h2>
+<p>You can configure a coordinated cache to broadcast changes using any of the following communication protocols:</p>
+<ul>
+<li>
+<p><a href="#CDEJABGH">JMS Coordinated Cache</a>, for the Java Message Service (JMS)</p>
+</li>
+<li>
+<p><a href="#CDEGHFJA">RMI Coordinated Cache</a>, for Remote Method Invocation (RMI)</p>
+</li>
+</ul>
+<a id="CDEJABGH" name="CDEJABGH"></a><a id="OTLCG94347" name="OTLCG94347"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">JMS Coordinated Cache</font></h3>
+<p>For a JMS coordinated cache, when a particular session's coordinated cache starts up, it uses its JNDI naming service information to locate and create a connection to the JMS server. The coordinated cache is ready when all participating sessions are connected to the same topic on the same JMS server. At this point, sessions can start sending and receiving object change messages. You can then configure all sessions that are participating in the same coordinated cache with the same JMS and JNDI naming service information.</p>
+<p><a href="#CDEDAIDD">Example 9-1</a> illustrates a <code>persistence.xml</code> file configured for a JMS coordinated cache.</p>
+<div class="example"><a id="CDEDAIDD" name="CDEDAIDD"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 9-1 persistence.xml File for JMS Cache Coordination</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;persistence xmlns="http://java.sun.com/xml/ns/persistence"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://java.sun.com/xml/ns/persistence persistence_2_0.xsd"
+                version="2.0"&gt;
+    &lt;persistence-unit name="acme" transaction-type="RESOURCE_LOCAL"&gt;
+        &lt;provider&gt;org.eclipse.persistence.jpa.PersistenceProvider&lt;/provider&gt;
+        &lt;exclude-unlisted-classes&gt;false&lt;/exclude-unlisted-classes&gt;
+        &lt;properties&gt;
+            &lt;property name="eclipselink.cache.coordination.protocol" value="jms"/&gt;
+            &lt;property name="eclipselink.cache.coordination.jms.topic" value="jms/ACMETopic"/&gt;
+            &lt;property name="eclipselink.cache.coordination.jms.factory" value="jms/ACMETopicConnectionFactory"/&gt;
+        &lt;/properties&gt;
+    &lt;/persistence-unit&gt;
+&lt;/persistence&gt;
+</pre></div>
+<!-- class="example" -->
+<p>For more information on configuring JMS, see "Configuring JMS Cache Coordination Using Persistence Properties" in <em>Solutions Guide for EclipseLink</em>. See also your JMS provider's documentation.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CDEGHFJA" name="CDEGHFJA"></a><a id="OTLCG94348" name="OTLCG94348"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">RMI Coordinated Cache</font></h3>
+<p>For an RMI coordinated cache, when a particular session's coordinated cache starts up, the session binds its connection in its naming service (either an RMI registry or JNDI), creates an announcement message (that includes its own naming service information), and broadcasts the announcement to its multicast group. When a session that belongs to the same multicast group receives this announcement, it uses the naming service information in the announcement message to establish bidirectional connections with the newly announced session's coordinated cache. The coordinated cache is ready when all participating sessions are interconnected in this way, at which point sessions can start sending and receiving object change messages. You can then configure each session with naming information that identifies the host on which the session is deployed.</p>
+<p><a href="#CDEFFFJI">Example 9-2</a> illustrates a <code>persistence.xml</code> file configured for a RMI coordinated cache.</p>
+<div class="example"><a id="CDEFFFJI" name="CDEFFFJI"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 9-2 persistence.xml File for RMI Cache Coordination</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;persistence xmlns="http://java.sun.com/xml/ns/persistence"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://java.sun.com/xml/ns/persistence persistence_2_0.xsd"
+                version="2.0"&gt;
+    &lt;persistence-unit name="acme" transaction-type="RESOURCE_LOCAL"&gt;
+        &lt;provider&gt;org.eclipse.persistence.jpa.PersistenceProvider&lt;/provider&gt;
+        &lt;exclude-unlisted-classes&gt;false&lt;/exclude-unlisted-classes&gt;
+        &lt;properties&gt;
+            &lt;property name="eclipselink.cache.coordination.protocol" value="rmi"/&gt;
+        &lt;/properties&gt;
+    &lt;/persistence-unit&gt;
+&lt;/persistence&gt;
+</pre></div>
+<!-- class="example" -->
+<p>For more information, see "Configuring RMI Cache Coordination Using Persistence Properties" in <em>Solutions Guide for EclipseLink</em>.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CDEECFJG" name="CDEECFJG"></a><a id="OTLCG94350" name="OTLCG94350"></a>
+<div class="sect2">
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Custom Coordinated Cache</font></h2>
+<p>Using the classes in <code>org.eclipse.persistence.sessions.coordination</code> package, you can define your own coordinated cache for custom solutions.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CDEGDGAA" name="CDEGDGAA"></a><a id="OTLCG94351" name="OTLCG94351"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Coordinated Cache and Clustering</font></h2>
+<p>An application cluster is a set of middle tier server machines or VMs servicing requests for a single application, or set of applications. Multiple servers are used to increase the scalability of the application and/or to provide fault tolerance and high availability. Typically the same application will be deployed to all of the servers in the cluster and application requests will be load balanced across the set of servers. The application cluster will access a single database, or a database cluster. An application cluster may allow new servers to be added to increase scalability, and for servers to be removed such as for updates and servicing.</p>
+<p>Application clusters can consist of Java EE servers, Web containers, or Java server applications.</p>
+<p>EclipseLink can function in any clustered environment. The main issue in a clustered environment is utilizing a shared persistence unit (L2) cache. If you are using a shared cache (enabled by default in EclipseLink projects), then each server will maintain its own cache, and each caches data can get out of sync with the other servers and the database.</p>
+<p>EclipseLink provides cache coordination in a clustered environment to ensure the servers caches are is sync.</p>
+<p>There are also many other solutions to caching in a clustered environment, including:</p>
+<ul>
+<li>
+<p>Disable the shared cache (through setting <code>@Cacheable(false)</code>, or <code>@Cache(isolation=ISOLATED</code>)).</p>
+</li>
+<li>
+<p>Only cache read-only objects.</p>
+</li>
+<li>
+<p>Set a cache invalidation timeout to reduce stale data.</p>
+</li>
+<li>
+<p>Use refreshing on objects/queries when fresh data is required.</p>
+</li>
+<li>
+<p>Use optimistic locking to ensure write consistency (writes on stale data will fail, and will automatically invalidate the cache).</p>
+</li>
+<li>
+<p>Use database events to invalidate changed data in the cache (such as EclipseLink's support for Oracle Query Change Notification).</p>
+</li>
+</ul>
+<p>Cache coordination enables a set of persistence units deployed to different servers in the cluster (or on the same server) to synchronize their changes. Cache coordination works by each persistence unit on each server in the cluster being able to broadcast notification of transactional object changes to the other persistence units in the cluster. EclipseLink supports cache coordination over RMI and JMS. The cache coordination framework is also extensible so other options could be developed.</p>
+<p>Cache coordination works by broadcasting changes for each transaction to the other servers in the cluster. Each other server will receive the change notification, and either invalidate the changed objects in their cache, or update the cached objects state with the changes. Cache coordination occurs after the database commit, so only committed changes are broadcast.</p>
+<p>Cache coordination greatly reduces to chance of an application getting stale data, but does not eliminate the possibility. Optimistic locking should still be used to ensure data integrity. Even in a single server application stale data is still possible within a persistence context unless pessimistic locking is used. Optimistic (or pessimistic) locking is always required to ensure data integrity in any multi-user system.</p>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref69" name="sthref69"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Persistence Property Extensions for Cache Coordination</font></h3>
+<p>EclipseLink includes the following persistence property extensions for caching. For more information on these extensions, see <em>Java Persistence API (JPA) Extensions Reference for EclipseLink.</em></p>
+<ul>
+<li>
+<p><code>cache.coordination.channel</code></p>
+</li>
+<li>
+<p><code>cache.coordination.jms.factory</code></p>
+</li>
+<li>
+<p><code>cache.coordination.jms.host</code></p>
+</li>
+<li>
+<p><code>cache.coordination.jms.reuse-topic-publisher</code></p>
+</li>
+<li>
+<p><code>cache.coordination.jms.topic</code></p>
+</li>
+<li>
+<p><code>cache.coordination.jndi.initial-context-factory</code></p>
+</li>
+<li>
+<p><code>cache.coordination.jndi.password</code></p>
+</li>
+<li>
+<p><code>cache.coordination.jndi.user</code></p>
+</li>
+<li>
+<p><code>cache.coordination.naming-service</code></p>
+</li>
+<li>
+<p><code>cache.coordination.propagate-asynchronously</code></p>
+</li>
+<li>
+<p><code>cache.coordination.protocol</code></p>
+</li>
+<li>
+<p><code>cache.coordination.remove-connection-on-error</code></p>
+</li>
+<li>
+<p><code>cache.coordination.rmi.announcement-delay</code></p>
+</li>
+<li>
+<p><code>cache.coordination.rmi.multicast-group</code></p>
+</li>
+<li>
+<p><code>cache.coordination.rmi.multicast-group.port</code></p>
+</li>
+<li>
+<p><code>cache.coordination.rmi.packet-time-to-live</code></p>
+</li>
+<li>
+<p><code>cache.coordination.rmi.url</code></p>
+</li>
+<li>
+<p><code>cache.coordination.thread.pool.size</code></p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref70" name="sthref70"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Cache Coordination and Oracle WebLogic</font></h3>
+<p>Both RMI and JMS cache coordination work with Oracle WebLogic. When a WebLogic cluster is used JNDI is replicated among the cluster servers, so a <code>cache.coordination.rmi.url</code> or a <code>cache.coordination.jms.host</code> option is not required. For JMS cache coordination, the JMS topic should only be deployed to only one of the servers (as of Oracle WebLogic 10.3.6). It may be desirable to have a dedicated JMS server if the JMS messaging traffic is heavy.</p>
+<p>Use of other JMS services in WebLogic may have other requirements.</p>
+</div>
+<!-- class="sect3" -->
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref71" name="sthref71"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Cache Coordination and Glassfish</font></h3>
+<p>JMS cache coordination works with Glassfish. When a Glassfish cluster is used, JNDI is replicated among the cluster servers, so a <code>cache.coordination.jms.host</code> option is not required.</p>
+<p>Use of other JMS services in Glassfish may have other requirements.</p>
+<p>RMI cache coordination does not work when the JNDI naming service option is used in a Glassfish cluster. RMI will work if the <code>eclipselink.cache.coordination.naming-service</code> option is set to <code>rmi</code>. Each server must provide its own <code>eclipselink.cache.coordination.rmi.url</code> option, either by having a different <code>persistence.xml</code> file for each server, or by setting the URL as a System property in the server, or through a customizer.</p>
+</div>
+<!-- class="sect3" -->
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref72" name="sthref72"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Cache Coordination and IBM WebSphere</font></h3>
+<p>JMS cache coordination may have issues on IBM WebSphere. Use of a Message Driven Bean (MDB) may be required to allow access to JMS. To use an MDB with cache coordination, set the <code>eclipselink.cache.coordination.protocol</code> option to the value <code>jms-publishing</code>. The application will also have to deploy an MDB that processes cache coordination messages in its EAR file.</p>
+<p><a href="#CDECEHFH">Example 9-3</a> illustrates the Java code required to configure an MDB.</p>
+<div class="example"><a id="CDECEHFH" name="CDECEHFH"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 9-3 Cache Coordination Message Driven Bean</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+@MessageDriven
+public class JMSCacheCoordinationMDB implements MessageListener {
+ 
+    private JMSTopicRemoteConnection connection;
+ 
+    @PersistenceUnit(unitName="acme")
+    private EntityManagerFactory emf;
+ 
+    public void ejbCreate() {
+        this.connection = new JMSTopicRemoteConnection(this.emf.unwrap(ServerSession.class).getCommandManager());
+    }
+ 
+    public void onMessage(Message message) {
+        this.connection.onMessage(message);
+    }
+ 
+}
+</pre></div>
+<!-- class="example" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
 <!-- class="sect1" --></div>
 <!-- class="ind" -->
 <!-- Start Footer -->
@@ -70,12 +333,12 @@ Release 2.4</div></td>
 <tr>
 <td>&nbsp;</td>
 <td align="center"><a href="cache010.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
-<td align="center"><a href="cache012.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="queries.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
 </tr>
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-<font size="-2">Copyright&nbsp;&copy;&nbsp;,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
+                
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">

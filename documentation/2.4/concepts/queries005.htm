@@ -7,10 +7,10 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>About Native SQL Queries | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T11:56:45Z" />
+<meta name="date" content="2013-03-04T10:51:26Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="About Native SQL Queries" />
-<meta name="relnum" content="Release 2.4" />
+<meta name="relnum" content="2.4" />
 <link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
 <link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
 <link rel="start" href="../../index.htm" title="Home" type="text/html" />
@@ -23,7 +23,7 @@
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
 <td align="left" valign="top"><div class="booktitle">Understanding EclipseLink, 
-Release 2.4</div></td>
+<b>2.4</b><br /></font></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -46,13 +46,13 @@ Release 2.4</div></td>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-01-28</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-03-04</font></p>
 <a id="A7724128" name="A7724128"></a><a id="OTLCG94397" name="OTLCG94397"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">About Native SQL Queries</font></h1>
 <p>JPA allows SQL to be used for querying entity objects, or data. SQL queries are not translated, and passed directly to the database. SQL queries can be used for advanced queries that require database specific syntax, or by users who are more comfortable in the SQL language than JPQL or Java.</p>
 <p>SQL queries are created from the <code>EntityManager</code> using the <code>createNativeQuery</code> API or via named queries. A Query object is returned and executed the same as any other JPA query. An SQL query can be created for an entity class, or return an object array of data. If returning entities, the SQL query must return the column names that the entity's mappings expect, or an <code>SqlResultSetMapping</code> can be used. An <code>SqlResultSetMapping</code> allows the SQL result set to be mapped to an entity, or set of entities and data.</p>
-<p>SQL queries can be used to execute SQL or DML (Data Manipulation Language) statements. For SQL queries that return results, <code>getSingleResult</code> or <code>getResultList</code> can be used. For SQL queries that do not return results, <code>executeUpdate</code> must be used. <code>executeUpdate</code> can only be used within a transaction. SQL queries can be used to execute database operations and some stored procedures and functions. Stored prcoedures that return output parameters, or certain complex stored procedures, cannot be executed with SQL queries. EclipseLink supports stored procedures through stored procedure queries.</p>
+<p>SQL queries can be used to execute SQL or DML (Data Manipulation Language) statements. For SQL queries that return results, <code>getSingleResult</code> or <code>getResultList</code> can be used. For SQL queries that do not return results, <code>executeUpdate</code> must be used. <code>executeUpdate</code> can only be used within a transaction. SQL queries can be used to execute database operations and some stored procedures and functions. Stored procedures that return output parameters, or certain complex stored procedures, cannot be executed with SQL queries. EclipseLink supports stored procedures through stored procedure queries.</p>
 <p>Query settings and query hints that affect the generated SQL are not supported with SQL queries. Unsupported query hints include:</p>
 <ul>
 <li>
@@ -79,19 +79,19 @@ Release 2.4</div></td>
 </ul>
 <p>For descriptions of these extensions, see "EclipseLink Query Language" in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
 <a id="OTLCG94398" name="OTLCG94398"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref100" name="sthref100"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref103" name="sthref103"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Parameters</font></h2>
 <p>Parameters to SQL queries are delimited using the question mark (<code>?</code>) character. Only indexed parameters are supported, named parameters are not supported. The index can be used in the delimiter, such as <code>?1</code>. Parameter values are set on the Query using the <code>setParameter</code> API. Indexed parameters start at the index 1 not 0.</p>
 </div>
 <!-- class="sect2" -->
 <a id="OTLCG94399" name="OTLCG94399"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref101" name="sthref101"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref104" name="sthref104"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Named Native SQL Queries</font></h2>
 <p>Native SQL queries can be defined as named queries in annotations or XML using the <code>NamedNativeQuery</code> annotation or <code>&lt;named-native-query&gt;</code> XML element. Named native SQL queries are executed the same as any named query.</p>
 </div>
 <!-- class="sect2" -->
 <a id="OTLCG94400" name="OTLCG94400"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref102" name="sthref102"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref105" name="sthref105"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">SQL Result Set Mapping</font></h2>
 <p>An <code>SqlResultSetMapping</code> can be used to map the results of an SQL query to an entity if the result column names do not match what the entity mappings expect. It can also be used to return multiple entities, or entities and data from a single SQL query. <code>EntityResult</code> and <code>FieldResult</code> are used to map the SQL query result column to the entity attribute. <code>ColumnResult</code> can be used to add a data element to the result.</p>
 <p><code>SqlResultSetMappings</code> are defined through annotations or XML using the <code>@SqlResultSetMapping</code> annotation or <code>&lt;sql-result-set-mapping&gt;</code> XML element. They are referenced from native SQL queries by name.</p>
@@ -120,7 +120,7 @@ Release 2.4</div></td>
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-<font size="-2">Copyright&nbsp;&copy;&nbsp;,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
+                
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
