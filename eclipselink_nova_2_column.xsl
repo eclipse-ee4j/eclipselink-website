@@ -39,7 +39,7 @@
 					<a href="/eclipselink/community.php"><div class="bigbuttonsTitleLink"></div></a>
 					<span>
 						<a href="http://wiki.eclipse.org/EclipseLink">Wiki</a>,
-						<a href="/forums/index.php/f/111/"> Newsgroup</a>,<br/>
+						<a href="/forums/index.php/f/111/">User Forum</a>,<br/>
 						<a href="http://dev.eclipse.org/mhonarc/lists/eclipselink-users/maillist.html">User Mailing List</a>
 					</span>
 				</div>

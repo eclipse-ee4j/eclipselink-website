@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sections title="EclipseLink Community">
 
-	<section class="main" name="Newsgroup">
+	<section class="main" name="User Forum">
 		<section image="/eclipselink/images/community.jpg">
-			The EclipseLink Newsgroup is the main forum for user questions and support.
+			The EclipseLink User Forum is where users can ask questions and get support.
 		</section>
 		<section
 			name="News Reader Access"
