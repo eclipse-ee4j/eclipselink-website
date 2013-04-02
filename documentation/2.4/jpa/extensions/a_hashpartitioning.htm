@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@HashPartitioning | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T8:14:50Z" />
+<meta name="date" content="2013-04-02T9:55:41Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@HashPartitioning" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@HashPartitioning</font></h2>
 <p>Use <code>@HashPartitioning</code> to partition access to a database cluster by the hash of a field value from the object (such as the object's location or tenant). The hash indexes into the list of connection pools.</p>
-<a id="sthref144" name="sthref144"></a>
+<a id="sthref145" name="sthref145"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#CEGCAGJF">Table 2-25</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="TLJPA417" name="TLJPA417"></a><a id="sthref145" name="sthref145"></a><a id="CEGCAGJF" name="CEGCAGJF"></a>
+<div class="tblhruleformalwide"><a id="TLJPA417" name="TLJPA417"></a><a id="sthref146" name="sthref146"></a><a id="CEGCAGJF" name="CEGCAGJF"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 2-25 @HashPartitioning Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@HashPartitioning Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="31%" />
@@ -111,7 +111,7 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref146" name="sthref146"></a>
+<a id="sthref147" name="sthref147"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>All write or read requests for objects with the hash value are sent to the server. Queries that do not include the field as a parameter will be:</p>
 <ul>
@@ -126,10 +126,10 @@ Release 2.4</div></td>
 <p>You can enable partitioning on an Entity, relationship, query, or session/persistence unit. Partition policies are globally named (to allow reuse) and must set using the <code>@Partitioned</code> annotation.</p>
 <p>The persistence unit properties support adding named connection pools in addition to the existing configuration for read/write/sequence. A named connection pool must be defined for each node in the database cluster.</p>
 <p>If a transaction modifies data from multiple partitions, you should use JTA to ensure proper two-phase commit of the data. You can also configure an exclusive connection in the EntityManager to ensure that only a single node is used for a single transaction.</p>
-<a id="sthref147" name="sthref147"></a>
+<a id="sthref148" name="sthref148"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p>See <a href="a_partitioned.htm#CHDDAHEB">"@Partitioned"</a> for an example of partitioning with EclipseLink.</p>
-<a id="sthref148" name="sthref148"></a>
+<a id="sthref149" name="sthref149"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

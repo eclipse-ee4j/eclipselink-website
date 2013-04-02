@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@TenantDiscriminatorColumn | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T8:14:51Z" />
+<meta name="date" content="2013-04-02T9:55:44Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@TenantDiscriminatorColumn" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@TenantDiscriminatorColumn</font></h2>
 <p>The <code>@TenantDiscriminator</code> annotation is used with the <code>@Multitenant</code> annotation and the <code>SINGLE-TABLE</code> mulitenant type to limit what a persistence context can access in single-table mulitenancy.</p>
-<a id="sthref382" name="sthref382"></a>
+<a id="sthref383" name="sthref383"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#CHEIBAFI">Table 2-67</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="TLJPA556" name="TLJPA556"></a><a id="sthref383" name="sthref383"></a><a id="CHEIBAFI" name="CHEIBAFI"></a>
+<div class="tblhruleformalwide"><a id="TLJPA556" name="TLJPA556"></a><a id="sthref384" name="sthref384"></a><a id="CHEIBAFI" name="CHEIBAFI"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 2-67 @TenantDiscriminatorColumn Properties</font></em></strong></p>
 <table class="HRuleFormalWide" title="@TenantDiscriminatorColumn Properties" summary="This table describes the list of attributes for this annotation." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="33%" />
@@ -148,7 +148,7 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref384" name="sthref384"></a>
+<a id="sthref385" name="sthref385"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>To configure single-table multi-tenancy, you must specify both of the following:</p>
 <ul>
@@ -193,7 +193,7 @@ Release 2.4</div></td>
     @TenantDiscriminatorColumn(name = "TENANT_CODE" contextProperty="eclipselink.tenant-code")})
 </pre></li>
 </ul>
-<a id="sthref385" name="sthref385"></a>
+<a id="sthref386" name="sthref386"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Using Discriminator Columns</font></strong></p>
 <p>The following characteristics apply to discriminator columns:</p>
 <ul>
@@ -227,7 +227,7 @@ Release 2.4</div></td>
 <p>Both mapped and unmapped properties are used to form the additional criteria when issuing a <code>SELECT</code> query.</p>
 </li>
 </ul>
-<a id="sthref386" name="sthref386"></a>
+<a id="sthref387" name="sthref387"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Using Single-Table Multi-Tenancy in an Inheritance Hierarchy</font></strong></p>
 <p>Inheritance strategies are configured by specifying the inheritance type (see @javax.persistence.Inheritance). Single-table multi-tenancy can be used in an inheritance hierarchy, as follows:</p>
 <ul>
@@ -238,7 +238,7 @@ Release 2.4</div></td>
 <p>You can also specify multi-tenant metadata within a <code>TABLE_PER_CLASS</code> inheritance hierarchy. In this case, every entity has its own table, with all its mapping data (which is not the case with <code>SINGLE_TABLE</code> or <code>JOINED</code> strategies). Consequently, in the <code>TABLE_PER_CLASS</code> strategy, some entities of the hierarchy may be multi-tenant, while others may not be. The other inheritance strategies can only specify multi-tenancy at the root level, because you cannot isolate an entity to a single table to build only its type.</p>
 </li>
 </ul>
-<a id="sthref387" name="sthref387"></a>
+<a id="sthref388" name="sthref388"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#CHEJICEF">Table 2-67</a> shows a number of uses of tenant discriminator columns.</p>
 <div class="example"><a id="CHEJICEF" name="CHEJICEF"></a><a id="TLJPA557" name="TLJPA557"></a>
@@ -357,7 +357,7 @@ public Player() {
 &lt;/entity&gt;
 </pre></div>
 <!-- class="example" -->
-<a id="sthref388" name="sthref388"></a>
+<a id="sthref389" name="sthref389"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <ul>
 <li>
@@ -368,6 +368,9 @@ public Player() {
 </li>
 <li>
 <p><a href="a_tenanttablediscriminator.htm#CHDFJJEC">"@TenantTableDiscriminator"</a></p>
+</li>
+<li>
+<p>"Using Multitenancy" in <em>Solutions Guide for EclispeLink</em></p>
 </li>
 <li>
 <p>Multitenant Examples at <code><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Multitenant">http://wiki.eclipse.org/EclipseLink/Examples/JPA/Multitenant</a></code></p>

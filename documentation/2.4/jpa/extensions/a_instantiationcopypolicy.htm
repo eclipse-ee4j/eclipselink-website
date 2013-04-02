@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@InstantiationCopyPolicy | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T8:14:50Z" />
+<meta name="date" content="2013-04-02T9:55:41Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@InstantiationCopyPolicy" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@InstantiationCopyPolicy</font></h2>
 <p>Use <code>@InstantiationCopyPolicy</code> to set an <code>org.eclipse.persistence.descriptors.copying.InstantiationCopyPolicy</code> on an Entity.</p>
-<a id="sthref160" name="sthref160"></a>
+<a id="sthref161" name="sthref161"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p>There are no elements for this annotation.</p>
-<a id="sthref161" name="sthref161"></a>
+<a id="sthref162" name="sthref162"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>The copy policy specifies how EclipseLink clones objects to and from the shared cache. With <code>@InstantiationCopyPolicy</code>, in order to clone an object EclipseLink will create a new instance of the object and copy each persistent attribute. Alternative methods include <code><a href="a_clonecopypolicy.htm#CDDJGFHA">@CloneCopyPolicy</a></code>, which clones the object.</p>
 <p>Cloning is more efficient than creating a new instance and maintains transient or non-persistent attribute values. If you do not need transient or non-persistent attribute values in the shared cache, then use <code>@InstantiationCopyPolicy</code>.</p>
@@ -67,14 +67,14 @@ Release 2.4</div></td>
 </li>
 </ul>
 <p>You can specify <code>@InstantiationCopyPolicy</code> on an Entity, MappedSuperclass, or Embeddable entity.</p>
-<a id="sthref162" name="sthref162"></a>
+<a id="sthref163" name="sthref163"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#CHDDBCHI">Example 2-50</a> shows how to use this annotation.</p>
 <div class="example"><a id="CHDDBCHI" name="CHDDBCHI"></a><a id="TLJPA426" name="TLJPA426"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-50 Using @InstantiationCopyPolicy Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Entity
-@InstantiationCopyPolicy
+<strong>@InstantiationCopyPolicy</strong>
 public class Employee {
     ...
     transient List events = new ArrayList();
@@ -86,12 +86,12 @@ public class Employee {
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-51 Using &lt;instantiation-copy-policy&gt; XML</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;entity name="Employee" class="org.acme.Employee" access="FIELD"&gt;
-&lt;instantiation-copy-policy/&gt;
+    <strong>&lt;instantiation-copy-policy/&gt;</strong>
     ...
 &lt;/entity&gt;
 </pre></div>
 <!-- class="example" -->
-<a id="sthref163" name="sthref163"></a>
+<a id="sthref164" name="sthref164"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

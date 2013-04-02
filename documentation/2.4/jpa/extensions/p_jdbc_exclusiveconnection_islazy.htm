@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>jdbc.exclusive-connection.is-lazy | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T8:14:54Z" />
+<meta name="date" content="2013-04-02T9:55:52Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="jdbc.exclusive-connection.is-lazy" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,34 +50,34 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">jdbc.exclusive-connection.is-lazy</font></h2>
 <p>Use <code>eclipselink.jdbc.exclusive-connection.is-lazy</code> to specify if EclipseLink acquires write connections lazily.</p>
-<a id="sthref976" name="sthref976"></a>
+<a id="sthref968" name="sthref968"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
-<p><a href="#CHDEEGCH">Table 5-45</a> describes this persistence property's values.</p>
-<div class="tblhruleformalwide"><a id="TLJPA926" name="TLJPA926"></a><a id="sthref977" name="sthref977"></a><a id="CHDEEGCH" name="CHDEEGCH"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 5-45 Valid Values for jdbc.exclusive-connection.is-lazy</font></em></strong></p>
+<p><a href="#CHDEEGCH">Table 5-44</a> describes this persistence property's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA926" name="TLJPA926"></a><a id="sthref969" name="sthref969"></a><a id="CHDEEGCH" name="CHDEEGCH"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 5-44 Valid Values for jdbc.exclusive-connection.is-lazy</font></em></strong></p>
 <table class="HRuleFormalWide" title="Valid Values for jdbc.exclusive-connection.is-lazy" summary="Valid Values for this query hint" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="29%" />
 <col width="*" />
 <thead>
 <tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t48"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
-<th align="left" valign="bottom" id="r1c2-t48"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c1-t47"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t47"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
 </tr>
 </thead>
 <tbody>
 <tr align="left" valign="top">
-<td align="left" id="r2c1-t48" headers="r1c1-t48">
+<td align="left" id="r2c1-t47" headers="r1c1-t47">
 <p><code>true</code></p>
 </td>
-<td align="left" headers="r2c1-t48 r1c2-t48">
+<td align="left" headers="r2c1-t47 r1c2-t47">
 <p>(Default) Acquire write connections lazily.</p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r3c1-t48" headers="r1c1-t48">
+<td align="left" id="r3c1-t47" headers="r1c1-t47">
 <p>false</p>
 </td>
-<td align="left" headers="r3c1-t48 r1c2-t48">
+<td align="left" headers="r3c1-t47 r1c2-t47">
 <p>Do not acquire write connections lazily.</p>
 </td>
 </tr>
@@ -85,24 +85,24 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref978" name="sthref978"></a>
+<a id="sthref970" name="sthref970"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
-<a id="sthref979" name="sthref979"></a>
+<a id="sthref971" name="sthref971"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<div class="example"><a id="TLJPA927" name="TLJPA927"></a><a id="sthref980" name="sthref980"></a>
+<div class="example"><a id="TLJPA927" name="TLJPA927"></a><a id="sthref972" name="sthref972"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-38 Using jdbc.exclusive-connection.is-lazy in persistence.xml</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;property name="eclipselink.jdbc.exclusive-connection.is-lazy" value="false"/&gt;
 </pre></div>
 <!-- class="example" -->
-<div class="example"><a id="TLJPA928" name="TLJPA928"></a><a id="sthref981" name="sthref981"></a>
+<div class="example"><a id="TLJPA928" name="TLJPA928"></a><a id="sthref973" name="sthref973"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-39 Using jdbc.exclusive-connection.is-lazy in Property Map</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 import org.eclipse.persistence.config.PersistenceUnitProperties;
 propertiesMap.put(PersistenceUnitProperties.EXCLUSIVE_CONNECTION_IS_LAZY, "false");
 </pre></div>
 <!-- class="example" -->
-<a id="sthref982" name="sthref982"></a>
+<a id="sthref974" name="sthref974"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

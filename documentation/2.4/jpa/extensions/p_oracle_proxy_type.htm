@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>oracle.proxy-type | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T8:14:55Z" />
+<meta name="date" content="2013-04-02T9:55:54Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="oracle.proxy-type" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,51 +50,51 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">oracle.proxy-type</font></h2>
 <p>Use <code>eclipselink.oracle.proxy-type</code> to specify the proxy type to be passed to the <code>OracleConnection.openProxySession</code> method.</p>
-<a id="sthref1138" name="sthref1138"></a>
+<a id="sthref1130" name="sthref1130"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
-<p><a href="#CDEIGGEJ">Table 5-73</a> describes this persistence property's values.</p>
-<div class="tblhruleformalwide"><a id="TLJPA1110" name="TLJPA1110"></a><a id="sthref1139" name="sthref1139"></a><a id="CDEIGGEJ" name="CDEIGGEJ"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 5-73 Valid Values for oracle.proxy-type</font></em></strong></p>
+<p><a href="#CDEIGGEJ">Table 5-72</a> describes this persistence property's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA1110" name="TLJPA1110"></a><a id="sthref1131" name="sthref1131"></a><a id="CDEIGGEJ" name="CDEIGGEJ"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 5-72 Valid Values for oracle.proxy-type</font></em></strong></p>
 <table class="HRuleFormalWide" title="Valid Values for oracle.proxy-type" summary="Valid Values for this query hint" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="29%" />
 <col width="*" />
 <thead>
 <tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t79"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
-<th align="left" valign="bottom" id="r1c2-t79"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c1-t78"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t78"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
 </tr>
 </thead>
 <tbody>
 <tr align="left" valign="top">
-<td align="left" id="r2c1-t79" headers="r1c1-t79">
+<td align="left" id="r2c1-t78" headers="r1c1-t78">
 <p><code>USER_NAME</code></p>
 </td>
-<td align="left" headers="r2c1-t79 r1c2-t79"><br /></td>
+<td align="left" headers="r2c1-t78 r1c2-t78"><br /></td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r3c1-t79" headers="r1c1-t79">
+<td align="left" id="r3c1-t78" headers="r1c1-t78">
 <p><code>DISTINGUISED_NAME</code></p>
 </td>
-<td align="left" headers="r3c1-t79 r1c2-t79"><br /></td>
+<td align="left" headers="r3c1-t78 r1c2-t78"><br /></td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r4c1-t79" headers="r1c1-t79">
+<td align="left" id="r4c1-t78" headers="r1c1-t78">
 <p><code>CERTIFICATE</code></p>
 </td>
-<td align="left" headers="r4c1-t79 r1c2-t79"><br /></td>
+<td align="left" headers="r4c1-t78 r1c2-t78"><br /></td>
 </tr>
 </tbody>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref1140" name="sthref1140"></a>
+<a id="sthref1132" name="sthref1132"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>This property requires Oracle JDBC version 10.1.0.2 or later and <code>eclipselink.<a href="p_target_database.htm#target-database">target-database</a></code> must be configured to use <code>Oracle9</code> or later.</p>
 <p>Typically, you should set this property into <code>EntityManager</code>, through a <code>createEntityManager</code> method or by using proprietary <code>setProperties</code> method on <code>EntityManagerImpl</code>. This causes <code>EntityManager</code> to use proxy connection for writing and reading inside transaction.</p>
 <p>If <code>proxy-type</code> and the corresponding <code>proxy</code> property set into <code>EntityManagerFactory</code>, all connections created by the factory will be proxy connections.</p>
-<a id="sthref1141" name="sthref1141"></a>
+<a id="sthref1133" name="sthref1133"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<div class="example"><a id="TLJPA993" name="TLJPA993"></a><a id="sthref1142" name="sthref1142"></a>
+<div class="example"><a id="TLJPA993" name="TLJPA993"></a><a id="sthref1134" name="sthref1134"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-71 Using eclipselink.oracle.proxy-type with EntityManager</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 Map emProperties = new HashMap();
@@ -108,7 +108,7 @@ entityManager.setProperty(&ldquo;eclipselink.oracle.proxy-type&rdquo;, OracleCon
 entityManager.setProperty(OracleConnection.PROXY_USER_NAME, &ldquo;john&rdquo;);
 </pre></div>
 <!-- class="example" -->
-<a id="sthref1143" name="sthref1143"></a>
+<a id="sthref1135" name="sthref1135"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

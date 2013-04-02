@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Creating EclipseLink DBWS Services | EclipseLink 2.4.x EclipseLink DBWS</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T10:48:21Z" />
+<meta name="date" content="2013-04-02T8:28:53Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Creating EclipseLink DBWS Services" />
 <meta name="relnum" content="Release 2.4" />
@@ -45,19 +45,19 @@ Release 2.4</div></td>
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header --><a id="CJADEGBI" name="CJADEGBI"></a>
+<div class="ind"><!-- End Header --><a id="CJADEGBI" name="CJADEGBI"></a><a id="TLDBW117" name="TLDBW117"></a>
 <div class="sect1">
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Creating EclipseLink DBWS Services</font></h1>
 <p>You can generate a WAR file containing the EclipseLink DBWS service descriptor along with all required deployment artifacts for a JAX-WS 2.0 Web service (WSDL, XML schema, <code>web.xml</code>, EclipseLink object-relational mapping (ORM) and object-XML mapping (OXM) native project XML files, and so on).</p>
-<div class="figure"><a id="sthref15" name="sthref15"></a>
+<div class="figure"><a id="TLDBW118" name="TLDBW118"></a><a id="sthref15" name="sthref15"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 1-3 Contents of WAR File</font></em></strong></p>
 <img src="img/dbwswarfile.gif" alt="Contents of WAR File" title="Contents of WAR File" longdesc="img_text/dbwswarfile.htm" /><br />
 <a id="sthref16" name="sthref16" href="img_text/dbwswarfile.htm">Description of "Figure 1-3 Contents of WAR File"</a><br />
 <br /></div>
 <!-- class="figure" -->
-<div class="tblhruleformal"><a id="sthref17" name="sthref17"></a><a id="sthref18" name="sthref18"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 1-2 EclipseLink DBWS Service .war File Contents</font></em></strong></p>
-<table class="HRuleFormal" title="EclipseLink DBWS Service .war File Contents " summary="Contents of the EclipseLink DBWS Service .war file" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<div class="tblhruleformal"><a id="TLDBW119" name="TLDBW119"></a><a id="sthref17" name="sthref17"></a><a id="sthref18" name="sthref18"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 1-2 EclipseLink DBWS Service.war File Contents</font></em></strong></p>
+<table class="HRuleFormal" title="EclipseLink DBWS Service.war File Contents " summary="Contents of the EclipseLink DBWS Service .war file" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="44%" />
 <col width="*" />
 <thead>
@@ -144,6 +144,7 @@ Release 2.4</div></td>
 <p>Note that the files <code>swaref.xsd</code> and <code>web.xml</code> have names and content determined by their roles in Web deployment and cannot be changed.</p>
 <p>The deployable&nbsp;<code>.war</code> file has been verified to work with the Oracle WebLogic Server 10.3 JavaEE container. See <code><a href="http://www.oracle.com/technology/software/products/ias/htdocs/wls_main.html?rssid=rss_otn_soft">http://www.oracle.com/technology/software/products/ias/htdocs/wls_main.html?rssid=rss_otn_soft</a></code> for more information.</p>
 <p>An alternate deployable JAR file has been verified to work as a JavaSE 6 "containerless" EndPoint. See <code><a href="http://java.sun.com/javase/6/docs/api/javax/xml/ws/Endpoint.html">http://java.sun.com/javase/6/docs/api/javax/xml/ws/Endpoint.html</a></code> and <code><a href="http://wiki.eclipse.org/EclipseLink/Examples/DBWS/AdvancedJavase6Containerless">http://wiki.eclipse.org/EclipseLink/Examples/DBWS/AdvancedJavase6Containerless</a></code> for more information.</p>
+<a id="TLDBW120" name="TLDBW120"></a>
 <div class="sect2"><a id="sthref19" name="sthref19"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Creating EclipseLink DBWS Services Using the DBWSBuilder Utility</font></h2>
 <p>This section describes how to create EclipseLink DBWS services using the <code>DBWSBuilder</code> utility.</p>
@@ -170,11 +171,11 @@ Release 2.4</div></td>
 <p>a stored procedure.</p>
 </li>
 </ul>
-<a id="BABCIEID" name="BABCIEID"></a>
+<a id="BABCIEID" name="BABCIEID"></a><a id="TLDBW121" name="TLDBW121"></a>
 <div class="sect3">
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Creating an EclipseLink DBWS Service from a Database Table</font></h3>
 <p>You can create an EclipseLink <code>DBWSBuilder</code> XML file with a <code>&lt;table&gt;</code> query operation, as follows:</p>
-<div class="example"><a id="sthref20" name="sthref20"></a>
+<div class="example"><a id="TLDBW122" name="TLDBW122"></a><a id="sthref20" name="sthref20"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 1-4 Sample DBWSBuilder XML File</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -193,11 +194,11 @@ Release 2.4</div></td>
 <p>For more information, see <a href="creating_dbws_services001.htm#CJABFFBE">"Creating EclipseLink DBWS Service from a Database Table"</a>.</p>
 </div>
 <!-- class="sect3" -->
-<a id="BABEFADD" name="BABEFADD"></a>
+<a id="BABEFADD" name="BABEFADD"></a><a id="TLDBW123" name="TLDBW123"></a>
 <div class="sect3">
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Creating an EclipseLink DBWS Service from a SQL Statement</font></h3>
 <p>You can create an EclipseLink DBWS builder XML file with a <code>&lt;sql&gt;</code> query operation, as follows:</p>
-<div class="example"><a id="sthref21" name="sthref21"></a>
+<div class="example"><a id="TLDBW124" name="TLDBW124"></a><a id="sthref21" name="sthref21"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 1-5 Sample DBWS Builder XML File</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -214,6 +215,7 @@ Release 2.4</div></td>
 &lt;/dbws-builder&gt;
 </pre></div>
 <!-- class="example" -->
+<a id="TLDBW125" name="TLDBW125"></a>
 <div class="sect4"><a id="sthref22" name="sthref22"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Using Parameter Binding</font></h4>
 <p>The SQL <code>SELECT</code> statement for a <code>&lt;sql&gt;</code> operation may have parameters that must be bound to a datatype from the <code>eclipselink-dbws-schema.xsd</code>, or to any of the basic XSD datatypes. The SQL <code>SELECT</code> string uses JDBC-style&nbsp;<code>?</code>&nbsp;markers to indicate the position of the argument. The <code>&lt;sql&gt;</code> operation uses nested <code>&lt;binding&gt;</code> elements to match the datatype to the parameters. The order in which <code>&lt;binding&gt;</code> elements are defined must match the order of&nbsp;<code>?</code>&nbsp;markers in the SQL string:</p>
@@ -238,11 +240,11 @@ Release 2.4</div></td>
 </div>
 <!-- class="sect4" --></div>
 <!-- class="sect3" -->
-<a id="BABJIGIC" name="BABJIGIC"></a>
+<a id="BABJIGIC" name="BABJIGIC"></a><a id="TLDBW126" name="TLDBW126"></a>
 <div class="sect3">
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Creating an EclipseLink DBWS Service from a Stored Procedure</font></h3>
 <p>You can create an EclipseLink DBWS builder XML File with a <code>&lt;procedure&gt;</code> query operation, as shown in <a href="#BABBBABC">Example 1-6</a>.</p>
-<div class="example"><a id="BABBBABC" name="BABBBABC"></a>
+<div class="example"><a id="BABBBABC" name="BABBBABC"></a><a id="TLDBW127" name="TLDBW127"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 1-6 Using a &lt;procedure&gt; Query</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -264,6 +266,7 @@ Release 2.4</div></td>
 </div>
 <!-- class="sect3" --></div>
 <!-- class="sect2" -->
+<a id="TLDBW128" name="TLDBW128"></a>
 <div class="sect2"><a id="sthref23" name="sthref23"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Customizing an EclipseLink DBWS Service</font></h2>
 <p>There are a number use-cases that require an EclipseLink DBWS Service to be customized. The use-cases can be subdivided into the following categories:</p>
@@ -278,10 +281,11 @@ Release 2.4</div></td>
 <p>Advanced &ndash; manually generating all required deployment artifacts.</p>
 </li>
 </ul>
+<a id="TLDBW129" name="TLDBW129"></a>
 <div class="sect3"><a id="sthref24" name="sthref24"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Performing Simple Customization</font></h3>
 <p>By default, <code>DBWSBuilder</code>-generated <code>eclipselink-dbws-schema.xsd</code> file derives <code>&lt;element-tag&gt;</code> names from the database table metadata, as shown in <a href="#CJADJAED">Example 1-7</a>.</p>
-<div class="example"><a id="CJADJAED" name="CJADJAED"></a>
+<div class="example"><a id="CJADJAED" name="CJADJAED"></a><a id="TLDBW130" name="TLDBW130"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 1-7 DBWSBuilder-generated eclipselink-dbws-schema.xsd File</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -305,7 +309,7 @@ Release 2.4</div></td>
 </pre></div>
 <!-- class="example" -->
 <p>Use the <code>NamingConventionTransformer</code> to change an &lt;element&gt; tag to an attribute, as shown in <a href="#CJAHDIFC">Example 1-8</a>.</p>
-<div class="example"><a id="CJAHDIFC" name="CJAHDIFC"></a>
+<div class="example"><a id="CJAHDIFC" name="CJAHDIFC"></a><a id="TLDBW131" name="TLDBW131"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 1-8 Converting to an Attribute</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 public interface NamingConventionTransformer {
@@ -325,6 +329,7 @@ public interface NamingConventionTransformer {
 <p>For more information, see "Naming Convention for schema elements" in the EclipseLink documentation: <code><a href="http://wiki.eclipse.org/EclipseLink/Examples/DBWS/DBWSIntermediateAttribute">http://wiki.eclipse.org/EclipseLink/Examples/DBWS/DBWSIntermediateAttribute</a></code>.</p>
 </div>
 <!-- class="sect3" -->
+<a id="TLDBW132" name="TLDBW132"></a>
 <div class="sect3"><a id="sthref25" name="sthref25"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Performing Intermediate Customization</font></h3>
 <p>The primary reason to use an EclipseLink SessionCustomizer is to enable programmatic access to the EclipseLink API. Using this API, you can retrieve the object-relational or object-XML mapping descriptors from the session, and then use these descriptors to add, change, or delete mappings. You could also consider turning off the session cache, or changing the transaction isolation level of the database connection.</p>
@@ -369,6 +374,7 @@ public class MySessionCustomizer implements SessionCustomizer {
 <p>For more information, see "Session Customization" in the EclipseLink documentation: <code><a href="http://wiki.eclipse.org/Introduction_to_EclipseLink_Sessions_%28ELUG%29#Session_Customization">http://wiki.eclipse.org/Introduction_to_EclipseLink_Sessions_%28ELUG%29#Session_Customization</a></code>.</p>
 </div>
 <!-- class="sect3" -->
+<a id="TLDBW133" name="TLDBW133"></a>
 <div class="sect3"><a id="sthref26" name="sthref26"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Performing Advanced Customization</font></h3>
 <p>You can customize an EclipseLink DBWS service by creating your own <code>project.xml</code> and <code>sessions.xml</code> files. Using your preferred utility, you can do the following:</p>
@@ -387,6 +393,7 @@ public class MySessionCustomizer implements SessionCustomizer {
 </div>
 <!-- class="sect3" --></div>
 <!-- class="sect2" -->
+<a id="TLDBW134" name="TLDBW134"></a>
 <div class="sect2"><a id="sthref27" name="sthref27"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Using DBWSBuilder API</font></h2>
 <p>The EclipseLink DBWS design-time utility, <code>DBWSBuilder</code>, is a Java application that generates EclipseLink DBWS files and assembles them into deployable archives.</p>
@@ -396,7 +403,7 @@ prompt &gt; dbwsbuilder.cmd -builderFile {path_to_builder.xml} -stageDir {path_t
  
 </pre>
 <p>The given builder XML file (<a href="#BABBAHFB">Example 1-9</a>) is parsed by the OXM Project <code>org.eclipse.persistence.tools.dbws.DBWSBuilderModelProject</code> producing model objects that represent properties and <code>&lt;table&gt;</code> operations. Thus the public class <code>org.eclipse.persistence.tools.dbws.DBWSBuilder</code> can be populated programmatically through property setters (i.e. <code>setDriver()</code>, <code>setUrl()</code>) - table; SQL operations via <code>addSqlOperation()</code>.</p>
-<div class="example"><a id="BABBAHFB" name="BABBAHFB"></a>
+<div class="example"><a id="BABBAHFB" name="BABBAHFB"></a><a id="TLDBW135" name="TLDBW135"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 1-9 Sample Builder XML File</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -418,14 +425,14 @@ prompt &gt; dbwsbuilder.cmd -builderFile {path_to_builder.xml} -stageDir {path_t
 </pre></div>
 <!-- class="example" -->
 <p>The packager specified on the command-line is represented by a class that implements the <code>org.eclipse.persistence.tools.dbws.DBWSPackager</code> interface. There is a hierarchy of concrete implementations of this interface, shown in <a href="#BABHDFBF">Figure 1-4</a>:</p>
-<div class="figure"><a id="BABHDFBF" name="BABHDFBF"></a>
+<div class="figure"><a id="BABHDFBF" name="BABHDFBF"></a><a id="TLDBW136" name="TLDBW136"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 1-4 Hierarchy of Concrete Implementation</font></em></strong></p>
 <img src="img/dbwspackagehierarchy.gif" alt="Description of Figure 1-4 follows" title="Description of Figure 1-4 follows" longdesc="img_text/dbwspackagehierarchy.htm" /><br />
 <a id="sthref28" name="sthref28" href="img_text/dbwspackagehierarchy.htm">Description of "Figure 1-4 Hierarchy of Concrete Implementation"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p>The primary responsibility of a <code>DBWSPackager</code> is to provide <code>java.io.OutputStream</code>'s for the output generated by <code>DBWSBuilder</code>:</p>
-<div class="example"><a id="sthref29" name="sthref29"></a>
+<div class="example"><a id="TLDBW137" name="TLDBW137"></a><a id="sthref29" name="sthref29"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 1-10 Sample DBWSPackager</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 // call-backs for stream management

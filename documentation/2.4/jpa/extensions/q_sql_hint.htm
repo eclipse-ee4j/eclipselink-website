@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>sql.hint | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T8:14:53Z" />
+<meta name="date" content="2013-04-02T9:55:49Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="sql.hint" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,26 +50,26 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">sql.hint</font></h2>
 <p>Use <code>eclipselink.sql.hint</code> to include an SQL hint in the SQL for a query.</p>
-<a id="sthref737" name="sthref737"></a>
+<a id="sthref732" name="sthref732"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
-<p><a href="#CBAHJJFF">Table 4-40</a> describes this query hint's values.</p>
-<div class="tblhruleformalwide"><a id="TLJPA823" name="TLJPA823"></a><a id="sthref738" name="sthref738"></a><a id="CBAHJJFF" name="CBAHJJFF"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-40 Valid Values for sql.hint</font></em></strong></p>
+<p><a href="#CBAHJJFF">Table 4-39</a> describes this query hint's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA823" name="TLJPA823"></a><a id="sthref733" name="sthref733"></a><a id="CBAHJJFF" name="CBAHJJFF"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-39 Valid Values for sql.hint</font></em></strong></p>
 <table class="HRuleFormalWide" title="Valid Values for sql.hint" summary="Valid values for this extensiont" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="29%" />
 <col width="*" />
 <thead>
 <tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t54"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
-<th align="left" valign="bottom" id="r1c2-t54"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c1-t53"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t53"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
 </tr>
 </thead>
 <tbody>
 <tr align="left" valign="top">
-<td align="left" id="r2c1-t54" headers="r1c1-t54">
+<td align="left" id="r2c1-t53" headers="r1c1-t53">
 <p>value</p>
 </td>
-<td align="left" headers="r2c1-t54 r1c2-t54">
+<td align="left" headers="r2c1-t53 r1c2-t53">
 <p>The full hint string, including the comment \ delimiters</p>
 </td>
 </tr>
@@ -77,31 +77,37 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref739" name="sthref739"></a>
+<a id="sthref734" name="sthref734"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>A SQL hint can be used on certain database platforms to define how the query uses indexes and other such low level usages. The SQL hint will be included in the SQL, after the <code>SELECT</code>/<code>INSERT</code>/<code>UPDATE</code>/<code>DELETE</code> command.</p>
-<a id="sthref740" name="sthref740"></a>
+<a id="sthref735" name="sthref735"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<p><a href="#CIHHIBCH">Example 4-74</a> shows how to use this hint in a JPA query.</p>
+<p><a href="#CIHHIBCH">Example 4-79</a> shows how to use this hint in a JPA query.</p>
 <div class="example"><a id="CIHHIBCH" name="CIHHIBCH"></a><a id="TLJPA824" name="TLJPA824"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-74 Using sql.hint in a JPA Query</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-79 Using sql.hint in a JPA Query</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 
 </pre></div>
 <!-- class="example" -->
-<p><a href="#CIHDEAGG">Example 4-75</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<p><a href="#CIHDEAGG">Example 4-80</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
 <div class="example"><a id="CIHDEAGG" name="CIHDEAGG"></a><a id="TLJPA825" name="TLJPA825"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-75 Using sql.hint in a @QueryHint Annotation</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-80 Using sql.hint in a @QueryHint Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 
 </pre></div>
 <!-- class="example" -->
-<a id="sthref741" name="sthref741"></a>
+<a id="sthref736" name="sthref736"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
 <li>
-<p>Section 10.3.1 "NamedQuery Annotation" in the JPA Specification (<code><a href="http://jcp.org/en/jsr/detail?id=317">http://jcp.org/en/jsr/detail?id=317</a></code>).</p>
+<p>"Query Hints" in <em>Understanding EclipseLink</em></p>
+</li>
+<li>
+<p>"Query" in <em>Solutions Guide for EclispeLink</em></p>
+</li>
+<li>
+<p>Section 10.3.1 "NamedQuery Annotation" in the JPA Specification (<code><a href="http://jcp.org/en/jsr/detail?id=317">http://jcp.org/en/jsr/detail?id=317</a></code>)</p>
 </li>
 </ul>
 </div>

@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>persistence-context.reference-mode | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T8:14:56Z" />
+<meta name="date" content="2013-04-02T9:55:54Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="persistence-context.reference-mode" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,44 +50,44 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">persistence-context.reference-mode</font></h2>
 <p>Use <code>eclipselink.persistence-context.reference-mode</code> to specify if hard or soft (that is, weak) references are used within the Persistence Context.</p>
-<a id="sthref1184" name="sthref1184"></a>
+<a id="sthref1176" name="sthref1176"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
-<p><a href="#BABFGBIF">Table 5-81</a> describes this persistence property's values.</p>
-<div class="tblhruleformalwide"><a id="TLJPA1120" name="TLJPA1120"></a><a id="sthref1185" name="sthref1185"></a><a id="BABFGBIF" name="BABFGBIF"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 5-81 Valid Values for persistence-context.reference-mode</font></em></strong></p>
+<p><a href="#BABFGBIF">Table 5-80</a> describes this persistence property's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA1120" name="TLJPA1120"></a><a id="sthref1177" name="sthref1177"></a><a id="BABFGBIF" name="BABFGBIF"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 5-80 Valid Values for persistence-context.reference-mode</font></em></strong></p>
 <table class="HRuleFormalWide" title="Valid Values for persistence-context.reference-mode" summary="Valid Values for this query hint" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="18%" />
 <col width="*" />
 <thead>
 <tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t87"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
-<th align="left" valign="bottom" id="r1c2-t87"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c1-t86"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t86"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
 </tr>
 </thead>
 <tbody>
 <tr align="left" valign="top">
-<td align="left" id="r2c1-t87" headers="r1c1-t87">
+<td align="left" id="r2c1-t86" headers="r1c1-t86">
 <p><code>hard</code></p>
 </td>
-<td align="left" headers="r2c1-t87 r1c2-t87">
+<td align="left" headers="r2c1-t86 r1c2-t86">
 <p>(Default) EclipseLink references all objects through <strong>hard</strong> references. These objects <em>will not</em> be available for garbage collection until the referencing artifact (such as the persistence context or unit of work) is released/cleared or closed.</p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r3c1-t87" headers="r1c1-t87">
+<td align="left" id="r3c1-t86" headers="r1c1-t86">
 <p><code>weak</code></p>
 </td>
-<td align="left" headers="r3c1-t87 r1c2-t87">
+<td align="left" headers="r3c1-t86 r1c2-t86">
 <p>References to objects supporting active attribute change tracking (see <a href="a_changetracking.htm#CEGCCCCJ">"@ChangeTracking"</a>) will be held by <strong>weak</strong> references. That is, any object no longer referenced directly or indirectly will be available for garbage collection. When a change is made to a change-tracked object, that object is moved to a hard reference and will not be available for garbage collection until flushed.</p>
 <p><strong>Note</strong>: Any changes that have not been flushed in these entities will be lost.</p>
 <p>New and removed objects, as well as objects that do not support active attribute change tracking, will also be held by hard references and will not be available for garbage collection.</p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r4c1-t87" headers="r1c1-t87">
+<td align="left" id="r4c1-t86" headers="r1c1-t86">
 <p><code>force_weak</code></p>
 </td>
-<td align="left" headers="r4c1-t87 r1c2-t87">
+<td align="left" headers="r4c1-t86 r1c2-t86">
 <p>All objects, including non-change-tracked objects, are to be held by <strong>weak</strong> references. When a change is made to a change-tracked object (see <a href="a_changetracking.htm#CEGCCCCJ">"@ChangeTracking"</a>), that object is moved to a hard reference and will not be available for garbage collection until flushed. However, any objects that do not support active attribute change tracking may be garbage collected before their changes are flushed to a database, which can potentially result in a loss of changes.</p>
 <p>New and removed objects will be held by hard references and will not be available for garbage collection.</p>
 </td>
@@ -96,10 +96,10 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref1186" name="sthref1186"></a>
+<a id="sthref1178" name="sthref1178"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>The property set in <code>persistence.xml</code> or passed to <code>createEntityManagerFactory</code> affects <em>all</em> <code>EntityManagers</code> created by the factory. To apply the property to <em>specific</em> <code>EntityManagers</code> pass it to <code>createEntityManager</code> method.</p>
-<a id="sthref1187" name="sthref1187"></a>
+<a id="sthref1179" name="sthref1179"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#CHDBACII">Example 5-79</a> shows how to use this property in a <code>persistence.xml</code> file.</p>
 <div class="example"><a id="CHDBACII" name="CHDBACII"></a><a id="TLJPA1011" name="TLJPA1011"></a>
@@ -109,14 +109,14 @@ Release 2.4</div></td>
 </pre></div>
 <!-- class="example" -->
 <p><a href="#CHDBACII">Example 5-79</a> shows how to use this property in a property map.</p>
-<div class="example"><a id="TLJPA1012" name="TLJPA1012"></a><a id="sthref1188" name="sthref1188"></a>
+<div class="example"><a id="TLJPA1012" name="TLJPA1012"></a><a id="sthref1180" name="sthref1180"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-80 Using persistence-context.reference-mode in Property Map</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 import org.eclipse.persistence.config.PersistenceUnitProperties;
 propertiesMap.put(PersistenceUnitProperties.PERSISTENCE_CONTEXT_REFERENCE_MODE, ReferenceMode.FORCE_WEAK);
 </pre></div>
 <!-- class="example" -->
-<a id="sthref1189" name="sthref1189"></a>
+<a id="sthref1181" name="sthref1181"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

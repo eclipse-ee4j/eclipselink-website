@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@PrimaryKey | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T8:14:51Z" />
+<meta name="date" content="2013-04-02T9:55:43Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@PrimaryKey" />
 <meta name="relnum" content="Release 2.4" />
@@ -51,10 +51,10 @@ Release 2.4</div></td>
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@PrimaryKey</font></h2>
 <p>Use <code>@PrimaryKey</code> to allow advanced configuration of the ID.</p>
 <p>A validation policy can be given that allows specifying if zero is a valid ID value. The set of primary key columns can also be specified precisely.</p>
-<a id="sthref297" name="sthref297"></a>
+<a id="sthref298" name="sthref298"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#BGEBGEAB">Table 2-53</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="TLJPA504" name="TLJPA504"></a><a id="sthref298" name="sthref298"></a><a id="BGEBGEAB" name="BGEBGEAB"></a>
+<div class="tblhruleformalwide"><a id="TLJPA504" name="TLJPA504"></a><a id="sthref299" name="sthref299"></a><a id="BGEBGEAB" name="BGEBGEAB"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 2-53 @PrimaryKey Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@PrimaryKey Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="23%" />
@@ -118,11 +118,11 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref299" name="sthref299"></a>
+<a id="sthref300" name="sthref300"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>By default, EclipseLink interprets zero as <code>null</code> for primitive types that cannot be null (such as <code>int</code> and <code>long</code>), causing zero to be an invalid value for primary keys. You can modify this setting by using the <code>@PrimaryKey</code> annotation to configure an <code>IdValidation</code> for an entity class. Use the <code>eclipselink.<a href="p_id_validation.htm#CACEEGCC">id-validation</a></code> property to configure an <code>IdValidation</code> for the entire persistence unit.</p>
 <p>Setting the <code>validation</code> element also affects how EclipseLink generates IDs: new IDs are generated only for IDs that are not valid (<code>null</code> or <code>0</code>, by default); setting to <code>NONE</code> disables ID generation.</p>
-<a id="sthref300" name="sthref300"></a>
+<a id="sthref301" name="sthref301"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#BGEJFGAG">Example 2-91</a> shows how to use this annotation.</p>
 <div class="example"><a id="BGEJFGAG" name="BGEJFGAG"></a><a id="TLJPA505" name="TLJPA505"></a>
@@ -144,7 +144,7 @@ public class Employee implements Serializable, Cloneable {
 &lt;/entity&gt;
 </pre></div>
 <!-- class="example" -->
-<a id="sthref301" name="sthref301"></a>
+<a id="sthref302" name="sthref302"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

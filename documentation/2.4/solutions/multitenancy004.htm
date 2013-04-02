@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Using VPD Multi-Tenancy | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-30T11:13:6Z" />
+<meta name="date" content="2013-04-02T8:20:52Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Using VPD Multi-Tenancy" />
 <meta name="relnum" content="Release 2.4" />
@@ -132,7 +132,7 @@ public class Task implements Serializable {
 @Multitenant(includeCriteria=false)
 @TenantDiscriminatorColumn(name = "USER_ID", contextProperty = "tenant.id")
 </pre>
-<p>In EclipseLink 2.3.1, you must run the following codefrom a <code>SessionCustomizer</code>:</p>
+<p>In EclipseLink 2.3.1, you must run the following code from a <code>SessionCustomizer</code>:</p>
 <pre xml:space="preserve" class="oac_no_warn">
 session.getDescriptor(Task.class).getQueryManager().setIncludeTenantCriteria(false);
 </pre></div>

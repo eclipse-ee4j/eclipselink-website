@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@PrivateOwned | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T8:14:51Z" />
+<meta name="date" content="2013-04-02T9:55:43Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@PrivateOwned" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@PrivateOwned</font></h2>
 <p>Use <code>@PrivateOwned</code> to specify that a relationship is privately owned; target object is a dependent part of the source object and is not referenced by any other object and cannot exist on its own.</p>
-<a id="sthref302" name="sthref302"></a>
+<a id="sthref303" name="sthref303"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p>The <code>@PrivateOwned</code> annotation does not have attributes.</p>
-<a id="sthref303" name="sthref303"></a>
+<a id="sthref304" name="sthref304"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>Using <code>@PrivateOwned</code> causes many operations to be cascaded across the relationship including delete, insert, refresh, and lock (when cascaded). It also ensures that private objects removed from collections are deleted and that objects added are inserted.</p>
 <p>You can specify <code>@PrivateOwned</code> on with <code>@OneToOne</code>, <code>@OneToMany</code> and <code>@VariableOneToOne</code> annotations. Private ownership is implied with the <code>@BasicCollection</code> and <code>@BasicMap</code> annotations.</p>
@@ -85,7 +85,7 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="inftblnote" --></div>
-<a id="sthref304" name="sthref304"></a>
+<a id="sthref305" name="sthref305"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#CHDIAFFA">Example 2-93</a> shows using <code>@PrivateOwned</code> to specify <code>Employee</code> field <code>phoneNumbers.</code> .</p>
 <div class="example"><a id="CHDIAFFA" name="CHDIAFFA"></a><a id="TLJPA509" name="TLJPA509"></a>
@@ -103,7 +103,7 @@ Release 2.4</div></td>
  }
 </pre></div>
 <!-- class="example" -->
-<a id="sthref305" name="sthref305"></a>
+<a id="sthref306" name="sthref306"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

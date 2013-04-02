@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>OPERATOR | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T8:14:52Z" />
+<meta name="date" content="2013-04-02T9:55:46Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="OPERATOR" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,7 +50,7 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">OPERATOR</font></h2>
 <p>Use <code>OPERATION</code> to call any EclipseLink operator.</p>
-<a id="sthref481" name="sthref481"></a>
+<a id="sthref482" name="sthref482"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>EclipseLink supports many database functions using standard operator names that are translated to different databases. EclipseLink operators are supported on any database that has an equivalent function (or set of functions). Use the EclipseLink <code>ExpressionOperator</code> class to define a custom operator or allow <code>DatabasePlatform</code> to override an operator..</p>
 <p><code>OPERATOR</code> is similar to <code><a href="j_func.htm#func">FUNCTION</a></code>, but allows the function to be database independent, and you can call functions that require special syntax.</p>
@@ -315,7 +315,7 @@ Release 2.4</div></td>
 <p>NullIf</p>
 </li>
 </ul>
-<a id="sthref482" name="sthref482"></a>
+<a id="sthref483" name="sthref483"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#BGBGIAEE">Example 3-10</a> shows how to use this JPQL extension.</p>
 <div class="example"><a id="BGBGIAEE" name="BGBGIAEE"></a><a id="TLJPA623" name="TLJPA623"></a>
@@ -324,7 +324,7 @@ Release 2.4</div></td>
 SELECT e FROM Employee e WHERE OPERATOR('ExtractXml', e.resume, '@years-experience') &gt; 10
 </pre></div>
 <!-- class="example" -->
-<a id="sthref483" name="sthref483"></a>
+<a id="sthref484" name="sthref484"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

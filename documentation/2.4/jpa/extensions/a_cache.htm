@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@Cache | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T8:14:50Z" />
+<meta name="date" content="2013-04-02T9:55:39Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@Cache" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@Cache</font></h2>
 <p>Use <code>@Cache</code> (in place of the JPA <code>@Cachable</code> annotation) to configure the EclipseLink object cache. By default, EclipseLink uses a shared object cache to cache all objects. You can configure the caching type and options on a per class basis to allow optimal caching.</p>
-<a id="sthref27" name="sthref27"></a>
+<a id="sthref28" name="sthref28"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#CDEJJHDG">Table 2-4</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="TLJPA335" name="TLJPA335"></a><a id="sthref28" name="sthref28"></a><a id="CDEJJHDG" name="CDEJJHDG"></a>
+<div class="tblhruleformalwide"><a id="TLJPA335" name="TLJPA335"></a><a id="sthref29" name="sthref29"></a><a id="CDEJJHDG" name="CDEJJHDG"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 2-4 @Cache Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@Cache Annotation Elements" summary="This table describes the list of attributes for this annotation." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="21%" />
@@ -241,7 +241,7 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref29" name="sthref29"></a>
+<a id="sthref30" name="sthref30"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>Use the <code>@Cache</code> annotation instead of the JPA <code>@Cachable</code> annotation to provide additional caching configuration.</p>
 <p>You can define the <code>@Cache</code> annotation on the following:</p>
@@ -274,8 +274,8 @@ Release 2.4</div></td>
 <p>For more information about the EclipseLink cache and its default behavior, see:</p>
 <ul>
 <li>
-<p>"Caching Overview"<br />
-<code>http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic JPA Development/Caching/Caching Overview</code></p>
+<p>Caching examples:</p>
+<p><code><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Caching">http://wiki.eclipse.org/EclipseLink/Examples/JPA/Caching</a></code></p>
 </li>
 </ul>
 <p>EclipseLink defines the following entity caching annotations:</p>
@@ -292,7 +292,7 @@ Release 2.4</div></td>
 </ul>
 <p>EclipseLink also provides a number of persistence unit properties that you can specify to configure the cache. These properties may compliment or provide an alternative to the usage of annotations.</p>
 <p>For more information, see <a href="persistenceproperties_ref.htm#CACDCCEG2">"Caching"</a>.</p>
-<a id="sthref30" name="sthref30"></a>
+<a id="sthref31" name="sthref31"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#CHDEEGCI">Example 2-10</a> illustrates an <code>@Cache</code> annotation.</p>
 <div class="example"><a id="CHDEEGCI" name="CHDEEGCI"></a><a id="TLJPA337" name="TLJPA337"></a>
@@ -328,7 +328,7 @@ public class Employee {
 </pre></div>
 <!-- class="example" -->
 <p>You can also specify caching properties at the persistence unit level (in the <code>persistence.xml</code> file) as shown here:</p>
-<div class="example"><a id="TLJPA339" name="TLJPA339"></a><a id="sthref31" name="sthref31"></a>
+<div class="example"><a id="TLJPA339" name="TLJPA339"></a><a id="sthref32" name="sthref32"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-12 Specifying Caching in persistence.xml</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;persistence xmlns="http://java.sun.com/xml/ns/persistence"
@@ -348,7 +348,7 @@ public class Employee {
 &lt;/persistence&gt;
 </pre></div>
 <!-- class="example" -->
-<a id="sthref32" name="sthref32"></a>
+<a id="sthref33" name="sthref33"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
@@ -362,8 +362,14 @@ public class Employee {
 <p><a href="a_cacheinterceptor.htm#BABJGDGB">"@CacheInterceptor"</a></p>
 </li>
 <li>
-<p>"Configuring Caching"<br />
-<code><a href=""></a></code></p>
+<p>"Understanding Caching" in the <em>Understanding EclipseLink</em></p>
+</li>
+<li>
+<p>"Object Caching" in <em>Solutions Guide for EclispeLink</em></p>
+</li>
+<li>
+<p>EclipseLink Caching examples:<br />
+<code><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Caching">http://wiki.eclipse.org/EclipseLink/Examples/JPA/Caching</a></code></p>
 </li>
 </ul>
 </div>

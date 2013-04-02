@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>transaction.join-existing | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T8:14:56Z" />
+<meta name="date" content="2013-04-02T9:55:55Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="transaction.join-existing" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,34 +50,34 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">transaction.join-existing</font></h2>
 <p>Use <code>eclipselink.transaction.join-existing</code> to</p>
-<a id="sthref1243" name="sthref1243"></a>
+<a id="sthref1235" name="sthref1235"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
-<p><a href="#CIHBCCII">Table 5-92</a> describes this persistence property's values.</p>
-<div class="tblhruleformalwide"><a id="TLJPA1138" name="TLJPA1138"></a><a id="sthref1244" name="sthref1244"></a><a id="CIHBCCII" name="CIHBCCII"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 5-92 Valid Values for target-server</font></em></strong></p>
+<p><a href="#CIHBCCII">Table 5-91</a> describes this persistence property's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA1138" name="TLJPA1138"></a><a id="sthref1236" name="sthref1236"></a><a id="CIHBCCII" name="CIHBCCII"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 5-91 Valid Values for target-server</font></em></strong></p>
 <table class="HRuleFormalWide" title="Valid Values for target-server" summary="Valid Values for this query hint" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="21%" />
 <col width="*" />
 <thead>
 <tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t99"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
-<th align="left" valign="bottom" id="r1c2-t99"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c1-t98"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t98"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
 </tr>
 </thead>
 <tbody>
 <tr align="left" valign="top">
-<td align="left" id="r2c1-t99" headers="r1c1-t99">
+<td align="left" id="r2c1-t98" headers="r1c1-t98">
 <p><code>true</code></p>
 </td>
-<td align="left" headers="r2c1-t99 r1c2-t99">
+<td align="left" headers="r2c1-t98 r1c2-t98">
 <p>Forces persistence context to read through JTA-managed ("write") connection in case there is an active transaction</p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r3c1-t99" headers="r1c1-t99">
+<td align="left" id="r3c1-t98" headers="r1c1-t98">
 <p><code>false</code></p>
 </td>
-<td align="left" headers="r3c1-t99 r1c2-t99">
+<td align="left" headers="r3c1-t98 r1c2-t98">
 <p>(Default)</p>
 </td>
 </tr>
@@ -85,12 +85,12 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref1245" name="sthref1245"></a>
+<a id="sthref1237" name="sthref1237"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>The property set in persistence.xml or passed to <code>createEntityManagerFactory</code> affects all <code>EntityManagers</code> created by the factory. If the property set to <code>true</code>, objects read during transaction <em>will not</em> be placed into the shared cache unless they have been updated. Alternatively, to apply the property only to some <code>EntityManagers</code> pass it to <code>createEntityManager</code> method.</p>
-<a id="sthref1246" name="sthref1246"></a>
+<a id="sthref1238" name="sthref1238"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<a id="sthref1247" name="sthref1247"></a>
+<a id="sthref1239" name="sthref1239"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 </div>

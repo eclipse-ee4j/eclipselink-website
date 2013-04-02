@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>deploy-on-startup | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T8:14:54Z" />
+<meta name="date" content="2013-04-02T9:55:51Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="deploy-on-startup" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,32 +50,32 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">deploy-on-startup</font></h2>
 <p>Use <code>eclipselink.deploy-on-startup</code> to configure deployment on startup (at the creation of the <code>EntityManagerFactory</code>) instead of occurring the first time an <code>EntityManager</code> is created.</p>
-<a id="sthref899" name="sthref899"></a>
+<a id="sthref891" name="sthref891"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
-<p><a href="#BABJJADC">Table 5-32</a> describes this persistence property's values.</p>
-<div class="tblhruleformalwide"><a id="TLJPA897" name="TLJPA897"></a><a id="sthref900" name="sthref900"></a><a id="BABJJADC" name="BABJJADC"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 5-32 Valid Values for</font></em></strong></p>
+<p><a href="#BABJJADC">Table 5-31</a> describes this persistence property's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA897" name="TLJPA897"></a><a id="sthref892" name="sthref892"></a><a id="BABJJADC" name="BABJJADC"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 5-31 Valid Values for</font></em></strong></p>
 <table class="HRuleFormalWide" title="Valid Values for " summary="Valid Values for this query hint" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="29%" />
 <col width="*" />
 <thead>
 <tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t35"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
-<th align="left" valign="bottom" id="r1c2-t35"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c1-t34"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t34"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
 </tr>
 </thead>
 <tbody>
 <tr align="left" valign="top">
-<td align="left" id="r2c1-t35" headers="r1c1-t35">
+<td align="left" id="r2c1-t34" headers="r1c1-t34">
 <p><code>true</code></p>
 </td>
-<td align="left" headers="r2c1-t35 r1c2-t35"><br /></td>
+<td align="left" headers="r2c1-t34 r1c2-t34"><br /></td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r3c1-t35" headers="r1c1-t35">
+<td align="left" id="r3c1-t34" headers="r1c1-t34">
 <p><code>false</code></p>
 </td>
-<td align="left" headers="r3c1-t35 r1c2-t35">
+<td align="left" headers="r3c1-t34 r1c2-t34">
 <p>(Default)</p>
 </td>
 </tr>
@@ -83,10 +83,10 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref901" name="sthref901"></a>
+<a id="sthref893" name="sthref893"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>Using <code>true</code> may increase startup time of a JavaEE server, but will avoid the first request from hanging as the persistence unit is deployed.</p>
-<a id="sthref902" name="sthref902"></a>
+<a id="sthref894" name="sthref894"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#BABJIBFB">Example 5-19</a> shows how to use this property in the <code>peristence.xml</code> file.</p>
 <div class="example"><a id="BABJIBFB" name="BABJIBFB"></a><a id="TLJPA898" name="TLJPA898"></a>
@@ -95,7 +95,7 @@ Release 2.4</div></td>
 &lt;property name="eclipselink.deploy-on-startup" value="true" /&gt;
 </pre></div>
 <!-- class="example" -->
-<a id="sthref903" name="sthref903"></a>
+<a id="sthref895" name="sthref895"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 </div>

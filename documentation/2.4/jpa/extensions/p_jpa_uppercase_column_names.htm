@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>jpa.uppercase-column-names | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T8:14:54Z" />
+<meta name="date" content="2013-04-02T9:55:52Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="jpa.uppercase-column-names" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,34 +50,34 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">jpa.uppercase-column-names</font></h2>
 <p>Use <code>eclipselink.jpa.uppercase-column-names</code> to specify JPA processing to uppercase all column name definitions (simulating case insensitivity).</p>
-<a id="sthref1011" name="sthref1011"></a>
+<a id="sthref1003" name="sthref1003"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
-<p><a href="#BCFGAFDA">Table 5-50</a> describes this persistence property's values.</p>
-<div class="tblhruleformalwide"><a id="TLJPA1092" name="TLJPA1092"></a><a id="sthref1012" name="sthref1012"></a><a id="BCFGAFDA" name="BCFGAFDA"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 5-50 Valid Values for jpa.uppercase-column-names</font></em></strong></p>
+<p><a href="#BCFGAFDA">Table 5-49</a> describes this persistence property's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA1092" name="TLJPA1092"></a><a id="sthref1004" name="sthref1004"></a><a id="BCFGAFDA" name="BCFGAFDA"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 5-49 Valid Values for jpa.uppercase-column-names</font></em></strong></p>
 <table class="HRuleFormalWide" title="Valid Values for jpa.uppercase-column-names" summary="Valid Values for this query hint" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="29%" />
 <col width="*" />
 <thead>
 <tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t54"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
-<th align="left" valign="bottom" id="r1c2-t54"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c1-t53"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t53"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
 </tr>
 </thead>
 <tbody>
 <tr align="left" valign="top">
-<td align="left" id="r2c1-t54" headers="r1c1-t54">
+<td align="left" id="r2c1-t53" headers="r1c1-t53">
 <p><code>true</code></p>
 </td>
-<td align="left" headers="r2c1-t54 r1c2-t54">
+<td align="left" headers="r2c1-t53 r1c2-t53">
 <p>Sets <code>eclipselink.<a href="p_jdbc_uppercasecolumns.htm#CIHIIAFD">jdbc.uppercase-columns</a></code> to <code>true</code>, requiring that JDBC metadata returned from the database is returned in uppercase, ensuring fields are the same case.</p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r3c1-t54" headers="r1c1-t54">
+<td align="left" id="r3c1-t53" headers="r1c1-t53">
 <p><code>false</code></p>
 </td>
-<td align="left" headers="r3c1-t54 r1c2-t54">
+<td align="left" headers="r3c1-t53 r1c2-t53">
 <p>(Default)</p>
 </td>
 </tr>
@@ -85,17 +85,23 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref1013" name="sthref1013"></a>
+<a id="sthref1005" name="sthref1005"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>Use this property to correct situations in which user-defined fields do not match the case returned by the database for native queries</p>
-<a id="sthref1014" name="sthref1014"></a>
+<a id="sthref1006" name="sthref1006"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<a id="sthref1015" name="sthref1015"></a>
+<a id="sthref1007" name="sthref1007"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
 <li>
 <p><a href="p_jdbc_uppercasecolumns.htm#CIHIIAFD">"jdbc.uppercase-columns"</a></p>
+</li>
+<li>
+<p>"Using EclipseLink with the Oracle Database" in <em>Solutions Guide for EclispeLink</em></p>
+</li>
+<li>
+<p>"Introduction to Data Access" in <em>Understanding EclipseLink</em></p>
 </li>
 </ul>
 </div>

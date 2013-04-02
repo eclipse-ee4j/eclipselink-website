@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>FUNCTION | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T8:14:52Z" />
+<meta name="date" content="2013-04-02T9:55:46Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="FUNCTION" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,7 +50,7 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">FUNCTION</font></h2>
 <p>Use <code>FUNCTION</code> (formerly <code>FUNC</code>) to call database specific functions from JPQL</p>
-<a id="sthref473" name="sthref473"></a>
+<a id="sthref474" name="sthref474"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>You can use <code>FUNCTION</code> to call database functions that are not supported directly in JPQL and to call user or library specific functions.</p>
 <div align="center">
@@ -68,7 +68,7 @@ Release 2.4</div></td>
 <br /></div>
 <!-- class="inftblnote" --></div>
 <p>Use <code>FUNCTION</code> to call functions with normal syntax. Functions that require special syntax cannot be called with <code>FUNCTION</code>. Instead, use <code><a href="j_operator.htm#operator">OPERATOR</a></code></p>
-<a id="sthref474" name="sthref474"></a>
+<a id="sthref475" name="sthref475"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#CIHCCHIC">Example 3-6</a> shows how to use this JPQL extension.</p>
 <div class="example"><a id="CIHCCHIC" name="CIHCCHIC"></a><a id="TLJPA616" name="TLJPA616"></a>
@@ -89,7 +89,7 @@ SELECT a FROM Asset a, Geography geo WHERE geo.id = :id AND a.id IN :id_list AND
 SELECT s FROM SimpleSpatial s WHERE FUNCTION('MDSYS.SDO_RELATE', s.jGeometry, :otherGeometry, :params) = 'TRUE' ORDER BY s.id ASC
 </pre></div>
 <!-- class="example" -->
-<a id="sthref475" name="sthref475"></a>
+<a id="sthref476" name="sthref476"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

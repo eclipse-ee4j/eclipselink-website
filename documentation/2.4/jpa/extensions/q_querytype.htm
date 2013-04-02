@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>query-type | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T8:14:53Z" />
+<meta name="date" content="2013-04-02T9:55:49Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="query-type" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,50 +50,50 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">query-type</font></h2>
 <p>Use <code>eclipselink.query-type</code> to specify which EclipseLink query type to use for the query.</p>
-<a id="sthref712" name="sthref712"></a>
+<a id="sthref706" name="sthref706"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
-<p><a href="#CDECCFBJ">Table 4-35</a> describes this query hint's valid values.</p>
-<div class="tblhruleformalwide"><a id="TLJPA673" name="TLJPA673"></a><a id="sthref713" name="sthref713"></a><a id="CDECCFBJ" name="CDECCFBJ"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-35 Valid Values for org.eclipse.persistence.config.QueryType</font></em></strong></p>
+<p><a href="#CDECCFBJ">Table 4-34</a> describes this query hint's valid values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA673" name="TLJPA673"></a><a id="sthref707" name="sthref707"></a><a id="CDECCFBJ" name="CDECCFBJ"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-34 Valid Values for org.eclipse.persistence.config.QueryType</font></em></strong></p>
 <table class="HRuleFormalWide" title="Valid Values for org.eclipse.persistence.config.QueryType" summary="Valid Values for this query hint" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="29%" />
 <col width="*" />
 <thead>
 <tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t48"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
-<th align="left" valign="bottom" id="r1c2-t48"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c1-t47"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t47"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
 </tr>
 </thead>
 <tbody>
 <tr align="left" valign="top">
-<td align="left" id="r2c1-t48" headers="r1c1-t48">
+<td align="left" id="r2c1-t47" headers="r1c1-t47">
 <p><code>Auto</code></p>
 </td>
-<td align="left" headers="r2c1-t48 r1c2-t48">
+<td align="left" headers="r2c1-t47 r1c2-t47">
 <p>(Default = <code>0</code>) EclipseLink chooses the type of query.</p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r3c1-t48" headers="r1c1-t48">
+<td align="left" id="r3c1-t47" headers="r1c1-t47">
 <p><code>ReadAll</code></p>
 </td>
-<td align="left" headers="r3c1-t48 r1c2-t48">
+<td align="left" headers="r3c1-t47 r1c2-t47">
 <p>Use a <code>ReadAllQuery</code>.</p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r4c1-t48" headers="r1c1-t48">
+<td align="left" id="r4c1-t47" headers="r1c1-t47">
 <p><code>ReadObject</code></p>
 </td>
-<td align="left" headers="r4c1-t48 r1c2-t48">
+<td align="left" headers="r4c1-t47 r1c2-t47">
 <p>Use a <code>ReadObjectQuery</code>.</p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r5c1-t48" headers="r1c1-t48">
+<td align="left" id="r5c1-t47" headers="r1c1-t47">
 <p><code>Report</code></p>
 </td>
-<td align="left" headers="r5c1-t48 r1c2-t48">
+<td align="left" headers="r5c1-t47 r1c2-t47">
 <p>Use a <code>ReportQuery</code>.</p>
 </td>
 </tr>
@@ -101,23 +101,23 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref714" name="sthref714"></a>
+<a id="sthref708" name="sthref708"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>By default, EclipseLink uses <code>org.eclipse.persistence.queries.ReportQuery</code> or <code>org.eclipse.persistence.queries.ReadAllQuery</code> for most JPQL queries. Use the <code>eclipselink.query-type</code> hint lets to specify another query type, such as <code>org.eclipse.persistence.queries.ReadObjectQuery</code> for queries that will return a single object.</p>
-<a id="sthref715" name="sthref715"></a>
+<a id="sthref709" name="sthref709"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<p><a href="#CDEJACJC">Example 4-66</a> shows how to use this hint in a JPA query.</p>
+<p><a href="#CDEJACJC">Example 4-69</a> shows how to use this hint in a JPA query.</p>
 <div class="example"><a id="CDEJACJC" name="CDEJACJC"></a><a id="TLJPA674" name="TLJPA674"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-66 Using query-type in a JPA Query</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-69 Using query-type in a JPA Query</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 import org.eclipse.persistence.config.QueryType;
  import org.eclipse.persistence.config.QueryHints;
  query.setHint(QueryHints.QUERY_TYPE, QueryType.ReadObject);
 </pre></div>
 <!-- class="example" -->
-<p><a href="#CDEIIIDE">Example 4-67</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<p><a href="#CDEIIIDE">Example 4-70</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
 <div class="example"><a id="CDEIIIDE" name="CDEIIIDE"></a><a id="TLJPA675" name="TLJPA675"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-67 Using query-type in a @QueryHint Annotation</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-70 Using query-type in a @QueryHint Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 import org.eclipse.persistence.config.QueryType;
  import org.eclipse.persistence.config.TargetDatabase;
@@ -125,13 +125,12 @@ import org.eclipse.persistence.config.QueryType;
 
 </pre></div>
 <!-- class="example" -->
-<a id="sthref716" name="sthref716"></a>
+<a id="sthref710" name="sthref710"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
 <li>
-<p>"EclipseLink" JPA Query Hints<br />
-<code><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Querying/Query_Hints">http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Querying/Query_Hints</a></code></p>
+<p>"Queries" in <em>Understanding EclipseLink</em></p>
 </li>
 </ul>
 </div>

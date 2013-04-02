@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>ddl-generation | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T8:14:54Z" />
+<meta name="date" content="2013-04-02T9:55:51Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="ddl-generation" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,53 +50,53 @@ Release 2.4</div></td>
 <div class="refsect1"><!-- infolevel="all" infotype="General" -->
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">ddl-generation</font></h2>
 <p>Use <code>eclipselink.ddl-generation</code> to specify how EclipseLink generates DDL (Data Definition Language) for the database schema (tables and constraints) on deployment</p>
-<a id="sthref889" name="sthref889"></a>
+<a id="sthref881" name="sthref881"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
-<p><a href="#BABBEGCE">Table 5-30</a> describes this persistence property's values.</p>
-<div class="tblhruleformalwide"><a id="TLJPA893" name="TLJPA893"></a><a id="sthref890" name="sthref890"></a><a id="BABBEGCE" name="BABBEGCE"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 5-30 Valid Values for ddl-generation</font></em></strong></p>
+<p><a href="#BABBEGCE">Table 5-29</a> describes this persistence property's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA893" name="TLJPA893"></a><a id="sthref882" name="sthref882"></a><a id="BABBEGCE" name="BABBEGCE"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 5-29 Valid Values for ddl-generation</font></em></strong></p>
 <table class="HRuleFormalWide" title="Valid Values for ddl-generation" summary="Valid Values for this query hint" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="29%" />
 <col width="*" />
 <thead>
 <tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t33"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
-<th align="left" valign="bottom" id="r1c2-t33"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c1-t32"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t32"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
 </tr>
 </thead>
 <tbody>
 <tr align="left" valign="top">
-<td align="left" id="r2c1-t33" headers="r1c1-t33">
+<td align="left" id="r2c1-t32" headers="r1c1-t32">
 <p><code>create-tables</code></p>
 </td>
-<td align="left" headers="r2c1-t33 r1c2-t33">
+<td align="left" headers="r2c1-t32 r1c2-t32">
 <p>EclipseLink will attempt to execute a <code>CREATE TABLE</code> SQL for each table.</p>
 <p>If the table already exists, EclipseLink will follow the default behavior of your specific database and JDBC driver combination (when a <code>CREATE TABLE</code> SQL is issued for an already existing table). In most cases an exception is thrown and the table is not created; the existing table will be used. <code>EclipseLink</code> will then continue with the next statement.</p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r3c1-t33" headers="r1c1-t33">
+<td align="left" id="r3c1-t32" headers="r1c1-t32">
 <p><code>create-or-extend-tables</code></p>
 </td>
-<td align="left" headers="r3c1-t33 r1c2-t33">
+<td align="left" headers="r3c1-t32 r1c2-t32">
 <p>EclipseLink will attempt to create tables. If the table exists, EclipseLink will add any missing columns.</p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r4c1-t33" headers="r1c1-t33">
+<td align="left" id="r4c1-t32" headers="r1c1-t32">
 <p><code>drop-and-create-tables</code></p>
 </td>
-<td align="left" headers="r4c1-t33 r1c2-t33">
+<td align="left" headers="r4c1-t32 r1c2-t32">
 <p>EclipseLink will attempt to <code>DROP</code> all tables, then <code>CREATE</code> all tables. If any issues are encountered, EclipseLink will follow the default behavior of your specific database and JDBC driver combination, then continue with the next statement</p>
 <p>This is useful in development if the schema frequently changes or during testing when the existing data needs to be cleared.</p>
 <p><strong>Note</strong>: Using <code>drop-and-create</code> will remove all of the data in the tables when they are dropped. You should never use option on a production schema that has valuable data in the database. If the schema changed dramatically, there could be old constraints in the database that prevent the dropping of the old tables. This may require the old schema to be dropped through another mechanism</p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r5c1-t33" headers="r1c1-t33">
+<td align="left" id="r5c1-t32" headers="r1c1-t32">
 <p><code>none</code></p>
 </td>
-<td align="left" headers="r5c1-t33 r1c2-t33">
+<td align="left" headers="r5c1-t32 r1c2-t32">
 <p>(Default) No DDL generated; no schema generated.</p>
 </td>
 </tr>
@@ -104,11 +104,11 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref891" name="sthref891"></a>
+<a id="sthref883" name="sthref883"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>You can use <code>create-or-extend-tables</code> only when <code>eclipselink.<a href="p_ddl_generation_output_mode.htm#BABCDHBB">ddl-generation.output-mode</a></code> = <code>database</code>.</p>
 <p>If you are using persistence in a Java SE environment and would like to create the DDL files without creating tables, additionally define a Java system property <code>INTERACT_WITH_DB</code> and set its value to <code>false</code>.</p>
-<a id="sthref892" name="sthref892"></a>
+<a id="sthref884" name="sthref884"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#BABFFGJE">Example 5-17</a> shows how to use this property in the <code>persistence.xml</code> file.</p>
 <div class="example"><a id="BABFFGJE" name="BABFFGJE"></a><a id="TLJPA894" name="TLJPA894"></a>
@@ -130,7 +130,7 @@ propertiesMap.put(PersistenceUnitProperties.DDL_GENERATION_MODE, PersistenceUnit
 propertiesMap.put(PersistenceUnitProperties.CREATE_JDBC_DDL_FILE, "create.sql");
 </pre></div>
 <!-- class="example" -->
-<a id="sthref893" name="sthref893"></a>
+<a id="sthref885" name="sthref885"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

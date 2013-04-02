@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@TenantTableDiscriminator | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T8:14:51Z" />
+<meta name="date" content="2013-04-02T9:55:44Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@TenantTableDiscriminator" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@TenantTableDiscriminator</font></h2>
 <p>Table-per-tenant multitenancy allows multiple tenants of an application to isolate their data in one or more tenant-specific tables. The tenant table discriminator specifies how to discriminate the tenant's tables from the other tenants' tables in a table-per-tenant multitenancy strategy.</p>
-<a id="sthref394" name="sthref394"></a>
+<a id="sthref395" name="sthref395"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#CHDGDIIC">Table 2-69</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="TLJPA562" name="TLJPA562"></a><a id="sthref395" name="sthref395"></a><a id="CHDGDIIC" name="CHDGDIIC"></a>
+<div class="tblhruleformalwide"><a id="TLJPA562" name="TLJPA562"></a><a id="sthref396" name="sthref396"></a><a id="CHDGDIIC" name="CHDGDIIC"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 2-69 @TenantTableDiscriminator Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@TenantTableDiscriminator Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="24%" />
@@ -104,7 +104,7 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref396" name="sthref396"></a>
+<a id="sthref397" name="sthref397"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>In table-per-tenant multitenancy, tenants' tables can be in the same schema, using a prefix or suffix naming pattern to distinguish them; or they can be in separate schemas. The tenant table discriminator identifies whether to use the prefix or suffix naming pattern or to use a separate schema to identify and isolate the tenant's tables from other tenants' tables. The types are:</p>
 <ul>
@@ -119,11 +119,11 @@ Release 2.4</div></td>
 </li>
 </ul>
 <p>Tenant table discriminator can be specified at the entity or mapped superclass level and must always be used with <code>Multitenant(TABLE_PER_TENANT)</code>. It is not sufficient to specify only a tenant table discriminator.</p>
-<p>For more information about using @TenantTableDiscriminator and table-per-tenant multitenancy, see <a href="a_multitenant.htm#BABIEJGD">"@Multitenant"</a>.</p>
-<a id="sthref397" name="sthref397"></a>
+<p>For more information about using <code>@TenantTableDiscriminator</code> and table-per-tenant multitenancy, see <a href="a_multitenant.htm#BABIEJGD">"@Multitenant"</a>.</p>
+<a id="sthref398" name="sthref398"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p>The following example shows a <code>SCHEMA</code>-type table discriminator.</p>
-<div class="example"><a id="TLJPA563" name="TLJPA563"></a><a id="sthref398" name="sthref398"></a>
+<div class="example"><a id="TLJPA563" name="TLJPA563"></a><a id="sthref399" name="sthref399"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-112 Using @TenantTableDiscriminator Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Entity
@@ -136,7 +136,7 @@ public class Employee {
  
 </pre></div>
 <!-- class="example" -->
-<div class="example"><a id="TLJPA564" name="TLJPA564"></a><a id="sthref399" name="sthref399"></a>
+<div class="example"><a id="TLJPA564" name="TLJPA564"></a><a id="sthref400" name="sthref400"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-113 Using <strong>&lt;tenant-table-discriminator</strong>&gt; XML</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;entity class="Employee"&gt;
@@ -148,7 +148,7 @@ public class Employee {
 &lt;/entity&gt;
 </pre></div>
 <!-- class="example" -->
-<a id="sthref400" name="sthref400"></a>
+<a id="sthref401" name="sthref401"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <ul>
 <li>
@@ -159,6 +159,9 @@ public class Employee {
 </li>
 <li>
 <p><a href="a_tenantdiscrim_columns.htm#CECBEBEA">"@TenantDiscriminatorColumns"</a></p>
+</li>
+<li>
+<p>"Using Multitenancy" in <em>Solutions Guide for EclispeLink</em></p>
 </li>
 <li>
 <p>Multitenant Examples at <code><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Multitenant">http://wiki.eclipse.org/EclipseLink/Examples/JPA/Multitenant</a></code></p>

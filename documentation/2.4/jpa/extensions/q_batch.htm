@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>batch | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T8:14:52Z" />
+<meta name="date" content="2013-04-02T9:55:46Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="batch" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">batch</font></h2>
 <p>Use <code>eclipselink.batch</code> to supply EclipseLink with batching information so subsequent queries of related objects can be optimized in batches, instead of being retrieved one-by-one or in one large joined read.</p>
-<a id="sthref499" name="sthref499"></a>
+<a id="sthref500" name="sthref500"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
 <p>This query hint accepts a single-valued, relationship path expression.</p>
-<a id="sthref500" name="sthref500"></a>
+<a id="sthref501" name="sthref501"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>Using the <code>eclipselink.batch</code> hint is more efficient than joining, because EclipseLink avoids reading duplicate data.</p>
 <p>You can only batch queries that have a single object in the select clause.</p>
@@ -72,7 +72,7 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="inftblnote" --></div>
-<a id="sthref501" name="sthref501"></a>
+<a id="sthref502" name="sthref502"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#CBHCBIJB">Example 4-1</a> shows how to use this hint in a JPA query.</p>
 <div class="example"><a id="CBHCBIJB" name="CBHCBIJB"></a><a id="TLJPA636" name="TLJPA636"></a>
@@ -92,7 +92,7 @@ import org.eclipse.persistence.config.HintValues;
  @QueryHint(name=QueryHints.BATCH, value="e.address");
 </pre></div>
 <!-- class="example" -->
-<a id="sthref502" name="sthref502"></a>
+<a id="sthref503" name="sthref503"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
@@ -102,6 +102,15 @@ import org.eclipse.persistence.config.HintValues;
 </li>
 <li>
 <p><a href="q_join_fetch.htm#fetch">"join-fetch"</a></p>
+</li>
+<li>
+<p><a href="q_batch_size.htm#BABHCJIH">"batch.size"</a></p>
+</li>
+<li>
+<p><a href="q_batch_type.htm#BABFGHAA">"batch.type"</a></p>
+</li>
+<li>
+<p>"Querying" in <em>Solutions Guide for EclispeLink</em></p>
 </li>
 </ul>
 </div>

@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>jdbc.cache-statement | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T8:14:52Z" />
+<meta name="date" content="2013-04-02T9:55:47Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="jdbc.cache-statement" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">jdbc.cache-statement</font></h2>
 <p>Specify if the query caches its JDBC statement.</p>
-<a id="sthref585" name="sthref585"></a>
+<a id="sthref581" name="sthref581"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
 <p><a href="#CHDIBGGB">Table 4-14</a> describes this query hint's values.</p>
-<div class="tblhruleformalwide"><a id="TLJPA767" name="TLJPA767"></a><a id="sthref586" name="sthref586"></a><a id="CHDIBGGB" name="CHDIBGGB"></a>
+<div class="tblhruleformalwide"><a id="TLJPA767" name="TLJPA767"></a><a id="sthref582" name="sthref582"></a><a id="CHDIBGGB" name="CHDIBGGB"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 4-14 Valid Values for jdbc.cache-statement</font></em></strong></p>
 <table class="HRuleFormalWide" title="Valid Values for jdbc.cache-statement" summary="Valid values for this extensiont" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="29%" />
@@ -69,19 +69,23 @@ Release 2.4</div></td>
 <td align="left" id="r2c1-t20" headers="r1c1-t20">
 <p><code>true</code></p>
 </td>
-<td align="left" headers="r2c1-t20 r1c2-t20"><br /></td>
+<td align="left" headers="r2c1-t20 r1c2-t20">
+<p>The query will cache its JDBC statement.</p>
+</td>
 </tr>
 <tr align="left" valign="top">
 <td align="left" id="r3c1-t20" headers="r1c1-t20">
 <p><code>false</code></p>
 </td>
-<td align="left" headers="r3c1-t20 r1c2-t20"><br /></td>
+<td align="left" headers="r3c1-t20 r1c2-t20">
+<p>(Default)</p>
+</td>
 </tr>
 </tbody>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref587" name="sthref587"></a>
+<a id="sthref583" name="sthref583"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>This allows queries to use parameterized SQL with statement caching. It also allows a specific query to not cache its statement, if statement caching is enable for the persistence unit.</p>
 <div align="center">
@@ -99,23 +103,35 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="inftblnotealso" --></div>
-<a id="sthref588" name="sthref588"></a>
+<a id="sthref584" name="sthref584"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<div class="example"><a id="TLJPA768" name="TLJPA768"></a><a id="sthref589" name="sthref589"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-29 Using jdbc.cache-statement in a JPA Query</font></em></strong></p>
+<div class="example"><a id="TLJPA54035" name="TLJPA54035"></a><a id="sthref585" name="sthref585"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-30 Using jdbc.cache-statement in a JPA Query</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
-
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.CACHE_STATEMENT", "TRUE");
 </pre></div>
 <!-- class="example" -->
-<div class="example"><a id="TLJPA769" name="TLJPA769"></a><a id="sthref590" name="sthref590"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-30 Using jdbc.cache-statement in a @QueryHint Annotation</font></em></strong></p>
+<div class="example"><a id="TLJPA54036" name="TLJPA54036"></a><a id="sthref586" name="sthref586"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-31 Using jdbc.cache-statement in a @QueryHint Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
-
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.CACHE_STATEMENT, value="TRUE");
 </pre></div>
 <!-- class="example" -->
-<a id="sthref591" name="sthref591"></a>
+<a id="sthref587" name="sthref587"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="p_jdbc_cachestatements.htm#CHDHAFAA">"jdbc.cache-statements"</a></p>
+</li>
+<li>
+<p>"Enhancing Performance" in <em>Solutions Guide for EclispeLink</em></p>
+</li>
+</ul>
 </div>
 <!-- class="refsect1" --></div>
 <!-- class="ind" -->

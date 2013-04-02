@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Specifying Inheritance | EclipseLink 2.4.x EclipseLink MOXy</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T9:11:26Z" />
+<meta name="date" content="2013-04-02T8:33:9Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Specifying Inheritance" />
 <meta name="relnum" content="Release 2.4" />
@@ -136,6 +136,20 @@ public class PhoneNumber extends ContactInfo {
    private String number;
    ...
  
+}
+ 
+</pre>
+<p>We will also annotate the <code>contactInfo</code> property of the <strong>Customer</strong> object with <code>@XmlElementRef</code> to indicate the value type will be derived from the element name (and namespace URI).</p>
+<pre xml:space="preserve" class="oac_no_warn">
+public class Customer {
+    private ContactInfo contactInfo;
+ 
+    <strong>@XmlElementRef</strong>
+    public ContactInfo getContactInfo() {
+        return contactInfo;
+    }
+
+   ...
 }
  
 </pre></div>

@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Introduction to the Solution | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-30T11:13:7Z" />
+<meta name="date" content="2013-04-02T8:20:53Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Introduction to the Solution" />
 <meta name="relnum" content="Release 2.4" />
@@ -49,7 +49,7 @@ Release 2.4</div></td>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Introduction to the Solution</font></h1>
 <p>REpresentational State Transfer (REST) defines a set of architectural principles for distributed systems, in which Web Services are viewed as resources. Those resources are identified by URIs and can be addressed and transferred using the HTTP protocol. REST can be used with a number of technologies, including JPA. HTTP methods are used to access and perform operations on resources.</p>
-<p>You can use the Java API for RESTful Web Services (JAX-RS) to develop applications that use the REST architecture, by using annotations to define resources and the actions that can be performed on those resources. The "RESTful Service Example" at <code><a href="wiki.eclipse.org/EclipseLink/Examples/REST/GettingStarted">wiki.eclipse.org/EclipseLink/Examples/REST/GettingStarted</a></code> gives an example using this approach to interact with JPA persistence units.</p>
+<p>You can use the Java API for RESTful Web Services (JAX-RS) to develop applications that use the REST architecture, by using annotations to define resources and the actions that can be performed on those resources. The "RESTful Service Example" at <code><a href="http://wiki.eclipse.org/EclipseLink/Examples/REST/GettingStarted">http://wiki.eclipse.org/EclipseLink/Examples/REST/GettingStarted</a></code> gives an example using this approach to interact with JPA persistence units.</p>
 <p>However, EclipseLink provides an API that makes it easier to implement REST, without the need to use JAX-RS directly. EclipseLink Java Persistence API for RESTful Web Services (JPA-RS) can be used to interact with JPA persistence units and EJB session bean methods without explicitly writing JAX-RS code, thus providing a simple way to expose these Java EE capabilities through REST.</p>
 <p>JPA-RS is made available via a web fragment, which extends the capabilities of a web application. The REST functionality is made available by including the JPA-RS jar in the WEB-INF/lib folder of a web application.</p>
 <p>JPA-RS runtime provides access to all persistence units packaged in the same application that it is running in as well as any dynamic persistence unit that is provisioned within it.</p>
@@ -312,7 +312,7 @@ Release 2.4</div></td>
 <p><code>B1</code> with <code>id=11</code> and <code>myA = A1</code></p>
 </li>
 </ul>
-<p>...the following JSON cooresponds to those objects:</p>
+<p>...the following JSON corresponds to those objects:</p>
 <pre xml:space="preserve" class="oac_no_warn">
   A {
     id:1
@@ -398,7 +398,7 @@ Release 2.4</div></td>
     "name": "A1",
     "sold": false,
     "startPrice": 100,
-    "_relationships": [(1)
+    "_relationships": [
       {
         "_link": {
         "href": "http://localhost:8080/eclipselink.jpars.test/persistence/auction-static/entity/StaticAuction/2/bids",
@@ -406,7 +406,7 @@ Release 2.4</div></td>
         }
       }
       ],
-    "bids": [(2)
+    "bids": [
       {
         "_link": {
        "href": "http://localhost:8080/eclipselink.jpars.test/persistence/auction-static/entity/StaticBid/5",

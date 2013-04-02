@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>jdbc.bind-parameters | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T8:14:52Z" />
+<meta name="date" content="2013-04-02T9:55:47Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="jdbc.bind-parameters" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">jdbc.bind-parameters</font></h2>
 <p>Use <code>eclipselink.jdbc.bind-parameters</code> to specify if the query uses parameter binding (parameterized SQL).</p>
-<a id="sthref580" name="sthref580"></a>
+<a id="sthref576" name="sthref576"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
 <p><a href="#BABHJFEJ">Table 4-13</a> describes this query hint's valid values.</p>
-<div class="tblhruleformalwide"><a id="TLJPA643" name="TLJPA643"></a><a id="sthref581" name="sthref581"></a><a id="BABHJFEJ" name="BABHJFEJ"></a>
+<div class="tblhruleformalwide"><a id="TLJPA643" name="TLJPA643"></a><a id="sthref577" name="sthref577"></a><a id="BABHJFEJ" name="BABHJFEJ"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 4-13 Valid Values for org.eclipse.persistence.config.HintValues</font></em></strong></p>
 <table class="HRuleFormalWide" title="Valid Values for org.eclipse.persistence.config.HintValues" summary="Valid Values for this query hint" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="29%" />
@@ -93,24 +93,24 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref582" name="sthref582"></a>
+<a id="sthref578" name="sthref578"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>By default, EclipseLink enables parameter binding and statement caching. This causes EclipseLink to use a prepared statement, binding all SQL parameters and caching the prepared statement. When you re-execute this query, you avoid the SQL preparation, which improves performance.</p>
 <p>You can also configure parameter binding for the persistence unit in the <code>persistence.xml</code> file (when used in a Java SE environment).</p>
-<a id="sthref583" name="sthref583"></a>
+<a id="sthref579" name="sthref579"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<p><a href="#BABGDCJA">Example 4-26</a> shows how to use this hint in a JPA query.</p>
+<p><a href="#BABGDCJA">Example 4-27</a> shows how to use this hint in a JPA query.</p>
 <div class="example"><a id="BABGDCJA" name="BABGDCJA"></a><a id="TLJPA644" name="TLJPA644"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-26 Using bind-parameters in a JPA Query</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-27 Using bind-parameters in a JPA Query</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 import org.eclipse.persistence.config.HintValues;
  import org.eclipse.persistence.config.QueryHints;
  query.setHint(QueryHints.BIND_PARAMETERS, HintValues.TRUE);
 </pre></div>
 <!-- class="example" -->
-<p><a href="#BABIHAEJ">Example 4-27</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<p><a href="#BABIHAEJ">Example 4-28</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
 <div class="example"><a id="BABIHAEJ" name="BABIHAEJ"></a><a id="TLJPA645" name="TLJPA645"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-27 Using bind-parameters in a @QueryHint Annotation</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-28 Using bind-parameters in a @QueryHint Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 import org.eclipse.persistence.config.HintValues;
  import org.eclipse.persistence.config.TargetDatabase;
@@ -118,9 +118,9 @@ import org.eclipse.persistence.config.HintValues;
 
 </pre></div>
 <!-- class="example" -->
-<p><a href="#BABFBBJD">Example 4-28</a> shows how to configure parameter binding in the persistence unit <code>persistence.xml</code> file.</p>
+<p><a href="#BABFBBJD">Example 4-29</a> shows how to configure parameter binding in the persistence unit <code>persistence.xml</code> file.</p>
 <div class="example"><a id="BABFBBJD" name="BABFBBJD"></a><a id="TLJPA646" name="TLJPA646"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-28 Specifying Parameter Binding Persistence Unit Property</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-29 Specifying Parameter Binding Persistence Unit Property</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;property name="eclipselink.jdbc.bind-parameters" value="false"/&gt;
 </pre>
@@ -130,7 +130,7 @@ import org.eclipse.persistence.config.PersistenceUnitProperties;
 propertiesMap.put(PersistenceUnitProperties.NATIVE_SQL, "true");
 </pre></div>
 <!-- class="example" -->
-<a id="sthref584" name="sthref584"></a>
+<a id="sthref580" name="sthref580"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
@@ -139,6 +139,9 @@ propertiesMap.put(PersistenceUnitProperties.NATIVE_SQL, "true");
 </li>
 <li>
 <p><a href="p_jdbc_batchwritingsize.htm#CIHJADHF">"jdbc.batch-writing.size"</a></p>
+</li>
+<li>
+<p>"Parameterized SQL and Statement Caching" in <em>Solutions Guide for EclispeLink</em></p>
 </li>
 </ul>
 </div>

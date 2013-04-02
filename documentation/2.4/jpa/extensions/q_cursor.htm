@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>cursor | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T8:14:52Z" />
+<meta name="date" content="2013-04-02T9:55:46Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="cursor" />
 <meta name="relnum" content="Release 2.4" />
@@ -50,10 +50,10 @@ Release 2.4</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">cursor</font></h2>
 <p>Use <code>eclipselink.cursor</code> to configure the query to return a <code>CursoredStream</code>.</p>
-<a id="sthref527" name="sthref527"></a>
+<a id="sthref524" name="sthref524"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
 <p><a href="#BABDGGBI">Table 4-5</a> describes this persistence property's values.</p>
-<div class="tblhruleformalwide"><a id="TLJPA736" name="TLJPA736"></a><a id="sthref528" name="sthref528"></a><a id="BABDGGBI" name="BABDGGBI"></a>
+<div class="tblhruleformalwide"><a id="TLJPA736" name="TLJPA736"></a><a id="sthref525" name="sthref525"></a><a id="BABDGGBI" name="BABDGGBI"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 4-5 Valid Values for cursor</font></em></strong></p>
 <table class="HRuleFormalWide" title="Valid Values for cursor" summary="Valid values for this extension" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="29%" />
@@ -83,7 +83,7 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref529" name="sthref529"></a>
+<a id="sthref526" name="sthref526"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>A <em>Cursor</em> is a stream of the JDBC <code>ResultSet</code>. Cursors are useful for large results sets, or when you only need the few results of a query.</p>
 <p>A cursor implements <code>Enumeration</code>, when the each <code>next()</code> will fetch the next from the JDBC <code>ResultSet</code>, and builds the resulting Object or value. A Cursor requires, and will keep, a live JDBC connection. You must use <code>close()</code> to free the Cursor's resources.</p>
@@ -102,21 +102,27 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="inftblnotealso" --></div>
-<a id="sthref530" name="sthref530"></a>
+<a id="sthref527" name="sthref527"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<div class="example"><a id="TLJPA737" name="TLJPA737"></a><a id="sthref531" name="sthref531"></a>
+<p><a href="#BABHFHEG">Example 4-11</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="BABHFHEG" name="BABHFHEG"></a><a id="TLJPA54032" name="TLJPA54032"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 4-11 Using cursor in a JPA Query</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
-
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.cursor", "TRUE");
 </pre></div>
 <!-- class="example" -->
-<div class="example"><a id="TLJPA738" name="TLJPA738"></a><a id="sthref532" name="sthref532"></a>
+<p><a href="#BABFADCA">Example 4-12</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="BABFADCA" name="BABFADCA"></a><a id="TLJPA54033" name="TLJPA54033"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 4-12 Using cursor in a @QueryHint Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
-
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.CURSOR, value="TRUE");
 </pre></div>
 <!-- class="example" -->
-<a id="sthref533" name="sthref533"></a>
+<a id="sthref528" name="sthref528"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>

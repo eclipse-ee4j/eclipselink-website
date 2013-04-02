@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@CompositeMember | EclipseLink 2.4.x Java Persistence API (JPA) Extensions Reference</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T8:14:50Z" />
+<meta name="date" content="2013-04-02T9:55:40Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@CompositeMember" />
 <meta name="relnum" content="Release 2.4" />
@@ -51,10 +51,10 @@ Release 2.4</div></td>
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@CompositeMember</font></h2>
 <p>Use <code>@CompositeMember</code> to indicate that a class belongs to a composite persistence unit.</p>
 <p>It should be used if target type is a primitive type and <code>@CollectionTable</code> designates the table that belongs to composite member persistence unit other than the source composite member persistence unit. This allows the source and target to be mapped to different databases.</p>
-<a id="sthref67" name="sthref67"></a>
+<a id="sthref68" name="sthref68"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#BABBCHAA">Table 2-12</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="TLJPA370" name="TLJPA370"></a><a id="sthref68" name="sthref68"></a><a id="BABBCHAA" name="BABBCHAA"></a>
+<div class="tblhruleformalwide"><a id="TLJPA370" name="TLJPA370"></a><a id="sthref69" name="sthref69"></a><a id="BABBCHAA" name="BABBCHAA"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 2-12 @CompositeMember Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@CompositeMember Annotation Elements" summary="This table describes the list of attributes for this annotation." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="23%" />
@@ -81,13 +81,13 @@ Release 2.4</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref69" name="sthref69"></a>
+<a id="sthref70" name="sthref70"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>The <code>@CompositeMember</code> annotation is ignored unless it is in a composite member persistence unit. It may be used in conjunction with <code>@ElementCollection</code> and <code>@CollectionTable</code> annotations.</p>
-<a id="sthref70" name="sthref70"></a>
+<a id="sthref71" name="sthref71"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p>You can configure the <code>CompositeMember</code> using annotations or the <code>eclipselink-orm.xml</code> file, as shown in these examples.</p>
-<div class="example"><a id="TLJPA371" name="TLJPA371"></a><a id="sthref71" name="sthref71"></a>
+<div class="example"><a id="TLJPA371" name="TLJPA371"></a><a id="sthref72" name="sthref72"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-27 Using @CompositeMember Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @ElementCollection()
@@ -99,7 +99,7 @@ public Collection&lt;String&gt; getResponsibilities() {
 }
 </pre></div>
 <!-- class="example" -->
-<div class="example"><a id="TLJPA372" name="TLJPA372"></a><a id="sthref72" name="sthref72"></a>
+<div class="example"><a id="TLJPA372" name="TLJPA372"></a><a id="sthref73" name="sthref73"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-28 Using &lt;composite-member&gt; XML</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;element-collection name="responsibilities" <strong>composite-member="branch-database"</strong>&gt;
@@ -110,10 +110,13 @@ public Collection&lt;String&gt; getResponsibilities() {
 &lt;/element-collection&gt;
 </pre></div>
 <!-- class="example" -->
-<a id="sthref73" name="sthref73"></a>
+<a id="sthref74" name="sthref74"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
+<li>
+<p>"Using Multiple Databases with a Composite Persistence Unit" in <em>Solutions Guide for EclispeLink</em></p>
+</li>
 <li>
 <p><a href="p_composite_unit.htm#BIICFIDB">"composite-unit"</a></p>
 </li>
