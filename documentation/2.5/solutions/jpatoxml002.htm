@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Binding JPA Entities to XML | EclipseLink 2.5.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-02-28T10:9:7Z" />
+<meta name="date" content="2013-04-04T10:28:56Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Binding JPA Entities to XML" />
 <meta name="relnum" content="Release 2.5" />
@@ -46,7 +46,7 @@
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-02-28</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-04-04</font></p>
 <a id="BEIGDBHI" name="BEIGDBHI"></a><a id="TLADG293" name="TLADG293"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Binding JPA Entities to XML</font></h1>
@@ -88,7 +88,7 @@ package com.example.model;
 </pre></div>
 <!-- class="sect3" -->
 <a id="TLADG296" name="TLADG296"></a>
-<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref93" name="sthref93"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref97" name="sthref97"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task 2: Map Privately-Owned Relationships</font></h3>
 <p>A "privately-owned" relationship occurs when the target object is only referenced by a single source object. This type of relationship can be either one-to-one and embedded or one-to-many.</p>
 <p>This Task shows how to create bi-directional mappings for both of these types of relationships between the <code>Employee</code> entity and the <code>Address</code> and <code>PhoneNumber</code> entities.</p>
@@ -122,7 +122,7 @@ package com.example.model;
 </ol>
 <p>The entities should look like those shown in <a href="#BEIJFCEG">Example 14-1</a> and <a href="#BEIEGBBE">Example 14-2</a>.</p>
 <a id="TLADG298" name="TLADG298"></a>
-<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref94" name="sthref94"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref98" name="sthref98"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Mapping a One-to-Many Relationship</font></h4>
 <p>The JPA <code>@OneToMany</code> annotation indicates that a single instance of the source entity can refer to multiple instances of the same target entity. For example, one employee can have multiple phone numbers, such as a land line, a mobile number, a desired contact number, and an alternative workplace number. Each different number would be an instance of the <code>PhoneNumber</code> entity and a single <code>Employee</code> entity could point to each instance.</p>
 <p>This Task maps the employee to one of that employee's phone numbers and back. Since the relationship between <code>Employee</code> and <code>PhoneNumber</code> is bi-directional, the example again uses the EclipseLink extension <code>@XmlInverseReference</code> to map the back-pointer.</p>
@@ -162,7 +162,7 @@ package com.example.model;
 <p>Since a shared reference relationship cannot be safely represented as nesting in XML, we use key relationships. In order to leverage the ID fields on JPA entities, you need to use the EclipseLink JAXB <code>@XmlID</code> annotation on non-String fields and properties and <code>@XmlIDREF</code> on string fields and properties.</p>
 <p>This section contains examples that show how to map a many-to-one shared reference relationship and a many-to-many shared reference relationship.</p>
 <a id="TLADG300" name="TLADG300"></a>
-<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref95" name="sthref95"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref99" name="sthref99"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Mapping a Many-to-One Shared Reference Relationship</font></h4>
 <p>In a many-to-one mapping, one or more instances of the source entity are able to refer to the same target entity instance. This example demonstrates how to map an employee to one of that employee's multiple phone numbers.</p>
 <p>To map a many-to-one shared reference relationship:</p>
@@ -194,7 +194,7 @@ package com.example.model;
 </div>
 <!-- class="sect4" -->
 <a id="TLADG301" name="TLADG301"></a>
-<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref96" name="sthref96"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref100" name="sthref100"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Mapping a Many-to-Many Shared Reference Relationship</font></h4>
 <p>The <code>@ManyToMany</code> annotation indicates that one or more instances of the source entity are able to refer to one or more target entity instances. Since the relationship between <code>Department</code> and <code>Employee</code> is bi-directional, this example again uses the EclipseLink's <code>@XmlInverseReference</code> annotation to represent the back-pointer.</p>
 <p>To map a many-to-many shared reference relationship, do the following:</p>
@@ -247,7 +247,7 @@ public class Department {
 <!-- class="sect4" --></div>
 <!-- class="sect3" -->
 <a id="TLADG302" name="TLADG302"></a>
-<div class="sect3"><a id="sthref97" name="sthref97"></a>
+<div class="sect3"><a id="sthref101" name="sthref101"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">JPA Entities</font></h3>
 <p>Once the mappings are created, the entities should look like those in the following examples:</p>
 <ul>
@@ -372,13 +372,13 @@ public class <strong>Department</strong> {
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Binding Compound Primary Keys to XML</font></h2>
 <p>When a JPA entity has compound primary keys, you can bind it by using JAXB annotations and certain EclipseLink extensions, as shown in the following example.</p>
 <a id="TLADG308" name="TLADG308"></a>
-<div class="sect3"><a id="sthref98" name="sthref98"></a>
+<div class="sect3"><a id="sthref102" name="sthref102"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task1: Define the XML Accessor Type</font></h3>
 <p>Define the accessor type as <code>FIELD</code>, as described in <a href="#BEIBJCIJ">Task 1: Define the Accessor Type and Import Classes</a></p>
 </div>
 <!-- class="sect3" -->
 <a id="TLADG309" name="TLADG309"></a>
-<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref99" name="sthref99"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref103" name="sthref103"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task 2: Create the Target Object</font></h3>
 <p>To create the target object, do the following:</p>
 <ol>
@@ -459,7 +459,7 @@ public class EmployeeId {
 <!-- class="example" --></div>
 <!-- class="sect3" -->
 <a id="TLADG311" name="TLADG311"></a>
-<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref100" name="sthref100"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref104" name="sthref104"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task 3: Create the Source Object</font></h3>
 <p>This Task creates the source object, the <code>PhoneNumber</code> entity. Because the target object has a compound key, we need to use the EclipseLink's <code>@XmlJoinNodes</code> annotation to set up the mapping.</p>
 <p>To create the source object:</p>
@@ -523,7 +523,7 @@ public class PhoneNumber {
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Binding Embedded ID Classes to XML</font></h2>
 <p>An embedded ID defines a separate <code>Embeddable</code> Java class to contain the entity's primary key. It is defined through the <code>@EmbeddedId</code> annotation.The embedded ID's <code>Embeddable</code> class must define each id attribute for the entity using basic mappings. All attributes in the embedded Id's <code>Embeddable</code> are assumed to be part of the primary key. This exercise shows how to derive an XML representation from a set of JPA entities using JAXB when a JPA entity has an embedded ID class.</p>
 <a id="TLADG314" name="TLADG314"></a>
-<div class="sect3"><a id="sthref101" name="sthref101"></a>
+<div class="sect3"><a id="sthref105" name="sthref105"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task1: Define the XML Accessor Type</font></h3>
 <p>Define the XML accessor type as <code>FIELD</code>, as described in <a href="#BEIBJCIJ">Task 1: Define the Accessor Type and Import Classes</a></p>
 </div>
@@ -578,7 +578,7 @@ public class Employee {
 <!-- class="example" --></div>
 <!-- class="sect3" -->
 <a id="TLADG319" name="TLADG319"></a>
-<div class="sect3"><a id="sthref102" name="sthref102"></a>
+<div class="sect3"><a id="sthref106" name="sthref106"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task 3: Create the Source Object</font></h3>
 <p>The source object in this example has a compound key, so you must mark the field <code>@XmlTransient</code> to prevent a key from being mapped by itself. Use EclipseLink's <code>@XmlCustomizer</code> annotation to set up the mapping.</p>
 <p>To create the source object, do the following:</p>
@@ -630,7 +630,7 @@ public class PhoneNumber {
 <!-- class="example" --></div>
 <!-- class="sect3" -->
 <a id="TLADG321" name="TLADG321"></a>
-<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref103" name="sthref103"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref107" name="sthref107"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task 5: Implement the DescriptorCustomizer as PhoneNumberCustomizer Class</font></h3>
 <p>Code added in Task 4 indicated the need to create the XMLObjectReferenceMappings to the new values. This requires to implementing the <code>DescriptorCustomizer</code> as the <code>PhoneNumberCustomizer</code> and adding the multiple key mappings. To do this:</p>
 <ol>

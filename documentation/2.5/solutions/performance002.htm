@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Monitoring and Optimizing EclipseLink-Enabled Applications | EclipseLink 2.5.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-02-28T10:9:8Z" />
+<meta name="date" content="2013-04-04T10:28:58Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Monitoring and Optimizing EclipseLink-Enabled Applications" />
 <meta name="relnum" content="Release 2.5" />
@@ -46,7 +46,7 @@
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-02-28</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-04-04</font></p>
 <a id="CHDFIECF" name="CHDFIECF"></a><a id="TLADG438" name="TLADG438"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Monitoring and Optimizing EclipseLink-Enabled Applications</font></h1>
@@ -95,7 +95,7 @@
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 1: Measure EclipseLink Performance with the EclipseLink Profiler</font></h2>
 <p>The EclipseLink performance profiler helps you identify performance problems by logging performance statistics for every executed query in a given session.</p>
 <p>The EclipseLink performance profiler logs the following information to the log file.</p>
-<div class="tblhruleformal"><a id="TLADG441" name="TLADG441"></a><a id="sthref143" name="sthref143"></a><a id="sthref144" name="sthref144"></a>
+<div class="tblhruleformal"><a id="TLADG441" name="TLADG441"></a><a id="sthref147" name="sthref147"></a><a id="sthref148" name="sthref148"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 17-1 Information Logged by the EclipseLink Performance Profiler</font></em></strong></p>
 <table class="HRuleFormal" title="Information Logged by the EclipseLink Performance Profiler" summary="This is a two-column table. The left-hand column lists the type of information logged and the right-hand column describes that information." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="31%" />
@@ -231,7 +231,7 @@
 &lt;property name="eclipselink.profiler" value="PerformanceProfiler.logProfiler"/&gt;
 </pre>
 <p>In addition to enabling the EclipseLink profiler, The <code>PerformanceProfiler</code> class public API also provides the functionality describes in <a href="#CHDGBGGC">Table 17-2</a>:</p>
-<div class="tblhruleformal"><a id="TLADG443" name="TLADG443"></a><a id="sthref145" name="sthref145"></a><a id="CHDGBGGC" name="CHDGBGGC"></a>
+<div class="tblhruleformal"><a id="TLADG443" name="TLADG443"></a><a id="sthref149" name="sthref149"></a><a id="CHDGBGGC" name="CHDGBGGC"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 17-2 Additional PerformanceProfiler Functionality</font></em></strong></p>
 <table class="HRuleFormal" title="Additional PerformanceProfiler Functionality" summary="This is a two-column table. The left-hand column describes a condition you want to obtain and the right-hand column identifies the method to use to attain that condition." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="*" />
@@ -281,7 +281,7 @@
 <!-- class="tblhruleformal" --></div>
 <!-- class="sect3" -->
 <a id="TLADG444" name="TLADG444"></a>
-<div class="sect3"><a id="sthref146" name="sthref146"></a>
+<div class="sect3"><a id="sthref150" name="sthref150"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Accessing and Interpreting Profiler Results</font></h3>
 <p>You can see profiling results by opening the profile log in a text reader, such as Notepad.</p>
 <p>The profiler output file indicates the health of a EclipseLink-enabled application.</p>
@@ -370,7 +370,7 @@ prepare=49523809, row fetch=39023809, time/obj=11623809,obj/sec=8)
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 3: Modify Poorly-Performing Application Components</font></h2>
 <p>For each source of application performance problems listed in <a href="#CHDICBBA">Task 2: Identify Sources of Application Performance Problems</a>, you can try specific workarounds, as described in this section.</p>
 <a id="TLADG448" name="TLADG448"></a>
-<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref147" name="sthref147"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref151" name="sthref151"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Identifying General Performance Optimizations</font></h3>
 <p><strong>Avoid overriding EclipseLink default behavior unless your application requires it</strong>. Some of these defaults are suitable for a development environment; you should change these defaults to suit your production environment. These defaults may include:</p>
 <ul>
@@ -391,7 +391,7 @@ prepare=49523809, row fetch=39023809, time/obj=11623809,obj/sec=8)
 </div>
 <!-- class="sect3" -->
 <a id="TLADG449" name="TLADG449"></a>
-<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref148" name="sthref148"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref152" name="sthref152"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Schema</font></h3>
 <p>Optimization is an important consideration when you design your database schema and object model. Most performance issues occur when the object model or database schema is too complex, as this can make the database slow and difficult to query. This is most likely to happen if you derive your database schema directly from a complex object model.</p>
 <p>To optimize performance, design the object model and database schema together. However, allow each model to be designed optimally: do not require a direct one-to-one correlation between the two.</p>
@@ -414,7 +414,7 @@ prepare=49523809, row fetch=39023809, time/obj=11623809,obj/sec=8)
 </div>
 <!-- class="sect3" -->
 <a id="TLADG450" name="TLADG450"></a>
-<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref149" name="sthref149"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref153" name="sthref153"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Mappings and Descriptors</font></h3>
 <p>If you find performance bottlenecks in your mapping and descriptors, try these solutions:</p>
 <ul>
@@ -434,7 +434,7 @@ prepare=49523809, row fetch=39023809, time/obj=11623809,obj/sec=8)
 </div>
 <!-- class="sect3" -->
 <a id="TLADG452" name="TLADG452"></a>
-<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref150" name="sthref150"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref154" name="sthref154"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Cache</font></h3>
 <p>You can often improve performance through caching, even in a clustered environment by implementing cache coordination. Cache coordination allows multiple, possibly distributed instances of a session to broadcast object changes among each other so that each session's cache can be kept up-to-date. For detailed information about optimizing cache behavior, see "Understanding Caching" in <em>EclipseLink Concepts</em> and the following examples:</p>
 <ul>
@@ -451,7 +451,7 @@ prepare=49523809, row fetch=39023809, time/obj=11623809,obj/sec=8)
 </div>
 <!-- class="sect3" -->
 <a id="TLADG453" name="TLADG453"></a>
-<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref151" name="sthref151"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref155" name="sthref155"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Data Access</font></h3>
 <p>Depending on the type of data source your application accesses, EclipseLink offers a variety of <code>Login</code> options that you can use to tune the performance of low level data reads and writes. For optimizing higher-level data reads and writes, "Understanding Data Access" in <em>EclipseLink Concepts</em> offers several techniques to improve data access performance for your application. These techniques show you how to:</p>
 <ul>
@@ -474,7 +474,7 @@ prepare=49523809, row fetch=39023809, time/obj=11623809,obj/sec=8)
 </div>
 <!-- class="sect3" -->
 <a id="TLADG454" name="TLADG454"></a>
-<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref152" name="sthref152"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref156" name="sthref156"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Queries</font></h3>
 <p>EclipseLink provides an extensive query API for reading, writing, and updating data. "Understanding EclipseLink Queries" in <em>EclipseLink Concepts</em> offers several techniques to improve query performance for your application. These techniques show you how to:</p>
 <ul>
@@ -507,7 +507,7 @@ prepare=49523809, row fetch=39023809, time/obj=11623809,obj/sec=8)
 </div>
 <!-- class="sect3" -->
 <a id="TLADG456" name="TLADG456"></a>
-<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref153" name="sthref153"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref157" name="sthref157"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Application Server and Database Optimization</font></h3>
 <p>To optimize the application server and database performance, consider these techniques:</p>
 <ul>
