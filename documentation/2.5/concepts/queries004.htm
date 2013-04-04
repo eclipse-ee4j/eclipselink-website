@@ -7,10 +7,10 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>About the Criteria API | EclipseLink 2.5.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-29T16:49:7Z" />
+<meta name="date" content="2013-04-04T14:35:44Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="About the Criteria API" />
-<meta name="relnum" content="Release 2.4" />
+<meta name="relnum" content="2.5" />
 <link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
 <link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
 <link rel="start" href="../../index.htm" title="Home" type="text/html" />
@@ -23,7 +23,7 @@
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
 <td align="left" valign="top"><div class="booktitle">Understanding EclipseLink, 
-Release 2.5</div></td>
+<b>2.5</b><br /></font></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -46,7 +46,7 @@ Release 2.5</div></td>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-01-29</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-04-04</font></p>
 <a id="A7714964" name="A7714964"></a><a id="OTLCG94376" name="OTLCG94376"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">About the Criteria API</font></h1>
@@ -56,43 +56,43 @@ Release 2.5</div></td>
 <p>For more information, see Chapter 6 "Criteria API" in the JPA Specification.</p>
 <p><code><a href="http://jcp.org/en/jsr/detail?id=317">http://jcp.org/en/jsr/detail?id=317</a></code></p>
 <a id="OTLCG94377" name="OTLCG94377"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref92" name="sthref92"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref97" name="sthref97"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">CriteriaBuilder</font></h2>
 <p><code>CriteriaBuilder</code> is the main interface into the Criteria API. A <code>CriteriaBuilder</code> is obtained from an <code>EntityManager</code> or an <code>EntityManagerFactory</code> using the <code>getCriteriaBuilder()</code> API. <code>CriteriaBuilder</code> is used to construct <code>CriteriaQuery</code> objects and their expressions. The Criteria API currently only supports select queries.</p>
 </div>
 <!-- class="sect2" -->
 <a id="OTLCG94378" name="OTLCG94378"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref93" name="sthref93"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref98" name="sthref98"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">CriteriaQuery</font></h2>
 <p><code>CriteriaQuery</code> defines a database select query. A <code>CriteriaQuery</code> models all of the clauses of a JPQL select query. Elements from one <code>CriteriaQuery</code> cannot be used in other <code>CriteriaQuerys</code>. A <code>CriteriaQuery</code> is used with the <code>EntityManager</code> <code>createQuery()</code> API to create a JPA Query.</p>
 </div>
 <!-- class="sect2" -->
 <a id="OTLCG94389" name="OTLCG94389"></a>
-<div class="sect2"><a id="sthref94" name="sthref94"></a>
+<div class="sect2"><a id="sthref99" name="sthref99"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Where</font></h2>
 <p>The <code>where</code> clause is normally the main part of the query as it defines the conditions (predicates) that filter what is returned. The <code>where</code> clause is defined using the <code>where</code> API on <code>CriteriaQuery</code> with any <code>Predicate</code> objects. A <code>Predicate</code> is obtained using a comparison operation, or a logical operation on <code>CriteriaBuilder</code>. The <code>isNull</code>, <code>isNotNull</code>, and <code>in</code> operations can also be called on <code>Expression</code> objects. The <code>not</code> operation can also be called on <code>Predicate</code> objects.</p>
 </div>
 <!-- class="sect2" -->
 <a id="OTLCG94390" name="OTLCG94390"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref95" name="sthref95"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref100" name="sthref100"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Subquery</font></h2>
 <p>Subqueries can be used in the <code>Criteria</code> API in the <code>select</code>, <code>where</code>, <code>order</code>, <code>group</code> <code>by</code>, or <code>having</code> clauses. A subquery is created from a <code>CriteriaQuery</code> using the <code>subquery</code> operation. Most <code>subquery</code> usage restricts the subquery to returning a single result and value, unless used with the <code>CriteriaBuilder</code> <code>exists</code>, <code>all</code>, <code>any</code>, or <code>some</code> operations, or with an <code>in</code> operation.</p>
 </div>
 <!-- class="sect2" -->
 <a id="OTLCG94391" name="OTLCG94391"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref96" name="sthref96"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref101" name="sthref101"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Parameters</font></h2>
 <p>Parameters can be defined using the <code>parameter</code> API on <code>CriteriaBuilder</code>. JPA defines named parameters, and positional parameters. For named parameters the parameter type and name are specified. For positional parameters only the parameter type is specified. Positional parameters start at position <code>1</code> not <code>0</code>.</p>
 </div>
 <!-- class="sect2" -->
 <a id="OTLCG94392" name="OTLCG94392"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref97" name="sthref97"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref102" name="sthref102"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Functions</font></h2>
 <p>Several database functions are supported by the <code>Criteria</code> API. All supported functions are defined on <code>CriteriaBuilder</code>. Some functions may not be supported by some databases, if they are not SQL compliant, and offer no equivalent function.</p>
 </div>
 <!-- class="sect2" -->
 <a id="OTLCG94393" name="OTLCG94393"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref98" name="sthref98"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref103" name="sthref103"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Special Operations</font></h2>
 <p>The <code>Criteria</code> API defines several special operations that are not database functions, but have special meaning in JPA. Some of these operations are defined on <code>CriteriaBuilder</code> and some are on specific Expression interfaces.</p>
 </div>
@@ -111,7 +111,7 @@ Release 2.5</div></td>
 </div>
 <!-- class="sect2" -->
 <a id="OTLCG94396" name="OTLCG94396"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref99" name="sthref99"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref104" name="sthref104"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">JpaCriteriaBuilder and EclipseLink Extensions</font></h2>
 <p>EclipseLink's <code>Criteria</code> API support has fewer restrictions than specified by JPA. In general, sub-queries and object path expressions are allowed in most places, including:</p>
 <ul>

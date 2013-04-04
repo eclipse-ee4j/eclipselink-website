@@ -7,10 +7,10 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Common Descriptor Concepts | EclipseLink 2.5.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-29T16:49:4Z" />
+<meta name="date" content="2013-04-04T14:35:37Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Common Descriptor Concepts" />
-<meta name="relnum" content="Release 2.4" />
+<meta name="relnum" content="2.5" />
 <link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
 <link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
 <link rel="start" href="../../index.htm" title="Home" type="text/html" />
@@ -23,7 +23,7 @@
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
 <td align="left" valign="top"><div class="booktitle">Understanding EclipseLink, 
-Release 2.5</div></td>
+<b>2.5</b><br /></font></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -46,7 +46,7 @@ Release 2.5</div></td>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-01-29</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-04-04</font></p>
 <a id="CHEBFJEC" name="CHEBFJEC"></a><a id="OTLCG92055" name="OTLCG92055"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Common Descriptor Concepts</font></h1>
@@ -108,7 +108,7 @@ Release 2.5</div></td>
 <div class="figure"><a id="CHEIDEAE" name="CHEIDEAE"></a><a id="OTLCG92070" name="OTLCG92070"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 6-1 Example Inheritance Hierarchy</font></em></strong></p>
 <img src="img/javainhr.gif" alt="Description of Figure 6-1 follows" title="Description of Figure 6-1 follows" longdesc="img_text/javainhr.htm" /><br />
-<a id="sthref32" name="sthref32" href="img_text/javainhr.htm">Description of "Figure 6-1 Example Inheritance Hierarchy "</a><br />
+<a id="sthref34" name="sthref34" href="img_text/javainhr.htm">Description of "Figure 6-1 Example Inheritance Hierarchy "</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p>EclipseLink recognizes the following three types of classes in an inheritance hierarchy:</p>
@@ -190,7 +190,7 @@ Release 2.5</div></td>
 <p>You can use strings or numbers as values in the class indicator field.</p>
 <p>The root class descriptor must specify how the value in the class indicator field translates into the class to be instantiated.</p>
 <p>One approach is to configure the root class descriptor with a class indicator dictionary: a collection of key-values that associates a simple key, stored in the class indicator field, with a class to instantiate. <a href="#CHEIIHFB">Table 6-1</a> illustrates the class indicator dictionary for the <code>Vehicle</code> class' subclasses, as shown in <a href="#CHEIDEAE">Figure 6-1</a>.</p>
-<div class="tblhruleformal"><a id="OTLCG92073" name="OTLCG92073"></a><a id="sthref33" name="sthref33"></a><a id="CHEIIHFB" name="CHEIIHFB"></a>
+<div class="tblhruleformal"><a id="OTLCG92073" name="OTLCG92073"></a><a id="sthref35" name="sthref35"></a><a id="CHEIIHFB" name="CHEIIHFB"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 6-1 Class Indicator Dictionary for the Vehicle Class</font></em></strong></p>
 <table class="HRuleFormal" title="Class Indicator Dictionary for the Vehicle Class" summary="This table identifies the class indicator mapping from the Vechicle class." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="*" />
@@ -263,7 +263,7 @@ Release 2.5</div></td>
 </ul>
 <p>You may also need to define only-instances and with-all-subclasses expressions. If you use a class extraction method, then you must provide EclipseLink with expressions to correctly filter sibling instances for all classes that share a common table.</p>
 <p>For example, <a href="#CHEFFGJD">Table 6-2</a> lists the rows in the <code>EMPLOYEE</code> table. The <code>Employee</code> class is the base class. <code>Director</code>, <code>Manager</code>, <code>Programmer</code>, and <code>TechWriter</code> classes each derive from the <code>Employee</code> class. However, in your application, instances of <code>Manager</code>, <code>Programmer</code>, and <code>TechWriter</code> classes must be represented as <code>Employee</code> instances and instances of <code>Director</code> must be represented as <code>Director</code> instances. Because there is not a one-to-one correspondence between class and <code>JOB_TYPE</code> field value, the <code>JOB_TYPE</code> field alone cannot serve as a class indicator field (see <a href="#CHEFDEDA">Using Class Indicator Fields</a>). To resolve this issue, you could use the class extraction method, shown in <a href="#CHECBGII">Example 6-1</a>.</p>
-<div class="tblhruleformal"><a id="OTLCG92075" name="OTLCG92075"></a><a id="sthref34" name="sthref34"></a><a id="CHEFFGJD" name="CHEFFGJD"></a>
+<div class="tblhruleformal"><a id="OTLCG92075" name="OTLCG92075"></a><a id="sthref36" name="sthref36"></a><a id="CHEFFGJD" name="CHEFFGJD"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 6-2 EMPLOYEE Table</font></em></strong></p>
 <table class="HRuleFormal" title="EMPLOYEE Table" summary="This table lists the rows in the EMPLOYEE table." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="14%" />
