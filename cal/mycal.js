@@ -70,7 +70,22 @@ $(document).ready(function() {
             }
             $('#calendar').fullCalendar('renderEvent', eo, true);
         },
-        events: 'https://www.google.com/calendar/feeds/2gbj1in54n5qblravii82qhti4%40group.calendar.google.com/public/basic'
+
+        eventSources: [
+            {
+                url: 'https://www.google.com/calendar/feeds/2gbj1in54n5qblravii82qhti4%40group.calendar.google.com/public/basic',
+                className: 'eclipselink-event'
+            },
+                       {
+                url: 'http://www.google.com/calendar/feeds/gchs7nm4nvpm837469ddj9tjlk%40group.calendar.google.com/public/basic',
+                className: 'planning-event'
+            },
+                       {
+                url: 'http://www.google.com/calendar/feeds/fhqvmfmj74mveaq07gi6n1npqg%40group.calendar.google.com/public/basic',
+                className: 'rt-event'
+            }
+ 
+        ]
 
     });
 
