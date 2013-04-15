@@ -230,6 +230,7 @@ new TWTR.Widget({
 			<ul>
 			    <li><a href="http://eclipselink.blogspot.com">EclipseLink</a></li>
 			    <li><a href="http://java-persistence.blogspot.com">Java Persistence</a></li>
+				<li><a href="http://java-persistence-performance.blogspot.com">Java Persistence Performance</a></li>
 			    <li><a href="http://onpersistence.blogspot.com">On Persistence</a></li>
 			    <li><a href="http://bdoughan.blogspot.com">Java XML Binding</a></li>
 			</ul>
