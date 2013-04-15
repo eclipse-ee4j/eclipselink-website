@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Creating a DBWS Service from SQL Statements | EclipseLink 2.5.x EclipseLink DBWS</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-04-04T10:43:15Z" />
+<meta name="date" content="2013-04-15T10:41:37Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Creating a DBWS Service from SQL Statements" />
 <meta name="relnum" content="Release 2.5" />
@@ -46,7 +46,7 @@
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-04-04</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-04-15</font></p>
 <a id="CJAIFBBF" name="CJAIFBBF"></a><a id="TLDBW158" name="TLDBW158"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Creating a DBWS Service from SQL Statements</font></h1>
@@ -64,7 +64,7 @@
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Creating from Results Sets from Custom SQL SELECT Statements</font></h2>
 <p>EclipseLink DBWS can create a Web service that exposes the results of executing custom SQL <code>SELECT</code> statements, without exposing the actual SQL. There is no metadata to determine the structure of the returned data -- the Simple XML Format schema is used.</p>
 <p>The SQL <code>SELECT</code> statements targeted for this service are in the <code>DBWSBuilder</code> builder XML file, as shown here:</p>
-<div class="example"><a id="TLDBW160" name="TLDBW160"></a><a id="sthref43" name="sthref43"></a>
+<div class="example"><a id="TLDBW160" name="TLDBW160"></a><a id="sthref42" name="sthref42"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-8 Sample DBWSBuilder XML File</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -124,10 +124,10 @@ prompt &gt; dbwsbuilder.cmd -builderFile dbws-builder.xml -stageDir output_direc
 </pre>
 <p>The element tags <code>simple-xml-format</code> and <code>simple-xml</code> are customized in the SQL operations. For example, <code>&lt;simple-xml-format&gt;</code> = <code>&lt;aggregate-info&gt;</code>, <code>&lt;simple-xml&gt;</code> = <code>&lt;count-and-max-salary&gt;</code>.</p>
 <a id="TLDBW161" name="TLDBW161"></a>
-<div class="sect3"><a id="sthref44" name="sthref44"></a>
+<div class="sect3"><a id="sthref43" name="sthref43"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Generated EclipseLink DBWS Service Descriptor</font></h3>
 <p>The SQL operations are included in the DBWS service descriptor file (<code>eclipselink-dbws.xml</code>) created by EclipseLink, as well as the settings to alter the default Simple XML Format <code>&lt;element-tag&gt;</code> name.</p>
-<div class="example"><a id="TLDBW162" name="TLDBW162"></a><a id="sthref45" name="sthref45"></a>
+<div class="example"><a id="TLDBW162" name="TLDBW162"></a><a id="sthref44" name="sthref44"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-9 Sample XML File</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -213,7 +213,7 @@ prompt &gt; dbwsbuilder.cmd -builderFile dbws-builder.xml -stageDir output_direc
 </div>
 <!-- class="sect4" -->
 <a id="TLDBW164" name="TLDBW164"></a>
-<div class="sect4"><a id="sthref46" name="sthref46"></a>
+<div class="sect4"><a id="sthref45" name="sthref45"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Custom SQL as Sub-operation of Table-based Web Service</font></h4>
 <p>The <a href="#CJABGDEG">"SOAP Messaging"</a> operation returns unstructured data. However, it is possible to nest such operations within the context of a Table-based operation; then, the nested operations can be configured to re-use the schema element type of the parent table and return structured data:</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -239,7 +239,7 @@ prompt &gt; dbwsbuilder.cmd -builderFile dbws-builder.xml -stageDir output_direc
  
 </pre>
 <p>The generated EclipseLink DBWS service descriptor <code>eclipselink-dbws.xml</code> file:</p>
-<div class="example"><a id="TLDBW165" name="TLDBW165"></a><a id="sthref47" name="sthref47"></a>
+<div class="example"><a id="TLDBW165" name="TLDBW165"></a><a id="sthref46" name="sthref46"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-10 Sample eclipselink-dbws.xml File</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;dbws xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="urn:testSql" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
@@ -277,7 +277,7 @@ prompt &gt; dbwsbuilder.cmd -builderFile dbws-builder.xml -stageDir output_direc
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Creating based on Schema-formatted Results from Custom SQL SELECT Statements</font></h2>
 <p>EclipseLink can also create a web service in which the "shape" of the returned result is determined at design-time, not runtime. Normally, the custom SQL <code>SELECT</code> statement returns <code>java.sql.ResultSets</code> and the <code>java.sql.ResultSetMetaData</code> APIs (<code>getColumnCount</code>, <code>getColumnLabel</code>, <code>getColumnType</code>, etc.) can be used to determine the name and datatype of the returned information.</p>
 <p>EclipseLink DBWS uses the Simplified XML Format (SXF) to create an XML document to describe the ResultSet's information. However, because this document can change arbitrarily, the SXF schema is extremely "loose" &ndash; the use of <code>xsd:any</code> places virtually no restriction on the document.</p>
-<div class="example"><a id="TLDBW167" name="TLDBW167"></a><a id="sthref48" name="sthref48"></a>
+<div class="example"><a id="TLDBW167" name="TLDBW167"></a><a id="sthref47" name="sthref47"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-11 Sample Schema</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -293,7 +293,7 @@ prompt &gt; dbwsbuilder.cmd -builderFile dbws-builder.xml -stageDir output_direc
  
 </pre></div>
 <!-- class="example" -->
-<div class="example"><a id="TLDBW168" name="TLDBW168"></a><a id="sthref49" name="sthref49"></a>
+<div class="example"><a id="TLDBW168" name="TLDBW168"></a><a id="sthref48" name="sthref48"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-12 Instance document:</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;source lang="xml"&gt;
@@ -322,10 +322,10 @@ prompt &gt; dbwsbuilder.cmd -builderFile dbws-builder.xml -stageDir output_direc
 </pre></div>
 <!-- class="example" -->
 <a id="TLDBW169" name="TLDBW169"></a>
-<div class="sect3"><a id="sthref50" name="sthref50"></a>
+<div class="sect3"><a id="sthref49" name="sthref49"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Additional information at Design Time</font></h3>
 <p>As indicated previously, the <code>java.sql.ResultSetMetaData</code> APIs provide enough information, if available at design-time, from which you could generate a schema, as shown here:</p>
-<div class="example"><a id="TLDBW170" name="TLDBW170"></a><a id="sthref51" name="sthref51"></a>
+<div class="example"><a id="TLDBW170" name="TLDBW170"></a><a id="sthref50" name="sthref50"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-13 Sample Schema</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -371,7 +371,7 @@ prompt &gt; dbwsbuilder.cmd -builderFile dbws-builder.xml -stageDir output_direc
 <!-- class="example" --></div>
 <!-- class="sect3" -->
 <a id="TLDBW172" name="TLDBW172"></a>
-<div class="sect3"><a id="sthref52" name="sthref52"></a>
+<div class="sect3"><a id="sthref51" name="sthref51"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Understanding Issues and Limitations</font></h3>
 <p>Be aware of the following limitation:</p>
 <ul>

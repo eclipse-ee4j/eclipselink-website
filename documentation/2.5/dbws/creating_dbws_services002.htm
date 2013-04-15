@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Using an EclipseLink SessionCustomizer | EclipseLink 2.5.x EclipseLink DBWS</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-04-04T10:43:15Z" />
+<meta name="date" content="2013-04-15T10:41:37Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Using an EclipseLink SessionCustomizer" />
 <meta name="relnum" content="Release 2.5" />
@@ -46,7 +46,7 @@
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-04-04</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-04-15</font></p>
 <a id="CJAIJBFJ" name="CJAIJBFJ"></a><a id="TLDBW149" name="TLDBW149"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Using an EclipseLink SessionCustomizer</font></h1>
@@ -54,7 +54,7 @@
 <p>For more information, see "Session Customization in the EclipseLink documentation:<br />
 <code><a href="http://wiki.eclipse.org/Introduction_to_EclipseLink_Sessions_%28ELUG%29#Session_Customization">http://wiki.eclipse.org/Introduction_to_EclipseLink_Sessions_%28ELUG%29#Session_Customization</a></code></p>
 <a id="TLDBW150" name="TLDBW150"></a>
-<div class="sect2"><a id="sthref37" name="sthref37"></a>
+<div class="sect2"><a id="sthref36" name="sthref36"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Example</font></h2>
 <p>This example illustrates how to implement an EclipseLink <code>SessionCustomizer</code>:</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -78,7 +78,7 @@ public class MySessionCustomizer implements SessionCustomizer {
  
 </pre>
 <p>In the <code>DBWSBuilder</code> configuration file, you must use the <code>orSessionCustomizerClassName</code> or <code>oxSessionCustomizerClassName</code> to specify if the customization applies to the ORM or ORX project (respectively), as shown here:</p>
-<div class="example"><a id="TLDBW151" name="TLDBW151"></a><a id="sthref38" name="sthref38"></a>
+<div class="example"><a id="TLDBW151" name="TLDBW151"></a><a id="sthref37" name="sthref37"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-3 ORM Project</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt; 
@@ -90,7 +90,7 @@ public class MySessionCustomizer implements SessionCustomizer {
  
 </pre></div>
 <!-- class="example" -->
-<div class="example"><a id="TLDBW152" name="TLDBW152"></a><a id="sthref39" name="sthref39"></a>
+<div class="example"><a id="TLDBW152" name="TLDBW152"></a><a id="sthref38" name="sthref38"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-4 ORX Project</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt; 
@@ -104,7 +104,7 @@ public class MySessionCustomizer implements SessionCustomizer {
 <!-- class="example" --></div>
 <!-- class="sect2" -->
 <a id="TLDBW153" name="TLDBW153"></a>
-<div class="sect2"><a id="sthref40" name="sthref40"></a>
+<div class="sect2"><a id="sthref39" name="sthref39"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Advanced Customization</font></h2>
 <p>You can further customize an EclipseLink DBWS service by creating your own EclipseLink <code>project.xml</code> and <code>sessions.xml</code> files. Using your preferred utility, you can:</p>
 <ul>

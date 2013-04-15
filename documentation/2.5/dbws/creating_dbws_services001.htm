@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Creating EclipseLink DBWS Service from a Database Table | EclipseLink 2.5.x EclipseLink DBWS</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-04-04T10:43:15Z" />
+<meta name="date" content="2013-04-15T10:41:37Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Creating EclipseLink DBWS Service from a Database Table" />
 <meta name="relnum" content="Release 2.5" />
@@ -85,7 +85,7 @@ function footdisplay(footnum,footnote) {
 </script> <noscript>
 <p>The script content on this page is for navigation purposes only and does not alter the content in any way.</p>
 </noscript>
-<p align="center"><font color="#FF0000">Beta Draft: 2013-04-04</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-04-15</font></p>
 <a id="CJABFFBE" name="CJABFFBE"></a><a id="TLDBW143" name="TLDBW143"></a>
 <div class="sect1">
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Creating EclipseLink DBWS Service from a Database Table</font></h1>
@@ -96,7 +96,7 @@ function footdisplay(footnum,footnote) {
 <p>table name ==&gt; translate any characters not supported by XML<a id="CJADCADG" name="CJADCADG" href="#CJADCADG" onclick='footdisplay(1,"Same algorithm documented as part of the SQL/X (a.k.a. SQL/XML:2003) specification.")'><sup><font size="-3">Foot&nbsp;</font>1&nbsp;</sup></a>&nbsp;&nbsp;==&gt; translate to_lowercase ==&gt; add suffix 'Type' ==&gt; top-level complex type in&nbsp;<code>.xsd</code> file</p>
 </li>
 <li>
-<p>column name ==&gt; translate any characters not supported by XML<a id="sthref32" name="sthref32" href="#sthref32" onclick='footdisplay(1,"Same algorithm documented as part of the SQL/X (a.k.a. SQL/XML:2003) specification.")'><sup><font size="-3">Footref&nbsp;</font>1</sup></a>&nbsp;&nbsp;==&gt; translate to_lowercase ==&gt; becomes <code>&lt;element-tag&gt;</code> name</p>
+<p>column name ==&gt; translate any characters not supported by XML<a id="sthref31" name="sthref31" href="#sthref31" onclick='footdisplay(1,"Same algorithm documented as part of the SQL/X (a.k.a. SQL/XML:2003) specification.")'><sup><font size="-3">Footref&nbsp;</font>1</sup></a>&nbsp;&nbsp;==&gt; translate to_lowercase ==&gt; becomes <code>&lt;element-tag&gt;</code> name</p>
 <ul>
 <li>
 <p>All columns are expressed as elements</p>
@@ -111,7 +111,7 @@ function footdisplay(footnum,footnote) {
 </li>
 </ul>
 <p><a href="#CJAFCCCA">Example 2-1</a> uses the <strong>EMP</strong> table (<a href="#CJABFAHH">Table 2-1</a>) from the Oracle <strong>scott</strong> database schema:</p>
-<div class="tblhruleformal"><a id="TLDBW144" name="TLDBW144"></a><a id="sthref33" name="sthref33"></a><a id="CJABFAHH" name="CJABFAHH"></a>
+<div class="tblhruleformal"><a id="TLDBW144" name="TLDBW144"></a><a id="sthref32" name="sthref32"></a><a id="CJABFAHH" name="CJABFAHH"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 2-1 Sample EMP Table</font></em></strong></p>
 <table class="HRuleFormal" title="Sample EMP Table" summary="Sample EMP table." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="13%" />
@@ -404,10 +404,10 @@ prompt &gt; dbwsbuilder.cmd -builderFile dbws-builder.xml -stageDir output_direc
 </pre></div>
 <!-- class="example" -->
 <a id="TLDBW146" name="TLDBW146"></a>
-<div class="sect2"><a id="sthref34" name="sthref34"></a>
+<div class="sect2"><a id="sthref33" name="sthref33"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Generated EclipseLink DBWS service descriptor</font></h2>
 <p>The CRUD operations are illustrated in the generated EclipseLink DBWS service descriptor (<code>eclipselink-dbws.xml</code>) file, as shown here:</p>
-<div class="example"><a id="TLDBW147" name="TLDBW147"></a><a id="sthref35" name="sthref35"></a>
+<div class="example"><a id="TLDBW147" name="TLDBW147"></a><a id="sthref34" name="sthref34"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-2 Sample CRUD Operations</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -465,7 +465,7 @@ prompt &gt; dbwsbuilder.cmd -builderFile dbws-builder.xml -stageDir output_direc
 <!-- class="example" --></div>
 <!-- class="sect2" -->
 <a id="TLDBW148" name="TLDBW148"></a>
-<div class="sect2"><a id="sthref36" name="sthref36"></a>
+<div class="sect2"><a id="sthref35" name="sthref35"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">SOAP Messaging</font></h2>
 <p>The following SOAP Message invokes the <code>&lt;findAll_empType</code>&gt; operation for the <strong>emp</strong> DBWS service:</p>
 <pre xml:space="preserve" class="oac_no_warn">
