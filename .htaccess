@@ -1,4 +1,5 @@
 RedirectMatch "/eclipselink/documentation/latest/(.*)" http:/eclipselink/documentation/2.4/$1
+RedirectMatch "/eclipselink/documentation/trunk/(.*)" http:/eclipselink/documentation/2.5/$1
 RedirectMatch "/eclipselink/api/latest/(.*)" http:/eclipselink/api/2.4/$1
 RedirectMatch "/eclipselink/api/trunk/(.*)" http:/eclipselink/api/2.5/$1
 RedirectMatch "/eclipselink/api/2.3.2/(.*)" http:/eclipselink/api/2.3/$1
