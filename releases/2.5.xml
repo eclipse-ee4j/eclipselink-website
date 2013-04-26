@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sections title="EclipseLink 2.5.0 Release">
+
+	<section class="title">
+		<description>
+			<h1>EclipseLink 2.5.0</h1>
+			<p> The EclipseLink 2.5 release adds JPA 2.1 support and is the JPA 2.1 RI. 
+			</p>
+			<p> New features include:
+			<ul> 
+			<li>Full JPA 2.1 support</li>
+			<li>Hanna DB platform</li>
+			<li>Pervasive DB platform</li>
+			<li>JPA-RS imporvements
+			<li>MOXy - NamedObjectGraphs</li>
+			</ul>
+
+		</description>
+	</section>
+
+	<section class="main" name="JPA 2.1 Features" image="/sequoyah/images/CC_news.png">
+
+		<description>
+			The features in this section are some of the new features added in JPA 2.1.
+			<table>
+				<tr>
+					<td colspan="2">
+						<h4>Criteria Bulk Update/Delete</h4>
+					</td>
+				</tr>
+				<tr
+					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+					<td valign="top">
+						The Criteria framework is an API for creating typesafe and/or dynamic Java Persistence queries that was added in JPA 2.0. Similar in style to the EclipseLink Query and Expression framework. Until JPA 2.1, using Critera to perform deletes or updates was not available using the Criteria API. Through the addition of CriteriaUpdate/CriteriaDelete classes support for bulk update/delete queries has now been added.  
+					</td>
+					<td width="150">
+						<div>
+							<img src="/eclipselink/images/doc_small.png" />
+							<a href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/BulkUpdate">Documentation</a>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<h4>Stored Procedures</h4>
+					</td>
+				</tr>
+				<tr
+					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+					<td valign="top">JPA specification 2.1 has introduced support for executing Stored Procedure calls. This includes a new StoredProcedureQuery API and Named Stored Procedure Queries (pre-existing portions of code on the database).	</td>
+					<td>
+						<div>
+							<img src="/eclipselink/images/doc_small.png" />
+							<a href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/StoredProcedure">Documentation</a>
+							</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="2">
+						<h4>JPQL - Generic function support</h4>
+					</td>
+				</tr>
+				<tr
+					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+					<td valign="top">
+						The SQL spec and many databases have SQL functions that are not covered by the JPA specification. With the latest JPA specification the ability to call generic SQL functions was added to the JPQL syntax. 
+					</td>
+					<td>
+						<div>
+							<img src="/eclipselink/images/doc_small.png" />
+							<a href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/JPQLFunction">Documentation</a>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="2">
+						<h4>Injectable Entity Listeners</h4>
+					</td>
+				</tr>
+				<tr
+					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+					<td valign="top">
+						Contexts and Dependency Injection (CDI) allows for container managed injection of artifacts into Java Objects. This feature provides the functionality needed for EclipseLink to integrate with CDI to provide for CDI injecting into the Entity Listener.					
+						</td>
+					<td>
+						<div>
+							<img src="/eclipselink/images/doc_small.png" />
+							<a href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/CDIEntityListener">Documentation</a>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<h4>Treat</h4>
+					</td>
+				</tr>
+				<tr
+					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+					<td valign="top">
+						Allows relationship joins to be treated as a subclass of the join type. 					
+						</td>
+					<td>
+						<div>
+							<img src="/eclipselink/images/doc_small.png" />
+							<a href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/Treat">Documentation</a>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<h4>Converters</h4>
+					</td>
+				</tr>
+				<tr
+					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+					<td valign="top">
+						Provides control over the conversion from an attribute type and value to the corresponding database type and value 					
+						</td>
+					<td>
+						<div>
+							<img src="/eclipselink/images/doc_small.png" />
+							<a href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/Converter">Documentation</a>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<h4>DDL Gen</h4>
+					</td>
+				</tr>
+				<tr
+					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+					<td valign="top">
+						In previous versions for JPA, although DDL generation was present it was not standardized or required. JPA 2.1 has added standardized provider DDL generation and made DDL generation a requirement.  					
+						</td>
+					<td>
+						<div>
+							<img src="/eclipselink/images/doc_small.png" />
+							<a href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/DDLGen">Documentation</a>
+						</div>
+					</td>
+				</tr>
+								<tr>
+					<td colspan="2">
+						<h4>Entity Graphs</h4>
+					</td>
+				</tr>
+				<tr
+					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+					<td valign="top">
+						Entity graphs are subgraphs of the entity model metadata. The entity graph contains metamodel representations of a set of the entity classes' attributes and metamodel representations of related entity classes. A constructed entity graph can be used as a template for applying operations like attribute loading.  					
+						</td>
+					<td>
+						<div>
+							<img src="/eclipselink/images/doc_small.png" />
+							<a href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/EntityGraph">Documentation</a>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+
+		</description>
+
+	</section>
+
+	<section class="main" name=" Enhancements and Resolved Issues"
+		image="/sequoyah/images/CC_bugs.png">
+		<description>
+			<p>In addition to the features highlighted in the New and Noteworthy
+				section this release also includes a substantial number of bug fixes
+				and enhancements.
+			</p>
+			<ul>
+				<li>
+					<a
+						href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.5%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;target_milestone=2.5.0;product=EclipseLink;known_name=2.5%20Fixed"
+						class="external text"
+						title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.5%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;target_milestone=2.5.0;product=EclipseLink;known_name=2.5%20Fixed"
+						rel="nofollow">2.5.0: All Fixed Bugs and enhancement requests</a>
+					<dl>
+						<dd>
+							<img src="2.4.0_bugs.PNG" />
+							Component:
+							<a
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;component=Foundation;target_milestone=2.5.0;product=EclipseLink;classification=RT"
+								class="external text"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;component=Foundation;target_milestone=2.5.0;product=EclipseLink;classification=RT"
+								rel="nofollow">Foundation</a>
+							,
+							<a
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.5%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=JPA;target_milestone=2.5.0;product=EclipseLink;known_name=2.5%20Fixed"
+								class="external text"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.4%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=JPA;target_milestone=2.5.0;product=EclipseLink;known_name=2.5%20Fixed"
+								rel="nofollow">JPA</a>
+							,
+							<a
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.5%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=MOXy;product=EclipseLink;target_milestone=2.5.0;known_name=2.5%20Fixed"
+								class="external text"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.5%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=MOXy;product=EclipseLink;target_milestone=2.5.0;known_name=2.5%20Fixed"
+								rel="nofollow">MOXy</a>
+							,
+							<a
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.5%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=SDO;target_milestone=2.5.0;product=EclipseLink;known_name=2.5%20Fixed"
+								class="external text"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.5%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=SDO;target_milestone=2.5.0;product=EclipseLink;known_name=2.5%20Fixed"
+								rel="nofollow">SDO</a>
+							,
+							<a
+								href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.5%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=DBWS;product=EclipseLink;target_milestone=2.5.0;known_name=2.5%20Fixed"
+								class="external text"
+								title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.5%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=DBWS;product=EclipseLink;target_milestone=2.5.0;known_name=2.5%20Fixed"
+								rel="nofollow">DBWS</a>
+						</dd>
+					</dl>
+				</li>
+			</ul>
+		</description>
+	</section>
+
+	<section class="main" name=" Known Issues"
+		image="http://dev.eclipse.org/huge_icons/apps/help-browser.png">
+		<description>
+			<p>
+				The following are known issues that have been identified as
+				potentially effecting users of EclipseLink 2.5.
+			</p>
+				<ul>
+				<li>
+					<a href="http://bugs.eclipse.org/399676">Bug 399676</a>
+					<code>
+					JPA-RS accepts request urls with and without version. For example, the following two urls will be accepted by the JPA-RS :</p>
+					- <app_name>/persistence/<pu_name>/entity/<entity_type>/<key>
+					- <app_name>/persistence/<version>/<pu_name>/entity/<entity_type>/<key>
+
+					However, the urls without version will be deprecated and clients are encourage use  versioned urls.
+
+					The version of the JPA-RS delivered with eclipselink 2.5.x is TBD, depending on the nature of changes. Created this bug to review and make necessary changes in the documentation close to the 2.5 release date.
+					</code> </li>
+				<li>
+					<a href="http://bugs.eclipse.org/404294">Bug 404294</a>
+					<code>
+						Prior to this fix, the following code:
+						 EntityManager em = emf.getEntityManager();
+						 lookupJTATransaction().begin();
+						 em.persist(newEntity);
+						 lookupJTATransaction().commit();
+
+						EclipseLink would incorrectly register with the active transaction when persist was called, and flush when the transaction commits.  With this fix, the entityManager no longer registers with the transaction, and so nothing will get written out.  The specification requires that joinTransaction be called when the transaction is started after obtaining a user managed EM:
+
+						 EntityManager em = emf.getEntityManager();
+						 lookupJTATransaction().begin();
+						 em.joinTransaction(); //this is required for em to participate in the transaction
+						 em.persist(newEntity);
+						 lookupJTATransaction().commit();
+
+						Without the joinTransaction call, the insert will not happen, and any EntityManager calls requiring a transaction will result in a TransactionRequiredException "Cannot call methods requiring a transaction if the entity manager has not been joined to the current transaction.".
+					</code> </li>
+					</ul>
+		</description>
+	</section>
+
+	<section class="main" name=" Standards" image="/sequoyah/images/CC_code.png">
+		<description>
+			<p>EclipseLink remains focused on the delivering support for the
+				latest standards. EclipseLink 2.5 offers certified support for:
+			</p>
+			<ul>
+				<li>
+					Java Persistence (JPA) 2.0 -
+					<a href="http://www.jcp.org/en/jsr/detail?id=317">JSR 317</a>
+				</li>
+				<li>
+					Java Architecture for XML Binding (JAXB) 2.2 -
+					<a href="http://jcp.org/en/jsr/detail?id=222">JSR 222</a>
+				</li>
+				<li>
+					Service Data Objects (SDO) 2.1.1 -
+					<a href="http://jcp.org/en/jsr/detail?id=235">JSR 235</a>
+				</li>
+			</ul>
+		</description>
+	</section>
+
+	<section class="main" name=" Deprecated Functionality"
+		image="http://dev.eclipse.org/huge_icons/actions/edit-clear.png">
+		<description>
+			<p>
+				In EclipseLink 2.5 the following features/API have been
+				deprecated.
+				Please upgrade to the suggested alternatives to avoid
+				issues in the
+				future when these deprecated features/AIP might be
+				removed.
+				<a href="index.php">release pages</a>
+				.
+			</p>
+		</description>
+	</section>
+
+	<section class="main" name="Retention Policy">
+		<description>
+			<p>
+				The EclipseLink 2.5.0 release will remain available for download
+				from
+				the
+				<a href="/eclipselink/downloads/index.php">primary download page</a>
+				until the next release is shipped. At
+				that point it will be moved to
+				the
+				<a href="/eclipselink/downloads/previous_releases.php">previous releases</a>
+				page where it remain
+				for a minimum period of 2 years before becoming
+				available for archival.
+			</p>
+		</description>
+	</section>
+
+	<section class="main" name="Future Releases">
+		<description>
+			<p>
+				For more information about future planned EclipseLink releases and
+				patch sets please refer to the releases section of the
+				<a href="/projects/project_summary.php?projectid=rt.eclipselink">project summary. </a>
+			</p>
+		</description>
+	</section>
+
+	<section class="sideitem" name="Getting Started">
+
+		<description>
+			<div style="text-align:center;padding:0.5em;margin:0.5em 0.5em 1em 1em;">
+				<a href="/juno">
+					<img src="/juno/images/eclipse_juno242x132.jpg" width="200" />
+				</a>
+			</div>
+
+			<div
+				style="padding:0.5em;margin:0.5em 0.5em 1em 1em;background:#FDD017;-moz-border-radius:4px;"
+				valign="middle">
+
+				<!--<a href="http://www.eclipse.org/eclipselink/downloads/index.php#2.5"> -->
+					<table>
+						<tr>
+							<td>
+								<img src="http://dev.eclipse.org/huge_icons/actions/go-down.png"
+									border="0" />
+							</td>
+							<td width="100%" valign="middle">
+								<div style="text-align:center">
+									<font size="+3">
+										Download 2.5.0
+									</font>
+								</div>
+							</td>
+							<td>
+								<img src="http://dev.eclipse.org/huge_icons/actions/go-down.png"
+									border="0" />
+							</td>
+						</tr>
+					</table>
+				</a>
+			</div>
+
+			<div
+				style="text-align:center;padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+				<img src="/eclipselink/images/doc_small.png" />
+				<a href="/eclipselink/documentation/2.4/">Documentation Center</a>
+			</div>
+
+			<div
+				style="text-align:center;padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+				<img src="/eclipselink/images/wiki_small.png" />
+				<a href="http://wiki.eclipse.org/EclipseLink/Examples">Examples and Tutorials</a>
+			</div>
+
+			<div
+				style="text-align:center;padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+				<img src="/eclipselink/images/doc_small.png" />
+				<a href="/eclipselink/api/2.5/index.html">2.5.0JavaDocs</a>
+			</div>
+
+		</description>
+
+	</section>
+
+</sections>
