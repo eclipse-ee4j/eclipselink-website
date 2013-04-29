@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Using Single-Table Multi-Tenancy | EclipseLink 2.5.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-02-28T10:9:7Z" />
+<meta name="date" content="2013-04-04T10:28:55Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Using Single-Table Multi-Tenancy" />
 <meta name="relnum" content="Release 2.5" />
@@ -46,7 +46,7 @@
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-02-28</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-04-04</font></p>
 <a id="BABJGBCF" name="BABJGBCF"></a><a id="TLADG260" name="TLADG260"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Using Single-Table Multi-Tenancy</font></h1>
@@ -109,7 +109,7 @@
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task 2: Enable Single-Table Multi-Tenancy</font></h3>
 <p>Single-table multi-tenancy can be enabled declaratively using the <code>@Multitenant</code> annotation, in an Object Relational Mapping (ORM) XML file using the <code>&lt;multitenant&gt;</code> element, or by using annotations and XML together.</p>
 <a id="TLADG263" name="TLADG263"></a>
-<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref78" name="sthref78"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref82" name="sthref82"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Using the @Multitenant Annotation</font></h4>
 <p>To use the <code>@Multitenant</code> annotation, include it with an <code>@Entity</code> or <code>@MappedSuperclass</code> annotation. For example:</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -150,7 +150,7 @@ public class Employee {
 </div>
 <!-- class="sect4" -->
 <a id="TLADG264" name="TLADG264"></a>
-<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref79" name="sthref79"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref83" name="sthref83"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Using the &lt;multitenant&gt; Element</font></h4>
 <p>To use the <code>&lt;multitenant&gt;</code> element, include the element within an <code>&lt;entity&gt;</code> element. For example:</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -215,7 +215,7 @@ public class Employee {
 </li>
 </ul>
 <a id="TLADG266" name="TLADG266"></a>
-<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref80" name="sthref80"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref84" name="sthref84"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Use the @TenantDiscriminatorColumn Annotation</font></h4>
 <p>To use the <code>@TenantDiscriminatorColumn</code> annotation, include it with <code>@Multitenant</code> annotation on an entity or mapped superclass, and optionally include the <code>name</code> and <code>contextProperty</code> attributes. If you do not specify these attributes, the defaults <code>name = "TENANT-ID"</code> and <code>contextProperty = "eclipselink.tenant-id"</code> are used.</p>
 <p>For example:</p>
@@ -246,7 +246,7 @@ public Employee() {
 </pre></div>
 <!-- class="sect4" -->
 <a id="TLADG267" name="TLADG267"></a>
-<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref81" name="sthref81"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref85" name="sthref85"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Use the &lt;tenant-discriminator-column&gt; Element</font></h4>
 <p>To use the <code>&lt;tenant-discriminator-column&gt;</code> element, include the element within a <code>&lt;multitenant&gt;</code> element and optionally include the <code>name</code> and <code>context-property</code> attributes. If you do not specify these attributes, the defaults <code>name = "TENANT-ID"</code> and <code>contextProperty = "eclipselink.tenant-id"</code> are used.</p>
 <p>For example:</p>
@@ -276,7 +276,7 @@ public Employee() {
 </pre></div>
 <!-- class="sect4" -->
 <a id="TLADG268" name="TLADG268"></a>
-<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref82" name="sthref82"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref86" name="sthref86"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Map Tenant Discriminator Columns</font></h4>
 <p>Tenant discriminator columns can be mapped to a primary key or to another column. The following example maps the tenant discriminator column to the primary key on the table during DDL generation:</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -356,7 +356,7 @@ public Player() {
 <!-- class="sect4" --></div>
 <!-- class="sect3" -->
 <a id="TLADG620" name="TLADG620"></a>
-<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref83" name="sthref83"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref87" name="sthref87"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Configure Context Properties and Caching Scope</font></h3>
 <p>Runtime context properties are used in conjunction with the multi-tenancy configuration on an entity (or mapped superclass) to implement the multi-tenancy strategy. For example, the tenant ID assigned to a tenant discriminator column for an entity is used at runtime (via an entity manager) to restrict access to data, based on that tenant's ownership of (or access to) the rows and tables of the database.</p>
 <p>At runtime, multi-tenancy properties can be specified in a persistence unit definition or passed to a create entity manager factory call.</p>
@@ -433,7 +433,7 @@ em.setProperty(EntityManagerProperties.MULTITENANT_PROPERTY_DEFAULT, "my_id");
 </div>
 <!-- class="sect4" -->
 <a id="TLADG622" name="TLADG622"></a>
-<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref84" name="sthref84"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref88" name="sthref88"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Configure a Non-Shared Entity Manager</font></h4>
 <p>To create an entity manager factory that is not shared, set the <code>eclipselink.multitenant.tenants-share-emf</code> property to <code>false</code>.</p>
 <p>When the entity manager factory is not shared, you must use the <code>eclipselink.session-name</code> property to provide a unique session name, as shown in the following example. This ensures that a unique server session and cache are provided for each tenant. This provides full caching capabilities. For example,</p>
@@ -469,7 +469,7 @@ EntityManager em = Persistence.createEntityManagerFactory("multi-tenant-pu", pro
 </pre></div>
 <!-- class="sect4" -->
 <a id="TLADG623" name="TLADG623"></a>
-<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref85" name="sthref85"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref89" name="sthref89"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Configure an Entity Manager</font></h4>
 <p>When configuring properties at the level of the entity manager, you must specify the caching strategies, because the same server session can be used for each tenant. For example, you can set up an isolation level (L1 cache) to ensure no shared tenant information exists in the L2 cache. These settings are set when creating the entity manager factory.</p>
 <pre xml:space="preserve" class="oac_no_warn">

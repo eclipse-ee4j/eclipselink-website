@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Understanding XML-to-Relational Mapping (XRM) | EclipseLink 2.5.x EclipseLink DBWS</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-02-26T8:37:10Z" />
+<meta name="date" content="2013-04-15T10:41:37Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Understanding XML-to-Relational Mapping (XRM)" />
 <meta name="relnum" content="Release 2.5" />
@@ -46,19 +46,20 @@
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-02-26</font></p>
-<a id="CJAFEHEG" name="CJAFEHEG"></a>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-04-15</font></p>
+<a id="CJAFEHEG" name="CJAFEHEG"></a><a id="TLDBW110" name="TLDBW110"></a>
 <div class="sect1">
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Understanding XML-to-Relational Mapping (XRM)</font></h1>
 <p>EclipseLink's ORM and OXM features provides the basis for a powerful bridge between a database's relational structure(s) and XML's hierarchical structure.</p>
-<div class="figure"><a id="sthref7" name="sthref7"></a>
+<div class="figure"><a id="TLDBW111" name="TLDBW111"></a><a id="sthref7" name="sthref7"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 1-1 EclipseLink XR Architecture</font></em></strong></p>
 <img src="img/29145_Chart_v2.gif" alt="" title="" /><br /></div>
 <!-- class="figure" -->
+<a id="TLDBW112" name="TLDBW112"></a>
 <div class="sect2"><a id="sthref8" name="sthref8"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Configuration</font></h2>
 <p>A typical EclipseLink DBWS service is packaged in an archive (<code>.jar</code> or&nbsp;<code>.war</code> file) with a service descriptor file <code>eclipselink-dbws.xml</code> in the <code>META-INF</code> directory (or <code>WEB-INF/classes/META-INF</code> when packaged in a&nbsp;<code>.war</code> file). To bridge the relational database and XML worlds, an EclipseLink <code>sessions.xml</code> (<code>eclipselink-dbws-sessions.xml</code>) points to two Eclipse projects: one for the ORM side, the other for the OXM side. The service also requires an XML Schema Definition file <code>eclipselink-dbws-schema.xsd</code> which in conjunction with the OXM project, specifies how information from the database is to be "shaped" into XML documents.</p>
-<div class="figure"><a id="sthref9" name="sthref9"></a>
+<div class="figure"><a id="TLDBW113" name="TLDBW113"></a><a id="sthref9" name="sthref9"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 1-2 Typical EclipseLink DBWS Service Files</font></em></strong></p>
 <img src="img/dbwsservicepackage.gif" alt="Typical EclipseLink DBWS Service Files" title="Typical EclipseLink DBWS Service Files" longdesc="img_text/dbwsservicepackage.htm" /><br />
 <a id="sthref10" name="sthref10" href="img_text/dbwsservicepackage.htm">Description of "Figure 1-2 Typical EclipseLink DBWS Service Files"</a><br />
@@ -79,7 +80,7 @@
 <br /></div>
 <!-- class="inftblnote" --></div>
 <p>The EclipseLink DBWS service descriptor file, <code>eclipselink-dbws.xml</code>, is easy to read, with minimal required information and simple defaults for omitted fields. This allows for auto-generation by a utility or manual editing. <a href="#CJADJDDA">Example 1-1</a> illustrates a sample DBWS service descriptor file.</p>
-<div class="example"><a id="CJADJDDA" name="CJADJDDA"></a>
+<div class="example"><a id="CJADJDDA" name="CJADJDDA"></a><a id="TLDBW114" name="TLDBW114"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 1-1 Example DBWS Service descriptor file</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -101,7 +102,7 @@
 </pre></div>
 <!-- class="example" -->
 <p><a href="#CJAHDJAB">Table 1-1</a> describes the elements of the EclipseLink DBWS service descriptor file.</p>
-<div class="tblhruleformalwide"><a id="sthref11" name="sthref11"></a><a id="CJAHDJAB" name="CJAHDJAB"></a>
+<div class="tblhruleformalwide"><a id="TLDBW115" name="TLDBW115"></a><a id="sthref11" name="sthref11"></a><a id="CJAHDJAB" name="CJAHDJAB"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 1-1 EclipseLink DBWS Service Descriptor File Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="EclipseLink DBWS Service Descriptor File Elements" summary="EclipseLink DBWS Service Descriptor File Elements" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="21%" />
@@ -178,6 +179,7 @@
 <br /></div>
 <!-- class="tblhruleformalwide" --></div>
 <!-- class="sect2" -->
+<a id="TLDBW116" name="TLDBW116"></a>
 <div class="sect2"><a id="sthref12" name="sthref12"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">XML Schema Definition</font></h2>
 <p>The EclipseLink DBWS service schema file <code>eclipselink-dbws-schema.xsd</code> can be created by hand, or auto-generated by the design-time <code>DBWSBuilder</code> utility that derives XML element-tag names from Database metadata (column names, types, nullable, and so on).</p>
@@ -194,7 +196,7 @@
 </li>
 </ul>
 <p>In these cases, the EclipseLink DBWS runtime provider uses information only available at the time of query execution to build the XML document:</p>
-<div class="example"><a id="sthref13" name="sthref13"></a>
+<div class="example"><a id="TLDBW117" name="TLDBW117"></a><a id="sthref13" name="sthref13"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 1-2 Example Simple XML Format (SXF) document</font></em></strong></p>
 <p>Element tag names are direct copies of table's column names.</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -224,7 +226,7 @@
 <p>These XML documents are "dumb," as they cannot be validated against any pre-determined schema - or more accurately, only the following very <em>permissive</em> "sequence-of-any" schema can validate such documents:</p>
 </div>
 <!-- class="example" -->
-<div class="example"><a id="sthref14" name="sthref14"></a>
+<div class="example"><a id="TLDBW118" name="TLDBW118"></a><a id="sthref14" name="sthref14"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 1-3 Simple XML Format Schema</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;

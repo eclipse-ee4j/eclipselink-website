@@ -7,10 +7,10 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Common Mapping Concepts | EclipseLink 2.5.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-29T16:49:5Z" />
+<meta name="date" content="2013-04-04T14:35:38Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Common Mapping Concepts" />
-<meta name="relnum" content="Release 2.4" />
+<meta name="relnum" content="2.5" />
 <link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
 <link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
 <link rel="start" href="../../index.htm" title="Home" type="text/html" />
@@ -23,7 +23,7 @@
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
 <td align="left" valign="top"><div class="booktitle">Understanding EclipseLink, 
-Release 2.5</div></td>
+<b>2.5</b><br /></font></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -46,7 +46,7 @@ Release 2.5</div></td>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-01-29</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-04-04</font></p>
 <a id="CHDGIHEJ" name="CHDGIHEJ"></a><a id="OTLCG75016" name="OTLCG75016"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Common Mapping Concepts</font></h1>
@@ -129,7 +129,7 @@ Release 2.5</div></td>
 <div class="figure"><a id="CHDHADEG" name="CHDHADEG"></a><a id="OTLCG92099" name="OTLCG92099"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 7-1 How Classes and Objects Map to a Database Table</font></em></strong></p>
 <img src="img/example_map1.gif" alt="Description of Figure 7-1 follows" title="Description of Figure 7-1 follows" longdesc="img_text/example_map1.htm" /><br />
-<a id="sthref38" name="sthref38" href="img_text/example_map1.htm">Description of "Figure 7-1 How Classes and Objects Map to a Database Table"</a><br />
+<a id="sthref40" name="sthref40" href="img_text/example_map1.htm">Description of "Figure 7-1 How Classes and Objects Map to a Database Table"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p>EclipseLink provides you with the tools to build these mappings, from the simple mappings illustrated in <a href="#CHDHADEG">Figure 7-1</a>, to complex mappings.</p>
@@ -143,7 +143,7 @@ Release 2.5</div></td>
 <p>When using a one-to-one or many-to-one mapping in a Java SE environment, use either dynamic or static weaving to perform lazy loading when the <code>fetch</code> attribute is set to <code>FetchType.LAZY</code>.</p>
 <p>When using a one-to-one or many-to-one mapping in a Java SE environment and the environment does not permit the use of <code>-javaagent</code> on the JVM command line, use static weaving to perform lazy loading when the <code>fetch</code> attribute is set to <code>FetchType.LAZY</code>.</p>
 <p><a href="#CEGCJEHD">Table 7-1</a> lists support for lazy loading by mapping type.</p>
-<div class="tblformal"><a id="OTLCG94304" name="OTLCG94304"></a><a id="sthref39" name="sthref39"></a><a id="CEGCJEHD" name="CEGCJEHD"></a>
+<div class="tblformal"><a id="OTLCG94304" name="OTLCG94304"></a><a id="sthref41" name="sthref41"></a><a id="CEGCJEHD" name="CEGCJEHD"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 7-1 Support for Lazy Loading by Mapping Type</font></em></strong></p>
 <table class="Formal" title="Support for Lazy Loading by Mapping Type" summary="Support for Lazy Loading by Mapping Type" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
 <col width="18%" />
@@ -257,14 +257,14 @@ Release 2.5</div></td>
 <div class="figure"><a id="i1025794" name="i1025794"></a><a id="OTLCG92122" name="OTLCG92122"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 7-2 Serialized Object Converter (relational)</font></em></strong></p>
 <img src="img/serobjfg.gif" alt="Description of Figure 7-2 follows" title="Description of Figure 7-2 follows" longdesc="img_text/serobjfg.htm" /><br />
-<a id="sthref40" name="sthref40" href="img_text/serobjfg.htm">Description of "Figure 7-2 Serialized Object Converter (relational)"</a><br />
+<a id="sthref42" name="sthref42" href="img_text/serobjfg.htm">Description of "Figure 7-2 Serialized Object Converter (relational)"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p><a href="#CEGGDDEC">Figure 7-3</a> demonstrates an example of a nonrelational mapping that uses a serialized object converter. The attribute <code>jobDescription</code> contains a formatted text document that EclipseLink stores in the <code>JOB DESCRIPTION</code> element of an XML schema.</p>
 <div class="figure"><a id="CEGGDDEC" name="CEGGDDEC"></a><a id="OTLCG92123" name="OTLCG92123"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 7-3 Serialized Object Converter (nonrelational)</font></em></strong></p>
 <img src="img/otlcg_dt_002.png" alt="Description of Figure 7-3 follows" title="Description of Figure 7-3 follows" longdesc="img_text/otlcg_dt_002.htm" /><br />
-<a id="sthref41" name="sthref41" href="img_text/otlcg_dt_002.htm">Description of "Figure 7-3 Serialized Object Converter (nonrelational)"</a><br />
+<a id="sthref43" name="sthref43" href="img_text/otlcg_dt_002.htm">Description of "Figure 7-3 Serialized Object Converter (nonrelational)"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p>The serialized object converter relies on the Java serializer. Before you map a domain object with the serialized object converter, ensure that the domain object implements the <code>java.io.Serializable</code> interface (or inherits that implementation) and marks all nonserializable fields transient.</p>
@@ -278,14 +278,14 @@ Release 2.5</div></td>
 <div class="figure"><a id="i1054818" name="i1054818"></a><a id="OTLCG92124" name="OTLCG92124"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 7-4 Type Conversion Mapping (relational)</font></em></strong></p>
 <img src="img/tcmapfig.gif" alt="Description of Figure 7-4 follows" title="Description of Figure 7-4 follows" longdesc="img_text/tcmapfig.htm" /><br />
-<a id="sthref42" name="sthref42" href="img_text/tcmapfig.htm">Description of "Figure 7-4 Type Conversion Mapping (relational) "</a><br />
+<a id="sthref44" name="sthref44" href="img_text/tcmapfig.htm">Description of "Figure 7-4 Type Conversion Mapping (relational) "</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p><a href="#CHDBJHEI">Figure 7-5</a> illustrates a type conversion mapping (nonrelational). <code>java.util.Date</code> object is mapped to a String in a XML schema.</p>
 <div class="figure"><a id="CHDBJHEI" name="CHDBJHEI"></a><a id="OTLCG92125" name="OTLCG92125"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 7-5 Type Conversion Mapping (nonrelational)</font></em></strong></p>
 <img src="img/tcmapxml.gif" alt="Description of Figure 7-5 follows" title="Description of Figure 7-5 follows" longdesc="img_text/tcmapxml.htm" /><br />
-<a id="sthref43" name="sthref43" href="img_text/tcmapxml.htm">Description of "Figure 7-5 Type Conversion Mapping (nonrelational)"</a><br />
+<a id="sthref45" name="sthref45" href="img_text/tcmapxml.htm">Description of "Figure 7-5 Type Conversion Mapping (nonrelational)"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p>You can use a type conversion converter to specify the specific database type when that type must be handled specially for the database. This includes support for the special Oracle JDBC binding options required for <code>NCHAR</code>, <code>NVARCHAR2</code>, and <code>NCLOB</code> fields as well as the special Oracle Thin JDBC insert and update requirements for handling <code>BLOB</code> and <code>CLOB</code> fields greater than 5K.</p>
@@ -316,7 +316,7 @@ Release 2.5</div></td>
 <div class="figure"><a id="CHDJBFJH" name="CHDJBFJH"></a><a id="OTLCG92126" name="OTLCG92126"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 7-6 Object Type XML Converter</font></em></strong></p>
 <img src="img/obxmlfig.gif" alt="Description of Figure 7-6 follows" title="Description of Figure 7-6 follows" longdesc="img_text/obxmlfig.htm" /><br />
-<a id="sthref44" name="sthref44" href="img_text/obxmlfig.htm">Description of "Figure 7-6 Object Type XML Converter"</a><br />
+<a id="sthref46" name="sthref46" href="img_text/obxmlfig.htm">Description of "Figure 7-6 Object Type XML Converter"</a><br />
 <br /></div>
 <!-- class="figure" --></div>
 <!-- class="sect3" -->
@@ -361,7 +361,7 @@ Release 2.5</div></td>
 <div class="figure"><a id="i1054846" name="i1054846"></a><a id="OTLCG92423" name="OTLCG92423"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 7-7 Transformation Mappings</font></em></strong></p>
 <img src="img/trmapfig.gif" alt="Description of Figure 7-7 follows" title="Description of Figure 7-7 follows" longdesc="img_text/trmapfig.htm" /><br />
-<a id="sthref45" name="sthref45" href="img_text/trmapfig.htm">Description of "Figure 7-7 Transformation Mappings"</a><br />
+<a id="sthref47" name="sthref47" href="img_text/trmapfig.htm">Description of "Figure 7-7 Transformation Mappings"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p>Often, a transformation mapping is appropriate when values from multiple fields are used to create an object. This type of mapping requires that you provide an <em>attribute transformation</em> that is invoked when reading the object from the database. This must have at least one parameter that is an instance of <code>Record</code>. In your attribute transformation, you can use <code>Record</code> method <code>get</code> to retrieve the value in a specific column. Your attribute transformation can optionally specify a second parameter, an instance of <code>Session</code>. The <code>Session</code> performs queries on the database to get additional values needed in the transformation. The transformation should <em>return</em> the value to be stored in the attribute.</p>

@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Making JAXB Beans Extensible | EclipseLink 2.5.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-02-28T10:9:7Z" />
+<meta name="date" content="2013-04-04T10:28:54Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Making JAXB Beans Extensible" />
 <meta name="relnum" content="Release 2.5" />
@@ -46,7 +46,7 @@
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-02-28</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-04-04</font></p>
 <a id="BABHGCJB" name="BABHGCJB"></a><a id="TLADG236" name="TLADG236"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Making JAXB Beans Extensible</font></h1>
@@ -78,11 +78,11 @@
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task 1: Configure the Bean</font></h3>
 <p>Configure the bean by annotating the bean class with the <code>@XmlVirtualAccessMethods</code>, adding <code>get</code> and <code>set</code> methods for the property values, and adding a data structure to store the extended attributes and values. Alternatively, you can use the <code>&lt;xml-virtual-access-methods&gt;</code> element in <code>eclipselink-orm.xml</code>.</p>
 <a id="TLADG239" name="TLADG239"></a>
-<div class="sect4"><a id="sthref71" name="sthref71"></a>
+<div class="sect4"><a id="sthref75" name="sthref75"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Annotate the Bean Class with @Xml VirtualAccessMethods</font></h4>
 <p>Annotate the bean with <code>@XmlVirtualAccessMethods</code> to specify that it is extensible and to define virtual properties.</p>
 <p><a href="#CIAFAFCH">Table 11-2</a> describes the attributes available to the <code>@XmlVirtualAccessMethods</code> annotation.</p>
-<div class="tblformal"><a id="TLADG240" name="TLADG240"></a><a id="sthref72" name="sthref72"></a><a id="CIAFAFCH" name="CIAFAFCH"></a>
+<div class="tblformal"><a id="TLADG240" name="TLADG240"></a><a id="sthref76" name="sthref76"></a><a id="CIAFAFCH" name="CIAFAFCH"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 11-2 Attributes for the @XmlVirtualAccessMethods Annotation</font></em></strong></p>
 <table class="Formal" title="Attributes for the @XmlVirtualAccessMethods Annotation" summary="Attributes for the @XmlVirtualAccessMethods Annotation" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
 <col width="31%" />
@@ -120,13 +120,13 @@
 <!-- class="tblformal" --></div>
 <!-- class="sect4" -->
 <a id="TLADG241" name="TLADG241"></a>
-<div class="sect4"><a id="sthref73" name="sthref73"></a>
+<div class="sect4"><a id="sthref77" name="sthref77"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Add get and set Methods to the Bean</font></h4>
 <p>Add <code>get(String)</code> and <code>set(String, Object)</code> methods to the bean. The <code>get()</code> method returns a value by property name and the <code>set()</code> method stores a value by property name. The default names for these methods are <code>get</code> and <code>set</code>, and they can be overridden with the <code>@XmlVirtualAccessMethods</code> annotation.</p>
 </div>
 <!-- class="sect4" -->
 <a id="TLADG242" name="TLADG242"></a>
-<div class="sect4"><a id="sthref74" name="sthref74"></a>
+<div class="sect4"><a id="sthref78" name="sthref78"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Define Virtual Attribute Storage</font></h4>
 <p>Add a data structure to store the extended attributes and values, that is, the virtual mappings. These can then be mapped to the database. See <a href="#CIAIDAED">"Task 2: Provide Additional Mappings"</a>.</p>
 <p>A common way to store the virtual mappings is in a <code>Map</code>, but you can use other ways, as well. For example you could store the virtual mappings in a directory system.</p>
@@ -134,7 +134,7 @@
 </div>
 <!-- class="sect4" -->
 <a id="TLADG243" name="TLADG243"></a>
-<div class="sect4"><a id="sthref75" name="sthref75"></a>
+<div class="sect4"><a id="sthref79" name="sthref79"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Use XML</font></h4>
 <p>As an alternative to, or in addition to, using <code>@XmlVirtualAccessMethods</code>, you can use the XML equivalents, for example:</p>
 <ul>
@@ -176,7 +176,7 @@
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Code Examples</font></h2>
 <p>The examples in this section illustrate how to use extensible JAXB beans. The example begins with the creation of a base class that other classes can extend. In this case the extensible classes are for <code>Customers</code> and <code>PhoneNumbers</code>. Mapping files are created for two separate tenants. Even though both tenants share several real properties, they will define virtual properties that are unique to their requirements.</p>
 <a id="TLADG246" name="TLADG246"></a>
-<div class="sect3"><a id="sthref76" name="sthref76"></a>
+<div class="sect3"><a id="sthref80" name="sthref80"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Basic Setup</font></h3>
 <p><a href="#CIAHDEGG">Example 11-5</a> illustrates a base class, <code>ExtensibleBase</code>, which other extensible classes can extend. In the example, the use of the <code>@XmlTransient</code> annotation prevents <code>ExtensibleBase</code> from being mapped as an inheritance relationship. The real properties represent the parts of the model that will be common to all tenants. The per-tenant extensions will be represented as virtual properties.</p>
 <div class="example"><a id="CIAHDEGG" name="CIAHDEGG"></a><a id="TLADG247" name="TLADG247"></a>
@@ -296,7 +296,7 @@ import javax.xml.bind.annotation.XmlValue;
 <!-- class="example" --></div>
 <!-- class="sect3" -->
 <a id="TLADG251" name="TLADG251"></a>
-<div class="sect3"><a id="sthref77" name="sthref77"></a>
+<div class="sect3"><a id="sthref81" name="sthref81"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Define the Tenants</font></h3>
 <p>The examples in this section define two separate tenants. Even though both tenants share several real properties, the corresponding XML representation can be quite different due to virtual properties.</p>
 <a id="TLADG252" name="TLADG252"></a>

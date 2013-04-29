@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Implementing the Solution | EclipseLink 2.5.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-02-28T10:9:8Z" />
+<meta name="date" content="2013-04-04T10:28:59Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Implementing the Solution" />
 <meta name="relnum" content="Release 2.5" />
@@ -46,7 +46,7 @@
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-02-28</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-04-04</font></p>
 <a id="A1099145" name="A1099145"></a><a id="TLADG1005" name="TLADG1005"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Implementing the Solution</font></h1>
@@ -193,7 +193,7 @@ grant select any table to &amp;&amp;user
 <p>Typically, to participate in change notification, no changes are needed to the Java classes which correspond to database tables. However, setting optimistic locking with the <code>@Version</code> annotation is strongly suggested.</p>
 <p>If you want to exclude classes that are listed in the persistence unit, you can tag them in the Java files. EclipseLink tracks changes only to the primary table. If you want changes to secondary tables to also be tracked, you can indicate this in the Java files.</p>
 <a id="TLADG1013" name="TLADG1013"></a>
-<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref229" name="sthref229"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref233" name="sthref233"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Set Optimistic Locking</font></h3>
 <p>Oracle strongly suggests that you use optimistic locking: writes on stale data will fail and automatically invalidate the cache. Include an <code>@Version</code> annotation in your entity; the version column in the primary table will always be updated, and the older version of the object will always be invalidated.</p>
 <p>In <a href="#CHDJGCBF">Example 19-2</a> the <code>@Version</code> annotation is defined for the entity <code>Customer</code>. Note that getters and setters are defined for the <code>version</code> variable.</p>
@@ -238,7 +238,7 @@ public class Order {
 </pre></div>
 <!-- class="sect3" -->
 <a id="TLADG1016" name="TLADG1016"></a>
-<div class="sect3"><a id="sthref230" name="sthref230"></a>
+<div class="sect3"><a id="sthref234" name="sthref234"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Track Changes in Secondary Tables (Optional)</font></h3>
 <p>EclipseLink tracks changes only to the primary table. If any updates occur in a secondary table, EclipseLink will not invalidate the object. If you want changes to secondary tables to be tracked as well, add the <code>@Version</code> annotation to the entity.</p>
 <p>Oracle DCN listens only for events from the primary table. It does not track changes in secondary tables, or relationships tables. The reason for this is that Oracle DCN only tracks the <code>ROWID</code>, so there is no correlation from the <code>ROWID</code> of the primary, secondary and relationship tables. Thus, to receive events when a secondary or relationship table changes, the version in the primary table must change so that the event is returned.</p>

@@ -5,12 +5,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
-<title>New Features | EclipseLink 2.5.x Understanding EclipseLink</title>
+<title>Key Features | EclipseLink 2.5.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-29T16:49:3Z" />
+<meta name="date" content="2013-04-04T14:35:34Z" />
 <meta name="robots" content="noarchive" />
-<meta name="doctitle" content="New Features" />
-<meta name="relnum" content="Release 2.4" />
+<meta name="doctitle" content="Key Features" />
+<meta name="relnum" content="2.5" />
 <link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
 <link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
 <link rel="start" href="../../index.htm" title="Home" type="text/html" />
@@ -23,7 +23,7 @@
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
 <td align="left" valign="top"><div class="booktitle">Understanding EclipseLink, 
-Release 2.5</div></td>
+<b>2.5</b><br /></font></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -46,150 +46,42 @@ Release 2.5</div></td>
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-01-29</font></p>
-<a id="CHDBIFDB" name="CHDBIFDB"></a>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-04-04</font></p>
+<a id="CHDCFGIC" name="CHDCFGIC"></a><a id="OTLCG112" name="OTLCG112"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
-<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">New Features</font></h1>
-<p>The following sections provide a brief overview of new features in EclipseLink.</p>
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Key Features</font></h1>
+<p>An extensive set of features are provided. You can use these features to rapidly build high-performance enterprise applications that are scalable and maintainable.</p>
+<p>Some of the primary features are the following:</p>
 <ul>
 <li>
-<p><a href="#CHDBIADD">RESTful Services</a></p>
+<p>Nonintrusive, flexible, metadata-based architecture</p>
 </li>
 <li>
-<p><a href="#CHDEBFBF">Tenant Isolation</a></p>
+<p>Advanced mapping support and flexibility: relational, object-relational data type, and XML</p>
 </li>
 <li>
-<p><a href="#CHDFFJJF">NoSQL</a></p>
+<p>Optimized for highly scalable performance and concurrency with extensive performance tuning options</p>
 </li>
 <li>
-<p><a href="#CHDFCFIC">JSON</a></p>
+<p>Comprehensive object caching support including cluster integration for some application servers (such as Oracle Fusion Middleware Server)</p>
 </li>
 <li>
-<p><a href="#CHDJAHBA">Database Change Notification</a></p>
+<p>Extensive query capability including: Java Persistence Query Language (JPQL), native SQL, and EclipseLink Expressions framework</p>
 </li>
 <li>
-<p><a href="#CHDJCBBF">Extensible Entities</a></p>
+<p>Just-in-time reading</p>
 </li>
 <li>
-<p><a href="#CHDBJIEH">Composite Persistence Units</a></p>
+<p>Object-level transaction support and integration with popular application servers and databases</p>
 </li>
 <li>
-<p><a href="#CHDDCBGD">External Metadata Sources</a></p>
+<p>Optimistic and pessimistic locking options and locking policies</p>
 </li>
 </ul>
-<a id="CHDBIADD" name="CHDBIADD"></a>
-<div class="sect2">
-<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">RESTful Services</font></h2>
-<p>EclipseLink allows you to expose JPA entities through a standards-based (JAX-RS/JAXB/JPA) RESTful service. REST is an acronym for Representational State Transfer, which is a design idiom that embraces a stateless client-server architecture. In this architecture, Web services are viewed as resources which can be identified by their URIs.</p>
-<p>Basic HTTP operations, such as create (POST), read (GET), update (PUT), and delete (DELETE) can be called on the services.</p>
-<p>Data in RESTful services are referenced using a URI. A URI can be constructed in different ways, depending on the target, for example:</p>
-<ul>
-<li>
-<p>URI for JPA entities with a single-part primary key</p>
-</li>
-<li>
-<p>URI for JPA entities with composite keys</p>
-</li>
-<li>
-<p>URI with mapped named read queries</p>
-</li>
-<li>
-<p>URI for name update and delete queries</p>
-</li>
-</ul>
-<p>Clients can interact with the RESTful service in any of these ways:</p>
-<ul>
-<li>
-<p>By using a web browser as the client</p>
-</li>
-<li>
-<p>By using Java SE as the client</p>
-</li>
-<li>
-<p>By using implementation-specific APIs</p>
-</li>
-</ul>
-<p>For more information, see "Exposing JPA Entities Through RESTful Services" in <em>Solutions Guide for EclipseLink</em>.</p>
+<p>For additional information and downloads, see the EclipseLink home page:</p>
+<p><code><a href="http://www.eclispe.org/eclipselink/">http://www.eclispe.org/eclipselink/</a></code></p>
 </div>
-<!-- class="sect2" -->
-<a id="CHDEBFBF" name="CHDEBFBF"></a>
-<div class="sect2">
-<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Tenant Isolation</font></h2>
-<p>EclipseLink simplifies the development of application components that offer support for multiple tenants. Developers and deployers have complete control of the application and data isolation they require. Each tenant has access to its own data, while other tenants' data is invisible to it.</p>
-<p>EclipseLink provides these options for tenant isolation:</p>
-<ul>
-<li>
-<p>Single-table tenant isolation allows tenants to share tables. Each tenant has its own rows, identified by discriminator columns, and those rows are invisible to other tenants.</p>
-</li>
-<li>
-<p>With table-per-tenant tenant isolation, each tenant has its own table or tables, identified by table tenant discriminators, and those tables are invisible to other users.</p>
-</li>
-<li>
-<p>With Virtual Private Database (VPD) tenant isolation, tenants use a VPD database, which provides the functionality to support multiple tenants sharing the same table.</p>
-</li>
-</ul>
-<p>For more information, see "Using Tenant Isolation" in <em>Solutions Guide for EclipseLink</em>.</p>
-</div>
-<!-- class="sect2" -->
-<a id="CHDFFJJF" name="CHDFFJJF"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" -->
-<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">NoSQL</font></h2>
-<p>NoSQL is a classification of database systems that do not support the SQL standard. The NoSQL classification can be expanded to include Enterprise Information Systems (EIS) including application databases, legacy databases, messaging systems, and transaction processing monitors. EclipseLink supports persistence of Java objects to NoSQL databases through the Java Persistence API (JPA). EclipseLink's native API is also supported with NoSQL databases.</p>
-<p>NoSQL maps objects to structured data such as XML or JSON. It also supports embedded data, embedded collections, and all of the existing JPA mapping annotations.</p>
-<p>Whether querying is supported in NoSQL depends on the NoSQL platform you are using. The JPA transaction API is supported with NoSQL data-sources. Some NoSQL data-sources might not support transactions, so the level of transaction support is dependent on the NoSQL platform.</p>
-<p>For more information, see <a href="nosql.htm#BJEIGBFD">Chapter 12, "Understanding Non-relational Data Sources."</a> See also "Using EclipseLink with NoSQL Databases" in <em>Solutions Guide for EclipseLink</em>.</p>
-</div>
-<!-- class="sect2" -->
-<a id="CHDFCFIC" name="CHDFCFIC"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" -->
-<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">JSON</font></h2>
-<p>JavaScript Object Notation (JSON) is a text-based open standard designed for human-readable data interchange. It is derived from the JavaScript scripting language for representing simple data structures and associative arrays. It is language-independent, with parsers available for many languages.</p>
-<p>JAXB binding metadata is used to marshall Java objects to and from JSON. This feature is useful when creating RESTful services; JAX-RS services can accept both XML and JSON messages.</p>
-<p>For more information on JSON support, see "<em>Developing Persistence Architectures Using EclipseLink MOXy Developer's Guide</em>."</p>
-</div>
-<!-- class="sect2" -->
-<a id="CHDJAHBA" name="CHDJAHBA"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" -->
-<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Database Change Notification</font></h2>
-<p>A shared (L2) object cache reduces database access for objects and their relationships. This cache is enabled by default which is normally not a problem, unless the contents of the database are modified directly by other applications, or by the same application on other servers in a clustered environment. This may result in stale data in the cache.</p>
-<p>If the contents of the database are modified, then EclipseLink Database Change Notification (DCN) ensures that the contents of the cache are synchronized with the database. DCN allows shared caching to be used in the JPA environment.</p>
-<p>See "Using Caching with a Shared Database in a JPA Environment" in <em>Solutions Guide for EclipseLink</em>.</p>
-</div>
-<!-- class="sect2" -->
-<a id="CHDJCBBF" name="CHDJCBBF"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" -->
-<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Extensible Entities</font></h2>
-<p>Extensible entities allow mappings to be added dynamically. In this case, the entity stores extended attributes within a map instead of static attributes. The entity then defines how values from this map are mapped to the database using an <code>eclipselink-orm.xml</code> mapping file. Extensible entities are useful in a multi-tenant (or SaaS) architecture where a shared, generic application can be used by multiple clients (tenants). Tenants have private access to their own data, and to data shared with other tenants.</p>
-<p>Using extensible entities, you can:</p>
-<ul>
-<li>
-<p>Build an application where some mappings are common to all users and some mappings are user-specific.</p>
-</li>
-<li>
-<p>Add mappings to an application after it is made available to a customer (even post-deployment).</p>
-</li>
-<li>
-<p>Use the same <code>EntityManagerFactory</code> interface to work with data after mappings have changed.</p>
-</li>
-<li>
-<p>Provide an additional source of metadata to be used by an application.</p>
-</li>
-</ul>
-<p>For more information on making entities extensible, see "Providing Software as a Service" in <em>Solutions Guide for EclipseLink</em>.</p>
-</div>
-<!-- class="sect2" -->
-<a id="CHDBJIEH" name="CHDBJIEH"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" -->
-<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Composite Persistence Units</font></h2>
-<p>You can expose multiple persistence units (each with unique sets of entity types) as a single persistence context by using a composite persistence unit. Individual persistence units that are part of this composite persistence unit are called composite member persistence units. For more information, see "Using Multiple Databases with a Composite Persistence Unit" in <em>Solutions Guide for EclipseLink</em>.</p>
-</div>
-<!-- class="sect2" -->
-<a id="CHDDCBGD" name="CHDDCBGD"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" -->
-<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">External Metadata Sources</font></h2>
-<p>You can store your mapping information in a metadata source that is external to the running application. Because the mapping information is retrieved when the application creates the persistence unit, you can dynamically override or extend mappings in a deployed application. See "Using an External Metadata Source" in <em>Solutions Guide for EclipseLink</em>.</p>
-</div>
-<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
 <!-- class="ind" -->
 <!-- Start Footer -->
 <div class="footer">
@@ -226,6 +118,6 @@ Release 2.5</div></td>
 </tr>
 </table>
 </div>
-<!-- class="footer" --></div>
+<!-- class="footer" -->
 <div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
 </html>

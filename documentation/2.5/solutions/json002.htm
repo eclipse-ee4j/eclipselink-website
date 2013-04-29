@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Implementing the Solution | EclipseLink 2.5.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-02-28T10:9:7Z" />
+<meta name="date" content="2013-04-04T10:28:57Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Implementing the Solution" />
 <meta name="relnum" content="Release 2.5" />
@@ -46,7 +46,7 @@
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-02-28</font></p>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-04-04</font></p>
 <a id="A1584696" name="A1584696"></a><a id="TLADG763" name="TLADG763"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Implementing the Solution</font></h1>
@@ -318,7 +318,7 @@ JAXBElement&lt;SearchResults&gt; jaxbElement = unmarshaller.unmarshal(source, Se
 </div>
 <!-- class="sect2" -->
 <a id="TLADG1147" name="TLADG1147"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref133" name="sthref133"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref137" name="sthref137"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 5 Using Namespaces</font></h2>
 <p>Because JSON does not use namespces, by default all namespaces and prefixes are ignored when marshaling and unmarshaling. In some cases, this may be an issue if you have multiple mappings with the same local name &ndash; there will be no way to distinguish between the mappings.</p>
 <p>With EclipseLink, you can supply a Map of namespace-to-prefix (or an instance of <code>NamespacePrefixMapper</code>) to the Marshaller and Unmarshaller. The namespace prefix will appear in the marshalled document prepended to the element name. EclipseLink will recognize the prefix during an unmarshal operation and the resulting Java objects will be placed in the proper namespaces.</p>

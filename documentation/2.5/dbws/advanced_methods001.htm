@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Using DBWSBuilder with Ant | EclipseLink 2.5.x EclipseLink DBWS</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-02-26T8:37:10Z" />
+<meta name="date" content="2013-04-15T10:41:37Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Using DBWSBuilder with Ant" />
 <meta name="relnum" content="Release 2.5" />
@@ -44,12 +44,13 @@
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-02-26</font></p>
-<a id="BEIHBEJB" name="BEIHBEJB"></a>
+<p align="center"><font color="#FF0000">Beta Draft: 2013-04-15</font></p>
+<a id="BEIHBEJB" name="BEIHBEJB"></a><a id="TLDBW187" name="TLDBW187"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Using DBWSBuilder with Ant</font></h1>
 <p>With EclipseLink DBWS, you can invoke the <code>DBWSBuilder</code> from Apache Ant (<code><a href="http://ant.apache.org/">http://ant.apache.org/</a></code>) to generate the necessary files, compile, and package the application with additional Ant targets.</p>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref60" name="sthref60"></a>
+<a id="TLDBW188" name="TLDBW188"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref59" name="sthref59"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Example</font></h2>
 <p>This example illustrates how to use Ant to generate a deployable web archive. For this example, consider the following file layout:</p>
 <p><strong><code>&lt;example-root&gt;</code></strong></p>
@@ -66,7 +67,7 @@
 <p>&nbsp;&nbsp;<strong><code>stage</code></strong><br />
 &nbsp;&nbsp;&nbsp;&nbsp;All generated artifacts will saved here, most importantly <code>simpletable.war</code>.</p>
 <p>To run the DBWS builder in this example, simply type <code>ant</code> in the <em><code>&lt;example-root&gt;</code></em> directory. The builder packages the generated artifacts into the web archive (<code>simpletable.war</code>) in the <code>stage</code> directory. This&nbsp;<code>.war</code> file can then be deployed to WebLogic.</p>
-<div class="example"><a id="BEIEIHFG" name="BEIEIHFG"></a>
+<div class="example"><a id="BEIEIHFG" name="BEIEIHFG"></a><a id="TLDBW189" name="TLDBW189"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 3-1 Sample DBWS Builder File (dbws-builder.xml)</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -83,7 +84,7 @@
 &lt;/dbws-builder&gt;
 </pre></div>
 <!-- class="example" -->
-<div class="example"><a id="BEIFBFFC" name="BEIFBFFC"></a>
+<div class="example"><a id="BEIFBFFC" name="BEIFBFFC"></a><a id="TLDBW190" name="TLDBW190"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 3-2 Sample Build XML File (build.xml)</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0"?&gt;
@@ -115,7 +116,7 @@
 &lt;/project&gt;
 </pre></div>
 <!-- class="example" -->
-<div class="example"><a id="BEIGCDJG" name="BEIGCDJG"></a>
+<div class="example"><a id="BEIGCDJG" name="BEIGCDJG"></a><a id="TLDBW191" name="TLDBW191"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 3-3 Sample Build Properties File (build.properties)</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 custom = true
