@@ -4,7 +4,7 @@
 	<section class="title">
 		<description>
 			<h1>EclipseLink 2.5.0</h1>
-			<p> The EclipseLink 2.5 release adds JPA 2.1 support and is the JPA 2.1 RI. 
+			<p> The EclipseLink 2.5 release adds JPA 2.1 support and is the JPA 2.1 Reference Implementation. 
 			</p>
 			<p> New features include:
 			<ul> 
