@@ -4,24 +4,26 @@
 	<section class="title">
 		<description>
 			<h1>EclipseLink 2.5.0</h1>
-			<p> The EclipseLink 2.5 release adds JPA 2.1 support and is the JPA 2.1 Reference Implementation. 
+			<p> The primary focus of the EclipseLink 2.5 release is the delivery
+				of the JPA 2.1 (JSR 338) Reference Implementation.
 			</p>
-			<p> New features include:
-			<ul> 
-			<li>Full JPA 2.1 support</li>
-			<li>Hanna DB platform</li>
-			<li>Pervasive DB platform</li>
-			<li>JPA-RS imporvements</li>
-			<li>MOXy - NamedObjectGraphs</li>
-			</ul>
+			<p>
+				New features include:
+				<ul>
+					<li>Full JPA 2.1 support</li>
+					<li>New DB platforms: Hanna and Pervasive</li>
+					<li>JPA-RS Enhancements</li>
+					<li>MOXy - NamedObjectGraphs</li>
+				</ul>
 			</p>
 		</description>
 	</section>
 
-	<section class="main" name="JPA 2.1 Features" image="/sequoyah/images/CC_news.png">
+	<section class="main" name="JPA 2.1 Feature Highlights" image="/sequoyah/images/CC_news.png">
 
 		<description>
-			The features in this section are some of the new features added in JPA 2.1.
+			The features in this section are some of the new features added in
+			JPA 2.1.
 			<table>
 				<tr>
 					<td colspan="2">
@@ -31,12 +33,19 @@
 				<tr
 					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
 					<td valign="top">
-						The Criteria framework is an API for creating typesafe and/or dynamic Java Persistence queries that was added in JPA 2.0. Similar in style to the EclipseLink Query and Expression framework. Until JPA 2.1, using Critera to perform deletes or updates was not available using the Criteria API. Through the addition of CriteriaUpdate/CriteriaDelete classes support for bulk update/delete queries has now been added.  
+						The Criteria framework is an API for creating
+						typesafe and/or dynamic Java Persistence queries that was added in
+						JPA 2.0. Similar in style to the EclipseLink Query and Expression
+						framework. Until JPA 2.1, using Critera to perform deletes or
+						updates was not available using the Criteria API. Through the
+						addition of CriteriaUpdate/CriteriaDelete classes support for bulk
+						update/delete queries has now been added.
 					</td>
 					<td width="150">
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
-							<a href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/BulkUpdate">Documentation</a>
+							<a
+								href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/BulkUpdate">Documentation</a>
 						</div>
 					</td>
 				</tr>
@@ -47,12 +56,16 @@
 				</tr>
 				<tr
 					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
-					<td valign="top">JPA specification 2.1 has introduced support for executing Stored Procedure calls. This includes a new StoredProcedureQuery API and Named Stored Procedure Queries (pre-existing portions of code on the database).	</td>
+					<td valign="top">JPA specification 2.1 has introduced support for
+						executing Stored Procedure calls. This includes a new
+						StoredProcedureQuery API and Named Stored Procedure Queries
+						(pre-existing portions of code on the database).	</td>
 					<td>
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
-							<a href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/StoredProcedure">Documentation</a>
-							</div>
+							<a
+								href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/StoredProcedure">Documentation</a>
+						</div>
 					</td>
 				</tr>
 
@@ -64,12 +77,16 @@
 				<tr
 					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
 					<td valign="top">
-						The SQL spec and many databases have SQL functions that are not covered by the JPA specification. With the latest JPA specification the ability to call generic SQL functions was added to the JPQL syntax. 
+						The SQL spec and many databases have SQL functions
+						that are not covered by the JPA specification. With the latest JPA
+						specification the ability to call generic SQL functions was added
+						to the JPQL syntax.
 					</td>
 					<td>
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
-							<a href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/JPQLFunction">Documentation</a>
+							<a
+								href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/JPQLFunction">Documentation</a>
 						</div>
 					</td>
 				</tr>
@@ -82,12 +99,17 @@
 				<tr
 					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
 					<td valign="top">
-						Contexts and Dependency Injection (CDI) allows for container managed injection of artifacts into Java Objects. This feature provides the functionality needed for EclipseLink to integrate with CDI to provide for CDI injecting into the Entity Listener.					
-						</td>
+						Contexts and Dependency Injection (CDI) allows for
+						container managed injection of artifacts into Java Objects. This
+						feature provides the functionality needed for EclipseLink to
+						integrate with CDI to provide for CDI injecting into the Entity
+						Listener.
+					</td>
 					<td>
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
-							<a href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/CDIEntityListener">Documentation</a>
+							<a
+								href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/CDIEntityListener">Documentation</a>
 						</div>
 					</td>
 				</tr>
@@ -99,8 +121,9 @@
 				<tr
 					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
 					<td valign="top">
-						Allows relationship joins to be treated as a subclass of the join type. 					
-						</td>
+						Allows relationship joins to be treated as a subclass
+						of the join type.
+					</td>
 					<td>
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
@@ -116,12 +139,15 @@
 				<tr
 					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
 					<td valign="top">
-						Provides control over the conversion from an attribute type and value to the corresponding database type and value 					
-						</td>
+						Provides control over the conversion from an
+						attribute type and value to the corresponding database type and
+						value
+					</td>
 					<td>
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
-							<a href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/Converter">Documentation</a>
+							<a
+								href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/Converter">Documentation</a>
 						</div>
 					</td>
 				</tr>
@@ -133,8 +159,11 @@
 				<tr
 					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
 					<td valign="top">
-						In previous versions for JPA, although DDL generation was present it was not standardized or required. JPA 2.1 has added standardized provider DDL generation and made DDL generation a requirement.  					
-						</td>
+						In previous versions for JPA, although DDL generation
+						was present it was not standardized or required. JPA 2.1 has added
+						standardized provider DDL generation and made DDL generation a
+						requirement.
+					</td>
 					<td>
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
@@ -142,7 +171,7 @@
 						</div>
 					</td>
 				</tr>
-								<tr>
+				<tr>
 					<td colspan="2">
 						<h4>Entity Graphs</h4>
 					</td>
@@ -150,12 +179,98 @@
 				<tr
 					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
 					<td valign="top">
-						Entity graphs are subgraphs of the entity model metadata. The entity graph contains metamodel representations of a set of the entity classes' attributes and metamodel representations of related entity classes. A constructed entity graph can be used as a template for applying operations like attribute loading.  					
-						</td>
+						Entity graphs are subgraphs of the entity model
+						metadata. The entity graph contains metamodel representations of a
+						set of the entity classes' attributes and metamodel
+						representations of related entity classes. A constructed entity
+						graph can be used as a template for applying operations like
+						attribute loading.
+					</td>
 					<td>
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
-							<a href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/EntityGraph">Documentation</a>
+							<a
+								href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/EntityGraph">Documentation</a>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+
+		</description>
+
+	</section>
+
+	<section class="main" name="JPA-RS and MOXy Enhancements"
+		image="/sequoyah/images/CC_news.png">
+
+		<description>
+			<table>
+				<tr>
+					<td colspan="2">
+						<h4>Enhanced JPA-RS</h4>
+					</td>
+				</tr>
+				<tr
+					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+					<td valign="top">
+						Description
+					</td>
+					<td width="150">
+						<div>
+							<img src="/eclipselink/images/doc_small.png" />
+							<a
+								href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/BulkUpdate">Documentation</a>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="2">
+						<h4>MOXy Named Object Graphs</h4>
+					</td>
+				</tr>
+				<tr
+					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+					<td valign="top">
+						Allow a subset of attributes to be marshaled and
+						unmarshaled
+					</td>
+					<td width="150">
+						<div>
+							<img src="/eclipselink/images/doc_small.png" />
+							<a
+								href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/BulkUpdate">Documentation</a>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="2">
+						<h4>JSON and XML Mappings with JAX-RS</h4>
+					</td>
+				</tr>
+				<tr
+					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+					<td valign="top">
+						
+					</td>
+					<td width="150">
+						<div>
+							<img src="/eclipselink/images/wiki_small.png" />
+							<a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/MOXy_JSON_Provider/JSONwithPadding">JSON with Padding</a>
+						</div>
+						<div>
+							<img src="/eclipselink/images/wiki_small.png" />
+							<a href="http://bugs.eclipse.org/401442">MOXyJsonProvider</a>
+						</div>
+						<div>
+							<img src="/eclipselink/images/wiki_small.png" />
+							<a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/Mappings/Bidirectional">@XmlInverseReference</a>
+						</div>
+						<div>
+							<img src="/eclipselink/images/wiki_small.png" />
+							<a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/JSON_CollectionProperties">@XmlElementWrapper</a>
 						</div>
 					</td>
 				</tr>
@@ -227,40 +342,55 @@
 				The following are known issues that have been identified as
 				potentially effecting users of EclipseLink 2.5.
 			</p>
-				<ul>
+			<ul>
 				<li>
 					<a href="http://bugs.eclipse.org/399676">Bug 399676</a>
 					<p>
-					JPA-RS accepts request urls with and without version. For example, the following two urls will be accepted by the JPA-RS :</p>
+						JPA-RS accepts request urls with and without version. For example, the
+						following two urls will be accepted by the JPA-RS :
+					</p>
 					<code>
-					<!-- 
-					- <app_name>/persistence/<pu_name>/entity/<entity_type>/<key>
-					- <app_name>/persistence/<version>/<pu_name>/entity/<entity_type>/<key>
- --></code>
-					However, the urls without version will be deprecated and clients are encourage use  versioned urls.
+						<!-- - <app_name>/persistence/<pu_name>/entity/<entity_type>/<key> 
+							- <app_name>/persistence/<version>/<pu_name>/entity/<entity_type>/<key> -->
+					</code>
+					However, the urls without version will be deprecated and clients
+					are encourage use versioned urls.
 
-					The version of the JPA-RS delivered with eclipselink 2.5.x is TBD, depending on the nature of changes. Created this bug to review and make necessary changes in the documentation close to the 2.5 release date.
-					</li>
+					The version of the JPA-RS
+					delivered with eclipselink 2.5.x is TBD, depending on the nature of
+					changes. Created this bug to review and make necessary changes in
+					the documentation close to the 2.5 release date.
+				</li>
 				<li>
 					<a href="http://bugs.eclipse.org/404294">Bug 404294</a>
 					<code>
 						Prior to this fix, the following code:
-						 EntityManager em = emf.getEntityManager();
-						 lookupJTATransaction().begin();
-						 em.persist(newEntity);
-						 lookupJTATransaction().commit();
+						EntityManager em = emf.getEntityManager();
+						lookupJTATransaction().begin();
+						em.persist(newEntity);
+						lookupJTATransaction().commit();
 
-						EclipseLink would incorrectly register with the active transaction when persist was called, and flush when the transaction commits.  With this fix, the entityManager no longer registers with the transaction, and so nothing will get written out.  The specification requires that joinTransaction be called when the transaction is started after obtaining a user managed EM:
+						EclipseLink would incorrectly register with the active transaction
+						when persist was called, and flush when the transaction commits.
+						With this fix, the entityManager no longer registers with the
+						transaction, and so nothing will get written out. The
+						specification requires that joinTransaction be called when the
+						transaction is started after obtaining a user managed EM:
 
-						 EntityManager em = emf.getEntityManager();
-						 lookupJTATransaction().begin();
-						 em.joinTransaction(); //this is required for em to participate in the transaction
-						 em.persist(newEntity);
-						 lookupJTATransaction().commit();
+						EntityManager em = emf.getEntityManager();
+						lookupJTATransaction().begin();
+						em.joinTransaction(); //this is required for em to participate in the transaction
+						em.persist(newEntity);
+						lookupJTATransaction().commit();
 
-						Without the joinTransaction call, the insert will not happen, and any EntityManager calls requiring a transaction will result in a TransactionRequiredException "Cannot call methods requiring a transaction if the entity manager has not been joined to the current transaction.".
-					</code> </li>
-					</ul>
+						Without the joinTransaction call, the insert will not happen, and
+						any EntityManager calls requiring a transaction will result in a
+						TransactionRequiredException "Cannot call methods requiring a
+						transaction if the entity manager has not been joined to the
+						current transaction.".
+					</code>
+				</li>
+			</ul>
 		</description>
 	</section>
 
@@ -344,26 +474,26 @@
 				valign="middle">
 
 				<!--<a href="http://www.eclipse.org/eclipselink/downloads/index.php#2.5"> -->
-					<table>
-						<tr>
-							<td>
-								<img src="http://dev.eclipse.org/huge_icons/actions/go-down.png"
-									border="0" />
-							</td>
-							<td width="100%" valign="middle">
-								<div style="text-align:center">
-									<font size="+3">
-										Download 2.5.0
-									</font>
-								</div>
-							</td>
-							<td>
-								<img src="http://dev.eclipse.org/huge_icons/actions/go-down.png"
-									border="0" />
-							</td>
-						</tr>
-					</table>
-				<!-- </a>  -->
+				<table>
+					<tr>
+						<td>
+							<img src="http://dev.eclipse.org/huge_icons/actions/go-down.png"
+								border="0" />
+						</td>
+						<td width="100%" valign="middle">
+							<div style="text-align:center">
+								<font size="+3">
+									Download 2.5.0
+								</font>
+							</div>
+						</td>
+						<td>
+							<img src="http://dev.eclipse.org/huge_icons/actions/go-down.png"
+								border="0" />
+						</td>
+					</tr>
+				</table>
+				<!-- </a> -->
 			</div>
 
 			<div
