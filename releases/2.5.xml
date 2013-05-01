@@ -57,7 +57,8 @@
 					<td valign="top">JPA specification 2.1 has introduced support for
 						executing Stored Procedure calls. This includes a new
 						StoredProcedureQuery API and Named Stored Procedure Queries
-						(pre-existing portions of code on the database).	</td>
+						(pre-existing portions of code on the database).
+					</td>
 					<td>
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
@@ -193,7 +194,7 @@
 					</td>
 				</tr>
 
-			<tr>
+				<tr>
 					<td colspan="2">
 						<h4>Enhanced JPA-RS</h4>
 					</td>
@@ -240,12 +241,13 @@
 				<tr
 					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
 					<td valign="top">
-						
+
 					</td>
 					<td width="150">
 						<div>
 							<img src="/eclipselink/images/wiki_small.png" />
-							<a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/MOXy_JSON_Provider/JSONwithPadding">JSON with Padding</a>
+							<a
+								href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/MOXy_JSON_Provider/JSONwithPadding">JSON with Padding</a>
 						</div>
 						<div>
 							<img src="/eclipselink/images/wiki_small.png" />
@@ -253,11 +255,13 @@
 						</div>
 						<div>
 							<img src="/eclipselink/images/wiki_small.png" />
-							<a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/Mappings/Bidirectional">@XmlInverseReference</a>
+							<a
+								href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/Mappings/Bidirectional">@XmlInverseReference</a>
 						</div>
 						<div>
 							<img src="/eclipselink/images/wiki_small.png" />
-							<a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/JSON_CollectionProperties">@XmlElementWrapper</a>
+							<a
+								href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/JSON_CollectionProperties">@XmlElementWrapper</a>
 						</div>
 					</td>
 				</tr>
@@ -268,7 +272,7 @@
 
 	</section>
 
-	
+
 	<section class="main" name=" Enhancements and Resolved Issues"
 		image="/sequoyah/images/CC_bugs.png">
 		<description>
@@ -334,7 +338,8 @@
 				<li>
 					<a href="http://bugs.eclipse.org/399676">Bug 399676</a>
 					<p>
-						JPA-RS accepts request urls with and without version. For example, the
+						JPA-RS accepts request urls with and without version. For
+						example, the
 						following two urls will be accepted by the JPA-RS :
 					</p>
 					<code>
@@ -352,30 +357,12 @@
 				<li>
 					<a href="http://bugs.eclipse.org/404294">Bug 404294</a>
 					<code>
-						Prior to this fix, the following code:
-						EntityManager em = emf.getEntityManager();
-						lookupJTATransaction().begin();
-						em.persist(newEntity);
-						lookupJTATransaction().commit();
-
-						EclipseLink would incorrectly register with the active transaction
-						when persist was called, and flush when the transaction commits.
-						With this fix, the entityManager no longer registers with the
-						transaction, and so nothing will get written out. The
-						specification requires that joinTransaction be called when the
-						transaction is started after obtaining a user managed EM:
-
-						EntityManager em = emf.getEntityManager();
-						lookupJTATransaction().begin();
-						em.joinTransaction(); //this is required for em to participate in the transaction
-						em.persist(newEntity);
-						lookupJTATransaction().commit();
-
-						Without the joinTransaction call, the insert will not happen, and
-						any EntityManager calls requiring a transaction will result in a
-						TransactionRequiredException "Cannot call methods requiring a
-						transaction if the entity manager has not been joined to the
-						current transaction.".
+						Application managed persistence contexts (EntityManager)
+						using JTA transactions must join the active transaction where as
+						previously it automatically joined.
+						Without the joinTransaction
+						call, the changes made in the Entitymanager will not be commited
+						when the JTA transaction compltes..
 					</code>
 				</li>
 			</ul>
@@ -389,8 +376,8 @@
 			</p>
 			<ul>
 				<li>
-					Java Persistence (JPA) 2.0 -
-					<a href="http://www.jcp.org/en/jsr/detail?id=317">JSR 317</a>
+					Java Persistence (JPA) 2.1 -
+					<a href="http://www.jcp.org/en/jsr/detail?id=338">JSR 338</a>
 				</li>
 				<li>
 					Java Architecture for XML Binding (JAXB) 2.2 -
@@ -415,7 +402,16 @@
 				future when these deprecated features/AIP might be
 				removed.
 				<a href="index.php">release pages</a>
-				.
+				<ul>
+					<li>
+						<a href="http://bugs.eclipse.org/399676">Bug 399676: Deprecation of non-versions REST URIs</a>
+						<p>
+							JPA-RS accepts request urls with and without version. The URIs without
+							version are deprecated and clients
+							are encourage use versioned ones.
+						</p>
+					</li>
+				</ul>
 			</p>
 		</description>
 	</section>
