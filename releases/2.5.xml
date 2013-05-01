@@ -4,17 +4,17 @@
 	<section class="title">
 		<description>
 			<h1>EclipseLink 2.5.0</h1>
-			<p>The EclipseLink 2.5 release adds JPA 2.1 support and is the JPA 2.1 Reference Implementation. 
+			<p> The EclipseLink 2.5 release adds JPA 2.1 support and is the JPA 2.1 Reference Implementation. 
 			</p>
 			<p> New features include:
 			<ul> 
 			<li>Full JPA 2.1 support</li>
 			<li>Hanna DB platform</li>
 			<li>Pervasive DB platform</li>
-			<li>JPA-RS enhancements</li>
+			<li>JPA-RS imporvements
 			<li>MOXy - NamedObjectGraphs</li>
 			</ul>
-			</p>
+
 		</description>
 	</section>
 
@@ -230,14 +230,15 @@
 				<ul>
 				<li>
 					<a href="http://bugs.eclipse.org/399676">Bug 399676</a>
-					<p>
+					<code>
 					JPA-RS accepts request urls with and without version. For example, the following two urls will be accepted by the JPA-RS :</p>
-					<!-- - <app_name>/persistence/<pu_name>/entity/<entity_type>/<key>
+					- <app_name>/persistence/<pu_name>/entity/<entity_type>/<key>
 					- <app_name>/persistence/<version>/<pu_name>/entity/<entity_type>/<key>
+
 					However, the urls without version will be deprecated and clients are encourage use  versioned urls.
- -->
+
 					The version of the JPA-RS delivered with eclipselink 2.5.x is TBD, depending on the nature of changes. Created this bug to review and make necessary changes in the documentation close to the 2.5 release date.
-					</li>
+					</code> </li>
 				<li>
 					<a href="http://bugs.eclipse.org/404294">Bug 404294</a>
 					<code>
@@ -360,7 +361,7 @@
 							</td>
 						</tr>
 					</table>
-				<!-- </a> -->
+				</a>
 			</div>
 
 			<div
@@ -378,7 +379,7 @@
 			<div
 				style="text-align:center;padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
 				<img src="/eclipselink/images/doc_small.png" />
-				<a href="/eclipselink/api/2.5/index.html">2.5.0 JavaDocs</a>
+				<a href="/eclipselink/api/2.5/index.html">2.5.0JavaDocs</a>
 			</div>
 
 		</description>
