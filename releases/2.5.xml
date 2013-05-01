@@ -4,21 +4,20 @@
 	<section class="title">
 		<description>
 			<h1>EclipseLink 2.5.0</h1>
-			<p> The EclipseLink 2.5 release adds JPA 2.1 support and is the JPA 2.1 Reference Implementation. 
+			<p> The primary focus of the EclipseLink 2.5 release is the delivery of the JPA 2.1 (JSR 338) Reference Implementation. 
 			</p>
 			<p> New features include:
 			<ul> 
 			<li>Full JPA 2.1 support</li>
-			<li>Hanna DB platform</li>
-			<li>Pervasive DB platform</li>
-			<li>JPA-RS imporvements</li>
+			<li>New DB platforms: Hanna and Pervasive</li>
+			<li>JPA-RS improvements</li>
 			<li>MOXy - NamedObjectGraphs</li>
 			</ul>
 			</p>
 		</description>
 	</section>
 
-	<section class="main" name="JPA 2.1 Features" image="/sequoyah/images/CC_news.png">
+	<section class="main" name="JPA 2.1 Feature Highlights" image="/sequoyah/images/CC_news.png">
 
 		<description>
 			The features in this section are some of the new features added in JPA 2.1.
