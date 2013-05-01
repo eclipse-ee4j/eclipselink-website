@@ -336,34 +336,15 @@
 			</p>
 			<ul>
 				<li>
-					<a href="http://bugs.eclipse.org/399676">Bug 399676</a>
-					<p>
-						JPA-RS accepts request urls with and without version. For
-						example, the
-						following two urls will be accepted by the JPA-RS :
-					</p>
-					<code>
-						<!-- - <app_name>/persistence/<pu_name>/entity/<entity_type>/<key> 
-							- <app_name>/persistence/<version>/<pu_name>/entity/<entity_type>/<key> -->
-					</code>
-					However, the urls without version will be deprecated and clients
-					are encourage use versioned urls.
-
-					The version of the JPA-RS
-					delivered with eclipselink 2.5.x is TBD, depending on the nature of
-					changes. Created this bug to review and make necessary changes in
-					the documentation close to the 2.5 release date.
-				</li>
-				<li>
 					<a href="http://bugs.eclipse.org/404294">Bug 404294</a>
-					<code>
+					<p>
 						Application managed persistence contexts (EntityManager)
 						using JTA transactions must join the active transaction where as
 						previously it automatically joined.
 						Without the joinTransaction
 						call, the changes made in the Entitymanager will not be commited
 						when the JTA transaction compltes..
-					</code>
+					</p>
 				</li>
 			</ul>
 		</description>
