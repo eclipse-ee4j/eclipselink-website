@@ -164,7 +164,7 @@
 						rel="nofollow">2.4.0: All Fixed Bugs and enhancement requests</a>
 					<dl>
 						<dd>
-							<img src="2.4.0_bugs.PNG" />
+							<img src="2.4.X_bugs.PNG" />
 							Component:
 							<a
 								href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;component=Foundation;target_milestone=2.4.0;product=EclipseLink;classification=RT"
