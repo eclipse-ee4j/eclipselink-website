@@ -31,13 +31,18 @@
 				<tr
 					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
 					<td valign="top">
-						The Criteria framework is an API for creating
-						typesafe and/or dynamic Java Persistence queries that was added in
-						JPA 2.0. Similar in style to the EclipseLink Query and Expression
-						framework. Until JPA 2.1, using Critera to perform deletes or
-						updates was not available using the Criteria API. Through the
-						addition of CriteriaUpdate/CriteriaDelete classes support for bulk
-						update/delete queries has now been added.
+						The features in this section are some of the new features added in JPA 2.1.
+						<ul>
+						<li>Criteria Bulk Update/Delete</li>
+						<li>Stored Procedures</li>
+						<li>JPQL Generic function support</li>
+						<li>Injectable Entity Listeners</li>
+						<li>Treat</li>
+						<li>Converters</li>
+						<li>DDL Gen</li>
+						<li>JPA 2.1 - Entity Graphs</li>
+						</ul>
+
 					</td>
 					<td width="150">
 						<div>
