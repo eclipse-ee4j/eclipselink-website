@@ -43,7 +43,7 @@
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
 							<a
-								href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/BulkUpdate">Documentation</a>
+								href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21#Bulk_Update">Documentation</a>
 						</div>
 					</td>
 				</tr>
@@ -63,7 +63,7 @@
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
 							<a
-								href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/StoredProcedure">Documentation</a>
+								href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21#Stored_Procedure">Documentation</a>
 						</div>
 					</td>
 				</tr>
@@ -85,7 +85,7 @@
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
 							<a
-								href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/JPQLFunction">Documentation</a>
+								href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21#JPQL_Function">Documentation</a>
 						</div>
 					</td>
 				</tr>
@@ -108,7 +108,7 @@
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
 							<a
-								href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/CDIEntityListener">Documentation</a>
+								href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21#CDI_Entity_Listener">Documentation</a>
 						</div>
 					</td>
 				</tr>
@@ -126,7 +126,7 @@
 					<td>
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
-							<a href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/Treat">Documentation</a>
+							<a href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21#Treat">Documentation</a>
 						</div>
 					</td>
 				</tr>
@@ -146,7 +146,7 @@
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
 							<a
-								href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/Converter">Documentation</a>
+								href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21#Converter">Documentation</a>
 						</div>
 					</td>
 				</tr>
@@ -166,7 +166,7 @@
 					<td>
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
-							<a href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/DDLGen">Documentation</a>
+							<a href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21#DDL_Generation">Documentation</a>
 						</div>
 					</td>
 				</tr>
@@ -189,26 +189,7 @@
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
 							<a
-								href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/EntityGraph">Documentation</a>
-						</div>
-					</td>
-				</tr>
-
-				<tr>
-					<td colspan="2">
-						<h4>Enhanced JPA-RS</h4>
-					</td>
-				</tr>
-				<tr
-					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
-					<td valign="top">
-						Description
-					</td>
-					<td width="150">
-						<div>
-							<img src="/eclipselink/images/doc_small.png" />
-							<a
-								href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/BulkUpdate">Documentation</a>
+								href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21#Entity_Graph">Documentation</a>
 						</div>
 					</td>
 				</tr>
@@ -228,7 +209,7 @@
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
 							<a
-								href="http://wiki.eclipse.org/EclipseLink/Release/2.5/JPA21/BulkUpdate">Documentation</a>
+								href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/MOXy_JSON_Provider/JSONwithPadding">JSON with Padding</a>
 						</div>
 					</td>
 				</tr>
@@ -343,9 +324,15 @@
 						previously it automatically joined.
 						Without the joinTransaction
 						call, the changes made in the Entitymanager will not be commited
-						when the JTA transaction compltes..
+						when the JTA transaction compltes.
 					</p>
 				</li>
+				<li>
+					<p>
+					When running EclipseLink 2.5 in Glassfish 4.0, you must specify a valid datasource in the persistence.xml through either the jta-data-source or non-jta-data-source tags.
+					</p>
+				</li>
+
 			</ul>
 		</description>
 	</section>
