@@ -208,7 +208,7 @@
 				<li>
 					<a href="http://bugs.eclipse.org/407570">Bug 407570</a>
 					<p>
-						Attribute defined in an unmapped POJO and inhertited by an Entity, may not be be persisted.   Simplest solution is to ensure that all the persisted attributes are mapped (ie. @MappedSuperclass).  She the bug for futher details.
+						Attribute defined in an unmapped POJO and inhertited by an Entity, may not be be persisted.   Simplest solution is to ensure that all the persisted attributes are mapped (ie. @MappedSuperclass).  See the bug for futher details.
 					</p>
 				</li>
 				<li>
@@ -336,7 +336,7 @@
 						</td>
 					</tr>
 				</table>
-				<!-- </a> -->
+				</a>
 			</div>
 
 			<div
