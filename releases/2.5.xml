@@ -11,6 +11,7 @@
 				New features include:
 				<ul>
 					<li>Full JPA 2.1 support</li>
+					<li>Maven Central support</li>
 					<li>New DB platforms: Hanna and Pervasive</li>
 					<li>JPA-RS Enhancements</li>
 					<li>MOXy - NamedObjectGraphs</li>
@@ -52,6 +53,25 @@
 						</div>
 					</td>
 				</tr>
+								<tr>
+					<td colspan="2">
+						<h4>Maven Central</h4>
+					</td>
+				</tr>
+				<tr
+					style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+					<td valign="top">
+                     EclipseLink has established Maven publication through the Sonatype OSS Nexus instance to Maven Central
+					</td>
+					<td width="150">
+						<div>
+							<img src="/eclipselink/images/doc_small.png" />
+							<a
+								href="http://wiki.eclipse.org/EclipseLink/Build/Infrastructure#Maven_Repository">Documentation</a>
+						</div>
+					</td>
+				</tr>
+
 				<tr>
 					<td colspan="2">
 						<h4>MOXy Named Object Graphs</h4>
@@ -186,6 +206,19 @@
 					</p>
 				</li>
 				<li>
+					<a href="http://bugs.eclipse.org/407570">Bug 407570</a>
+					<p>
+						Attribute defined in an unmapped POJO and inhertited by an Entity, may not be be persisted.   Simplest solution is to ensure that all the persisted attributes are mapped (ie. @MappedSuperclass).  She the bug for futher details.
+					</p>
+				</li>
+				<li>
+					<a href="http://bugs.eclipse.org/408015">Bug 408015</a>
+					<p>
+						Redploying a JPA-RS persistence unit will not always update the persistence unit with new mappings.  Two workarounds are described in the bug.
+					</p>
+				</li>
+
+				<li>
 					<p>
 					When running EclipseLink 2.5 in Glassfish 4.0, you must specify a valid datasource in the persistence.xml through either the jta-data-source or non-jta-data-source tags.
 					</p>
@@ -283,7 +316,7 @@
 				style="padding:0.5em;margin:0.5em 0.5em 1em 1em;background:#FDD017;-moz-border-radius:4px;"
 				valign="middle">
 
-				<!--<a href="http://www.eclipse.org/eclipselink/downloads/index.php#2.5"> -->
+				<a href="http://www.eclipse.org/eclipselink/downloads/index.php#2.5">
 				<table>
 					<tr>
 						<td>
