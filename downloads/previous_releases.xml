@@ -2,6 +2,46 @@
 <sections title="Downloads for previous EclipseLink Releases and Patch-Sets">
    <section class="main" name="Downloads for previous EclipseLink Releases and Patch-Sets">
       <description>
+         <a name="2.4.1"> </a>
+         <b>EclipseLink 2.4.1 Patch Set Downloads (Released October 10, 2012)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
+         <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
+            <tr class="tableData">
+               <td class="packageDesc">
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.4.1/eclipselink-2.4.1.v20121003-ad44345.zip">EclipseLink 2.4.1 Installer Zip (37 MB)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.4.1/eclipselink-plugins-nosql-2.4.1.v20121003-ad44345.zip">EclipseLink NoSQL 2.4.1 Installer Zip (400 K)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.4.1/eclipselink-plugins-2.4.1.v20121003-ad44345.zip">EclipseLink 2.4.1 OSGi Bundles Zip (18 MB)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.4.1/eclipselink-src-2.4.1.v20121003-ad44345.zip">EclipseLink 2.4.1 Source Zip (7.1 MB)</a>
+                  </div>
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+               <td width="120" class="downloadCol">
+                  <div>
+                     <a href="/eclipselink/releases/2.4.php">New and Noteworthy</a>
+                  </div>
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a>
+                  </div>
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/Maven">Maven</a>
+                  </div>
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+            </tr>
+         </table>
+
          <a name="2.4.0"> </a>
          <b>EclipseLink 2.4.0 Downloads (Released June 27, 2012)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
@@ -26,7 +66,7 @@
                </td>
                <td width="120" class="downloadCol">
                   <div>
-                     <a href="/eclipselink/releases/2.4.0.php">New and Noteworthy</a>
+                     <a href="/eclipselink/releases/2.4.php">New and Noteworthy</a>
                   </div>
                   <div>
                      <a href="http://wiki.eclipse.org/EclipseLink/UserGuide">Getting Started</a>
