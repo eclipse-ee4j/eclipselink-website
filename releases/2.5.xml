@@ -12,7 +12,7 @@
 				<ul>
 					<li>Full JPA 2.1 support</li>
 					<li>Maven Central support</li>
-					<li>New DB platforms: Hanna and Pervasive</li>
+					<li>New DB platforms: HANA and Pervasive</li>
 					<li>JPA-RS Enhancements</li>
 					<li>MOXy - NamedObjectGraphs</li>
 				</ul>
