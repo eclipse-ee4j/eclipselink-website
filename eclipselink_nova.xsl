@@ -27,7 +27,7 @@
 						<a href="/eclipselink/api/index.php"> Java Docs</a>,
 						<a href="http://wiki.eclipse.org/EclipseLink/Examples"> Examples</a>,
 						<a href="http://wiki.eclipse.org/EclipseLink/FAQ"> FAQ</a>, <br/>
-						<a href="/eclipselink/releases/2.4.php">2.4 New and Noteworthy</a>
+						<a href="/eclipselink/releases/2.5.php">2.5 New and Noteworthy</a>
 					</span>
 				</div>
 			</td>
