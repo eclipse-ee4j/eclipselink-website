@@ -209,6 +209,15 @@
 				The following are known issues that have been identified as
 				potentially effecting users of EclipseLink 2.4.
 			</p>
+			<ul>
+				<li>
+					<a href="http://bugs.eclipse.org/370429">Bug 370429</a>
+					<p>
+						Some methods incorrectly throw a proprietary EclipseLink Exception instead of the equivalent JPA standard exception.  Applications will need to catch the proprietary exceptions instead of standard ones.  See the bug for more details. 
+					</p>
+				</li>
+			</ul>
+
 		</description>
 	</section>
 
