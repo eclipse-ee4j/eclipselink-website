@@ -101,9 +101,10 @@ $Nav->addCustomNav( "About This Project",
 	<div class="section">
 			<h3>News</h3>
 			<ul>
+				<li><a href="/eclipselink/releases/2.4.php">EclipseLink 2.4.2 released</a> - <i>July 5th, 2013</i></li>
 				<li><a href="/eclipselink/releases/2.5.php">EclipseLink 2.5.0 released</a> - <i>May 28th, 2013</i></li>
 				<li><a href="/eclipselink/releases/2.4.php">EclipseLink 2.4.1 released</a> - <i>Oct 10th, 2012</i></li>
-				<li><img src="http://marketplace.eclipse.org/sites/all/themes/nova/images/favorite.png"><a href="/eclipselink/releases/2.4.php">EclipseLink 2.4.0 (Juno) released</a> - <i>June 27, 2012</i></li>
+				<li><a href="/eclipselink/releases/2.4.php">EclipseLink 2.4.0 (Juno) released</a> - <i>June 27, 2012</i></li>
 				<li><a href="/eclipselink/releases/2.3.0.php">EclipseLink 2.3.3 released</a> - <i>July 3rd, 2012</i></li>
 				<li><a href="/eclipselink/releases/2.3.0.php">EclipseLink 2.3.2 released</a> - <i>Dec 9th, 2011</i></li>
 				<li><a href="/eclipselink/releases/2.3.0.php">EclipseLink 2.3.1 released</a> - <i>Nov 11 th, 2011</i></li>

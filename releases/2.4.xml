@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sections title="EclipseLink 2.4.1  (Juno) Release">
+<sections title="EclipseLink 2.4.2  (Juno) Release">
 
 	<section class="title">
 		<description>
-			<h1>EclipseLink 2.4.1</h1>
+			<h1>EclipseLink 2.4.2</h1>
 			<p> The EclipseLink 2.4 release builds on the
 				increased developer
 				flexibility and multitenant features.
@@ -325,7 +325,7 @@
 							<td width="100%" valign="middle">
 								<div style="text-align:center">
 									<font size="+3">
-										Download 2.4.1
+										Download 2.4.2
 									</font>
 								</div>
 							</td>
@@ -353,7 +353,7 @@
 			<div
 				style="text-align:center;padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
 				<img src="/eclipselink/images/doc_small.png" />
-				<a href="/eclipselink/api/2.4/index.html">2.4.1 JavaDocs</a>
+				<a href="/eclipselink/api/2.4/index.html">2.4.2 JavaDocs</a>
 			</div>
 
 		</description>
