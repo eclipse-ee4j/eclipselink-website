@@ -194,6 +194,13 @@
 				potentially effecting users of EclipseLink 2.5.
 			</p>
 			<ul>
+				<li>  
+				<a href="https://bugs.eclipse.org/374771">Bug 374771</a>
+					<p>
+						Some TREAT expressions in the where clause will not work properly.
+					</p>
+				</li>
+
 				<li>
 					<a href="http://bugs.eclipse.org/404294">Bug 404294</a>
 					<p>
