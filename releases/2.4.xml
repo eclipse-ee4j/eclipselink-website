@@ -38,7 +38,7 @@
 					<td width="150">
 						<div>
 							<img src="/eclipselink/images/doc_small.png" />
-							<a href="http://wiki.eclipse.org/EclipseLink/Release/2.4.0/JPA-RS">Documentation</a>
+							<a href="http://www.eclipse.org/eclipselink/documentation/2.4/solutions/restful_jpa.htm#CHDGHJID">Documentation</a>
 						</div>
 					</td>
 				</tr>
@@ -216,6 +216,12 @@
 						Some methods incorrectly throw a proprietary EclipseLink Exception instead of the equivalent JPA standard exception.  Applications will need to catch the proprietary exceptions instead of standard ones.  See the bug for more details. 
 					</p>
 				</li>
+				<li>
+					<a href="http://bugs.eclipse.org/408015">Bug 408015</a>
+					<p>
+						Redeploying a JPA-RS persistence unit will not always update the persistence unit with new mappings. Workarounds are described in the bug.
+					</p>
+				</li>
 			</ul>
 
 		</description>
@@ -270,6 +276,10 @@
 					NoSQL bundle. If you have been using these APIs you will need to
 					add the NoSQL bundle to your classpath.
 				</li>
+					<a href="http://bugs.eclipse.org/399676">Bug 399676</a>
+					:
+					(2.4.2) Deprecation of non-versions REST URIs. JPA-RS accepts request urls with and without version. The URIs without version are deprecated and clients are encourage use versioned ones.
+				</li>
 			</ul>
 		</description>
 	</section>
@@ -277,7 +287,7 @@
 	<section class="main" name="Retention Policy">
 		<description>
 			<p>
-				The EclipseLink 2.4.0 release will remain available for download
+				The EclipseLink 2.4.2 release will remain available for download
 				from
 				the
 				<a href="/eclipselink/downloads/index.php">primary download page</a>
@@ -315,7 +325,7 @@
 				style="padding:0.5em;margin:0.5em 0.5em 1em 1em;background:#FDD017;-moz-border-radius:4px;"
 				valign="middle">
 
-				<a href="http://www.eclipse.org/eclipselink/downloads/index.php#2.4">
+				<a href="http://www.eclipse.org/eclipselink/downloads/index.php#2.4.2">
 					<table>
 						<tr>
 							<td>
