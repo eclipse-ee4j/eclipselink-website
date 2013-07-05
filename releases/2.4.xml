@@ -276,6 +276,7 @@
 					NoSQL bundle. If you have been using these APIs you will need to
 					add the NoSQL bundle to your classpath.
 				</li>
+				<li>
 					<a href="http://bugs.eclipse.org/399676">Bug 399676</a>
 					:
 					(2.4.2) Deprecation of non-versions REST URIs. JPA-RS accepts request urls with and without version. The URIs without version are deprecated and clients are encourage use versioned ones.
