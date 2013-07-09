@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>About Cache Architecture | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-04-02T7:31:43Z" />
+<meta name="date" content="2013-07-09T13:11:50Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="About Cache Architecture" />
 <meta name="relnum" content="2.4" />
@@ -45,9 +45,7 @@
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-04-02</font></p>
-<a id="CHECCJJD" name="CHECCJJD"></a><a id="OTLCG93795" name="OTLCG93795"></a>
+<div class="ind"><!-- End Header --><a id="CHECCJJD" name="CHECCJJD"></a><a id="OTLCG93795" name="OTLCG93795"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">About Cache Architecture</font></h1>
 <p>EclipseLink uses two types of cache: the shared <strong>persistence unit cache</strong> (L2) maintains objects retrieved from and written to the data source; and the isolated <strong>persistence context cache</strong> (L1) holds objects while they participate in transactions. When a persistence context (entity manager) successfully commits to the data source, EclipseLink updates the persistence unit cache accordingly. Conceptually the persistence context cache is represented by the <code>EntityManager</code> and the persistence unit cache is represented by the <code>EntityManagerFactory</code>.</p>
@@ -55,7 +53,7 @@
 <div class="figure"><a id="i1129035" name="i1129035"></a><a id="OTLCG93796" name="OTLCG93796"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 9-1 Object Life Cycle and the EclipseLink Caches</font></em></strong></p>
 <img src="img/cacharch.gif" alt="Description of Figure 9-1 follows" title="Description of Figure 9-1 follows" longdesc="img_text/cacharch.htm" /><br />
-<a id="sthref59" name="sthref59" href="img_text/cacharch.htm">Description of "Figure 9-1 Object Life Cycle and the EclipseLink Caches"</a><br />
+<a id="sthref58" name="sthref58" href="img_text/cacharch.htm">Description of "Figure 9-1 Object Life Cycle and the EclipseLink Caches"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <a id="CACHIFGC" name="CACHIFGC"></a><a id="OTLCG93797" name="OTLCG93797"></a>
@@ -76,7 +74,7 @@
 </div>
 <!-- class="sect2" -->
 <a id="OTLCG93798" name="OTLCG93798"></a>
-<div class="sect2"><a id="sthref60" name="sthref60"></a>
+<div class="sect2"><a id="sthref59" name="sthref59"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Persistence Context Cache</font></h2>
 <p>The persistence context cache is an isolated cache (L1) that services operations within an EntityManager. It maintains and isolates objects from the persistence unit cache, and writes changed or new objects to the persistence unit cache after the persistence context commits changes to the data source.</p>
 <div align="center">
@@ -95,7 +93,7 @@
 <!-- class="inftblnote" --></div>
 <p>The life-cycle for the persistence context cache differs between application managed, and container managed persistence contexts. The unit of work cache services operations within the unit of work. It maintains and isolates objects from the session cache, and writes changed or new objects to the session cache after the unit of work commits changes to the data source.</p>
 <a id="OTLCG94324" name="OTLCG94324"></a>
-<div class="sect3"><a id="sthref61" name="sthref61"></a>
+<div class="sect3"><a id="sthref60" name="sthref60"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Application Managed Persistence Contexts</font></h3>
 <p>An application managed persistence context is created by the application from an <code>EntityManagerFactory</code>. The application managed persistence context's cache will remain until the <code>EntityManager</code> is closed or <code>clear()</code> is called. It is important to keep application managed persistence units short lived, or to make use of <code>clear()</code> to avoid the persistence context cache from growing too big, or from becoming out of sync with the persistence unit cache and the database. Typically a separate <code>EntityManager</code> should be created for each transaction or request.</p>
 <p>An extended persistence context has the same caching behavior as an application managed persistence context, even if it is managed by the container.</p>
@@ -103,7 +101,7 @@
 </div>
 <!-- class="sect3" -->
 <a id="OTLCG94325" name="OTLCG94325"></a>
-<div class="sect3"><a id="sthref62" name="sthref62"></a>
+<div class="sect3"><a id="sthref61" name="sthref61"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Container Managed Persistence Contexts</font></h3>
 <p>A container managed persistence context is typically injected into a <code>SessionBean</code> or other managed object by a Java EE container, or frameworks such as Spring. The container managed persistence context's cache will only remain for the duration of the transaction. Entities read in a transaction will become detached after the completion of the transaction and will require to be merged to be edited in subsequent transactions.</p>
 <div align="center">
@@ -232,7 +230,7 @@
 </div>
 <!-- class="sect3" -->
 <a id="OTLCG94331" name="OTLCG94331"></a>
-<div class="sect3"><a id="sthref63" name="sthref63"></a>
+<div class="sect3"><a id="sthref62" name="sthref62"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Read-Only Entities</font></h3>
 <p>An entity can be configured as read-only using the <code>@ReadOnly</code> annotation or the <code>read-only</code> XML attribute. A read-only entity will not be tracked for changes and any updates will be ignored. Read-only entities cannot be persisted or removed. A read-only entity must not be modified, but EclipseLink does not currently enforce this. Modification to read-only objects can corrupt the persistence unit cache.</p>
 <p>Queries can also be configured to return read-only objects using the <code>eclipselink.read-only</code> query hint.</p>

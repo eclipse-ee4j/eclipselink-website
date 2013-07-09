@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>About JPA Mapping Types | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-04-02T7:31:43Z" />
+<meta name="date" content="2013-07-09T13:11:50Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="About JPA Mapping Types" />
 <meta name="relnum" content="2.4" />
@@ -45,9 +45,7 @@
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-04-02</font></p>
-<a id="A7964325" name="A7964325"></a><a id="OTLCG94305" name="OTLCG94305"></a>
+<div class="ind"><!-- End Header --><a id="A7964325" name="A7964325"></a><a id="OTLCG94305" name="OTLCG94305"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">About JPA Mapping Types</font></h1>
 <p>To map entity classes to relational tables you must configure a mapping per persistent field. The following sections describe EclipeLink's JPA mapping types:</p>
@@ -204,10 +202,10 @@
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">One-to-Many Mapping</font></h3>
 <p>One-to-many mappings are used to represent the relationship between a single source object and a collection of target objects. They are a good example of something that is simple to implement in Java using a Collection (or other collection types) of target objects, but difficult to implement using relational databases.</p>
 <p>In a Java Collection, the owner references its parts. In a relational database, the parts reference their owner. Relational databases use this implementation to make querying more efficient.</p>
-<div class="figure"><a id="OTLCG94310" name="OTLCG94310"></a><a id="sthref53" name="sthref53"></a>
+<div class="figure"><a id="OTLCG94310" name="OTLCG94310"></a><a id="sthref52" name="sthref52"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 7-13 One-to-Many Relationships</font></em></strong></p>
 <img src="img/onetomany_map_fig.gif" alt="This figure illustrates the one-to-many relationship." title="This figure illustrates the one-to-many relationship." longdesc="img_text/onetomany_map_fig.htm" /><br />
-<a id="sthref54" name="sthref54" href="img_text/onetomany_map_fig.htm">Description of "Figure 7-13 One-to-Many Relationships"</a><br />
+<a id="sthref53" name="sthref53" href="img_text/onetomany_map_fig.htm">Description of "Figure 7-13 One-to-Many Relationships"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <div align="center">
@@ -225,7 +223,7 @@
 <br /></div>
 <!-- class="inftblnote" --></div>
 <a id="OTLCG94311" name="OTLCG94311"></a>
-<div class="sect4"><a id="sthref55" name="sthref55"></a>
+<div class="sect4"><a id="sthref54" name="sthref54"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">JPA Mapping</font></h4>
 <p>By default, JPA automatically defines a OneToMany mapping for a many-valued association with one-to-many multiplicity.</p>
 <p>Use the <code>@OneToMany</code> annotation to do the following:</p>
@@ -256,7 +254,7 @@
 <div class="figure"><a id="CEGIHDED" name="CEGIHDED"></a><a id="OTLCG94313" name="OTLCG94313"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 7-14 Many-to-many Relationships</font></em></strong></p>
 <img src="img/mmmapfig.gif" alt="Many-to-many Relationships" title="Many-to-many Relationships" longdesc="img_text/mmmapfig.htm" /><br />
-<a id="sthref56" name="sthref56" href="img_text/mmmapfig.htm">Description of "Figure 7-14 Many-to-many Relationships"</a><br />
+<a id="sthref55" name="sthref55" href="img_text/mmmapfig.htm">Description of "Figure 7-14 Many-to-many Relationships"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <div align="center">
@@ -303,14 +301,14 @@
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Using Optimistic Locking</font></h2>
 <p>Oracle recommends using optimistic locking. With optimistic locking, all users have read access to the data. When a user attempts to write a change, the application checks to ensure the data has not changed since the user read the data.</p>
 <a id="OTLCG94317" name="OTLCG94317"></a>
-<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref57" name="sthref57"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref56" name="sthref56"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Optimistic Locking in a Stateless Environment</font></h3>
 <p>In a stateless environment, take care to avoid processing out-of-date (stale) data. A common strategy for avoiding stale data is to implement optimistic locking, and store the optimistic lock values in the object. This solution requires careful implementation if the stateless application serializes the objects, or sends the contents of the object to the client in an alternative format. In this case, transport the optimistic lock values to the client in the HTTP contents of an edit page. You must then use the returned values in any write transaction to ensure that the data did not change while the client was performing its work.</p>
 <p>You can use optimistic version locking or optimistic field locking policies. We recommend using version locking policies.</p>
 </div>
 <!-- class="sect3" -->
 <a id="OTLCG94318" name="OTLCG94318"></a>
-<div class="sect3"><a id="sthref58" name="sthref58"></a>
+<div class="sect3"><a id="sthref57" name="sthref57"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Optimistic Version Locking</font></h3>
 <p>Use the @Version annotation to enable the JPA-managed optimistic locking by specifying the version field or property of an entity class that serves as its optimistic lock value (recommended).</p>
 <p>When choosing a version field or property, ensure that the following is true:</p>

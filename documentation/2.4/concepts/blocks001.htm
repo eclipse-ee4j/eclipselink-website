@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>About Object-Relational Mapping | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-04-02T7:31:40Z" />
+<meta name="date" content="2013-07-09T13:11:47Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="About Object-Relational Mapping" />
 <meta name="relnum" content="2.4" />
@@ -45,9 +45,7 @@
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-04-02</font></p>
-<a id="CHDDJCHD" name="CHDDJCHD"></a><a id="OTLCG135" name="OTLCG135"></a>
+<div class="ind"><!-- End Header --><a id="CHDDJCHD" name="CHDDJCHD"></a><a id="OTLCG135" name="OTLCG135"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">About Object-Relational Mapping</font></h1>
 <p>EclipseLink provides a complete, JPA-compliant JPA implementation. It provides complete compliance for all of the mandatory features and many of the optional features. It also supports EclipseLink features not described in the JPA specification, such as object-level cache, distributed cache coordination, extensive performance tuning options, enhanced Oracle Database support, advanced mappings, optimistic and pessimistic locking options, extended annotations, and query hints.</p>
@@ -94,11 +92,11 @@
 <div class="figure"><a id="CHDHABEI" name="CHDHABEI"></a><a id="OTLCG137" name="OTLCG137"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 2-1 Relationships Between Entity Architecture Elements</font></em></strong></p>
 <img src="img/otlcg_jd_001.gif" alt="Relationships between entity architectue elements" title="Relationships between entity architectue elements" longdesc="img_text/otlcg_jd_001.htm" /><br />
-<a id="sthref13" name="sthref13" href="img_text/otlcg_jd_001.htm">Description of "Figure 2-1 Relationships Between Entity Architecture Elements"</a><br />
+<a id="sthref12" name="sthref12" href="img_text/otlcg_jd_001.htm">Description of "Figure 2-1 Relationships Between Entity Architecture Elements"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <a id="OTLCG138" name="OTLCG138"></a>
-<div class="sect3"><a id="sthref14" name="sthref14"></a>
+<div class="sect3"><a id="sthref13" name="sthref13"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Entities</font></h3>
 <p>An entity is any application-defined object with the following characteristics:</p>
 <ul>
@@ -120,14 +118,14 @@
 </div>
 <!-- class="sect3" -->
 <a id="OTLCG139" name="OTLCG139"></a>
-<div class="sect3"><a id="sthref15" name="sthref15"></a>
+<div class="sect3"><a id="sthref14" name="sthref14"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Persistence and Persistence Units</font></h3>
 <p>Persistence is a characteristic of an entity. This means that the entity can be represented in a data store, and it can be accessed at a later time.</p>
 <p>A persistence unit identifies a persistable unit and defines the properties associated with it. It also defines the objects that must be persisted. The objects can be entity classes, embeddable classes, or mapped superclasses. The persistence unit provides the configuration for the entity manager factory. Entity managers created by the entity manager factory inherit the properties defined in the persistence unit.</p>
 </div>
 <!-- class="sect3" -->
 <a id="OTLCG140" name="OTLCG140"></a>
-<div class="sect3"><a id="sthref16" name="sthref16"></a>
+<div class="sect3"><a id="sthref15" name="sthref15"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Entity Managers</font></h3>
 <p>An entity manager enables API calls to perform operations on an entity. Until an entity manager is used to create, read, or write an entity, the entity is a nonpersistent Java object. When an entity manager obtains a reference to an entity, that entity becomes managed by the entity manager. The set of managed entity instances within an entity manager at any given time is called its persistence context; only one Java instance with the same persistent identity can exist in a persistence context at any time.</p>
 <p>You can configure an entity manager to read or write to a particular database, to persist or manage certain types of objects, and to be implemented by a specific persistence provider. The persistence provider supplies the implementation for JPA, including the <code>EntityManager</code> interface implementation, the Query implementation, and the SQL generation.Entity managers are provided by an <code>EntityManagerFactory</code>. The configuration for an entity manager is bound to the <code>EntityManagerFactory</code>, but it is defined separately as a persistence unit. You name persistence units to enable differentiation between <code>EntityManagerFactory</code> objects. This way, your application obtains control over which configuration to use for operations on a specific entity. The configuration that describes the persistence unit is defined in a <code>persistence.xml</code> file. You name persistence units to be able to request a specific configuration to be bound to an <code>EntityManagerFactory</code>.</p>
@@ -154,7 +152,7 @@
 </li>
 </ul>
 <a id="OTLCG94267" name="OTLCG94267"></a>
-<div class="sect3"><a id="sthref17" name="sthref17"></a>
+<div class="sect3"><a id="sthref16" name="sthref16"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Advantages and Disadvantages of Using Annotations</font></h3>
 <p>Using annotations provides several advantages:</p>
 <ul>
@@ -174,7 +172,7 @@
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">About Configuration Basics</font></h2>
 <p>The following sections describe some of the key configuration files in an Object Relational Mapping project.</p>
 <a id="OTLCG143" name="OTLCG143"></a>
-<div class="sect3"><a id="sthref18" name="sthref18"></a>
+<div class="sect3"><a id="sthref17" name="sthref17"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Default Configuration Values</font></h3>
 <p>Each annotation has a default value (consult the JPA specification for defaults). A persistence engine defines defaults that apply to the majority of applications. You only need to supply values when you want to override the default value. Therefore, having to supply a configuration value is not a requirement, but the exception to the rule. This is known as configuration by exception.</p>
 <div align="center">
@@ -197,7 +195,7 @@
 </div>
 <!-- class="sect3" -->
 <a id="OTLCG144" name="OTLCG144"></a>
-<div class="sect3"><a id="sthref19" name="sthref19"></a>
+<div class="sect3"><a id="sthref18" name="sthref18"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Configuring Persistence Units Using persistence.xml</font></h3>
 <p>A persistence unit defines the details that are required when you acquire an entity manager. You specify a persistence unit by name when you acquire an entity manager factory. Use the JPA persistence file, <code>persistence.xml</code>, to configure a persistence unit. You can specify any vendor-specific extensions in the file by using a <code>&lt;properties&gt;</code> element.</p>
 <p>This file appears in the <code>META-INF</code>/ directory of your persistence unit JAR file or in the classpath.</p>
@@ -210,7 +208,7 @@
 <p>Object-relational data type mappings transform certain object data member types to structured data source representations optimized for storage in specialized object-relational databases such as Oracle Database. Object-relational data type mappings let you map an object model into an object-relational model. You can use only object-relational data type mappings with specialized object-relational databases optimized to support object-relational data type data source representations.</p>
 <p>For more information, see <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
 <a id="OTLCG94268" name="OTLCG94268"></a>
-<div class="sect4"><a id="sthref20" name="sthref20"></a>
+<div class="sect4"><a id="sthref19" name="sthref19"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Specifying Object-Relational Mappings Using orm.xml</font></h4>
 <p>Use the <code>orm.xml</code> file to apply the metadata to the persistence unit. This metadata is a union of all the mapping files and the annotations (if there is no <code>xml-mapping-metadata-complete</code> element). If you use one mapping <code>orm.xml</code> file for your metadata and place this file in a <code>META-INF</code> directory on the classpath, then you do not need to explicitly list it. The persistence provider will automatically search for this file (<code>orm.xml</code>) and use it.</p>
 <p>The schema for the JPA 2.0 <code>orm.xml</code> is <code>orm_2_0.xsd</code>. (<code><a href="http://java.sun.com/xml/ns/persistence/orm_2_0.xsd">http://java.sun.com/xml/ns/persistence/orm_2_0.xsd</a></code>)</p>
@@ -218,7 +216,7 @@
 </div>
 <!-- class="sect4" -->
 <a id="OTLCG145" name="OTLCG145"></a>
-<div class="sect4"><a id="sthref21" name="sthref21"></a>
+<div class="sect4"><a id="sthref20" name="sthref20"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Specifying EclipseLink Object-Relational Mappings Using eclipselink-orm.xml</font></h4>
 <p>The standard JPA <code>orm.xml</code> file applies metadata to the persistence unit. It provides support for all of the JPA 2.0 mappings. You can use this file instead of annotations or to override JPA annotations in the source code. The <code>eclipselink-orm.xml</code> file supports the mappings defined by the <code>orm.xml</code> file and the full set of EclipseLink extensions beyond JPA 2.0. Any settings that you make in the <code>eclipselink-orm.xml</code> file will override settings in the <code>orm.xml</code> file.</p>
 <p>For more information on the <code>eclipselink-orm.xml</code> file, see "eclipselink-orm.xml Schema Reference" in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
@@ -251,21 +249,21 @@
 <!-- class="sect4" --></div>
 <!-- class="sect3" -->
 <a id="OTLCG94269" name="OTLCG94269"></a>
-<div class="sect3"><a id="sthref22" name="sthref22"></a>
+<div class="sect3"><a id="sthref21" name="sthref21"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Overriding and Merging Mapping Information</font></h3>
 <p>To override the <code>orm.xml</code> file's mapping, you must define the <code>META-INF/eclipselink-orm.xml</code> file in the project. When both <code>orm.xml</code> and <code>eclipselink-orm.xml</code> are specified, the contents of <code>eclipselink-orm.xml</code> override <code>orm.xml</code> and any other JPA mapping file specified in the persistence unit. If there are overlapping specifications in multiple ORM files, the files are merged if there are no conflicting entities.</p>
 <p>For more information, see "Overriding and Merging" in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
 </div>
 <!-- class="sect3" -->
 <a id="OTLCG94270" name="OTLCG94270"></a>
-<div class="sect3"><a id="sthref23" name="sthref23"></a>
+<div class="sect3"><a id="sthref22" name="sthref22"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Validating the XML Schema</font></h3>
 <p>By default the content of your <code>.orm</code> XML file is not validated against the JPA <code>.orm</code> XML schema.</p>
 <p>During development it is a good idea to validate your <code>.orm</code> XML file against the schema to ensure it is valid. In EclipseLink, validating the <code>.orm</code> XML schema can be enabled using the persistence unit property "<code>eclipselink.orm.validate.schema</code>" in your <code>persistence.xml</code> file.</p>
 </div>
 <!-- class="sect3" -->
 <a id="OTLCG94271" name="OTLCG94271"></a>
-<div class="sect3"><a id="sthref24" name="sthref24"></a>
+<div class="sect3"><a id="sthref23" name="sthref23"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Advantages and Disadvantages of Using XML</font></h3>
 <p>Some advantages of using XML instead of annotations include:</p>
 <ul>
@@ -331,13 +329,13 @@
 <p>If the application detects that the cache is out of date, it can clear, refresh, or invalidate it programmatically. Clearing the cache can cause object identity issues if any of the cached objects are in use, so invalidating is safer. If you know that none of the cached objects are in use, then you can clear the cache.</p>
 <p>For more information, see <a href="cache.htm#CDEFHHEH">Chapter 9, "Understanding Caching."</a></p>
 <a id="OTLCG148" name="OTLCG148"></a>
-<div class="sect3"><a id="sthref25" name="sthref25"></a>
+<div class="sect3"><a id="sthref24" name="sthref24"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Defining Cache Behavior</font></h3>
 <p>EclipseLink provides an <code>@Cache</code> annotation which lets you define cache properties. The properties include cache type, size, and refresh rules, among others. See <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
 </div>
 <!-- class="sect3" -->
 <a id="OTLCG149" name="OTLCG149"></a>
-<div class="sect3"><a id="sthref26" name="sthref26"></a>
+<div class="sect3"><a id="sthref25" name="sthref25"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Caching in Clustered Environments</font></h3>
 <p>Caching in a clustered environment can have problems because changes made on one server are not reflected on objects cached in other servers. This is not a problem for read-only objects, but it is for objects that are frequently updated.</p>
 <p>EclipseLink offers several solutions to this problem.</p>

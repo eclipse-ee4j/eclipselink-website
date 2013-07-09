@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>About Query Casting | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-04-02T7:31:45Z" />
+<meta name="date" content="2013-07-09T13:11:51Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="About Query Casting" />
 <meta name="relnum" content="2.4" />
@@ -45,26 +45,24 @@
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-04-02</font></p>
-<a id="A7736691" name="A7736691"></a><a id="OTLCG94402" name="OTLCG94402"></a>
+<div class="ind"><!-- End Header --><a id="A7736691" name="A7736691"></a><a id="OTLCG94402" name="OTLCG94402"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">About Query Casting</font></h1>
 <p>Use query casting to query across attributes in subclasses when using JPA or ORM. This feature is available in JPQL, EclipseLink Expressions, and Criteria API.</p>
 <a id="OTLCG94403" name="OTLCG94403"></a>
-<div class="sect2"><a id="sthref106" name="sthref106"></a>
+<div class="sect2"><a id="sthref105" name="sthref105"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">JPA 2.0 Type</font></h2>
 <p>Starting with JPA 2.0, it is possible to limit the results or a query to those of a specific subclass. For example, the expression framework provides <code>Expression.type(Class)</code>.</p>
 </div>
 <!-- class="sect2" -->
 <a id="OTLCG94404" name="OTLCG94404"></a>
-<div class="sect2"><a id="sthref107" name="sthref107"></a>
+<div class="sect2"><a id="sthref106" name="sthref106"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Downcasting in JPQL</font></h2>
 <p>In JPQL, downcasting is accomplished in the <code>FROM</code> clause, using <code>TREAT</code>...<code>AS</code> in the <code>JOIN</code> clause.</p>
 </div>
 <!-- class="sect2" -->
 <a id="OTLCG94405" name="OTLCG94405"></a>
-<div class="sect2"><a id="sthref108" name="sthref108"></a>
+<div class="sect2"><a id="sthref107" name="sthref107"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">JPA Criteria API</font></h2>
 <p>Starting with JPA 2.0, the JPA <code>Criteria</code> API includes the casting operator <code>Expression.as(type)</code>. This expression does a simple cast that allows matching of types within the generics.</p>
 <p>EclipseLink extends the <code>Criteria</code> API to allow a cast using <code>Expression.as(type)</code>. The as method checks the hierarchy; and if type is a subclass of the type for the expression that is being called on, a cast is implemented.</p>
@@ -72,7 +70,7 @@
 </div>
 <!-- class="sect2" -->
 <a id="OTLCG94406" name="OTLCG94406"></a>
-<div class="sect2"><a id="sthref109" name="sthref109"></a>
+<div class="sect2"><a id="sthref108" name="sthref108"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">EclipseLink Expression Support for Downcast</font></h2>
 <p>The <code>Expression.as(Class)</code> can also be used for downcasting. The behavior of using <code>Expression.as(Class)</code> is as follows:</p>
 <ul>

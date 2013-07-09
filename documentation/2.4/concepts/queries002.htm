@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>About JPQL Queries | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-04-02T7:31:45Z" />
+<meta name="date" content="2013-07-09T13:11:50Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="About JPQL Queries" />
 <meta name="relnum" content="2.4" />
@@ -45,9 +45,7 @@
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-04-02</font></p>
-<a id="CHDJHGFI" name="CHDJHGFI"></a><a id="OTLCG94000" name="OTLCG94000"></a>
+<div class="ind"><!-- End Header --><a id="CHDJHGFI" name="CHDJHGFI"></a><a id="OTLCG94000" name="OTLCG94000"></a>
 <div class="sect1">
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">About JPQL Queries</font></h1>
 <p>The Java Persistence Query Language (JPQL) is the query language defined by JPA. JPQL is similar to SQL, but operates on objects, attributes and relationships instead of tables and columns. JPQL can be used for reading (<code>SELECT</code>), as well as bulk updates (<code>UPDATE</code>) and deletes (<code>DELETE</code>). JPQL can be used in a <code>NamedQuery</code> (through annotations or XML) or in dynamic queries using the <code>EntityManager</code> <code>createQuery()</code> API.</p>
@@ -55,86 +53,86 @@
 <p>For more information, see Chapter 4 "Query Language" in the JPA Specification.</p>
 <p><code><a href="http://jcp.org/en/jsr/detail?id=317">http://jcp.org/en/jsr/detail?id=317</a></code></p>
 <a id="OTLCG94354" name="OTLCG94354"></a>
-<div class="sect2"><a id="sthref73" name="sthref73"></a>
+<div class="sect2"><a id="sthref72" name="sthref72"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Select Queries</font></h2>
 <p>Select queries can be used to read objects from the database. Select queries can return a single object or data element, a list of objects or data elements, or an object array of multiple objects and data.</p>
 <a id="OTLCG94355" name="OTLCG94355"></a>
-<div class="sect3"><a id="sthref74" name="sthref74"></a>
+<div class="sect3"><a id="sthref73" name="sthref73"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">SELECT Clause</font></h3>
 <p>The <code>SELECT</code> clause can contain object expressions, attribute expressions, functions, sub-selects, constructors and aggregation functions.</p>
 <a id="OTLCG94356" name="OTLCG94356"></a>
-<div class="sect4"><a id="sthref75" name="sthref75"></a>
+<div class="sect4"><a id="sthref74" name="sthref74"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Aggregation functions</font></h4>
 <p>Aggregation functions can include summary information on a set of objects. These include <code>MIN</code>, <code>MAX</code>, <code>AVG</code>, <code>SUM</code>, <code>COUNT</code>. These functions can be used to return a single result, or can be used with a <code>GROUP</code> <code>BY</code> to return multiple results.</p>
 </div>
 <!-- class="sect4" -->
 <a id="OTLCG94357" name="OTLCG94357"></a>
-<div class="sect4"><a id="sthref76" name="sthref76"></a>
+<div class="sect4"><a id="sthref75" name="sthref75"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Constructors</font></h4>
 <p>The <code>NEW</code> operator can be used with the fully-qualified class name to return data objects from a JPQL query. These will not be managed objects, and the class must define a constructor that matches the arguments of the constructor and their types. Constructor queries can be used to select partial data or reporting data on objects, and get back a class instance instead of an object array.</p>
 </div>
 <!-- class="sect4" --></div>
 <!-- class="sect3" -->
 <a id="OTLCG94358" name="OTLCG94358"></a>
-<div class="sect3"><a id="sthref77" name="sthref77"></a>
+<div class="sect3"><a id="sthref76" name="sthref76"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">FROM Clause</font></h3>
 <p>The <code>FROM</code> clause defines what is being queried. A typical <code>FROM</code> clause will contain the entity name being queried and assign it an alias.</p>
 <p>JPQL allows for multiple root level objects to be queried. Caution should be used when doing this, as it can result in Cartesian products of the two tables. The <code>WHERE</code> or <code>ON</code> clause should ensure the two objects are joined in some way.</p>
 <p>The entity name used in JPQL comes from the name attribute of the <code>@Entity</code> annotation or XML. It defaults to the simple entity class name. EclipseLink also allows for the fully-qualified class name of the entity to be used.</p>
 <a id="OTLCG94359" name="OTLCG94359"></a>
-<div class="sect4"><a id="sthref78" name="sthref78"></a>
+<div class="sect4"><a id="sthref77" name="sthref77"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">JOIN</font></h4>
 <p>A <code>JOIN</code> clause can also be used in the <code>FROM</code> clause. The <code>JOIN</code> clause allows any of the object's relationships to be joined into the query so they can be used in the <code>WHERE</code> clause. <code>JOIN</code> does not mean the relationships will be fetched, unless the <code>FETCH</code> option is included.</p>
 <p><code>JOIN</code> can be used with OneToOne, ManyToOne, OneToMany, ManyToMany and ElementColleciton mappings. When used with a collection relationship you can join the same relationship multiple times to query multiple independent values.</p>
 </div>
 <!-- class="sect4" -->
 <a id="OTLCG94360" name="OTLCG94360"></a>
-<div class="sect4"><a id="sthref79" name="sthref79"></a>
+<div class="sect4"><a id="sthref78" name="sthref78"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">JOIN FETCH</font></h4>
 <p>The <code>FETCH</code> option can be used on a <code>JOIN</code> to fetch the related objects in a single query. This avoids additional queries for each of the object's relationships, and ensures that the relationships have been fetched if they were <code>LAZY</code>. EclipseLink also supports batch fetching through query hints.</p>
 <p><code>JOIN</code> <code>FETCH</code> normally allows an alias. The alias should be used with caution, as it can affect how the resulting objects are built. Objects should normally always have the same data, no matter how they were queried, this is important for caching and consistency. This is only an issue if the alias is used in the <code>WHERE</code> clause on a collection relationship to filter the related objects that will be fetched. This should not be done, but is sometimes desirable, in which case the query should ensure it has been set to BYPASS the cache.</p>
 </div>
 <!-- class="sect4" -->
 <a id="OTLCG94361" name="OTLCG94361"></a>
-<div class="sect4"><a id="sthref80" name="sthref80"></a>
+<div class="sect4"><a id="sthref79" name="sthref79"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">LEFT JOIN</font></h4>
 <p>By default all joins in JPQL are <code>INNER</code> joins. This means that results that do not have the relationship will be filtered from the query results. To avoid this, a join can be defined as an <code>OUTER</code> join using the <code>LEFT</code> options.</p>
 </div>
 <!-- class="sect4" -->
 <a id="OTLCG94362" name="OTLCG94362"></a>
-<div class="sect4"><a id="sthref81" name="sthref81"></a>
+<div class="sect4"><a id="sthref80" name="sthref80"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">ON</font></h4>
 <p>The <code>JOIN</code> condition used for a join comes from the mapping's join columns. This means that the JPQL user is normally free from having to know how every relationship is joined. In some cases it is desirable to append additional conditions to the join condition, normally in the case of outer joins. This can be done through the <code>ON</code> clause. EclipseLink also supports usage of the ON clause between two root level objects.</p>
 <p>For <code>INNER</code> joins, EclipseLink will normally append the join condition to the <code>WHERE</code> clause, but this can be configured in the <code>DatabasePlatform</code>.</p>
 </div>
 <!-- class="sect4" -->
 <a id="OTLCG94363" name="OTLCG94363"></a>
-<div class="sect4"><a id="sthref82" name="sthref82"></a>
+<div class="sect4"><a id="sthref81" name="sthref81"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Sub-selects in FROM clause</font></h4>
 <p>Sub-selects are supported in the <code>FROM</code> clause. This requires that the database supports this functionality.</p>
 </div>
 <!-- class="sect4" --></div>
 <!-- class="sect3" -->
 <a id="OTLCG94364" name="OTLCG94364"></a>
-<div class="sect3"><a id="sthref83" name="sthref83"></a>
+<div class="sect3"><a id="sthref82" name="sthref82"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">ORDER BY clause</font></h3>
 <p><code>ORDER</code> <code>BY</code> allows the ordering of the results to be specified. Multiple values can be ordered, either ascending (<code>ASC</code>) or descending (<code>DESC</code>). EclipseLink allows functions, sub-selects and other operations in the <code>ORDER</code> <code>BY</code> clause. EclipseLink allows objects expressions to be used in the <code>ORDER</code> <code>BY</code>. In the case of entity objects, they are ordered by their Id, in case of embeddable objects, they are ordered by all of their fields. EclipseLink also allows for <code>NULL</code> ordering to be specified (either <code>FIRST</code> or <code>LAST</code>).</p>
 </div>
 <!-- class="sect3" -->
 <a id="OTLCG94365" name="OTLCG94365"></a>
-<div class="sect3"><a id="sthref84" name="sthref84"></a>
+<div class="sect3"><a id="sthref83" name="sthref83"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">GROUP BY Clause</font></h3>
 <p><code>GROUP</code> <code>BY</code> allows for summary information to be computed on a set of objects. <code>GROUP</code> <code>BY</code> is normally used in conjunction with aggregation functions. EclipseLink supports using objects, functions and sub-selects in the <code>GROUP</code> <code>BY</code> clause.</p>
 </div>
 <!-- class="sect3" -->
 <a id="OTLCG94366" name="OTLCG94366"></a>
-<div class="sect3"><a id="sthref85" name="sthref85"></a>
+<div class="sect3"><a id="sthref84" name="sthref84"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">HAVING Clause</font></h3>
 <p>The <code>HAVING</code> clause allows for the results of a <code>GROUP</code> <code>BY</code> to be filtered. EclipseLink supports using comparisons, objects, functions and sub-selects in the <code>HAVING</code> clause.</p>
 </div>
 <!-- class="sect3" -->
 <a id="OTLCG94367" name="OTLCG94367"></a>
-<div class="sect3"><a id="sthref86" name="sthref86"></a>
+<div class="sect3"><a id="sthref85" name="sthref85"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">UNION</font></h3>
 <p>EclipseLink supports <code>UNION</code>, <code>INTERSECT</code> and <code>EXCEPT</code> operations. <code>UNION</code> allows the results of two queries with equivalent result structures to be combined into a single query. The unique results from both queries will be returned. If the <code>ALL</code> option is used, then results found in both queries will be duplicated.</p>
 <p><code>INTERSECT</code> returns only the results that are found in both queries. <code>EXCEPT</code> removes the results from the second query from the results from the first query.</p>
@@ -143,7 +141,7 @@
 <!-- class="sect3" --></div>
 <!-- class="sect2" -->
 <a id="OTLCG94368" name="OTLCG94368"></a>
-<div class="sect2"><a id="sthref87" name="sthref87"></a>
+<div class="sect2"><a id="sthref86" name="sthref86"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">WHERE Clause</font></h2>
 <p>The <code>WHERE</code> clause is normally the main part of the query as it defines the conditions that filter what is returned. The <code>WHERE</code> clause can use any comparison operation, logical operation, functions, attributes, objects, and sub-selects. The comparison operations include =, &lt;, &gt;, &lt;=, &gt;=, &lt;&gt;, <code>LIKE</code>, <code>BETWEEN</code>, <code>IS</code> <code>NULL</code>, and <code>IN</code>. <code>NOT</code> can also be used with any comparison operation (<code>NOT</code> <code>LIKE</code>, <code>NOT</code> <code>BETWEEN</code>, <code>IS</code> <code>NOT</code> <code>NULL</code>, <code>NOT</code> <code>IN</code>). The logical operations include <code>AND</code>, <code>OR</code>, and <code>NOT</code>.</p>
 <p>EclipseLink also supports the <code>REGEXP</code> operation to perform regular expression comparisons (requires database to support regular expressions). EclipseLink allows for functions and sub-selects to be used with any operation.</p>
@@ -153,7 +151,7 @@
 </div>
 <!-- class="sect2" -->
 <a id="OTLCG94369" name="OTLCG94369"></a>
-<div class="sect2"><a id="sthref88" name="sthref88"></a>
+<div class="sect2"><a id="sthref87" name="sthref87"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Update Queries</font></h2>
 <p>You can perform bulk update of entities with the <code>UPDATE</code> statement. This statement operates on a single entity type and sets one or more single-valued properties of the entity subject to the condition in the <code>WHERE</code> clause. Update queries provide an equivalent to the SQL <code>UPDATE</code> statement, but with JPQL conditional expressions.</p>
 <p>Update queries do not allow joins, but do support sub-selects. OneToOne and ManyToOne relationships can be traversed in the <code>WHERE</code> clause. Collection relationships can still be queried through using an <code>EXISTS</code> in the <code>WHERE</code> clause with a sub-select. Update queries can only update attributes of the object or its embeddables, its relationships cannot be updated. Complex update queries are dependent on the database's update support, and may make use of temp tables on some databases.</p>
@@ -164,7 +162,7 @@
 </div>
 <!-- class="sect2" -->
 <a id="OTLCG94370" name="OTLCG94370"></a>
-<div class="sect2"><a id="sthref89" name="sthref89"></a>
+<div class="sect2"><a id="sthref88" name="sthref88"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Delete Queries</font></h2>
 <p>You can perform bulk removal of entities with the <code>DELETE</code> statement. Delete queries provide an equivalent to the SQL <code>DELETE</code> statement, but with JPQL conditional expressions.</p>
 <p>Delete queries do not allow joins, but do support sub-selects. OneToOne and ManyToOne relationships can be traversed in the <code>WHERE</code> clause. Collection relationships can still be queried through using an <code>EXISTS</code> in the <code>WHERE</code> clause with a sub-select. Complex delete queries are dependent on the database's delete support, and may make use of temp tables on some databases.</p>
@@ -189,11 +187,11 @@
 </div>
 <!-- class="sect2" -->
 <a id="OTLCG94371" name="OTLCG94371"></a>
-<div class="sect2"><a id="sthref90" name="sthref90"></a>
+<div class="sect2"><a id="sthref89" name="sthref89"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Parameters</font></h2>
 <p>JPA defines named parameters, and positional parameters. Named parameters can be specified in JPQL using the syntax <code>:&lt;name&gt;</code>. Positional parameters can be specified in JPQL using the syntax <code>?</code> or <code>?&lt;position&gt;</code>. Positional parameters start at position <code>1</code> not <code>0</code>.</p>
 <a id="OTLCG94372" name="OTLCG94372"></a>
-<div class="sect3"><a id="sthref91" name="sthref91"></a>
+<div class="sect3"><a id="sthref90" name="sthref90"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Literals</font></h3>
 <p>Literal values can be in-lined in JPQL for standard Java types. In general it is normally better to use parameters instead of in-lining values. In-lined arguments will prevent the JPQL from benefiting from the JPQL parser cache, and can potentially make the application vulnerable to JPQL injections attacks.</p>
 <p>Each Java type defines its own in-lining syntax:</p>
@@ -237,7 +235,7 @@
 <!-- class="sect3" --></div>
 <!-- class="sect2" -->
 <a id="OTLCG94373" name="OTLCG94373"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref92" name="sthref92"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref91" name="sthref91"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Functions</font></h2>
 <p>JPQL supports several database functions. These functions are database independent in name and syntax, but require database support. If the database supports an equivalent function, then the standard JPQL function is supported. If the database does not provide any way to perform the function, then it is not supported. For mathematical functions (+, -, /, *) BEDMAS rules apply.</p>
 <p>In JPQL, support functions can be used in the <code>SELECT</code>, <code>WHERE</code>, <code>ORDER</code> <code>BY</code>, <code>GROUP</code> <code>BY</code> and <code>HAVING</code> clauses, as well as inside other functions, with comparison operators, and in constructors.</p>
@@ -245,7 +243,7 @@
 </div>
 <!-- class="sect2" -->
 <a id="OTLCG94374" name="OTLCG94374"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref93" name="sthref93"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref92" name="sthref92"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">EclipseLink Special Operators</font></h2>
 <p>EclipseLink defines several special JPQL operators that allow performing database operations that are not possible in basic JPQL. These include:</p>
 <ul>
@@ -266,7 +264,7 @@
 </div>
 <!-- class="sect2" -->
 <a id="OTLCG94375" name="OTLCG94375"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref94" name="sthref94"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref93" name="sthref93"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">EclipseLink Extensions</font></h2>
 <p>EclipseLink provides many extensions to the standard JPA JPQL. These extensions provide access to additional database features many of which are part of the SQL standard, provide access to native database features and functions, and provide access to EclipseLink specific features.</p>
 <p>EclipseLink's JPQL extensions include:</p>

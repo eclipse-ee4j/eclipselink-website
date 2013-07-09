@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>About Explicit Query Refreshes | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-04-02T7:31:44Z" />
+<meta name="date" content="2013-07-09T13:11:50Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="About Explicit Query Refreshes" />
 <meta name="relnum" content="2.4" />
@@ -45,9 +45,7 @@
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-04-02</font></p>
-<a id="i1128663" name="i1128663"></a><a id="OTLCG93810" name="OTLCG93810"></a>
+<div class="ind"><!-- End Header --><a id="i1128663" name="i1128663"></a><a id="OTLCG93810" name="OTLCG93810"></a>
 <div class="sect1">
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">About Explicit Query Refreshes</font></h1>
 <p>Some distributed systems require only a small number of objects to be consistent across the servers in the system. Conversely, other systems require that several specific objects must always be guaranteed to be up-to-date, regardless of the cost. If you build such a system, you can explicitly refresh selected objects from the database at appropriate intervals, without incurring the full cost of distributed cache coordination.</p>
@@ -64,7 +62,7 @@
 </li>
 </ol>
 <a id="OTLCG93811" name="OTLCG93811"></a>
-<div class="sect2"><a id="sthref66" name="sthref66"></a>
+<div class="sect2"><a id="sthref65" name="sthref65"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Refresh Policy</font></h2>
 <p>When you execute a query, if the required objects are in the cache, EclipseLink returns the cached objects without checking the database for a more recent version. This reduces the number of objects that EclipseLink must build from database results, and is optimal for noncoordinated cache environments. However, this may not always be the best strategy for a coordinated cache environment.</p>
 <p>To override this behavior, set a refresh policy that specifies that the objects from the database always take precedence over objects in the cache. This updates the cached objects with the data from the database.</p>
