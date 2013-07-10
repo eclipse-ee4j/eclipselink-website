@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Using XPath Predicates for Mapping | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-04-02T8:20:52Z" />
+<meta name="date" content="2013-07-10T7:22:19Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Using XPath Predicates for Mapping" />
 <meta name="relnum" content="Release 2.4" />
@@ -95,9 +95,9 @@ Release 2.4</div></td>
 <a id="BEIJIHCI" name="BEIJIHCI"></a><a id="TLADG358" name="TLADG358"></a>
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Mapping Based on an Attribute Value</font></h2>
-<p>Beginning with EclipseLink MOXy 2.3, you can also map to an XML element based on an Attribute value. In this exercise, you will annotate the JPA entity to render the XML document shown in <a href="#BEIIBGBB">Example 14-21</a>. Note that all of the XML elements are named node but are differentiated by the value of their name attribute.</p>
+<p>Beginning with EclipseLink MOXy 2.3, you can also map to an XML element based on an Attribute value. In this exercise, you will annotate the JPA entity to render the XML document shown in <a href="#BEIIBGBB">Example 15-21</a>. Note that all of the XML elements are named node but are differentiated by the value of their name attribute.</p>
 <div class="example"><a id="BEIIBGBB" name="BEIIBGBB"></a><a id="TLADG359" name="TLADG359"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 14-21</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-21</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;node&gt;
@@ -153,9 +153,9 @@ import org.eclipse.persistence.oxm.annotations.XmlPath;
 <p>Also local to the <code>Customer</code> class, declare the <code>phoneNumber</code> property as a <code>List&lt;PhoneNumber&gt;</code> type and assign it the value <code>new ArrayList&lt;PhoneNumber&gt;()</code>.</p>
 </li>
 </ol>
-<p>The <code>Customer</code> class should look like the snippet in <a href="#BEIHAHJF">Example 14-22</a>.</p>
+<p>The <code>Customer</code> class should look like the snippet in <a href="#BEIHAHJF">Example 15-22</a>.</p>
 <div class="example"><a id="BEIHAHJF" name="BEIHAHJF"></a><a id="TLADG361" name="TLADG361"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 14-22 Customer Object Mapping to an Attribute Value</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-22 Customer Object Mapping to an Attribute Value</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
  
@@ -185,7 +185,7 @@ public class Customer {
 <!-- class="example" --></div>
 <!-- class="sect3" -->
 <a id="TLADG362" name="TLADG362"></a>
-<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref116" name="sthref116"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref115" name="sthref115"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task 2: Create the Address Entity</font></h3>
 <p>To create the <code>Address</code> class, do the following:</p>
 <ol>
@@ -209,9 +209,9 @@ import org.eclipse.persistence.oxm.annotations.XmlPath;
 <p>Declare local to the <code>Address</code> class the <code>String</code> property <code>street</code>. Set the XPath predicate by preceding the property declaration with the annotation <code>@XmlPath("node[@name='street']/text()")</code>.</p>
 </li>
 </ol>
-<p>The <code>Address</code> class should look like <a href="#BEIHAIHA">Example 14-23</a>.</p>
+<p>The <code>Address</code> class should look like <a href="#BEIHAIHA">Example 15-23</a>.</p>
 <div class="example"><a id="BEIHAIHA" name="BEIHAIHA"></a><a id="TLADG363" name="TLADG363"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 14-23 Address Object Mapping to an Attribute Value</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-23 Address Object Mapping to an Attribute Value</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
  
@@ -231,7 +231,7 @@ public class Address {
 <!-- class="example" --></div>
 <!-- class="sect3" -->
 <a id="TLADG364" name="TLADG364"></a>
-<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref117" name="sthref117"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref116" name="sthref116"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task 3: Create the PhoneNumber Entity</font></h3>
 <p>To create the <code>PhoneNumber</code> entity:</p>
 <ol>
@@ -260,9 +260,9 @@ import org.eclipse.persistence.oxm.annotations.XmlPath;
     private String number;
 </pre></li>
 </ol>
-<p>The <code>PhoneNumber</code> object should look like <a href="#BEIDDBJA">Example 14-24</a>.</p>
+<p>The <code>PhoneNumber</code> object should look like <a href="#BEIDDBJA">Example 15-24</a>.</p>
 <div class="example"><a id="BEIDDBJA" name="BEIDDBJA"></a><a id="TLADG365" name="TLADG365"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 14-24 PhoneNumber Object Mapping to an Attribute Value</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-24 PhoneNumber Object Mapping to an Attribute Value</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
  
@@ -321,9 +321,9 @@ public class PhoneNumber {
 <p>Also local to the <code>Customer</code> class, declare the <code>phoneNumber</code> property as a <code>List&lt;PhoneNumber&gt;</code> type and assign it the value <code>new ArrayList&lt;PhoneNumber&gt;()</code>.</p>
 </li>
 </ol>
-<p>The rendered XML for the Customer entity would look like <a href="#BEICAHDH">Example 14-25</a>.</p>
+<p>The rendered XML for the Customer entity would look like <a href="#BEICAHDH">Example 15-25</a>.</p>
 <div class="example"><a id="BEICAHDH" name="BEICAHDH"></a><a id="TLADG367" name="TLADG367"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 14-25 XML Node with Self-Mapped Address Element</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-25 XML Node with Self-Mapped Address Element</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;node&gt;
@@ -359,7 +359,7 @@ public class PhoneNumber {
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-                
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2012, 2013,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">

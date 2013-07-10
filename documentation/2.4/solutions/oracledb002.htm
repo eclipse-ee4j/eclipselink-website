@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Implementing the Solution | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-04-02T8:20:54Z" />
+<meta name="date" content="2013-07-10T7:22:20Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Implementing the Solution" />
 <meta name="relnum" content="Release 2.4" />
@@ -176,7 +176,7 @@ Release 2.4</div></td>
 <p>Executing PL/SQL stored functions or procedures requires defining mirror <code>OBJECT</code> and <code>VARRAY</code> types for the <code>RECORD</code> and <code>TABLE</code> types. <code>OBJECT</code> types can be mapped to classes annotated with either <code>@Entity</code> or <code>@Embeddable</code> using the <code>@Struct</code> annotation. Typically, classes annotated with <code>@Embeddable</code> are used, unless the <code>OBJECT</code> type defines an <code>Id</code> and can be stored in a table. Nested <code>OBJECT</code> and <code>VARRAY</code> types are mapped using the <code>@Structure</code> and <code>@Array</code> annotations.</p>
 <p>Use the <code>PLSQLStoredFunctionCall</code> class or the <code>@NamedPLSQLStoredFunctionQuery</code> annotation to call a stored function using PL/SQL types. The <code>PLSQLStoredProcedureCall</code> class and the <code>@NamedPLSQLStoredProcedureQuery</code> annotation also exist for stored procedures. Use the <code>StoredFunctionCall</code> class, the <code>@NamedStoredFunctionQuery</code> annotation, the <code>StoredProcedureCall</code> class, and the <code>@NamedStoredProcedureQuery</code> annotation for stored functions and procedure that do not return complex PL/SQL types.</p>
 <a id="TLADG654" name="TLADG654"></a>
-<div class="sect4"><a id="sthref240" name="sthref240"></a>
+<div class="sect4"><a id="sthref233" name="sthref233"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Main Tasks</font></h4>
 <p>To execute an Oracle PL/SQL stored function:</p>
 <ul>
@@ -317,7 +317,7 @@ Employee result = (Employee)query.getSingleResult();
 <br /></div>
 <!-- class="inftblnote" --></div>
 <a id="TLADG662" name="TLADG662"></a>
-<div class="sect4"><a id="sthref241" name="sthref241"></a>
+<div class="sect4"><a id="sthref234" name="sthref234"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Using the PLSQLStoredProcedureCall Class</font></h4>
 <p>The following example demonstrates handling PL/SQL arguments using the <code>PLSQLStoredProcedureCall</code> class. The example is based on the following target procedure:</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -401,7 +401,7 @@ END;
 </div>
 <!-- class="sect4" -->
 <a id="TLADG664" name="TLADG664"></a>
-<div class="sect4"><a id="sthref242" name="sthref242"></a>
+<div class="sect4"><a id="sthref235" name="sthref235"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Mixing JDBC Arguments With Non JDBC Arguments</font></h4>
 <p>A Stored Procedure may have a mix of regular and non JDBC arguments. Use the <code>PLSQLStoredProcedureCall</code> class when at least one argument is a non JDBC type. In addition, some additional information may be required for the JDBC type (length, scale or precision) because the target procedure is invoked from an anonymous PL/SQL block. The example is based on the following target procedure:</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -441,7 +441,7 @@ END;
 </pre></div>
 <!-- class="sect4" -->
 <a id="TLADG666" name="TLADG666"></a>
-<div class="sect4"><a id="sthref243" name="sthref243"></a>
+<div class="sect4"><a id="sthref236" name="sthref236"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Handling IN and OUT Arguments</font></h4>
 <p>The following example demonstrates a stored procedure that contain both <code>IN</code> and <code>OUT</code> arguments and is based on the following target procedure:</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -504,7 +504,7 @@ END;
 </div>
 <!-- class="sect4" -->
 <a id="TLADG668" name="TLADG668"></a>
-<div class="sect4"><a id="sthref244" name="sthref244"></a>
+<div class="sect4"><a id="sthref237" name="sthref237"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Handling IN OUT Arguments</font></h4>
 <p>Anonymous PL/SQL blocks cannot natively handle <code>IN OUT</code> arguments. The arguments must be split into two parts: an IN-half and an OUT-half. The following example demonstrates a stored procedure that handles IN OUT arguments and is based on the following target procedure:</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -631,7 +631,7 @@ END;
 <br /></div>
 <!-- class="inftblnote" --></div>
 <a id="TLADG1064" name="TLADG1064"></a>
-<div class="sect3"><a id="sthref245" name="sthref245"></a>
+<div class="sect3"><a id="sthref238" name="sthref238"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Main Tasks:</font></h3>
 <p>To setup proxy authentication, create an <code>EntityManager</code> object and set the persistence unit properties. Three examples are provided:</p>
 <a id="TLADG1065" name="TLADG1065"></a>
@@ -686,14 +686,14 @@ properties.put("eclipselink.jdbc.exclusive-connection.is-lazy", "false");
 </pre></div>
 <!-- class="sect3" -->
 <a id="TLADG1068" name="TLADG1068"></a>
-<div class="sect3"><a id="sthref246" name="sthref246"></a>
+<div class="sect3"><a id="sthref239" name="sthref239"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Caching and security</font></h3>
 <p>By default, EclipseLink maintains a shared (L2) object cache. This is fine for auditing, but if Oracle VPD or user based security is used to prevent the reading of certain tables/classes, then the cache may need to be disabled for these secure classes. To disable the shared cache, see <a href="scaling002.htm#CEGEDHAB">"Disabling Entity Caching"</a>.</p>
 <p>If the database user is used to check security for reads, then set the <code>eclipselink.jdbc.exclusive-connection.mode</code> property to <code>Isolated</code> to only use the user connection for reads for the classes whose shared cache has been disabled (isolated).</p>
 </div>
 <!-- class="sect3" -->
 <a id="TLADG1069" name="TLADG1069"></a>
-<div class="sect3"><a id="sthref247" name="sthref247"></a>
+<div class="sect3"><a id="sthref240" name="sthref240"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Using Oracle Virtual Private Database for Row-Level Security</font></h3>
 <p>The Oracle Virtual Private Database (VPD) feature allows for row level security within the Oracle database. Typically, database security only allows access privileges to be assigned per table. Row level security allows different users to have access to different rows within each table.</p>
 <p>The Oracle proxy authentication features in EclipseLink can be used to support Oracle VPD. The proxy user allows for the row level security to be checked. When using Oracle VPD, it is also important to disable shared caching for the secured objects as these objects should not be shared. To disable the shared cache, see <a href="scaling002.htm#CEGEDHAB">"Disabling Entity Caching"</a>.</p>
@@ -707,17 +707,17 @@ properties.put("eclipselink.jdbc.exclusive-connection.is-lazy", "false");
 <p>The Oracle Database and the Oracle WebLogic Server both provide connection pool implementations that can create connections to a RAC database and take advantage of various Oracle RAC features. The features include Fast Connection Failover (FCF), Run-Time Connection Load Balancing (RCLB), and connection affinity. In WebLogic Server, applications create JDBC data sources (Multi Data Source or GridLink Data Source) to connect to a RAC-enabled database. Standalone applications use the Universal Connection Pool (UCP) JDBC connection pool API (<code>ucp.jar</code>) to create data sources. Both connection pool implementations require the Oracle Notification Service library (<code>ons.jar</code>). This library is the primary means by which the connection pools register for, and listen to, RAC events. For those new to these technologies, refer to the <em>Oracle Universal Connection Pool for JDBC Developer's Guide</em> and the Oracle Fusion Middleware Configuring and Managing JDBC Data Sources for Oracle WebLogic Server.</p>
 <p>This sections assumes that you have an Oracle JDBC driver and Oracle RAC-enabled database. Make sure that the RAC-enabled database is operational and that you know the connection URL. In addition, download the database Oracle Client software that contains the <code>ons.jar</code> file. The <code>ucp.jar</code> file is included with the Oracle Database.</p>
 <a id="TLADG1071" name="TLADG1071"></a>
-<div class="sect3"><a id="sthref248" name="sthref248"></a>
+<div class="sect3"><a id="sthref241" name="sthref241"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Accessing a RAC-Enabled database from Java EE Applications</font></h3>
 <p>The tasks in this section are used to connect to a RAC-enabled database from a persistence application implemented in Oracle WebLogic Server.</p>
 <a id="TLADG1072" name="TLADG1072"></a>
-<div class="sect4"><a id="sthref249" name="sthref249"></a>
+<div class="sect4"><a id="sthref242" name="sthref242"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Task 1: Configure a Multi Data Source or GridLink Data Source</font></h4>
 <p>Refer to <a href="tlandwls.htm#BABHCJBG">Chapter 3, "Using EclipseLink with WebLogic Server,"</a> and <em>Oracle Fusion Middleware Configuring and Managing JDBC Data Sources for Oracle WebLogic Server</em> for details about configuring a data source in WebLogic Server for Oracle RAC.</p>
 </div>
 <!-- class="sect4" -->
 <a id="TLADG1073" name="TLADG1073"></a>
-<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref250" name="sthref250"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref243" name="sthref243"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Task 2: Configure the Persistence Unit</font></h4>
 <p>Edit the <code>persistence.xml</code> file and include the name of the data source within a persistence unit configuration. For example:</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -728,18 +728,18 @@ properties.put("eclipselink.jdbc.exclusive-connection.is-lazy", "false");
 </pre></div>
 <!-- class="sect4" -->
 <a id="TLADG1074" name="TLADG1074"></a>
-<div class="sect4"><a id="sthref251" name="sthref251"></a>
+<div class="sect4"><a id="sthref244" name="sthref244"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Task 3: Include the Required JARs</font></h4>
 <p>Ensure that the <code>ons.jar</code> is in the WebLogic Server classpath.</p>
 </div>
 <!-- class="sect4" --></div>
 <!-- class="sect3" -->
 <a id="TLADG1075" name="TLADG1075"></a>
-<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref252" name="sthref252"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref245" name="sthref245"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Accessing a RAC-Enabled Database from Standalone Applications</font></h3>
 <p>The tasks in this section are used to connect to a RAC database from a standalone persistence application. The tasks demonstrate how to use UCP data sources which are required for advanced RAC features.</p>
 <a id="TLADG1076" name="TLADG1076"></a>
-<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref253" name="sthref253"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref246" name="sthref246"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Task 1: Create a UCP Data Source</font></h4>
 <p>A UCP data source is used to connect to a RAC database. The data source can specify advanced RAC configuration. For details on using advanced RAC features with UCP, see <em>Oracle Universal Connection Pool for JDBC Developer's Guide</em>. The following example creates a data source and enables FCF and configures ONS.</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -784,7 +784,7 @@ Persistence.createEntityManagerFactory("my-app");
 </pre></div>
 <!-- class="sect4" -->
 <a id="TLADG1077" name="TLADG1077"></a>
-<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref254" name="sthref254"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref247" name="sthref247"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Task 2: Use the UCP Data Source</font></h4>
 <p>To use the UCP data source, instantiate an <code>EntityManagerFactory</code> an pass in the data source as follows:</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -794,7 +794,7 @@ Map properties = new HashMap();
 </pre></div>
 <!-- class="sect4" -->
 <a id="TLADG1078" name="TLADG1078"></a>
-<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref255" name="sthref255"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref248" name="sthref248"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Task 3: Include the Required JARs</font></h4>
 <p>Ensure that both <code>ucp.jar</code> and <code>ons.jar</code> are in the application classpath.</p>
 </div>
@@ -813,7 +813,7 @@ Expression withinDistance = SpatialExpressions.withinDistance(myJGeometry1,
 session.readAllObjects(GeometryHolder.class, withinDistance);
 </pre>
 <p>The above expression requires a <code>oracle.spatial.geometry.JGeometry</code> object. Use the EclipseLink <code>org.eclipse.persistence.platform.database.oracle.converters.JGeometryConverter</code> converter to convert the <code>JGeometry</code> object as it is read and written from the Oracle database. The <code>JGeometryConverter</code> object must be added to the Oracle Database platform either with the <code>addStructConverter(StructConverter)</code> method or specified in the <code>sessions.xml</code> file. The <code>JGeometry</code> type must also be available on the classpath.</p>
-<p>The following example demonstrates how to use the <code>FUNCTION</code> JPA extension to perform Oracle Spatial queries. For details on the <code>FUNCTION</code> extension, see <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>:</p>
+<p>The following example demonstrates how to use the <code>FUNCTION</code> JPA extension to perform Oracle Spatial queries. For details on the <code>FUNCTION</code> extension, see <em>Java Persistence API (JPA) Extensions Reference for Oracle TopLink</em>:</p>
 <pre xml:space="preserve" class="oac_no_warn">
 SELECT a FROM Asset a, Geography geo WHERE geo.id = :id AND a.id IN :id_list AND
    FUNCTION('ST_INTERSECTS', a.geometry, geo.geometry) = 'TRUE'
@@ -845,7 +845,7 @@ SELECT s FROM SimpleSpatial s WHERE FUNCTION('MDSYS.SDO_RELATE', s.jGeometry,
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-                
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2012, 2013,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">

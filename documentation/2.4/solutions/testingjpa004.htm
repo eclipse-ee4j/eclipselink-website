@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Using Weaving | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-04-02T8:20:52Z" />
+<meta name="date" content="2013-07-10T7:22:20Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Using Weaving" />
 <meta name="relnum" content="Release 2.4" />
@@ -51,7 +51,7 @@ Release 2.4</div></td>
 <p>Weaving is a technique of manipulating the byte-code of compiled Java classes.</p>
 <p>EclipseLink uses weaving to enhance Plain Old Java Object (POJO) classes and JPA entities with many features such lazy loading, change tracking, fetch groups, and internal optimizations.</p>
 <a id="TLADG1085" name="TLADG1085"></a>
-<div class="sect2"><a id="sthref138" name="sthref138"></a>
+<div class="sect2"><a id="sthref136" name="sthref136"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">How to Disable or Enable Weaving in a Java SE Environment</font></h2>
 <p>In a Java SE environment weaving is not enabled by default. This can affect LAZY One-To-One, Many-To-One and Basic relationships. It also has a major effect on performance and disable attribute change tracking.</p>
 <p>To enable weaving in Java SE, the EclipseLink agent must be used when starting the Java VM.</p>
@@ -64,11 +64,11 @@ java -javaagent:eclipselink.jar
 &lt;property name="eclipselink.weaving" value="static"/&gt;
 
 </pre>
-<p>See "weaving" in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em> for more information.</p>
+<p>See "weaving" in <em>Java Persistence API (JPA) Extensions Reference for Oracle TopLink</em> for more information.</p>
 </div>
 <!-- class="sect2" -->
 <a id="TLADG1086" name="TLADG1086"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref139" name="sthref139"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref137" name="sthref137"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">How to Disable or Enable Weaving in a Java EE Environment</font></h2>
 <p>In a Java EE environment weaving is enabled by default (on any Java EE 5 or greater fully compliant application server, such as WebLogic, WebSphere, and Glassfish. JBoss does not allow weaving so you must use static weaving or Spring).</p>
 <p>To disable weaving the weaving persistence unit property can be used,</p>
@@ -76,7 +76,7 @@ java -javaagent:eclipselink.jar
 &lt;property name="eclipselink.weaving" value="false"&gt;
  
 </pre>
-<p>For more information on weaving see "weaving" in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+<p>For more information on weaving see "weaving" in <em>Java Persistence API (JPA) Extensions Reference for Oracle TopLink</em>.</p>
 </div>
 <!-- class="sect2" --></div>
 <!-- class="sect1" --></div>
@@ -102,7 +102,7 @@ java -javaagent:eclipselink.jar
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-                
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2012, 2013,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">

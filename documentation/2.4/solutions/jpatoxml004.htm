@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Using XML Metadata Representation to Override JAXB Annotations | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-04-02T8:20:52Z" />
+<meta name="date" content="2013-07-10T7:22:19Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Using XML Metadata Representation to Override JAXB Annotations" />
 <meta name="relnum" content="Release 2.4" />
@@ -80,11 +80,11 @@ Release 2.4</div></td>
 <br /></div>
 <!-- class="inftblnote" --></div>
 <a id="TLADG351" name="TLADG351"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref113" name="sthref113"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref112" name="sthref112"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 1: Define Advanced Mappings in the XML</font></h2>
-<p>First, update the XML mapping file to expose the <code>eclipselink_oxm_2_3.xsd</code>. schema. <a href="#BEIDBECD">Example 14-20</a> shows how to modify the <code>&lt;xml-bindings&gt;</code> element in the mapping file to point to the correct namespace and leverage the schema. Each Java package can have one mapping file.</p>
+<p>First, update the XML mapping file to expose the <code>eclipselink_oxm_2_3.xsd</code>. schema. <a href="#BEIDBECD">Example 15-20</a> shows how to modify the <code>&lt;xml-bindings&gt;</code> element in the mapping file to point to the correct namespace and leverage the schema. Each Java package can have one mapping file.</p>
 <div class="example"><a id="BEIDBECD" name="BEIDBECD"></a><a id="TLADG352" name="TLADG352"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 14-20 Updating XML Binding Information in the Mapping File</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 15-20 Updating XML Binding Information in the Mapping File</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0"?&gt;
 &lt;xml-bindings
@@ -97,7 +97,7 @@ Release 2.4</div></td>
 <!-- class="example" --></div>
 <!-- class="sect2" -->
 <a id="TLADG353" name="TLADG353"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref114" name="sthref114"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref113" name="sthref113"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 2: Configure Usage in JAXBContext</font></h2>
 <p>Next, pass the mapping file to <code>JAXBContext</code> in your object:</p>
 <ol>
@@ -123,7 +123,7 @@ JAXBContext.newInstance("example.order:example.customer", aClassLoader, properti
 </div>
 <!-- class="sect2" -->
 <a id="TLADG354" name="TLADG354"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref115" name="sthref115"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref114" name="sthref114"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 3: Specify the MOXy as the JAXB Implementation</font></h2>
 <p>You must use MOXy as your JAXB implementation. To do so, do the following:</p>
 <ol>
@@ -161,7 +161,7 @@ javax.xml.bind.context.factory=org.eclipse.persistence.jaxb.JAXBContextFactory
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-                
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2012, 2013,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">

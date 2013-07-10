@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Using Table-Per-Tenant Multi-Tenancy | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-04-02T8:20:52Z" />
+<meta name="date" content="2013-07-10T7:22:19Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Using Table-Per-Tenant Multi-Tenancy" />
 <meta name="relnum" content="Release 2.4" />
@@ -60,7 +60,7 @@ Release 2.4</div></td>
 </ul>
 <p>A single application instance with a shared <code>EntityManagerFactory</code> for a persistence unit can be responsible for handling requests from multiple tenants.</p>
 <p>Alternatively, separate <code>EntityManagerFactory</code> instances can be used for each tenant. (This is required when using extensions per tenant.) In this case, tenant-specific schema and table names are defined in an <code>eclipselink-orm.xml</code> configuration file. A <code>MetadataSource</code> must be registered with a persistence unit. The <code>MetadataSource</code> is used to support additional persistence unit metadata provided from outside the application.</p>
-<p>For information about <code>MetadataSource</code>, see <a href="metadatasource.htm#BABGDEGB">Chapter 12, "Using an External MetaData Source."</a> See also <code>metadata-source</code> in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+<p>For information about <code>MetadataSource</code>, see <a href="metadatasource.htm#BABGDEGB">Chapter 13, "Using an External MetaData Source."</a> See also <code>metadata-source</code> in <em>Java Persistence API (JPA) Extensions Reference for Oracle TopLink</em>.</p>
 <p>The table-per-tenant multi-tenant type enables individual tenant table(s) to be used at the entity level. A tenant context property must be provided on each entity manager after a transaction has started.</p>
 <ul>
 <li>
@@ -71,7 +71,7 @@ Release 2.4</div></td>
 </li>
 </ul>
 <a id="TLADG492" name="TLADG492"></a>
-<div class="sect2"><a id="sthref86" name="sthref86"></a>
+<div class="sect2"><a id="sthref85" name="sthref85"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Main Tasks for Using Table-Per-Tenant Multi-Tenancy</font></h2>
 <p>The following tasks provide instructions for using table-per-tenant multi-tenancy:</p>
 <ul>
@@ -109,7 +109,7 @@ Release 2.4</div></td>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task 2: Enable Table-Per-Tenant Multi-Tenancy</font></h3>
 <p>Table-per-tenant multi-tenancy can be enabled declaratively using the <code>@Multitenant</code> annotation; or in an Object Relational Mapping (ORM) XML file using the <code>&lt;multitenant&gt;</code> element, or using annotations and XML together.</p>
 <a id="TLADG494" name="TLADG494"></a>
-<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref87" name="sthref87"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref86" name="sthref86"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Using the @Multitenant and @TenantTableDiscriminator Annotations</font></h4>
 <p>To use the <code>@Multitenant</code> annotation, include the annotation with an <code>@Entity</code> or <code>@MappedSuperclass</code> annotation and include the <code>TABLE_PER_TENANT</code> attribute.</p>
 <p>For example:</p>
@@ -124,7 +124,7 @@ public class Employee {
 </div>
 <!-- class="sect4" -->
 <a id="TLADG495" name="TLADG495"></a>
-<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref88" name="sthref88"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref87" name="sthref87"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Using the &lt;multitenant&gt; Element</font></h4>
 <p>To use the <code>&lt;multitenant&gt;</code> element, include the element within an <code>&lt;entity&gt;</code> element. For example:</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -144,7 +144,7 @@ public class Employee {
 <p>The tenant table discriminator can be specified at the entity or mapped superclass level, and it must always be accompanied with a <code>Multitenant(TABLE_PER_TENANT)</code> specification. It is not sufficient to specify only a tenant table discriminator.</p>
 <p>The tenant table discriminator is used together with an associated application context to indicate which table or tables an application tenant can access.</p>
 <a id="TLADG496" name="TLADG496"></a>
-<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref89" name="sthref89"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref88" name="sthref88"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Using the @TenantTableDiscriminator Annotation</font></h4>
 <p>Use the <code>@TenantTableDiscriminator</code> annotation to specify which tables are associated with which tenants. The tenant table discriminator must include a type and a context property:</p>
 <ul>
@@ -178,7 +178,7 @@ public class Employee {
 </pre></div>
 <!-- class="sect4" -->
 <a id="TLADG498" name="TLADG498"></a>
-<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref90" name="sthref90"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref89" name="sthref89"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Using the &lt;tenant-table-discriminator&gt; Element</font></h4>
 <p>To use the <code>&lt;tenant-table-discriminator&gt;</code> element, include the element within a <code>&lt;multitenant&gt;</code> element and include the <code>name</code> and <code>context-property</code> attributes. For example:</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -224,7 +224,7 @@ em.setProperty(EntityManagerProperties.MULTITENANT_PROPERTY_DEFAULT, "707");
 </pre></div>
 <!-- class="sect3" -->
 <a id="TLADG1129" name="TLADG1129"></a>
-<div class="sect3"><a id="sthref91" name="sthref91"></a>
+<div class="sect3"><a id="sthref90" name="sthref90"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task 5: Perform Operations and Queries</font></h3>
 <p>The tenant discriminator column is used at runtime through entity manager operations and querying. The tenant discriminator column and value are supported through the following entity manager operations:</p>
 <ul>
@@ -290,7 +290,7 @@ em.setProperty(EntityManagerProperties.MULTITENANT_PROPERTY_DEFAULT, "707");
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-                
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2012, 2013,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">

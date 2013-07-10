@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Introduction to the Solution | EclipseLink 2.4.x Understanding EclipseLink</title>
 <meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-04-02T8:20:53Z" />
+<meta name="date" content="2013-07-10T7:22:20Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Introduction to the Solution" />
 <meta name="relnum" content="Release 2.4" />
@@ -49,7 +49,7 @@ Release 2.4</div></td>
 <div class="sect1">
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Introduction to the Solution</font></h1>
 <p>EclipseLink provides a shared (L2) object cache that can reduce database access for objects and their relationships. This cache is enabled by default which is normally not a problem, unless the contents of the database are modified directly by other applications, or by the same application on other servers in a clustered environment. This may result in stale data in the cache.</p>
-<p>If the contents of the database are modified, then a mechanism is needed to ensure that the contents of the cache are synchronized with the database. That mechanism is provided by EclipseLink Database Change Notification. DCN allows shared caching to be used in the JPA environment.</p>
+<p>If the contents of the database are modified, then a mechanism is needed to ensure that the contents of the cache are synchronized with the database. That mechanism is provided by EclipseLink's support for Oracle Continuous Query Notification. CQN allows shared caching to be used in the JPA environment.</p>
 <div align="center">
 <div class="inftblnote"><br />
 <table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
@@ -57,16 +57,15 @@ Release 2.4</div></td>
 <tr>
 <td align="left">
 <p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
-<p>Database Change Notification extends the functionality provided by the Oracle Database Continuous Query Notification feature. For more information, see "Continuous Query Notification" in <em>Oracle Database JDBC Developer's Guide</em>.</p>
+<p>For more information on the Oracle Database Continuous Query Notification feature, see "Using Continuous Query Notification (CQN)" in <em>Oracle Database Development Guide</em>. See also "Continuous Query Notification" in <em>Oracle Database JDBC Developer's Guide</em>.</p>
 </td>
 </tr>
 </tbody>
 </table>
 <br /></div>
 <!-- class="inftblnote" --></div>
-<p>EclipseLink Database Change Notification extends the functionality provided by the Oracle Database Continuous Query Notification. One of the features of Continuous Query Notification is that it allows database events to be raised when rows in a table are modified.</p>
-<p>To detect modifications, EclipseLink DCN uses the <code>ROWID</code> to inform of row level changes in the primary table. EclipseLink includes the <code>ROWID</code> in all queries for a DCN-enabled class. EclipseLink also selects the object's <code>ROWID</code> after an insert operation. EclipseLink maintains a cache index on the <code>ROWID</code>, in addition to the object's <code>Id</code>. EclipseLink also selects the database transaction ID once for each transaction to avoid invalidating the cache on the server that is processing the transaction.</p>
-<p>EclipseLink DCN is enabled through the <code>OracleChangeNotificationListener</code> (<code>org.eclipse.persistence.platform.database.oracle.dcn.OracleChangeNotificationListener</code>) listener class. This listener integrates with Oracle JDBC to receive database change events. To enable the listener, specify the full path to the <code>OracleChangeNotificationListener</code> class as the value of the <code>eclipselink.cache.database-event-listener</code> property in the <code>persistence.xml</code> file.</p>
+<p>EclipseLink supports registering with Oracle Database Continuous Query Notification to receive events from the database when the contents of a table changes. To detect changes, CQN uses the <code>ROWID</code> to inform of row level changes in the primary table. EclipseLink includes the <code>ROWID</code> in all queries for a CQN-enabled class. EclipseLink also selects the object's <code>ROWID</code> after an insert operation. EclipseLink maintains a cache index on the <code>ROWID</code>, in addition to the object's <code>Id</code>. EclipseLink also selects the database transaction ID once for each transaction to avoid invalidating the cache on the server that is processing the transaction.</p>
+<p>EclipseLink is enabled through the <code>OracleChangeNotificationListener</code> (<code>org.eclipse.persistence.platform.database.oracle.dcn.OracleChangeNotificationListener</code>) listener class. This listener integrates with Oracle JDBC to receive database change events. To enable the listener, specify the full path to the <code>OracleChangeNotificationListener</code> class as the value of the <code>eclipselink.cache.database-event-listener</code> property in the <code>persistence.xml</code> file.</p>
 <p>By default, all entities in the domain are registered for change notification. However, you can selectively disable change notification for certain classes by tagging them in the Java files with the <code>databaseChangeNotificationType</code> (<code>org.eclipse.persistence.annotations.DatabaseChangeNotificationType</code>) attribute of the <code>Cache</code> annotation. The value of this attribute determines the type of database change notification an entity should use. The default value of the <code>databaseChangeNotificationType</code> attribute is <code>Invalidate</code>. To disable change notification for a class, set the value of the attribute to <code>None</code>.</p>
 <p>The <code>databaseChangeNotificationType</code> attribute is relevant only if the persistence unit has been configured with a database event listener, such as the <code>OracleChangeNotificationListener</code> class, that receives database change events. This allows the EclipseLink cache to be invalidated or updated from database changes.</p>
 <p>Oracle strongly suggests that you use optimistic locking (writes on stale data will fail and automatically invalidate the cache) in your transactions. If you include an <code>@Version</code> annotation in your entity, then the version column in the primary table will always be updated, and the object will always be invalidated.</p>
@@ -94,7 +93,7 @@ Release 2.4</div></td>
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-                
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2012, 2013,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
