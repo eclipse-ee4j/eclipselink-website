@@ -5,6 +5,7 @@
 		<description>
 			<div align="center">
 				<table width="300">
+
 					<tr style="background:#EEE;color:#666;">
 						<th>Version</th>
 						<th>Date</th>
@@ -12,9 +13,16 @@
 					</tr>
 					<tr>
 						<td>
+							<a href="2.5.php">2.5.1</a>
+						</td>
+						<td> Sept 26, 2013</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
 							<a href="2.4.php">2.4.2</a>
 						</td>
-						<td> jul 4, 2013</td>
+						<td> Jul 4, 2013</td>
 						<td>Juno</td>
 					</tr>
 					

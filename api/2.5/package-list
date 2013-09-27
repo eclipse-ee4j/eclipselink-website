@@ -44,10 +44,12 @@ org.eclipse.persistence.jaxb.javamodel
 org.eclipse.persistence.jaxb.javamodel.oxm
 org.eclipse.persistence.jaxb.javamodel.reflection
 org.eclipse.persistence.jaxb.javamodel.xjc
+org.eclipse.persistence.jaxb.json
 org.eclipse.persistence.jaxb.metadata
 org.eclipse.persistence.jaxb.rs
 org.eclipse.persistence.jaxb.xmlmodel
 org.eclipse.persistence.jpa
+org.eclipse.persistence.jpa.config
 org.eclipse.persistence.jpa.dynamic
 org.eclipse.persistence.jpa.jpql
 org.eclipse.persistence.jpa.jpql.parser
@@ -56,7 +58,6 @@ org.eclipse.persistence.jpa.jpql.tools.model
 org.eclipse.persistence.jpa.jpql.tools.model.query
 org.eclipse.persistence.jpa.jpql.tools.resolver
 org.eclipse.persistence.jpa.jpql.tools.spi
-org.eclipse.persistence.jpa.jpql.tools.spi.java
 org.eclipse.persistence.jpa.jpql.tools.utility
 org.eclipse.persistence.jpa.jpql.tools.utility.filter
 org.eclipse.persistence.jpa.jpql.tools.utility.iterable
@@ -149,6 +150,7 @@ org.eclipse.persistence.sessions.remote.corba.sun
 org.eclipse.persistence.sessions.remote.rmi
 org.eclipse.persistence.sessions.remote.rmi.iiop
 org.eclipse.persistence.sessions.serializers
+org.eclipse.persistence.sessions.serializers.kryo
 org.eclipse.persistence.sessions.server
 org.eclipse.persistence.tools
 org.eclipse.persistence.tools.file
