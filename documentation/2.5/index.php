@@ -83,7 +83,7 @@
 <div id="midcolumn">
 	
 	<div class="homeitem3col">
-		<h2>EclipseLink 2.5 Documentation (draft)</h2>
+		<h2>EclipseLink 2.5.x Documentation</h2>
 			<ul>
 				<li><!-- <a href="http://www.eclipse.org/eclipselink/releases/2.5.php"> -->Release Notes</a></li>
 				<li><a href="solutions/install.htm">Installation and Configuration</a></li>
