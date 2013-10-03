@@ -5,9 +5,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
-<title>Understanding EclipseLink | EclipseLink 2.4.x Understanding EclipseLink</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-05-13T7:43:45Z" />
+<title>Understanding EclipseLink | EclipseLink 2.5.x Understanding EclipseLink</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.17" />
+<meta name="date" content="2013-10-03T10:37:14Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Understanding EclipseLink" />
 <meta name="relnum" content="2.5" />
@@ -45,9 +45,7 @@
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-05-13</font></p>
-<a id="CHDCCEBI" name="CHDCCEBI"></a>
+<div class="ind"><!-- End Header --><a id="CHDIJJGA" name="CHDIJJGA"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Understanding EclipseLink</font></h1>
 <p>EclipseLink is an open-source mapping and persistence framework for use in a Java environment, including Java Platform, Standard Edition (Java SE) and Java Platform, Enterprise Edition (Java EE). The EclipseLink project is under the stewardship of the Eclipse Foundation.</p>
@@ -66,7 +64,7 @@
 <p>Features useful in Software as a Service (SaaS) environments, including tenant isolation, extensible entities, external metadata sources.</p>
 </li>
 <li>
-<p>Java Persistence API for RESTful Services (JPA-RS), an API that simplifies the process of creating RESTful Web Services, based on the Java API for RESTful Web Services (JAX-RS, defined in JSR 311).</p>
+<p>Java API for RESTful Web Services (JAX-RS, defined in JSR 311).</p>
 </li>
 <li>
 <p>Many other additional annotations, annotation extensions, Java Persistence Query Language (JPQL) extensions, JPA query customizations extensions, and persistence property extensions.</p>
@@ -132,7 +130,8 @@
 <p>EclipseLink lets you quickly capture and define object-to-data source and object-to-data representation mappings in a flexible, efficient metadata format.</p>
 <p>The runtime lets your application exploit this mapping metadata with a simple session facade that provides in-depth support for data access, queries, transactions (both with and without an external transaction controller), and caching.</p>
 <p>For more information about EclipseLink, see <a href="general002.htm#CHDCFGIC">"Key Features"</a>.</p>
-<div class="sect2"><a id="sthref6" name="sthref6"></a>
+<a id="CHDBEGEB" name="CHDBEGEB"></a><a id="OTLCG110" name="OTLCG110"></a>
+<div class="sect2">
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">What Is the Object-Persistence Impedance Mismatch?</font></h2>
 <p>Java-to-data source integration is a widely underestimated problem when creating enterprise Java applications. This complex problem involves more than simply reading from and writing to a data source. The data source elements include tables, rows, columns, and primary and foreign keys. The Java and Java EE programming languages include entity classes (regular Java classes), business rules, complex relationships, and inheritance. In a nonrelational data source, you must match your Java entities with XML elements and schemas.</p>
 <p>A successful solution requires bridging these different technologies and solving the object-persistence impedance mismatch&mdash;a challenging and resource-intensive problem. To solve this problem, you must resolve the following issues between Java EE and the data source elements:</p>
@@ -153,7 +152,8 @@
 <p>As an application developer, you need a product that lets you integrate Java applications with any data source, without compromising application design or data integrity. In addition, as a Java developer, you need the ability to store (that is, persist) and retrieve business domain objects using a relational database or a nonrelational data source as a repository.</p>
 </div>
 <!-- class="sect2" -->
-<div class="sect2"><a id="sthref7" name="sthref7"></a>
+<a id="OTLCG111" name="OTLCG111"></a>
+<div class="sect2"><a id="sthref6" name="sthref6"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">The EclipseLink Solution</font></h2>
 <p>EclipseLink addresses the disparity between Java objects and data sources. It contains a persistence framework that lets you build applications that combine the best aspects of object technology with a specific data source. You can do the following:</p>
 <ul>
@@ -195,7 +195,7 @@
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-<font size="-2">Copyright&nbsp;&copy;&nbsp;,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
+                
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">

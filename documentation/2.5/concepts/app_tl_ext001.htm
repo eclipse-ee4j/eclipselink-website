@@ -5,9 +5,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
-<title>Database Support | EclipseLink 2.4.x Understanding EclipseLink</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-05-13T7:43:47Z" />
+<title>Database Support | EclipseLink 2.5.x Understanding EclipseLink</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.17" />
+<meta name="date" content="2013-10-03T10:37:16Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Database Support" />
 <meta name="relnum" content="2.5" />
@@ -45,14 +45,12 @@
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-05-13</font></p>
-<a id="A1095976" name="A1095976"></a><a id="OTLCG94454" name="OTLCG94454"></a>
+<div class="ind"><!-- End Header --><a id="A1095976" name="A1095976"></a><a id="OTLCG94454" name="OTLCG94454"></a>
 <div class="sect1">
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Database Support</font></h1>
 <p>EclipseLink supports any relational database that is compliant with SQL and has a compliant JDBC driver. EclipseLink has extended support for several database platforms. The extended support mainly consists of providing native sequencing support, schema creation, and certain database functions.</p>
 <p>The databases in <a href="#BABBCIGC">Table A-1</a> are supported. The Java classes are in the <code>org.eclipse.persistence.platform.database</code> package and are described in <em>Java API Reference for EclipseLink</em>.</p>
-<div class="tblhruleformalwide"><a id="OTLCG94455" name="OTLCG94455"></a><a id="sthref119" name="sthref119"></a><a id="BABBCIGC" name="BABBCIGC"></a>
+<div class="tblhruleformalwide"><a id="OTLCG94455" name="OTLCG94455"></a><a id="sthref116" name="sthref116"></a><a id="BABBCIGC" name="BABBCIGC"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table A-1 Supported Database Platforms</font></em></strong></p>
 <table class="HRuleFormalWide" title="Supported Database Platforms" summary="Supported Database Platforms" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="18%" />
@@ -391,34 +389,23 @@
 </tr>
 <tr align="left" valign="top">
 <td align="left" id="r19c1-t2" headers="r1c1-t2">
-<p>PervasivePlatform</p>
-</td>
-<td align="left" headers="r19c1-t2 r1c2-t2">
-<p><code>org.eclipse.persistence.platform.database.PervasivePlatform</code></p>
-</td>
-<td align="left" headers="r19c1-t2 r1c3-t2">
-<p>Provides Pervasive PSQL-specific behavior.</p>
-</td>
-</tr>
-<tr align="left" valign="top">
-<td align="left" id="r20c1-t2" headers="r1c1-t2">
 <p>PointBase</p>
 </td>
-<td align="left" headers="r20c1-t2 r1c2-t2">
+<td align="left" headers="r19c1-t2 r1c2-t2">
 <p><code>org.eclipse.persistence.platform.database.PointBasePlatform</code></p>
 </td>
-<td align="left" headers="r20c1-t2 r1c3-t2">
+<td align="left" headers="r19c1-t2 r1c3-t2">
 <p>Provides PointBase database-specific behavior.</p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r21c1-t2" headers="r1c1-t2">
+<td align="left" id="r20c1-t2" headers="r1c1-t2">
 <p>PostgreSQL</p>
 </td>
-<td align="left" headers="r21c1-t2 r1c2-t2">
+<td align="left" headers="r20c1-t2 r1c2-t2">
 <p><code>org.eclipse.persistence.platform.database.PostgreSQLPlatform</code></p>
 </td>
-<td align="left" headers="r21c1-t2 r1c3-t2">
+<td align="left" headers="r20c1-t2 r1c3-t2">
 <p>Provides PostgreSQL database-specific behavior, including:</p>
 <ul>
 <li>
@@ -444,35 +431,35 @@
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r22c1-t2" headers="r1c1-t2">
+<td align="left" id="r21c1-t2" headers="r1c1-t2">
 <p>SAP MaxDB</p>
 </td>
-<td align="left" headers="r22c1-t2 r1c2-t2">
+<td align="left" headers="r21c1-t2 r1c2-t2">
 <p><code>org.eclipse.persistence.platform.database.MaxDBPlatform</code></p>
 </td>
-<td align="left" headers="r22c1-t2 r1c3-t2">
+<td align="left" headers="r21c1-t2 r1c3-t2">
 <p>Provides MaxDB database-specific behavior.</p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r23c1-t2" headers="r1c1-t2">
+<td align="left" id="r22c1-t2" headers="r1c1-t2">
 <p>SAP SyBase SQLAnywhere</p>
 </td>
-<td align="left" headers="r23c1-t2 r1c2-t2">
+<td align="left" headers="r22c1-t2 r1c2-t2">
 <p><code>org.eclipse.persistence.platform.database.SQLAnywherePlatform</code></p>
 </td>
-<td align="left" headers="r23c1-t2 r1c3-t2">
+<td align="left" headers="r22c1-t2 r1c3-t2">
 <p>Provides SQL Anywhere-specific behavior.</p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r24c1-t2" headers="r1c1-t2">
+<td align="left" id="r23c1-t2" headers="r1c1-t2">
 <p>Sybase</p>
 </td>
-<td align="left" headers="r24c1-t2 r1c2-t2">
+<td align="left" headers="r23c1-t2 r1c2-t2">
 <p><code>org.eclipse.persistence.platform.database.SybasePlatform</code></p>
 </td>
-<td align="left" headers="r24c1-t2 r1c3-t2">
+<td align="left" headers="r23c1-t2 r1c3-t2">
 <p>Provides Sybase-specific behavior, including:</p>
 <ul>
 <li>
@@ -485,13 +472,13 @@
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r25c1-t2" headers="r1c1-t2">
+<td align="left" id="r24c1-t2" headers="r1c1-t2">
 <p>Fujitsu Symfoware</p>
 </td>
-<td align="left" headers="r25c1-t2 r1c2-t2">
+<td align="left" headers="r24c1-t2 r1c2-t2">
 <p><code>org.eclipse.persistence.platform.database.SymfowarePlatform</code></p>
 </td>
-<td align="left" headers="r25c1-t2 r1c3-t2">
+<td align="left" headers="r24c1-t2 r1c3-t2">
 <p>Provides Symfoware-specific behavior, including:</p>
 <ul>
 <li>
@@ -569,7 +556,7 @@
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-<font size="-2">Copyright&nbsp;&copy;&nbsp;,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
+                
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">

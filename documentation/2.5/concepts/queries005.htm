@@ -5,9 +5,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
-<title>About Native SQL Queries | EclipseLink 2.4.x Understanding EclipseLink</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-05-13T7:43:47Z" />
+<title>About Native SQL Queries | EclipseLink 2.5.x Understanding EclipseLink</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.17" />
+<meta name="date" content="2013-10-03T10:37:16Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="About Native SQL Queries" />
 <meta name="relnum" content="2.5" />
@@ -45,9 +45,7 @@
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-05-13</font></p>
-<a id="A7724128" name="A7724128"></a><a id="OTLCG94397" name="OTLCG94397"></a>
+<div class="ind"><!-- End Header --><a id="A7724128" name="A7724128"></a><a id="OTLCG94397" name="OTLCG94397"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">About Native SQL Queries</font></h1>
 <p>JPA allows SQL to be used for querying entity objects, or data. SQL queries are not translated, and passed directly to the database. SQL queries can be used for advanced queries that require database specific syntax, or by users who are more comfortable in the SQL language than JPQL or Java.</p>
@@ -79,19 +77,19 @@
 </ul>
 <p>For descriptions of these extensions, see "EclipseLink Query Language" in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
 <a id="OTLCG94398" name="OTLCG94398"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref105" name="sthref105"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref102" name="sthref102"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Parameters</font></h2>
 <p>Parameters to SQL queries are delimited using the question mark (<code>?</code>) character. Only indexed parameters are supported, named parameters are not supported. The index can be used in the delimiter, such as <code>?1</code>. Parameter values are set on the Query using the <code>setParameter</code> API. Indexed parameters start at the index 1 not 0.</p>
 </div>
 <!-- class="sect2" -->
 <a id="OTLCG94399" name="OTLCG94399"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref106" name="sthref106"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref103" name="sthref103"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Named Native SQL Queries</font></h2>
 <p>Native SQL queries can be defined as named queries in annotations or XML using the <code>NamedNativeQuery</code> annotation or <code>&lt;named-native-query&gt;</code> XML element. Named native SQL queries are executed the same as any named query.</p>
 </div>
 <!-- class="sect2" -->
 <a id="OTLCG94400" name="OTLCG94400"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref107" name="sthref107"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref104" name="sthref104"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">SQL Result Set Mapping</font></h2>
 <p>An <code>SqlResultSetMapping</code> can be used to map the results of an SQL query to an entity if the result column names do not match what the entity mappings expect. It can also be used to return multiple entities, or entities and data from a single SQL query. <code>EntityResult</code> and <code>FieldResult</code> are used to map the SQL query result column to the entity attribute. <code>ColumnResult</code> can be used to add a data element to the result.</p>
 <p><code>SqlResultSetMappings</code> are defined through annotations or XML using the <code>@SqlResultSetMapping</code> annotation or <code>&lt;sql-result-set-mapping&gt;</code> XML element. They are referenced from native SQL queries by name.</p>
@@ -120,7 +118,7 @@
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-<font size="-2">Copyright&nbsp;&copy;&nbsp;,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
+                
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">

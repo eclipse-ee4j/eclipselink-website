@@ -5,9 +5,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
-<title>Object-Relational Mapping Concepts | EclipseLink 2.4.x Understanding EclipseLink</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-05-13T7:43:46Z" />
+<title>Object-Relational Mapping Concepts | EclipseLink 2.5.x Understanding EclipseLink</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.17" />
+<meta name="date" content="2013-10-03T10:37:15Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Object-Relational Mapping Concepts" />
 <meta name="relnum" content="2.5" />
@@ -45,9 +45,7 @@
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-05-13</font></p>
-<a id="CEGDCCDH" name="CEGDCCDH"></a>
+<div class="ind"><!-- End Header --><a id="CEGDCCDH" name="CEGDCCDH"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Object-Relational Mapping Concepts</font></h1>
 <p>This section describes concepts for relational mappings that are unique to EclipseLink:</p>
@@ -97,7 +95,7 @@
 <div class="figure"><a id="i1102721" name="i1102721"></a><a id="OTLCG92106" name="OTLCG92106"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 7-8 EclipseLink Indirection</font></em></strong></p>
 <img src="img/indirctn.gif" alt="Description of Figure 7-8 follows" title="Description of Figure 7-8 follows" longdesc="img_text/indirctn.htm" /><br />
-<a id="sthref48" name="sthref48" href="img_text/indirctn.htm">Description of "Figure 7-8 EclipseLink Indirection"</a><br />
+<a id="sthref45" name="sthref45" href="img_text/indirctn.htm">Description of "Figure 7-8 EclipseLink Indirection"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p>EclipseLink supports the following types of indirection:</p>
@@ -124,21 +122,21 @@
 <div class="figure"><a id="i1102743" name="i1102743"></a><a id="OTLCG92108" name="OTLCG92108"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 7-9 Address Object Not Read</font></em></strong></p>
 <img src="img/vhstep1.gif" alt="Description of Figure 7-9 follows" title="Description of Figure 7-9 follows" longdesc="img_text/vhstep1.htm" /><br />
-<a id="sthref49" name="sthref49" href="img_text/vhstep1.htm">Description of "Figure 7-9 Address Object Not Read"</a><br />
+<a id="sthref46" name="sthref46" href="img_text/vhstep1.htm">Description of "Figure 7-9 Address Object Not Read"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p>The first time the address is accessed, as in <a href="#i1102751">Figure 7-10</a>, the <code>ValueHolder</code> reads and returns the <code>Address</code> object.</p>
 <div class="figure"><a id="i1102751" name="i1102751"></a><a id="OTLCG92109" name="OTLCG92109"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 7-10 Initial Request</font></em></strong></p>
 <img src="img/vhstep2.gif" alt="Description of Figure 7-10 follows" title="Description of Figure 7-10 follows" longdesc="img_text/vhstep2.htm" /><br />
-<a id="sthref50" name="sthref50" href="img_text/vhstep2.htm">Description of "Figure 7-10 Initial Request"</a><br />
+<a id="sthref47" name="sthref47" href="img_text/vhstep2.htm">Description of "Figure 7-10 Initial Request"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p>Subsequent requests for the address do not access the database, as shown in <a href="#i1102759">Figure 7-11</a>.</p>
 <div class="figure"><a id="i1102759" name="i1102759"></a><a id="OTLCG92110" name="OTLCG92110"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 7-11 Subsequent Requests</font></em></strong></p>
 <img src="img/vhstep3.gif" alt="Description of Figure 7-11 follows" title="Description of Figure 7-11 follows" longdesc="img_text/vhstep3.htm" /><br />
-<a id="sthref51" name="sthref51" href="img_text/vhstep3.htm">Description of "Figure 7-11 Subsequent Requests"</a><br />
+<a id="sthref48" name="sthref48" href="img_text/vhstep3.htm">Description of "Figure 7-11 Subsequent Requests"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p>If you are using method access, the get and set methods specified in the mapping must access the instance of <code>ValueHolderInterface</code>, rather than the object referenced by the value holder. The application should not use these getter and setter, but use the getter and setter that hide the usage of value holders, for example:</p>
@@ -277,7 +275,7 @@ public class Employee {
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-<font size="-2">Copyright&nbsp;&copy;&nbsp;,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
+                
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">

@@ -5,9 +5,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
-<title>Key Components | EclipseLink 2.4.x Understanding EclipseLink</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-05-13T7:43:45Z" />
+<title>Key Components | EclipseLink 2.5.x Understanding EclipseLink</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.17" />
+<meta name="date" content="2013-10-03T10:37:14Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Key Components" />
 <meta name="relnum" content="2.5" />
@@ -45,26 +45,25 @@
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-05-13</font></p>
-<a id="CHDJIGHA" name="CHDJIGHA"></a>
+<div class="ind"><!-- End Header --><a id="CHDIEEHG" name="CHDIEEHG"></a><a id="OTLCG114" name="OTLCG114"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Key Components</font></h1>
-<p><a href="#CHDCEFGG">Figure 1-1</a> illustrates the components contained by EclipseLink. The following sections describe the components.</p>
-<div class="figure"><a id="CHDCEFGG" name="CHDCEFGG"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Figure 1-1 EclipseLink Components</font></em></strong></p>
-<img src="img/otlcg_jd_002_eclipselink.png" alt="This figure is described in the text." title="This figure is described in the text." longdesc="img_text/otlcg_jd_002_eclipselink.htm" /><br />
-<a id="sthref8" name="sthref8" href="img_text/otlcg_jd_002_eclipselink.htm">Description of "Figure 1-1 EclipseLink Components"</a><br />
-<br /></div>
-<!-- class="figure" -->
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref9" name="sthref9"></a>
+&gt;
+<p>This figure illustrates the relationship between EclipseLink components. Information stored in a database or in XML documents is transmitted to EclipseLink through a data source or JDBC.</p>
+<p>EclipseLink contains EclipseLink Grid and EclipseLink. EclipseLink includes the open source implementation of the Java Persistence API (JPA) specification, plus extensions beyond what is defined in JPA. EclipseLink also includes the Java API for XML Binding (JAXB) specification. These extensions include persistence unit properties, query hints, annotations, EclipseLink's XML metadata, and EclipseLink's custom API. which contains JPA, JAX/SDO, and DBWS.</p>
+<p>EclipseLink Grid enables you to scale out JPA applications using Oracle Coherence (Coherence) and to write to the grid. EclipseLink can be used by a variety of applications, including Java EE, EJB, JSF, JAX-WS, and JAX-RS. It can also be used in a number of different containers, including Tomcat and Jetty. It can also be used in standalone applications, such as in Java SE applications.</p>
+</div>
+<!-- class="sect1" -->
+<a id="OTLCG116" name="OTLCG116"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref7" name="sthref7"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">EclipseLink Core and API</font></h2>
 <p>The EclipseLink Core provides the runtime component. Access to the runtime can be obtained directly through the EclipseLink API. The runtime environment is not a separate or external process&mdash;it is embedded within the application. Application calls invoke EclipseLink to provide persistence behavior. This function enables transactional and thread-safe access to shared database connections and cached objects.</p>
 <p>The EclipseLink API provides the reference implementation for JPA 2.0 (JSR-317). The <code>org.eclipse.persistence.*</code> classes encapsulate the EclipseLink API and provide extensions beyond the specification. These extensions include EclipseLink-specific properties and annotations. For more information on the API, properties and extensions, see <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
 <p>The JAXB APIs are included in Java SE 6. In the <code>eclipselink.jar</code> file, the <code>org.eclipse.persistence.jaxb.*</code> classes encapsulate the EclipseLink support for JAXB.</p>
 </div>
 <!-- class="sect2" -->
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref10" name="sthref10"></a>
+<a id="OTLCG117" name="OTLCG117"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref8" name="sthref8"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Object-Relational (JPA 2.0) Component</font></h2>
 <p>JPA simplifies Java persistence. It provides an object-relational mapping approach that lets you declaratively define how to map Java objects to relational database tables in a standard, portable way. JPA works both inside a Java EE application server and outside an EJB container in a Java Standard Edition (Java SE) application. The main features included in the 2.0 JPA update are:</p>
 <ul>
@@ -100,7 +99,8 @@
 </ul>
 </div>
 <!-- class="sect2" -->
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref11" name="sthref11"></a>
+<a id="OTLCG118" name="OTLCG118"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref9" name="sthref9"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Object-XML (JAXB 2.2) Component</font></h2>
 <p>Object-XML, also known as <em>MOXy</em>, is an EclipseLink component that enables you to bind Java classes to XML schemas. Object-XML implements JAXB which lets you provide mapping information through annotations. Support for storing the mappings in XML format is provided by MOXy. The many advanced mappings that are available enable you to handle complex XML structures without having to mirror the schema in your Java class model.</p>
 <p>The objects produced by the EclipseLink JAXB compiler are Java POJO models. They are generated with the necessary annotations required by the JAXB specification. The JAXB runtime API can be used to marshal and unmarshal objects.</p>
@@ -120,14 +120,14 @@
 <p>Generate an XML schema from a Java model</p>
 </li>
 </ul>
-<p>For more information on Object-XML and these use cases, see <em>Developing JAXB Applications EclipseLink MOXy</em>.</p>
+<p>For more information on Object-XML and these use cases, see <em>Developing JAXB Applications Using EclipseLink MOXy</em>.</p>
 <p>EclipseLink provides maximum flexibility with the ability to control how your object model is mapped to an XML schema. There are many advantages to having control over your own object model:</p>
 <ul>
 <li>
 <p>You can design the domain classes specifically for your application using the appropriate patterns and practices.</p>
 </li>
 <li>
-<p>You can use XPath-based mapping. This prevents the need for having a 1-to-1 relationship between classes and XML schema types. For more information, see <em>Developing JAXB Applications EclipseLink MOXy</em>.</p>
+<p>You can use XPath-based mapping. This prevents the need for having a 1-to-1 relationship between classes and XML schema types. For more information, see <em>Developing JAXB Applications Using EclipseLink MOXy</em>.</p>
 </li>
 <li>
 <p>You can instantiate objects in a way that is appropriate to your application.</p>
@@ -137,7 +137,8 @@
 </li>
 </ul>
 <p>One of the key advantages of EclipseLink is that the mapping information can be stored externally and does not require any changes to the Java classes or XML schema. This means that you can map your domain objects to more than one schema, or if your schema changes, you can update the mapping metadata instead of modifying your domain classes. This is also useful when mapping third-party classes, because you might not have access to the source to add annotations.</p>
-<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref12" name="sthref12"></a>
+<a id="OTLCG119" name="OTLCG119"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref10" name="sthref10"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">SDO Component</font></h3>
 <p>The Service Data Objects (SDO) component provides the reference implementation of Service Data Objects version 2.1.1. The reference implementation is described in <a href="http://jcp.org/en/home/index">JSR-235</a>. The SDO implementation incorporates the reference implementation and provides additional features primarily used for converting Java objects to XML, and for building and using data object models that can be incorporated into service architectures.</p>
 <p>SDO provides you with the following capabilities:</p>
@@ -171,13 +172,13 @@
 </div>
 <!-- class="sect3" --></div>
 <!-- class="sect2" -->
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref13" name="sthref13"></a>
+<a id="CHDIGIDF" name="CHDIGIDF"></a><a id="OTLCG120" name="OTLCG120"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Database Web Services Component</font></h2>
 <p>Database Web Services (DBWS) enables simple and efficient access to relational database artifacts by using a web service. It provides Java EE-compliant client-neutral access to the database without having to write Java code. DBWS extends EclipseLink's core capabilities while using existing ORM and OXM components.</p>
-<p>DBWS has a runtime provider component that takes a service descriptor (along with related deployment artifacts) and realizes it as a JAX-WS 2.0 Web service. The runtime provider uses EclipseLink to bridge between the database and the XML SOAP Messages used by web service clients. For information on DBWS architecture, see <em>Developing Persistence Architectures Using EclipseLink Database Web Services Developer's Guide</em>.</p>
+<p>DBWS has a runtime provider component that takes a service descriptor (along with related deployment artifacts) and realizes it as a JAX-WS 2.0 Web service. The runtime provider uses EclipseLink to bridge between the database and the XML SOAP Messages used by web service clients. For information on DBWS architecture, see <em>Developing Persistence Architectures Using EclipseLink</em>.</p>
 </div>
 <!-- class="sect2" --></div>
-<!-- class="sect1" --></div>
 <!-- class="ind" -->
 <!-- Start Footer -->
 <div class="footer">
@@ -200,7 +201,7 @@
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-<font size="-2">Copyright&nbsp;&copy;&nbsp;,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
+                
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
