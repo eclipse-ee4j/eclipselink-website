@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Mapping to a Union Field | EclipseLink 2.5 EclipseLink MOXy</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-02-28T10:13:49Z" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.17" />
+<meta name="date" content="2013-10-03T12:50:7Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Mapping to a Union Field" />
 <meta name="relnum" content="Release 2.5" />
@@ -22,9 +22,8 @@
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
-<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><b>EclipseLink Developing JAXB Applications Using EclipseLink</b><br />
-<b>Release 2.5</b><br />
- </font></td>
+<td align="left" valign="top"><div class="booktitle">Developing JAXB Applications Using EclipseLink MOXy, 
+Release 2.5</div></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -46,13 +45,11 @@
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-02-28</font></p>
-<a id="BABFFEHF" name="BABFFEHF"></a><a id="TLJAX298" name="TLJAX298"></a>
+<div class="ind"><!-- End Header --><a id="BABFFEHF" name="BABFFEHF"></a><a id="TLJAX298" name="TLJAX298"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Mapping to a Union Field</font></h1>
 <p>The following XML schema and class diagram show a typical use of an XML Schema Union:</p>
-<div class="example"><a id="TLJAX299" name="TLJAX299"></a><a id="sthref92" name="sthref92"></a>
+<div class="example"><a id="TLJAX299" name="TLJAX299"></a><a id="sthref93" name="sthref93"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-4 XML Schema Union</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -70,29 +67,29 @@
  
 </pre></div>
 <!-- class="example" -->
-<div class="figure"><a id="TLJAX300" name="TLJAX300"></a><a id="sthref93" name="sthref93"></a>
+<div class="figure"><a id="TLJAX300" name="TLJAX300"></a><a id="sthref94" name="sthref94"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 5-1 Mapping to a Union Field</font></em></strong></p>
 <img src="img/dxmuc.gif" alt="Mapping to a Union Field" title="Mapping to a Union Field" longdesc="img_text/dxmuc.htm" /><br />
-<a id="sthref94" name="sthref94" href="img_text/dxmuc.htm">Description of "Figure 5-1 Mapping to a Union Field"</a><br />
+<a id="sthref95" name="sthref95" href="img_text/dxmuc.htm">Description of "Figure 5-1 Mapping to a Union Field"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p><a href="#BABDEIDD">Figure 5-2</a> illustrates a mapping to a union field in an XML document that conforms to the example schema. When EclipseLink unmarshalls the XML document, it tries each of the union types until it can make a successful conversion. The first schema type in the union is <code>xsd:decimal</code>. Because <strong>10.5</strong> is a valid decimal, EclipseLink converts the value to the appropriate type.</p>
 <div class="figure"><a id="BABDEIDD" name="BABDEIDD"></a><a id="TLJAX301" name="TLJAX301"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 5-2 Mapping to a Union Field in an XML Document</font></em></strong></p>
 <img src="img/dxmuv.gif" alt="Mapping to a Union Field in an XML Document" title="Mapping to a Union Field in an XML Document" longdesc="img_text/dxmuv.htm" /><br />
-<a id="sthref95" name="sthref95" href="img_text/dxmuv.htm">Description of "Figure 5-2 Mapping to a Union Field in an XML Document"</a><br />
+<a id="sthref96" name="sthref96" href="img_text/dxmuv.htm">Description of "Figure 5-2 Mapping to a Union Field in an XML Document"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p>In <a href="#BABFGEDJ">Figure 5-3</a>, the value <strong>M</strong> is <em>not</em> a valid <code>xsd:decimal</code> type, so the next union type is tried, <code>xsd:string</code>.</p>
 <div class="figure"><a id="BABFGEDJ" name="BABFGEDJ"></a><a id="TLJAX302" name="TLJAX302"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 5-3 Mapping to a Union Field</font></em></strong></p>
 <img src="img/dxmuvs.gif" alt="Mapping to a Union Field" title="Mapping to a Union Field" longdesc="img_text/dxmuvs.htm" /><br />
-<a id="sthref96" name="sthref96" href="img_text/dxmuvs.htm">Description of "Figure 5-3 Mapping to a Union Field"</a><br />
+<a id="sthref97" name="sthref97" href="img_text/dxmuvs.htm">Description of "Figure 5-3 Mapping to a Union Field"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p>Currently, EclipseLink does not support the mapping of Unions using Annotations or OXM Metadata. However, an EclipseLink XML Customizer can be used to create the mapping.</p>
 <p>First, we annotate the <code>shoeSize</code> attribute with <code>@XmlTransient</code>, to avoid automatically generating a mapping for it. We also include an <code>@XmlCustomizer</code> annotation; the <code>CustomerCustomizer</code> class will create the Union mapping in code.</p>
-<div class="example"><a id="TLJAX303" name="TLJAX303"></a><a id="sthref97" name="sthref97"></a>
+<div class="example"><a id="TLJAX303" name="TLJAX303"></a><a id="sthref98" name="sthref98"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-5 Using an EclipseLink Customizer</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
@@ -144,7 +141,7 @@ public class CustomerCustomizer implements DescriptorCustomizer {
 </pre></div>
 <!-- class="example" -->
 <a id="TLJAX305" name="TLJAX305"></a>
-<div class="sect2"><a id="sthref98" name="sthref98"></a>
+<div class="sect2"><a id="sthref99" name="sthref99"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Understanding Conversion Order</font></h2>
 <p>The order of the calls to <code>addSchemaType()</code> is important; when converting an XML value into Java, EclipseLink will attempt the conversions in the order that they were added to the field, and return as soon as a successful conversion is made. For example, when unmarshalling a <code>shoeSize</code> of <strong>10.5</strong>:</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -166,7 +163,7 @@ shoeSizeField.addSchemaType(XMLConstants.DECIMAL_QNAME);
 </div>
 <!-- class="sect2" -->
 <a id="TLJAX306" name="TLJAX306"></a>
-<div class="sect2"><a id="sthref99" name="sthref99"></a>
+<div class="sect2"><a id="sthref100" name="sthref100"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Customizing Conversion Classes</font></h2>
 <p>EclipseLink uses a set of default conversions to create a value for the Java attribute (in this case, <code>xsd:decimal</code> will be converted into a <code>BigDecimal</code>). You can override this behavior in Java code using the XMLUnionField method addConversion. For example, if you want your Java object to store <code>shoeSize</code> as a <code>Float</code>:</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -196,7 +193,7 @@ shoeSizeField.addConversion(XMLConstants.DECIMAL_QNAME, Float.class);
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-                
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2012, 2013,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">

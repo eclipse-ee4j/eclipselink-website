@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Using Virtual Access Methods | EclipseLink 2.5 EclipseLink MOXy</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-02-28T10:13:50Z" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.17" />
+<meta name="date" content="2013-10-03T12:50:7Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Using Virtual Access Methods" />
 <meta name="relnum" content="Release 2.5" />
@@ -22,9 +22,8 @@
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
-<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><b>EclipseLink Developing JAXB Applications Using EclipseLink</b><br />
-<b>Release 2.5</b><br />
- </font></td>
+<td align="left" valign="top"><div class="booktitle">Developing JAXB Applications Using EclipseLink MOXy, 
+Release 2.5</div></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -46,9 +45,7 @@
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-02-28</font></p>
-<a id="CHDJHCCE" name="CHDJHCCE"></a><a id="TLJAX373" name="TLJAX373"></a>
+<div class="ind"><!-- End Header --><a id="CHDJHCCE" name="CHDJHCCE"></a><a id="TLJAX373" name="TLJAX373"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Using Virtual Access Methods</font></h1>
 <p>In addition to standard JAXB properties (represented by Java fields and accessor methods), EclipseLink MOXy 2.3 introduced the concept of virtual properties and virtual access methods, which instead rely on special <code>get()</code> and <code>set()</code> methods to maintain mapping data. For example, you might want to use a <code>HashMap</code> as the underlying structure to hold data for certain mappings. The mappings that use virtual method access must be defined in EclipseLink OXM metadata.</p>
@@ -93,7 +90,7 @@
 <!-- class="inftblnote" --></div>
 <p>For an example of using virtual properties in a multi-tenant architecture, see <a href="advanced_concepts004.htm#CHDIHFEE">"Using Extensible MOXy"</a>.</p>
 <a id="TLJAX374" name="TLJAX374"></a>
-<div class="sect2"><a id="sthref140" name="sthref140"></a>
+<div class="sect2"><a id="sthref141" name="sthref141"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Configuring Virtual Access Methods</font></h2>
 <p>Virtual Access Methods can be configured either by through Java annotations (see <a href="#CIHHFHBH">Example 8-5</a>) or EclipseLink OXM metadata (see <a href="#CIHIIIFB">Example 8-6</a>).</p>
 <div class="example"><a id="CIHHFHBH" name="CIHHFHBH"></a><a id="TLJAX375" name="TLJAX375"></a>
@@ -153,10 +150,10 @@ public class Customer {
 <!-- class="example" --></div>
 <!-- class="sect2" -->
 <a id="TLJAX377" name="TLJAX377"></a>
-<div class="sect2"><a id="sthref141" name="sthref141"></a>
+<div class="sect2"><a id="sthref142" name="sthref142"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Example</font></h2>
 <p>For this example we will use the <strong>Customer</strong> class (<a href="advanced_concepts002.htm#CHDEEICC">Example 8-3</a>), along with an EclipseLink OXM file to define our virtual mappings. Any property encountered in this file that does not have a corresponding Java attribute will be considered a virtual property and will be accessed through the virtual access methods. Because there is no associated Java field, the <code>type</code> information must also be provided.</p>
-<div class="example"><a id="TLJAX378" name="TLJAX378"></a><a id="sthref142" name="sthref142"></a>
+<div class="example"><a id="TLJAX378" name="TLJAX378"></a><a id="sthref143" name="sthref143"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-7 The virtualprops-oxm.xml File</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 ...
@@ -212,10 +209,10 @@ customerWindow.getTextField(DCODE).setText(c.get("discountCode"));
 </pre></div>
 <!-- class="sect2" -->
 <a id="TLJAX379" name="TLJAX379"></a>
-<div class="sect2"><a id="sthref143" name="sthref143"></a>
+<div class="sect2"><a id="sthref144" name="sthref144"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Using XmlAccessType.FIELD and XmlTransient</font></h2>
 <p>If you are using an <code>@XmlAccessorType</code> of <code>XmlAccessType.FIELD</code>, you will need to mark your virtual properties <code>Map</code> attribute to be <code>@XmlTransient</code>, to prevent the <code>Map</code> itself from being bound to XML:</p>
-<div class="example"><a id="TLJAX380" name="TLJAX380"></a><a id="sthref144" name="sthref144"></a>
+<div class="example"><a id="TLJAX380" name="TLJAX380"></a><a id="sthref145" name="sthref145"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-8 Marking the Map Attribute</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
@@ -237,7 +234,7 @@ public class Customer {
 <!-- class="example" --></div>
 <!-- class="sect2" -->
 <a id="TLJAX381" name="TLJAX381"></a>
-<div class="sect2"><a id="sthref145" name="sthref145"></a>
+<div class="sect2"><a id="sthref146" name="sthref146"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Options</font></h2>
 <ul>
 <li>
@@ -251,7 +248,7 @@ public class Customer {
 <div class="sect3">
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Specifying Alternate Accessor Methods</font></h3>
 <p>To use different method names as your virtual method accessors, specify them using the <code>getMethodName</code> and <code>setMethodName</code> attributes on <code>@XmlVirtualAccessMethods</code>:</p>
-<div class="example"><a id="TLJAX383" name="TLJAX383"></a><a id="sthref146" name="sthref146"></a>
+<div class="example"><a id="TLJAX383" name="TLJAX383"></a><a id="sthref147" name="sthref147"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-9 Using Alternate Accessor Methods</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
@@ -288,7 +285,7 @@ public class Customer {
 </pre></div>
 <!-- class="example" -->
 <p>In OXM:</p>
-<div class="example"><a id="TLJAX384" name="TLJAX384"></a><a id="sthref147" name="sthref147"></a>
+<div class="example"><a id="TLJAX384" name="TLJAX384"></a><a id="sthref148" name="sthref148"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-10 Using the xml-virtual-access-methods Element</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 ...
@@ -321,10 +318,10 @@ public class Customer {
 </li>
 </ul>
 <a id="TLJAX386" name="TLJAX386"></a>
-<div class="sect4"><a id="sthref148" name="sthref148"></a>
+<div class="sect4"><a id="sthref149" name="sthref149"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Virtual Properties as Individual Nodes</font></h4>
 <p>This is EclipseLink's default behavior, or can be specified explicitly as an override as follows:</p>
-<div class="example"><a id="TLJAX387" name="TLJAX387"></a><a id="sthref149" name="sthref149"></a>
+<div class="example"><a id="TLJAX387" name="TLJAX387"></a><a id="sthref150" name="sthref150"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-11 Mapping as Individual Nodes</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
@@ -339,7 +336,7 @@ public class Customer {
 </pre></div>
 <!-- class="example" -->
 <p>For example:</p>
-<div class="example"><a id="TLJAX388" name="TLJAX388"></a><a id="sthref150" name="sthref150"></a>
+<div class="example"><a id="TLJAX388" name="TLJAX388"></a><a id="sthref151" name="sthref151"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-12 Original Customer Schema</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;xs:schema ...&gt;
@@ -357,7 +354,7 @@ public class Customer {
  
 </pre></div>
 <!-- class="example" -->
-<div class="example"><a id="TLJAX389" name="TLJAX389"></a><a id="sthref151" name="sthref151"></a>
+<div class="example"><a id="TLJAX389" name="TLJAX389"></a><a id="sthref152" name="sthref152"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-13 Generated Schema (After adding middle-initial and phone-number)</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;xs:schema ...&gt;
@@ -379,7 +376,7 @@ public class Customer {
 <!-- class="example" --></div>
 <!-- class="sect4" -->
 <a id="TLJAX390" name="TLJAX390"></a>
-<div class="sect4"><a id="sthref152" name="sthref152"></a>
+<div class="sect4"><a id="sthref153" name="sthref153"></a>
 <h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Virtual Properties in an <code>&lt;any&gt;</code> Element</font></h4>
 <p>EclipseLink can also use an <code>&lt;any&gt;</code> element to hold all of the virtual properties in one node:</p>
 <div class="example"><a id="CHDBFAEB" name="CHDBFAEB"></a><a id="TLJAX391" name="TLJAX391"></a>
@@ -397,7 +394,7 @@ public class Customer {
 </pre></div>
 <!-- class="example" -->
 <p>From <a href="#CHDBFAEB">Example 8-14</a>, a newly generated schema using this approach would look like:</p>
-<div class="example"><a id="TLJAX392" name="TLJAX392"></a><a id="sthref153" name="sthref153"></a>
+<div class="example"><a id="TLJAX392" name="TLJAX392"></a><a id="sthref154" name="sthref154"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-15 Generated Schema</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;xs:schema ...&gt;
@@ -441,7 +438,7 @@ public class Customer {
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-                
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2012, 2013,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">

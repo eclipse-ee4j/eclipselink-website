@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Mapping Dates and Times | EclipseLink 2.5 EclipseLink MOXy</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-02-28T10:13:49Z" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.17" />
+<meta name="date" content="2013-10-03T12:50:6Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Mapping Dates and Times" />
 <meta name="relnum" content="Release 2.5" />
@@ -22,9 +22,8 @@
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
-<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><b>EclipseLink Developing JAXB Applications Using EclipseLink</b><br />
-<b>Release 2.5</b><br />
- </font></td>
+<td align="left" valign="top"><div class="booktitle">Developing JAXB Applications Using EclipseLink MOXy, 
+Release 2.5</div></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -46,9 +45,7 @@
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-02-28</font></p>
-<a id="BABFCBCF" name="BABFCBCF"></a><a id="TLJAX292" name="TLJAX292"></a>
+<div class="ind"><!-- End Header --><a id="BABFCBCF" name="BABFCBCF"></a><a id="TLJAX292" name="TLJAX292"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Mapping Dates and Times</font></h1>
 <p>You can use the <code>@XmlSchemaType</code> annotation to customize the XML representation of date and time information. Additionally, EclipseLink MOXy supports the following types which are not covered in the JAXB specification (JSR-222):</p>
@@ -64,7 +61,7 @@
 </li>
 </ul>
 <p>The following XML schema contains a <strong>date-of-birth</strong> element of type <code>xsd:date</code>:</p>
-<div class="example"><a id="TLJAX293" name="TLJAX293"></a><a id="sthref88" name="sthref88"></a>
+<div class="example"><a id="TLJAX293" name="TLJAX293"></a><a id="sthref89" name="sthref89"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-1 Sample XML Schema</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -81,7 +78,7 @@
 </pre></div>
 <!-- class="example" -->
 <a id="TLJAX294" name="TLJAX294"></a>
-<div class="sect2"><a id="sthref89" name="sthref89"></a>
+<div class="sect2"><a id="sthref90" name="sthref90"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Understanding the Generated Model</font></h2>
 <p>The JAXB XML Schema to Java compiler (XJC) can be used to generate a class model from the sample schema. For example:</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -89,7 +86,7 @@
  
 </pre>
 <p>will generate the following <strong>Customer</strong> class:</p>
-<div class="example"><a id="TLJAX295" name="TLJAX295"></a><a id="sthref90" name="sthref90"></a>
+<div class="example"><a id="TLJAX295" name="TLJAX295"></a><a id="sthref91" name="sthref91"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-2 Sample Customer Class</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
@@ -136,7 +133,7 @@ public class Customer {
 </div>
 <!-- class="sect2" -->
 <a id="TLJAX296" name="TLJAX296"></a>
-<div class="sect2"><a id="sthref91" name="sthref91"></a>
+<div class="sect2"><a id="sthref92" name="sthref92"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Using a Different Date (or Calendar) Property</font></h2>
 <p>By default, the JAXB XML schema to Java compiler (XJC) generates a property of type <code>XMLGregorianCalendar</code>. However, you can easily change this to <code>java.util.Date</code> or <code>java.util.Calendar</code>, as shown in <a href="#BABJAHAF">Example 5-3</a>:</p>
 <div class="example"><a id="BABJAHAF" name="BABJAHAF"></a><a id="TLJAX297" name="TLJAX297"></a>
@@ -195,7 +192,7 @@ public class Customer {
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-                
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2012, 2013,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">

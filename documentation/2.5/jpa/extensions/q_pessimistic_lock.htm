@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>pessimistic-lock | EclipseLink 2.5.x Java Persistence API (JPA) Extensions Reference</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T8:35:45Z" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.17" />
+<meta name="date" content="2013-10-03T12:33:26Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="pessimistic-lock" />
 <meta name="relnum" content="Release 2.5" />
@@ -23,7 +23,7 @@
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
 <td align="left" valign="top"><div class="booktitle">Java Persistence API (JPA) Extensions Reference for EclipseLink, 
-Release 2.5</div></td>
+<b>Release 2.5</b><br /></font></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -50,42 +50,42 @@ Release 2.5</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">pessimistic-lock</font></h2>
 <p>Use <code>eclipselink.pessimistic-lock</code> to specify if EclipseLink uses pessimistic locking.</p>
-<a id="sthref652" name="sthref652"></a>
+<a id="sthref646" name="sthref646"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
-<p><a href="#CIHDEEDF">Table 4-26</a> describes this query hint's valid values.</p>
-<div class="tblhruleformalwide"><a id="TLJPA669" name="TLJPA669"></a><a id="sthref653" name="sthref653"></a><a id="CIHDEEDF" name="CIHDEEDF"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-26 Valid Values for org.eclipse.persistence.config.PessimisticLock</font></em></strong></p>
+<p><a href="#CIHDEEDF">Table 4-25</a> describes this query hint's valid values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA669" name="TLJPA669"></a><a id="sthref647" name="sthref647"></a><a id="CIHDEEDF" name="CIHDEEDF"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-25 Valid Values for org.eclipse.persistence.config.PessimisticLock</font></em></strong></p>
 <table class="HRuleFormalWide" title="Valid Values for org.eclipse.persistence.config.PessimisticLock" summary="Valid Values for this query hint" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="29%" />
 <col width="*" />
 <thead>
 <tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t37"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
-<th align="left" valign="bottom" id="r1c2-t37"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c1-t36"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t36"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
 </tr>
 </thead>
 <tbody>
 <tr align="left" valign="top">
-<td align="left" id="r2c1-t37" headers="r1c1-t37">
+<td align="left" id="r2c1-t36" headers="r1c1-t36">
 <p><code>NoLock</code></p>
 </td>
-<td align="left" headers="r2c1-t37 r1c2-t37">
+<td align="left" headers="r2c1-t36 r1c2-t36">
 <p>(Default) Do not use pessimistic locking.</p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r3c1-t37" headers="r1c1-t37">
+<td align="left" id="r3c1-t36" headers="r1c1-t36">
 <p><code>Lock</code></p>
 </td>
-<td align="left" headers="r3c1-t37 r1c2-t37">
+<td align="left" headers="r3c1-t36 r1c2-t36">
 <p>EclipseLink issues <code>SELECT .... FOR UPDATE</code> statements.</p>
 </td>
 </tr>
 <tr align="left" valign="top">
-<td align="left" id="r4c1-t37" headers="r1c1-t37">
+<td align="left" id="r4c1-t36" headers="r1c1-t36">
 <p><code>LockNoWait</code></p>
 </td>
-<td align="left" headers="r4c1-t37 r1c2-t37">
+<td align="left" headers="r4c1-t36 r1c2-t36">
 <p>EclipseLink issues <code>SELECT .... FOR UPDATE NO WAIT</code> statements.</p>
 </td>
 </tr>
@@ -93,24 +93,24 @@ Release 2.5</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref654" name="sthref654"></a>
+<a id="sthref648" name="sthref648"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>The primary advantage of using pessimistic locking is that you are assured, once the lock is obtained, of a successful edit. This is desirable in highly concurrent applications in which optimistic locking may cause too many optimistic locking errors.</p>
 <p>One drawback of pessimistic locking is that it requires additional database resources, requiring the database transaction and connection to be maintained for the duration of the edit. Pessimistic locking may also cause deadlocks and lead to concurrency issues.</p>
-<a id="sthref655" name="sthref655"></a>
+<a id="sthref649" name="sthref649"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<p><a href="#CIHGEJFF">Example 4-47</a> shows how to use this hint in a JPA query.</p>
+<p><a href="#CIHGEJFF">Example 4-50</a> shows how to use this hint in a JPA query.</p>
 <div class="example"><a id="CIHGEJFF" name="CIHGEJFF"></a><a id="TLJPA670" name="TLJPA670"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-47 Using pessimistic-lock in a JPA Query</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-50 Using pessimistic-lock in a JPA Query</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 import org.eclipse.persistence.config.PessimisticLock;
  import org.eclipse.persistence.config.QueryHints;
  query.setHint(QueryHints.PESSIMISTIC_LOCK, PessimisticLock.LockNoWait);
 </pre></div>
 <!-- class="example" -->
-<p><a href="#CIHIAFGH">Example 4-48</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<p><a href="#CIHIAFGH">Example 4-51</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
 <div class="example"><a id="CIHIAFGH" name="CIHIAFGH"></a><a id="TLJPA671" name="TLJPA671"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-48 Using pessimistic-lock in a @QueryHint Annotation</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-51 Using pessimistic-lock in a @QueryHint Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 import org.eclipse.persistence.config.PessimisticLock;
  import org.eclipse.persistence.config.QueryHints;
@@ -118,21 +118,22 @@ import org.eclipse.persistence.config.PessimisticLock;
 
 </pre></div>
 <!-- class="example" -->
-<a id="sthref656" name="sthref656"></a>
+<a id="sthref650" name="sthref650"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
-<li>
-<p>"EclipseLink" JPA Query Hints<br />
-<code><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Querying/Query_Hints">http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Querying/Query_Hints</a></code></p>
-</li>
 <li>
 <p>EclipseLink Examples<br />
 <code><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/PessimisticLocking">http://wiki.eclipse.org/EclipseLink/Examples/JPA/PessimisticLocking</a></code></p>
 </li>
 <li>
-<p>"Locking"<br />
-<code><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Mapping/Locking">http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Mapping/Locking</a></code></p>
+<p>"Scaling EclipseLink Applications in Clusters" in <em>Solutions Guide for EclispeLink</em></p>
+</li>
+<li>
+<p>"Understanding Queries" in <em>Understanding EclipseLink</em></p>
+</li>
+<li>
+<p>"Building Blocks of a EclipseLink Project" in <em>Understanding EclipseLink</em></p>
 </li>
 </ul>
 </div>
@@ -159,7 +160,7 @@ import org.eclipse.persistence.config.PessimisticLock;
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-<font size="-2">Copyright&nbsp;&copy;&nbsp;2012,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../../dcommon/html/cpyr.htm"><br />
+</td>
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
@@ -174,5 +175,5 @@ import org.eclipse.persistence.config.PessimisticLock;
 </table>
 </div>
 <!-- class="footer" -->
-<div id="copyright">Copyright &copy; 2012, 2013 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
 </html>

@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Understanding Events | EclipseLink 2.5 EclipseLink MOXy</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-02-28T10:13:48Z" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.17" />
+<meta name="date" content="2013-10-03T12:50:6Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Understanding Events" />
 <meta name="relnum" content="Release 2.5" />
@@ -22,9 +22,8 @@
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
-<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><b>EclipseLink Developing JAXB Applications Using EclipseLink</b><br />
-<b>Release 2.5</b><br />
- </font></td>
+<td align="left" valign="top"><div class="booktitle">Developing JAXB Applications Using EclipseLink MOXy, 
+Release 2.5</div></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -46,14 +45,12 @@
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-02-28</font></p>
-<a id="CACHJIHB" name="CACHJIHB"></a><a id="TLJAX177" name="TLJAX177"></a>
+<div class="ind"><!-- End Header --><a id="CACHJIHB" name="CACHJIHB"></a><a id="TLJAX177" name="TLJAX177"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Understanding Events</font></h1>
 <p>JAXB offers several mechanisms to get event callbacks during the marshalling and unmarshalling processes. You can specify callback methods directly on your mapped objects, or define separate <code>Listener</code> classes and register them with the JAXB runtime.</p>
 <a id="TLJAX178" name="TLJAX178"></a>
-<div class="sect2"><a id="sthref49" name="sthref49"></a>
+<div class="sect2"><a id="sthref50" name="sthref50"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Adding Event Listener Methods on JAXB Mapped Objects</font></h2>
 <p>On any of your objects you have mapped with JAXB, you have the option of specifying some special methods to allow you to receive event notification when that object is marshalled or unmarshalled. The methods must have the following signatures:</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -81,7 +78,7 @@ void afterUnmarshal(Unmarshaller u, Object parent);
  
 </pre>
 <p>The following example shows how to write to a log every time a <strong>Company</strong> object is processed.</p>
-<div class="example"><a id="TLJAX179" name="TLJAX179"></a><a id="sthref50" name="sthref50"></a>
+<div class="example"><a id="TLJAX179" name="TLJAX179"></a><a id="sthref51" name="sthref51"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-29 Sample Event Listener</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
@@ -118,7 +115,7 @@ public class Company {
 <!-- class="example" --></div>
 <!-- class="sect2" -->
 <a id="TLJAX180" name="TLJAX180"></a>
-<div class="sect2"><a id="sthref51" name="sthref51"></a>
+<div class="sect2"><a id="sthref52" name="sthref52"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Registering Listeners on Marshallers and Unmarshallers</font></h2>
 <p>JAXB's Marshaller and Unmarshaller interfaces both define a <code>setListener()</code> method, which allows you to set your own custom Listener to intercept marshal and unmarshal events.</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -189,7 +186,7 @@ public interface Unmarshaller {
  
 </pre>
 <p>This example performs the same logging as above, but using generic <code>Listener</code> classes. This makes it easier to log all JAXB objects in the system.</p>
-<div class="example"><a id="TLJAX181" name="TLJAX181"></a><a id="sthref52" name="sthref52"></a>
+<div class="example"><a id="TLJAX181" name="TLJAX181"></a><a id="sthref53" name="sthref53"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-30 Logging with the Listener Class</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
@@ -301,7 +298,7 @@ INFO: example.Company@f0c0d3 Thread[main,5,main]
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-                
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2012, 2013,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">

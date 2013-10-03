@@ -5,18 +5,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
-<title>Exposing JPA Entities Through RESTful Services Using EclipseLink Data Services | EclipseLink 2.5.x Understanding EclipseLink</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-04-04T10:28:58Z" />
-<meta name="description" content="This chapter introduces EclipseLink Data Services (TLDS), with its support for exposing JPA persistence units through RESTful services." />
+<title>Exposing JPA Entities Through RESTful Data Services | EclipseLink 2.5.x Understanding EclipseLink</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.17" />
+<meta name="date" content="2013-10-03T12:26:50Z" />
+<meta name="description" content="This chapter introduces tells how to expose JPA persistence units using RESTful Data services." />
 <meta name="robots" content="noarchive" />
-<meta name="doctitle" content="Exposing JPA Entities Through RESTful Services Using EclipseLink Data Services" />
+<meta name="doctitle" content="Exposing JPA Entities Through RESTful Data Services" />
 <meta name="relnum" content="Release 2.5" />
 <link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
 <link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
 <link rel="start" href="../../index.htm" title="Home" type="text/html" />
 <link rel="contents" href="toc.htm" title="Contents" type="text/html" />
-<link rel="prev" href="performance003.htm" title="Previous" type="text/html" />
+<link rel="prev" href="performance002.htm" title="Previous" type="text/html" />
 <link rel="next" href="restful_jpa001.htm" title="Next" type="text/html" />
 <!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
 <body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:enkkfjmsqju', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
@@ -39,7 +39,7 @@
 <hr />
 <table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
 <tr>
-<td align="center"><a href="performance003.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="performance002.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
 <td align="center"><a href="restful_jpa001.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
 <td>&nbsp;</td>
 </tr>
@@ -47,20 +47,22 @@
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header --><a id="CHDGHJID" name="CHDGHJID"></a><a id="TLADG809" name="TLADG809"></a>
-<p align="center"><font color="#FF0000">Beta Draft: 2013-04-04</font></p>
-<h1 class="chapter"><font face="arial, helvetica, sans-serif" color="#330099"><span class="secnum">18</span> Exposing JPA Entities Through RESTful Services Using EclipseLink Data Services</font></h1>
+<h1 class="chapter"><font face="arial, helvetica, sans-serif" color="#330099"><span class="secnum">19</span> Exposing JPA Entities Through RESTful Data Services</font></h1>
 <a id="TLADG810" name="TLADG810"></a>
-<p>This chapter introduces EclipseLink Data Services (TLDS), with its support for exposing JPA persistence units through RESTful services.</p>
+<p>This chapter introduces tells how to expose JPA persistence units using RESTful Data services.</p>
 <p>This chapter contains the following sections:</p>
 <ul>
 <li>
 <p><a href="restful_jpa001.htm#A1585838">Introduction to the Solution</a></p>
 </li>
 <li>
-<p><a href="restful_jpa002.htm#A1596021">Additional Resources</a></p>
+<p><a href="restful_jpa002.htm#A1656101">Implementing the Solution</a></p>
 </li>
 <li>
-<p><a href="restful_jpa003.htm#CHDEGJIG">HTTP Request Reference for JPA-RS</a></p>
+<p><a href="restful_jpa003.htm#A1596021">Additional Resources</a></p>
+</li>
+<li>
+<p><a href="restful_jpa004.htm#CHDEGJIG">RESTful Data Services API Reference</a></p>
 </li>
 </ul>
 <a id="TLADG811" name="TLADG811"></a>
@@ -68,7 +70,7 @@
 <p>Expose persistent data model and application logic over REST for the development of Thin Server Architecture (TSA) clients including HTML5/JavaScript and mobile technologies.</p>
 <a id="TLADG812" name="TLADG812"></a>
 <p><b><font face="arial, helvetica, sans-serif" color="#330099">Solution</font></b></p>
-<p>Use Java Persistence API for RESTful Web Services (JPA-RS) to expose entities using a RESTful service, without writing JAX-RS code.</p>
+<p>Use RESTful Data Services to expose entities using a RESTful service, without writing JAX-RS code.</p>
 <a id="TLADG813" name="TLADG813"></a>
 <p><b><font face="arial, helvetica, sans-serif" color="#330099">Components</font></b></p>
 <ul>
@@ -79,7 +81,7 @@
 <p>EclipseLink 2.4 or later.</p>
 </li>
 <li>
-<p>Support for Java API for RESTful Web Services (JAX-RS) 1.0, for example Jersey.</p>
+<p>Support for Java API for RESTful Web Services (JAX-RS) 1.0, for example the JAX-RS reference implementation, Jersey (see <code><a href="http://jersey.java.net/">http://jersey.java.net/</a></code>).</p>
 </li>
 </ul>
 </li>
@@ -104,13 +106,13 @@
 <col width="48%" />
 <tr>
 <td>&nbsp;</td>
-<td align="center"><a href="performance003.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="performance002.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
 <td align="center"><a href="restful_jpa001.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
 </tr>
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-                
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2012,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">

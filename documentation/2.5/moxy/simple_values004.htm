@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Mapping Enums | EclipseLink 2.5 EclipseLink MOXy</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-02-28T10:13:49Z" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.17" />
+<meta name="date" content="2013-10-03T12:50:6Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Mapping Enums" />
 <meta name="relnum" content="Release 2.5" />
@@ -22,9 +22,8 @@
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
-<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><b>EclipseLink Developing JAXB Applications Using EclipseLink</b><br />
-<b>Release 2.5</b><br />
- </font></td>
+<td align="left" valign="top"><div class="booktitle">Developing JAXB Applications Using EclipseLink MOXy, 
+Release 2.5</div></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -46,17 +45,15 @@
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-02-28</font></p>
-<a id="CHDCGAIC" name="CHDCGAIC"></a><a id="TLJAX282" name="TLJAX282"></a>
+<div class="ind"><!-- End Header --><a id="CHDCGAIC" name="CHDCGAIC"></a><a id="TLJAX282" name="TLJAX282"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Mapping Enums</font></h1>
 <p>Java enums can be mapped to XML using the <code>@XmlEnum</code> and <code>@XmlEnumValue</code> annotations.</p>
 <a id="TLJAX283" name="TLJAX283"></a>
-<div class="sect2"><a id="sthref81" name="sthref81"></a>
+<div class="sect2"><a id="sthref82" name="sthref82"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Mapping Enums using Constant Names</font></h2>
 <p>The following schema demonstrates an XML enumeration:</p>
-<div class="example"><a id="TLJAX284" name="TLJAX284"></a><a id="sthref82" name="sthref82"></a>
+<div class="example"><a id="TLJAX284" name="TLJAX284"></a><a id="sthref83" name="sthref83"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 4-40 Sample XML Schema</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;xs:simpleType name="CustomerType"&gt;
@@ -71,7 +68,7 @@
 </pre></div>
 <!-- class="example" -->
 <p>If your <code>enum</code> constant names themselves are sufficient for the XML representation, you can simply use the <code>@XmlEnum</code> annotation:</p>
-<div class="example"><a id="TLJAX285" name="TLJAX285"></a><a id="sthref83" name="sthref83"></a>
+<div class="example"><a id="TLJAX285" name="TLJAX285"></a><a id="sthref84" name="sthref84"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 4-41 Using the @XmlEnum Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
@@ -126,10 +123,10 @@ public class Customer {
 </pre></div>
 <!-- class="sect2" -->
 <a id="TLJAX287" name="TLJAX287"></a>
-<div class="sect2"><a id="sthref84" name="sthref84"></a>
+<div class="sect2"><a id="sthref85" name="sthref85"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Mapping Enums to Custom XML Values</font></h2>
 <p>Given the following XML schema enumeration:</p>
-<div class="example"><a id="TLJAX288" name="TLJAX288"></a><a id="sthref85" name="sthref85"></a>
+<div class="example"><a id="TLJAX288" name="TLJAX288"></a><a id="sthref86" name="sthref86"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 4-43 Sample XML Schema</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;xs:simpleType name="CustomerType"&gt;
@@ -144,7 +141,7 @@ public class Customer {
 </pre></div>
 <!-- class="example" -->
 <p>To model this in Java, the <code>@XmlEnumValue</code> annotation is used to provide an XML value for each <code>enum</code> constant:</p>
-<div class="example"><a id="TLJAX289" name="TLJAX289"></a><a id="sthref86" name="sthref86"></a>
+<div class="example"><a id="TLJAX289" name="TLJAX289"></a><a id="sthref87" name="sthref87"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 4-44 Using the @XmlEnumValue Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
@@ -225,7 +222,7 @@ public class Customer {
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-                
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2012, 2013,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">

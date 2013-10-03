@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Introduction to the Solution | EclipseLink 2.5.x Understanding EclipseLink</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-04-04T10:28:53Z" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.17" />
+<meta name="date" content="2013-10-03T12:26:50Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Introduction to the Solution" />
 <meta name="relnum" content="Release 2.5" />
@@ -45,9 +45,7 @@
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-04-04</font></p>
-<a id="CIHBBIJJ" name="CIHBBIJJ"></a><a id="TLADG184" name="TLADG184"></a>
+<div class="ind"><!-- End Header --><a id="CIHBBIJJ" name="CIHBBIJJ"></a><a id="TLADG184" name="TLADG184"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Introduction to the Solution</font></h1>
 <p>With a composite persistence unit, you can:</p>
@@ -62,9 +60,9 @@
 <p>Easily perform queries and transactions across the complete set of entities</p>
 </li>
 </ul>
-<p><a href="#CIHFBBDJ">Example 8-1</a> shows how you can persist data from a single persistence context into two different databases:</p>
+<p><a href="#CIHFBBDJ">Example 9-1</a> shows how you can persist data from a single persistence context into two different databases:</p>
 <div class="example"><a id="CIHFBBDJ" name="CIHFBBDJ"></a><a id="TLADG185" name="TLADG185"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 8-1 Using Multiple Databases</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 9-1 Using Multiple Databases</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 em.persist(new A(..));
 em.persist(new B(..));
@@ -74,7 +72,7 @@ em.persist(new B(..));
 em.flush();
 </pre></div>
 <!-- class="example" -->
-<p><a href="#BABJAABI">Figure 8-1</a> illustrates a simple composite persistence unit. EclipseLink processes the <code>persistence.xml</code> file and detects the composite persistence unit, which contains two composite member persistence units:</p>
+<p><a href="#BABJAABI">Figure 9-1</a> illustrates a simple composite persistence unit. EclipseLink processes the <code>persistence.xml</code> file and detects the composite persistence unit, which contains two composite member persistence units:</p>
 <ul>
 <li>
 <p>Class <strong>A</strong> is mapped by a persistence unit named <strong>memberPu1</strong> located in the <code>member1.jar</code> file.</p>
@@ -84,9 +82,9 @@ em.flush();
 </li>
 </ul>
 <div class="figure"><a id="BABJAABI" name="BABJAABI"></a><a id="TLADG186" name="TLADG186"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Figure 8-1 A Simple Composite Persistence Unit</font></em></strong></p>
-<img src="img/composite_persistence_units.gif" alt="Description of Figure 8-1 follows" title="Description of Figure 8-1 follows" longdesc="img_text/composite_persistence_units.htm" /><br />
-<a id="sthref62" name="sthref62" href="img_text/composite_persistence_units.htm">Description of "Figure 8-1 A Simple Composite Persistence Unit"</a><br />
+<p><strong><em><font face="arial, helvetica, sans-serif">Figure 9-1 A Simple Composite Persistence Unit</font></em></strong></p>
+<img src="img/composite_persistence_units.gif" alt="Description of Figure 9-1 follows" title="Description of Figure 9-1 follows" longdesc="img_text/composite_persistence_units.htm" /><br />
+<a id="sthref57" name="sthref57" href="img_text/composite_persistence_units.htm">Description of "Figure 9-1 A Simple Composite Persistence Unit"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <a id="CIHJCHAF" name="CIHJCHAF"></a><a id="TLADG187" name="TLADG187"></a>
@@ -126,7 +124,7 @@ em.flush();
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-                
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2012,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">

@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@AdditionalCriteria | EclipseLink 2.5.x Java Persistence API (JPA) Extensions Reference</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T8:35:43Z" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.17" />
+<meta name="date" content="2013-10-03T12:33:24Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@AdditionalCriteria" />
 <meta name="relnum" content="Release 2.5" />
@@ -23,7 +23,7 @@
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
 <td align="left" valign="top"><div class="booktitle">Java Persistence API (JPA) Extensions Reference for EclipseLink, 
-Release 2.5</div></td>
+<b>Release 2.5</b><br /></font></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -51,10 +51,10 @@ Release 2.5</div></td>
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@AdditionalCriteria</font></h2>
 <p>Use <code>@AdditionalCriteria</code> to define parameterized views on data.</p>
 <p>You can define additional criteria on entities or mapped superclass. When specified at the mapped superclass level, the additional criteria definition applies to all inheriting entities, unless those entities define their own additional criteria, in which case those defined for the mapped superclass are ignored.</p>
-<a id="sthref7" name="sthref7"></a>
+<a id="sthref8" name="sthref8"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#CHDGJGDCxx">Table 2-1</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="TLJPA319" name="TLJPA319"></a><a id="sthref8" name="sthref8"></a><a id="CHDGJGDCxx" name="CHDGJGDCxx"></a>
+<div class="tblhruleformalwide"><a id="TLJPA319" name="TLJPA319"></a><a id="sthref9" name="sthref9"></a><a id="CHDGJGDCxx" name="CHDGJGDCxx"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 2-1 @AdditionalCriteria Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@AdditionalCriteria Annotation Elements" summary="This table describes the list of attributes for this annotation." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="18%" />
@@ -81,7 +81,7 @@ Release 2.5</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref9" name="sthref9"></a>
+<a id="sthref10" name="sthref10"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>Additional criteria can provide an additional filtering mechanism for queries. This filtering option, for example, allows you to use an existing additional <code>JOIN</code> expression defined for the entity or mapped superclass and allows you to pass parameters to it.</p>
 <p>Set additional criteria parameters through properties on the entity manager factory or on the entity manager. Properties set on the entity manager override identically named properties set on the entity manager factory. Properties must be set on an entity manager before executing a query. Do not change the properties for the lifespan of the entity manager.</p>
@@ -99,7 +99,7 @@ Release 2.5</div></td>
 </table>
 <br /></div>
 <!-- class="inftblnote" --></div>
-<a id="sthref10" name="sthref10"></a>
+<a id="sthref11" name="sthref11"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p>Specify additional criteria using the <code>@AdditionalCriteria</code> annotation or the <code>&lt;additional-criteria&gt;</code> element. The additional criteria definition supports any valid JPQL string and must use <code>this</code> as an alias to form the additional criteria. For example:</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -137,22 +137,22 @@ entityManager.setProperty("COMPANY", "MyCompany");
 <p>Uses for additional criteria include:</p>
 <ul>
 <li>
-<p><a href="#CFHJIDHD">Multitenancy</a></p>
+<p><a href="#BGBHBDEI">Multitenancy</a></p>
 </li>
 <li>
-<p><a href="#CFHGBAFD">Soft Delete</a></p>
+<p><a href="#BGBFFEIG">Soft Delete</a></p>
 </li>
 <li>
-<p><a href="#CFHGBBJA">Data History</a></p>
+<p><a href="#BGBGAHGG">Data History</a></p>
 </li>
 <li>
-<p><a href="#CFHEHFHB">Temporal Filtering</a></p>
+<p><a href="#BGBFIDGF">Temporal Filtering</a></p>
 </li>
 <li>
-<p><a href="#CFHDEBFE">Shared Table</a></p>
+<p><a href="#BGBHEFBA">Shared Table</a></p>
 </li>
 </ul>
-<a id="CFHJIDHD" name="CFHJIDHD"></a>
+<a id="BGBHBDEI" name="BGBHBDEI"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Multitenancy</font></strong></p>
 <p>In a multitenancy environment, tenants (users, clients, organizations, applications) can share database tables, but the views on the data are restricted so that tenants have access only to their own data. You can use additional criteria to configure such restrictions.</p>
 <div align="center">
@@ -169,14 +169,14 @@ entityManager.setProperty("COMPANY", "MyCompany");
 </table>
 <br /></div>
 <!-- class="inftblnote" --></div>
-<div class="example"><a id="TLJPA323" name="TLJPA323"></a><a id="sthref11" name="sthref11"></a>
+<div class="example"><a id="TLJPA323" name="TLJPA323"></a><a id="sthref12" name="sthref12"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-3 Multitenancy Example 1</font></em></strong></p>
 <p>The following example restricts the data for a <strong>Billing</strong> client, such as a billing application or billing organization:</p>
 <pre xml:space="preserve" class="oac_no_warn">
 @AdditionalCriteria("this.tenant = 'Billing'")
 </pre></div>
 <!-- class="example" -->
-<div class="example"><a id="TLJPA324" name="TLJPA324"></a><a id="sthref12" name="sthref12"></a>
+<div class="example"><a id="TLJPA324" name="TLJPA324"></a><a id="sthref13" name="sthref13"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-4 Multitenancy Example 2</font></em></strong></p>
 <p>The following example could be used in an application used by multiple tenants at the same time. The additional criteria is defined as:</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -196,13 +196,13 @@ Map properties = new HashMap();
 properties.put("tenant", "ACME");
 EntityManager em = factory.createEntityManager(properties);
 </pre>
-<a id="CFHGBAFD" name="CFHGBAFD"></a>
+<a id="BGBFFEIG" name="BGBFFEIG"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Soft Delete</font></strong></p>
 <p>The following example filters data that is marked as deleted (but which still exists in the table) from a query:</p>
 <pre xml:space="preserve" class="oac_no_warn">
 @AdditionalCriteria("this.isDeleted = false")
 </pre>
-<a id="CFHGBBJA" name="CFHGBBJA"></a>
+<a id="BGBGAHGG" name="BGBGAHGG"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Data History</font></strong></p>
 <p>The following example returns the current data from a query, thus filtering out any out-of-date data, for example data stored in a history table.</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -222,16 +222,16 @@ EntityManager em = factory.createEntityManager(properties);
 </table>
 <br /></div>
 <!-- class="inftblnote" --></div>
-<a id="CFHEHFHB" name="CFHEHFHB"></a>
+<a id="BGBFIDGF" name="BGBFIDGF"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Temporal Filtering</font></strong></p>
 <p>The following example filters on a specific date:</p>
 <pre xml:space="preserve" class="oac_no_warn">
 @AdditionalCriteria("this.startDate &lt;= :viewDate and this.endDate &gt;= :viewDate")
 </pre>
-<a id="CFHDEBFE" name="CFHDEBFE"></a>
+<a id="BGBHEFBA" name="BGBHEFBA"></a>
 <p><strong><font face="arial, helvetica, sans-serif" color="#330099">Shared Table</font></strong></p>
 <p>For a shared table, there may be inheritance in the table but not in the object model. For example, a <code>SavingsAccount</code> class may be mapped to an <code>ACCOUNT</code> table, but the <code>ACCOUNT</code> table contains both savings account data (<code>SAVINGS</code>) and checking account (<code>CHECKING</code>) data. You can use additional criteria to filter out the checking account data.</p>
-<a id="sthref13" name="sthref13"></a>
+<a id="sthref14" name="sthref14"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
@@ -266,7 +266,7 @@ EntityManager em = factory.createEntityManager(properties);
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-<font size="-2">Copyright&nbsp;&copy;&nbsp;2012,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../../dcommon/html/cpyr.htm"><br />
+</td>
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
@@ -281,5 +281,5 @@ EntityManager em = factory.createEntityManager(properties);
 </table>
 </div>
 <!-- class="footer" -->
-<div id="copyright">Copyright &copy; 2012, 2013 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
 </html>

@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@FetchAttribute | EclipseLink 2.5.x Java Persistence API (JPA) Extensions Reference</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T8:35:44Z" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.17" />
+<meta name="date" content="2013-10-03T12:33:24Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@FetchAttribute" />
 <meta name="relnum" content="Release 2.5" />
@@ -23,7 +23,7 @@
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
 <td align="left" valign="top"><div class="booktitle">Java Persistence API (JPA) Extensions Reference for EclipseLink, 
-Release 2.5</div></td>
+<b>Release 2.5</b><br /></font></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -51,10 +51,10 @@ Release 2.5</div></td>
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@FetchAttribute</font></h2>
 <p>Use <code>@FetchAttribute</code> to improve performance within a fetch group; it allows on-demand loading of a group of an object's attributes. As a result, the data for an attribute might not be loaded from the datasource until an explicit access call occurs.</p>
 <p>This avoids loading all the data of an object's attributes if the user requires only some of the attributes.</p>
-<a id="sthref122" name="sthref122"></a>
+<a id="sthref123" name="sthref123"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#BABDFABA">Table 2-21</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="TLJPA404" name="TLJPA404"></a><a id="sthref123" name="sthref123"></a><a id="BABDFABA" name="BABDFABA"></a>
+<div class="tblhruleformalwide"><a id="TLJPA404" name="TLJPA404"></a><a id="sthref124" name="sthref124"></a><a id="BABDFABA" name="BABDFABA"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 2-21 @FetchAttribute Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@FetchAttribute Annotation Elements" summary="This table describes this annotation&rsquo;s elements." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="31%" />
@@ -81,7 +81,7 @@ Release 2.5</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref124" name="sthref124"></a>
+<a id="sthref125" name="sthref125"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>EclipseLink provides two types of fetch groups:</p>
 <ul>
@@ -93,7 +93,7 @@ Release 2.5</div></td>
 </li>
 </ul>
 <p>You should extensively review your use cases when using fetch groups. In many cases, additional round-trips will offset any gains from deferred loading.</p>
-<a id="sthref125" name="sthref125"></a>
+<a id="sthref126" name="sthref126"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#BABFDFHD">Example 2-42</a> shows how to use <code>@FetchAttribute</code> within a <code>@FetchGroup</code> annotation.</p>
 <div class="example"><a id="BABFDFHD" name="BABFDFHD"></a><a id="TLJPA405" name="TLJPA405"></a>
@@ -118,7 +118,7 @@ public class Person {
    private ContactInfo contactInfo;
 </pre></div>
 <!-- class="example" -->
-<div class="example"><a id="sthref126" name="sthref126"></a>
+<div class="example"><a id="TLJPA54004" name="TLJPA54004"></a><a id="sthref127" name="sthref127"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 2-43 Using &lt;fetch-group&gt; XML</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 <strong>&lt;fetch-group name="basic-fetch-group"&gt;</strong>
@@ -128,10 +128,13 @@ public class Person {
 &lt;/fetch-group&gt;
 </pre></div>
 <!-- class="example" -->
-<a id="sthref127" name="sthref127"></a>
+<a id="sthref128" name="sthref128"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
+<li>
+<p><em>Understanding EclipseLink</em></p>
+</li>
 <li>
 <p><a href="a_fetchgroup.htm#BABJBDEG">"@FetchGroup"</a></p>
 </li>
@@ -160,7 +163,7 @@ public class Person {
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-<font size="-2">Copyright&nbsp;&copy;&nbsp;2012,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../../dcommon/html/cpyr.htm"><br />
+</td>
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
@@ -175,5 +178,5 @@ public class Person {
 </table>
 </div>
 <!-- class="footer" -->
-<div id="copyright">Copyright &copy; 2012, 2013 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
 </html>

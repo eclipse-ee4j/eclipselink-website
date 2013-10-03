@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Mapping Simple Values | EclipseLink 2.5 EclipseLink MOXy</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-02-28T10:13:49Z" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.17" />
+<meta name="date" content="2013-10-03T12:50:6Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Mapping Simple Values" />
 <meta name="relnum" content="Release 2.5" />
@@ -22,9 +22,8 @@
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
-<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><b>EclipseLink Developing JAXB Applications Using EclipseLink</b><br />
-<b>Release 2.5</b><br />
- </font></td>
+<td align="left" valign="top"><div class="booktitle">Developing JAXB Applications Using EclipseLink MOXy, 
+Release 2.5</div></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -46,9 +45,7 @@
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-02-28</font></p>
-<a id="CHDHEJHH" name="CHDHEJHH"></a><a id="TLJAX213" name="TLJAX213"></a>
+<div class="ind"><!-- End Header --><a id="CHDHEJHH" name="CHDHEJHH"></a><a id="TLJAX213" name="TLJAX213"></a>
 <div class="sect1">
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Mapping Simple Values</font></h1>
 <p>This section demonstrates several ways to map simple Java values directly to XML text nodes.</p>
@@ -88,7 +85,7 @@
 <div class="figure"><a id="CHDDEAAC" name="CHDDEAAC"></a><a id="TLJAX216" name="TLJAX216"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 4-1 XML Direct Mapping to an Attribute</font></em></strong></p>
 <img src="img/dxmatt.gif" alt="XML Direct Mapping to an Attribute" title="XML Direct Mapping to an Attribute" longdesc="img_text/dxmatt.htm" /><br />
-<a id="sthref63" name="sthref63" href="img_text/dxmatt.htm">Description of "Figure 4-1 XML Direct Mapping to an Attribute"</a><br />
+<a id="sthref64" name="sthref64" href="img_text/dxmatt.htm">Description of "Figure 4-1 XML Direct Mapping to an Attribute"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p><a href="#CHDCBCAE">Example 4-2</a> shows how to annotate your Java class to obtain this mapping with EclipseLink. All that is needed is the standard JAXB <code>@XmlAttribute</code> annotation.</p>
@@ -170,7 +167,7 @@ public class Customer {
 <div class="figure"><a id="CHDIHEFA" name="CHDIHEFA"></a><a id="TLJAX222" name="TLJAX222"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 4-2 XML Direct Mapping to Individual Text Nodes</font></em></strong></p>
 <img src="img/dxmss.gif" alt="XML Direct Mapping to Individual Text Nodes" title="XML Direct Mapping to Individual Text Nodes" longdesc="img_text/dxmss.htm" /><br />
-<a id="sthref64" name="sthref64" href="img_text/dxmss.htm">Description of "Figure 4-2 XML Direct Mapping to Individual Text Nodes"</a><br />
+<a id="sthref65" name="sthref65" href="img_text/dxmss.htm">Description of "Figure 4-2 XML Direct Mapping to Individual Text Nodes"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p><a href="#CHDCEBGA">Example 4-1</a> shows how to annotate your Java class to obtain this mapping with EclipseLink. Here, the standard JAXB <code>@XmlElement</code> annotation is used, with a customized element name.</p>
@@ -244,7 +241,7 @@ public class Customer {
 <div class="figure"><a id="CHDJGBDD" name="CHDJGBDD"></a><a id="TLJAX227" name="TLJAX227"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 4-3 XML Direct Mapping to a Text Element in a Subnode</font></em></strong></p>
 <img src="img/dxmse.gif" alt="XML Direct Mapping to a Text Element in a Subnode" title="XML Direct Mapping to a Text Element in a Subnode" longdesc="img_text/dxmse.htm" /><br />
-<a id="sthref65" name="sthref65" href="img_text/dxmse.htm">Description of "Figure 4-3 XML Direct Mapping to a Text Element in a Subnode"</a><br />
+<a id="sthref66" name="sthref66" href="img_text/dxmse.htm">Description of "Figure 4-3 XML Direct Mapping to a Text Element in a Subnode"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p><a href="#CHDJGGDB">Example 4-8</a> shows how to annotate your Java class to obtain this mapping with EclipseLink. Here, because we are going beyond a simple element name customization and are actually introducing new XML structure, EclipseLink's <code>@XmlPath</code> annotation is used.</p>
@@ -312,7 +309,7 @@ public class Customer {
 <div class="figure"><a id="CHDCDJAA" name="CHDCDJAA"></a><a id="TLJAX232" name="TLJAX232"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 4-4 XML Direct Mapping to a Text Node</font></em></strong></p>
 <img src="img/dxmpos.gif" alt="XML Direct Mapping to a Text Node" title="XML Direct Mapping to a Text Node" longdesc="img_text/dxmpos.htm" /><br />
-<a id="sthref66" name="sthref66" href="img_text/dxmpos.htm">Description of "Figure 4-4 XML Direct Mapping to a Text Node"</a><br />
+<a id="sthref67" name="sthref67" href="img_text/dxmpos.htm">Description of "Figure 4-4 XML Direct Mapping to a Text Node"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p><a href="#CHDGIGCD">Example 4-11</a> shows how to configure this mapping in Java. Again, for more complex XML path customization, EclipseLink's <code>@XmlPath</code> annotation is used.</p>
@@ -373,7 +370,7 @@ public class Customer {
 <div class="figure"><a id="CHDBJFCA" name="CHDBJFCA"></a><a id="TLJAX237" name="TLJAX237"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 4-5 XML Direct Mapping to a Simple Text Node</font></em></strong></p>
 <img src="img/dxmstn.gif" alt="XML Direct Mapping to a Simple Text Node" title="XML Direct Mapping to a Simple Text Node" longdesc="img_text/dxmstn.htm" /><br />
-<a id="sthref67" name="sthref67" href="img_text/dxmstn.htm">Description of "Figure 4-5 XML Direct Mapping to a Simple Text Node"</a><br />
+<a id="sthref68" name="sthref68" href="img_text/dxmstn.htm">Description of "Figure 4-5 XML Direct Mapping to a Simple Text Node"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p><a href="#CHDGGIAD">Example 4-14</a> shows how to annotate your Java class to obtain this mapping with EclipseLink. In this case, the <code>@XmlValue</code> annotation will be used.</p>
@@ -438,7 +435,7 @@ public class PhoneNumber {
 <div class="figure"><a id="CHDIFDIB" name="CHDIFDIB"></a><a id="TLJAX242" name="TLJAX242"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 4-6 XML Direct Mapping to a Specific Schema Type</font></em></strong></p>
 <img src="img/schematypedate.gif" alt="XML Direct Mapping to a Specific Schema Type" title="XML Direct Mapping to a Specific Schema Type" longdesc="img_text/schematypedate.htm" /><br />
-<a id="sthref68" name="sthref68" href="img_text/schematypedate.htm">Description of "Figure 4-6 XML Direct Mapping to a Specific Schema Type"</a><br />
+<a id="sthref69" name="sthref69" href="img_text/schematypedate.htm">Description of "Figure 4-6 XML Direct Mapping to a Specific Schema Type"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p><a href="#CHDDECHC">Example 4-17</a> shows how to annotate your Java class to obtain this mapping with EclipseLink. Here, the <code>@XmlSchemaType</code> is used to specify the datatype that will appear in the marshalled XML.</p>
@@ -479,7 +476,7 @@ public class Customer {
 </pre></div>
 <!-- class="example" -->
 <a id="TLJAX245" name="TLJAX245"></a>
-<div class="sect3"><a id="sthref69" name="sthref69"></a>
+<div class="sect3"><a id="sthref70" name="sthref70"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Using Java Type Adapters</font></h3>
 <p><a href="#CHDGFHHD">Example 4-19</a> and <a href="#CHDJHJDG">Figure 4-7</a> illustrate XML direct mappings to two different text nodes of different binary types.</p>
 <div class="example"><a id="CHDGFHHD" name="CHDGFHHD"></a><a id="TLJAX246" name="TLJAX246"></a>
@@ -503,8 +500,8 @@ public class Customer {
 <!-- class="example" -->
 <div class="figure"><a id="CHDJHJDG" name="CHDJHJDG"></a><a id="TLJAX247" name="TLJAX247"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 4-7 XML Direct Mappings to Different Text Nodes of Different Binary Types</font></em></strong></p>
-<img src="img/dxmscht.gif" alt="XML Direct Mappings to Different Text Nodes of Different Binary Types" title="XML Direct Mappings to Different Text Nodes of Different Binary Types" longdesc="img_text/dxmscht.htm" /><br />
-<a id="sthref70" name="sthref70" href="img_text/dxmscht.htm">Description of "Figure 4-7 XML Direct Mappings to Different Text Nodes of Different Binary Types"</a><br />
+<img src="img/dxmscht.gif" alt="Description of Figure 4-7 follows" title="Description of Figure 4-7 follows" longdesc="img_text/dxmscht.htm" /><br />
+<a id="sthref71" name="sthref71" href="img_text/dxmscht.htm">Description of "Figure 4-7 XML Direct Mappings to Different Text Nodes of Different Binary Types"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p><a href="#CHDJGHBH">Example 4-20</a> shows how to annotate your Java class to obtain this mapping with EclipseLink. By default, JAXB will marshall <code>byte[]</code> to <code>base64Binary</code>, so nothing special is needed for the resume mapping. To map to a <strong>hexBinary</strong> field, the <code>@XmlSchemaType</code> annotation specifies the XML type, while <code>@XmlJavaTypeAdapter</code> specifies the adapter class that will be responsible for converting the value (in this case, the built-in JAXB <code>HexBinaryAdapter</code>).</p>
@@ -577,14 +574,14 @@ public class Customer {
 <div class="figure"><a id="CHDGACBA" name="CHDGACBA"></a><a id="TLJAX252" name="TLJAX252"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 4-8 Sample Java Class</font></em></strong></p>
 <img src="img/dxmsttc.gif" alt="Sample Java Class" title="Sample Java Class" longdesc="img_text/dxmsttc.htm" /><br />
-<a id="sthref71" name="sthref71" href="img_text/dxmsttc.htm">Description of "Figure 4-8 Sample Java Class"</a><br />
+<a id="sthref72" name="sthref72" href="img_text/dxmsttc.htm">Description of "Figure 4-8 Sample Java Class"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p><a href="#CHDFJIEB">Figure 4-9</a> illustrates an XML direct mapping with a simple type translator in an XML document that conforms to the schema above.</p>
 <div class="figure"><a id="CHDFJIEB" name="CHDFJIEB"></a><a id="TLJAX253" name="TLJAX253"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 4-9 XML Direct Mapping with Simple Type Translator</font></em></strong></p>
 <img src="img/dxmsttm.gif" alt="XML Direct Mapping with Simple Type Translator" title="XML Direct Mapping with Simple Type Translator" longdesc="img_text/dxmsttm.htm" /><br />
-<a id="sthref72" name="sthref72" href="img_text/dxmsttm.htm">Description of "Figure 4-9 XML Direct Mapping with Simple Type Translator"</a><br />
+<a id="sthref73" name="sthref73" href="img_text/dxmsttm.htm">Description of "Figure 4-9 XML Direct Mapping with Simple Type Translator"</a><br />
 <br /></div>
 <!-- class="figure" -->
 <p><a href="#CHDGCAAG">Example 4-23</a> shows how to annotate your Java class to obtain this mapping with EclipseLink.</p>
@@ -646,7 +643,7 @@ public class PhoneNumber {
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-                
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2012, 2013,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">

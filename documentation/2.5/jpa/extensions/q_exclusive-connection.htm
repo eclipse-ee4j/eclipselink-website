@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>exclusive-connection | EclipseLink 2.5.x Java Persistence API (JPA) Extensions Reference</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T8:35:45Z" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.17" />
+<meta name="date" content="2013-10-03T12:33:25Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="exclusive-connection" />
 <meta name="relnum" content="Release 2.5" />
@@ -23,7 +23,7 @@
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
 <td align="left" valign="top"><div class="booktitle">Java Persistence API (JPA) Extensions Reference for EclipseLink, 
-Release 2.5</div></td>
+<b>Release 2.5</b><br /></font></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -50,10 +50,10 @@ Release 2.5</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">exclusive-connection</font></h2>
 <p>Use <code>eclipselink.exclusive-connection</code> to specify if the query should use the exclusive (transactional/write) connection.</p>
-<a id="sthref546" name="sthref546"></a>
+<a id="sthref541" name="sthref541"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
 <p><a href="#BABGGEAH">Table 4-8</a> describes this query hint's values.</p>
-<div class="tblhruleformalwide"><a id="TLJPA748" name="TLJPA748"></a><a id="sthref547" name="sthref547"></a><a id="BABGGEAH" name="BABGGEAH"></a>
+<div class="tblhruleformalwide"><a id="TLJPA748" name="TLJPA748"></a><a id="sthref542" name="sthref542"></a><a id="BABGGEAH" name="BABGGEAH"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 4-8 Valid Values for exclusive-connection</font></em></strong></p>
 <table class="HRuleFormalWide" title="Valid Values for exclusive-connection" summary="Valid values for this extension" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="29%" />
@@ -69,7 +69,9 @@ Release 2.5</div></td>
 <td align="left" id="r2c1-t11" headers="r1c1-t11">
 <p>true</p>
 </td>
-<td align="left" headers="r2c1-t11 r1c2-t11"><br /></td>
+<td align="left" headers="r2c1-t11 r1c2-t11">
+<p>The query is executed through the exclusive connection.</p>
+</td>
 </tr>
 <tr align="left" valign="top">
 <td align="left" id="r3c1-t11" headers="r1c1-t11">
@@ -81,25 +83,31 @@ Release 2.5</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref548" name="sthref548"></a>
+<a id="sthref543" name="sthref543"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>This is valid only when an <code>EXCLUSIVE_CONNECTION_MODE</code> property has been set for the persistence unit (such as VPD). If a <code><a href="p_jdbc_exclusiveconnection_mode.htm#CACBICGG2">jdbc.exclusive-connection.mode</a></code> has been configured, use this query hint to ensure that the query is executed through the exclusive connection.</p>
 <p>This may be required in certain cases, such as when database security prevents a query joining to a secure table from returning the correct results, when executed through the shared connection.</p>
-<a id="sthref549" name="sthref549"></a>
+<a id="sthref544" name="sthref544"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
-<div class="example"><a id="TLJPA749" name="TLJPA749"></a><a id="sthref550" name="sthref550"></a>
+<div class="example"><a id="TLJPA749" name="TLJPA749"></a><a id="sthref545" name="sthref545"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 4-17 Using exclusive-connection in a JPA Query</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.EXCLUSIVE_CONNECTION", "TRUE");
 
 </pre></div>
 <!-- class="example" -->
-<div class="example"><a id="TLJPA750" name="TLJPA750"></a><a id="sthref551" name="sthref551"></a>
+<div class="example"><a id="TLJPA750" name="TLJPA750"></a><a id="sthref546" name="sthref546"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 4-18 Using exclusive-connection in a @QueryHint Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.EXCLUSIVE_CONNECTION, value="TRUE");
 
 </pre></div>
 <!-- class="example" -->
-<a id="sthref552" name="sthref552"></a>
+<a id="sthref547" name="sthref547"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
@@ -131,7 +139,7 @@ Release 2.5</div></td>
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-<font size="-2">Copyright&nbsp;&copy;&nbsp;2012,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../../dcommon/html/cpyr.htm"><br />
+</td>
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
@@ -146,5 +154,5 @@ Release 2.5</div></td>
 </table>
 </div>
 <!-- class="footer" -->
-<div id="copyright">Copyright &copy; 2012, 2013 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
 </html>

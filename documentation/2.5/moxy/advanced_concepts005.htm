@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Mapping Using XPath Predicates | EclipseLink 2.5 EclipseLink MOXy</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-02-28T10:13:50Z" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.17" />
+<meta name="date" content="2013-10-03T12:50:7Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Mapping Using XPath Predicates" />
 <meta name="relnum" content="Release 2.5" />
@@ -22,9 +22,8 @@
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
-<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><b>EclipseLink Developing JAXB Applications Using EclipseLink</b><br />
-<b>Release 2.5</b><br />
- </font></td>
+<td align="left" valign="top"><div class="booktitle">Developing JAXB Applications Using EclipseLink MOXy, 
+Release 2.5</div></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -46,13 +45,11 @@
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-02-28</font></p>
-<a id="CHDBFCAA" name="CHDBFCAA"></a><a id="TLJAX405" name="TLJAX405"></a>
+<div class="ind"><!-- End Header --><a id="CHDBFCAA" name="CHDBFCAA"></a><a id="TLJAX405" name="TLJAX405"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Mapping Using XPath Predicates</font></h1>
 <p>By default, JAXB will use the Java field name as the XML element name:</p>
-<div class="example"><a id="TLJAX406" name="TLJAX406"></a><a id="sthref163" name="sthref163"></a>
+<div class="example"><a id="TLJAX406" name="TLJAX406"></a><a id="sthref164" name="sthref164"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-24 Sample Java Code and XML Schema</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 public class Customer {
@@ -74,7 +71,7 @@ public class Customer {
 </pre></div>
 <!-- class="example" -->
 <p>Or, the XML name can be customized using the name attribute of the <code>@XmlElement</code> annotation:</p>
-<div class="example"><a id="TLJAX407" name="TLJAX407"></a><a id="sthref164" name="sthref164"></a>
+<div class="example"><a id="TLJAX407" name="TLJAX407"></a><a id="sthref165" name="sthref165"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-25 Sample Java Code and XML Schema</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 public class Customer {
@@ -111,7 +108,7 @@ public class Customer {
 </pre>
 <p>For cases like this, EclipseLink MOXy allows you to use XPath predicates to define an expression that will specify the XML element's name.</p>
 <a id="TLJAX408" name="TLJAX408"></a>
-<div class="sect2"><a id="sthref165" name="sthref165"></a>
+<div class="sect2"><a id="sthref166" name="sthref166"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Mapping with XPath Predicates</font></h2>
 <p>An XPath predicate represents an expression that will be evaluated against the element specified. For example, the XPath statement:</p>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -156,10 +153,10 @@ node[@name='foo']
 </div>
 <!-- class="sect2" -->
 <a id="TLJAX409" name="TLJAX409"></a>
-<div class="sect2"><a id="sthref166" name="sthref166"></a>
+<div class="sect2"><a id="sthref167" name="sthref167"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Mapping Based on Position</font></h2>
 <p>In the following example, our XML contains two <strong>name</strong> elements; the first occurrence of <strong>name</strong> should represent the <strong>Customer's</strong> first name, and the second <strong>name</strong> will be their last name. To map this, we will specify XPath expressions for each property that will match the appropriate XML element. Note that we also use <code>@XmlType(propOrder)</code> to ensure that our elements will always be in the proper positions.</p>
-<div class="example"><a id="TLJAX410" name="TLJAX410"></a><a id="sthref167" name="sthref167"></a>
+<div class="example"><a id="TLJAX410" name="TLJAX410"></a><a id="sthref168" name="sthref168"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-26 Using the @XmlType(propOrder) Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
@@ -184,7 +181,7 @@ public class Customer {
 </pre></div>
 <!-- class="example" -->
 <p>This same configuration can be expressed in an EclipseLink XML Bindings document as follows:</p>
-<div class="example"><a id="TLJAX411" name="TLJAX411"></a><a id="sthref168" name="sthref168"></a>
+<div class="example"><a id="TLJAX411" name="TLJAX411"></a><a id="sthref169" name="sthref169"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-27 Using the prop-order Attribute</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 ...
@@ -201,7 +198,7 @@ public class Customer {
 </pre></div>
 <!-- class="example" -->
 <p>This will give us the desired XML representation:</p>
-<div class="example"><a id="TLJAX412" name="TLJAX412"></a><a id="sthref169" name="sthref169"></a>
+<div class="example"><a id="TLJAX412" name="TLJAX412"></a><a id="sthref170" name="sthref170"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-28 Resulting XML</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -214,10 +211,10 @@ public class Customer {
 <!-- class="example" --></div>
 <!-- class="sect2" -->
 <a id="TLJAX413" name="TLJAX413"></a>
-<div class="sect2"><a id="sthref170" name="sthref170"></a>
+<div class="sect2"><a id="sthref171" name="sthref171"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Mapping Based on an Attribute Value</font></h2>
 <p>Since EclipseLink MOXy 2.3, you can also map to an XML element based on an Attribute value. In this example, all of our XML elements are named <strong>node</strong>, differentiated by the value of their <strong>name</strong> attribute:</p>
-<div class="example"><a id="TLJAX414" name="TLJAX414"></a><a id="sthref171" name="sthref171"></a>
+<div class="example"><a id="TLJAX414" name="TLJAX414"></a><a id="sthref172" name="sthref172"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-29 Sample XML Schema</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -234,7 +231,7 @@ public class Customer {
 </pre></div>
 <!-- class="example" -->
 <p>We can use an XPath in the form of <code>element-name[@attribute-name='value']</code> to map each Java field:</p>
-<div class="example"><a id="TLJAX415" name="TLJAX415"></a><a id="sthref172" name="sthref172"></a>
+<div class="example"><a id="TLJAX415" name="TLJAX415"></a><a id="sthref173" name="sthref173"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 8-30 Sample Mappings</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 package example;
@@ -297,7 +294,7 @@ public class PhoneNumber {
 <!-- class="example" --></div>
 <!-- class="sect2" -->
 <a id="TLJAX416" name="TLJAX416"></a>
-<div class="sect2"><a id="sthref173" name="sthref173"></a>
+<div class="sect2"><a id="sthref174" name="sthref174"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Creating "Self" Mappings</font></h2>
 <p>EclipseLink allows you to configure your one-to-one mappings so the data from the target object will appear inside the source object's XML element. Expanding on the previous example, we could map the <strong>Address</strong> information so that it would appear directly under the <strong>customer</strong> element, and <em>not</em> wrapped in its own element. This is referred to as a "self" mapping, and is achieved by setting the target object's XPath to&nbsp;<strong>.</strong>&nbsp;(dot).</p>
 <p><a href="#CHDGBEAC">Example 8-31</a> demonstrates a self mapping declared in annotations.</p>
@@ -366,7 +363,7 @@ public class Customer {
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-                
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2012, 2013,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">

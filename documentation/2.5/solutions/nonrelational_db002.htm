@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Implementing the Solution | EclipseLink 2.5.x Understanding EclipseLink</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-04-04T10:28:59Z" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.17" />
+<meta name="date" content="2013-10-03T12:26:51Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Implementing the Solution" />
 <meta name="relnum" content="Release 2.5" />
@@ -45,43 +45,33 @@
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-04-04</font></p>
-<a id="A1582967" name="A1582967"></a><a id="TLADG1023" name="TLADG1023"></a>
+<div class="ind"><!-- End Header --><a id="A1582967" name="A1582967"></a><a id="TLADG1023" name="TLADG1023"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Implementing the Solution</font></h1>
 <p>This section contains the following tasks for converting objects to and from JSON documents.</p>
 <ul>
 <li>
-<p><a href="#BABEBADB">Task 1: Prerequisites</a></p>
+<p><a href="#BABIGCEC">Task 1: Mapping the Data</a></p>
 </li>
 <li>
-<p><a href="#BABIGCEC">Task 2: Mapping the Data</a></p>
+<p><a href="#BABEIBBG">Task 2: Defining IDs</a></p>
 </li>
 <li>
-<p><a href="#BABEIBBG">Task 3: Defining IDs</a></p>
+<p><a href="#BABFIIFG">Task 3: Defining Mappings</a></p>
 </li>
 <li>
-<p><a href="#BABFIIFG">Task 4: Defining Mappings</a></p>
+<p><a href="#BABFIJAA">Task 4: Using Locking</a></p>
 </li>
 <li>
-<p><a href="#BABFIJAA">Task 5: Using Locking</a></p>
+<p><a href="#BABIIDED">Task 5: Defining Queries</a></p>
 </li>
 <li>
-<p><a href="#BABIIDED">Task 6: Defining Queries</a></p>
-</li>
-<li>
-<p><a href="#BABFJIJE">Task 7: Connecting to the Database</a></p>
+<p><a href="#BABFJIJE">Task 6: Connecting to the Database</a></p>
 </li>
 </ul>
-<a id="BABEBADB" name="BABEBADB"></a><a id="TLADG1024" name="TLADG1024"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" -->
-<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 1: Prerequisites</font></h2>
-</div>
-<!-- class="sect2" -->
 <a id="BABIGCEC" name="BABIGCEC"></a><a id="TLADG1025" name="TLADG1025"></a>
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
-<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 2: Mapping the Data</font></h2>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 1: Mapping the Data</font></h2>
 <p>You can configure mappings to NoSQL data with the EclipseLink <code>@NoSQL</code> annotation and <code>&lt;no-sql&gt;</code> XML element. The <code>@NoSQL</code> annotation defines the class as mapping to non-relational data. You can use <code>@NoSQL</code> with JPA Entity or Embeddable classes.</p>
 <p>The <code>@NoSQL</code> annotation allows you to specify the <code>dataType</code> and <code>dataFormat</code> of the data. The <code>dataType</code> will vary, depending on your NoSQL datasource:</p>
 <ul>
@@ -101,9 +91,9 @@
 <p>For Oracle NoSQL, use <code>MAPPED</code> (for key/value data) or <code>XML</code> (for a single XML document).</p>
 </li>
 </ul>
-<p><a href="#BABBBHHD">Example 20-1</a> illustrates how to use <code>@NoSQL</code> with <code>@Entity</code> and <code>@Embeddable</code> classes.</p>
+<p><a href="#BABBBHHD">Example 21-1</a> illustrates how to use <code>@NoSQL</code> with <code>@Entity</code> and <code>@Embeddable</code> classes.</p>
 <div class="example"><a id="BABBBHHD" name="BABBBHHD"></a><a id="TLADG1026" name="TLADG1026"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 20-1 Using @NoSql Annotation with JSON</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 21-1 Using @NoSql Annotation with JSON</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Entity
 <strong>@NoSQL(dataType="orders", dataFormat=DataFormatType.MAPPED)</strong>
@@ -141,7 +131,7 @@ public class OrderLine {
 <!-- class="sect2" -->
 <a id="BABEIBBG" name="BABEIBBG"></a><a id="TLADG1027" name="TLADG1027"></a>
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
-<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 3: Defining IDs</font></h2>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 2: Defining IDs</font></h2>
 <p>With EclipseLink, you can use any field (or set of fields) as your ID when using a non-relational database, just like any other relational Entity. You can use a <em>natural</em> ID (that is, assigned by the application) or a <em>generated</em> ID (that is, assigned by EclipseLink).</p>
 <p>MongoDB also requires an <code>_id</code> field in every document. If no <code>_id</code> field is present, Mongo will automatically generate and assign the <code>_id</code> field using an OID (object identifier), which is similar to a UUID (universally unique identifier).</p>
 <ul>
@@ -182,7 +172,7 @@ private String id;
 <!-- class="sect2" -->
 <a id="BABFIIFG" name="BABFIIFG"></a><a id="TLADG1028" name="TLADG1028"></a>
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
-<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 4: Defining Mappings</font></h2>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 3: Defining Mappings</font></h2>
 <p>With non-relational databases, EclipseLink maps objects to structured data such as XML or JSON. NoSQL supports all existing JPA mapping annotations and XML, including embedded data and embedded collections. If you do not define a mapping annotation (or XML) for an attribute EclipseLink uses the default mapping.</p>
 <a id="TLADG1029" name="TLADG1029"></a>
 <p><b><font face="arial, helvetica, sans-serif" color="#330099">Basic Mappings</font></b></p>
@@ -238,8 +228,8 @@ private String id;
 <br /></div>
 <!-- class="inftblnote" --></div>
 <p>You can also define a relationship mapping by using a query. However you must use a <code>DescriptorCustomizer</code> instead of an annotation.</p>
-<div class="example"><a id="TLADG1032" name="TLADG1032"></a><a id="sthref235" name="sthref235"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 20-2 Sample Mappings</font></em></strong></p>
+<div class="example"><a id="TLADG1032" name="TLADG1032"></a><a id="sthref224" name="sthref224"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 21-2 Sample Mappings</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Basic
 private String description;
@@ -259,7 +249,7 @@ private Customer customer;
 <!-- class="sect2" -->
 <a id="BABFIJAA" name="BABFIJAA"></a><a id="TLADG1033" name="TLADG1033"></a>
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
-<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 5: Using Locking</font></h2>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 4: Using Locking</font></h2>
 <p>Locking support is dependent on the NoSQL platform. Some NoSQL platforms may offer support for optimistic version locking.</p>
 <ul>
 <li>
@@ -283,9 +273,9 @@ private Customer customer;
 <!-- class="inftblnote" --></div>
 </li>
 </ul>
-<p>If the NoSQL platform does not support locking, you can use the <code>@Version</code> annotation (as shown in <a href="#BABFACAI">Example 20-3</a>) to validate objects on <code>merge()</code> operations.</p>
+<p>If the NoSQL platform does not support locking, you can use the <code>@Version</code> annotation (as shown in <a href="#BABFACAI">Example 21-3</a>) to validate objects on <code>merge()</code> operations.</p>
 <div class="example"><a id="BABFACAI" name="BABFACAI"></a><a id="TLADG1034" name="TLADG1034"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 20-3 Using @Version</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 21-3 Using @Version</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Version
 private long version;
@@ -295,10 +285,10 @@ private long version;
 <!-- class="sect2" -->
 <a id="BABIIDED" name="BABIIDED"></a><a id="TLADG1035" name="TLADG1035"></a>
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
-<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 6: Defining Queries</font></h2>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 5: Defining Queries</font></h2>
 <p>Querying in NoSQL is dependent on the NoSQL platform. Some NoSQL data-sources may support dynamic querying through their own query language, others may not support querying at all.</p>
 <a id="TLADG1036" name="TLADG1036"></a>
-<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref236" name="sthref236"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref225" name="sthref225"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">JPQL Queries</font></h3>
 <p>The Java Persistence Query Language (JPQL) is the query language defined by JPA. JPQL can be used for reading (<code>SELECT</code>), as well as bulk updates (<code>UPDATE</code>) and deletes (<code>DELETE</code>). You can use JPQL in a <code>NamedQuery</code> (through annotations or XML) or in dynamic queries using the EntityManager <code>createQuery()</code> API.</p>
 <ul>
@@ -309,13 +299,8 @@ private long version;
 <p>MongoDB &ndash; Supports JPQL and Criteria queries, with some restrictions: joins, sub-selects, group by and certain database functions are not supported.</p>
 </li>
 </ul>
-<div class="example"><a id="TLADG1037" name="TLADG1037"></a><a id="sthref237" name="sthref237"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 20-4 Oracle NoSQL JPQL Examples</font></em></strong></p>
-<pre xml:space="preserve" class="oac_no_warn">
-</pre></div>
-<!-- class="example" -->
-<div class="example"><a id="TLADG1038" name="TLADG1038"></a><a id="sthref238" name="sthref238"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 20-5 MongoDB JPQL Examples</font></em></strong></p>
+<div class="example"><a id="TLADG1038" name="TLADG1038"></a><a id="sthref226" name="sthref226"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 21-4 MongoDB JPQL Examples</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 Query query = em.createQuery("Select o from Order o where o.totalCost &gt; 1000");
 List&lt;Order&gt; orders = query.getResultList();
@@ -339,7 +324,7 @@ List&lt;BigDecimal&gt; orders = query.getResultList();
 <!-- class="example" --></div>
 <!-- class="sect3" -->
 <a id="TLADG1039" name="TLADG1039"></a>
-<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref239" name="sthref239"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref227" name="sthref227"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Native Queries</font></h3>
 <p>Native SQL queries are not translated, and passed directly to the database. SQL queries can be used for advanced queries that require database specific syntax.</p>
 <p>Although native SQL queries are not supported with NoSQL, some NoSQL platforms have their own, native query language. EclipseLink supports JPA native queries using that language.</p>
@@ -348,13 +333,8 @@ List&lt;BigDecimal&gt; orders = query.getResultList();
 <p>MongoDB &ndash; Supports JPA native queries by using the MongoDB native command language.</p>
 </li>
 </ul>
-<div class="example"><a id="TLADG1040" name="TLADG1040"></a><a id="sthref240" name="sthref240"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 20-6 Oracle NoSQL Native Query</font></em></strong></p>
-<pre xml:space="preserve" class="oac_no_warn">
-</pre></div>
-<!-- class="example" -->
-<div class="example"><a id="TLADG1041" name="TLADG1041"></a><a id="sthref241" name="sthref241"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 20-7 MongoDB Native Query</font></em></strong></p>
+<div class="example"><a id="TLADG1041" name="TLADG1041"></a><a id="sthref228" name="sthref228"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 21-5 MongoDB Native Query</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 Query query = em.createNativeQuery("db.ORDER.findOne({\"_id\":\"" + oid + "\"})", Order.class);
 Order order = (Order)query.getSingleResult();
@@ -364,7 +344,7 @@ Order order = (Order)query.getSingleResult();
 <!-- class="sect2" -->
 <a id="BABFJIJE" name="BABFJIJE"></a><a id="TLADG1042" name="TLADG1042"></a>
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
-<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 7: Connecting to the Database</font></h2>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 6: Connecting to the Database</font></h2>
 <p>EclipseLink connects to NoSQL databases through the persistence.xml file. Use the <code>&lt;eclipselink.target-database&gt;</code> property to define the specific NoSQL platform. You must also define a connection with the <code>&lt;eclipselink.nosql.connection-spec&gt;</code> property. Additional connection values (such as the <code>db</code>, <code>port</code>, and <code>host</code> can also be defined.</p>
 <div align="center">
 <div class="inftblnote"><br />
@@ -380,13 +360,8 @@ Order order = (Order)query.getSingleResult();
 </table>
 <br /></div>
 <!-- class="inftblnote" --></div>
-<div class="example"><a id="TLADG1043" name="TLADG1043"></a><a id="sthref242" name="sthref242"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 20-8 Oracle NoSQL persistence.xml Example</font></em></strong></p>
-<pre xml:space="preserve" class="oac_no_warn">
-</pre></div>
-<!-- class="example" -->
-<div class="example"><a id="TLADG1044" name="TLADG1044"></a><a id="sthref243" name="sthref243"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 20-9 MongoDB persistence.xml Example</font></em></strong></p>
+<div class="example"><a id="TLADG1044" name="TLADG1044"></a><a id="sthref229" name="sthref229"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 21-6 MongoDB persistence.xml Example</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 &lt;persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence persistence_2_0.xsd" version="2.0"&gt;
     &lt;persistence-unit name="acme" transaction-type="RESOURCE_LOCAL"&gt;
@@ -427,7 +402,7 @@ Order order = (Order)query.getSingleResult();
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-                
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2012,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">

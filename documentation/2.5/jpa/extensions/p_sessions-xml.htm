@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>sessions-xml | EclipseLink 2.5.x Java Persistence API (JPA) Extensions Reference</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T8:35:47Z" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.17" />
+<meta name="date" content="2013-10-03T12:33:27Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="sessions-xml" />
 <meta name="relnum" content="Release 2.5" />
@@ -23,7 +23,7 @@
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
 <td align="left" valign="top"><div class="booktitle">Java Persistence API (JPA) Extensions Reference for EclipseLink, 
-Release 2.5</div></td>
+<b>Release 2.5</b><br /></font></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -50,26 +50,26 @@ Release 2.5</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">sessions-xml</font></h2>
 <p>Use <code>eclipselink.sessions-xml</code> to use a specified native <code>sessions.xml</code> configuration file (which references a <code>project.xml</code> file) to load configuration and mapping information instead of JPA annotations or EclipseLink XML (as shown in <a href="#CIHFHAFB">Figure 5-1</a>).</p>
-<a id="sthref1226" name="sthref1226"></a>
+<a id="sthref1218" name="sthref1218"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
-<p><a href="#CIHCGECF">Table 5-89</a> describes this persistence property's values.</p>
-<div class="tblhruleformalwide"><a id="TLJPA1132" name="TLJPA1132"></a><a id="sthref1227" name="sthref1227"></a><a id="CIHCGECF" name="CIHCGECF"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Table 5-89 Valid Values for sessions-xml</font></em></strong></p>
+<p><a href="#CIHCGECF">Table 5-88</a> describes this persistence property's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA1132" name="TLJPA1132"></a><a id="sthref1219" name="sthref1219"></a><a id="CIHCGECF" name="CIHCGECF"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 5-88 Valid Values for sessions-xml</font></em></strong></p>
 <table class="HRuleFormalWide" title="Valid Values for sessions-xml" summary="Valid Values for this query hint" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="29%" />
 <col width="*" />
 <thead>
 <tr align="left" valign="top">
-<th align="left" valign="bottom" id="r1c1-t96"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
-<th align="left" valign="bottom" id="r1c2-t96"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+<th align="left" valign="bottom" id="r1c1-t95"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t95"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
 </tr>
 </thead>
 <tbody>
 <tr align="left" valign="top">
-<td align="left" id="r2c1-t96" headers="r1c1-t96">
+<td align="left" id="r2c1-t95" headers="r1c1-t95">
 <p>configuration file</p>
 </td>
-<td align="left" headers="r2c1-t96 r1c2-t96">
+<td align="left" headers="r2c1-t95 r1c2-t95">
 <p>The resource name of the sessions XML file. If you do not specify the value for this property, it will not be used.</p>
 </td>
 </tr>
@@ -77,16 +77,16 @@ Release 2.5</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref1228" name="sthref1228"></a>
+<a id="sthref1220" name="sthref1220"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>You can use the <code>eclipselink.sessions-xml</code> property as an alternative to using annotations and deployment XML. With this property, EclipseLink builds an in-memory EclipseLink session and project based on this metadata (as shown in <a href="#CIHFHAFB">Figure 5-1</a>). You can acquire a persistence manager and use it, having defined all entities and so on using only EclipseLink <code>sessions.xml</code>.</p>
 <div class="figure"><a id="CIHFHAFB" name="CIHFHAFB"></a><a id="TLJPA1027" name="TLJPA1027"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Figure 5-1 Using the eclipselink.sessions-xml Persistence Property</font></em></strong></p>
-<img src="img/Override_tl.gif" alt="Description of Figure 5-1 follows" title="Description of Figure 5-1 follows" longdesc="img_text/Override_tl.htm" /><br />
-<a id="sthref1229" name="sthref1229" href="img_text/Override_tl.htm">Description of "Figure 5-1 Using the eclipselink.sessions-xml Persistence Property"</a><br />
+<img src="img/override_tl.gif" alt="Description of Figure 5-1 follows" title="Description of Figure 5-1 follows" longdesc="img_text/override_tl.htm" /><br />
+<a id="sthref1221" name="sthref1221" href="img_text/override_tl.htm">Description of "Figure 5-1 Using the eclipselink.sessions-xml Persistence Property"</a><br />
 <br /></div>
 <!-- class="figure" -->
-<a id="sthref1230" name="sthref1230"></a>
+<a id="sthref1222" name="sthref1222"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#CIHGDFAI">Example 5-91</a> shows how to use this property in a <code>persistence.xml</code> file.</p>
 <div class="example"><a id="CIHGDFAI" name="CIHGDFAI"></a><a id="TLJPA1028" name="TLJPA1028"></a>
@@ -97,14 +97,14 @@ Release 2.5</div></td>
 </pre></div>
 <!-- class="example" -->
 <p><a href="#CIHGDFAI">Example 5-91</a> shows how to use this property in a property map.</p>
-<div class="example"><a id="TLJPA1029" name="TLJPA1029"></a><a id="sthref1231" name="sthref1231"></a>
+<div class="example"><a id="TLJPA1029" name="TLJPA1029"></a><a id="sthref1223" name="sthref1223"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-92 Using sessions-xml in Property Map</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 import org.eclipse.persistence.config.PersistenceUnitProperties;
 propertiesMap.put(PersistenceUnitProperties.SESSIONS_XML, "mysession.xml");
 </pre></div>
 <!-- class="example" -->
-<a id="sthref1232" name="sthref1232"></a>
+<a id="sthref1224" name="sthref1224"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
@@ -136,7 +136,7 @@ propertiesMap.put(PersistenceUnitProperties.SESSIONS_XML, "mysession.xml");
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-<font size="-2">Copyright&nbsp;&copy;&nbsp;2012,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../../dcommon/html/cpyr.htm"><br />
+</td>
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
@@ -151,5 +151,5 @@ propertiesMap.put(PersistenceUnitProperties.SESSIONS_XML, "mysession.xml");
 </table>
 </div>
 <!-- class="footer" -->
-<div id="copyright">Copyright &copy; 2012, 2013 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
 </html>

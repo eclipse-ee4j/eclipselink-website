@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>@ClassExtractor | EclipseLink 2.5.x Java Persistence API (JPA) Extensions Reference</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-01-28T8:35:43Z" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.17" />
+<meta name="date" content="2013-10-03T12:33:24Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="@ClassExtractor" />
 <meta name="relnum" content="Release 2.5" />
@@ -23,7 +23,7 @@
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
 <td align="left" valign="top"><div class="booktitle">Java Persistence API (JPA) Extensions Reference for EclipseLink, 
-Release 2.5</div></td>
+<b>Release 2.5</b><br /></font></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -50,10 +50,10 @@ Release 2.5</div></td>
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">@ClassExtractor</font></h2>
 <p>Use <code>@ClassExtractor</code> to define a custom class indicator in place of providing a discriminator column.</p>
-<a id="sthref57" name="sthref57"></a>
+<a id="sthref58" name="sthref58"></a>
 <p><strong><br /><span class="refsubsect">Annotation Elements</span></strong></p>
 <p><a href="#BABGCAFI">Table 2-10</a> describes this annotation's elements.</p>
-<div class="tblhruleformalwide"><a id="TLJPA362" name="TLJPA362"></a><a id="sthref58" name="sthref58"></a><a id="BABGCAFI" name="BABGCAFI"></a>
+<div class="tblhruleformalwide"><a id="TLJPA362" name="TLJPA362"></a><a id="sthref59" name="sthref59"></a><a id="BABGCAFI" name="BABGCAFI"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Table 2-10 @ClassExtractor Annotation Elements</font></em></strong></p>
 <table class="HRuleFormalWide" title="@ClassExtractor Annotation Elements" summary="This table describes the list of attributes for this annotation." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
 <col width="21%" />
@@ -80,11 +80,11 @@ Release 2.5</div></td>
 </table>
 <br /></div>
 <!-- class="tblhruleformalwide" -->
-<a id="sthref59" name="sthref59"></a>
+<a id="sthref60" name="sthref60"></a>
 <p><strong><br /><span class="refsubsect">Usage</span></strong></p>
 <p>If you are mapping to an existing database, and the tables do not have a discriminator column you can still define inheritance using the <code>@ClassExtractor</code> annotation or <code>&lt;class-extractor&gt;</code> element. The class extractor takes a class that implements the <code>ClassExtractor</code> interface. An instance of this class is used to determine the class type to use for a database row. The class extractor must define a <code>extractClassFromRow</code> method that takes the database <code>Record</code> and <code>Session</code>.</p>
 <p>If a class extractor is used with <code>SINGLE_TABLE</code> inheritance, the rows of the class type must be able to be filtered in queries. This can be accomplished by setting an <code>onlyInstancesExpression</code> or <code>withAllSubclassesExpression</code> for branch classes. These can be set to <code>Expression</code> objects using a <code>DescriptorCustomizer</code>.</p>
-<a id="sthref60" name="sthref60"></a>
+<a id="sthref61" name="sthref61"></a>
 <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
 <p><a href="#BGBEDADF">Example 2-23</a> shows an example of using <code>ClassExtractor</code> to define inheritance.</p>
 <div class="example"><a id="BGBEDADF" name="BGBEDADF"></a><a id="TLJPA363" name="TLJPA363"></a>
@@ -156,10 +156,13 @@ public class PreferredCustomizer implements DescriptorCustomizer {
 &lt;/entity&gt;
 </pre></div>
 <!-- class="example" -->
-<a id="sthref61" name="sthref61"></a>
+<a id="sthref62" name="sthref62"></a>
 <p><strong><br /><span class="refsubsect">See Also</span></strong></p>
 <p>For more information, see:</p>
 <ul>
+<li>
+<p>"Entities" in <em>Understanding EclipseLink</em></p>
+</li>
 <li>
 <p><a href="a_customizer.htm#CHDCCDGC">"@Customizer"</a></p>
 </li>
@@ -188,7 +191,7 @@ public class PreferredCustomizer implements DescriptorCustomizer {
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-<font size="-2">Copyright&nbsp;&copy;&nbsp;2012,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../../dcommon/html/cpyr.htm"><br />
+</td>
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
@@ -203,5 +206,5 @@ public class PreferredCustomizer implements DescriptorCustomizer {
 </table>
 </div>
 <!-- class="footer" -->
-<div id="copyright">Copyright &copy; 2012, 2013 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
 </html>

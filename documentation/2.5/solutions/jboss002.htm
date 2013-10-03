@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Implementing the Solution | EclipseLink 2.5.x Understanding EclipseLink</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-04-04T10:28:51Z" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.17" />
+<meta name="date" content="2013-10-03T12:26:49Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Implementing the Solution" />
 <meta name="relnum" content="Release 2.5" />
@@ -45,9 +45,7 @@
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-04-04</font></p>
-<a id="BEIBJBCF" name="BEIBJBCF"></a><a id="TLADG747" name="TLADG747"></a>
+<div class="ind"><!-- End Header --><a id="BEIBJBCF" name="BEIBJBCF"></a><a id="TLADG747" name="TLADG747"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Implementing the Solution</font></h1>
 <p>To develop, deploy and run EclipseLink applications in JBoss Application Server 7, you must create EclipseLink as a module of JBoss. You must also create other modules, such as a JDBC driver, etc., in order to run applications.</p>
@@ -85,7 +83,7 @@
 <ul>
 <li>
 <p>JBoss, version 7 or later. These instructions are based on JBoss release 7.1.1.</p>
-<p>Download JBoss from <code><a href="http://www.jboss.org/jbossas/downloads/">http://www.jboss.org/jbossas/downloads/</a></code> . The version of JBoss must be identified as "Certified Java EE6." Version 7.1.1 or later is recommended.</p>
+<p>Download JBoss from <code><a href="http://www.jboss.org/jbossas/downloads/">http://www.jboss.org/jbossas/downloads/</a></code>. The version of JBoss must be identified as "Certified Java EE6." Version 7.1.1 or later is recommended.</p>
 </li>
 <li>
 <p>EclipseLink 2.4 or later.</p>
@@ -185,15 +183,15 @@
 <a id="BEIIFFGB" name="BEIIFFGB"></a><a id="TLADG675" name="TLADG675"></a>
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 4: Create the Driver Definition and the Datasource</font></h2>
-<p>Create the driver definition and create the datasource.</p>
-<p>The following instructions tell how to configure JBoss for running in standalome mode, using the <code>standalone.xml</code> configuration file. For instructions on how to use <code>domain.xml</code> to configure JBoss for running in domain mode, see the JBoss documentation.</p>
+<p>Create the driver definition and create the data source.</p>
+<p>The following instructions tell how to configure JBoss for running in standalone mode, using the <code>standalone.xml</code> configuration file. For instructions on how to use <code>domain.xml</code> to configure JBoss for running in domain mode, see the JBoss documentation.</p>
 <ol>
 <li>
 <p>In the standalone configuration file <code>JBOSS_ HOME</code><code>\standalone\configuration\standalone.xml</code>, find the following:</p>
 <p><code>&lt;subsystem xmlns="urn:jboss:domain:datasources:1.0"&gt;</code></p>
 </li>
 <li>
-<p>In that section, configure the datasource. The following example shows a configuration for the Oracle Database, using the Oracle JDBC Thin driver. For instructions on configuring other datasources, see the JBoss documentation.</p>
+<p>In that section, configure the data source. The following example shows a configuration for the Oracle Database, using the Oracle JDBC Thin driver. For instructions on configuring other data sources, see the JBoss documentation.</p>
 </li>
 </ol>
 <pre xml:space="preserve" class="oac_no_warn">
@@ -296,7 +294,7 @@ jboss.naming.client.ejb.context=true
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-                
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2012,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">

@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Understanding JPA Deployment | EclipseLink 2.5.x Understanding EclipseLink</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-04-04T10:28:57Z" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.17" />
+<meta name="date" content="2013-10-03T12:26:50Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Understanding JPA Deployment" />
 <meta name="relnum" content="Release 2.5" />
@@ -45,9 +45,7 @@
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-04-04</font></p>
-<a id="CHDHAFFB" name="CHDHAFFB"></a><a id="TLADG396" name="TLADG396"></a>
+<div class="ind"><!-- End Header --><a id="CHDHAFFB" name="CHDHAFFB"></a><a id="TLADG396" name="TLADG396"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Understanding JPA Deployment</font></h1>
 <p>When deploying outside of a container, use the <code>createEntityManagerFactory</code> method of the <code>javax.persistence.Persistence</code> class to create an entity manager factory. This method accepts a <code>Map</code> of properties and the name of the persistence unit. The properties that you pass to this method are combined with those specified in the <code>persistence.xml</code> file. They may be additional properties or they may override the value of a property that you specified previously in the <code>persistence.xml</code> file.</p>
@@ -66,11 +64,11 @@
 <br /></div>
 <!-- class="inftblnotealso" --></div>
 <a id="TLADG397" name="TLADG397"></a>
-<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref138" name="sthref138"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref132" name="sthref132"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Using EntityManager</font></h2>
 <p>The <code>EntityManager</code> is the access point for persisting an entity bean, loading it from the database. Usually, the Java Persistence API (JPA) container manages interaction with the data source. However, if you are using a JTA data source for your JPA persistence unit, you can access the JDBC connection from the Java EE program container's data source. Because the managed data source is unavailable, you can pass properties to <code>createEntityManagerFactory</code> to change the transaction type from <code>JTA</code> to <code>RESOURCE_LOCAL</code> and to define JDBC connection information, as shown here:</p>
-<div class="example"><a id="sthref139" name="sthref139"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 16-1 Changing transaction type and defining connection information</font></em></strong></p>
+<div class="example"><a id="TLADG1204" name="TLADG1204"></a><a id="sthref133" name="sthref133"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 17-1 Changing transaction type and defining connection information</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 import static org.eclipse.persistence.jpa.config.PersistenceUnitProperties.*;
  
@@ -123,7 +121,7 @@ properties.put(TARGET_SERVER, TargetServer.None);
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-                
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2012,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">

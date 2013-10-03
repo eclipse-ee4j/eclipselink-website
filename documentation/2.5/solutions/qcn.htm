@@ -6,9 +6,9 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Using Database Events to Invalidate the Cache | EclipseLink 2.5.x Understanding EclipseLink</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-04-04T10:28:59Z" />
-<meta name="description" content="This chapter describes EclipseLink Database Change Notification (DCN), which allows you to use caching with a shared database in JPA." />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.17" />
+<meta name="date" content="2013-10-03T12:26:50Z" />
+<meta name="description" content="This chapter describes TopLink's support for Oracle Database Continuous Query Notification (CQN), which allows you to use caching with a shared database in JPA." />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Using Database Events to Invalidate the Cache" />
 <meta name="relnum" content="Release 2.5" />
@@ -16,7 +16,7 @@
 <link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
 <link rel="start" href="../../index.htm" title="Home" type="text/html" />
 <link rel="contents" href="toc.htm" title="Contents" type="text/html" />
-<link rel="prev" href="restful_jpa003.htm" title="Previous" type="text/html" />
+<link rel="prev" href="restful_jpa004.htm" title="Previous" type="text/html" />
 <link rel="next" href="qcn001.htm" title="Next" type="text/html" />
 <!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
 <body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:enkkfjmsqju', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
@@ -39,7 +39,7 @@
 <hr />
 <table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
 <tr>
-<td align="center"><a href="restful_jpa003.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="restful_jpa004.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
 <td align="center"><a href="qcn001.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
 <td>&nbsp;</td>
 </tr>
@@ -47,10 +47,23 @@
 </div>
 <!-- class="header" -->
 <div class="ind"><!-- End Header --><a id="CHDDAEJB" name="CHDDAEJB"></a><a id="TLADG549" name="TLADG549"></a>
-<p align="center"><font color="#FF0000">Beta Draft: 2013-04-04</font></p>
-<h1 class="chapter"><font face="arial, helvetica, sans-serif" color="#330099"><span class="secnum">19</span> Using Database Events to Invalidate the Cache</font></h1>
+<h1 class="chapter"><font face="arial, helvetica, sans-serif" color="#330099"><span class="secnum">20</span> Using Database Events to Invalidate the Cache</font></h1>
 <a id="TLADG1003" name="TLADG1003"></a>
-<p>This chapter describes EclipseLink Database Change Notification (DCN), which allows you to use caching with a shared database in JPA.</p>
+<p>This chapter describes TopLink's support for Oracle Database Continuous Query Notification (CQN), which allows you to use caching with a shared database in JPA.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>Oracle Database Continuous Query Notification was also formerly known as Oracle Database Change Notification.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
 <p>This chapter contains the following sections:</p>
 <ul>
 <li>
@@ -71,7 +84,7 @@
 <p>Users want to use a shared cache with their JPA application, however, external applications update the same database data, or the cache is in a clustered environment. The cache may retain stale data.</p>
 <a id="TLADG710" name="TLADG710"></a>
 <p><b><font face="arial, helvetica, sans-serif" color="#330099">Solution</font></b></p>
-<p>EclipseLink provides an API which allows the database to notify EclipseLink of database changes. The changed objects can then be invalidated in the EclipseLink shared cache. Stale data can be discarded, even if other applications access the same data in the database.</p>
+<p>The Oracle database provides an API to allow applications to register for notification of database changes. EclipseLink supports registering with the Oracle database and processing database change events to invalidate changed objects in the shared cache</p>
 <a id="TLADG711" name="TLADG711"></a>
 <p><b><font face="arial, helvetica, sans-serif" color="#330099">Components</font></b></p>
 <ul>
@@ -95,7 +108,7 @@
 </ul>
 <a id="TLADG712" name="TLADG712"></a>
 <p><b><font face="arial, helvetica, sans-serif" color="#330099">Sample</font></b></p>
-<p>For sample files that illustrate the use of Database Change Notification and shared caching in an application that uses JPA, see "EclipseLink/Examples/JPA/DCN" in the EclipseLink documentation.</p>
+<p>For sample files that illustrate the use of Continuous Query Notification and shared caching in an application that uses JPA, see "EclipseLink/Examples/JPA/DCN" in the EclipseLink documentation.</p>
 <p><code><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/DCN">http://wiki.eclipse.org/EclipseLink/Examples/JPA/DCN</a></code></p>
 </div>
 <!-- class="ind" -->
@@ -114,13 +127,13 @@
 <col width="48%" />
 <tr>
 <td>&nbsp;</td>
-<td align="center"><a href="restful_jpa003.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="restful_jpa004.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
 <td align="center"><a href="qcn001.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
 </tr>
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-                
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2012,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">

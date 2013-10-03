@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Performance Features | EclipseLink 2.5.x Understanding EclipseLink</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-04-04T10:28:58Z" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.17" />
+<meta name="date" content="2013-10-03T12:26:50Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Performance Features" />
 <meta name="relnum" content="Release 2.5" />
@@ -45,9 +45,7 @@
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-04-04</font></p>
-<a id="CHDIIAFD" name="CHDIIAFD"></a><a id="TLADG414" name="TLADG414"></a>
+<div class="ind"><!-- End Header --><a id="CHDIIAFD" name="CHDIIAFD"></a><a id="TLADG414" name="TLADG414"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Performance Features</font></h1>
 <p>EclipseLink includes a number of performance features that make it the industry's best performing and most scalable JPA implementation. These features include:</p>
@@ -91,7 +89,7 @@
 </li>
 </ul>
 <a id="TLADG416" name="TLADG416"></a>
-<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref145" name="sthref145"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref139" name="sthref139"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Caching Annotations</font></h3>
 <p>EclipseLink defines these entity caching annotations:</p>
 <ul>
@@ -105,15 +103,15 @@
 <p><code>@ExistenceChecking</code></p>
 </li>
 </ul>
-<p>EclipseLink also provides a number of persistence unit properties that you can specify to configure the EclipseLink cache (see "Persistence Property Extensions Reference" in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>). These properties might compliment or provide an alternative to the usage of annotations.</p>
+<p>EclipseLink also provides a number of persistence unit properties that you can specify to configure the EclipseLink cache (see "Persistence Property Extensions Reference" in <em>Java Persistence API (JPA) Extensions Reference for Oracle TopLink</em>). These properties might compliment or provide an alternative to the usage of annotations.</p>
 </div>
 <!-- class="sect3" -->
 <a id="TLADG417" name="TLADG417"></a>
-<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref146" name="sthref146"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref140" name="sthref140"></a>
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Using the @Cache Annotation</font></h3>
-<p>EclipseLink uses identity maps to cache objects in order to enhance performance, as well as maintain object identity. You can control the cache and its behavior by using the <code>@Cache</code> annotation in your entity classes. <a href="#CHDBDCBC">Example 17-1</a> shows how to implement this annotation.</p>
+<p>EclipseLink uses identity maps to cache objects in order to enhance performance, as well as maintain object identity. You can control the cache and its behavior by using the <code>@Cache</code> annotation in your entity classes. <a href="#CHDBDCBC">Example 18-1</a> shows how to implement this annotation.</p>
 <div class="example"><a id="CHDBDCBC" name="CHDBDCBC"></a><a id="TLADG418" name="TLADG418"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 17-1 Using the @Cache Annotation</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 18-1 Using the @Cache Annotation</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Entity
  @Table(name="EMPLOYEE")
@@ -130,7 +128,7 @@
  }
 </pre></div>
 <!-- class="example" -->
-<p>For more information about object caching and using the <code>@Cache</code> annotation, see "@Cache" in the <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+<p>For more information about object caching and using the <code>@Cache</code> annotation, see "@Cache" in the <em>Java Persistence API (JPA) Extensions Reference for Oracle TopLink</em>.</p>
 </div>
 <!-- class="sect3" --></div>
 <!-- class="sect2" -->
@@ -163,15 +161,15 @@
 <div class="sect3"><!-- infolevel="all" infotype="General" -->
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Read-only Queries</font></h3>
 <p>EclipseLink uses the <code>eclipselink.read-only</code> hint, <code>QueryHint</code> (<code>@QueryHint</code>) to retrieve read-only results back from a query. On nontransactional read operations, where the requested entity types are stored in the shared cache, you can request that the shared instance be returned instead of a detached copy.</p>
-<p>For more information about read-only queries, see the documentation for the read-only hint in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+<p>For more information about read-only queries, see the documentation for the read-only hint in <em>Java Persistence API (JPA) Extensions Reference for Oracle TopLink</em>.</p>
 </div>
 <!-- class="sect3" -->
 <a id="CHDEGCHH" name="CHDEGCHH"></a><a id="TLADG421" name="TLADG421"></a>
 <div class="sect3"><!-- infolevel="all" infotype="General" -->
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Join Fetching</font></h3>
-<p>Join Fetching enhances performance by enabling the joining and reading of the related objects in the same query as the source object. Enable Join Fetching by using the <code>@JoinFetch</code> annotation, as shown in <a href="#CHDBICAF">Example 17-2</a>. This example shows how the <code>@JoinFetch</code> annotation specifies the <code>Employee</code> field <code>managedEmployees</code>.</p>
+<p>Join Fetching enhances performance by enabling the joining and reading of the related objects in the same query as the source object. Enable Join Fetching by using the <code>@JoinFetch</code> annotation, as shown in <a href="#CHDBICAF">Example 18-2</a>. This example shows how the <code>@JoinFetch</code> annotation specifies the <code>Employee</code> field <code>managedEmployees</code>.</p>
 <div class="example"><a id="CHDBICAF" name="CHDBICAF"></a><a id="TLADG422" name="TLADG422"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 17-2 Enabling JoinFetching</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 18-2 Enabling JoinFetching</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Entity
  public class Employee implements Serializable {
@@ -185,7 +183,7 @@
  }
 </pre></div>
 <!-- class="example" -->
-<p>For more details on Join Fetching, see "@JoinFetch" in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+<p>For more details on Join Fetching, see "@JoinFetch" in <em>Java Persistence API (JPA) Extensions Reference for Oracle TopLink</em>.</p>
 </div>
 <!-- class="sect3" -->
 <a id="CHDFHFEB" name="CHDFHFEB"></a><a id="TLADG423" name="TLADG423"></a>
@@ -223,7 +221,7 @@
 <div class="sect3"><!-- infolevel="all" infotype="General" -->
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Cache Usage</font></h3>
 <p>EclipseLink uses a shared cache mechanism that is scoped to the entire persistence unit. When operations are completed in a particular persistence context, the results are merged back into the shared cache so that other persistence contexts can use them. This happens regardless of whether the entity manager and persistence context are created in Java SE or Java EE. Any entity persisted or removed using the entity manager will always be kept consistent with the cache.</p>
-<p>You can specify how the query should interact with the EclipseLink cache by using the <code>eclipselink.cache-usage</code> hint. For more information, see "cache usage" in t<em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+<p>You can specify how the query should interact with the EclipseLink cache by using the <code>eclipselink.cache-usage</code> hint. For more information, see "cache usage" in t<em>Java Persistence API (JPA) Extensions Reference for Oracle TopLink</em>.</p>
 </div>
 <!-- class="sect3" --></div>
 <!-- class="sect2" -->
@@ -256,14 +254,14 @@ myUnitofWork.<strong>addReadOnlyClass(B.class)</strong>;
 myUnitOfWork.<strong>addReadOnlyClasses(myVectorOfClasses)</strong>;
 </pre></li>
 </ul>
-<p>For more information about using read-only objects to enhance performance, see "@ReadOnly" in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+<p>For more information about using read-only objects to enhance performance, see "@ReadOnly" in <em>Java Persistence API (JPA) Extensions Reference for Oracle TopLink</em>.</p>
 </div>
 <!-- class="sect3" -->
 <a id="CHDIJAAH" name="CHDIJAAH"></a><a id="TLADG430" name="TLADG430"></a>
 <div class="sect3"><!-- infolevel="all" infotype="General" -->
 <h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Weaving</font></h3>
 <p>Weaving is a technique of manipulating the byte-code of compiled Java classes. The EclipseLink JPA persistence provider uses weaving to enhance both JPA entities and Plain Old Java Object (POJO) classes for such things as lazy loading, change tracking, fetch groups, and internal optimizations.Weaving can be performed either dynamically at runtime, when entities are loaded, or statically at compile time by post-processing the entity <code>.class</code> files. By default, EclipseLink uses dynamic weaving whenever possible. This includes inside an Java EE 5/6 application server and in Java SE when the EclipseLink agent is configured. Dynamic weaving is recommended as it is easy to configure and does not require any changes to a project's build process</p>
-<p>For details on how to use weaving to enhance application performance, see "weaving" in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+<p>For details on how to use weaving to enhance application performance, see "weaving" in <em>Java Persistence API (JPA) Extensions Reference for Oracle TopLink</em>.</p>
 </div>
 <!-- class="sect3" --></div>
 <!-- class="sect2" -->
@@ -271,9 +269,9 @@ myUnitOfWork.<strong>addReadOnlyClasses(myVectorOfClasses)</strong>;
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Transactions</font></h2>
 <p>To optimize performance during data transactions, use change tracking,. Change tracking allows you to tune the way EclipseLink detects changes that occur during a transaction. You should choose the strategy based on the usage and data modification patterns of the entity type as different types may have different access patterns and hence different settings, and so on.</p>
-<p>Enable change tracking by using the <code>@ChangeTracking</code> annotation, as shown in <a href="#CHDJDDFA">Example 17-3</a>.</p>
+<p>Enable change tracking by using the <code>@ChangeTracking</code> annotation, as shown in <a href="#CHDJDDFA">Example 18-3</a>.</p>
 <div class="example"><a id="CHDJDDFA" name="CHDJDDFA"></a><a id="TLADG432" name="TLADG432"></a>
-<p><strong><em><font face="arial, helvetica, sans-serif">Example 17-3 Enabling Change Tracking</font></em></strong></p>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 18-3 Enabling Change Tracking</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 @Entity
 @Table(name="EMPLOYEE")
@@ -283,7 +281,7 @@ public class Employee implements Serializable {
 }
 </pre></div>
 <!-- class="example" -->
-<p>For more details on change tracking, see "@ChangeTracking" in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+<p>For more details on change tracking, see "@ChangeTracking" in <em>Java Persistence API (JPA) Extensions Reference for Oracle TopLink</em>.</p>
 </div>
 <!-- class="sect2" -->
 <a id="CHDHFDEJ" name="CHDHFDEJ"></a><a id="TLADG433" name="TLADG433"></a>
@@ -342,7 +340,7 @@ public class Employee implements Serializable {
 &lt;property name="eclipselink.jdbc.bind-parameters" value="true"/&gt;
 </pre>
 <p>To disable parameterized SQL, change <code>value=</code> to <code>false</code>.</p>
-<p>For more information about using parameterized SQL and statement caching, see "jdbc.bind-parameters" in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+<p>For more information about using parameterized SQL and statement caching, see "jdbc.bind-parameters" in <em>Java Persistence API (JPA) Extensions Reference for Oracle TopLink</em>.</p>
 </div>
 <!-- class="sect3" -->
 <a id="CHDHDFAD" name="CHDHDFAD"></a><a id="TLADG436" name="TLADG436"></a>
@@ -363,7 +361,7 @@ public class Employee implements Serializable {
 <p>None; Disable batch writing.</p>
 </li>
 </ul>
-<p>For more information about batch writing, see "jdbc.batch-writing" in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+<p>For more information about batch writing, see "jdbc.batch-writing" in <em>Java Persistence API (JPA) Extensions Reference for Oracle TopLink</em>.</p>
 </div>
 <!-- class="sect3" --></div>
 <!-- class="sect2" -->
@@ -396,7 +394,7 @@ public class Employee implements Serializable {
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-                
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2012,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">

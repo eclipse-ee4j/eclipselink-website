@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <title>Bootstrapping from EclipseLink Metadata (OXM) | EclipseLink 2.5 EclipseLink MOXy</title>
-<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.11" />
-<meta name="date" content="2013-02-28T10:13:50Z" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.17" />
+<meta name="date" content="2013-10-03T12:50:7Z" />
 <meta name="robots" content="noarchive" />
 <meta name="doctitle" content="Bootstrapping from EclipseLink Metadata (OXM)" />
 <meta name="relnum" content="Release 2.5" />
@@ -22,9 +22,8 @@
 <div class="header"><a id="top" name="top"></a>
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
-<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><b>EclipseLink Developing JAXB Applications Using EclipseLink</b><br />
-<b>Release 2.5</b><br />
- </font></td>
+<td align="left" valign="top"><div class="booktitle">Developing JAXB Applications Using EclipseLink MOXy, 
+Release 2.5</div></td>
 <td valign="bottom" align="right" width="144">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
 <tr>
@@ -46,13 +45,11 @@
 </table>
 </div>
 <!-- class="header" -->
-<div class="ind"><!-- End Header -->
-<p align="center"><font color="#FF0000">Beta Draft: 2013-02-28</font></p>
-<a id="BGBGHCHJ" name="BGBGHCHJ"></a><a id="TLJAX460" name="TLJAX460"></a>
+<div class="ind"><!-- End Header --><a id="BGBGHCHJ" name="BGBGHCHJ"></a><a id="TLJAX460" name="TLJAX460"></a>
 <div class="sect1"><!-- infolevel="all" infotype="General" -->
 <h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Bootstrapping from EclipseLink Metadata (OXM)</font></h1>
 <p>If you would like to have more control over how your <code>DynamicEntities</code> will be mapped to XML, you can instead bootstrap from an EclipseLink OXM Metadata file. Using this approach, you can take advantage of EclipseLink's robust mappings framework and customize how each complex type in XML maps to its Java counterpart. The following API on <code>DynamicJAXBContextFactory</code> can be used to bootstrap from an OXM file:</p>
-<div class="example"><a id="TLJAX461" name="TLJAX461"></a><a id="sthref198" name="sthref198"></a>
+<div class="example"><a id="TLJAX461" name="TLJAX461"></a><a id="sthref199" name="sthref199"></a>
 <p><strong><em><font face="arial, helvetica, sans-serif">Example 9-11 Creating a DynamicJAXBContext</font></em></strong></p>
 <pre xml:space="preserve" class="oac_no_warn">
 /**
@@ -117,7 +114,7 @@ properties.put(JAXBContextProperties.OXM_METADATA_SOURCE, iStream);
 DynamicJAXBContext jaxbContext = DynamicJAXBContextFactory.createContextFromOXM(myClassLoader, properties);
 </pre>
 <a id="TLJAX462" name="TLJAX462"></a>
-<div class="sect2"><a id="sthref199" name="sthref199"></a>
+<div class="sect2"><a id="sthref200" name="sthref200"></a>
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Example</font></h2>
 <p>Using the sample OXM in <a href="#BABCECHB">Example 9-12</a>, we will show an example of how to create and marshall a new object using Dynamic MOXy. It is important to note the <code>type</code> attributes. Because there is no underlying Java class, the types of each property must be explicitly specified.</p>
 <div class="example"><a id="BABCECHB" name="BABCECHB"></a><a id="TLJAX463" name="TLJAX463"></a>
@@ -212,7 +209,7 @@ dContext.createMarshaller().marshal(newCustomer, System.out
 </table>
 </td>
 <td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
-                
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2012, 2013,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
   
 <td valign="bottom" align="right">
 <table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
