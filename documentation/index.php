@@ -87,7 +87,8 @@
 			<ul>
 				<li><form action="../"><label for="ReleaseNotes">Release Notes</label>
 <select name="ReleaseNotes">
-    <option value="http://www.eclipse.org/eclipselink/releases/2.5.php">2.5 (Current)</option>
+    <option disabled="disabled" value="https://www.eclipse.org/eclipselink/releases/2.6.php">2.6</option>
+    <option selected="selected" value="http://www.eclipse.org/eclipselink/releases/2.5.php">2.5 (Current)</option>
     <option value="http://www.eclipse.org/eclipselink/releases/">Older releases</option>
 </select>
 <input type="button" onclick="window.open(this.form.ReleaseNotes.options[this.form.ReleaseNotes.selectedIndex].value,'_top')" value="Go">
