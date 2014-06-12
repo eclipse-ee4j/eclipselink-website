@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>About Persisting Objects | EclipseLink 2.6.x Understanding EclipseLink</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.22 Build 1" />
+<meta name="date" content="2014-06-10T10:39:52Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="About Persisting Objects" />
+<meta name="relnum" content="2.6" />
+<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="app_dev002.htm" title="Previous" type="text/html" />
+<link rel="next" href="app_dev004.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:mdbgdwjv8zu', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><div class="booktitle">Understanding EclipseLink, 
+<b>2.6</b><br /></font></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="app_dev002.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="app_dev004.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header --><a id="BABFEDHA" name="BABFEDHA"></a><a id="OTLCG91195" name="OTLCG91195"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">About Persisting Objects</font></h1>
+<p>This section includes a brief description of relational mapping and provides information and restrictions to guide object and relational modeling. This information is useful when building applications.</p>
+<p>This section includes information on the following:</p>
+<ul>
+<li>
+<p><a href="#BABEIFFG">Application Object Model</a></p>
+</li>
+<li>
+<p><a href="#BABBIABD">Data Storage Schema</a></p>
+</li>
+<li>
+<p><a href="#BABDCJDH">Primary Keys and Object Identity</a></p>
+</li>
+<li>
+<p><a href="#BABFEIHF">Mappings</a></p>
+</li>
+<li>
+<p><a href="#BABEEJHA">Foreign Keys and Object Relationships</a></p>
+</li>
+<li>
+<p><a href="#BABBAIFB">Inheritance</a></p>
+</li>
+<li>
+<p><a href="#BABEDGBH">Concurrency</a></p>
+</li>
+<li>
+<p><a href="#BABBBCAC">Caching</a></p>
+</li>
+<li>
+<p><a href="#BABGFFJF">Nonintrusive Persistence</a></p>
+</li>
+<li>
+<p><a href="#BABCCDGC">Indirection</a></p>
+</li>
+<li>
+<p><a href="#CCHBBHDH">Mutability</a></p>
+</li>
+</ul>
+<a id="BABEIFFG" name="BABEIFFG"></a><a id="OTLCG91196" name="OTLCG91196"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Application Object Model</font></h2>
+<p>Object modeling refers to the design of the Java classes that represent your application objects. You can use your favorite integrated development environment (IDE) or Unified Modeling Language (UML) modeling tool to define and create your application object model.</p>
+<p>Any class that registers a descriptor with EclipseLink database sessions is called a persistent class. EclipseLink does not require that persistent classes provide public accessor methods for any private or protected attributes stored in the database. Refer to <a href="app_dev002.htm#BABDHDIA">Persistent Class Requirements</a> for more information.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABBIABD" name="BABBIABD"></a><a id="OTLCG91197" name="OTLCG91197"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Data Storage Schema</font></h2>
+<p>Your data storage schema refers to the design that you implement to organize the persistent data in your application. This schema refers to the data itself&mdash;not the actual data source (such as a relational database or nonrelational legacy system).</p>
+<p>During the design phase of the application development process, you should decide how to implement the classes in the data source. When integrating existing data source information, you must determine how the classes relate to the existing data. If no legacy information exists to integrate, decide how you will store each class, then create the necessary schema.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABDCJDH" name="BABDCJDH"></a><a id="OTLCG91198" name="OTLCG91198"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Primary Keys and Object Identity</font></h2>
+<p>When making objects persistent, each object requires an <em>identity</em> to uniquely identify it for storage and retrieval. Object identity is typically implemented using a unique primary key. This key is used internally by EclipseLink to identify each object, and to create and manage references. Violating object identity can corrupt the object model.</p>
+<p>In a Java application, object identity is preserved if each object in memory is represented by one, and only one, object instance. Multiple retrievals of the same object return references to the same object instance&mdash;not multiple copies of the same object.</p>
+<p>EclipseLink supports multiple identity maps to maintain object identity (including composite primary keys). See <a href="cache002.htm#CHEFCFEG">About Cache Type and Size</a> for additional information.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABFEIHF" name="BABFEIHF"></a><a id="OTLCG91199" name="OTLCG91199"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Mappings</font></h2>
+<p>EclipseLink uses metadata to describe how objects and beans map to the data source. This approach isolates persistence information from the object model&mdash;you are free to design their ideal object model, and DBAs are free to design their ideal schema. For more information, see <a href="blocks001.htm#CHEDICEE">About Metadata</a>.</p>
+<p>At run time, EclipseLink uses the metadata to seamlessly and dynamically interact with the data source, as required by the application.</p>
+<p>EclipseLink provides an extensive mapping hierarchy that supports the wide variety of data types and references that an object model might contain. For more information, see <a href="mappingintro.htm#CHDFEJIJ">Chapter 6, "Understanding Mappings."</a></p>
+</div>
+<!-- class="sect2" -->
+<a id="BABEEJHA" name="BABEEJHA"></a><a id="OTLCG91200" name="OTLCG91200"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Foreign Keys and Object Relationships</font></h2>
+<p>A <strong>foreign key</strong> can be one or more columns that reference a unique key, usually the primary key, in another table. Foreign keys can be any number of fields (similar to primary key), all of which are treated as a unit. A foreign key and the primary parent key it references must have the same number and type of fields.</p>
+<p>Foreign keys represents relationships from a column or columns in one table to a column or columns in another table. For example, if every <code>Employee</code> has an attribute <code>address</code> that contains an instance of <code>Address</code> (which has its own descriptor and table), the one-to-one mapping for the <code>address</code> attribute would specify foreign key information to find an address for a particular <code>Employee</code>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABBAIFB" name="BABBAIFB"></a><a id="OTLCG91201" name="OTLCG91201"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Inheritance</font></h2>
+<p>Object-oriented systems allow classes to be defined in terms of other classes. For example: motorcycles, sedans, and vans are all <em>kinds of vehicles</em>. Each of the vehicle types is a <em>subclass</em> of the <code>Vehicle</code> class. Similarly, the <code>Vehicle</code> class is the <em>superclass</em> of each specific vehicle type. Each subclass inherits attributes and methods from its superclass (in addition to having its own attributes and methods).</p>
+<p>Inheritance provides several application benefits, including the following:</p>
+<ul>
+<li>
+<p>Using subclasses to provide specialized behaviors from the basis of common elements provided by the superclass. By using inheritance, you can reuse the code in the superclass many times.</p>
+</li>
+<li>
+<p>Implementing <em>abstract</em> superclasses that define generic behaviors. This abstract superclass may define and partially implement behavior, while allowing you to complete the details with specialized subclasses.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BABEDGBH" name="BABEDGBH"></a><a id="OTLCG91202" name="OTLCG91202"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Concurrency</font></h2>
+<p>To have concurrent clients logged in at the same time, the server must spawn a dedicated thread of execution for each client. Java EE application servers do this automatically. Dedicated threads enable each client to work without having to wait for the completion of other clients. EclipseLink ensures that these threads do not interfere with each other when they make changes to the identity map or perform database transactions. Your client can make transactional changes in an isolated and thread safe manner. EclipseLink manages clones for the objects you modify to isolate each client's work from other concurrent clients and threads. This is essentially an object-level transaction mechanism that maintains all of the ACID (Atomicity, Consistency, Isolation, Durability) transaction principles as a database transaction.</p>
+<p>EclipseLink supports configurable optimistic and pessimistic locking strategies to let you customize the type of locking that the EclipseLink concurrency manager uses. For more information, see <a href="descriptors002.htm#CHEEEIEA">Descriptors and Locking.</a></p>
+</div>
+<!-- class="sect2" -->
+<a id="BABBBCAC" name="BABBBCAC"></a><a id="OTLCG91203" name="OTLCG91203"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Caching</font></h2>
+<p>EclipseLink caching improves application performance by automatically storing data returned as objects from the database for future use. This caching provides several advantages:</p>
+<ul>
+<li>
+<p>Reusing Java objects that have been previously read from the database minimizes database access</p>
+</li>
+<li>
+<p>Minimizing SQL calls to the database when objects already exist in the cache</p>
+</li>
+<li>
+<p>Minimizing network access to the database</p>
+</li>
+<li>
+<p>Setting caching policies a class-by-class and bean-by-bean basis</p>
+</li>
+<li>
+<p>Basing caching options and behavior on Java garbage collection</p>
+</li>
+</ul>
+<p>EclipseLink supports several caching polices to provide extensive flexibility. You can fine-tune the cache for maximum performance, based on individual application performance. Refer to <a href="cache.htm#CDEFHHEH">Chapter 8, "Understanding Caching"</a> for more information.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABGFFJF" name="BABGFFJF"></a><a id="OTLCG91204" name="OTLCG91204"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Nonintrusive Persistence</font></h2>
+<p>The EclipseLink nonintrusive approach of achieving persistence through a metadata architecture means that there are almost no object model intrusions.</p>
+<p>To persist Java objects, EclipseLink does not require any of the following:</p>
+<ul>
+<li>
+<p>Persistent superclass or implementation of persistent interfaces</p>
+</li>
+<li>
+<p>Store, delete, or load methods required in the object model</p>
+</li>
+<li>
+<p>Special persistence methods</p>
+</li>
+<li>
+<p>Generating source code into or wrapping the object model</p>
+</li>
+</ul>
+<p>See <a href="app_dev002.htm#BABCCAHJ">Building and Using the Persistence Layer</a> for additional information on this nonintrusive approach. See also <a href="blocks001.htm#CHEDICEE">About Metadata.</a></p>
+</div>
+<!-- class="sect2" -->
+<a id="BABCCDGC" name="BABCCDGC"></a><a id="OTLCG91205" name="OTLCG91205"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Indirection</font></h2>
+<p>An indirection object takes the place of an application object so the application object is not read from the database until it is needed. Using indirection, or lazy loading in JPA, allows EclipseLink to create <em>stand-ins</em> for related objects. This results in significant performance improvements, especially when the application requires the contents of only the retrieved object rather than all related objects.</p>
+<p>Without indirection, each time the application retrieves a persistent object, it also retrieves <em>all</em> the objects referenced by that object. This may result in lower performance for some applications.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>Oracle strongly recommends that you always use indirection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>EclipseLink provides several indirection models, such as proxy indirection, transparent indirection, and value holder indirection.</p>
+<p>See <a href="mappingintro002.htm#CEGBCJAG">Using Indirection with Collections</a> and <a href="mappingintro002.htm#CHDJAHDC">Indirection (Lazy Loading)</a> for more information.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CCHBBHDH" name="CCHBBHDH"></a><a id="OTLCG91206" name="OTLCG91206"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Mutability</font></h2>
+<p>Mutability is a property of a complex field that specifies whether the field value may be changed or not changed as opposed to replaced.</p>
+<p>An immutable mapping is one in which the mapped object value cannot change unless the object ID of the object changes: that is, unless the object value is replaced by another object value altogether.</p>
+<p>A mutable mapping is one in which the mapped object value can change without changing the object ID of the object.</p>
+<p>By default, EclipseLink assumes the following:</p>
+<ul>
+<li>
+<p>all <code>TransformationMapping</code> instances are mutable</p>
+</li>
+<li>
+<p>all JPA <code>@Basic</code> mapping types, except <code>Serializable</code> types, are immutable (including <code>Date</code> and <code>Calendar</code> types)</p>
+</li>
+<li>
+<p>all JPA <code>@Basic</code> mapping <code>Serializable</code> types are mutable</p>
+</li>
+</ul>
+<p>Whether a value is immutable or mutable largely depends on how your application uses your persistent classes. For example, by default, EclipseLink assumes that a persistent field of type <code>Date</code> is immutable: this means that as long as the value of the field has the same object ID, EclipseLink assumes that the value has not changed. If your application uses the set methods of the <code>Date</code> class, you can change the state of the <code>Date</code> object value without changing its object ID. This prevents EclipseLink from detecting the change. To avoid this, you can configure a mapping as mutable: this tells EclipseLink to examine the state of the persistent value, not just its object ID.</p>
+<p>You can configure the mutability of the following:</p>
+<ul>
+<li>
+<p><code>TransformationMapping</code> instances;</p>
+</li>
+<li>
+<p>any JPA <code>@Basic</code> mapping type (including <code>Date</code> and <code>Calendar</code> types) individually;</p>
+</li>
+<li>
+<p>all <code>Date</code> and <code>Calendar</code> types.</p>
+</li>
+</ul>
+<p>Mutability can affect change tracking performance. For example, if a transformation mapping maps a mutable value, EclipseLink must clone and compare the value. If the mapping maps a simple immutable value, you can improve performance by configuring the mapping as immutable.</p>
+<p>Mutability also affects weaving. EclipseLink can only weave an attribute change tracking policy for immutable mappings.</p>
+<p>For more information, see <a href="app_dev005.htm#CCHJEDFH">About Weaving</a>. See also the description of the <code>@Mutable</code> annotation in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="app_dev002.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="app_dev004.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+ 
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
+</html>

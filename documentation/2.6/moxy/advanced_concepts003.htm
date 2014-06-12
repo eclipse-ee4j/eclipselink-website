@@ -1,0 +1,457 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Using Virtual Access Methods | EclipseLink 2.6 EclipseLink MOXy</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.22 Build 1" />
+<meta name="date" content="2014-06-10T10:25:32Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Using Virtual Access Methods" />
+<meta name="relnum" content="Release 2.6" />
+<meta name="partnum" content="" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="advanced_concepts002.htm" title="Previous" type="text/html" />
+<link rel="next" href="advanced_concepts004.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:1hjujor5_fg', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><div class="booktitle">Developing JAXB Applications Using EclipseLink MOXy, 
+<b>Release 2.6</b><br /></font></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_moxy.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="advanced_concepts002.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="advanced_concepts004.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header --><a id="CHDJHCCE" name="CHDJHCCE"></a><a id="TLJAX373" name="TLJAX373"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Using Virtual Access Methods</font></h1>
+<p>In addition to standard JAXB properties (represented by Java fields and accessor methods), EclipseLink MOXy 2.3 introduced the concept of virtual properties and virtual access methods, which instead rely on special <code>get()</code> and <code>set()</code> methods to maintain mapping data. For example, you might want to use a <code>HashMap</code> as the underlying structure to hold data for certain mappings. The mappings that use virtual method access must be defined in EclipseLink OXM metadata.</p>
+<p>In order to add virtual properties to an entity:</p>
+<ul>
+<li>
+<p>the Java class must be marked with an <code>@XmlVirtualAccessMethods</code> annotation, or <code>&lt;xml-virtual-access-methods&gt;</code> element in OXM</p>
+</li>
+<li>
+<p>the Java class must contain getter and setter methods to access virtual property values:</p>
+<ul>
+<li>
+<p><code>public &lt;ValueType&gt; get(String propertyName)</code></p>
+</li>
+<li>
+<p><code>public void set(String propertyName, &lt;ValueType&gt; value)</code></p>
+<ul>
+<li>
+<p>method names are configurable</p>
+</li>
+<li>
+<p><code>&lt;ValueType&gt;</code> can be <code>Object</code>, or any other Java type (if you would like to use a particular type of value class in the method signature)</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>By default, EclipseLink will look for methods named <code>set</code> and <code>get</code>. To customize accessor method names, see <a href="#CHDBDGHA">"Specifying Alternate Accessor Methods"</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>For an example of using virtual properties in a multi-tenant architecture, see <a href="advanced_concepts004.htm#CHDIHFEE">"Using Extensible MOXy"</a>.</p>
+<a id="TLJAX374" name="TLJAX374"></a>
+<div class="sect2"><a id="sthref144" name="sthref144"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Configuring Virtual Access Methods</font></h2>
+<p>Virtual Access Methods can be configured either by through Java annotations (see <a href="#CIHHFHBH">Example 8-5</a>) or EclipseLink OXM metadata (see <a href="#CIHIIIFB">Example 8-6</a>).</p>
+<div class="example"><a id="CIHHFHBH" name="CIHHFHBH"></a><a id="TLJAX375" name="TLJAX375"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 8-5 Using Java Annotations</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package example;
+ 
+import java.util.Map;
+import java.util.HashMap;
+ 
+import javax.xml.bind.annotation.*;
+ 
+import org.eclipse.persistence.oxm.annotations.XmlVirtualAccessMethods;
+ 
+@XmlRootElement
+@XmlVirtualAccessMethods
+@XmlAccessorType(XmlAccessType.PROPERTY)
+public class Customer {
+ 
+   private int id;
+ 
+   private String name;
+ 
+   private Map&lt;String, Object&gt; extensions = new HashMap&lt;String, Object&gt;();
+ 
+   public Object get(String name) {
+      return extensions.get(name);
+   }
+ 
+   public void set(String name, Object value) {
+      extensions.put(name, value);
+   }
+ 
+   @XmlAttribute
+   public int getId() {
+   ...
+ 
+}
+ 
+</pre></div>
+<!-- class="example" -->
+<div class="example"><a id="CIHIIIFB" name="CIHIIIFB"></a><a id="TLJAX376" name="TLJAX376"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 8-6 Using OXM Metadata</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+...
+&lt;java-types&gt;
+   &lt;java-type name="Customer"&gt;
+      &lt;xml-virtual-access-methods /&gt;
+      &lt;java-attributes&gt;
+         &lt;xml-attribute java-attribute="id" /&gt;
+         &lt;xml-element java-attribute="name" /&gt;
+      &lt;/java-attributes&gt;
+   &lt;/java-type&gt;
+...
+ 
+</pre></div>
+<!-- class="example" --></div>
+<!-- class="sect2" -->
+<a id="TLJAX377" name="TLJAX377"></a>
+<div class="sect2"><a id="sthref145" name="sthref145"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Example</font></h2>
+<p>For this example we will use the <strong>Customer</strong> class (<a href="advanced_concepts002.htm#CHDEEICC">Example 8-3</a>), along with an EclipseLink OXM file to define our virtual mappings. Any property encountered in this file that does not have a corresponding Java attribute will be considered a virtual property and will be accessed through the virtual access methods. Because there is no associated Java field, the <code>type</code> information must also be provided.</p>
+<div class="example"><a id="TLJAX378" name="TLJAX378"></a><a id="sthref146" name="sthref146"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 8-7 The virtualprops-oxm.xml File</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+...
+&lt;java-types&gt;
+    &lt;java-type name="Customer"&gt;
+        &lt;java-attributes&gt;
+            &lt;xml-element java-attribute="discountCode" name="discount-code"
+                type="java.lang.String" /&gt;
+        &lt;/java-attributes&gt;
+    &lt;/java-type&gt;
+&lt;/java-types&gt;
+...
+ 
+</pre></div>
+<!-- class="example" -->
+<p>When creating the <code>JAXBContext</code>, we pass in the <code>virtualprops</code> metadata along with our <strong>Customer</strong> class.</p>
+<p>To set the values for virtual properties, we will use the aforementioned <code>set()</code> method.</p>
+<pre xml:space="preserve" class="oac_no_warn">
+InputStream oxm = classLoader.getResourceAsStream("virtualprops-oxm.xml");
+Map&lt;String, Object&gt; properties = new HashMap&lt;String, Object&gt;();
+properties.put(JAXBContextProperties.OXM_METADATA_SOURCE, oxm);
+ 
+Class[] classes = new Class[] { Customer.class };
+JAXBContext ctx = JAXBContext.newInstance(classes, properties);
+ 
+Customer c = new Customer();
+c.setId(7761);
+c.setName("Bob Smith");
+c.set("discountCode", "SIUB372JS7G2IUDS7");
+ 
+ctx.createMarshaller().marshal(e, System.out);
+ 
+</pre>
+<p>This will produce the following XML:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;customer id="7761"&gt;
+   &lt;name&gt;Bob Smith&lt;/name&gt;
+   &lt;discount-code&gt;SIUB372JS7G2IUDS7&lt;/discount-code&gt;
+&lt;/customer&gt;
+ 
+</pre>
+<p>Conversely, we use the <code>get(String)</code> method to access virtual properties:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+...
+Customer c = (Customer) ctx.createUnmarshaller().unmarshal(CUSTOMER_URL);
+ 
+// Populate UI
+customerWindow.getTextField(ID).setText(String.valueOf(c.getId()));
+customerWindow.getTextField(NAME).setText(c.getName());
+customerWindow.getTextField(DCODE).setText(c.get("discountCode"));
+...
+ 
+</pre></div>
+<!-- class="sect2" -->
+<a id="TLJAX379" name="TLJAX379"></a>
+<div class="sect2"><a id="sthref147" name="sthref147"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Using XmlAccessType.FIELD and XmlTransient</font></h2>
+<p>If you are using an <code>@XmlAccessorType</code> of <code>XmlAccessType.FIELD</code>, you will need to mark your virtual properties <code>Map</code> attribute to be <code>@XmlTransient</code>, to prevent the <code>Map</code> itself from being bound to XML:</p>
+<div class="example"><a id="TLJAX380" name="TLJAX380"></a><a id="sthref148" name="sthref148"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 8-8 Marking the Map Attribute</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package example;
+ 
+import javax.xml.bind.annotation.*;
+ 
+import org.eclipse.persistence.oxm.annotations.XmlVirtualAccessMethods;
+ 
+@XmlRootElement
+@XmlVirtualAccessMethods
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Customer {
+ 
+   <strong>@XmlTransient</strong>
+   private Map&lt;String, Object&gt; extensions;
+   ...
+ 
+</pre></div>
+<!-- class="example" --></div>
+<!-- class="sect2" -->
+<a id="TLJAX381" name="TLJAX381"></a>
+<div class="sect2"><a id="sthref149" name="sthref149"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Options</font></h2>
+<ul>
+<li>
+<p><a href="#CHDBDGHA">Specifying Alternate Accessor Methods</a></p>
+</li>
+<li>
+<p><a href="#CHDJDAJF">Specifying Schema Generation Options</a></p>
+</li>
+</ul>
+<a id="CHDBDGHA" name="CHDBDGHA"></a><a id="TLJAX382" name="TLJAX382"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Specifying Alternate Accessor Methods</font></h3>
+<p>To use different method names as your virtual method accessors, specify them using the <code>getMethodName</code> and <code>setMethodName</code> attributes on <code>@XmlVirtualAccessMethods</code>:</p>
+<div class="example"><a id="TLJAX383" name="TLJAX383"></a><a id="sthref150" name="sthref150"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 8-9 Using Alternate Accessor Methods</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package example;
+ 
+import java.util.Properties;
+ 
+import javax.xml.bind.annotation.*;
+ 
+import org.eclipse.persistence.oxm.annotations.XmlVirtualAccessMethods;
+ 
+@XmlRootElement
+@XmlVirtualAccessMethods(<strong>getMethod = "getCustomProps"</strong>, <strong>setMethod = "putCustomProps"</strong>)
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Customer {
+ 
+   @XmlAttribute
+   private int id;
+ 
+   private String name;
+ 
+   @XmlTransient
+   private Properties&lt;String, Object&gt; props = new Properties&lt;String, Object&gt;();
+ 
+   public Object getCustomProps(String name) {
+      return props.getProperty(name);
+   }
+ 
+   public void putCustomProps(String name, Object value) {
+      props.setProperty(name, value);
+   }
+ 
+}
+ 
+</pre></div>
+<!-- class="example" -->
+<p>In OXM:</p>
+<div class="example"><a id="TLJAX384" name="TLJAX384"></a><a id="sthref151" name="sthref151"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 8-10 Using the xml-virtual-access-methods Element</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+...
+&lt;java-types&gt;
+  &lt;java-type name="Customer"&gt;
+    &lt;xml-virtual-access-methods <strong>get-method="getCustomProps" set-method="putCustomProps"</strong> /&gt;
+    &lt;java-attributes&gt;
+      &lt;xml-attribute java-attribute="id" /&gt;
+      &lt;xml-element java-attribute="name" /&gt;
+      &lt;!-- virtual --&gt;
+      &lt;xml-element java-attribute="discountCode" name="discount-code"
+        type="java.lang.String" /&gt;
+    &lt;/java-attributes&gt;
+  &lt;/java-type&gt;
+...
+ 
+</pre></div>
+<!-- class="example" --></div>
+<!-- class="sect3" -->
+<a id="CHDJDAJF" name="CHDJDAJF"></a><a id="TLJAX385" name="TLJAX385"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Specifying Schema Generation Options</font></h3>
+<p>You can configure how virtual properties should appear in generated schemas using the <code>schema</code> attribute on <code>@XmlVirtualAccessMethods</code>. EclipseLink offers two options. Virtual properties can be:</p>
+<ul>
+<li>
+<p>written as individual nodes, or</p>
+</li>
+<li>
+<p>consolidated into a single <code>&lt;any&gt;</code> element.</p>
+</li>
+</ul>
+<a id="TLJAX386" name="TLJAX386"></a>
+<div class="sect4"><a id="sthref152" name="sthref152"></a>
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Virtual Properties as Individual Nodes</font></h4>
+<p>This is EclipseLink's default behavior, or can be specified explicitly as an override as follows:</p>
+<div class="example"><a id="TLJAX387" name="TLJAX387"></a><a id="sthref153" name="sthref153"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 8-11 Mapping as Individual Nodes</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package example;
+ 
+@XmlRootElement
+@XmlVirtualAccessMethods(schema = XmlVirtualAccessMethodsSchema.NODES)
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Customer {
+ 
+   ...
+ 
+</pre></div>
+<!-- class="example" -->
+<p>For example:</p>
+<div class="example"><a id="TLJAX388" name="TLJAX388"></a><a id="sthref154" name="sthref154"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 8-12 Original Customer Schema</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;xs:schema ...&gt;
+ 
+    &lt;xs:element name="customer"&gt;
+        &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+                &lt;xs:element name="first-name" type="xs:string" /&gt;
+                &lt;xs:element name="last-name" type="xs:string" /&gt;
+            &lt;/xs:sequence&gt;
+        &lt;/xs:complexType&gt;
+    &lt;/xs:element&gt;
+ 
+&lt;/xs:schema&gt;
+ 
+</pre></div>
+<!-- class="example" -->
+<div class="example"><a id="TLJAX389" name="TLJAX389"></a><a id="sthref155" name="sthref155"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 8-13 Generated Schema (After adding middle-initial and phone-number)</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;xs:schema ...&gt;
+ 
+    &lt;xs:element name="customer"&gt;
+        &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+                &lt;xs:element name="first-name" type="xs:string" /&gt;
+                &lt;xs:element name="last-name" type="xs:string" /&gt;
+                &lt;xs:element name="middle-initial" type="xs:string" /&gt;
+                &lt;xs:element name="phone-number" type="xs:string" /&gt;
+            &lt;/xs:sequence&gt;
+        &lt;/xs:complexType&gt;
+    &lt;/xs:element&gt;
+ 
+&lt;/xs:schema&gt;
+ 
+</pre></div>
+<!-- class="example" --></div>
+<!-- class="sect4" -->
+<a id="TLJAX390" name="TLJAX390"></a>
+<div class="sect4"><a id="sthref156" name="sthref156"></a>
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Virtual Properties in an <code>&lt;any&gt;</code> Element</font></h4>
+<p>EclipseLink can also use an <code>&lt;any&gt;</code> element to hold all of the virtual properties in one node:</p>
+<div class="example"><a id="CHDBFAEB" name="CHDBFAEB"></a><a id="TLJAX391" name="TLJAX391"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 8-14 Using an <code>&lt;any&gt;</code> Element</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package example;
+ 
+@XmlRootElement
+@XmlVirtualAccessMethods(schema = XmlVirtualAccessMethodsSchema.ANY)
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Customer {
+ 
+   ...
+ 
+</pre></div>
+<!-- class="example" -->
+<p>From <a href="#CHDBFAEB">Example 8-14</a>, a newly generated schema using this approach would look like:</p>
+<div class="example"><a id="TLJAX392" name="TLJAX392"></a><a id="sthref157" name="sthref157"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 8-15 Generated Schema</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;xs:schema ...&gt;
+ 
+    &lt;xs:element name="customer"&gt;
+        &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+                &lt;xs:element name="first-name" type="xs:string" /&gt;
+                &lt;xs:element name="last-name" type="xs:string" /&gt;
+                &lt;xs:any minOccurs="0" /&gt;
+            &lt;/xs:sequence&gt;
+        &lt;/xs:complexType&gt;
+   &lt;/xs:element&gt;
+ 
+&lt;/xs:schema&gt;
+</pre></div>
+<!-- class="example" --></div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="advanced_concepts002.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="advanced_concepts004.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+ 
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_moxy.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2013 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
+</html>

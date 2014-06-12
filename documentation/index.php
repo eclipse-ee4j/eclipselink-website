@@ -45,10 +45,10 @@
 				<div class="bigbuttonsDocumentation">
 					<a href="eclipselink/documentation/index.php"><div class="bigbuttonsTitleLink"></div></a>
 					<span>
-						<a href="/eclipselink/api/2.4/index.html"> Java Docs</a>,
+						<a href="/eclipselink/api/2.6/index.html"> Java Docs</a>,
 						<a href="http://wiki.eclipse.org/EclipseLink/Examples"> Examples</a>,
 						<a href="http://wiki.eclipse.org/EclipseLink/FAQ"> FAQ</a>, <br/>
-						<a href="/eclipselink/releases/2.4.php">2.4 New and Noteworthy</a>
+						<a href="/eclipselink/releases/2.6.php">2.6 New and Noteworthy</a>
 					</span>
 				</div>
 			</td>
@@ -87,8 +87,7 @@
 			<ul>
 				<li><form action="../"><label for="ReleaseNotes">Release Notes</label>
 <select name="ReleaseNotes">
-    <option disabled="disabled" value="https://www.eclipse.org/eclipselink/releases/2.6.php">2.6</option>
-    <option selected="selected" value="http://www.eclipse.org/eclipselink/releases/2.5.php">2.5 (Current)</option>
+    <option selected="selected" value="http://www.eclipse.org/eclipselink/releases/2.6.php">2.6 (Current)</option>
     <option value="http://www.eclipse.org/eclipselink/releases/">Older releases</option>
 </select>
 <input type="button" onclick="window.open(this.form.ReleaseNotes.options[this.form.ReleaseNotes.selectedIndex].value,'_top')" value="Go">
@@ -96,7 +95,7 @@
 				</li>
 				<li><form action="../"><label for="JavaDocs">Java Docs</label>
 <select name="JavaDocs">
-    <option value="http://www.eclipse.org/eclipselink/api/2.5/index.html">2.5 (Current)</option>
+    <option value="http://www.eclipse.org/eclipselink/api/2.6/index.html">2.6 (Current)</option>
     <option value="http://www.eclipse.org/eclipselink/api/">Older releases</option>
 </select>
 <input type="button" onclick="window.open(this.form.JavaDocs.options[this.form.JavaDocs.selectedIndex].value,'_top')" value="Go">
@@ -106,7 +105,8 @@
 				<li>
 <form action="../"><label for="solutions">Installation and Configuration</label>
   <select name="Installation">
-    <option value="http://www.eclipse.org/eclipselink/documentation/2.5/solutions/install.htm" selected="selected"> 2.5 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.6/solutions/install.htm" selected="selected"> 2.6 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.5/solutions/install.htm"> 2.5 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.4/solutions/install.htm"> 2.4 </option>
   </select>
   <input type="button" onclick="window.open(this.form.Installation.options[this.form.Installation.selectedIndex].value,'_top')" value="Go">
@@ -122,7 +122,8 @@
 				<li>
 <form action="../"><label for="Concepts">Understanding EclipseLink (Concepts Guide)</label>
   <select name="Concepts">
-    <option value="http://www.eclipse.org/eclipselink/documentation/2.5/concepts/toc.htm" selected="selected"> 2.5 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.5/concepts/toc.htm" selected="selected"> 2.6 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.6/concepts/toc.htm"> 2.5 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.4/concepts/toc.htm"> 2.4 </option>
   </select>
   <input type="button" onclick="window.open(this.form.Concepts.options[this.form.Concepts.selectedIndex].value,'_top')" value="Go">
@@ -132,7 +133,8 @@
 				<li>
 <form action="../"><label for="solutions">EclipseLink Solutions Guide</label>
   <select name="Solutions">
-    <option value="http://www.eclipse.org/eclipselink/documentation/2.5/solutions/toc.htm" selected="selected"> 2.5 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.6/solutions/toc.htm" selected="selected"> 2.6 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.5/solutions/toc.htm"> 2.5 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.4/solutions/toc.htm"> 2.4 </option>
   </select>
   <input type="button" onclick="window.open(this.form.Solutions.options[this.form.Solutions.selectedIndex].value,'_top')" value="Go">
@@ -142,7 +144,8 @@
 				<li>
 <form action="../"><label for="solutions">EclipseLink JPA Extensions Reference</label>
   <select name="JPA">
-    <option value="http://www.eclipse.org/eclipselink/documentation/2.5/jpa/extensions/toc.htm" selected="selected"> 2.5 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.5/jpa/extensions/toc.htm" selected="selected"> 2.6 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.6/jpa/extensions/toc.htm"> 2.5 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.4/jpa/extensions/toc.htm"> 2.4 </option>
   </select>
   <input type="button" onclick="window.open(this.form.JPA.options[this.form.JPA.selectedIndex].value,'_top')" value="Go">
@@ -152,7 +155,8 @@
 				<li>
 <form action="../"><label for="solutions">Developing JAXB Applications Using EclipseLink MOXy</label>
   <select name="MOXy">
-    <option value="http://www.eclipse.org/eclipselink/documentation/2.5/moxy/toc.htm" selected="selected"> 2.5 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.6/moxy/toc.htm" selected="selected"> 2.6 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.5/moxy/toc.htm"> 2.5 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.4/moxy/toc.htm"> 2.4 </option>
   </select>
   <input type="button" onclick="window.open(this.form.MOXy.options[this.form.MOXy.selectedIndex].value,'_top')" value="Go">
@@ -162,7 +166,8 @@
 				<li>
 <form action="../"><label for="solutions">EclipseLink NoSQL</label>
   <select name="nosql">
-    <option value="2.5/concepts/nosql.htm" selected="selected"> 2.5 </option>
+    <option value="2.6/concepts/nosql.htm" selected="selected"> 2.6 </option>
+    <option value="2.5/concepts/nosql.htm"> 2.5 </option>
     <option value="2.4/jpa/extensions/a_nosql.htm"> 2.4 </option>
   </select>
   <input type="button" onclick="window.open(this.form.nosql.options[this.form.nosql.selectedIndex].value,'_top')" value="Go">
@@ -172,7 +177,8 @@
 				<li>
 <form action="../"><label for="solutions">EclipseLink SDO</label>
   <select name="sdo">
-    <option value="http://www.eclipse.org/eclipselink/moxy.php" selected="selected"> 2.5 </option>
+    <option value="http://www.eclipse.org/eclipselink/moxy.php" selected="selected"> 2.6 </option>
+    <option value="http://www.eclipse.org/eclipselink/moxy.php"> 2.5 </option>
     <option value="http://wiki.eclipse.org/Category:SDO"> 2.4 </option>
   </select>
   <input type="button" onclick="window.open(this.form.sdo.options[this.form.sdo.selectedIndex].value,'_top')" value="Go">
@@ -182,7 +188,8 @@
 				<li>
 <form action="../"><label for="solutions">Developing Persistence Architectures Using EclipseLink Database Web Services</label>
   <select name="dbws">
-    <option value="http://www.eclipse.org/eclipselink/documentation/2.5/dbws/toc.htm" selected="selected"> 2.5 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.6/dbws/toc.htm" selected="selected"> 2.6 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.5/dbws/toc.htm"> 2.5 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.4/dbws/toc.htm"> 2.4 </option>
   </select>
   <input type="button" onclick="window.open(this.form.dbws.options[this.form.dbws.selectedIndex].value,'_top')" value="Go">

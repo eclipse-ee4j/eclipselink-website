@@ -1,0 +1,449 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Object-Relational Descriptor Concepts | EclipseLink 2.6.x Understanding EclipseLink</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.22 Build 1" />
+<meta name="date" content="2014-06-10T10:39:52Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Object-Relational Descriptor Concepts" />
+<meta name="relnum" content="2.6" />
+<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="descriptors001.htm" title="Previous" type="text/html" />
+<link rel="next" href="descriptors003.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><div id="cse-search-form" style="width: 100%;"><span class="loadingspin">Loading</span></div><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:mdbgdwjv8zu', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><div class="booktitle">Understanding EclipseLink, 
+<b>2.6</b><br /></font></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="descriptors001.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="descriptors003.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header --><a id="CHDIJDHB" name="CHDIJDHB"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Object-Relational Descriptor Concepts</font></h1>
+<p>The following sections describe the concepts specific to Object-Relational descriptors.</p>
+<ul>
+<li>
+<p><a href="#CHEJJCCG">Fetch Groups</a></p>
+</li>
+<li>
+<p><a href="#CHEFCCBD">Descriptor Query Manager</a></p>
+</li>
+<li>
+<p><a href="#CHECGEFD">Descriptors and Sequencing</a></p>
+</li>
+<li>
+<p><a href="#CHEEEIEA">Descriptors and Locking</a></p>
+</li>
+</ul>
+<a id="CHEJJCCG" name="CHEJJCCG"></a><a id="OTLCG92062" name="OTLCG92062"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Fetch Groups</font></h2>
+<p>By default, when you execute an object-level read query for a particular object class, EclipseLink returns all the persistent attributes mapped in the object's descriptor. With this single query, all the object's persistent attributes are defined, and calling their <code>get</code> methods returns the value directly from the object.</p>
+<p>When you are interested in only some of the attributes of an object, it may be more efficient to return only a subset of the object's attributes using a fetch group.</p>
+<p>Using a fetch group, you can define a subset of an object's attributes and associate the fetch group with either a <code>ReadObjectQuery</code> or <code>ReadAllQuery</code> query. When you execute the query, EclipseLink retrieves only the attributes in the fetch group. EclipseLink automatically executes a query to fetch all the attributes excluded from this subset when and if you call a get method on any one of the excluded attributes.</p>
+<p>You can define more than one fetch group for a class. You can optionally designate at most one such fetch group as the default fetch group. If you execute either a <code>ReadObjectQuery</code> or <code>ReadAllQuery</code> query without specifying a fetch group, EclipseLink will use the default fetch group, unless you configure the query otherwise.</p>
+<p>Before using fetch groups, Oracle recommends that you perform a careful analysis of system use. In many cases, the extra queries required to load attributes not in the fetch group could well offset the gain from the partial attribute loading.</p>
+<p>Fetch groups can be used only with basic mappings configured with <code>FetchType.LAZY (partial object queries)</code>.</p>
+<p>EclipseLink uses the <code>AttributeGroup</code> that can be used to configure the use of partial entities in fetch, load, copy, and merge operations.</p>
+<ul>
+<li>
+<p>Fetch: Control which attributes and their associated columns are retrieved from the database</p>
+</li>
+<li>
+<p>Load: Control which relationships in the entities returned from a query are populated</p>
+</li>
+<li>
+<p>Copy: Control which attributes are copied into a new entity instance</p>
+</li>
+<li>
+<p>Merge: Merge only those attributes fetched, loaded, or copied into an entity</p>
+</li>
+</ul>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref27" name="sthref27"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">AttributeGroup Types and Operations</font></h3>
+<p>The following sections describe the possible <code>AttributeGroup</code> types and operations.</p>
+<ul>
+<li>
+<p><a href="#CHDCHCHI">FetchGroup</a></p>
+</li>
+<li>
+<p><a href="#CHDBHDBG">Default FetchGroup</a></p>
+</li>
+<li>
+<p><a href="#CHDDIGEH">Named FetchGroup</a></p>
+</li>
+<li>
+<p><a href="#CHDHFEIB">Full FetchGroup</a></p>
+</li>
+<li>
+<p><a href="#CHDFADCE">Load/LoadAll with FetchGroup</a></p>
+</li>
+<li>
+<p><a href="#CHDJHHGD">LoadGroup</a></p>
+</li>
+<li>
+<p><a href="#CHDCJDIE">CopyGroup</a></p>
+</li>
+<li>
+<p><a href="#CHDIIBAJ">Merging</a></p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="CHDCHCHI" name="CHDCHCHI"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">FetchGroup</font></h3>
+<p>The <code>FetchGroup</code> defines which attributes should be fetched (selected from the database) when the entity is retrieved as the result of a query execution. The inclusion of relationship attributes in a <code>FetchGroup</code> only determines if the attribute's required columns should be fetched and populated. In the case of a lazy fetch type the inclusion of the attribute simply means that its proxy will be created to enable lazy loading when accessed. To force a relationship mapping to be populated when using a <code>FetchGroup</code> on a query the attribute must be included in the group and must either be <code>FetchType.EAGER</code> or it must be included in an associated <code>LoadGroup</code> on the query.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDBHDBG" name="CHDBHDBG"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Default FetchGroup</font></h3>
+<p><code>FetchGroup</code> also has the notion of named and default <code>FetchGroup</code> which are managed by the <code>FetchGroupManager</code>. A default <code>FetchGroup</code> is defined during metadata processing if one or more basic mappings are configured to be lazy and the entity class implements <code>FetchGroupTracker</code> (typically introduced through weaving). The default <code>FetchGroup</code> is used on all queries for this entity type where no explicit <code>FetchGroup</code> or named <code>FetchGroup</code> is configured.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDDIGEH" name="CHDDIGEH"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Named FetchGroup</font></h3>
+<p>A named <code>FetchGroup</code> can be defined for an entity using <code>@FetchGroup</code> annotation or within the <code>eclipselink-orm.xml</code> file.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDHFEIB" name="CHDHFEIB"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Full FetchGroup</font></h3>
+<p>A <code>FetchGroup</code> when first created is assumed to be empty. The user must add the attributes to the <code>FetchGroup</code>. If a <code>FetchGroup</code> is required with all of the attributes then the <code>FetchGroupManager.createFullFetchGroup()</code> must be used.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDFADCE" name="CHDFADCE"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Load/LoadAll with FetchGroup</font></h3>
+<p>A <code>FetchGroup</code> can also be configured to perform a load operation of relationship mappings and nested relationship mappings.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDJHHGD" name="CHDJHHGD"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">LoadGroup</font></h3>
+<p>A <code>LoadGroup</code> is used to force a specified set of relationship attributes to be populated in a query result.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDCJDIE" name="CHDCJDIE"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">CopyGroup</font></h3>
+<p>The <code>CopyGroup</code> replaces the deprecated <code>ObjectCopyPolicy</code> being used to define how a entity is copied. In addition to specifying the attributes defining what should be copied from the source entity graph into the target copy the <code>CopyGroup</code> also allows definition of:</p>
+<ul>
+<li>
+<p><code>shouldResetPrimaryKey</code>: Reset the identifier attributes to their default value. This is used when the copy operation is intended to clone the entity in order to make a new entity with similar state to the source. Default is <code>false</code>.</p>
+</li>
+<li>
+<p><code>shouldResetVersion</code>: Reset the optimistic version locking attribute to its default value in the copies. Default is <code>false</code>.</p>
+</li>
+<li>
+<p><code>depth</code>: defines cascade mode for handling relationships. By default <code>CASCADE_PRIVATE_PARTS</code> is used but it can also be configured to <code>NO_CASCADE</code> and <code>CASCADE_ALL_PARTS</code>.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="CHDIIBAJ" name="CHDIIBAJ"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Merging</font></h3>
+<p>When a partial entity is merged into a persistence context that has an <code>AttributeGroup</code> associated with it defining which attributes are available only those attributes are merged. The relationship mappings within the entity are still merged according to their cascade merge settings.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CHEFCCBD" name="CHEFCCBD"></a><a id="OTLCG92064" name="OTLCG92064"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Descriptor Query Manager</font></h2>
+<p>Each relational descriptor provides an instance of <code>DescriptorQueryManager</code> that you can use to configure the following:</p>
+<ul>
+<li>
+<p>named queries</p>
+</li>
+<li>
+<p>custom default queries for basic persistence operations</p>
+</li>
+<li>
+<p>additional join expressions</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="CHECGEFD" name="CHECGEFD"></a><a id="OTLCG92065" name="OTLCG92065"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Descriptors and Sequencing</font></h2>
+<p>An essential part of maintaining object identity is managing the assignment of unique values (that is, a specific sequence) to distinguish one object instance from another.</p>
+<p>Sequencing options you configure at the project (or session) level determine the type of sequencing that EclipseLink uses. In a POJO project, you can use session-level sequence configuration to override project-level sequence configuration, on a session-by-session basis, if required.</p>
+<p>After configuring the sequence type, for each descriptor's reference class, you must associate one attribute, typically the attribute used as the primary key, with its own sequence.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHEEEIEA" name="CHEEEIEA"></a><a id="OTLCG00086" name="OTLCG00086"></a>
+<div class="sect2">
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Descriptors and Locking</font></h2>
+<p>With object-relational mapping, you can configure a descriptor with any of the following locking policies to control concurrent access to a domain object:</p>
+<ul>
+<li>
+<p>Optimistic&mdash;All users have read access to the data. When a user attempts to make a change, the application checks to ensure the data has not changed since the user read the data.</p>
+</li>
+<li>
+<p>Pessimistic&mdash;The first user who accesses the data with the purpose of updating it locks the data until completing the update.</p>
+</li>
+<li>
+<p>No locking&mdash;The application does not prevent users overwriting each other's changes.</p>
+</li>
+</ul>
+<p>Oracle recommends using optimistic locking for most types of applications to ensure that users do not overwrite each other's changes.</p>
+<p>This section describes the various types of locking policies that EclipseLink supports, including the following:</p>
+<ul>
+<li>
+<p><a href="#CIHJCGBA">Optimistic Version Locking Policies</a></p>
+</li>
+<li>
+<p><a href="#CIHCFBJG">Pessimistic Locking Policies</a></p>
+</li>
+<li>
+<p><a href="#BCGDJHAF">Applying Locking in an Application</a></p>
+</li>
+</ul>
+<a id="CIHJCGBA" name="CIHJCGBA"></a><a id="OTLCG00029" name="OTLCG00029"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Optimistic Version Locking Policies</font></h3>
+<p>With optimistic locking, all users have read access to the data. When a user attempts to make a change, the application checks to ensure the data has not changed since the user read the data.</p>
+<p>Optimistic version locking policies enforce optimistic locking by using a version field (also known as a write-lock field) that you provide in the reference class that EclipseLink updates each time an object change is committed.</p>
+<p>EclipseLink caches the value of this version field as it reads an object from the data source. When the client attempts to write the object, EclipseLink compares the cached version value with the current version value in the data source in the following way:</p>
+<ul>
+<li>
+<p>If the values are the same, EclipseLink updates the version field in the object and commits the changes to the data source.</p>
+</li>
+<li>
+<p>If the values are different, the write operation is disallowed because another client must have updated the object since this client initially read it.</p>
+</li>
+</ul>
+<p>EclipseLink provides the following version-based optimistic locking policies:</p>
+<ul>
+<li>
+<p><code>VersionLockingPolicy</code></p>
+</li>
+<li>
+<p><code>TimestampLockingPolicy</code></p>
+</li>
+</ul>
+<p>For descriptions of these locking policies, see "Setting Optimistic Locking" in <em>Solutions Guide for EclipseLink</em>.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>In general, Oracle recommends numeric version locking because of the following:</p>
+<ul>
+<li>
+<p>accessing the timestamp from the data source can have a negative impact on performance;</p>
+</li>
+<li>
+<p>time stamp locking is limited to the precision that the database stores for timestamps.</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>Whenever any update fails because optimistic locking has been violated, EclipseLink throws an <code>OptimisticLockException</code>. This should be handled by the application when performing any database modification. The application must notify the client of the locking contention, refresh the object, and have the client reapply its changes.</p>
+<p>You can choose to store the version value in the object as a mapped attribute, or in the cache. In three-tier applications, you typically store the version value in the object to ensure it is passed to the client when updated (see <a href="#BCGDJHAF">Applying Locking in an Application</a>).</p>
+<p>If you store the version value in the cache, you do not need to map it. If you do map the version field, you must configure the mapping as read-only.</p>
+<p>To ensure that the parent object's version field is updated whenever a privately owned child object is modified, consider <a href="#CHECICGH">Optimistic Version Locking Policies and Cascading</a>.</p>
+<p>If you are using a stored procedure to update or delete an object, your database may not return the row-count required to detect an optimistic lock failure, so your stored procedure is responsible for checking the optimistic lock version and throwing an error if they do not match. Only version locking is directly supported with a <code>StoredProcedureCall</code>. Because timestamp and field locking require two versions of the same field to be passed to the call, an SQL call that uses an <code>##</code> parameter to access the translation row could be used for other locking policies.</p>
+<a id="CHECICGH" name="CHECICGH"></a><a id="OTLCG92082" name="OTLCG92082"></a>
+<div class="sect4">
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Optimistic Version Locking Policies and Cascading</font></h4>
+<p>If your database schema is such that both a parent object and its privately owned child object are stored in the same table, then if you update the child object, the parent object's version field will be updated.</p>
+<p>However, if the parent and its privately owned child are stored in separate tables, then changing the child will not, by default, update the parent's version field.</p>
+<p>To ensure that the parent object's version field is updated in this case, you can either manually update the parent object's version field or, if you are using a <code>VersionLockingPolicy</code>, you can configure EclipseLink to automatically cascade the child object's version field update to the parent.</p>
+<p>After you enable optimistic version locking cascading, when a privately owned child object is modified, EclipseLink will traverse the privately owned foreign reference mappings, updating all the parent objects back to the root.</p>
+<p>EclipseLink supports optimistic version locking cascading for:</p>
+<ul>
+<li>
+<p>object changes in privately owned one-to-one and one-to-many mappings</p>
+</li>
+<li>
+<p>relationship changes (adding or removing) in the following collection mappings (privately owned or not):</p>
+<ul>
+<li>
+<p>direct collection</p>
+</li>
+<li>
+<p>one-to-many</p>
+</li>
+<li>
+<p>many-to-many</p>
+</li>
+<li>
+<p>aggregate collection</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Consider the example object graph shown in <a href="#CHEEBGIH">Figure 5-2</a></p>
+<div class="figure"><a id="CHEEBGIH" name="CHEEBGIH"></a><a id="OTLCG92083" name="OTLCG92083"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Figure 5-2 Optimistic Version Locking Policies and Cascading Example</font></em></strong></p>
+<img src="img/oplckcas.gif" alt="Description of Figure 5-2 follows" title="Description of Figure 5-2 follows" longdesc="img_text/oplckcas.htm" /><br />
+<a id="sthref28" name="sthref28" href="img_text/oplckcas.htm">Description of "Figure 5-2 Optimistic Version Locking Policies and Cascading Example"</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>In this example, <code>ObjectA</code> privately owns <code>ObjectB</code>, and <code>ObjectB</code> privately owns <code>ObjectC</code>, and <code>ObjectC</code> privately owns <code>ObjectD</code>.</p>
+<p>Suppose you register <code>ObjectB</code> in a unit of work, modify an <code>ObjectB</code> field, and commit the unit of work. In this case, <code>ObjectB</code> checks the cache for <code>ObjectA</code> and, if not present, queries the database for <code>ObjectA</code>. <code>ObjectB</code> then notifies <code>ObjectA</code> of its change. <code>ObjectA</code> forces an update on its version optimistic locking field even though it has no changes to its corresponding table.</p>
+<p>Suppose you register <code>ObjectA</code> in a unit of work, access its <code>ObjectB</code> to access its <code>ObjectC</code> to access its <code>ObjectD</code>, modify an <code>ObjectD</code> field, and commit the unit of work. In this case, <code>ObjectD</code> notifies <code>ObjectC</code> of its changes. <code>ObjectC</code> forces an update on its version optimistic locking field even though it has no changes to its corresponding table. <code>ObjectC</code> then notifies <code>ObjectB</code> of the <code>ObjectD</code> change. <code>ObjectB</code> then notifies <code>ObjectA</code> of the <code>ObjectD</code> change. <code>ObjectA</code> forces an update on its version optimistic locking field even though it has no changes to its corresponding table.</p>
+</div>
+<!-- class="sect4" -->
+<a id="CACIAHGG" name="CACIAHGG"></a><a id="OTLCG92084" name="OTLCG92084"></a>
+<div class="sect4">
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Optimistic Locking and Rollbacks</font></h4>
+<p>With optimistic locking, use the <code>UnitOfWork</code> method <code>commitAndResumeOnFailure</code> to rollback a locked object's value, if you store the optimistic lock versions in the cache.</p>
+<p>If you store the locked versions in an object, you must refresh the objects (or their versions) on a failure. Alternatively, you can acquire a new unit of work on the failure and reapply any changes into the new unit of work.</p>
+</div>
+<!-- class="sect4" -->
+<a id="CIHCFEIB" name="CIHCFEIB"></a><a id="OTLCG92085" name="OTLCG92085"></a>
+<div class="sect4">
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Optimistic Field Locking Policies</font></h4>
+<p>Optimistic field locking policies enforce optimistic locking by using one or more of the fields that currently exist in the table to determine if the object has changed since the client read the object.</p>
+<p>The unit of work caches the original state of the object when you first read the object or register it with the unit of work. At commit time, the unit of work compares the original values of the lock fields with their current values on the data source during the update. If any of the lock fields' values have changed, an optimistic lock exception is thrown.</p>
+<p>EclipseLink provides the following optimistic field locking policies:</p>
+<ul>
+<li>
+<p><code>AllFieldsLockingPolicy</code></p>
+</li>
+<li>
+<p><code>ChangedFieldsLockingPolicy</code></p>
+</li>
+<li>
+<p><code>SelectedFieldsLockingPolicy</code></p>
+</li>
+<li>
+<p><code>VersionLockingPolicy</code></p>
+</li>
+<li>
+<p><code>TimestampLockingPolicy</code></p>
+</li>
+</ul>
+<p>For descriptions of these locking policies, see "Setting Optimistic Locking" in <em>Solutions Guide for EclipseLink</em>.</p>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" -->
+<a id="CIHCFBJG" name="CIHCFBJG"></a><a id="OTLCG92086" name="OTLCG92086"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Pessimistic Locking Policies</font></h3>
+<p>With pessimistic locking, the first user who accesses the data with the purpose of updating it locks the data until completing the update.</p>
+<p>When using a pessimistic locking policy, you can configure the policy to either fail immediately or to wait until the read lock is acquired.</p>
+<p>You can use a pessimistic locking policy only in a project with a container-managed persistence type and with descriptors that have EJB information.</p>
+<p>You can also use pessimistic locking (but not a pessimistic locking policy) at the query level.</p>
+<p>EclipseLink provides an optimization for pessimistic locking when this locking is used with entities with container-managed persistence: if you set your query to pessimistic locking and run the query in its own new transaction (which will end after the execution of the finder), then EclipseLink overrides the locking setting and does not append <code>FOR UPDATE</code> to the SQL. However, the use of this optimization may produce an undesirable result if the pessimistic lock query has been customized by the user with a SQL string that includes <code>FOR</code> <code>UPDATE</code>. In this case, if the conditions for the optimization are present, the query will be reset to nonpessimistic locking, but the SQL will remain the same resulting in the locking setting of the query conflicting with the query's SQL string. To avoid this problem, you can take one of the following two approaches:</p>
+<ul>
+<li>
+<p>Use an expression (see <a href="expressions.htm#CHDCAIGD">Chapter 10, "Understanding EclipseLink Expressions"</a>) for the selection criteria. This will give EclipseLink control over the SQL generation.</p>
+</li>
+<li>
+<p>Place the finder in a transaction to eliminate conditions for the optimization.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="BCGDJHAF" name="BCGDJHAF"></a><a id="OTLCG92087" name="OTLCG92087"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Applying Locking in an Application</font></h3>
+<p>To correctly lock an object in an application, you must obtain the lock before the object is sent to the client for editing.</p>
+<a id="CHEHDAEH" name="CHEHDAEH"></a><a id="OTLCG92088" name="OTLCG92088"></a>
+<div class="sect4"><a id="BCGCBAFE" name="BCGCBAFE"></a>
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Applying Optimistic Locking in an Application</font></h4>
+<p>If you are using optimistic locking, you have the following two choices for locking objects correctly:</p>
+<ul>
+<li>
+<p>Map the optimistic lock field in your object as not read-only and pass the version to the client on the read and back to the server on the update.</p>
+<p>Ensure that the original version value is sent to the client when it reads the object for the update. The client must then pass the original version value back with the update information, and this version must be set into the object to be updated after it is registered/read in the new unit of work on the server.</p>
+</li>
+<li>
+<p>Hold the unit of work for the duration of the interaction with the client.</p>
+<p>Either through a stateful session bean, or in an HTTP session, store the unit of work used to read the object for the update for the duration of the client interaction.</p>
+<p>You must read the object through this unit of work before passing it to the client for the update. This ensures that the version value stored in the unit of work cache or in the unit of work clone will be the original value.</p>
+<p>This same unit of work must be used for the update.</p>
+</li>
+</ul>
+<p>The first option is more commonly used, and is required if developing a stateless application.</p>
+</div>
+<!-- class="sect4" -->
+<a id="OTLCG92089" name="OTLCG92089"></a>
+<div class="sect4"><a id="sthref29" name="sthref29"></a>
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Applying Pessimistic Locking in an Application</font></h4>
+<p>If you are using pessimistic locking, you must use the unit of work to start a database transaction before the object is read. You must hold this unit of work and database transaction while the client is editing the object and until the client updates the object. You must use this same unit of work to update the object.</p>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="descriptors001.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="descriptors003.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+ 
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+<span class="mini">Contents</span></a></td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Other searches" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini">Other&nbsp;Searches</span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"><br /><span class="mini">PDF</span></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --><!-- START: Disqus --><div id="disqus_thread"></div>        <script type="text/javascript">            var disqus_developer = 1;var disqus_shortname = 'eclipselinkdoc';              (function() {                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);            })();        </script>        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a><!-- END: Disqus --></body>
+</html>
