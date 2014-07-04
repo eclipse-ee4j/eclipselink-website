@@ -3,14 +3,14 @@
    title="EclipseLink Downloads">
 
    <section class="main" name="Latest Release Downloads">
-      <a name="2.5.1"> </a>
+      <a name="252"> </a>
       <description>
          <b>EclipseLink 2.5.2 Release (Released July 4, 2014)</b> - <a href="/eclipselink/releases/2.5.php">New and Noteworthy</a> - <a href="http://www.eclipse.org/eclipselink/documentation/2.5/">Getting Started</a><br/>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
                <td class="packageDesc">
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.5.2/eclipselink-2.5.2.v20140319-9ad6abd.zip">EclipseLink 2.5.2 Installer Zip (39 MB)</a>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.5.2/eclipselink-2.5.2.v20140319-9ad6abd.zip">EclipseLink 2.5.2 Installer Zip (38 MB)</a>
                   </div>
                   This zip includes EclipseLink 2.5.2 with the single jar packaging,  source,  JavaDocs, utilities, and dependent libraries. Intended for use in Java EE and SE environments.
                   <div class="bottomRow">
@@ -22,7 +22,7 @@
             <tr class="tableData">
                <td class="packageDesc">
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.5.2/eclipselink-plugins-nosql-2.5.2.v20140319-9ad6abd.zip">EclipseLink NoSQL 2.5.2 Installer Zip (427 K)</a>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.5.2/eclipselink-plugins-nosql-2.5.2.v20140319-9ad6abd.zip">EclipseLink NoSQL 2.5.2 Installer Zip (444 K)</a>
                   </div>
                   This zip includes EclipseLink NoSql support. This zip is to be used together with the EclipseLink zip (or EclipseLink bundles) to support NoSQL.  This zip includes binaries, source, and Javadocs.
                   <div class="bottomRow">
@@ -48,7 +48,7 @@
             <tr class="tableData">
                <td class="packageDesc">
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.5.2/eclipselink-src-2.5.2.v20140319-9ad6abd.zip">EclipseLink 2.5.2 Source Zip (7.6 MB)</a>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.5.2/eclipselink-src-2.5.2.v20140319-9ad6abd.zip">EclipseLink 2.5.2 Source Zip (7.9 MB)</a>
                   </div>
                   Contains source code for all of eclipselink.
                   <div class="bottomRow">
