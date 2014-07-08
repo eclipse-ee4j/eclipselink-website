@@ -44,7 +44,7 @@ $Nav->addCustomNav( "About This Project",
 					<span>
 						<a href="/projects/project_summary.php?projectid=rt.eclipselink">Project Summary</a>, 
 						<a href="/eclipselink/releases">Releases</a>, <br/>
-						<a href="/eclipselink/team/">Committers</a> and more...
+						<a href="https://projects.eclipse.org/projects/rt.eclipselink/who">Committers</a>
 					</span>
 				</div>
 			</td>
@@ -163,34 +163,6 @@ $Nav->addCustomNav( "About This Project",
 </div>
 
 <div id="rightcolumn">
-
-
-		<div class="sideitem">
-			<h6>EclipseLink Search</h6>
-<div id="cse-search-form" style="width: 100%;">Loading</div>
-<script src="http://www.google.com/jsapi" type="text/javascript"></script>
-<script type="text/javascript"> 
-  google.load('search', '1', {language : 'en', style : google.loader.themes.SHINY});
-  google.setOnLoadCallback(function() {
-    var customSearchOptions = {};
-    var customSearchControl = new google.search.CustomSearchControl(
-      '016171230611334810008:ob2bbia9swa', customSearchOptions);
-    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
-
-    var googleAnalyticsOptions = {};
-    googleAnalyticsOptions['queryParameter'] = 'q';
-    googleAnalyticsOptions['categoryParameter'] = '';
-    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(
-      '016171230611334810008:ob2bbia9swa', customSearchOptions);
-    
-    var options = new google.search.DrawOptions();
-    options.setAutoComplete(true);
-    options.enableSearchboxOnly("http://www.google.com/cse?cx=016171230611334810008:ob2bbia9swa");
-    customSearchControl.draw('cse-search-form', options);
-  }, true);
-</script>
-		</div>
-
 
 		<div class="sideitem">
 			<script src="http://widgets.twimg.com/j/2/widget.js"></script>
