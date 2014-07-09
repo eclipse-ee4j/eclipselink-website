@@ -15,7 +15,7 @@
 					<span>
 						<a href="/projects/project_summary.php?projectid=rt.eclipselink">Project Summary</a>, 
 						<a href="/eclipselink/releases">Releases</a>, <br/>
-						<a href="/eclipselink/team/">Committers</a> and more...
+						<a href="https://projects.eclipse.org/projects/rt.eclipselink/who">Committers</a> and more...
 					</span>
 				</div>
 			</td>
