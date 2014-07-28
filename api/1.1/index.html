@@ -13,7 +13,8 @@ EclipseLink 1.1.4, build 'v20100812-r7860' API Reference
     if (targetPage.indexOf(":") != -1 || (targetPage != "" && !validURL(targetPage)))
         targetPage = "undefined";
     function validURL(url) {
-        if (!(url.indexOf(".html") == url.length - 5))
+        var pos = url.indexOf(".html");
+        if (pos == -1 || pos != url.length - 5)
             return false;
         var allowNumber = false;
         var allowSep = false;
