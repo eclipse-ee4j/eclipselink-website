@@ -44,7 +44,7 @@ $Nav->addCustomNav( "About This Project",
 					<span>
 						<a href="/projects/project_summary.php?projectid=rt.eclipselink">Project Summary</a>, 
 						<a href="/eclipselink/releases">Releases</a>, <br/>
-						<a href="/eclipselink/team/">Committers</a> and more...
+						<a href="https://projects.eclipse.org/projects/rt.eclipselink/who">Committers</a> and more...
 					</span>
 				</div>
 			</td>
@@ -97,25 +97,6 @@ $Nav->addCustomNav( "About This Project",
 		</p>
 	</div>
 
- 
-	<div class="section">
-			<h3>News</h3>
-			<ul>
-				<li><a href="/eclipselink/releases/2.5.php">EclipseLink 2.5.1 released</a> - <i>Sept 26th, 2013</i></li>
-				<li><a href="/eclipselink/releases/2.4.php">EclipseLink 2.4.2 released</a> - <i>July 5th, 2013</i></li>
-				<li><a href="/eclipselink/releases/2.5.php">EclipseLink 2.5.0 released</a> - <i>May 28th, 2013</i></li>
-				<li><a href="/eclipselink/releases/2.4.php">EclipseLink 2.4.1 released</a> - <i>Oct 10th, 2012</i></li>
-				<li><a href="/eclipselink/releases/2.4.php">EclipseLink 2.4.0 (Juno) released</a> - <i>June 27, 2012</i></li>
-				<li><a href="/eclipselink/releases/2.3.0.php">EclipseLink 2.3.3 released</a> - <i>July 3rd, 2012</i></li>
-				<li><a href="/eclipselink/releases/2.3.0.php">EclipseLink 2.3.2 released</a> - <i>Dec 9th, 2011</i></li>
-				<li><a href="/eclipselink/releases/2.3.0.php">EclipseLink 2.3.1 released</a> - <i>Nov 11 th, 2011</i></li>
-				<li><a href="/eclipselink/releases/2.2.1.php">EclipseLink 2.2.1 released</a> - <i>July 29, 2011</i></li>
-				<li><a href="/eclipselink/releases/2.3.0.php">EclipseLink 2.3.0 (Indigo) released</a> - <i>June 22, 2011</i></li>
-				<li><a href="http://wiki.eclipse.org/EclipseLink/Release/2.1.3">EclipseLink 2.1.3 released</a> - <i>April 15, 2011</i></li>
-				<li><a href="/eclipselink/releases/2.2.0.php">EclipseLink 2.2.0 released</a> - <i>February 22, 2011</i></li>
-			</ul>
-	</div>
-
 	<div class="homeitem3col">
 			<h3>Getting Started</h3>
 			<p>
@@ -162,34 +143,6 @@ $Nav->addCustomNav( "About This Project",
 </div>
 
 <div id="rightcolumn">
-
-
-		<div class="sideitem">
-			<h6>EclipseLink Search</h6>
-<div id="cse-search-form" style="width: 100%;">Loading</div>
-<script src="http://www.google.com/jsapi" type="text/javascript"></script>
-<script type="text/javascript"> 
-  google.load('search', '1', {language : 'en', style : google.loader.themes.SHINY});
-  google.setOnLoadCallback(function() {
-    var customSearchOptions = {};
-    var customSearchControl = new google.search.CustomSearchControl(
-      '016171230611334810008:ob2bbia9swa', customSearchOptions);
-    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
-
-    var googleAnalyticsOptions = {};
-    googleAnalyticsOptions['queryParameter'] = 'q';
-    googleAnalyticsOptions['categoryParameter'] = '';
-    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(
-      '016171230611334810008:ob2bbia9swa', customSearchOptions);
-    
-    var options = new google.search.DrawOptions();
-    options.setAutoComplete(true);
-    options.enableSearchboxOnly("http://www.google.com/cse?cx=016171230611334810008:ob2bbia9swa");
-    customSearchControl.draw('cse-search-form', options);
-  }, true);
-</script>
-		</div>
-
 
 		<div class="sideitem">
 			<script src="http://widgets.twimg.com/j/2/widget.js"></script>
