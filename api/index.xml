@@ -5,9 +5,7 @@
 		<description>
 			<p>
 				EclipseLink publishes JavaDocs to the web site for each
-				release. The latest JavaDocs are always available
-				<a href="/eclipselink/api/latest/index.html">here</a>
-				.
+				release.
 			</p>
 			<ul>
                 <li>
