@@ -50,8 +50,7 @@
 		</description>
 	</section>
 
-	<section class="main" name=" Known Issues"
-		image="http://dev.eclipse.org/huge_icons/apps/help-browser.png">
+	<section class="main" name=" Known Issues" >
 		<description>
 			<p>The following are known issues that have been identified as potentially effecting users of EclipseLink 2.6.</p>
 			<ul>
@@ -64,7 +63,7 @@
 		</description>
 	</section>
 
-	<section class="main" name=" Standards" image="/sequoyah/images/CC_code.png">
+	<section class="main" name=" Standards">
 		<description>
 			<p>EclipseLink remains focused on the delivering support for the
 				latest standards. EclipseLink 2.6 offers certified support for:
@@ -90,8 +89,7 @@
 		</description>
 	</section>
 
-	<section class="main" name=" Deprecated Functionality"
-		image="http://dev.eclipse.org/huge_icons/actions/edit-clear.png">
+	<section class="main" name=" Deprecated Functionality">
 		<description>
 			<p>
 				In EclipseLink 2.6 the following features/API have been deprecated.

@@ -20,7 +20,7 @@
 		</description>
 	</section>
 
-	<section class="main" name="New and Noteworthy" image="/sequoyah/images/CC_news.png">
+	<section class="main" name="New and Noteworthy">
 
 		<description>
 			<table>
@@ -132,8 +132,7 @@
 	</section>
 
 
-	<section class="main" name=" Enhancements and Resolved Issues"
-		image="/sequoyah/images/CC_bugs.png">
+	<section class="main" name=" Enhancements and Resolved Issues">
 		<description>
 			<p>In addition to the features highlighted in the New and Noteworthy
 				section this release also includes a substantial number of bug fixes
@@ -186,8 +185,7 @@
 		</description>
 	</section>
 
-	<section class="main" name=" Known Issues"
-		image="http://dev.eclipse.org/huge_icons/apps/help-browser.png">
+	<section class="main" name=" Known Issues">
 		<description>
 			<p>
 				The following are known issues that have been identified as
@@ -237,7 +235,7 @@
 		</description>
 	</section>
 
-	<section class="main" name=" Standards" image="/sequoyah/images/CC_code.png">
+	<section class="main" name=" Standards">
 		<description>
 			<p>EclipseLink remains focused on the delivering support for the
 				latest standards. EclipseLink 2.5 offers certified support for:
@@ -259,8 +257,7 @@
 		</description>
 	</section>
 
-	<section class="main" name=" Deprecated Functionality"
-		image="http://dev.eclipse.org/huge_icons/actions/edit-clear.png">
+	<section class="main" name=" Deprecated Functionality">
 		<description>
 			<p>
 				In EclipseLink 2.5 the following features/API have been
