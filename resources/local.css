@@ -13,21 +13,13 @@
 	width: 680px !important;
 }
 
-/*
-#midcolumn {
-	margin: 0px !important;
-	padding: 0px 19px !important;
-	width: 940px;
-}
-*/
-
 #leftcol {
 	display: none;
 }
 
 #bigbuttons {
 	position: absolute;
-	right: 20px;
+	right: 330px;
 	top: 15px;
 }
 
@@ -44,13 +36,13 @@
 .bigbuttonsTitleLink {
 	position: absolute;
 	height: 77px;
-	width: 400px;
+	width: 249px;
 }
 
 .bigbuttonsAbout span, .bigbuttonsCommunity span, .bigbuttonsDocumentation span, .bigbuttonsDownloads span {
 	position: absolute;
 	top: 30px;
-	left: 0px;
+	left: 85px;
 	font-family: Arial;
 	font-size: 11px;
 	line-height: 13px;
@@ -61,7 +53,7 @@
 	width: 249px;
 	height: 77px;
 	position: relative;
-}
+    }
 
 .bigbuttonsCommunity {
 	background: url("/eclipselink/images/bigbutton_community.png") no-repeat;

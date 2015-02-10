@@ -60,8 +60,6 @@ $Nav->addCustomNav( "About This Project",
 					</span>
 				</div>
 			</td>
-		</tr>
-		<tr>
 			<td>
 				<div class="bigbuttonsCommunity">
 					<a href="/eclipselink/community.php"><div class="bigbuttonsTitleLink"></div></a>

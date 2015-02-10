@@ -10,10 +10,20 @@
 				<ul>
                                     <li>
                                         <a href="https://wiki.eclipse.org/EclipseLink/DesignDocs/406993">Pluggable Serializers</a>
+                                    </li>
+                                    <li>
                                         <a href="https://wiki.eclipse.org/EclipseLink/DesignDocs/282074">JGroups Support</a>
+                                    </li>
+                                    <li>
                                         <a href="https://bugs.eclipse.org/bugs/attachment.cgi?id=241506">Bean Validation support in MOXy</a>
+                                    </li>
+                                    <li>
                                         <a href="https://wiki.eclipse.org/EclipseLink/DesignDocs/405161">Java API for JSON Processing (JSR-353) support in MOXy</a>
+                                    </li>
+                                    <li>
                                         <a href="https://wiki.eclipse.org/EclipseLink/DesignDocs/JPARS2.0">JPA-RS Enhancements (Pagination, Options, Versions, ...)</a>
+                                    </li>
+                                    <li>
                                         <a href="https://wiki.eclipse.org/EclipseLink/DesignDocs/459464">Redesign of type property in JSON processing</a>
                                     </li>
 				</ul>
