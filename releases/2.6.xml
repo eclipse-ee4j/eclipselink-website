@@ -11,7 +11,7 @@
                                     <li>
                                         <a href="https://wiki.eclipse.org/EclipseLink/DesignDocs/406993">Pluggable Serializers</a>
                                         <a href="https://wiki.eclipse.org/EclipseLink/DesignDocs/282074">JGroups Support</a>
-                                        <a href="https://bugs.eclipse.org/bugs/attachment.cgi?id=241506">Bean Validation support in MOXy/a>
+                                        <a href="https://bugs.eclipse.org/bugs/attachment.cgi?id=241506">Bean Validation support in MOXy</a>
                                         <a href="https://wiki.eclipse.org/EclipseLink/DesignDocs/405161">Java API for JSON Processing (JSR-353) support in MOXy</a>
                                         <a href="https://wiki.eclipse.org/EclipseLink/DesignDocs/JPARS2.0">JPA-RS Enhancements (Pagination, Options, Versions, ...)</a>
                                         <a href="https://wiki.eclipse.org/EclipseLink/DesignDocs/459464">Redesign of type property in JSON processing</a>
@@ -31,9 +31,9 @@
 			<ul>
 				<li>
 					<a
-						href="https://bugs.eclipse.org/bugs/buglist.cgi?bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&classification=RT&known_name=2.6%20Fixed&list_id=11073385&product=EclipseLink&query_based_on=2.6%20Fixed&query_format=advanced&resolution=FIXED&target_milestone=2.6.0"
+						href="https://bugs.eclipse.org/bugs/buglist.cgi?bug_status=RESOLVED%20bug_status=VERIFIED%20bug_status=CLOSED%20classification=RT%20known_name=2.6%20Fixed%20list_id=11073385%20product=EclipseLink%20query_based_on=2.6%20Fixed%20query_format=advanced%20resolution=FIXED%20target_milestone=2.6.0"
 						class="external text"
-						title="https://bugs.eclipse.org/bugs/buglist.cgi?bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&classification=RT&known_name=2.6%20Fixed&list_id=11073385&product=EclipseLink&query_based_on=2.6%20Fixed&query_format=advanced&resolution=FIXED&target_milestone=2.6.0"
+						title="https://bugs.eclipse.org/bugs/buglist.cgi?bug_status=RESOLVED%20bug_status=VERIFIED%20bug_status=CLOSED%20classification=RT%20known_name=2.6%20Fixed%20list_id=11073385%20product=EclipseLink%20query_based_on=2.6%20Fixed%20query_format=advanced%20resolution=FIXED%20target_milestone=2.6.0"
 						rel="nofollow">2.6.0: All Fixed Bugs and enhancement requests</a>
 				</li>
 			</ul>
