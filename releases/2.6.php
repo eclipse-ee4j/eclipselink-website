@@ -24,6 +24,56 @@ $proc->importStyleSheet($xsl); // attach the xsl rules
 $maincontent = $proc->transformToXML($xml);
 $html = <<<EOHTML
 <div class="logoBanner"><a href="/eclipselink"><img src="/eclipselink/images/logo.png" /></a></div>
+<div id="bigbuttons">
+	<table border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td>
+				<div class="bigbuttonsAbout">
+					<a href="/projects/project_summary.php?projectid=rt.eclipselink"><div class="bigbuttonsTitleLink"></div></a>
+					<span>
+						<a href="/projects/project_summary.php?projectid=rt.eclipselink">Project Summary</a>, 
+						<a href="/eclipselink/releases">Releases</a>, <br/>
+						<a href="https://projects.eclipse.org/projects/rt.eclipselink/who">Committers</a> and more...
+					</span>
+				</div>
+			</td>
+			<td>
+				<div class="bigbuttonsDocumentation">
+					<a href="/eclipselink/documentation/index.php"><div class="bigbuttonsTitleLink"></div></a>
+					<span>
+						<a href="/eclipselink/documentation/index.php">Doc Center</a>,
+						<a href="/eclipselink/api/index.php"> Java Docs</a>,
+						<a href="http://wiki.eclipse.org/EclipseLink/Examples"> Examples</a>,
+						<a href="http://wiki.eclipse.org/EclipseLink/FAQ"> FAQ</a>, <br/>
+						<a href="/eclipselink/releases/2.5.php">2.5 New and Noteworthy</a>
+					</span>
+				</div>
+			</td>
+			<td>
+				<div class="bigbuttonsCommunity">
+					<a href="/eclipselink/community.php"><div class="bigbuttonsTitleLink"></div></a>
+					<span>
+						<a href="http://wiki.eclipse.org/EclipseLink">Wiki</a>,
+						<a href="/forums/index.php/f/111/">User Forum</a>,<br/>
+						<a href="http://dev.eclipse.org/mhonarc/lists/eclipselink-users/maillist.html">User Mailing List</a>
+					</span>
+				</div>
+			</td>
+			<td>
+				<div class="bigbuttonsDownloads">
+					<a href="/eclipselink/downloads/"><div class="bigbuttonsTitleLink"></div></a>
+					<span>
+						<a href="/eclipselink/releases">Releases</a>,
+						<a href="/eclipselink/downloads">Latest Release</a>,
+						<a href="/eclipselink/downloads/milestones.php">Milestone Builds</a>, 
+						<a href="/eclipselink/downloads/nightly.php">Nightly Builds</a>, and
+						<a href="http://wiki.eclipse.org/EclipseLink/Maven">Maven</a>, 
+					</span>
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>
 $maincontent
 EOHTML;
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
