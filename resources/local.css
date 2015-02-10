@@ -44,13 +44,13 @@
 .bigbuttonsTitleLink {
 	position: absolute;
 	height: 77px;
-	width: 249px;
+	width: 400px;
 }
 
 .bigbuttonsAbout span, .bigbuttonsCommunity span, .bigbuttonsDocumentation span, .bigbuttonsDownloads span {
 	position: absolute;
 	top: 30px;
-	left: 85px;
+	left: 0px;
 	font-family: Arial;
 	font-size: 11px;
 	line-height: 13px;
