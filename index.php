@@ -148,6 +148,7 @@ $Nav->addCustomNav( "About This Project",
 				<li><a href="http://java-persistence-performance.blogspot.com">Java Persistence Performance</a></li>
 			    <li><a href="http://onpersistence.blogspot.com">On Persistence</a></li>
 			    <li><a href="http://bdoughan.blogspot.com">Java XML Binding</a></li>
+			    <li><a href="http://javarelated.com/">Javarelated.com</a></li>
 			</ul>
 		</div>
 
