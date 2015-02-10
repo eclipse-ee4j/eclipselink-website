@@ -106,7 +106,7 @@ $Nav->addCustomNav( "About This Project",
 			<td width="33% align="center">
 				<p style="text-align:center">
 				<a href="jpa.php">
-				<font size=+4>Object-Relational Mapping<br/>JPA</font><br/>
+				<font size=+2>Object-Relational Mapping<br/>JPA</font><br/>
 				<img src="/eclipselink/images/Eclipselink_jpa.png" border="0" /><br/>
 				</a></p>
 			</td>
