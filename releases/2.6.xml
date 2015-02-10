@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sections title="EclipseLink 2.6.0 Release">
+
+	<section class="title">
+		<description>
+			<h1>EclipseLink 2.6</h1>
+			<p> The primary focus of the EclipseLink 2.6 release is stability, Java EE 7 integration, and JPA-RS.</p>
+			<p>
+				Main features and changes include:
+				<ul>
+                                    <li>
+                                        <a href="https://wiki.eclipse.org/EclipseLink/DesignDocs/406993">Pluggable Serializers</a>
+                                        <a href="https://wiki.eclipse.org/EclipseLink/DesignDocs/282074">JGroups Support</a>
+                                        <a href="https://bugs.eclipse.org/bugs/attachment.cgi?id=241506">Bean Validation support in MOXy/a>
+                                        <a href="https://wiki.eclipse.org/EclipseLink/DesignDocs/405161">Java API for JSON Processing (JSR-353) support in MOXy</a>
+                                        <a href="https://wiki.eclipse.org/EclipseLink/DesignDocs/JPARS2.0">JPA-RS Enhancements (Pagination, Options, Versions, ...)</a>
+                                        <a href="https://wiki.eclipse.org/EclipseLink/DesignDocs/459464">Redesign of type property in JSON processing</a>
+                                    </li>
+				</ul>
+			</p>
+                        <p>In addition to the features highlighted above, this release also includes a substantial number of bug fixes and enhancements:</p>
+                        
+		</description>
+	</section>
+
+	<section class="main" name=" Enhancements and Resolved Issues"
+		image="/sequoyah/images/CC_bugs.png">
+		<description>
+			<p>
+			</p>
+			<ul>
+				<li>
+					<a
+						href="https://bugs.eclipse.org/bugs/buglist.cgi?bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&classification=RT&known_name=2.6%20Fixed&list_id=11073385&product=EclipseLink&query_based_on=2.6%20Fixed&query_format=advanced&resolution=FIXED&target_milestone=2.6.0"
+						class="external text"
+						title="https://bugs.eclipse.org/bugs/buglist.cgi?bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&classification=RT&known_name=2.6%20Fixed&list_id=11073385&product=EclipseLink&query_based_on=2.6%20Fixed&query_format=advanced&resolution=FIXED&target_milestone=2.6.0"
+						rel="nofollow">2.6.0: All Fixed Bugs and enhancement requests</a>
+				</li>
+			</ul>
+		</description>
+	</section>
+
+	<section class="main" name=" Known Issues"
+		image="http://dev.eclipse.org/huge_icons/apps/help-browser.png">
+		<description>
+			<p>The following are known issues that have been identified as potentially effecting users of EclipseLink 2.6.</p>
+			<ul>
+				<li>
+                                    <p>
+                                        When running EclipseLink 2.6 in Glassfish 4.0, you must specify a valid datasource in the persistence.xml through either the jta-data-source or non-jta-data-source tags.
+                                    </p>
+				</li>
+			</ul>
+		</description>
+	</section>
+
+	<section class="main" name=" Standards" image="/sequoyah/images/CC_code.png">
+		<description>
+			<p>EclipseLink remains focused on the delivering support for the
+				latest standards. EclipseLink 2.6 offers certified support for:
+			</p>
+			<ul>
+				<li>
+					Java Persistence (JPA) 2.1 -
+					<a href="http://www.jcp.org/en/jsr/detail?id=338">JSR 338</a>
+				</li>
+				<li>
+					Java Architecture for XML Binding (JAXB) 2.2 -
+					<a href="http://jcp.org/en/jsr/detail?id=222">JSR 222</a>
+				</li>
+				<li>
+					Service Data Objects (SDO) 2.1.1 -
+					<a href="http://jcp.org/en/jsr/detail?id=235">JSR 235</a>
+				</li>
+				<li>
+					Java API for JSON Processing (JSON-P) 1.0 -
+					<a href="http://www.jcp.org/en/jsr/detail?id=353">JSR 353</a>
+				</li>
+			</ul>
+		</description>
+	</section>
+
+	<section class="main" name=" Deprecated Functionality"
+		image="http://dev.eclipse.org/huge_icons/actions/edit-clear.png">
+		<description>
+			<p>
+				In EclipseLink 2.6 the following features/API have been deprecated.
+				Please upgrade to the suggested alternatives to avoid issues in the
+				future when these deprecated features/API might be removed.
+				<ul>
+					<li>
+						<a href="http://bugs.eclipse.org/399676">Bug 399676: Deprecation of non-versions REST URIs</a>
+						<p>
+							JPA-RS accepts request urls with and without version. The URIs without
+							version are deprecated and clients
+							are encourage use versioned ones.
+						</p>
+					</li>
+				</ul>
+			</p>
+		</description>
+	</section>
+
+	<section class="main" name="Retention Policy">
+		<description>
+			<p>
+				The previous EclipseLink 2.5 releases will remain available for download
+				from the <a href="/eclipselink/downloads/previous_releases.php">previous releases</a>
+				page where it remain for a minimum period of 2 years before becoming
+				available for archival.
+			</p>
+		</description>
+	</section>
+
+	<section class="main" name="Future Releases">
+		<description>
+			<p>
+				For more information about future planned EclipseLink releases and
+				patch sets please refer to the releases section of the
+				<a href="/projects/project_summary.php?projectid=rt.eclipselink">project summary. </a>
+			</p>
+		</description>
+	</section>
+
+	<section class="sideitem" name="Getting Started">
+
+		<description>
+			<div style="text-align:center;padding:0.5em;margin:0.5em 0.5em 1em 1em;">
+				<a href="/juno">
+					<img src="/juno/images/eclipse_juno242x132.jpg" width="200" />
+				</a>
+			</div>
+
+			<div
+				style="padding:0.5em;margin:0.5em 0.5em 1em 1em;background:#FDD017;-moz-border-radius:4px;"
+				valign="middle">
+
+				<a href="http://www.eclipse.org/eclipselink/downloads/index.php#2.6">
+				<table>
+					<tr>
+						<td>
+							<img src="http://dev.eclipse.org/huge_icons/actions/go-down.png" border="0" />
+						</td>
+						<td width="100%" valign="middle">
+							<div style="text-align:center">
+								<font size="+3">
+									Download 2.6.0
+								</font>
+							</div>
+						</td>
+						<td>
+							<img src="http://dev.eclipse.org/huge_icons/actions/go-down.png"
+								border="0" />
+						</td>
+					</tr>
+				</table>
+				</a>
+			</div>
+
+			<div
+				style="text-align:center;padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+				<img src="/eclipselink/images/doc_small.png" />
+				<a href="/eclipselink/documentation/2.6/">Documentation Center</a>
+			</div>
+
+			<div
+				style="text-align:center;padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+				<img src="/eclipselink/images/wiki_small.png" />
+				<a href="http://wiki.eclipse.org/EclipseLink/Examples">Examples and Tutorials</a>
+			</div>
+
+			<div
+				style="text-align:center;padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+				<img src="/eclipselink/images/doc_small.png" />
+				<a href="/eclipselink/api/2.6/index.html">2.6.0 JavaDocs</a>
+			</div>
+
+		</description>
+
+	</section>
+
+</sections>
