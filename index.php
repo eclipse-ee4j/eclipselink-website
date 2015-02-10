@@ -182,12 +182,13 @@ new TWTR.Widget({
 		<div class="sideitem">
 			<h6>Blogs</h6>
 			<ul>
+			    <li><a href="http://javarelated.com/">Javarelated.com</a></li>
+			    <li><a href="http://blogs.oracle.com/mgrebac">On JSON-Binding</a></li>
 			    <li><a href="http://eclipselink.blogspot.com">EclipseLink</a></li>
 			    <li><a href="http://java-persistence.blogspot.com">Java Persistence</a></li>
-				<li><a href="http://java-persistence-performance.blogspot.com">Java Persistence Performance</a></li>
+                            <li><a href="http://java-persistence-performance.blogspot.com">Java Persistence Performance</a></li>
 			    <li><a href="http://onpersistence.blogspot.com">On Persistence</a></li>
-			    <li><a href="http://bdoughan.blogspot.com">Java XML Binding</a></li>
-			    <li><a href="http://javarelated.com/">Javarelated.com</a></li>
+			    <li><a href="http://bdoughan.blogspot.com">Blaise Doughan on Java XML Binding</a></li>
 			</ul>
 		</div>
 
