@@ -9,12 +9,6 @@
 				Main features and changes include:
 				<ul>
                                     <li>
-                                        <a href="https://wiki.eclipse.org/EclipseLink/DesignDocs/406993">Pluggable Serializers</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://wiki.eclipse.org/EclipseLink/DesignDocs/282074">JGroups Support</a>
-                                    </li>
-                                    <li>
                                         <a href="https://bugs.eclipse.org/bugs/attachment.cgi?id=241506">Bean Validation support in MOXy</a>
                                     </li>
                                     <li>
@@ -25,6 +19,12 @@
                                     </li>
                                     <li>
                                         <a href="https://wiki.eclipse.org/EclipseLink/DesignDocs/459464">Redesign of type property in JSON processing</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://wiki.eclipse.org/EclipseLink/DesignDocs/406993">Pluggable Serializers</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://wiki.eclipse.org/EclipseLink/DesignDocs/282074">JGroups Support</a>
                                     </li>
 				</ul>
 			</p>
@@ -40,9 +40,9 @@
 			<ul>
 				<li>
 					<a
-						href="https://bugs.eclipse.org/bugs/buglist.cgi?bug_status=RESOLVED%20bug_status=VERIFIED%20bug_status=CLOSED%20classification=RT%20known_name=2.6%20Fixed%20list_id=11073385%20product=EclipseLink%20query_based_on=2.6%20Fixed%20query_format=advanced%20resolution=FIXED%20target_milestone=2.6.0"
+						href="http://tinyurl.com/nytf8bv"
 						class="external text"
-						title="https://bugs.eclipse.org/bugs/buglist.cgi?bug_status=RESOLVED%20bug_status=VERIFIED%20bug_status=CLOSED%20classification=RT%20known_name=2.6%20Fixed%20list_id=11073385%20product=EclipseLink%20query_based_on=2.6%20Fixed%20query_format=advanced%20resolution=FIXED%20target_milestone=2.6.0"
+						title="http://tinyurl.com/nytf8bv"
 						rel="nofollow">2.6.0: All Fixed Bugs and enhancement requests</a>
 				</li>
 			</ul>
@@ -51,7 +51,7 @@
 
 	<section class="main" name=" Known Issues" >
 		<description>
-			<p>The following are known issues that have been identified as potentially effecting users of EclipseLink 2.6.</p>
+			<p>The following are known issues that have been identified as potentially affecting users of EclipseLink 2.6.</p>
 			<ul>
 				<li>
                                     <p>
@@ -91,19 +91,7 @@
 	<section class="main" name=" Deprecated Functionality">
 		<description>
 			<p>
-				In EclipseLink 2.6 the following features/API have been deprecated.
-				Please upgrade to the suggested alternatives to avoid issues in the
-				future when these deprecated features/API might be removed.
-				<ul>
-					<li>
-						<a href="http://bugs.eclipse.org/399676">Bug 399676: Deprecation of non-versions REST URIs</a>
-						<p>
-							JPA-RS accepts request urls with and without version. The URIs without
-							version are deprecated and clients
-							are encourage use versioned ones.
-						</p>
-					</li>
-				</ul>
+                            None.
 			</p>
 		</description>
 	</section>
