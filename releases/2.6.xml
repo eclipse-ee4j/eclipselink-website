@@ -42,8 +42,8 @@
                         
 			<ul>
 				<li>
-Behavior of @XmlID and @XmlValue annotations has changed in EL 2.6.0. New behaviour is by default compatible with JAXB 2.2 annotation.
-Fields annotated with @XmlID must be of type String, and classes which contain field with @XmlValue annotation must not extend other java type than java.lang.Object.
+Behavior of @XmlID and @XmlValue annotations has been updated to be JAXB 2.2 RI compatible.
+Fields annotated with @XmlID must be of type String, classes which contain field with @XmlValue annotation must not extend other type than java.lang.Object.
 To provide backward compatibility with EclipseLink 2.5.0, annotations @XmlIDExtension and @XmlValueExtension were introduced.
 				</li>
 				<li>
