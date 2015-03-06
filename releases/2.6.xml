@@ -30,20 +30,25 @@
 			</p>
                         <p>In addition to the features highlighted above, this release also includes a substantial number of bug fixes and enhancements:</p>
                         
-		</description>
-	</section>
-
-	<section class="main" name=" Enhancements and Resolved Issues">
-		<description>
-			<p>
-			</p>
 			<ul>
 				<li>
-					<a
-						href="http://tinyurl.com/nytf8bv"
-						class="external text"
-						title="http://tinyurl.com/nytf8bv"
-						rel="nofollow">2.6.0: All Fixed Bugs and enhancement requests</a>
+					<a  href="http://tinyurl.com/nytf8bv"
+                                            class="external text"
+                                            title="http://tinyurl.com/nytf8bv"
+                                            rel="nofollow">2.6.0: All Fixed Bugs and enhancement requests</a>
+				</li>
+			</ul>
+                        <p>Other important changes and updates include:</p>
+                        
+			<ul>
+				<li>
+Behavior of @XmlID and @XmlValue annotations has changed in EL 2.6.0. New behaviour is by default compatible with JAXB 2.2 annotation.
+Fields annotated with @XmlID must be of type String, and classes which contain field with @XmlValue annotation must not extend other java type than java.lang.Object.
+To provide backward compatibility with EclipseLink 2.5.0, annotations @XmlIDExtension and @XmlValueExtension were introduced.
+				</li>
+				<li>
+Annotations @XmlElementNillable and @XmlNullPolicy are supported in both ElementType.TYPE and ElementType.PACKAGE targets, to enable configuration of @XmlElement 
+nillable parameter and runtime null policy at package level.
 				</li>
 			</ul>
 		</description>
@@ -51,13 +56,13 @@
 
 	<section class="main" name=" Known Issues" >
 		<description>
-			<p>The following are known issues that have been identified as potentially affecting users of EclipseLink 2.6.</p>
+			<p>The following are known issues and changes that have been identified as potentially affecting users of EclipseLink 2.6.</p>
 			<ul>
-				<li>
-                                    <p>
-                                        When running EclipseLink 2.6 in Glassfish 4.0, you must specify a valid datasource in the persistence.xml through either the jta-data-source or non-jta-data-source tags.
-                                    </p>
-				</li>
+                            <li>
+                                <p>
+                                    When running EclipseLink 2.6 in Glassfish 4.0, you must specify a valid datasource in the persistence.xml through either the jta-data-source or non-jta-data-source tags.
+                                </p>
+                            </li>
 			</ul>
 		</description>
 	</section>
