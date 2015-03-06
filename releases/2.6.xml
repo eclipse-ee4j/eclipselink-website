@@ -67,7 +67,7 @@ nillable parameter and runtime null policy at package level.
                                 <p>
 Java hotspot compiler may crash when compiling
 org.eclipse.persistence.internal.sessions.CommitManager::commitChangedObjectsForClassWithChangeSet
-To workaround such a crashes execute java with
+As a workaround, execute java with 
 -XX:CompileCommand=exclude,org/eclipse/persistence/internal/sessions/CommitManager,commitChangedObjectsForClassWithChangeSet
 command line option for JIT compiler. More information can be found at: https://bugs.eclipse.org/bugs/show_bug.cgi?id=461322 
                                 </p>
