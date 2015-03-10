@@ -14,8 +14,7 @@
 					<a href="/projects/project_summary.php?projectid=rt.eclipselink"><div class="bigbuttonsTitleLink"></div></a>
 					<span>
 						<a href="/projects/project_summary.php?projectid=rt.eclipselink">Project Summary</a>, 
-						<a href="/eclipselink/releases">Releases</a>, <br/>
-						<a href="https://projects.eclipse.org/projects/rt.eclipselink/who">Committers</a> and more...
+						<a href="https://projects.eclipse.org/projects/rt.eclipselink/who">Committers</a>
 					</span>
 				</div>
 			</td>
@@ -23,11 +22,11 @@
 				<div class="bigbuttonsDocumentation">
 					<a href="http://wiki.eclipse.org/EclipseLink/Documentation_Center"><div class="bigbuttonsTitleLink"></div></a>
 					<span>
-						<a href="http://wiki.eclipse.org/EclipseLink/Documentation_Center">Doc Center</a>,
+						<a href="/eclipselink/documentation/">Doc Center</a>,
 						<a href="/eclipselink/api/index.php"> Java Docs</a>,
 						<a href="http://wiki.eclipse.org/EclipseLink/Examples"> Examples</a>,
 						<a href="http://wiki.eclipse.org/EclipseLink/FAQ"> FAQ</a>, <br/>
-						<a href="/eclipselink/releases/2.5.php">2.5 New and Noteworthy</a>
+						<a href="/eclipselink/releases/2.6.php">2.6 New and Noteworthy</a>
 					</span>
 				</div>
 			</td>
@@ -48,8 +47,8 @@
 						<a href="/eclipselink/releases">Releases</a>,
 						<a href="/eclipselink/downloads">Latest Release</a>,
 						<a href="/eclipselink/downloads/milestones.php">Milestone Builds</a>, 
-						<a href="/eclipselink/downloads/nightly.php">Nightly Builds</a>, and
-						<a href="http://wiki.eclipse.org/EclipseLink/Maven">Maven</a>, 
+						<a href="/eclipselink/downloads/nightly.php">Nightly Builds</a>
+						<a href="http://wiki.eclipse.org/EclipseLink/Maven">Maven</a> 
 					</span>
 				</div>
 			</td>
