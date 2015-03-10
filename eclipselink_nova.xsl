@@ -20,7 +20,7 @@
 			</td>
 			<td>
 				<div class="bigbuttonsDocumentation">
-					<a href="http://wiki.eclipse.org/EclipseLink/Documentation_Center"><div class="bigbuttonsTitleLink"></div></a>
+					<a href="/eclipselink/documentation/"><div class="bigbuttonsTitleLink"></div></a>
 					<span>
 						<a href="/eclipselink/documentation/">Doc Center</a>,
 						<a href="/eclipselink/api/index.php"> Java Docs</a>,

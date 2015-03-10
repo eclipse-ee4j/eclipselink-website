@@ -45,7 +45,7 @@
 				<div class="bigbuttonsDocumentation">
 					<a href="/eclipselink/documentation/index.php"><div class="bigbuttonsTitleLink"></div></a>
 					<span>
-						<a href="/eclipselink/api/2.6/index.html"> Java Docs</a>,
+						<a href="/eclipselink/api/index.php"> Java Docs</a>,
 						<a href="http://wiki.eclipse.org/EclipseLink/Examples"> Examples</a>,
 						<a href="http://wiki.eclipse.org/EclipseLink/FAQ"> FAQ</a>, <br/>
 						<a href="/eclipselink/releases/2.6.php">2.6 New and Noteworthy</a>

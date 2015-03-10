@@ -32,8 +32,8 @@
 	$Nav->addCustomNav("Milestones", "/eclipselink/downloads/milestones.php", "_self", 2);
 	$Nav->addCustomNav("Maven", "http://wiki.eclipse.org/EclipseLink/Maven", "_self", 2);	
 
-	$Nav->addNavSeparator("Documentation", "http://wiki.eclipse.org/EclipseLink/Documentation_Center");
-	$Nav->addCustomNav("Doc Center", "http://wiki.eclipse.org/EclipseLink/Documentation_Center", "_self", 2);
+	$Nav->addNavSeparator("Documentation", "/eclipselink/documentation/");
+	$Nav->addCustomNav("Doc Center", "/eclipselink/documentation/", "_self", 2);
 	$Nav->addCustomNav("FAQ", "http://wiki.eclipse.org/EclipseLink/FAQ", "_self", 2);
 	$Nav->addCustomNav("API (JavaDocs)", "/eclipselink/api/index.php", "_self", 2);
 	$Nav->addCustomNav("EclipseLink Wiki", "http://wiki.eclipse.org/EclipseLink", "_self", 2);
