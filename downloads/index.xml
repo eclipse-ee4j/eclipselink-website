@@ -2,6 +2,7 @@
 <sections
    title="EclipseLink Downloads">
 
+   <section class="main" name="Latest Release Downloads">
       <a name="260"> </a>
       <description>
          <b>EclipseLink 2.6.0 Release (Released March 10, 2015)</b> - <a href="/eclipselink/releases/2.6.php">New and Noteworthy</a> - <a href="http://www.eclipse.org/eclipselink/documentation/2.6/">Getting Started</a><br/>
