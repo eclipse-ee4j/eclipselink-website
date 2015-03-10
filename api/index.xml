@@ -9,34 +9,37 @@
 			</p>
 			<ul>
                 <li>
-                    <a href="/eclipselink/api/2.5/index.html">2.5 (Kepler)</a>
+                    <a href="/eclipselink/api/2.6/index.html">2.6</a>
                 </li>
                 <li>
-                    <a href="/eclipselink/api/2.4/index.html">2.4 (Juno) - Currently 2.4.2 </a>
+                    <a href="/eclipselink/api/2.5/index.html">2.5</a>
                 </li>
                 <li>
-                    <a href="/eclipselink/api/2.3/index.html">2.3 (Indigo) - currently 2.3.3</a>
+                    <a href="/eclipselink/api/2.4/index.html">2.4</a>
                 </li>
                 <li>
-                    <a href="/eclipselink/api/2.2/index.html">2.2 - currently 2.2.1</a>
+                    <a href="/eclipselink/api/2.3/index.html">2.3</a>
                 </li>
                 <li>
-                    <a href="/eclipselink/api/2.1/index.html">2.1 (Helios) - currently 2.1.2</a>
+                    <a href="/eclipselink/api/2.2/index.html">2.2</a>
+                </li>
+                <li>
+                    <a href="/eclipselink/api/2.1/index.html">2.1</a>
                 </li>
 			    <li>
-                    <a href="/eclipselink/api/2.0/index.html">2.0 - currently 2.0.2</a>
+                    <a href="/eclipselink/api/2.0/index.html">2.0</a>
                 </li>
 			
                 <li>
-                    <a href="/eclipselink/api/1.2/index.html">1.2 - currently 1.2.0</a>
+                    <a href="/eclipselink/api/1.2/index.html">1.2</a>
                 </li>
 			
-			    <li>
-                    <a href="/eclipselink/api/1.1/index.html">1.1 - currently 1.1.4 - final patch set on 1.1 stream</a>
+                <li>
+                    <a href="/eclipselink/api/1.1/index.html">1.1</a>
                 </li>
-				<li>
-					<a href="/eclipselink/api/1.0/index.html">1.0 - currently 1.0.2- final patch set on 1.0 stream</a>
-				</li>
+                <li>
+                    <a href="/eclipselink/api/1.0/index.html">1.0</a>
+                </li>
 			</ul>
 		</description>
 	</section>
