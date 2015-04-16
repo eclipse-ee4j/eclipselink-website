@@ -31,7 +31,7 @@ $html = <<<EOHTML
 				<div class="bigbuttonsAbout">
 					<a href="/projects/project_summary.php?projectid=rt.eclipselink"><div class="bigbuttonsTitleLink"></div></a>
 					<span>
-						<a href="/projects/project_summary.php?projectid=rt.eclipselink">Project Summary</a>, 
+						<a href="/projects/project_summary.php?projectid=rt.eclipselink">Project Summary</a>, <br/>
 						<a href="https://projects.eclipse.org/projects/rt.eclipselink/who">Committers</a>
 					</span>
 				</div>
