@@ -15,7 +15,7 @@ $titleNode = $xpath->query("/sections/attribute::title")->item(0);
 $pageTitle = ($titleNode != null) ? $titleNode->nodeValue : "eclipse.org eclipselink page";
 
 // Load the XSL source
-$xsl = DOMDocument::load($root . '/eclipselink/eclipselink_nova_2_column.xsl');
+$xsl = DOMDocument::load($root . '/eclipselink/eclipselink_nova.xsl');
 
 // Configure the transformer
 $proc = new XSLTProcessor;
