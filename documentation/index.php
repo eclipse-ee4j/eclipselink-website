@@ -36,8 +36,8 @@
 				<li><form action="../"><label for="ReleaseNotes">Release Notes</label>
 <select name="ReleaseNotes">
     <option selected="selected" value="http://www.eclipse.org/eclipselink/releases/2.6.php">2.6</option>
-    <option value="http://www.eclipse.org/eclipselink/releases/2.5.php">2.5 (Current)</option>
-    <option value="http://www.eclipse.org/eclipselink/releases/">Older releases</option>
+    <option value="http://www.eclipse.org/eclipselink/releases/2.5.php">2.5</option>
+    <option value="http://www.eclipse.org/eclipselink/releases/2.4.php">2.4</option>
 </select>
 <input type="button" onclick="window.open(this.form.ReleaseNotes.options[this.form.ReleaseNotes.selectedIndex].value,'_top')" value="Go">
 </form>
@@ -45,8 +45,8 @@
 				<li><form action="../"><label for="JavaDocs">Java Docs</label>
 <select name="JavaDocs">
     <option selected="selected" value="http://www.eclipse.org/eclipselink/api/2.6/index.html">2.6</option>
-    <option value="http://www.eclipse.org/eclipselink/api/2.5/index.html">2.5 (Current)</option>
-    <option value="http://www.eclipse.org/eclipselink/api/">Older releases</option>
+    <option value="http://www.eclipse.org/eclipselink/api/2.5/index.html">2.5</option>
+    <option value="http://www.eclipse.org/eclipselink/api/2.4/index.html">2.4</option>
 </select>
 <input type="button" onclick="window.open(this.form.JavaDocs.options[this.form.JavaDocs.selectedIndex].value,'_top')" value="Go">
 </form>
