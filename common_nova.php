@@ -16,9 +16,7 @@
 	$Nav->setLinkList(null);
 	
 	$Nav->addNavSeparator("EclipseLink Project", "/eclipselink/index.html");
-
- 	$Nav->addNavSeparator("Releases", "/eclipselink/releases/index.php");
-	$Nav->addCustomNav("2.6.0", "/eclipselink/releases/2.6.php", "_self", 2);
+	$Nav->addCustomNav("Plan", "/projects/project-plan.php?projectid=rt.eclipselink", "_self", 2);
 
  	$Nav->addNavSeparator("Downloads", "/eclipselink/downloads/index.php");
 	$Nav->addCustomNav("2.6.0", "/eclipselink/downloads/index.php#2.4", "_self", 2);
@@ -33,11 +31,6 @@
 	$Nav->addNavSeparator("Community", "/eclipselink/community.php");
 	$Nav->addCustomNav("User Forum", "/newsportal/thread.php?group=eclipse.rt.eclipselink", "_self", 2);
 	$Nav->addCustomNav("Users Mailing List", "http://dev.eclipse.org/mhonarc/lists/eclipselink-users/maillist.html", "_self", 2);
-
-	$Nav->addNavSeparator("Project");
-	$Nav->addCustomNav("Plan", "/projects/project-plan.php?projectid=rt.eclipselink", "_self", 2);
-	$Nav->addCustomNav("Timeline", "/projects/timeline/index.php?projectid=rt.eclipselink", "_self", 2);
-	$Nav->addCustomNav("Releases", "http://wiki.eclipse.org/EclipseLink/Release", "_self", 2);
 
   
  function &read_file($file_name) {
