@@ -6,7 +6,6 @@ $pageKeywords   = "Eclipse Persistence EclipseLink Download";
 $pageAuthor     = "Doug Clarke based on work by Bob Fraser";
 
 $root = $_SERVER['DOCUMENT_ROOT'];
-require_once ($root . '/eclipselink/common_nova.php');
 
 # Generate the web page
 // Load the XML source
