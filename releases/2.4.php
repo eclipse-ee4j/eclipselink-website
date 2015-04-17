@@ -3,7 +3,6 @@ $pageKeywords	= "EclipseLink 2.4 release";
 $pageAuthor		= "Peter Krogh, Shaun Smith, Doug Clarke based on work by Bob Fraser";
 
 $root = $_SERVER['DOCUMENT_ROOT'];
-require_once ($root . '/eclipselink/common_nova.php');
 
 # Generate the web page
 // Load the XML source
