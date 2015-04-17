@@ -1,0 +1,12 @@
+@CHARSET "UTF-8";
+
+.rssRow p {
+  padding: 0;
+  color: #444444;
+}
+
+.rssIcon {
+  position: relative;
+  left: 72px;
+  top: 2px;
+}

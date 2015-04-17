@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>EclipseLink</title>
+    <meta name="description" content="Website of the EclipseLink project.">
+    <meta name="author" content="EclipseLink">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap-customizations.css" rel="stylesheet">
+    <style type="text/css"></style></head>
+  <body>
+
+    <!-- NAVBAR
+    ================================================== -->
+    <div class="navbar-wrapper">
+      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+      <div class="container">
+
+        <div class="navbar navbar-inverse">
+          <div class="navbar-inner">
+            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="http://www.eclipse.org/eclipselink/">ECLIPSELINK</a>
+            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li><a href="#about">About</a></li>
+                <li><a href="#download">Download</a></li>
+                <li><a href="#documentation">Documentation</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="http://projects.eclipse.org/projects/rt.eclipselink" target="_blank">About this project</a></li>
+                    <li class="divider"></li>
+                    <li><a href="https://www.eclipse.org/forums/index.php?t=thread&frm_id=111" target="_blank">Ask questions</a></li>
+                    <li><a href="http://wiki.eclipse.org/EclipseLink" target="_blank">Visit the wiki</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://git.eclipse.org/c/eclipselink/" target="_blank">Check-out the source code</a></li>
+                    <li><a href="https://wiki.eclipse.org/EclipseLink/Development/Process" target="_blank">Learn how to contribute</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div><!-- /.navbar-inner -->
+        </div><!-- /.navbar -->
+
+      </div> <!-- /.container -->
+    </div><!-- /.navbar-wrapper -->
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="images/backgroundMain.jpg" alt=""">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>EclipseLink</h1>
+              <p class="lead">Comprehensive open-source Java persistence solution addressing relational, XML, and database web services.</p>
+              <a class="btn btn-large btn-primary" href="#download">Try it today</a>
+            </div>
+          </div>
+        </div>
+<!--        <div class="item">
+          <img src="images/homepage/slide-05.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>REST made easy.</h1>
+              <p class="lead">Based on JAX-RS, simply add resources to an OSGi bundle, build it with Maven or PDE and deploy it.</p>
+              <a class="btn btn-large btn-primary" href="http://wiki.eclipse.org/Gyrex/Learning_Material/Develop_JAX-RS" target="_blank">Learn more</a>
+            </div>
+          </div>
+        </div-->
+      </div>
+      <!--a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a-->
+    </div><!-- /.carousel -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="span4">
+          <i class="fa fa-database fa-4x"></i>
+          <h2>JPA</h2>
+          <p>Provides standards based Object-Relational persistence solution with additional support for many advanced features. 
+              EclipseLink JPA provides advanced support for leading relational databases and Java containers.</p>
+          <p><a class="btn" href="#jpa">View details &raquo;</a></p>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <i class="fa fa-file-code-o fa-4x"></i>
+          <h2>MOXy</h2>
+          <p>Enables Java developers to efficiently bind Java classes to XML Schemas. MOXy implements JAXB allowing developers to provide 
+              their mapping information through annotations as well as providing support for storing the mappings in XML format. 
+              The many advanced mappings enable developers to handle the complex XML structures without having to mirror the schema in their Java class model.</p>
+          <p><a class="btn" href="#moxy">View details &raquo;</a></p>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <i class="fa fa-exchange fa-4x"></i>
+          <h2>DBWS</h2>
+          <p>Declarative Web Service solution for accessing relational databases. The DBWS Builder generates the 
+              necessary configuration files based on the provided database artifacts so that EclipseLink's relational and persistence services 
+              can be combined to handle the requests.</p>
+          <p><a class="btn" href="#dbws">View details &raquo;</a></p>
+        </div><!-- /.span4 -->
+      </div><!-- /.row -->
+
+
+      <hr class="featurette-divider">
+
+      <a name="about"></a>
+
+      <a name="jpa"></a>
+      <div class="featurette">
+        <img class="featurette-image pull-right" src="images/jpa.png" width="150">
+        <h2 class="featurette-heading">Persistence <span class="muted">SQL or NOT</span></h2>
+        <p class="lead">The EclipseLink JPA provides developers with a standards based Object-Relational persistence solution with additional support for many advanced features. 
+            EclipseLink JPA provides advanced support for leading relational databases and Java containers.<br/><br/>
+        </p>
+        <h4 class="featurette-heading">SQL</h4>
+        <div class="row" style="margin-top:2em">
+          <div class="span3">
+            <p><strong>Basic Configuration Examples</strong></p>
+            <p>Basic examples of configuration necessary when using EclipseLink JPA.</p>
+            <p><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/JPAConfigure">Try it.</a></p>
+          </div><!-- /.span4 -->
+          <div class="span3">
+            <p><strong>Using EclipseLink JPA in a JSF application.</strong></p>
+            <p>This tutorial illustrates the use of EclipseLink JPA in a JSF application. The tutorial includes configuration and usage information in leading Java EE containers.</p>
+            <p><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/JSF_Tutorial"><small>Try it.</small></a></p>
+          </div><!-- /.span4 -->
+          <div class="span3">
+            <p><strong>Using EclipseLink JPA in an RCP Application.</strong></p>
+            <p>This example provides a simple RCP application that uses EclipseLink JPA. It illustrates the usage of EclipseLink JPA in an Equinox environment.</p>
+            <p><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/JSF_Tutorial"><small>Try it.</small></a></p>
+          </div><!-- /.span4 -->
+          <div class="span3">
+            <p><strong>More JPA Examples</strong></p>
+            <p><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA"><small>See here</small></a></p>
+          </div><!-- /.span4 -->
+        </div><!-- /.row -->
+        <h4 class="featurette-heading">No-SQL</h4>
+        <div class="row" style="margin-top:2em">
+          <div class="span3">
+            <p><strong>Accessing MongoDB through JPA</strong></p>
+            <p>This example shows how to map and persist an Ordering system object model to an Oracle NoSQL Database (ONDB) and a MongoDB NoSQL database.</p>
+            <p><a href="https://wiki.eclipse.org/EclipseLink/Examples/JPA/NoSQL">Try it.</a></p>
+          </div><!-- /.span4 -->
+          <div class="span3">
+            <p><strong>Polyglot Persistence (Relational and NoSQL)</strong></p>
+            <p>This example is a variation of the NoSQL Example with some of the entities mapped to MongoDB and some to relational database.</p>
+            <p><a href="https://wiki.eclipse.org/EclipseLink/Examples/PolyglotPersistence"><small>Try it.</small></a></p>
+          </div><!-- /.span4 -->
+        </div><!-- /.row -->
+      </div>
+
+      <hr class="featurette-divider">
+
+      <a name="moxy"></a>
+      <div class="featurette">
+        <img class="featurette-image pull-left" src="images/moxy.jpg" width="200">
+        <h2 class="featurette-heading">MOXy <span class="muted">XML or JSON</span></h2>
+        <p class="lead">The EclipseLink MOXy component enables Java developers to efficiently bind Java classes to XML or JSON. MOXy implements JAXB as well as SDO standards
+            allowing developers to provide their mapping information through annotations as well as providing support for storing the mappings in XML format. 
+            The many advanced mappings enable developers to handle the complex XML structures without having to mirror the schema in their Java class model.
+        </p>
+        <h4 class="featurette-heading">JAXB</h4>
+        <div class="row" style="margin-top:2em">
+          <div class="span3">
+            <p><strong>Manipulating XML using EclipseLink MOXy (JAXB)</strong></p>
+            <p>This examnple walks through the configuration and usage of MOXY's JAXB implementation.</p>
+            <p><a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/JAXB">Try it.</a></p>
+          </div><!-- /.span4 -->
+          <div class="span3">
+            <p><strong>Meet in the Middle Mapping with MOXy</strong></p>
+            <p>This tutorial illustrates for a POJO object model can be mapped to an XML schema using the EclipseLink Workbench and XML mappings with the JAXB runtime API.</p>
+            <p><a href="https://wiki.eclipse.org/EclipseLink/Examples/MOXy/MeetInTheMiddle/Advantages"><small>Try it.</small></a></p>
+          </div><!-- /.span4 -->
+          <div class="span3">
+            <p><strong>JAXB Specification</strong></p>
+            <p>JCP page for Java API for XML Binding specification.</p>
+            <p><a href="https://jcp.org/en/jsr/detail?id=222"><small>Read it.</small></a></p>
+          </div><!-- /.span4 -->
+          <div class="span3">
+            <p><strong>More MOXy Examples</strong></p>
+            <p><a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy"><small>See here</small></a></p>
+          </div><!-- /.span4 -->
+        </div><!-- /.row -->
+        <h4 class="featurette-heading">SDO</h4>
+        <div class="row" style="margin-top:2em">
+          <div class="span3">
+            <p><strong>Generating static Data Objects from XSD</strong></p>
+            <p>Generating a static SDO DataObject model from an XML schema using EclipseLink's SDO compiler.</p>
+            <p><a href="http://wiki.eclipse.org/EclipseLink/Examples/SDO/Compiler">Try it.</a></p>
+          </div><!-- /.span4 -->
+          <div class="span3">
+            <p><strong>Using POJOs and JPA Entities with SDO</strong></p>
+            <p>EclipseLink SDO provides Data Access Service (DAS) combining existing POJO object models or JPA entities wrapped within static or dynamic data objects.</p>
+            <p><a href="http://wiki.eclipse.org/EclipseLink/Examples/SDO#Data_Access_Service"><small>Try it.</small></a></p>
+          </div><!-- /.span4 -->
+          <div class="span3">
+            <p><strong>EclipseLink SDO Examples</strong></p>
+            <p>This example provides a simple RCP application that uses EclipseLink JPA. It illustrates the usage of EclipseLink JPA in an Equinox environment.</p>
+            <p><a href="http://wiki.eclipse.org/EclipseLink/Examples/SDO"><small>Try it.</small></a></p>
+          </div><!-- /.span4 -->
+          <div class="span3">
+            <p><strong>More SDO</strong></p>
+            <p><a href="http://wiki.eclipse.org/EclipseLink/Examples/SDO">More Examples</a></p>
+            <p><a href="http://www.osoa.org/display/Main/Service+Data+Objects+Home">OSOA SDO Home</a></p>
+            <p><a href="http://jcp.org/en/jsr/detail?id=235">SDO Java Specification Home</a></p>
+            <p><a href="http://wiki.eclipse.org/EclipseLink/FAQ/WhatIsSDO">SDO FAQ</a></p>
+            <p><a href="http://wiki.eclipse.org/Category:SDO">SDO User guide</a></p>
+          </div><!-- /.span4 -->
+        </div><!-- /.row -->
+      </div>
+
+      <hr class="featurette-divider">
+
+      <a name="dbws"></a>
+      <div class="featurette">
+        <!--img class="featurette-image pull-right" src="images/homepage/feature-logging.svg" width="400"-->
+        <h2 class="featurette-heading">Database Web Services <span class="muted">REST or SOAP</span></h2>
+        <p class="lead">The EclipseLink DBWS component enables Java developers a declarative Web Service solution for accessing relational databases. The DBWS Builder generates the necessary configuration files based on the 
+            provided database artifacts so that EclipseLink's relational and persistence services can be combined to handle the requests.
+        </p>
+        <h4 class="featurette-heading">JPA-RS (REST)</h4>
+        <div class="row" style="margin-top:2em">
+          <div class="span3">
+            <p><strong>JPA-RS Basics</strong></p>
+            <p>The student example is intended to provide a simple example of using JPA-RS with a single entity persistence unit in a web application.</p>
+            <p><a href="https://wiki.eclipse.org/EclipseLink/Examples/JPARS/Simple">Try it.</a></p>
+          </div><!-- /.span4 -->
+          <div class="span3">
+            <p><strong>New JPA-RS features</strong></p>
+            <p>Dmitry Kornilov's blog describing slightly more advanced JPA-RS features.</p>
+            <p><a href="http://javarelated.com/brief-review-of-eclipselink-jpa-rs-new-features.html"><small>Try it.</small></a></p>
+          </div><!-- /.span4 -->
+          <div class="span3">
+            <p><strong>JPA-RS Design Doc</strong></p>
+            <p>Detailed design documentation for EclipseLink 2.6.0 JPA-RS features.</p>
+            <p><a href="https://wiki.eclipse.org/EclipseLink/DesignDocs/JPARS2.0"><small>Read it.</small></a></p>
+          </div><!-- /.span4 -->
+        </div><!-- /.row -->
+        <h4 class="featurette-heading">DBWS (SOAP)</h4>
+        <div class="row" style="margin-top:2em">
+          <div class="span3">
+            <p><strong>DBWS Overview</strong></p>
+            <p>Brief walk through of the DBWS configuration files and usage with the DBWSBuilder utility.</p>
+            <p><a href="http://wiki.eclipse.org/EclipseLink/Examples/DBWS/DBWSOverview">Try it.</a></p>
+          </div><!-- /.span4 -->
+          <div class="span3">
+            <p><strong>Generating a Web Service for accessing a Table</strong></p>
+            <p>Basic example illustrating how a table can easily be exposed as a web service using default CRUD operations.</p>
+            <p><a href="http://wiki.eclipse.org/EclipseLink/Examples/DBWS/DBWSBasicTable"><small>Try it.</small></a></p>
+          </div><!-- /.span4 -->
+          <div class="span3">
+            <p><strong>More DBWS Examples</strong></p>
+            <p><a href="http://wiki.eclipse.org/EclipseLink/Examples/DBWS"><small>See here</small></a></p>
+          </div><!-- /.span4 -->
+        </div><!-- /.row -->
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- START THE DOWNLOADS -->
+      <div class="row">
+        <img class="featurette-image pull-right" src="images/downloads.gif" width="100">
+        <div class="span12">
+          <a name="download"></a><h1>Downloads</h1>
+          <div class="row" style="margin-top:2em">
+            <div class="span5 offset1">
+              <h4>Latest Release: EclipseLink 2.6.0 (March 10, 2015)<br><span class="muted"><small><a href="https://www.eclipse.org/eclipselink/releases/2.6.php">New and noteworthy</a>, <a href="http://www.eclipse.org/eclipselink/documentation/2.6/">Getting Started</a></small></span></h4>
+              <p style="margin-top:2em">
+                <a rel="popover" data-content="This zip includes EclipseLink 2.6.0 with the single jar packaging, source, JavaDocs, utilities, and dependent libraries. Intended for use in Java EE and SE environments." 
+                   data-original-title="Description" class="btn download-btn popover-on-hover" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.6.0/eclipselink-2.6.0.v20150309-bf26070.zip">
+                  <strong>EclipseLink 2.6.0 Installer Zip (32 MB)</strong><br>
+                  <small class="muted">eclipselink-2.6.0.v20150309-bf26070.zip</small>
+                </a>
+              </p>
+              <p style="margin-top:1em">
+                <a rel="popover" data-content="This zip includes EclipseLink NoSql support. This zip is to be used together with the EclipseLink zip (or EclipseLink bundles) to support NoSQL. This zip includes binaries, source, and Javadocs." 
+                   data-original-title="Description" class="btn download-btn popover-on-hover" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.6.0/eclipselink-plugins-nosql-2.6.0.v20150309-bf26070.zip">
+                  <strong>EclipseLink NoSQL 2.6.0 Installer Zip (444 K)</strong><br>
+                  <small class="muted">eclipselink-plugins-nosql-2.6.0.v20150309-bf26070.zip</small>
+                </a>
+              </p>
+              <p style="margin-top:1em">
+                <a rel="popover" data-content="Contains EclipseLink and dependency bundles. Get the OSGI Bundle Zip to use EclipseLink 2.6.0 runtime in an OSGi container." 
+                   data-original-title="Description" class="btn download-btn popover-on-hover" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.6.0/eclipselink-plugins-2.6.0.v20150309-bf26070.zip">
+                  <strong>EclipseLink 2.6.0 OSGi Bundles Zip (24 MB)</strong><br>
+                  <small class="muted">eclipselink-plugins-2.6.0.v20150309-bf26070.zip</small>
+                </a>
+              </p>
+              <p style="margin-top:1em">
+                <a rel="popover" data-content="Contains source code for all of eclipselink." 
+                   data-original-title="Description" class="btn download-btn popover-on-hover" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.6.0/eclipselink-src-2.6.0.v20150309-bf26070.zip">
+                  <strong>EclipseLink 2.6.0 Source Zip (8 MB)</strong><br>
+                  <small class="muted">eclipselink-src-2.6.0.v20150309-bf26070.zip</small>
+                </a>
+              </p>
+              <p style="margin-top:1em">
+                <a rel="popover" data-content="Eclipselink.jar and it's dependencies can be downloaded from a Maven repository." 
+                   data-original-title="Description" class="btn download-btn popover-on-hover" href="http://wiki.eclipse.org/EclipseLink/Maven">
+                  <strong>EclipseLink in Maven</strong><br>
+                  <small class="muted">http://wiki.eclipse.org/EclipseLink/Maven</small>
+                </a>
+              </p>
+              <p style="margin-top:1em">
+                <a rel="popover" data-content="This is an Eclipse update site URL, which you can paste into the Target Platform editor within Eclipse. Click on it for browsing its content." 
+                   data-original-title="Description" class="btn download-btn popover-on-hover" href="http://download.eclipse.org/rt/eclipselink/updates/">
+                  <strong>EclipseLink in P2 Repository</strong><br>
+                  <small class="muted">http://download.eclipse.org/rt/eclipselink/updates/</small>
+                </a>
+              </p>
+              <p style="margin-top:1em">
+                <small>The minimum requirement to run EclipseLink 2.6.0 is Java 7. Please ensure that you have Java 7 installed and it's working.</small>
+              </p>
+              <p style="margin-top:1em">
+                  <small>The EclipseLink Project's produced contents are dual-licensed under the terms of the <a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse Public License v1.0</a> and <a href="http://www.eclipse.org/org/documents/edl-v10.php">Eclipse Distribution License v1.0</a>.
+                For the license of dependent libraries included within a distribution please refer to the about.html file within each distribution.</small>
+              </p>
+            </div>
+            <div class="span5">
+              <h4>Other Downloads<br><span class="muted"><small>Previous releases, milestones, nightlies, ...</small></span></h4>
+              <p style="margin-top:2em">
+                <a class="btn download-btn" href="https://www.eclipse.org/eclipselink/downloads/previous_releases.php">
+                  <strong>Previous Releases</strong><br>
+                  <small class="muted">eclipselink/downloads/previous_releases.php</small>
+                </a>
+              </p>
+              <p style="margin-top:1em">
+                <a class="btn download-btn" href="https://www.eclipse.org/eclipselink/downloads/milestones.php">
+                  <strong>Milestone Builds</strong><br>
+                  <small class="muted">eclipselink/downloads/milestones.php</small>
+                </a>
+              </p>
+              <p style="margin-top:1em">
+                <a class="btn download-btn" href="https://www.eclipse.org/eclipselink/downloads/nightly.php">
+                  <strong>Nighty builds</strong><br>
+                  <small class="muted">eclipselink/downloads/nightly.php</small>
+                </a>
+              </p>
+              <p style="margin-top:1em">
+                <small>The minimum requirement to run EclipseLink 2.7.0 is Java 8. Please ensure that you have Java 8 installed and it's working.</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /END THE DOWNLOADS -->
+
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <a name="documentation"></a>
+        <img class="featurette-image pull-left" src="images/doc_small.png" width="60">
+        <h2 class="featurette-heading">Documentation <span class="muted"></span></h2>
+          <div class="row" style="margin-top:2em">
+            <div class="span3">
+              <p><strong>Release Notes</strong></p>
+              <p><a href="https://www.eclipse.org/eclipselink/releases/2.6.php">2.6</a></p>
+              <p><a href="https://www.eclipse.org/eclipselink/releases/2.5.php">2.5</a></p>
+              <p><a href="https://www.eclipse.org/eclipselink/releases/2.4.php">2.4</a></p>
+            </div><!-- /.span4 -->
+            <div class="span3">
+              <p><strong>Java Docs</strong></p>
+              <p><a href="https://www.eclipse.org/eclipselink/api/2.6/index.html">2.6</a></p>
+              <p><a href="https://www.eclipse.org/eclipselink/api/2.5/index.html">2.5</a></p>
+              <p><a href="https://www.eclipse.org/eclipselink/api/2.4/index.html">2.4</a></p>
+            </div><!-- /.span4 -->
+            <div class="span3">
+              <p><strong>Installation and Configuration</strong></p>
+              <p><a href="https://www.eclipse.org/eclipselink/documentation/2.6/solutions/install.htm">2.6</a></p>
+              <p><a href="https://www.eclipse.org/eclipselink/documentation/2.5/solutions/install.htm">2.5</a></p>
+              <p><a href="https://www.eclipse.org/eclipselink/documentation/2.4/solutions/install.htm">2.4</a></p>
+            </div><!-- /.span4 -->
+            <div class="span3">
+              <p><strong>XML Schemas</strong></p>
+              <p><a href="https://wiki.eclipse.org/EclipseLink/XSDs">All releases</a></p>
+            </div><!-- /.span4 -->
+          </div><!-- /.row -->
+          <p class="pull-right"><a href="#"><small>Back to top</small></a></p>
+        <h4 class="featurette-heading">User & Solution Guides</h4>
+          <div class="row" style="margin-top:2em">
+            <div class="span3">
+              <p><strong>Understanding EclipseLink Concepts</strong></p>
+              <p><a href="https://www.eclipse.org/eclipselink/documentation/2.6/concepts/toc.htm">2.6</a></p>
+              <p><a href="https://www.eclipse.org/eclipselink/documentation/2.5/concepts/toc.htm">2.5</a></p>
+              <p><a href="https://www.eclipse.org/eclipselink/documentation/2.4/concepts/toc.htm">2.4</a></p>
+            </div><!-- /.span4 -->
+            <div class="span3">
+              <p><strong>Solutions Guide</strong></p>
+              <p><a href="https://www.eclipse.org/eclipselink/documentation/2.6/solutions/toc.htm">2.6</a></p>
+              <p><a href="https://www.eclipse.org/eclipselink/documentation/2.5/solutions/toc.htm">2.5</a></p>
+              <p><a href="https://www.eclipse.org/eclipselink/documentation/2.4/solutions/toc.htm">2.4</a></p>
+            </div><!-- /.span4 -->
+            <div class="span3">
+              <p><strong>JPA Extensions Reference</strong></p>
+              <p><a href="https://www.eclipse.org/eclipselink/documentation/2.6/jpa/extensions/toc.htm">2.6</a></p>
+              <p><a href="https://www.eclipse.org/eclipselink/documentation/2.5/jpa/extensions/toc.htm">2.5</a></p>
+              <p><a href="https://www.eclipse.org/eclipselink/documentation/2.4/jpa/extensions/toc.htm">2.4</a></p>
+            </div><!-- /.span4 -->
+            <div class="span3">
+              <p><strong>Developing JAXB Applications Using EclipseLink MOXy</strong></p>
+              <p><a href="https://www.eclipse.org/eclipselink/documentation/2.6/moxy/toc.htm">2.6</a></p>
+              <p><a href="https://www.eclipse.org/eclipselink/documentation/2.5/moxy/toc.htm">2.5</a></p>
+              <p><a href="https://www.eclipse.org/eclipselink/documentation/2.4/moxy/toc.htm">2.4</a></p>
+            </div><!-- /.span4 -->
+          </div><!-- /.row -->
+          <div class="row" style="margin-top:2em">
+            <div class="span3">
+              <p><strong>EclipseLink NoSQL</strong></p>
+              <p><a href="https://www.eclipse.org/eclipselink/documentation/2.6/concepts/nosql.htm">2.6</a></p>
+              <p><a href="https://www.eclipse.org/eclipselink/documentation/2.5/concepts/nosql.htm">2.5</a></p>
+              <p><a href="https://www.eclipse.org/eclipselink/documentation/2.4/concepts/nosql.htm">2.4</a></p>
+            </div><!-- /.span4 -->
+            <div class="span3">
+              <p><strong>Solutions Guide</strong></p>
+              <p><a href="https://www.eclipse.org/eclipselink/documentation/2.6/solutions/toc.htm">2.6</a></p>
+              <p><a href="https://www.eclipse.org/eclipselink/documentation/2.5/solutions/toc.htm">2.5</a></p>
+              <p><a href="https://www.eclipse.org/eclipselink/documentation/2.4/solutions/toc.htm">2.4</a></p>
+            </div><!-- /.span4 -->
+            <div class="span3">
+              <p><strong>Developing Persistence Architectures Using EclipseLink Database Web Services</strong></p>
+              <p><a href="https://www.eclipse.org/eclipselink/documentation/2.6/dbws/toc.htm">2.6</a></p>
+              <p><a href="https://www.eclipse.org/eclipselink/documentation/2.5/dbws/toc.htm">2.5</a></p>
+              <p><a href="https://www.eclipse.org/eclipselink/documentation/2.4/dbws/toc.htm">2.4</a></p>
+            </div><!-- /.span4 -->
+          </div><!-- /.row -->
+          <p class="pull-right"><a href="#"><small>Back to top</small></a></p>
+	</div>
+      
+      <hr>
+
+      <!-- START THE SUPPORT -->
+      <div class="row">
+        <div class="span12">
+          <h1>Get Help</h1>
+          <p>
+            We provide support to our community using the Eclipse Forums. It's a place to ask questions, reach out to committers and/or share your experiences with other members of the community.
+          </p>
+          <a href="https://www.eclipse.org/forums/index.php?t=thread&frm_id=111" target="_blank">Visit the EclipseLink forum.</a>
+        </div>
+      </div>
+      <!-- /END THE SUPPORT -->
+
+      <hr>
+
+      <!-- FOOTER -->
+      <footer>
+        <p>&copy; 2015 The Eclipse Foundation. All Rights Reserved. &middot; <a href="http://www.eclipse.org/legal/privacy.php">Privacy</a> &middot; <a href="http://www.eclipse.org/legal/termsofuse.php">Terms</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+    <script src="//code.jquery.com/jquery.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script>
+      function configureBackToTopLink(){
+        var backToTopLinkElement = $('<a>', { id: 'back-to-top', class: 'btn btn-small', href: '#top' });
+        var iconElement = $('<i>', { class: 'icon-chevron-up' });
+
+        backToTopLinkElement.appendTo ('body');
+        iconElement.appendTo (backToTopLinkElement);
+        backToTopLinkElement.hide();
+
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 150) {
+            backToTopLinkElement.fadeIn ();
+          } else {
+            backToTopLinkElement.fadeOut ();
+          }
+        });
+
+        backToTopLinkElement.click (function (e) {
+          e.preventDefault ();
+            $('body, html').animate({
+                scrollTop: 0
+            }, 600);
+        });
+      }
+     !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel({interval: 15000});
+          // activate carousel
+          $('.popover-on-hover').popover({trigger: "hover"});
+          // back to top link
+          configureBackToTopLink();
+        })
+      }(window.jQuery)
+    </script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-1608008-2']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>

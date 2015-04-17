@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+
+.build-type-tagline {
+  color: #444444;
+}
+
+.build-type-description {
+	font-size: .92em;
+}
