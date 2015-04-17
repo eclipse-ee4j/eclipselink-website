@@ -15,22 +15,14 @@
 	
 	$Nav->setLinkList(null);
 	
-	$Nav->addNavSeparator("EclipseLink Project", "/eclipselink/index.php");
-	$Nav->addCustomNav("JPA", "/eclipselink/jpa.php", "_self", 2);
-	$Nav->addCustomNav("MOXy", "/eclipselink/moxy.php", "_self", 2);
-	$Nav->addCustomNav("SDO", "/eclipselink/sdo.php", "_self", 2);
-	$Nav->addCustomNav("DBWS", "/eclipselink/dbws.php", "_self", 2);
-  
+	$Nav->addNavSeparator("EclipseLink Project", "/eclipselink/index.html");
 
  	$Nav->addNavSeparator("Releases", "/eclipselink/releases/index.php");
-	$Nav->addCustomNav("2.4.0", "/eclipselink/releases/2.4.php", "_self", 2);
-	$Nav->addCustomNav("All", "/eclipselink/releases/index.php", "_self", 2);
+	$Nav->addCustomNav("2.6.0", "/eclipselink/releases/2.6.php", "_self", 2);
 
  	$Nav->addNavSeparator("Downloads", "/eclipselink/downloads/index.php");
-	$Nav->addCustomNav("2.4.0", "/eclipselink/downloads/index.php#2.4", "_self", 2);
+	$Nav->addCustomNav("2.6.0", "/eclipselink/downloads/index.php#2.4", "_self", 2);
 	$Nav->addCustomNav("Previous", "/eclipselink/downloads/previous_releases.php", "_self", 2);
-	$Nav->addCustomNav("Milestones", "/eclipselink/downloads/milestones.php", "_self", 2);
-	$Nav->addCustomNav("Maven", "http://wiki.eclipse.org/EclipseLink/Maven", "_self", 2);	
 
 	$Nav->addNavSeparator("Documentation", "/eclipselink/documentation/");
 	$Nav->addCustomNav("Doc Center", "/eclipselink/documentation/", "_self", 2);
@@ -39,11 +31,8 @@
 	$Nav->addCustomNav("EclipseLink Wiki", "http://wiki.eclipse.org/EclipseLink", "_self", 2);
 
 	$Nav->addNavSeparator("Community", "/eclipselink/community.php");
-	$Nav->addCustomNav("News", "/eclipselink/news.php", "_self", 2);
 	$Nav->addCustomNav("User Forum", "/newsportal/thread.php?group=eclipse.rt.eclipselink", "_self", 2);
 	$Nav->addCustomNav("Users Mailing List", "http://dev.eclipse.org/mhonarc/lists/eclipselink-users/maillist.html", "_self", 2);
-	$Nav->addCustomNav("Team", "/eclipselink/team/", "_self", 2);
-
 
 	$Nav->addNavSeparator("Project");
 	$Nav->addCustomNav("Plan", "/projects/project-plan.php?projectid=rt.eclipselink", "_self", 2);

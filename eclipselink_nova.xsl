@@ -5,7 +5,6 @@
 
  	<xsl:template match="/sections">
 
- <div class="logoBanner"><a href="/eclipselink"><img src="/eclipselink/images/logo.png" /></a></div>
 		<div id="midcolumn">
 
 			<xsl:apply-templates select="section[@class='title']"
