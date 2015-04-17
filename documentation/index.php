@@ -51,7 +51,6 @@
 <input type="button" onclick="window.open(this.form.JavaDocs.options[this.form.JavaDocs.selectedIndex].value,'_top')" value="Go">
 </form>
 				</li>
-				<li><a href="http://wiki.eclipse.org/EclipseLink/XSDs" title="XSDs">XML Schemas (XSDs)</a></li>
 				<li>
 <form action="../"><label for="solutions">Installation and Configuration</label>
   <select name="Installation">
@@ -62,6 +61,7 @@
   <input type="button" onclick="window.open(this.form.Installation.options[this.form.Installation.selectedIndex].value,'_top')" value="Go">
 </form>
 				</li>
+				<li><a href="http://wiki.eclipse.org/EclipseLink/XSDs" title="XSDs">XML Schemas (XSDs)</a></li>
 			</ul>
 	</div>
 
