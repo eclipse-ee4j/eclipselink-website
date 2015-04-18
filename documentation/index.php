@@ -125,17 +125,6 @@
 				</li>
 
 				<li>
-<form action="../"><label for="solutions">EclipseLink SDO</label>
-  <select name="sdo">
-    <option value="http://www.eclipse.org/eclipselink/moxy.php" selected="selected"> 2.6 </option>
-    <option value="http://www.eclipse.org/eclipselink/moxy.php"> 2.5 </option>
-    <option value="http://wiki.eclipse.org/Category:SDO"> 2.4 </option>
-  </select>
-  <input type="button" onclick="window.open(this.form.sdo.options[this.form.sdo.selectedIndex].value,'_top')" value="Go">
-</form>				
-				</li>
-
-				<li>
 <form action="../"><label for="solutions">Developing Persistence Architectures Using EclipseLink Database Web Services</label>
   <select name="dbws">
     <option value="http://www.eclipse.org/eclipselink/documentation/2.6/dbws/toc.htm" selected="selected"> 2.6 </option>
