@@ -83,7 +83,7 @@ body {
 }
 
 .carousel .item {
-  height: 500px;
+  height: 450px;
 }
 .carousel img {
   position: absolute;
@@ -121,7 +121,7 @@ body {
   text-align: center;
 }
 .marketing h2 {
-  font-weight: normal;
+  font-weight: bold;
 }
 .marketing .span4 p {
   margin-left: 10px;
