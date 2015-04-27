@@ -139,73 +139,10 @@
 
 
 	<div class="section">
-			<h3 id="elsearches">EclispeLink Documentation Searches</h3>
+			<h3 id="elsearches">EclispeLink Documentation Search</h3>
 <table border="0" cellspacing="0" cellpadding="5" width="100%">
   <tr>
-    <td>
-		<p><strong>JPA</strong> documentation:</p>
-		<form action="http://www.google.com/cse" id="cse-search-box">
-			<div>
-				<input type="hidden" name="cx" value="016171230611334810008:y5kxq4rqd8s" />
-				<input type="text" name="q" />
-				<input type="submit" name="sa" value="Search" />
-			</div>
-		</form>
-		<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script></td>
-	</td>
-    <td>
-		<p><strong>MOXy&nbsp;(JAXB)</strong> documentation:</p>
-        <form action="http://www.google.com/cse" id="cse-search-box">
-			<div>
-				<input type="hidden" name="cx" value="016171230611334810008:brtjnxzsfyg" />
-				<input type="text" name="q" />
-				<input type="submit" name="sa" value="Search" />
-			</div>
-		</form>
-		<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
-	</td>
-    <td><p><strong>DBWS</strong> documentation:</p>
-		<form action="http://www.google.com/cse" id="cse-search-box">
-			<div>
-				<input type="hidden" name="cx" value="016171230611334810008:nnjaqkoh3mq" />
-				<input type="text" name="q" />
-				<input type="submit" name="sa" value="Search" />
-			</div>
-		</form>
-		<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script></td>
-		<link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" />
-	</td>
-  </tr>
-  <tr><td>&nbsp;</td></tr>
-  <tr>
-    <td>
-		<p><strong>Concepts</strong> guide:</p>
-		<form action="http://www.google.com/cse" id="cse-search-box">
-			<div>
-				<input type="hidden" name="cx" value="016171230611334810008:mdbgdwjv8zu" />
-				<input type="text" name="q" />
-				<input type="submit" name="sa" value="Search" />
-			</div>
-		</form>
-		<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script></td>
-	</td>
-    <td>
-		<p><strong>Solutions</strong> guide:</p>
-        <form action="http://www.google.com/cse" id="cse-search-box">
-			<div>
-				<input type="hidden" name="cx" value="016171230611334810008:enkkfjmsqju" />
-				<input type="text" name="q" />
-				<input type="submit" name="sa" value="Search" />
-			</div>
-		</form>
-		<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
-	</td>
-    <td>
-	</td>
-  </tr>
-  <tr><td>&nbsp;</td></tr>
-  <tr>
-    <td><p><strong>All</strong> Eclipselink documentation:</p>
+    <td><p>Search <strong>all</strong> Eclipselink documentation:</p>
 		<form action="http://www.google.com/cse" id="cse-search-box">
 			<div>
 				<input type="hidden" name="cx" value="016171230611334810008:ob2bbia9swa" />
