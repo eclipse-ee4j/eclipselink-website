@@ -41,7 +41,7 @@
                </td>
             </tr>
          </table>
-
+         <br/>
          <a name="2.5.1"> </a>
          <b>EclipseLink 2.5.1 Release (Released Sept 18, 2013)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
@@ -81,7 +81,7 @@
                </td>
             </tr>
          </table>
-
+         <br/>
          <a name="2.5.0"> </a>
          <b>EclipseLink 2.5.0 Patch Set Downloads (Released May 28, 2013)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
@@ -121,7 +121,7 @@
                </td>
             </tr>
          </table>
-		 
+         <br/>
          <a name="2.4.2"> </a>
          <b>EclipseLink 2.4.2 Patch Set Downloads (Released Jul 4, 2013)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
@@ -161,7 +161,7 @@
                </td>
             </tr>
          </table>
-
+         <br/>
          <a name="2.4.1"> </a>
          <b>EclipseLink 2.4.1 Patch Set Downloads (Released October 10, 2012)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
@@ -201,7 +201,7 @@
                </td>
             </tr>
          </table>
-
+         <br/>
          <a name="2.4.0"> </a>
          <b>EclipseLink 2.4.0 Downloads (Released June 27, 2012)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
@@ -241,7 +241,7 @@
                </td>
             </tr>
          </table>
-
+         
          <a name="2.3.3"> </a>
          <b>EclipseLink 2.3.3 Patch Set Downloads (Released July 3, 2012)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
