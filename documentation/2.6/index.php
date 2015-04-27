@@ -33,12 +33,11 @@
 	<div class="homeitem3col">
 		<h2>EclipseLink 2.6.x Documentation</h2>
 			<ul>
-				<li><!-- <a href="http://www.eclipse.org/eclipselink/releases/2.6.php"> -->Release Notes</a></li>
+				<li><a href="https://www.eclipse.org/eclipselink/releases/2.6.php">Release Notes</a></li>
 				<li><a href="solutions/install.htm">Installation and Configuration</a></li>
 				<li> <a href="http://www.eclipse.org/eclipselink/api/2.6/index.html"> Java Docs</a></li>
 			</ul>
 	</div>
-
  
 	<div class="section">
 			<h3>Guides</h3>
@@ -62,73 +61,10 @@
 
 	<div class="section">
 
-			<h3 id="elsearches">EclispeLink Documentation Searches</h3>
+			<h3 id="elsearches">EclispeLink Documentation Search</h3>
 <table border="0" cellspacing="0" cellpadding="5" width="100%">
   <tr>
-    <td>
-		<p><strong>JPA</strong> documentation:</p>
-		<form action="http://www.google.com/cse" id="cse-search-box">
-			<div>
-				<input type="hidden" name="cx" value="016171230611334810008:y5kxq4rqd8s" />
-				<input type="text" name="q" />
-				<input type="submit" name="sa" value="Search" />
-			</div>
-		</form>
-		<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script></td>
-	</td>
-    <td>
-		<p><strong>MOXy&nbsp;(JAXB)</strong> documentation:</p>
-        <form action="http://www.google.com/cse" id="cse-search-box">
-			<div>
-				<input type="hidden" name="cx" value="016171230611334810008:brtjnxzsfyg" />
-				<input type="text" name="q" />
-				<input type="submit" name="sa" value="Search" />
-			</div>
-		</form>
-		<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
-	</td>
-    <td><p><strong>DBWS</strong> documentation:</p>
-		<form action="http://www.google.com/cse" id="cse-search-box">
-			<div>
-				<input type="hidden" name="cx" value="016171230611334810008:nnjaqkoh3mq" />
-				<input type="text" name="q" />
-				<input type="submit" name="sa" value="Search" />
-			</div>
-		</form>
-		<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script></td>
-		<link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" />
-	</td>
-  </tr>
-  <tr><td>&nbsp;</td></tr>
-  <tr>
-    <td>
-		<p><strong>Concepts</strong> guide:</p>
-		<form action="http://www.google.com/cse" id="cse-search-box">
-			<div>
-				<input type="hidden" name="cx" value="016171230611334810008:mdbgdwjv8zu" />
-				<input type="text" name="q" />
-				<input type="submit" name="sa" value="Search" />
-			</div>
-		</form>
-		<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script></td>
-	</td>
-    <td>
-		<p><strong>Solutions</strong> guide:</p>
-        <form action="http://www.google.com/cse" id="cse-search-box">
-			<div>
-				<input type="hidden" name="cx" value="016171230611334810008:enkkfjmsqju" />
-				<input type="text" name="q" />
-				<input type="submit" name="sa" value="Search" />
-			</div>
-		</form>
-		<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
-	</td>
-    <td>
-	</td>
-  </tr>
-  <tr><td>&nbsp;</td></tr>
-  <tr>
-    <td><p><strong>All</strong> Eclipselink documentation:</p>
+    <td><p>Search <strong>all</strong> Eclipselink documentation:</p>
 		<form action="http://www.google.com/cse" id="cse-search-box">
 			<div>
 				<input type="hidden" name="cx" value="016171230611334810008:ob2bbia9swa" />
@@ -149,61 +85,6 @@
 
 <div id="rightcolumn">
 
-		<div class="sideitem">
-			<h6>EclipseLink Search</h6>
-<div id="cse-search-form" style="width: 100%;">Loading</div>
-<script src="http://www.google.com/jsapi" type="text/javascript"></script>
-<script type="text/javascript"> 
-  google.load('search', '1', {language : 'en', style : google.loader.themes.SHINY});
-  google.setOnLoadCallback(function() {
-    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(
-      '016171230611334810008:ob2bbia9swa', customSearchOptions);
-    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
-    var options = new google.search.DrawOptions();
-    options.setAutoComplete(true);
-    options.enableSearchboxOnly("http://www.google.com/cse?cx=016171230611334810008:ob2bbia9swa");
-    customSearchControl.draw('cse-search-form', options);
-  }, true);
-</script>
-		</div>
-
-		<div class="sideitem">
-			<script src="http://widgets.twimg.com/j/2/widget.js"></script>
-<script>
-new TWTR.Widget({
-  version: 2,
-  type: 'search',
-  search: 'eclipselink',
-  interval: 6000,
-  title: 'What is being said about...',
-  subject: 'EclipseLink',
-  width: 'auto',
-  height: 300,
-  theme: {
-    shell: {
-      background: '#8ec1da',
-      color: '#ffffff'
-    },
-    tweets: {
-      background: '#ffffff',
-      color: '#444444',
-      links: '#1985b5'
-    }
-  },
-  features: {
-    scrollbar: false,
-    loop: true,
-    live: true,
-    hashtags: true,
-    timestamp: true,
-    avatars: true,
-    toptweets: true,
-    behavior: 'default'
-  }
-}).render().start();
-</script>
-		</div>
-		
 		<div class="sideitem">
 			<h6>Blogs</h6>
 			<ul>
