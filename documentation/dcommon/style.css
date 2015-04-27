@@ -82,6 +82,6 @@ form.gsc-search-box {width:450px !important;margin-left:auto !important;margin-r
 .gsc-result:hover{background:#CCCCFF;}
 table.gsc-search-box {background:url('http://www.eclipse.org/eclipselink/documentation/dcommon/images/search.png') no-repeat left center;padding-left:20px !important;}
 input#gsc-i-id1 {border: 1px solid #CCCCFF !important;}
-span.loadingspin {padding-left:30px;background:url('http://www.eclipse.org/eclipselink/documentation/dcommon/images/loading.gif') no-repeat left center;}
+span.loadingspin {padding-left:30px;}
 #disqus_thread {margin-top:1.0em;padding-top:5px;border-top:1px solid #e6e6e6}
 #global-nav h4 {font-size:1.0em !important}
