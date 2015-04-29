@@ -147,11 +147,11 @@
 <div class="sect2">
 <h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">About Managed Classes</font></h2>
 <p>Typically, you put all of the entities and other managed classes in a single JAR file, along with the <code>persistence.xml</code> file in the <code>META-INF</code> directory, and one or more mapping files (when you store metadata in XML).</p>
-<p>At the time the EclipseLink persistence provider processes the persistence unit, it determines which set of entities, mapped superclasses, and embedded objects each particular persistence unit will manage.</p>
+<p>At the time the EclipseLink persistence provider processes the persistence unit, it determines which set of entities, mapped superclasses, embedded objects, and converters each particular persistence unit will manage.</p>
 <p>At deployment time, the EclipseLink persistence provider may obtain managed classes from any of the following sources. A managed class will be included if it is one of the following:</p>
 <ul>
 <li>
-<p>Local classes: the classes annotated with <code>@Entity</code>, <code>@MappedSuperclass</code> or <code>@Embeddable</code> in the deployment unit in which its <code>persistence.xml</code> file was packaged. For more information, see <a href="http://jcp.org/en/jsr/detail?id=338">"Entity" in the JPA Specification</a>.</p>
+<p>Local classes: the classes annotated with <code>@Entity</code>, <code>@MappedSuperclass</code>, <code>@Embeddable</code> or <code>@Converter</code> in the deployment unit in which its <code>persistence.xml</code> file was packaged. For more information, see <a href="http://jcp.org/en/jsr/detail?id=338">"Entity" in the JPA Specification</a>.</p>
 <div align="center">
 <div class="inftblnote"><br />
 <table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
