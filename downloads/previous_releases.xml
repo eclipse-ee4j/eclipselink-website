@@ -2,22 +2,22 @@
 <sections title="Downloads for previous EclipseLink Releases and Patch-Sets">
    <section class="main" name="Downloads for previous EclipseLink Releases and Patch-Sets">
       <description>
-         <a name="2.6.0"> </a>
-         <b>EclipseLink 2.6.0 Release (Released March 10, 2015)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
+         <a name="2.6.1"> </a>
+         <b>EclipseLink 2.6.1 Release (Released October 15, 2015)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
                <td class="packageDesc">
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.6.0/eclipselink-2.6.0.v20150309-bf26070.zip">EclipseLink 2.6.0 Installer Zip (38 MB)</a>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.6.1/eclipselink-2.6.1.v20150916-55dc7c3.zip">EclipseLink 2.6.1 Installer Zip (32 MB)</a>
                   </div>
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.6.0/eclipselink-plugins-nosql-2.6.0.v20150309-bf26070.zip">EclipseLink NoSQL 2.6.0 Installer Zip (444 K)</a>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.6.1/eclipselink-plugins-nosql-2.6.1.v20150916-55dc7c3.zip">EclipseLink NoSQL 2.6.1 Installer Zip (455 K)</a>
                   </div>
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.6.0/eclipselink-plugins-2.6.0.v20150309-bf26070.zip">EclipseLink 2.6.0 OSGi Bundles Zip (24 MB)</a>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.6.1/eclipselink-plugins-2.6.1.v20150916-55dc7c3.zip">EclipseLink 2.6.1 OSGi Bundles Zip (25 MB)</a>
                   </div>
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.6.0/eclipselink-src-2.6.0.v20150309-bf26070.zip">EclipseLink 2.6.0 Source Zip (8 MB)</a>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.6.1/eclipselink-src-2.6.1.v20150916-55dc7c3.zip">EclipseLink 2.6.1 Source Zip (8.2 MB)</a>
                   </div>
                   <div class="bottomRow">
                      <div>
