@@ -16,9 +16,10 @@
 <body>
     <div class="container marketing">
 
-        <div class="page-header">
-            <h1>JSON-B Reference Implementation</h1>
+        <div class="text-center">
+	        <img src="../images/logos/jsonb-logo.png" alt=""">
         </div>
+
         <p>Welcome to JSON-B RI home page! JSON-B is a standard describing a binding layer for converting Java objects to and from JSON documents. JSON Binding reference implementation is hosted in EclipseLink repository.</p>
 
         <h2>How to build the RI</h2>
@@ -99,10 +100,18 @@ Jsonb jsonb = JsonbBuilder.create(nillableConfig);
 String result = jsonb.toJson(pojo);</code></pre>
 
         <h2>Links</h2>
-        <p><a href="https://www.jcp.org/en/jsr/detail?id=367">JSR-367 page</a></p>
-        <p><a href="https://java.net/projects/jsonb-spec">JSON-B Specification Project</a></p>
-        <p><a href="https://java.net/projects/jsonb-spec/sources/git/content/spec/spec.pdf">The latest version of JSON-B spec</a></p>
-        <p><a href="https://github.com/eclipse/eclipselink.runtime/tree/master/jsonb">EclipseLink repository GitHub mirror</a></p>
+        <ul>
+        <li><a href="https://www.jcp.org/en/jsr/detail?id=367">JSR-367 page</a></li>
+        <li><a href="https://java.net/projects/jsonb-spec">JSON-B Specification Project</a></li>
+        <li><a href="https://java.net/projects/jsonb-spec/sources/git/content/spec/spec.pdf">The latest version of JSON-B spec</a></li>
+        <li><a href="https://github.com/eclipse/eclipselink.runtime/tree/master/jsonb">EclipseLink repository GitHub mirror</a></li>
+        </ul>
+
+        <h2>Contributors</h2>
+        <ul>
+        	<li>JSONB logo is created by <a href="http://carladebona.com">Carla De Bona</a> (<a href="http://twitter.com/carladebona">@carladebona</a>)</li>
+        	<li>Constantin Drabo and FasoJUG adopt JSR-367 <a href="https://github.com/pandaconstantin/adopjsrfasojug">test project</a></li>
+        </ul>
 
         <hr>
 
