@@ -2,124 +2,22 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>JSON-B Reference Implementation Home</title>
-    <meta name="description" content="JSON-B Reference Implementation.">
-    <meta name="author" content="Dmitry Kornilov">
+    <title>JSON-B Home is Moved</title>
+    <meta http-equiv="refresh" content="1;url=http://json-b.net">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="../css/bootstrap-customizations.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
     <div class="container marketing">
-
         <div class="text-center">
-	        <img src="../images/logos/jsonb-logo.png" alt=""">
+            <img style="margin-top: 50px; margin-bottom:50px;" src="../images/logos/jsonb-logo.png" alt=""">
+            <h2>JSON-B home page has been moved to</h2>
+            <h2><a href='http://json-b.net'>http://json-b.net</a></h2>
+            <h3>If you are not redirected automatically, click on the link above to redirect.</h3>        
         </div>
-
-        <p>Welcome to JSON-B RI home page! JSON-B is a standard describing a binding layer for converting Java objects to and from JSON documents. JSON Binding reference implementation is hosted in EclipseLink repository.</p>
-
-        <h2>How to build the RI</h2>
-        <ol>
-            <li>
-                <p>Clone eclipselink repository</p>
-                <p class="breadcrumb">git clone http://git.eclipse.org/gitroot/eclipselink/eclipselink.runtime.git .</p>
-            </li>
-            <li>
-                <p>Switch to jsonb folder</p>
-                <p class="breadcrumb">cd jsonb</p>
-            </li>
-            <li>
-                <p>On Mac or Linux:</p>
-                <p class="breadcrumb">./gradlew</p>
-                <p>On Windows:</p>
-                <p class="breadcrumb">gradlew.bat</p>
-            </li>
-        </ol>
-
-        <h2>Getting Started with JSON-B</h2>
-
-        <h3>Download</h3>
-        <p>You can download the latest version of JSON-B RI manually from <a href="https://oss.sonatype.org/content/repositories/snapshots/org/eclipse/persistence/jsonb-ri/1.0-SNAPSHOT/">Version 1.0-SNAPSHOT</a> or add the dependency to your pom if you use Maven.</p>
-        
-        <p><pre><code class="language-xml">&lt;dependency&gt;
-    &lt;groupId&gt;org.eclipse.persistence&lt;/groupId&gt;
-    &lt;artifactId&gt;jsonb-ri&lt;/artifactId&gt;
-    &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
-&lt;/dependency&gt;</code></pre></p>
-
-        <h3>Mapping an object</h3>
-        <p>The main JSON-B entry point is Jsonb class. It provides all nessesary methods to serialize and deserialize Java objects. Jsonb instances are thread safe. They can be cached and reused.</p>
-
-<pre><code class="java">public class Dog {
-    public String name;
-    public int age;
-    public bool bitable;
-}
-
-// Create a dog instance
-Dog dog = new Dog();
-dog.name = "Falco";
-dog.age = 4;
-dog.biteable = false;
-
-// Create Jsonb and serialize
-Jsonb jsonb = JsonbBuilder.create();
-String result = jsonb.toJson(dog);
-
-// Deserialize back
-dog = jsonb.fromJson("{name:\"Falco\",age:4,bitable:false}", Dog.class);</code></pre>
-
-        <h3>Mapping a collection</h3>
-        <p>JSON-B supports collections and generic collections handling. For proper deserialization the runtime type of resulting object needs to be passed to JSON-B during deserialization. It can be done a way shown below. </p>
-<pre><code class="java">// List of dogs
-List&lt;Dog&gt; dogs = new ArrayList<>();
-dogs.add(falco);
-dogs.add(cassidy);
-
-// Create Jsonb and serialize
-Jsonb jsonb = JsonbBuilder.create();
-String result = jsonb.toJson(dogs);
-
-// Deserialize back
-dogs = jsonb.fromJson(result, new ArrayList&lt;Dog&gt;(){}.getClass());</code></pre>
-
-
-        <h3>Customized mapping</h3>
-        <p>Your mappings can be customized in many different ways. You can use JSON-B annotations for compile time customizations and JsonbConfig class for runtime customizations. The sample below shows a creation of custom configuration serializing null values (by default class properties with null values are skipped).</p>
-<pre><code class="java">// Create custom configuration
-JsonbConfig nillableConfig = new JsonbConfig().withNullValues(true);
-
-// Create Jsonb with custom configuration
-Jsonb jsonb = JsonbBuilder.create(nillableConfig);
-
-// Use it!
-String result = jsonb.toJson(pojo);</code></pre>
-
-        <h2>Links</h2>
-        <ul>
-        <li><a href="https://www.jcp.org/en/jsr/detail?id=367">JSR-367 page</a></li>
-        <li><a href="https://java.net/projects/jsonb-spec">JSON-B Specification Project</a></li>
-        <li><a href="https://java.net/projects/jsonb-spec/sources/git/content/spec/spec.pdf">The latest version of JSON-B spec</a></li>
-        <li><a href="https://github.com/eclipse/eclipselink.runtime/tree/master/jsonb">EclipseLink repository GitHub mirror</a></li>
-        </ul>
-
-        <h2>Contributors</h2>
-        <ul>
-        	<li>JSONB logo is created by UX/UI Designer <a href="http://carladebona.com">Carla De Bona</a> (<a href="http://twitter.com/carladebona">@carladebona</a>)</li>
-        	<li>Constantin Drabo and FasoJUG adopt JSR-367 <a href="https://github.com/pandaconstantin/adopjsrfasojug">test project</a></li>
-        </ul>
-
-        <hr>
-
-        <!-- FOOTER -->
-        <footer>
-            <p>&copy; 2016 The Eclipse Foundation. All Rights Reserved. &middot; <a href="http://www.eclipse.org/legal/privacy.php">Privacy</a> &middot; <a href="http://www.eclipse.org/legal/termsofuse.php">Terms</a></p>
-        </footer>
-
-    </div><!-- /.container -->
+    </div>
   </body>
 </html>
