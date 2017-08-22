@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Validating Against an XML Schema | EclipseLink 2.7 EclipseLink MOXy</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.22 Build 1" />
+<meta name="date" content="2014-06-10T10:25:31Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Validating Against an XML Schema" />
+<meta name="relnum" content="Release 2.7" />
+<meta name="partnum" content="" />
+<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="runtime005.htm" title="Previous" type="text/html" />
+<link rel="next" href="runtime007.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:1hjujor5_fg', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><div class="booktitle">Developing JAXB Applications Using EclipseLink MOXy, 
+<b>Release 2.7</b><br /></font></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+</td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Search" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini"></span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_moxy.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="runtime005.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="runtime007.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header --><a id="CACCBAFF" name="CACCBAFF"></a><a id="TLJAX168" name="TLJAX168"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Validating Against an XML Schema</font></h1>
+<p>If you would like to validate your objects against an XML Schema during marshalling and unmarshalling, you can make use of JAXB's <code>ValidationEventHandler</code>.</p>
+<div class="example"><a id="TLJAX169" name="TLJAX169"></a><a id="sthref44" name="sthref44"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-25 Sample XML Schema</font></em></strong></p>
+<p>In this example we would like to validate our objects against the following XML schema:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+ 
+    &lt;xs:element name="customer"&gt;
+        &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+                &lt;xs:element <strong>name="name" type="stringMaxSize5"</strong>/&gt;
+                &lt;xs:element <strong>ref="phone-number" maxOccurs="2"</strong>/&gt;
+             &lt;/xs:sequence&gt;
+        &lt;/xs:complexType&gt;
+    &lt;/xs:element&gt;
+ 
+    &lt;xs:element name="phone-number"&gt;
+        &lt;xs:complexType&gt;
+            &lt;xs:sequence/&gt;
+        &lt;/xs:complexType&gt;
+    &lt;/xs:element&gt;
+ 
+    &lt;xs:simpleType name="stringMaxSize5"&gt;
+        &lt;xs:restriction base="xs:string"&gt;
+            &lt;xs:maxLength value="5"/&gt;
+        &lt;/xs:restriction&gt;
+    &lt;/xs:simpleType&gt;
+ 
+&lt;/xs:schema&gt;
+</pre></div>
+<!-- class="example" -->
+<p>Notice the following constraints:</p>
+<ul>
+<li>
+<p>The customer's name cannot be longer than five (5) characters.</p>
+</li>
+<li>
+<p>The customer cannot have more than two (2) phone numbers.</p>
+</li>
+</ul>
+<p>The <strong>Customer</strong> class is shown below. Notice that the class <em>does not</em> contain any validation code.</p>
+<div class="example"><a id="TLJAX170" name="TLJAX170"></a><a id="sthref45" name="sthref45"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-26 Sample Customer Class</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package example;
+ 
+import java.util.ArrayList;
+import java.util.List;
+ 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+ 
+@XmlRootElement
+public class Customer {
+   private String name;
+ 
+   private List&lt;PhoneNumber&gt; phoneNumbers = new ArrayList&lt;PhoneNumber&gt;();
+ 
+   public String getName() {
+      return name;
+   }
+ 
+   public void setName(String name) {
+      this.name = name;
+   }
+ 
+   @XmlElement(name="phone-number")
+   public List&lt;PhoneNumber&gt; getPhoneNumbers() {
+      return phoneNumbers;
+   }
+ 
+   public void setPhoneNumbers(List&lt;PhoneNumber&gt; phoneNumbers) {
+      this.phoneNumbers = phoneNumbers;
+   }
+}
+ 
+</pre></div>
+<!-- class="example" -->
+<a id="TLJAX171" name="TLJAX171"></a>
+<div class="sect2"><a id="sthref46" name="sthref46"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Using a ValidationEventHandler</font></h2>
+<p>You can receive JAXB validation events by providing your own subclass of <code>ValidationEventHandler</code>. The event is represented as an instance of <code>ValidationEvent</code>, and provides many details about the issue. The data is similar to what is available from a <code>SAXParseException</code>.</p>
+<ul>
+<li>
+<p>Returning <strong>false</strong> from the <code>handleEvent</code> method will cause the JAXB operation to stop.</p>
+</li>
+<li>
+<p>Returning <strong>true</strong> will allow the method to continue, if possible.</p>
+</li>
+</ul>
+<p>In <a href="#CACGDDBA">Example 2-27</a>, we will simply print out an event's data when one is received:</p>
+<div class="example"><a id="CACGDDBA" name="CACGDDBA"></a><a id="TLJAX172" name="TLJAX172"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-27 Sample ValidationEventHandler</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package example;
+ 
+import javax.xml.bind.ValidationEvent;
+import javax.xml.bind.ValidationEventHandler;
+ 
+public class MyValidationEventHandler implements ValidationEventHandler {
+ 
+    public boolean handleEvent(ValidationEvent event) {
+        System.out.println("\nEVENT");
+        System.out.println("SEVERITY:  " + event.getSeverity());
+        System.out.println("MESSAGE:  " + event.getMessage());
+        System.out.println("LINKED EXCEPTION:  " + event.getLinkedException());
+        System.out.println("LOCATOR");
+        System.out.println("    LINE NUMBER:  " + event.getLocator().getLineNumber());
+        System.out.println("    COLUMN NUMBER:  " + event.getLocator().getColumnNumber());
+        System.out.println("    OFFSET:  " + event.getLocator().getOffset());
+        System.out.println("    OBJECT:  " + event.getLocator().getObject());
+        System.out.println("    NODE:  " + event.getLocator().getNode());
+        System.out.println("    URL:  " + event.getLocator().getURL());
+        return true;
+    }
+ 
+}
+ 
+</pre></div>
+<!-- class="example" --></div>
+<!-- class="sect2" -->
+<a id="TLJAX173" name="TLJAX173"></a>
+<div class="sect2"><a id="sthref47" name="sthref47"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Enabling Validation</font></h2>
+<p>In addition to providing an implementation of <code>ValidationEventHandler</code>, an instance of <code>Schema</code> must be set on the <code>Marshaller</code> or <code>Unmarshaller</code>.</p>
+<div class="example"><a id="TLJAX174" name="TLJAX174"></a><a id="sthref48" name="sthref48"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-28 Sample Java Code</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package example;
+ 
+import java.io.File;
+import javax.xml.XMLConstants;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.Unmarshaller;
+import javax.xml.validation.Schema;
+import javax.xml.validation.SchemaFactory;
+ 
+public class UnmarshalDemo {
+ 
+    public static void main(String[] args) throws Exception {
+        SchemaFactory sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+        Schema schema = sf.newSchema(new File("customer.xsd"));
+ 
+        JAXBContext jc = JAXBContext.newInstance(Customer.class);
+ 
+        Unmarshaller unmarshaller = jc.createUnmarshaller();
+        <strong>unmarshaller.setSchema(schema);</strong>
+        unmarshaller.setEventHandler(new MyValidationEventHandler());
+        Customer customer = (Customer) unmarshaller.unmarshal(new File("input.xml"));
+    }
+ 
+}
+ 
+</pre></div>
+<!-- class="example" -->
+<a id="TLJAX175" name="TLJAX175"></a>
+<div class="sect3"><a id="sthref49" name="sthref49"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Input (input.xml File)</font></h3>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;customer&gt;
+   &lt;name&gt;Jane Doe&lt;/name&gt;
+   &lt;phone-number/&gt;
+   &lt;phone-number/&gt;
+   &lt;phone-number/&gt;
+&lt;/customer&gt;
+</pre></div>
+<!-- class="sect3" -->
+<a id="TLJAX176" name="TLJAX176"></a>
+<div class="sect3"><a id="sthref50" name="sthref50"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Output</font></h3>
+<p>The validation performed during the unmarshal raised three events. The first two events are related to the text value of the <strong>name</strong> element being too long. The third event is related to the extra <strong>phone-number</strong> element.</p>
+<pre xml:space="preserve" class="oac_no_warn">
+EVENT
+SEVERITY:  1
+MESSAGE:  cvc-maxLength-valid: Value 'Jane Doe' with length = '8' is not facet-valid with respect
+          to maxLength '5' for type 'stringWithMaxSize5'.
+LINKED EXCEPTION:  org.xml.sax.SAXParseException: cvc-maxLength-valid: Value 'Jane Doe' with length = '8'
+                   is not facet-valid with respect to maxLength '5' for type 'stringWithMaxSize5'.
+LOCATOR
+    LINE NUMBER:  3
+    COLUMN NUMBER:  25
+    OFFSET:  -1
+    OBJECT:  null
+    NODE:  null
+    URL:  null
+ 
+EVENT
+SEVERITY:  1
+MESSAGE:  cvc-type.3.1.3: The value 'Jane Doe' of element 'name' is not valid.
+LINKED EXCEPTION:  org.xml.sax.SAXParseException: cvc-type.3.1.3: The value 'Jane Doe' of element
+                   'name' is not valid.
+LOCATOR
+    LINE NUMBER:  3
+    COLUMN NUMBER:  25
+    OFFSET:  -1
+    OBJECT:  null
+    NODE:  null
+    URL:  null
+ 
+EVENT
+SEVERITY:  1
+MESSAGE:  cvc-complex-type.2.4.d: Invalid content was found starting with element 'customer'. No child
+          element '{phone-number}' is expected at this point.
+LINKED EXCEPTION:  org.xml.sax.SAXParseException: cvc-complex-type.2.4.d: Invalid content was found starting
+                   with element 'customer'. No child element '{phone-number}' is expected at this point.
+LOCATOR
+    LINE NUMBER:  7
+    COLUMN NUMBER:  12
+    OFFSET:  -1
+    OBJECT:  null
+    NODE:  null
+    URL:  null
+</pre></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="runtime005.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="runtime007.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+ 
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+</td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Search" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini"></span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_moxy.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2013 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --></body>
+</html>

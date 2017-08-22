@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Query Concepts | EclipseLink 2.7.x Understanding EclipseLink</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.22 Build 1" />
+<meta name="date" content="2014-06-10T10:39:53Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Query Concepts" />
+<meta name="relnum" content="2.7" />
+<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="queries.htm" title="Previous" type="text/html" />
+<link rel="next" href="queries002.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:mdbgdwjv8zu', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><div class="booktitle">Understanding EclipseLink, 
+<b>2.7</b><br /></font></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+</td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Search" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini"></span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="queries.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="queries002.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header --><a id="CACIGEIH" name="CACIGEIH"></a><a id="OTLCG93989" name="OTLCG93989"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Query Concepts</font></h1>
+<p>In general, querying a data source means performing an action on or interacting with the contents of the data source. To do this, you must be able to perform the following:</p>
+<ul>
+<li>
+<p>Define an action in a syntax native to the data source being queried.</p>
+</li>
+<li>
+<p>Apply the action in a controlled fashion.</p>
+</li>
+<li>
+<p>Manage the results returned by the action (if any).</p>
+</li>
+</ul>
+<p>You must also consider how the query affects the EclipseLink cache.</p>
+<p>This section introduces query concepts unique to EclipseLink, including the following:</p>
+<ul>
+<li>
+<p><a href="#CACJBFHJ">Call Objects</a></p>
+</li>
+<li>
+<p><a href="#CACFBJBF">DatabaseQuery Objects</a></p>
+</li>
+<li>
+<p><a href="#CACIAFDF">Data-Level and Object-Level Queries</a></p>
+</li>
+<li>
+<p><a href="#CACJGHBC">Summary Queries</a></p>
+</li>
+<li>
+<p><a href="#CACDCDFD">Descriptor Query Manager</a></p>
+</li>
+<li>
+<p><a href="#CACJAEDA">Query Keys</a></p>
+</li>
+</ul>
+<a id="CACJBFHJ" name="CACJBFHJ"></a><a id="OTLCG93990" name="OTLCG93990"></a>
+<div class="sect2">
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Call Objects</font></h2>
+<p>The <code>Call</code> object encapsulates an operation or action on a data source. The EclipseLink API provides a variety of <code>Call</code> types such as structured query language (SQL), Java Persistence Query Language (JPQL), and Extensible Markup Language (XML).</p>
+<p>You can execute a <code>Call</code> directly or in the context of the EclipseLink <code>DatabaseQuery</code> object.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CACFBJBF" name="CACFBJBF"></a><a id="OTLCG93991" name="OTLCG93991"></a>
+<div class="sect2">
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">DatabaseQuery Objects</font></h2>
+<p>A <code>DatabaseQuery</code> object is an abstraction that associates additional customization and optimization options with the action encapsulated by a <code>Call</code>. By separating these options from the <code>Call</code>, EclipseLink can provide sophisticated query capabilities across all <code>Call</code> types.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CACIAFDF" name="CACIAFDF"></a><a id="OTLCG93992" name="OTLCG93992"></a>
+<div class="sect2">
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Data-Level and Object-Level Queries</font></h2>
+<p>Queries can be defined for objects or data, as follows:</p>
+<ul>
+<li>
+<p><strong>Object-level</strong> queries are object-specific and return data as objects in your domain model. They are the preferred type of query for mapped data. By far, object-level <code>DatabaseQuery</code> queries are the most common query used in EclipseLink.</p>
+</li>
+<li>
+<p><strong>Data-level</strong> queries are used to query database tables directly, and are an appropriate way to work with unmapped data.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="CACJGHBC" name="CACJGHBC"></a><a id="OTLCG93993" name="OTLCG93993"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Summary Queries</font></h2>
+<p>While data-level queries return raw data and object-level queries return objects in your domain model, summary queries return data about objects. EclipseLink provides partial object queries to return a set of objects with only specific attributes populated, and report queries to return summarized (or rolled-up) data for specific attributes of a set of objects.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CACDCDFD" name="CACDCDFD"></a><a id="OTLCG93994" name="OTLCG93994"></a>
+<div class="sect2">
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Descriptor Query Manager</font></h2>
+<p>In addition to storing named queries applicable to a particular class, you can also use the <code>DescriptorQueryManager</code> to override the default action that EclipseLink defines for common data source operations.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CACJAEDA" name="CACJAEDA"></a><a id="OTLCG93996" name="OTLCG93996"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Query Keys</font></h2>
+<p>A query key is a schema-independent alias for a database field name. Using a query key, you can refer to a field using a schema-independent alias. In relational projects only, EclipseLink automatically creates query keys for all mapped attributes. The name of the query key is the name of the class attribute specified in your object model.</p>
+<p>You can configure query keys in a class descriptor or interface descriptor. You can use query keys in expressions and to query variable one-to-one mappings.</p>
+<p>By default, EclipseLink creates query keys for all mapped attributes, but in some scenarios you may find it beneficial to add your own.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="queries.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="queries002.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+ 
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+</td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Search" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini"></span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --></body>
+</html>

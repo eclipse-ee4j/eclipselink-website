@@ -1,0 +1,383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Mapping Using XPath Predicates | EclipseLink 2.7 EclipseLink MOXy</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.22 Build 1" />
+<meta name="date" content="2014-06-10T10:25:32Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Mapping Using XPath Predicates" />
+<meta name="relnum" content="Release 2.7" />
+<meta name="partnum" content="" />
+<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="advanced_concepts004.htm" title="Previous" type="text/html" />
+<link rel="next" href="advanced_concepts006.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:1hjujor5_fg', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><div class="booktitle">Developing JAXB Applications Using EclipseLink MOXy, 
+<b>Release 2.7</b><br /></font></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+</td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Search" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini"></span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_moxy.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="advanced_concepts004.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="advanced_concepts006.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header --><a id="CHDBFCAA" name="CHDBFCAA"></a><a id="TLJAX405" name="TLJAX405"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Mapping Using XPath Predicates</font></h1>
+<p>By default, JAXB will use the Java field name as the XML element name:</p>
+<div class="example"><a id="TLJAX406" name="TLJAX406"></a><a id="sthref167" name="sthref167"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 8-24 Sample Java Code and XML Schema</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+public class Customer {
+   @XmlElement
+   private String firstName;
+   @XmlElement
+   private String lastName;
+}
+ 
+ 
+
+ 
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;customer&gt;
+   &lt;firstName&gt;Bob&lt;/firstName&gt;
+   &lt;lastName&gt;Roberts&lt;/lastName&gt;
+&lt;/customer&gt;
+ 
+</pre></div>
+<!-- class="example" -->
+<p>Or, the XML name can be customized using the name attribute of the <code>@XmlElement</code> annotation:</p>
+<div class="example"><a id="TLJAX407" name="TLJAX407"></a><a id="sthref168" name="sthref168"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 8-25 Sample Java Code and XML Schema</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+public class Customer {
+   @XmlElement(name="f-name")
+   private String firstName;
+   @XmlElement(name="l-name")
+   private String lastName;
+}
+ 
+
+
+ 
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;customer&gt;
+   &lt;f-name&gt;Bob&lt;/f-name&gt;
+   &lt;l-name&gt;Roberts&lt;/l-name&gt;
+&lt;/customer&gt;
+ 
+</pre></div>
+<!-- class="example" -->
+<p>However, sometimes elements need to be mapped based on their position in the document, or based on an attribute value of an element:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;node&gt;
+   &lt;name&gt;Jane&lt;/name&gt;
+   &lt;name&gt;Doe&lt;/name&gt;
+   &lt;node name="address"&gt;
+      &lt;node name="street"&gt;123 A Street&lt;/node&gt;
+   &lt;/node&gt;
+   &lt;node name="phone-number" type="work"&gt;555-1111&lt;/node&gt;
+   &lt;node name="phone-number" type="cell"&gt;555-2222&lt;/node&gt;
+&lt;/node&gt;
+ 
+</pre>
+<p>For cases like this, EclipseLink MOXy allows you to use XPath predicates to define an expression that will specify the XML element's name.</p>
+<a id="TLJAX408" name="TLJAX408"></a>
+<div class="sect2"><a id="sthref169" name="sthref169"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Mapping with XPath Predicates</font></h2>
+<p>An XPath predicate represents an expression that will be evaluated against the element specified. For example, the XPath statement:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+node[2]
+</pre>
+<p>Would match the second occurrence of the node element ("DEF"):</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;data&gt;
+   &lt;node&gt;ABC&lt;/node&gt;
+   &lt;node&gt;DEF&lt;/node&gt;
+&lt;/data&gt;
+ 
+</pre>
+<p>Predicates can also match based on an attribute value:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+node[@name='foo']
+</pre>
+<p>Would match the <strong>node</strong> element with the attribute <strong>name="foo"</strong> (that is, <strong>ABC</strong>). It would not match the node that contains <strong>DEF</strong>.</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;data&gt;
+   &lt;node name="foo"&gt;ABC&lt;/node&gt;
+   &lt;node name="bar"&gt;DEF&lt;/node&gt;
+&lt;/data&gt;
+ 
+</pre>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>For more information on XPath Predicates, see "2.4 Predicates" of the XML Path Language (XPath) specification (<code><a href="http://www.w3.org/TR/xpath">http://www.w3.org/TR/xpath</a></code>).</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</div>
+<!-- class="sect2" -->
+<a id="TLJAX409" name="TLJAX409"></a>
+<div class="sect2"><a id="sthref170" name="sthref170"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Mapping Based on Position</font></h2>
+<p>In the following example, our XML contains two <strong>name</strong> elements; the first occurrence of <strong>name</strong> should represent the <strong>Customer's</strong> first name, and the second <strong>name</strong> will be their last name. To map this, we will specify XPath expressions for each property that will match the appropriate XML element. Note that we also use <code>@XmlType(propOrder)</code> to ensure that our elements will always be in the proper positions.</p>
+<div class="example"><a id="TLJAX410" name="TLJAX410"></a><a id="sthref171" name="sthref171"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 8-26 Using the @XmlType(propOrder) Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package example;
+ 
+import javax.xml.bind.annotation.*;
+ 
+import org.eclipse.persistence.oxm.annotations.XmlPath;
+ 
+@XmlRootElement
+<strong>@XmlType(propOrder</strong>={"firstName", "lastName"})
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Customer {
+    @XmlPath("name[1]/text()")
+    private String firstName;
+ 
+    @XmlPath("name[2]/text()")
+    private String lastName;
+ 
+    ...
+}
+ 
+</pre></div>
+<!-- class="example" -->
+<p>This same configuration can be expressed in an EclipseLink XML Bindings document as follows:</p>
+<div class="example"><a id="TLJAX411" name="TLJAX411"></a><a id="sthref172" name="sthref172"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 8-27 Using the prop-order Attribute</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+...
+&lt;java-type name="Customer"&gt;
+   &lt;xml-root-element/&gt;
+   &lt;xml-type prop-order="firstName lastName"/&gt;
+   &lt;java-attributes&gt;
+      &lt;xml-element java-attribute="firstName" xml-path="name[1]/text()"/&gt;
+      &lt;xml-element java-attribute="lastName" xml-path="name[2]/text()"/&gt;
+   &lt;/java-attributes&gt;
+&lt;/java-type&gt;
+...
+ 
+</pre></div>
+<!-- class="example" -->
+<p>This will give us the desired XML representation:</p>
+<div class="example"><a id="TLJAX412" name="TLJAX412"></a><a id="sthref173" name="sthref173"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 8-28 Resulting XML</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;customer&gt;
+   &lt;name&gt;Bob&lt;/name&gt;
+   &lt;name&gt;Smith&lt;/name&gt;
+&lt;/customer&gt;
+ 
+</pre></div>
+<!-- class="example" --></div>
+<!-- class="sect2" -->
+<a id="TLJAX413" name="TLJAX413"></a>
+<div class="sect2"><a id="sthref174" name="sthref174"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Mapping Based on an Attribute Value</font></h2>
+<p>Since EclipseLink MOXy 2.3, you can also map to an XML element based on an Attribute value. In this example, all of our XML elements are named <strong>node</strong>, differentiated by the value of their <strong>name</strong> attribute:</p>
+<div class="example"><a id="TLJAX414" name="TLJAX414"></a><a id="sthref175" name="sthref175"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 8-29 Sample XML Schema</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;node&gt;
+   &lt;node name="first-name"&gt;Bob&lt;/node&gt;
+   &lt;node name="last-name"&gt;Smith&lt;/node&gt;
+   &lt;node name="address"&gt;
+      &lt;node name="street"&gt;123 A Street&lt;/node&gt;
+   &lt;/node&gt;
+   &lt;node name="phone-number" type="work"&gt;555-1111&lt;/node&gt;
+   &lt;node name="phone-number" type="cell"&gt;555-2222&lt;/node&gt;
+&lt;/node&gt;
+ 
+</pre></div>
+<!-- class="example" -->
+<p>We can use an XPath in the form of <code>element-name[@attribute-name='value']</code> to map each Java field:</p>
+<div class="example"><a id="TLJAX415" name="TLJAX415"></a><a id="sthref176" name="sthref176"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 8-30 Sample Mappings</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package example;
+ 
+import javax.xml.bind.annotation.*;
+ 
+import org.eclipse.persistence.oxm.annotations.XmlPath;
+ 
+@XmlRootElement(name="node")
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Customer {
+ 
+    @XmlPath("node[@name='first-name']/text()")
+    private String firstName;
+ 
+    @XmlPath("node[@name='last-name']/text()")
+    private String lastName;
+ 
+    @XmlPath("node[@name='address']")
+    private Address address;
+ 
+    @XmlPath("node[@name='phone-number']")
+    private List&lt;PhoneNumber&gt; phoneNumbers = new ArrayList&lt;PhoneNumber&gt;();
+ 
+    ...
+}
+ 
+package example;
+ 
+import javax.xml.bind.annotation.*;
+ 
+import org.eclipse.persistence.oxm.annotations.XmlPath;
+ 
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Address {
+ 
+    @XmlPath("node[@name='street']/text()")
+    private String street;
+ 
+    ...
+}
+ 
+package example;
+ 
+import javax.xml.bind.annotation.*;
+ 
+@XmlAccessorType(XmlAccessType.FIELD)
+public class PhoneNumber {
+ 
+    @XmlAttribute
+    private String type;
+ 
+    @XmlValue
+    private String number;
+ 
+    ...
+}
+ 
+</pre></div>
+<!-- class="example" --></div>
+<!-- class="sect2" -->
+<a id="TLJAX416" name="TLJAX416"></a>
+<div class="sect2"><a id="sthref177" name="sthref177"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Creating "Self" Mappings</font></h2>
+<p>EclipseLink allows you to configure your one-to-one mappings so the data from the target object will appear inside the source object's XML element. Expanding on the previous example, we could map the <strong>Address</strong> information so that it would appear directly under the <strong>customer</strong> element, and <em>not</em> wrapped in its own element. This is referred to as a "self" mapping, and is achieved by setting the target object's XPath to&nbsp;<strong>.</strong>&nbsp;(dot).</p>
+<p><a href="#CHDGBEAC">Example 8-31</a> demonstrates a self mapping declared in annotations.</p>
+<div class="example"><a id="CHDGBEAC" name="CHDGBEAC"></a><a id="TLJAX417" name="TLJAX417"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 8-31 Self Mapping Example</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package example;
+ 
+import javax.xml.bind.annotation.*;
+ 
+import org.eclipse.persistence.oxm.annotations.XmlPath;
+ 
+@XmlRootElement(name="node")
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Customer {
+ 
+    @XmlPath("node[@name='first-name']/text()")
+    private String firstName;
+ 
+    @XmlPath("node[@name='last-name']/text()")
+    private String lastName;
+ 
+    @XmlPath(".")
+    private Address address;
+ 
+    @XmlPath("node[@name='phone-number']")
+    private List&lt;PhoneNumber&gt; phoneNumbers = new ArrayList&lt;PhoneNumber&gt;();
+ 
+    ...
+}
+ 
+</pre></div>
+<!-- class="example" -->
+<p>Using a self mapping, EclipseLink produces the desired XML. The <strong>street</strong> data is stored in the root <strong>node</strong>.</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;node&gt;
+   &lt;node name="first-name"&gt;Bob&lt;/node&gt;
+   &lt;node name="last-name"&gt;Smith&lt;/node&gt;
+   &lt;node name="street"&gt;123 A Street&lt;/node&gt;
+   &lt;node name="phone-number" type="work"&gt;555-1111&lt;/node&gt;
+   &lt;node name="phone-number" type="cell"&gt;555-2222&lt;/node&gt;
+&lt;/node&gt;
+</pre></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="advanced_concepts004.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="advanced_concepts006.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+ 
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+</td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Search" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini"></span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_moxy.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2013 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --></body>
+</html>
