@@ -2,6 +2,46 @@
 <sections title="Downloads for previous EclipseLink Releases and Patch-Sets">
    <section class="main" name="Downloads for previous EclipseLink Releases and Patch-Sets">
       <description>
+         <a name="2.7.2"> </a>
+         <b>EclipseLink 2.7.2 Release (June 26th, 2017)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
+         <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
+            <tr class="tableData">
+               <td class="packageDesc">
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.7.2/eclipselink-2.7.2.v20180622-f627448.zip">EclipseLink 2.7.2 Installer Zip (32 MB)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.7.2/eclipselink-plugins-nosql-2.7.2.v20180622-f627448.zip">EclipseLink NoSQL 2.7.2 Installer Zip (483 K)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.7.2/eclipselink-plugins-2.7.2.v20180622-f627448.zip">EclipseLink 2.7.2 OSGi Bundles Zip (30 MB)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.7.2/eclipselink-src-2.7.2.v20180622-f627448.zip">EclipseLink 2.7.2 Source Zip (8.3 MB)</a>
+                  </div>
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+               <td width="120" class="downloadCol">
+                  <div>
+                     <a href="/eclipselink/releases/2.7.php">Release Notes</a>
+                  </div>
+                  <div>
+                     <a href="https://www.eclipse.org/eclipselink/documentation/2.7/">Documentation</a>
+                  </div>
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/Maven">Maven</a>
+                  </div>
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+            </tr>
+         </table>
+         <br/>
          <a name="2.7.1"> </a>
          <b>EclipseLink 2.7.1 Release (December 26th, 2017)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
