@@ -123,8 +123,18 @@ http://download.eclipse.org/rt/eclipselink/ri/eclipselink-jpa2.1ri-v20130425-368
 	<section class="main" name="EclipseLink Licenses">
 		<description>
 			<p>
-				The EclipseLink Project produced contents are dual licensed under
-				the terms of the
+				The EclipseLink Project produced contents from version 2.7.4
+                                 are dual licensed under the terms of the
+				<a href="http://www.eclipse.org/legal/epl-2.0">Eclipse
+					Public License v2.0</a>
+				and
+				<a href="http://www.eclipse.org/org/documents/edl-v10.php">Eclipse
+					Distribution License v1.0</a>
+				.
+			</p>
+			<p>
+				The EclipseLink Project produced contents to version 2.7.3 (inclusive)
+                                 are dual licensed under the terms of the
 				<a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse
 					Public License v1.0</a>
 				and
