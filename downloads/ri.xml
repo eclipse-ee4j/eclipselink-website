@@ -14,7 +14,30 @@
 	</section>
 http://download.eclipse.org/rt/eclipselink/ri/eclipselink-jpa2.1ri-v20130425-368d603.zip 
 
-	<section class="main" name="Java Persistence API 2.1 (JSR 338)">
+	<section class="main" name="Java Persistence API 2.2 (JSR 338)">
+		<description>
+			<p>
+				The
+				<a href="/eclipselink/jpa.php">EclipseLink JPA</a>
+				component in EclipseLink provides the reference implementation of
+				JPA 2.2.
+			</p>
+			<p>
+				<b>Downloads:</b>
+				<ul>
+
+					<li>
+						<a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.7.4/eclipselink-2.7.4.v20190115-ad5b7c6b2a.zip">
+							EclipseLink 2.7.4 - Full EclipseLink build, including the JPA 2.2 RI.
+                        </a>
+					</li>
+
+				</ul>
+			</p>
+		</description>
+	</section>
+
+        <section class="main" name="Java Persistence API 2.1 (JSR 338)">
 		<description>
 			<p>
 				The
