@@ -15,37 +15,37 @@
     <section class="main" name="2.7.4 Certification Request">
         <description>
             <ul>
-                <li><input type="checkbox" disabled="disabled" checked="checked">
+                <li>
                     Organization Name (“Organization”) and, if applicable, URL:
                     Eclipse Foundation</li>
-                <li><input type="checkbox" disabled="disabled" checked="checked">
+                <li>
                     Product Name, Version and download URL (if applicable):
                     <a href="https://www.eclipse.org/eclipselink/downloads/ri.php">EclipseLink 2.7.4</a>
                 </li>
-                <li><input type="checkbox" disabled="disabled" checked="checked">
+                <li>
                     Specification Name, Version and download URL:
                     <a href="https://jakarta.ee/specifications/persistence/2.2/">Jakarta Persistence 2.2</a>
                 </li>
-                <li><input type="checkbox" disabled="disabled" checked="checked">
+                <li>
                     TCK Version, digital SHA-256 fingerprint and download URL:
                     <a href="https://download.eclipse.org/jakartaee/persistence/2.2/eclipse-persistence-tck-2.2.0.zip">Jakarta Persistence TCK 2.2.0</a>, SHA-256: 96eeeceea5a6343fbd6c4e2f7b6a5aefb0b64f4dc3c4cf7d2ec68652fde2318d</li>
-                <li><input type="checkbox" disabled="disabled" checked="checked">
+                <li>
                     Public URL of TCK Results Summary:
                     <a href="https://www.eclipse.org/eclipselink/releases/tck-summary.php">TCK results summary</a>
                 </li>
-                <li><input type="checkbox" disabled="disabled" checked="checked">
+                <li>
                     Any Additional Specification Certification Requirements:
                     None</li>
-                <li><input type="checkbox" disabled="disabled" checked="checked">
+                <li>
                     Java runtime used to run the implementation:
                     Oracle JDK 1.8.0_202</li>
-                <li><input type="checkbox" disabled="disabled" checked="checked">
+                <li>
                     Summary of the information for the certification environment, operating system, cloud, …:
                     Apache Derby 10.14.2.0, Linux</li>
-                <li><input type="checkbox" disabled="disabled" checked="checked">
-                    By checking this box I acknowledge that the Organization I represent accepts the terms of the <a href="https://www.eclipse.org/legal/tck.php">EFTL</a>.</li>
-                <li><input type="checkbox" disabled="disabled" checked="checked">
-                    By checking this box I attest that all TCK requirements have been met, including any compatibility rules.</li>
+                <li>
+                    I acknowledge that the Organization I represent accepts the terms of the <a href="https://www.eclipse.org/legal/tck.php">EFTL</a>.</li>
+                <li>
+                    I attest that all TCK requirements have been met, including any compatibility rules.</li>
             </ul>
 
             <p>Test results:</p>
