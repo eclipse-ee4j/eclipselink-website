@@ -6,7 +6,7 @@ $root = $_SERVER['DOCUMENT_ROOT'];
 
 # Generate the web page
 // Load the XML source
-$xml = DOMDocument::load('ri.xml');
+$xml = DOMDocument::load('tck-summary.xml');
 
 //Set the page title
 $xpath = new DOMXPath($xml);
