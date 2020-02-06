@@ -92,14 +92,14 @@
 
       <a name="26"> </a>
       <description>
-         <b>EclipseLink 2.6.8 Release (Released August 27th, 2019)</b> - <a href="/eclipselink/releases/2.6.php">New and Noteworthy</a> - <a href="http://www.eclipse.org/eclipselink/documentation/2.6/">Getting Started</a><br/>
+         <b>EclipseLink 2.6.9 Release (Released January 31st, 2020)</b> - <a href="/eclipselink/releases/2.6.php">New and Noteworthy</a> - <a href="http://www.eclipse.org/eclipselink/documentation/2.6/">Getting Started</a><br/>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
                <td class="packageDesc">
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.6.8/eclipselink-2.6.8.v20190620-d6443d8be7.zip">EclipseLink 2.6.8 Installer Zip (38 MB)</a>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.6.9/eclipselink-2.6.9.v20200130-0143b822bc.zip">EclipseLink 2.6.9 Installer Zip (39 MB)</a>
                   </div>
-                  This zip includes EclipseLink 2.6.8 with the single jar packaging,  source,  JavaDocs, utilities, and dependent libraries. Intended for use in Java EE and SE environments.
+                  This zip includes EclipseLink 2.6.9 with the single jar packaging,  source,  JavaDocs, utilities, and dependent libraries. Intended for use in Java EE and SE environments.
                   <div class="bottomRow">
                   </div>
                </td>
@@ -109,7 +109,7 @@
             <tr class="tableData">
                <td class="packageDesc">
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.6.8/eclipselink-plugins-nosql-2.6.8.v20190620-d6443d8be7.zip">EclipseLink NoSQL 2.6.8 Installer Zip (471 K)</a>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.6.9/eclipselink-plugins-nosql-2.6.9.v20200130-0143b822bc.zip">EclipseLink NoSQL 2.6.9 Installer Zip (414 K)</a>
                   </div>
                   This zip includes EclipseLink NoSql support. This zip is to be used together with the EclipseLink zip (or EclipseLink bundles) to support NoSQL.  This zip includes binaries, source, and Javadocs.
                   <div class="bottomRow">
@@ -121,9 +121,9 @@
             <tr class="tableData">
                <td class="packageDesc">
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.6.8/eclipselink-plugins-2.6.8.v20190620-d6443d8be7.zip">EclipseLink 2.6.8 OSGi Bundles Zip (26 MB)</a>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.6.9/eclipselink-plugins-2.6.9.v20200130-0143b822bc.zip">EclipseLink 2.6.9 OSGi Bundles Zip (24 MB)</a>
                   </div>
-                  Contains EclipseLink and dependency bundles.  Get the OSGI Bundle Zip to use EclipseLink 2.6.8 runtime in an OSGi container.
+                  Contains EclipseLink and dependency bundles.  Get the OSGI Bundle Zip to use EclipseLink 2.6.9 runtime in an OSGi container.
                   <div class="bottomRow">
                      <div>
                      </div>
@@ -135,7 +135,7 @@
             <tr class="tableData">
                <td class="packageDesc">
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.6.8/eclipselink-src-2.6.8.v20190620-d6443d8be7.zip">EclipseLink 2.6.8 Source Zip (8.2 MB)</a>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.6.9/eclipselink-src-2.6.9.v20200130-0143b822bc.zip">EclipseLink 2.6.9 Source Zip (8.2 MB)</a>
                   </div>
                   Contains source code for all of eclipselink.
                   <div class="bottomRow">
