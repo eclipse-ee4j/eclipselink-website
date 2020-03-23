@@ -1002,7 +1002,7 @@ CREATE TABLE EMPLOYEE (ID BIGINT, TASKS TEXT[])
 public class Employee {
     @Id
     private long id;
-    @Array(databaseType="TEXT[]")
+    @Array(databaseType="TEXT")
     private List&lt;String&gt; tasks;
 }
 </pre></div>
