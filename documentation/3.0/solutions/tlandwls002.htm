@@ -1,0 +1,908 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Implementing the Solution | EclipseLink 3.0 Understanding EclipseLink</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.22 Build 1" />
+<meta name="date" content="2014-06-10T10:35:14Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Implementing the Solution" />
+<meta name="relnum" content="Release 3.0" />
+<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="tlandwls001.htm" title="Previous" type="text/html" />
+<link rel="next" href="tlandwls003.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:enkkfjmsqju', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><b>EclipseLink Solutions Guide for EclipseLink</b><br />
+Release 3.0</div></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+</td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Search" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini"></span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="tlandwls001.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="tlandwls003.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header --><a id="BABEDCEI" name="BABEDCEI"></a><a id="TLADG118" name="TLADG118"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Implementing the Solution</font></h1>
+<p>To run EclipseLink JPA applications in WebLogic Server, you must configure WebLogic Server and coordinate certain settings in it and in your application, as described in the following tasks:</p>
+<ul>
+<li>
+<p><a href="#BABJHCFG">Task 1: Prerequisites</a></p>
+</li>
+<li>
+<p><a href="#BABJDGGE">Task 3: Configure JMX MBean Extensions in WebLogic Server</a></p>
+</li>
+<li>
+<p><a href="#BABIIEHD">Task 4: Use or Reconfigure the Logging Integration</a></p>
+</li>
+<li>
+<p><a href="#BABJEFBD">Task 5: Add Persistence to Your Java Application Using EclipseLink</a></p>
+</li>
+<li>
+<p><a href="#BABEEIFH">Task 6: Configure a Data Source</a></p>
+</li>
+<li>
+<p><a href="#BABHICHE">Task 7: Extend the Domain to Use Advanced Oracle Database Features</a></p>
+</li>
+<li>
+<p><a href="#BABICGHA">Task 8: Start WebLogic Server and Deploy the Application</a></p>
+</li>
+<li>
+<p><a href="#BABEEJDE">Task 9: Run the Application</a></p>
+</li>
+<li>
+<p><a href="#BABIJAAD">Task 10: Configure and Monitor Persistence Settings in WebLogic Server</a></p>
+</li>
+</ul>
+<a id="BABJHCFG" name="BABJHCFG"></a><a id="TLADG117" name="TLADG117"></a>
+<div class="sect2">
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 1: Prerequisites</font></h2>
+<p>This document is based on the following products and tools, although the principles apply to any supported database or development environment. It is assumed that the software is already installed, except where noted in later sections.</p>
+<ul>
+<li>
+<p>WebLogic Server 12<em>c</em> or later.</p>
+<p>For more information and downloads, see <code><a href="http://www.oracle.com/technetwork/middleware/weblogic/overview/index.html">http://www.oracle.com/technetwork/middleware/weblogic/overview/index.html</a></code> on the Oracle Technology Network.</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>Any compliant Java Database Connectivity (JDBC) database including Oracle Database, Oracle Express, MySQL, and so on.</p>
+<p>For Oracle Database, see <code><a href="http://www.oracle.com/technetwork/database/enterprise-edition/overview/index.html">http://www.oracle.com/technetwork/database/enterprise-edition/overview/index.html</a></code>. For Oracle Database, Express Edition, see <code><a href="http://www.oracle.com/technetwork/database/express-edition/overview/index.html">http://www.oracle.com/technetwork/database/express-edition/overview/index.html</a></code>. For MySQL, see <code><a href="http://www.oracle.com/us/products/mysql/index.html">http://www.oracle.com/us/products/mysql/index.html</a></code>.</p>
+</li>
+<li>
+<p>While it is not required, you may want to use a Java development environment (IDE) for convenience during development. For example JDeveloper, Oracle Enterprise Pack for Eclipse, and NetBeans all provide sophisticated Jakarta EE development tools. Both JDeveloper and Oracle Enterprise Pack for Eclipse include embedded versions of WebLogic Server, although this guide describes a standalone instance of WebLogic Server.</p>
+<p>For JDeveloper, see <code><a href="http://www.oracle.com/technetwork/developer-tools/jdev/downloads/index.html">http://www.oracle.com/technetwork/developer-tools/jdev/downloads/index.html</a></code>. For Oracle Enterprise Pack for Eclipse, see <code><a href="http://www.oracle.com/technetwork/developer-tools/eclipse/overview/index.html">http://www.oracle.com/technetwork/developer-tools/eclipse/overview/index.html</a></code>. For NetBeans, see <code><a href="http://www.oracle.com/us/products/tools/050845.html">http://www.oracle.com/us/products/tools/050845.html</a></code>.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BABJDGGE" name="BABJDGGE"></a><a id="TLADG122" name="TLADG122"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 3: Configure JMX MBean Extensions in WebLogic Server</font></h2>
+<p>WebLogic Server uses Java Management Extensions (JMX) MBeans to configure, monitor, and manage WebLogic Server resources. For EclipseLink applications, MBeans are used to monitor and configure aspects of persistence units and are also used for logging.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>When deployed to WebLogic Server, EclipseLink applications deploy MBeans when they connect to the database, not at deployment time.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>For information about how MBeans are used in WebLogic Server, see <em>Oracle Fusion Middleware Developing Custom Management Utilities With JMX for Oracle WebLogic Server</em> and <em>Oracle Fusion Middleware Developing Manageable Applications With JMX for Oracle WebLogic Server</em>.</p>
+<p>For information about EclipseLink logging in WebLogic Server, see <a href="#BABIIEHD">Task 4: Use or Reconfigure the Logging Integration.</a></p>
+<p>By default, when you deploy an EclipseLink application to WebLogic Server, the EclipseLink runtime deploys the following JMX MBeans to the WebLogic Server JMX service for each EclipseLink session:</p>
+<ul>
+<li>
+<p><code>org.eclipse.persistence.services.DevelopmentServices</code> - This class provides facilities for managing an EclipseLink session internal to EclipseLink over JMX.</p>
+</li>
+<li>
+<p><code>org.eclipse.persistence.services.RuntimeServices</code> - This class provides facilities for managing an EclipseLink session external to EclipseLink over JMX.</p>
+</li>
+</ul>
+<p>Use the API that this JMX MBean exposes to access and configure your EclipseLink sessions at runtime, using JMX code that you write, or to integrate your EclipseLink application with a third-party JMX management application, such as JConsole.</p>
+<p>To find out how to access information about custom MBeans, you must first enable anonymous lookup and then use a separate tool to access the MBean information.</p>
+<p>To enable anonymous lookup in the WebLogic Server Administration Console, do the following:</p>
+<ol>
+<li>
+<p>If you have not already done so, in the Change Center of the Administration Console, click <strong>Lock &amp; Edit</strong>.</p>
+</li>
+<li>
+<p>In the left pane, select your domain to open the Settings page for your domain.</p>
+</li>
+<li>
+<p>Expand <strong>Security &gt; General</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Anonymous Admin Lookup Enabled</strong>.</p>
+</li>
+<li>
+<p>To activate these changes, in the Change Center of the Administration Console, click <strong>Activate Changes</strong>.</p>
+</li>
+</ol>
+<p>For the information about accessing the MBean information using various tools, see "Accessing Custom MBeans," in <em>Oracle Fusion Middleware Developing Manageable Applications With JMX for Oracle WebLogic Server</em>.</p>
+<p>For information about monitoring custom MBeans in the Administration Console, see "Monitor Custom MBeans" in <em>Oracle Fusion Middleware Oracle WebLogic Server Administration Console Online Help</em>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABIIEHD" name="BABIIEHD"></a><a id="TLADG123" name="TLADG123"></a>
+<div class="sect2">
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 4: Use or Reconfigure the Logging Integration</font></h2>
+<p>By default, EclipseLink logging is integrated into the WebLogic Server logging infrastructure. Details about how the integration works and how to override it are described in the following sections. For detailed information about WebLogic Server logging, see the following:</p>
+<ul>
+<li>
+<p><em>Oracle Fusion Middleware Using Logging Services for Application Logging for Oracle WebLogic Server</em></p>
+</li>
+<li>
+<p><em>Oracle Fusion Middleware Configuring Log Files and Filtering Log Messages for Oracle WebLogic Server</em></p>
+</li>
+<li>
+<p>The logging topics in <em>Oracle Fusion Middleware Oracle WebLogic Server Administration Console Online Help</em></p>
+</li>
+</ul>
+<p>For information about configuring logging for JPA persistence units, see "How to Configure Logging" in the EclipseLink documentation at <code><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Logging">http://wiki.eclipse.org/EclipseLink/Examples/JPA/Logging</a></code>.</p>
+<a id="TLADG124" name="TLADG124"></a>
+<div class="sect3"><a id="sthref14" name="sthref14"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">How the Logging Integration Works</font></h3>
+<p>By default, the WebLogic Server logging implementation is injected into the persistence context, which results in all EclipseLink logging messages being produced according to the WebLogic Server logging configuration.</p>
+<p>As a result of this integration, EclipseLink logging levels are converted to WebLogic Server logging levels as shown in <a href="#BABCAIDJ">Table 3-1</a>.</p>
+<div class="tblformal"><a id="TLADG125" name="TLADG125"></a><a id="sthref15" name="sthref15"></a><a id="BABCAIDJ" name="BABCAIDJ"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 3-1 Mapping of EclipseLink Logging Levels to WebLogic Server Logging Levels</font></em></strong></p>
+<table class="Formal" title="Mapping of EclipseLink Logging Levels to WebLogic Server Logging Levels" summary="This table shows how TopLink logging levels map to WebLogic Server logging levels." dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="41%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t4"><font face="Arial, Helvetica, sans-serif"><strong>EclipseLink Logging Levels</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t4"><font face="Arial, Helvetica, sans-serif"><strong>WebLogic Server Logging Levels</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t4" headers="r1c1-t4">
+<p>ALL, FINEST, FINER, FINE</p>
+</td>
+<td align="left" headers="r2c1-t4 r1c2-t4">
+<p>DEBUG</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t4" headers="r1c1-t4">
+<p>CONFIG</p>
+</td>
+<td align="left" headers="r3c1-t4 r1c2-t4">
+<p>INFO</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t4" headers="r1c1-t4">
+<p>INFO</p>
+</td>
+<td align="left" headers="r4c1-t4 r1c2-t4">
+<p>NOTICE</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t4" headers="r1c1-t4">
+<p>WARNING</p>
+</td>
+<td align="left" headers="r5c1-t4 r1c2-t4">
+<p>WARNING</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t4" headers="r1c1-t4">
+<p>SEVERE</p>
+</td>
+<td align="left" headers="r6c1-t4 r1c2-t4">
+<p>ALERT</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t4" headers="r1c1-t4">
+<p>OFF</p>
+</td>
+<td align="left" headers="r7c1-t4 r1c2-t4">
+<p>OFF</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<p>WebLogic Server logging levels are mapped to EclipseLink levels as shown in <a href="#BABHEBHF">Table 3-2</a>.</p>
+<div class="tblformal"><a id="TLADG126" name="TLADG126"></a><a id="sthref16" name="sthref16"></a><a id="BABHEBHF" name="BABHEBHF"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 3-2 Mapping of WebLogic Server Logging Levels to EclipseLink Logging Levels</font></em></strong></p>
+<table class="Formal" title="Mapping of WebLogic Server Logging Levels to EclipseLink Logging Levels" summary="This table shows how WebLogic Server logging levels map to EclipseLink logging levels." dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="41%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t5"><font face="Arial, Helvetica, sans-serif"><strong>WebLogic Server Logging Levels</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t5"><font face="Arial, Helvetica, sans-serif"><strong>EclipseLink Logging Levels</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t5" headers="r1c1-t5">
+<p>TRACE, DEBUG</p>
+</td>
+<td align="left" headers="r2c1-t5 r1c2-t5">
+<p>FINEST</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t5" headers="r1c1-t5">
+<p>INFO</p>
+</td>
+<td align="left" headers="r3c1-t5 r1c2-t5">
+<p>CONFIG</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t5" headers="r1c1-t5">
+<p>NOTICE</p>
+</td>
+<td align="left" headers="r4c1-t5 r1c2-t5">
+<p>INFO</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t5" headers="r1c1-t5">
+<p>WARNING</p>
+</td>
+<td align="left" headers="r5c1-t5 r1c2-t5">
+<p>WARNING</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t5" headers="r1c1-t5">
+<p>ERROR, CRITICAL, ALERT</p>
+</td>
+<td align="left" headers="r6c1-t5 r1c2-t5">
+<p>SEVERE</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t5" headers="r1c1-t5">
+<p>EMERGENCY, OFF</p>
+</td>
+<td align="left" headers="r7c1-t5 r1c2-t5">
+<p>OFF</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></div>
+<!-- class="sect3" -->
+<a id="TLADG127" name="TLADG127"></a>
+<div class="sect3"><a id="sthref17" name="sthref17"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Viewing Persistence Unit Logging Levels in the Administration Console</font></h3>
+<p>You can see the EclipseLink logging level defined for the persistence unit in the Administration Console, as described in <a href="#BABIJAAD">Task 10: Configure and Monitor Persistence Settings in WebLogic Server.</a> However, be aware that this logging level, set in the <code>persistence.xml</code> file, is overridden when the default WebLogic Server and EclipseLink logging integration is used. For information about overriding the integration, see <a href="#BABEIGEC">Overriding the Default Logging Integration.</a></p>
+<p>When the default integration is used, the Enterprise JavaBeans (EJB) logging options for persistence are mapped through and control EclipseLink's logging output in the Administration Console.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BABEIGEC" name="BABEIGEC"></a><a id="TLADG128" name="TLADG128"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Overriding the Default Logging Integration</font></h3>
+<p>You set EclipseLink logging levels in the <code>persistence.xml</code> file. However, when you accept the default logging integration with WebLogic Server, those settings are ignored, and the logging configuration set in WebLogic Server is used. The EclipseLink logging levels are used only when you use the native EclipseLink logging implementation.</p>
+<p>You can override the default logging integration by setting the <code>eclipselink.logging.logger</code> property name to a different setting. For example, to enable the default EclipseLink logging, set the <code>eclipselink.logging.logger</code> property as follows:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;property name="eclipselink.logging.logger" value="DefaultLogger"/&gt;
+</pre>
+<p>You can also use a different logging implementation for EclipseLink messages, for example the <code>java.util.logging</code> package:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;property name="eclipselink.logging.logger" value="JavaLogger"/&gt;
+</pre></div>
+<!-- class="sect3" -->
+<a id="BABFGGFE" name="BABFGGFE"></a><a id="TLADG129" name="TLADG129"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Configuring WebLogic Server to Expose EclipseLink Logging</font></h3>
+<p>If you use the native EclipseLink logging implementation, you can still display EclipseLink logging messages in the WebLogic Server domain's log files by configuring WebLogic Server to redirect Java Virtual Machine (JVM) output to the registered log destinations.</p>
+<p>For more information and instructions for redirecting, see "Redirecting JVM Output" in <em>Oracle Fusion Middleware Configuring Log Files and Filtering Log Messages for Oracle WebLogic Server</em>. To set this option in the Administration Console, see "Redirect JVM output" in <em>Oracle Fusion Middleware Oracle WebLogic Server Administration Console Online Help</em>.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BABCAEDA" name="BABCAEDA"></a><a id="TLADG130" name="TLADG130"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Other Considerations</font></h3>
+<p>Other things to consider include the following:</p>
+<ul>
+<li>
+<p>The message ID <code>2005000</code> is used for all EclipseLink log messages.</p>
+</li>
+<li>
+<p>Some logging messages handled by the WebLogic Server integrated logger may show up in the WebLogic Server console or the server log (depending on the settings of logging levels) during deployment, even though at runtime the application's entity manager factory will use only the EclipseLink logging infrastructure and only the EclipseLink logging settings.</p>
+</li>
+<li>
+<p>If you use a different release of EclipseLink than the release bundled in your WebLogic Server installation (by using a filtering class loader), then trying to use the default integrated logging can lead to errors, due to classloading conflicts. To work around this issue, explicitly set the <code>eclipselink.logging.logger</code> property to something other than the integrated WebLogic Server logger.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BABJEFBD" name="BABJEFBD"></a><a id="TLADG131" name="TLADG131"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 5: Add Persistence to Your Java Application Using EclipseLink</font></h2>
+<p>Using EclipseLink JPA to provide persistence for an application is the fundamental task presumed by all the other tasks described in this chapter; yet the actual JPA programming practice is mostly outside the scope of this guide. WebLogic Server imposes no special requirements on your EclipseLink application, other than the details described in this chapter.</p>
+<p>This chapter describes features, settings, and tasks that are specific to using EclipseLink (runtime and API) with WebLogic Server. For information about developing, packaging, and deploying a Java application using JPA, see the following:</p>
+<ul>
+<li>
+<p>The EclipseLink project wiki at <code><a href="http://wiki.eclipse.org/EclipseLink">http://wiki.eclipse.org/EclipseLink</a></code></p>
+</li>
+<li>
+<p>The EclipseLink Documentation Center at <code><a href="/eclipselink/documentation/">https://www.eclipse.org/eclipselink/documentation/</a></code></p>
+</li>
+<li>
+<p>The <em>Jakarta Persistence API, Version 2.1</em> specification at <code><a href="http://jcp.org/en/jsr/detail?id=317">http://jcp.org/en/jsr/detail?id=317</a></code></p>
+</li>
+<li>
+<p>"Part V, Persistence" in "The Jakarta EE 6 Tutorial" at <code><a href="http://download.oracle.com/javaee/6/tutorial/doc/bnbpy.html">http://download.oracle.com/javaee/6/tutorial/doc/bnbpy.html</a></code></p>
+</li>
+<li>
+<p>Any third-party book that describes programming Java applications using JPA</p>
+</li>
+</ul>
+<p>For more information about EclipseLink features and concepts, see <a href="intro.htm#CHDGIDEA">Chapter 1, "Introduction"</a> and <em>EclipseLink Concepts</em>.</p>
+<p>For related WebLogic Server programming topics, see any book in the WebLogic Server documentation set, in particular the following:</p>
+<ul>
+<li>
+<p><em>Oracle Fusion Middleware Programming Enterprise JavaBeans, Version 3.0, for Oracle WebLogic Server</em></p>
+</li>
+<li>
+<p><em>Oracle Fusion Middleware Developing Applications for Oracle WebLogic Server</em></p>
+</li>
+<li>
+<p><em>Oracle Fusion Middleware Deploying Applications to Oracle WebLogic Server</em></p>
+</li>
+<li>
+<p><em>Oracle Fusion Middleware Programming JDBC for Oracle WebLogic Server</em></p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BABEEIFH" name="BABEEIFH"></a><a id="TLADG132" name="TLADG132"></a>
+<div class="sect2">
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 6: Configure a Data Source</font></h2>
+<p>In WebLogic Server, you configure database connectivity by adding JDBC data sources to WebLogic Server domains. Each WebLogic data source contains a pool of database connections. Applications look up the data source on the Java Naming and Directory Interface (JNDI) tree or in the local application context and then reserve a database connection with the <code>getConnection()</code> method. Data sources and their connection pools provide connection management processes to keep the system running efficiently.</p>
+<p>For information about using JDBC with WebLogic Server, see the following:</p>
+<ul>
+<li>
+<p>For complete documentation about working with JDBC in WebLogic Server, see <em>Oracle Fusion Middleware Configuring and Managing JDBC Data Sources for Oracle WebLogic Server</em>, in particular:</p>
+<ul>
+<li>
+<p>"Configuring WebLogic JDBC Resources"</p>
+</li>
+<li>
+<p>"Configuring JDBC Data Sources"</p>
+</li>
+</ul>
+</li>
+<li>
+<p>For information about working with JDBC data sources in the WebLogic Server Administration Console, see the topics under "Configure JDBC" in <em>Oracle Fusion Middleware Oracle WebLogic Server Administration Console Online Help</em>.</p>
+</li>
+</ul>
+<a id="TLADG133" name="TLADG133"></a>
+<div class="sect3"><a id="sthref18" name="sthref18"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Ways to Configure Data Sources for JPA Applications</font></h3>
+<p>You can configure data sources for JPA applications deployed to WebLogic Server in a variety of ways, including the following:</p>
+<ul>
+<li>
+<p><a href="#BABEHDCG">Configure a Globally Scoped JTA Data Source</a></p>
+</li>
+<li>
+<p><a href="#BABFIHAE">Configure an Application-Scoped JTA Data Source</a></p>
+</li>
+<li>
+<p><a href="#BABCGGEJ">Configure a non-JTA Data Source and Manage Transactions in the Application</a></p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="BABEHDCG" name="BABEHDCG"></a><a id="TLADG134" name="TLADG134"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Configure a Globally Scoped JTA Data Source</font></h3>
+<p>The most common data source configuration is a globally-scoped JNDI data source, using Java Transaction API (JTA) for transaction management, specified in the <code>persistence.xml</code> file. Configuration is straightforward, as shown in the following steps, and multiple applications can access the data source:</p>
+<ul>
+<li>
+<p><a href="#BABHCDIG">Create the Data Source in WebLogic Server</a></p>
+</li>
+<li>
+<p><a href="#BABBHEBJ">Configure the persistence.xml File</a></p>
+</li>
+</ul>
+<a id="BABHCDIG" name="BABHCDIG"></a><a id="TLADG135" name="TLADG135"></a>
+<div class="sect4">
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Create the Data Source in WebLogic Server</font></h4>
+<p>To set up a globally scoped JNDI data source in the WebLogic Server Administration Console, do the following:</p>
+<ol>
+<li>
+<p>Create a new data source, as described in "Configure JDBC generic data sources" in <em>Oracle Fusion Middleware Oracle WebLogic Server Administration Console Online Help</em>.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>EclipseLink is compatible with any WebLogic Server data source that can be accessed using standard JNDI data source lookup by name. These instructions describe the wizard for a generic data source.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</li>
+<li>
+<p>Enter values in the Create a New JDBC data source wizard, according to your requirements. For more information, see "Create a JDBC Data Source" in <em>Oracle Fusion Middleware Oracle WebLogic Server Administration Console Online Help</em>.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p><font face="arial, helvetica, sans-serif"><strong>Important:</strong></font></p>
+<p>The value used for <strong>JNDI Name</strong> (on the JDBC Datasource Properties page must be the same as the value used for the <code>&lt;jta-data-source&gt;</code> element in the <code>persistence.xml</code> file.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</li>
+<li>
+<p>Configure connection pools, as described in "Configuring Connection Pool Features" in <em>Oracle Fusion Middleware Configuring and Managing JDBC Data Sources for Oracle WebLogic Server</em>. The connection pool configuration can affect EclipseLink's ability to handle concurrent requests from the application. Properties should be tuned in the same way any connection pool would be tuned to optimize resources and application responsiveness.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect4" -->
+<a id="BABBHEBJ" name="BABBHEBJ"></a><a id="TLADG136" name="TLADG136"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Configure the persistence.xml File</font></h4>
+<p>In the <code>persistence.xml</code> file, specify that <code>transaction-type</code> is <code>JTA</code>, and provide the name of the data source in the <code>jta-data-source</code> element (prefaced by <code>jdbc/</code> or not), as shown in <a href="#BABCFFHC">Example 3-1</a>:</p>
+<div class="example"><a id="BABCFFHC" name="BABCFFHC"></a><a id="TLADG137" name="TLADG137"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 3-1 persistence.xml File With JNDI Data Source Using JTA</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+...
+  &lt;persistence-unit name="example" <strong>transaction-type="JTA"</strong>&gt;
+    &lt;provider&gt;org.eclipse.persistence.jpa.PersistenceProvider&lt;/provider&gt;
+    <strong>&lt;jta-data-source&gt;JDBC Data Source-1&lt;/jta-data-source&gt;</strong>
+    &lt;class&gt;org.eclipse.persistence.example.jpa.server.business.Cell&lt;/class&gt;
+    &lt;class&gt;org.eclipse.persistence.example.jpa.server.business.CellAttribute&lt;/class&gt;
+  &lt;/persistence-unit&gt;
+</pre></div>
+<!-- class="example" --></div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" -->
+<a id="BABFIHAE" name="BABFIHAE"></a><a id="TLADG138" name="TLADG138"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Configure an Application-Scoped JTA Data Source</font></h3>
+<p>To configure an application-scoped data source that uses JTA for transaction management, perform the following steps:</p>
+<ol>
+<li>
+<p><a href="#BABDBBAE">"Specify that the Data Source Is Application-Scoped"</a></p>
+</li>
+<li>
+<p><a href="#BABCGDDA">"Add the JDBC Module to the WebLogic Server Application Configuration"</a></p>
+</li>
+<li>
+<p><a href="#BABHFJED">"Configure the JPA Persistence Unit to Use the JTA Data Source"</a></p>
+</li>
+</ol>
+<a id="BABDBBAE" name="BABDBBAE"></a><a id="TLADG139" name="TLADG139"></a>
+<div class="sect4">
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Specify that the Data Source Is Application-Scoped</font></h4>
+<p>To define an application-scoped data source, create a <em><code>name</code></em><code>-jdbc.xml</code> JDBC module file and place it in the <code>META-INF</code> folder of the application's EAR file. In that file, add <code>&lt;scope&gt;Application&lt;/scope&gt;</code> to the <code>jdbc-data-source-params</code> section, as shown in <a href="#BABDAEFC">Example 3-2</a>.</p>
+<div class="example"><a id="BABDAEFC" name="BABDAEFC"></a><a id="TLADG140" name="TLADG140"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 3-2 JDBC Data Source Defined in the <em>name</em>-jdbc.xml File</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;jdbc-data-source ...&gt;
+... 
+  &lt;jdbc-data-source-params&gt;
+    &lt;jndi-name&gt;SimpleAppScopedDS&lt;/jndi-name&gt;
+    <strong>&lt;scope&gt;Application&lt;/scope&gt;</strong>
+  &lt;/jdbc-data-source-params&gt;
+&lt;/jdbc-data-source&gt;
+</pre></div>
+<!-- class="example" -->
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p><font face="arial, helvetica, sans-serif"><strong>Hint:</strong></font></p>
+<p>You can create the framework for the a <em><code>name</code></em><code>-jdbc.xml</code> file by creating a globally scoped data source from the WebLogic Server Administration Console, as described in <a href="#BABEHDCG">Configure a Globally Scoped JTA Data Source,</a> with these differences:</p>
+<ul>
+<li>
+<p>Do not associate the data source with a server.</p>
+</li>
+<li>
+<p>Add the <code>&lt;scope&gt;</code> element manually.</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>For more information about JDBC module configuration files and <code>jdbc-data-source</code> (including <code>&lt;jdbc-driver-params&gt;</code> and <code>&lt;jdbc-connection-pool-params&gt;</code>), see "Configuring WebLogic JDBC Resources" in <em>Oracle Fusion Middleware Configuring and Managing JDBC Data Sources for Oracle WebLogic Server</em>.</p>
+</div>
+<!-- class="sect4" -->
+<a id="BABCGDDA" name="BABCGDDA"></a><a id="TLADG141" name="TLADG141"></a>
+<div class="sect4">
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Add the JDBC Module to the WebLogic Server Application Configuration</font></h4>
+<p>Add a reference to the JDBC module in the <code>/META-INF/weblogic-application.xml</code> application deployment descriptor in the EAR file, as shown in <a href="#BABCJEDI">Example 3-3</a>. This registers the data source for use in the application.</p>
+<div class="example"><a id="BABCJEDI" name="BABCJEDI"></a><a id="TLADG142" name="TLADG142"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 3-3 JDBC Module Defined in the weblogic-application.xml File</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;wls:module&gt;
+  &lt;wls:name&gt;SimpleAppScopedDS&lt;/wls:name&gt;
+  <strong>&lt;wls:type&gt;JDBC&lt;/wls:type&gt;</strong>
+  <strong>&lt;wls:path&gt;META-INF/simple-jdbc.xml&lt;/wls:path&gt;</strong>
+&lt;/wls:module&gt;
+</pre></div>
+<!-- class="example" -->
+<p>For more information about <code>weblogic-application.xml</code> application deployment descriptors, see "Understanding Application Deployment Descriptors" in <em>Oracle Fusion Middleware Deploying Applications to Oracle WebLogic Server</em> and "Enterprise Application Deployment Descriptor Elements" in <em>Oracle Fusion Middleware Developing Applications for Oracle WebLogic Server</em>.</p>
+</div>
+<!-- class="sect4" -->
+<a id="BABHFJED" name="BABHFJED"></a><a id="TLADG143" name="TLADG143"></a>
+<div class="sect4">
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Configure the JPA Persistence Unit to Use the JTA Data Source</font></h4>
+<p>To make it possible for EclipseLink runtime to lazily look up an application-scoped data source, you must specify an additional data source property in the definition of the persistence unit in the <code>persistence.xml</code> file. For a JTA data source, add a fully qualified <code>jakarta.persistence.jtaDataSource</code> property, with the value <code>java:/app/jdbc/</code><em><code>data_source_name</code></em>, as shown in <a href="#BABFIHHE">Example 3-4</a>.</p>
+<p>The values of the <code>&lt;jta-data-source&gt;</code> and <code>&lt;jakarta.persistence.jtaDataSource&gt;</code> properties must match.</p>
+<div class="example"><a id="BABFIHHE" name="BABFIHHE"></a><a id="TLADG144" name="TLADG144"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 3-4 JTA Data Source Definition in the persistence.xml File</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0" encoding="windows-1252" ?&gt;
+&lt;persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+  version="1.0" xmlns="http://java.sun.com/xml/ns/persistence"&gt;
+  &lt;persistence-unit name="employee" <strong>transaction-type="JTA"</strong>&gt;
+    &lt;provider&gt;org.eclipse.persistence.jpa.PersistenceProvider&lt;/provider&gt;
+    <strong>&lt;jta-data-source&gt;java:/app/jdbc/SimpleAppScopedDS&lt;/jta-data-source&gt;</strong>
+    &lt;properties&gt;
+      <strong>&lt;property name="jakarta.persistence.jtaDataSource" </strong>
+          <strong>value="java:/app/jdbc/SimpleAppScopedDS"</strong> /&gt;
+    &lt;/properties&gt;
+  &lt;/persistence-unit&gt;
+&lt;/persistence&gt;
+        
+</pre></div>
+<!-- class="example" --></div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" -->
+<a id="BABCGGEJ" name="BABCGGEJ"></a><a id="TLADG145" name="TLADG145"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Configure a non-JTA Data Source and Manage Transactions in the Application</font></h3>
+<p>To configure a non-JTA data source managed by the application, follow the procedures described in <a href="#BABFIHAE">Configure an Application-Scoped JTA Data Source,</a> but configure the JPA persistence unit to use a non-JTA data source by specifying a not-JTA data source, as shown in <a href="#BABHFADF">Example 3-5</a>.</p>
+<div class="example"><a id="BABHFADF" name="BABHFADF"></a><a id="TLADG146" name="TLADG146"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 3-5 non-JTA Data Source Definition in the persistence.xml File</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0" encoding="windows-1252" ?&gt;
+&lt;persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+  version="1.0" xmlns="http://java.sun.com/xml/ns/persistence"&gt;
+  &lt;persistence-unit name="employee" transaction-type="RESOURCE_LOCAL"&gt;
+    &lt;provider&gt;org.eclipse.persistence.jpa.PersistenceProvider&lt;/provider&gt;
+    <strong>&lt;non-jta-data-source&gt;OracleDS&lt;/non-jta-data-source&gt;</strong>
+    &lt;properties&gt;
+      <strong>&lt;property name="jakarta.persistence.nonJtaDataSource" </strong>
+          <strong>value="OracleDS"</strong> /&gt;
+    &lt;/properties&gt;
+  &lt;/persistence-unit&gt;
+&lt;/persistence&gt;
+        
+</pre></div>
+<!-- class="example" -->
+<p>Write the code in your application to handle the transactions as described, for example, in "Transactions in EJB Applications" in <em>Oracle Fusion Middleware Programming JTA for Oracle WebLogic Server</em>.</p>
+</div>
+<!-- class="sect3" -->
+<a id="TLADG147" name="TLADG147"></a>
+<div class="sect3"><a id="sthref19" name="sthref19"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Ensure the Settings Match</font></h3>
+<p>Certain settings in the data source configuration must match certain settings in the application's <code>ejbModule/META-INF/persistence.xml</code> file. For the data source configuration in WebLogic Server, you can check the settings in the configuration files or in the Administration Console.</p>
+<p>In the Administration Console, review the settings as follows:</p>
+<ol>
+<li>
+<p>In the <strong>Domain Structure</strong> tree, expand <strong>Services</strong>, then select <strong>Data Sources</strong>.</p>
+</li>
+<li>
+<p>On the Summary of JDBC Data Sources page, click the name of the data source.</p>
+</li>
+<li>
+<p>On the <strong>Settings for</strong> <strong><em>data_source_name</em></strong> <strong>&gt; Configuration &gt; General</strong> page, find the value for <strong>JNDI Name</strong>, for example <strong>localDS</strong>. If you are using JTA, then the name must match <code>&lt;jta-data-source&gt;</code> in the <code>persistence.xml</code> file.</p>
+</li>
+<li>
+<p>On the <strong>Settings for</strong> <strong><em>data_source_name</em></strong> <strong>&gt; Configuration &gt; Connection Pool</strong> page, review these settings:</p>
+<ul>
+<li>
+<p>The value for <strong>URL</strong> must match the <code>jakarta.persistence.jdbc.url</code> value in the <code>persistence.xml</code> file, for example, <code>jdbc:oracle:thin:@127.0.0.1:1521:XE</code>.</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>The value for <strong>Driver Class Name</strong> must match the <code>jakarta.persistence.jdbc.driver</code> value in the <code>persistence.xml</code> file, for example (for a JTA data source), <code>oracle.jdbc.xa.client.OracleXADataSource</code>.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><a href="#CHDDDDIE">Example 3-6</a> shows the values that must be shared in the domain's <code>config.xml</code> file and the application's <code>persistence.xml</code> file.</p>
+<div class="example"><a id="CHDDDDIE" name="CHDDDDIE"></a><a id="TLADG148" name="TLADG148"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 3-6 Server Domain config.xml File</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+...
+&lt;domain...&gt;
+  &lt;jdbc-system-resource&gt;
+    <strong>&lt;name&gt;localJTA&lt;/name&gt;</strong>
+    &lt;target&gt;AdminServer,ManagedServer_1,ManagedServer_2&lt;/target&gt;
+    <strong>&lt;descriptor-file-name&gt;jdbc/localJTA-4636-jdbc.xml&lt;/descriptor-file-name&gt;</strong>
+  &lt;/jdbc-system-resource&gt;
+&lt;/domain&gt;
+</pre></div>
+<!-- class="example" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BABHICHE" name="BABHICHE"></a><a id="TLADG149" name="TLADG149"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 7: Extend the Domain to Use Advanced Oracle Database Features</font></h2>
+<p>To fully support Oracle Spatial and Oracle XDB mapping capabilities (in both standalone WebLogic Server and the JDeveloper Integrated WebLogic Server), you must use the <code>toplink-spatial-template.jar</code> file and the <code>toplink-xdb-template.jar</code> file to extend the WebLogic Server domain to support Oracle Spatial and Oracle XDB, respectively.</p>
+<p>To extend your WebLogic Server domain:</p>
+<ol>
+<li>
+<p>Download the <code>toplink-spatial-template.jar</code> (to support Oracle Spatial) and <code>toplink-xdb-template.jar</code> (to support Oracle XDB) files from:</p>
+<ul>
+<li>
+<p><code><a href="http://download.oracle.com/otn/java/toplink/111110/toplink-spatial-template.jar">http://download.oracle.com/otn/java/toplink/111110/toplink-spatial-template.jar</a></code></p>
+</li>
+<li>
+<p><code><a href="http://download.oracle.com/otn/java/toplink/111110/toplink-xdb-template.jar">http://download.oracle.com/otn/java/toplink/111110/toplink-xdb-template.jar</a></code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Copy the files, as shown in <a href="#BABGIJJJ">Table 3-3</a> and <a href="#BABGEIFF">Table 3-4</a>.</p>
+<div class="tblhruleformal"><a id="TLADG150" name="TLADG150"></a><a id="sthref20" name="sthref20"></a><a id="BABGIJJJ" name="BABGIJJJ"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 3-3 File to Support Oracle Spatial</font></em></strong></p>
+<table class="HRuleFormal" title="File to Support Oracle Spatial" summary="This table shows the files to import to support Oracle Spatial." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="23%" />
+<col width="*" />
+<col width="31%" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t9"><font face="Arial, Helvetica, sans-serif"><strong>File</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t9"><font face="Arial, Helvetica, sans-serif"><strong>From...</strong></font></th>
+<th align="left" valign="bottom" id="r1c3-t9"><font face="Arial, Helvetica, sans-serif"><strong>To...</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t9" headers="r1c1-t9">
+<p><code>sdoapi.jar</code></p>
+</td>
+<td align="left" headers="r2c1-t9 r1c2-t9">
+<p><em><code>ORACLE_DATABASE_HOME</code></em><code>/md/jlib</code></p>
+</td>
+<td align="left" headers="r2c1-t9 r1c3-t9">
+<p><em><code>WL_HOME</code></em><code>/server/lib</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformal" -->
+<div class="tblhruleformal"><a id="TLADG151" name="TLADG151"></a><a id="sthref21" name="sthref21"></a><a id="BABGEIFF" name="BABGEIFF"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 3-4 Files to Support Oracle XDB</font></em></strong></p>
+<table class="HRuleFormal" title="Files to Support Oracle XDB" summary="This table shows the files to import to support Oracle XDB" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="23%" />
+<col width="*" />
+<col width="31%" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t10"><font face="Arial, Helvetica, sans-serif"><strong>File</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t10"><font face="Arial, Helvetica, sans-serif"><strong>From...</strong></font></th>
+<th align="left" valign="bottom" id="r1c3-t10"><font face="Arial, Helvetica, sans-serif"><strong>To...</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t10" headers="r1c1-t10">
+<p><code>xdb.jar</code></p>
+</td>
+<td align="left" headers="r2c1-t10 r1c2-t10">
+<p><em><code>ORACLE_DATABASE_HOME</code></em><code>/rdbms/jlib</code></p>
+</td>
+<td align="left" headers="r2c1-t10 r1c3-t10">
+<p><em><code>WL_HOME</code></em><code>/server/lib</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t10" headers="r1c1-t10">
+<p><code>xml.jar</code></p>
+</td>
+<td align="left" headers="r3c1-t10 r1c2-t10">
+<p><em><code>ORACLE_DATABASE_HOME</code></em><code>/lib</code></p>
+</td>
+<td align="left" headers="r3c1-t10 r1c3-t10">
+<p><em><code>WL_HOME</code></em><code>/server/lib</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t10" headers="r1c1-t10">
+<p><code>xmlparserv2.jar</code></p>
+</td>
+<td align="left" headers="r4c1-t10 r1c2-t10">
+<p><em><code>ORACLE_DATABASE_HOME</code></em><code>/lib</code></p>
+</td>
+<td align="left" headers="r4c1-t10 r1c3-t10">
+<p><em><code>WL_HOME</code></em><code>/server/lib</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformal" --></li>
+<li>
+<p>Start the Config wizard (<em><code>WL_HOME</code></em><code>/common/bin/config.sh</code> (or <code>.bat</code>)).</p>
+</li>
+<li>
+<p>Select <strong>Extend an existing WebLogic domain</strong>.</p>
+</li>
+<li>
+<p>Browse and select your WebLogic Server domain.</p>
+</li>
+<li>
+<p>Select <strong>Extend my domain using an existing extension template</strong>.</p>
+</li>
+<li>
+<p>Browse and select the required template JAR file (<code>toplink-spatial-template.jar</code> for Oracle Spatial, <code>toplink-xdb-template.jar</code> for Oracle XDB).</p>
+</li>
+<li>
+<p>Complete the remaining pages of the wizard.</p>
+</li>
+</ol>
+<p>For information about using WebLogic Server domain templates, see <em>Oracle Fusion Middleware Domain Template Reference</em>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABICGHA" name="BABICGHA"></a><a id="TLADG152" name="TLADG152"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 8: Start WebLogic Server and Deploy the Application</font></h2>
+<p>For information about deploying to WebLogic Server, see <em>Oracle Fusion Middleware Deploying Applications to Oracle WebLogic Server</em>. See also "Deploying Fusion Web Applications" in <em>Oracle Fusion Middleware Fusion Developer's Guide for Oracle Application Development Framework</em>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABEEJDE" name="BABEEJDE"></a><a id="TLADG153" name="TLADG153"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 9: Run the Application</font></h2>
+<p>For instructions for starting a deployed application from the WebLogic Server Administration Console, see "Start and stop a deployed Enterprise application" in <em>Oracle Fusion Middleware Oracle WebLogic Server Administration Console Online Help</em>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABIJAAD" name="BABIJAAD"></a><a id="TLADG154" name="TLADG154"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 10: Configure and Monitor Persistence Settings in WebLogic Server</font></h2>
+<p>In the WebLogic Server Administration Console, you can configure a persistence unit and configure JTA and non-JTA data sources of a persistence unit, as follows:</p>
+<ol>
+<li>
+<p>If you have not already done so, in the Change Center of the Administration Console, click <strong>Lock &amp; Edit</strong>.</p>
+</li>
+<li>
+<p>In the left pane of the Administration Console, select <strong>Deployments</strong>.</p>
+</li>
+<li>
+<p>In the right pane, select the application or module you want to configure.</p>
+</li>
+<li>
+<p>Select <strong>Configuration</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Persistence</strong>.</p>
+</li>
+<li>
+<p>Select the persistence unit that you want to configure from the table.</p>
+</li>
+<li>
+<p>Review and edit properties on the configuration pages. For help on any page, click the <strong>Help</strong> link at the top of the Administration Console.</p>
+<p>Properties that can be viewed include:</p>
+<ul>
+<li>
+<p>Name</p>
+</li>
+<li>
+<p>Provider</p>
+</li>
+<li>
+<p>Description</p>
+</li>
+<li>
+<p>Transaction type</p>
+</li>
+<li>
+<p>Data cache time out</p>
+</li>
+<li>
+<p>Fetch batch size</p>
+</li>
+<li>
+<p>Default schema name</p>
+</li>
+<li>
+<p>Values of persistence unit properties defined in the <code>persistence.xml</code> file, for example, <code>eclipselink.session-name</code>, <code>eclipselink.logging.level</code>, and <code>eclipselink.target-server</code></p>
+</li>
+</ul>
+<p>You can also set attributes related to the transactional and non-transactional data sources of a persistence unit, on the Data Sources configuration page.</p>
+</li>
+<li>
+<p>To activate these changes, in the Change Center of the Administration Console, click <strong>Activate Changes</strong>.</p>
+</li>
+</ol>
+<p>For links to other help topics about working with persistence in the Administration Console, search for "Persistence" in the Table of Contents of <em>Oracle Fusion Middleware Oracle WebLogic Server Administration Console Online Help</em>.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="tlandwls001.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="tlandwls003.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2014,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+</td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Search" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini"></span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2014 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --></body>
+</html>

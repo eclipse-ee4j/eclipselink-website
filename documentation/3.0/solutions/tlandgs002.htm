@@ -1,0 +1,449 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Implementing the Solution | EclipseLink 3.0 Understanding EclipseLink</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.22 Build 1" />
+<meta name="date" content="2014-06-10T10:35:14Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Implementing the Solution" />
+<meta name="relnum" content="Release 3.0" />
+<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="tlandgs001.htm" title="Previous" type="text/html" />
+<link rel="next" href="tlandgs003.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:enkkfjmsqju', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><b>EclipseLink Solutions Guide for EclipseLink</b><br />
+Release 3.0</div></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+</td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Search" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini"></span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="tlandgs001.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="tlandgs003.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header --><a id="CIHIGBFH" name="CIHIGBFH"></a><a id="TLADG165" name="TLADG165"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Implementing the Solution</font></h1>
+<p>To run EclipseLink JPA applications in GlassFish Server, you must configure the server and coordinate certain server and application settings. These are described in the following tasks.</p>
+<ul>
+<li>
+<p><a href="#CIHDCDJD">Task 1: Prerequisites</a></p>
+</li>
+<li>
+<p><a href="#CIHEJFFA">Task 2: Install GlassFish Server</a></p>
+</li>
+<li>
+<p><a href="#CIHFCJJI">Task 3: Set Up the Data Source</a></p>
+</li>
+<li>
+<p><a href="#CIHBFDDB">Task 4: Create the persistence.xml File</a></p>
+</li>
+<li>
+<p><a href="#CIHDDACF">Task 5: Set Up GlassFish Server for JPA</a></p>
+</li>
+<li>
+<p><a href="#CIHHDEFE">Task 6: Create the Application</a></p>
+</li>
+<li>
+<p><a href="#CIHCFJDE">Task 7: Deploy the Application to GlassFish Server</a></p>
+</li>
+<li>
+<p><a href="#CIHFIGGB">Task 8: Run the Application</a></p>
+</li>
+<li>
+<p><a href="#CIHIFGEF">Task 9: Monitor the Application</a></p>
+</li>
+</ul>
+<a id="CIHDCDJD" name="CIHDCDJD"></a><a id="TLADG164" name="TLADG164"></a>
+<div class="sect2">
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 1: Prerequisites</font></h2>
+<p>This document is based on the following products and tools, although the principles apply to any supported database or development environment. It is assumed that the software is already installed, except where noted in later sections.</p>
+<ul>
+<li>
+<p>GlassFish Server 3.1.2.</p>
+<p>For more information and downloads, see <code><a href="http://www.oracle.com/technetwork/middleware/glassfish/overview/index.html">http://www.oracle.com/technetwork/middleware/glassfish/overview/index.html</a></code> on the Oracle Technology Network.</p>
+</li>
+<li>
+<p>EclipseLink 2.4.1.</p>
+<p>For more information and downloads, see <code><a href="http://www.eclipse.org/eclipselink/">http://www.eclipse.org/eclipselink/</a></code> on the EclipseLink website.</p>
+</li>
+<li>
+<p>Any compliant JDBC database including Oracle Database, Oracle Database Express Edition, MySQL, and so on.</p>
+<p>For Oracle Database, see <code><a href="http://www.oracle.com/technetwork/database/enterprise-edition/overview/index.html">http://www.oracle.com/technetwork/database/enterprise-edition/overview/index.html</a></code>.</p>
+<p>For Oracle Database Express Edition, see <code><a href="http://www.oracle.com/technetwork/database/express-edition/overview/index.html">http://www.oracle.com/technetwork/database/express-edition/overview/index.html</a></code>.</p>
+<p>For MySQL, see <code><a href="http://www.oracle.com/us/products/mysql/index.html">http://www.oracle.com/us/products/mysql/index.html</a></code>.</p>
+</li>
+<li>
+<p>While it is not required, you may want to use a Jakarta EE integrated development environment (IDE) for convenience during development. For example, Oracle JDeveloper, Oracle Enterprise Pack for Eclipse, and NetBeans all provide sophisticated Jakarta EE development tools.</p>
+<p>For JDeveloper, see <code><a href="http://www.oracle.com/technetwork/developer-tools/jdev/downloads/index.html">http://www.oracle.com/technetwork/developer-tools/jdev/downloads/index.html</a></code>.</p>
+<p>For Oracle Enterprise Pack for Eclipse, see <code><a href="http://www.oracle.com/technetwork/developer-tools/eclipse/overview/index.html">http://www.oracle.com/technetwork/developer-tools/eclipse/overview/index.html</a></code>.</p>
+<p>For NetBeans, see <code><a href="http://www.oracle.com/us/products/tools/050845.html">http://www.oracle.com/us/products/tools/050845.html</a></code>.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="CIHEJFFA" name="CIHEJFFA"></a><a id="TLADG166" name="TLADG166"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 2: Install GlassFish Server</font></h2>
+<p>EclipseLink is included with the GlassFish Server distribution. You can find instructions for installing and configuring GlassFish Server at this URL:</p>
+<p><code><a href="http://docs.oracle.com/cd/E26576_01/index.htm">http://docs.oracle.com/cd/E26576_01/index.htm</a></code></p>
+<p>The EclipseLink modules appear as separate JAR files in the <code>modules</code> directory.</p>
+<pre xml:space="preserve" class="oac_no_warn">
+* \glassfish\modules
+      .
+      .
+      .
+      o org.eclipse.persistence.antlr.jar
+      o org.eclipse.persistence.asm.jar
+      o org.eclipse.persistence.core.jar
+      o org.eclipse.persistence.jpa.jar
+      o org.eclipse.persistence.jpa.modelgen.jar
+      o org.eclipse.persistence.moxy.jar
+      o org.eclipse.persistence.oracle.jar
+      .
+      .
+      .
+</pre>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<ul>
+<li>
+<p>The <code>org.eclipse.persistence.oracle.jar</code> file is available with GlassFish and provides Oracle Database-specific functionality for EclipseLink. This file is used only for applications running against an Oracle Database.</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>Object-XML (also known as JAXB support, or <em>MOXy</em>) is a component that enables you to bind Java classes to XML schemas. This support is provided by the <code>org.eclipse.persistence.moxy.jar</code>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CIHFCJJI" name="CIHFCJJI"></a><a id="TLADG167" name="TLADG167"></a>
+<div class="sect2">
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 3: Set Up the Data Source</font></h2>
+<p>Configuring an Oracle database as a JDBC resource for a Jakarta EE application involves the following steps:</p>
+<ol>
+<li>
+<p><a href="#CIHDEDEE">Integrate the JDBC Driver for Oracle Database into GlassFish Server</a></p>
+</li>
+<li>
+<p><a href="#CIHFIGGF">Create a JDBC Connection Pool for the Resource</a></p>
+</li>
+<li>
+<p><a href="#CIHIDADF">Create the JDBC Resource</a></p>
+</li>
+</ol>
+<a id="CIHDEDEE" name="CIHDEDEE"></a><a id="TLADG168" name="TLADG168"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Integrate the JDBC Driver for Oracle Database into GlassFish Server</font></h3>
+<p>To integrate the JDBC driver, copy its JAR file into the domain and then restart the domain and instances to make the driver available.</p>
+<ol>
+<li>
+<p>Copy the JAR file for the JDBC driver into the domain's <code>lib</code> subdirectory, for example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+cd /home/gfuser/glassfish3
+cp oracle-jdbc-drivers/ojdbc6.jar glassfish/domains/domain1/lib
+</pre>
+<p>Note that you do not have to restart GlassFish Server; the drivers are picked up dynamically.</p>
+<p>If the application uses Oracle Database-specific extensions provided by EclipseLink, then the driver must be copied to the <code>lib/ext</code> directory. For more information, see "Oracle Database Enhancements" in the <em>Oracle GlassFish Server Application Development Guide</em> at:</p>
+<p><code><a href="http://docs.oracle.com/cd/E26576_01/doc.312/e24930/jpa.htm#giqbi">http://docs.oracle.com/cd/E26576_01/doc.312/e24930/jpa.htm#giqbi</a></code></p>
+</li>
+<li>
+<p>You can use the GlassFish Server Administration Console or the command line to restart instances in the domain to make the JDBC driver available to the instances.</p>
+<p><strong>To use the GlassFish Server Administration Console:</strong></p>
+<p>In the GlassFish Server Administration Console, expand the <strong>Cluster</strong> node. Select the node for the cluster and on its General Information page, click the <strong>Instances</strong> tab. Select the instances you want to restart. For more information, see "To Start Clustered GlassFish Server Instances" in <em>GlassFish Server Administration Console Online Help</em>.</p>
+<p>To start a standalone instance, expand the <strong>Standalone</strong> <strong>Instances</strong> node. For each instance that you are starting, select the instance in the Server Instances table. Click Start. The status of each instance is updated in the Server Instances table when the instance is started. For more information, see "To Start Standalone GlassFish Server Instances" in <em>GlassFish Server Administration Console Online Help</em>.</p>
+<p><strong>To use the command line:</strong></p>
+<p>Run the <code>restart-instance</code> subcommand to restart the instances. These commands assume that your instances are named <code>pmd-i1</code> and <code>pmd-i2</code>.</p>
+<pre xml:space="preserve" class="oac_no_warn">
+restart-instance pmd-i1
+restart-instance pmd-i2
+</pre></li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="CIHFIGGF" name="CIHFIGGF"></a><a id="TLADG169" name="TLADG169"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Create a JDBC Connection Pool for the Resource</font></h3>
+<p>You can create a JDBC connection pool from the GlassFish Server Administration Console or from the command line.</p>
+<p><strong>To use the GlassFish Server Administration Console:</strong></p>
+<p>In the GlassFish Server Administration Console, expand the <strong>Common</strong> <strong>Tasks</strong> node, then click the <strong>Create New JDBC Connection Pool</strong> button in the Common Tasks page. Specify the name of the pool, the resource type, the name of the database provider, the data source and driver class names, and other details. For more information, see "To Create a JDBC Connection Pool" in <em>GlassFish Server Administration Console Online Help</em>.</p>
+<p><strong>To use the command line:</strong></p>
+<ol>
+<li>
+<p>Use the <code>create-jdbc-connection-pool</code> subcommand to create the JDBC connection pool, specifying the database connectivity values. In this command, note the use of two backslashes (<code>\\</code>) preceding the colons in the URL property value. These backslashes cause the colons to be interpreted as part of the property value instead of as separators between property-value pairs, for example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+create-jdbc-connection-pool 
+  --datasourceclassname oracle.jdbc.pool.OracleDataSource 
+  --restype javax.sql.DataSource 
+  --property User=smith\\:Password=password\\:url=jdbc\\:oracle\\:thin\\:@node_name.example.com\\:1521\\:smithdb 
+    poolbvcallbackbmt 
+</pre></li>
+<li>
+<p>Verify connectivity to the database.</p>
+<pre xml:space="preserve" class="oac_no_warn">
+ping-connection-pool <em><code>pool_name</code></em> 
+</pre></li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="CIHIDADF" name="CIHIDADF"></a><a id="TLADG170" name="TLADG170"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Create the JDBC Resource</font></h3>
+<p>You can use the GlassFish Server Administration Console to create the JDBC resource or you can use the command line.</p>
+<p><strong>To use the GlassFish Server Administration Console:</strong></p>
+<p>In the GlassFish Server Administration Console, expand the <strong>Resources</strong> node, then the <strong>JDBC</strong> node, then the <strong>JDBC</strong> <strong>Resources</strong> node to open the JDBC Resources page. Provide a unique JNDI resource name and associate the resource with a connection pool. For more information, see "To Create a JDBC Resource" in the <em>GlassFish Server Administration Console Online Help</em>.</p>
+<p><strong>To use the command line:</strong></p>
+<p>Use the <code>create-jdbc-resource</code> subcommand to create the JDBC resource, and name it so that the application can discover it using JNDI lookup, for example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+create-jdbc-resource --connectionpoolid poolbvcallbackbmt jdbc/bvcallbackbmt
+</pre></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CIHBFDDB" name="CIHBFDDB"></a><a id="TLADG171" name="TLADG171"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 4: Create the persistence.xml File</font></h2>
+<p><a href="#CIHJGIEF">Example 4-1</a> illustrates a sample <code>persistence.xml</code> file that specifies the default persistence provider for EclipseLink, <code>org.eclipse.persistence.jpa.PersistenceProvider</code>. For more information about this file, see "About the Persistence Unit" in <em>EclipseLink Concepts</em>.</p>
+<p>If you are using the default persistence provider, then you can specify additional database properties described in <em>Jakarta Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+<p>Several of the values you enter in the file must match the values you chose when you defined the cluster, connection, and connection pool properties in GlassFish Server, as follows:</p>
+<p><strong>JDBC Data Source Properties:</strong></p>
+<ul>
+<li>
+<p><strong>Name</strong>: The name of the data source, which is typically the same as the JNDI name, for example <code>jdbc/bvcallbackbmt</code>.</p>
+</li>
+<li>
+<p><strong>JNDI</strong> <strong>Name</strong>: The JNDI path to where this data source is bound. This must be the same name as the value for the <code>&lt;jta-data-source&gt;</code> element in <code>persistence.xml</code>, for example <code>jdbc/bvcallbackbmt</code>.</p>
+</li>
+<li>
+<p><strong>Database</strong> <strong>Type</strong>: <code>Oracle</code></p>
+</li>
+<li>
+<p><strong>Database</strong> <strong>Driver</strong>: (default) Oracle's Driver (Thin XA) for Instance connections; Versions: 9.0.1 and later</p>
+</li>
+</ul>
+<p><strong>Connection Properties:</strong></p>
+<ul>
+<li>
+<p><strong>Database</strong> <strong>Name</strong>: The name of the database, for example, <code>XE</code> for Oracle Database Express Edition samples.</p>
+</li>
+<li>
+<p><strong>Host</strong> <strong>Name</strong>: The IP address of the database server, for example <code>127.0.0.1</code> for a locally hosted database.</p>
+</li>
+<li>
+<p><strong>Port</strong>: The port number on which your database server listens for connection requests, for example, <code>1521</code>, the default for Oracle Database Express Edition 11<em>g</em>.</p>
+</li>
+<li>
+<p><strong>Database</strong> <strong>User</strong> <strong>Name</strong>: The database account user name used to create database connections, for example <code>hr</code> for Oracle Database Express Edition 11<em>g</em> samples.</p>
+</li>
+<li>
+<p><strong>Password</strong>: Your password.</p>
+</li>
+</ul>
+<p><strong>Select Targets:</strong></p>
+<ul>
+<li>
+<p><strong>Servers</strong> <strong>/</strong> <strong>Clusters</strong>: Select the administration server, managed servers, or clusters to which you want to deploy the data source. You can choose one or more.</p>
+</li>
+</ul>
+<p>The sample <code>persistence.xml</code> file in <a href="#CIHJGIEF">Example 4-1</a> highlights the properties defining the persistence provider, the JTA data source, and logging details. In this example, the logging level is set to <code>FINE</code>. At this level, SQL code generated by EclipseLink is logged to the <code>server.log</code> file. For more information about these properties, see:</p>
+<ul>
+<li>
+<p><a href="#CIHFFHAE">Specify the Persistence Provider.</a></p>
+</li>
+<li>
+<p><a href="#CIHCBCIC">Specify an Oracle Database.</a></p>
+</li>
+<li>
+<p><a href="#CIHHJIGF">Specify Logging.</a></p>
+</li>
+</ul>
+<div class="example"><a id="CIHJGIEF" name="CIHJGIEF"></a><a id="TLADG172" name="TLADG172"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-1 Sample persistence.xml File</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0"&gt;
+  &lt;persistence-unit name="pu1" transaction-type="JTA"&gt;
+   <strong><code> &lt;provider&gt;org.eclipse.persistence.jpa.PersistenceProvider&lt;/provider&gt;</code></strong>
+    <strong><code>&lt;jta-data-source&gt;jdbc/bvcallbackbmt&lt;/jta-data-source&gt;</code></strong>
+    &lt;properties&gt;
+       <strong><code>&lt;property name="eclipselink.logging.level" value="FINE"/&gt;</code></strong>
+       &lt;property name="eclipselink.ddl-generation" 
+                 value="drop-and-create-tables"/&gt;
+    &lt;/properties&gt;
+  &lt;/persistence-unit&gt;
+&lt;/persistence&gt;
+</pre></div>
+<!-- class="example" -->
+<a id="CIHFFHAE" name="CIHFFHAE"></a><a id="TLADG173" name="TLADG173"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Specify the Persistence Provider</font></h3>
+<p>The persistence provider defines the implementation of JPA. It is defined in the <code>provider</code> element of the <code>persistence.xml</code> file. Persistence providers are vendor-specific. The persistence provider for EclipseLink is <code>org.eclipse.persistence.jpa.PersistenceProvider</code>.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CIHCBCIC" name="CIHCBCIC"></a><a id="TLADG174" name="TLADG174"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Specify an Oracle Database</font></h3>
+<p>You specify the database connection details in the <code>persistence.xml</code> file. GlassFish Server uses the bundled Java DB (Derby) database by default, named <code>jdbc/__default</code>. To use a nondefault database, such as the Oracle Database, either specify a value for the <code>jta-data-source</code> element, or set the <code>transaction-type</code> element to <code>RESOURCE_LOCAL</code> and specify a value for the <code>non-jta-data-source</code> element.</p>
+<p>If you are using the default persistence provider, <code>org.eclipse.persistence.jpa.PersistenceProvider</code>, then the provider attempts to automatically detect the database type based on the connection metadata. This database type is used to issue SQL statements specific to the detected database type. You can specify the optional <code>eclipselink.target-database</code> property to guarantee that the database type is correct.</p>
+<p>For more information about specifying database properties in a <code>persistence.xml</code> file for GlassFish Server, see "Specifying the Database for an Application" in the <em>Oracle GlassFish Server Application Development Guide</em>, at:</p>
+<p><code><a href="http://docs.oracle.com/cd/E26576_01/doc.312/e24930/jpa.htm#gbwmj">http://docs.oracle.com/cd/E26576_01/doc.312/e24930/jpa.htm#gbwmj</a></code></p>
+</div>
+<!-- class="sect3" -->
+<a id="CIHHJIGF" name="CIHHJIGF"></a><a id="TLADG175" name="TLADG175"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Specify Logging</font></h3>
+<p>EclipseLink provides a logging utility even though logging is not part of the JPA specification. Hence, the information provided by the log is EclipseLink JPA-specific. With EclipseLink, you can enable logging to view the following information:</p>
+<ul>
+<li>
+<p>Configuration details</p>
+</li>
+<li>
+<p>Information to facilitate debugging</p>
+</li>
+<li>
+<p>The SQL that is being sent to the database</p>
+</li>
+</ul>
+<p>You can specify logging in the <code>persistence.xml</code> file. EclipseLink logging properties let you specify the level of logging and whether the log output goes to a file or standard output. Because the logging utility is based on <code>java.util.logging</code>, you can specify a logging level to use.</p>
+<p>The logging utility provides nine levels of logging control over the amount and detail of the log output. Use <code>eclipselink.logging.level</code> to set the logging level, for example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;property name="eclipselink.logging.level" value="FINE"/&gt;
+</pre>
+<p>By default, the log output goes to <code>System.out</code> or to the console. To configure the output to be logged to a file, set the property <code>eclipselink.logging.file</code>, for example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;property name="eclipselink.logging.file" value="output.log"/&gt;
+</pre>
+<p>EclipseLink's logging utility is pluggable, and several different logging integrations are supported, including <code>java.util.logging</code>. To enable <code>java.util.logging</code>, set the property <code>eclipselink.logging.logger</code>, for example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;property name="eclipselink.logging.logger" value="JavaLogger"/&gt;
+</pre>
+<p>While running inside GlassFish Server, EclipseLink is configured by GlassFish Server to use <code>JavaLogger</code> by default. The log is always redirected to the GlassFish Server <code>server.log</code> file. For more information, see "Setting Log Levels" in <em>Oracle GlassFish Server Administration Guide</em>, at:</p>
+<p><code><a href="http://docs.oracle.com/cd/E26576_01/doc.312/e24928/logging.htm#gklml">http://docs.oracle.com/cd/E26576_01/doc.312/e24928/logging.htm#gklml</a></code></p>
+<p>For more information about EclipseLink logging and the levels of logging available in the logging utility, see "Persistence Property Extensions Reference" in <em>Jakarta Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CIHDDACF" name="CIHDDACF"></a><a id="TLADG176" name="TLADG176"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 5: Set Up GlassFish Server for JPA</font></h2>
+<p><em>GlassFish Server Application Development Guide</em> describes server-specific considerations on setting up GlassFish Server to run applications that employ JPA:</p>
+<p><code><a href="http://docs.oracle.com/cd/E26576_01/doc.312/e24930/jpa.htm">http://docs.oracle.com/cd/E26576_01/doc.312/e24930/jpa.htm</a></code></p>
+<p>It provides more information about these topics:</p>
+<ul>
+<li>
+<p>"Specifying the Database for an Application," for information about database connection properties</p>
+</li>
+<li>
+<p>"Specifying the Persistence Provider for an Application," for setting the default or non-default persistence provider for an application</p>
+</li>
+<li>
+<p>"Primary Key Generation Defaults," for the default persistence provider's primary key generation defaults</p>
+</li>
+<li>
+<p>"Automatic Schema Generation," for information on annotations and options to manage automatic schema generation</p>
+</li>
+<li>
+<p>"Restrictions and Optimizations," for restrictions and performance optimizations that affect using the Jakarta Persistence API</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="CIHHDEFE" name="CIHHDEFE"></a><a id="TLADG177" name="TLADG177"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 6: Create the Application</font></h2>
+<p>To create an application that uses EclipseLink as its JPA persistence provider, you may want to use a Jakarta EE IDE for convenience during development. For example, JDeveloper, Oracle Enterprise Pack for Eclipse, and NetBeans provide sophisticated Jakarta EE development tools, including support for EclipseLink. See "Key Tools" in <em>EclipseLink Concepts</em>.</p>
+<p>For guidance in writing your application, see these topics from the "Configuring the Java Persistence Provider" chapter in <em>Oracle GlassFish Server Application Development Guide</em>, at:</p>
+<p><code><a href="http://docs.oracle.com/cd/E26576_01/doc.312/e24930/jpa.htm">http://docs.oracle.com/cd/E26576_01/doc.312/e24930/jpa.htm</a></code></p>
+</div>
+<!-- class="sect2" -->
+<a id="CIHCFJDE" name="CIHCFJDE"></a><a id="TLADG178" name="TLADG178"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 7: Deploy the Application to GlassFish Server</font></h2>
+<p>For information about deploying to GlassFish Server, see "Deploy Applications or Modules," "To Deploy an Enterprise Application," and "To Deploy a Web Application" in <em>GlassFish Server Administration Console Online Help</em>. See also <em>Oracle GlassFish Server Application Deployment Guide</em>, at:</p>
+<p><code><a href="http://docs.oracle.com/cd/E26576_01/index.htm">http://docs.oracle.com/cd/E26576_01/index.htm</a></code></p>
+</div>
+<!-- class="sect2" -->
+<a id="CIHFIGGB" name="CIHFIGGB"></a><a id="TLADG179" name="TLADG179"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 8: Run the Application</font></h2>
+<p>For instructions for starting a deployed application from the GlassFish Server Administration Console, see "Application Client Launch" and "To Launch an Application" in <em>GlassFish Server Administration Console Online Help</em>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CIHIFGEF" name="CIHIFGEF"></a><a id="TLADG180" name="TLADG180"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Task 9: Monitor the Application</font></h2>
+<p>GlassFish Server provides a monitoring service to track the health and performance of an application. For information about monitoring an application from the console, see the "Monitoring" and "Monitoring Data" topics in <em>GlassFish Server Administration Console Online Help</em>. For information about monitoring the application from the command line, see "Administering the Monitoring Service" in <em>Oracle GlassFish Server Administration Guide</em>, at:</p>
+<p><code><a href="http://docs.oracle.com/cd/E26576_01/doc.312/e24928/monitoring.htm">http://docs.oracle.com/cd/E26576_01/doc.312/e24928/monitoring.htm</a></code></p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="tlandgs001.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="tlandgs003.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2014,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+</td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Search" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini"></span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2014 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --></body>
+</html>

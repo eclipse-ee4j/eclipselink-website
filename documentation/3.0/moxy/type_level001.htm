@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Defining the Default Root Element | EclipseLink 3.0 EclipseLink MOXy</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.22 Build 1" />
+<meta name="date" content="2014-06-10T10:25:31Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Defining the Default Root Element" />
+<meta name="relnum" content="Release 3.0" />
+<meta name="partnum" content="" />
+<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="type_level.htm" title="Previous" type="text/html" />
+<link rel="next" href="type_level002.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:1hjujor5_fg', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><div class="booktitle">Developing JAXB Applications Using EclipseLink MOXy, 
+<b>Release 3.0</b><br /></font></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+</td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Search" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini"></span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_moxy.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="type_level.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="type_level002.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header --><a id="BABEEEEJ" name="BABEEEEJ"></a><a id="TLJAX186" name="TLJAX186"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Defining the Default Root Element</font></h1>
+<p>At least one of your mapped classes must have a default root element defined. This tells EclipseLink what the top-level root of your XML document will be. Consider the <strong>Customer</strong> and <strong>Address</strong> classes shown in <a href="#CIHDBEDH">Figure 3-1</a>:</p>
+<div class="figure"><a id="CIHDBEDH" name="CIHDBEDH"></a><a id="TLJAX187" name="TLJAX187"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Figure 3-1 Sample Mapped Classes</font></em></strong></p>
+<img src="img/defaultrootelement.gif" alt="Sample Mapped Classes" title="Sample Mapped Classes" longdesc="img_text/defaultrootelement.htm" /><br />
+<a id="sthref57" name="sthref57" href="img_text/defaultrootelement.htm">Description of "Figure 3-1 Sample Mapped Classes"</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>These classes correspond to the XML schema shown in <a href="#CIHFBEII">Example 3-1</a>. The schema contains a top-level element of type <code>customer-type</code>, therefore our <strong>Customer</strong> class will need to have a default root element specified.</p>
+<div class="example"><a id="CIHFBEII" name="CIHFBEII"></a><a id="TLJAX188" name="TLJAX188"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 3-1 Sample XML Schema</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;xsd:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+   &lt;xsd:complexType name="address-type"&gt;
+      &lt;xsd:sequence&gt;
+         &lt;element name="street" type="xsd:string"/&gt;
+         &lt;element name="city" type="xsd:string"/&gt;
+      &lt;/xsd:sequence&gt;
+   &lt;/xsd:complexType&gt;
+ 
+   &lt;xsd:element <strong>name="customer" type="customer-type"</strong>/&gt;
+ 
+   &lt;xsd:complexType name="customer-type"&gt;
+      &lt;xsd:sequence&gt;
+         &lt;xsd:element name="name" type="xsd:string"/&gt;
+         &lt;xsd:element name="billing-address" type="address-type"/&gt;
+         &lt;xsd:element name="shipping-address" type="address-type"/&gt;
+      &lt;/xsd:sequence&gt;
+   &lt;/xsd:complexType&gt;
+&lt;/xsd:schema&gt;
+ 
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CIHGHJDA">Example 3-2</a> shows how to annotate your Java class to specify a default root element. All that is needed is the standard JAXB <code>@XmlRootElement</code> annotation.</p>
+<div class="example"><a id="CIHGHJDA" name="CIHGHJDA"></a><a id="TLJAX189" name="TLJAX189"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 3-2 Using the @XmlRootElement Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package example;
+ 
+import jakarta.xml.bind.annotation.*;
+ 
+<strong>@XmlRootElement</strong>
+public class Customer {
+   private String name;
+ 
+   @XmlElement(name="billing-address")
+   private Address billingAddress;
+ 
+   @XmlElement(name="shipping-address")
+   private Address shippingAddress;
+ 
+   ...
+}
+ 
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CIHFDJCE">Example 3-3</a> shows how specify a default root element in EclipseLink's OXM metadata format.</p>
+<div class="example"><a id="CIHFDJCE" name="CIHFDJCE"></a><a id="TLJAX190" name="TLJAX190"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 3-3 Specifying a Default Root Element</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+...
+&lt;java-type name="Customer"&gt;
+   &lt;<strong>xml-root-element</strong>/&gt;
+   &lt;java-attributes&gt;
+      &lt;xml-element java-attribute="name"/&gt;
+      &lt;xml-element java-attribute="billingAddress" name="billing-address"/&gt;
+      &lt;xml-element java-attribute="shippingAddress" name="shipping-address"/&gt;
+   &lt;/java-attributes&gt;
+&lt;/java-type&gt;
+...
+ 
+</pre></div>
+<!-- class="example" -->
+<a id="TLJAX191" name="TLJAX191"></a>
+<div class="sect2"><a id="sthref58" name="sthref58"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Customizing the Default Root Element</font></h2>
+<p>In <a href="#CIHGHJDA">Example 3-2</a>, our class is called <strong>Customer</strong>, and our root element name in XML is <code>customer</code>. By default, when <code>@XmlRootElement</code> is specified, the name of the class has its first letter lower-cased, and this is set as the root element name. If, however, the element name in XML is different from the Java class name, a name attribute can be included in the annotation (as in <a href="#CIHCGICI">Example 3-4</a>) or OXM metadata (as in <a href="#CIHHJIHH">Example 3-5</a>):</p>
+<div class="example"><a id="CIHCGICI" name="CIHCGICI"></a><a id="TLJAX192" name="TLJAX192"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 3-4 Using Annotations</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package example;
+ 
+import jakarta.xml.bind.annotation.*;
+ 
+<strong>@XmlRootElement</strong>(name="my-customer")
+public class Customer {
+   private String name;
+ 
+   @XmlElement(name="billing-address")
+   private Address billingAddress;
+ 
+   @XmlElement(name="shipping-address")
+   private Address shippingAddress;
+ 
+   ...
+}
+ 
+</pre></div>
+<!-- class="example" -->
+<div class="example"><a id="CIHHJIHH" name="CIHHJIHH"></a><a id="TLJAX193" name="TLJAX193"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 3-5 Using OXM Metadata</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+...
+&lt;java-type name="Customer"&gt;
+  <strong> &lt;xml-root-element name="my-customer"/&gt;</strong>
+   &lt;java-attributes&gt;
+      &lt;xml-element java-attribute="name"/&gt;
+      &lt;xml-element java-attribute="billingAddress" name="billing-address"/&gt;
+      &lt;xml-element java-attribute="shippingAddress" name="shipping-address"/&gt;
+   &lt;/java-attributes&gt;
+&lt;/java-type&gt;
+...
+ 
+</pre></div>
+<!-- class="example" -->
+<p>For more information on JAXB name-binding algorithms, see "Appendix D: Binding XML Names to Java Identifiers" of the Java Architecture for XML Binding (JAXB) Specification (<code><a href="http://jcp.org/en/jsr/detail?id=222">http://jcp.org/en/jsr/detail?id=222</a></code>).</p>
+</div>
+<!-- class="sect2" -->
+<a id="TLJAX194" name="TLJAX194"></a>
+<div class="sect2"><a id="sthref59" name="sthref59"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Understanding How EclipseLink Uses the Default Root Element</font></h2>
+<p>When an instance of the <strong>Customer</strong> class is persisted to XML, the EclipseLink runtime performs the following:</p>
+<ul>
+<li>
+<p>Gets the default root element. The <strong>Customer</strong> class instance corresponds to the root of the XML document. The EclipseLink runtime uses the default root element (<code>customer</code>) specified in either annotations or OXM to start the XML document. EclipseLink then uses the mappings on the class to marshal the object's attributes.</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;customer&gt;
+   &lt;name&gt;...&lt;/name&gt;
+&lt;/customer&gt;
+ 
+</pre></li>
+<li>
+<p>When the EclipseLink runtime encounters an object attribute such as <code>billingAddress</code>, it checks the mapping associated with it to determine with what element (billing-<code>address</code>) to continue.</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;customer&gt;
+   &lt;name&gt;...&lt;/name&gt;
+   &lt;billing-address/&gt;
+&lt;/customer&gt;
+ 
+</pre></li>
+<li>
+<p>The EclipseLink runtime checks the mapping's reference descriptor (<strong>Address</strong>) to determine what attributes to persist.</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;customer&gt;
+   &lt;name&gt;...&lt;/name&gt;
+   &lt;billing-address&gt;
+      &lt;street&gt;...&lt;/street&gt;
+      &lt;city&gt;...&lt;/city&gt;
+   &lt;/billing-address&gt;
+&lt;/customer&gt;
+</pre></li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="type_level.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="type_level002.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+ 
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+</td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Search" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini"></span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_moxy.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2013 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --></body>
+</html>

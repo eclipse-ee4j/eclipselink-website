@@ -1,0 +1,585 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Using Single-Table Multi-Tenancy | EclipseLink 3.0 Understanding EclipseLink</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.22 Build 1" />
+<meta name="date" content="2014-06-10T10:35:14Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Using Single-Table Multi-Tenancy" />
+<meta name="relnum" content="Release 3.0" />
+<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="multitenancy001.htm" title="Previous" type="text/html" />
+<link rel="next" href="multitenancy003.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:enkkfjmsqju', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><b>EclipseLink Solutions Guide for EclipseLink</b><br />
+Release 3.0</div></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+</td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Search" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini"></span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="multitenancy001.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="multitenancy003.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header --><a id="BABJGBCF" name="BABJGBCF"></a><a id="TLADG260" name="TLADG260"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Using Single-Table Multi-Tenancy</font></h1>
+<p>With single-table multi-tenancy, any table (<code>Table</code> or <code>SecondaryTable</code>) to which an entity or mapped superclass maps can include rows for multiple tenants. Access to tenant-specific rows is restricted to the specified tenant.</p>
+<p>Tenant-specific rows are associated with the tenant by using one or more tenant discriminator columns. Discriminator columns are used with application context values to limit what a persistence context can access.</p>
+<p>The results of queries on the mapped tables are limited to the tenant discriminator value(s) provided as property values. This applies to all insert, update, and delete operations on the table. When multi-tenant metadata is applied at the mapped superclass level, it is applied to all subentities unless they specify their own multi-tenant metadata.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>In the context of single-table multi-tenancy, &rdquo;single-table&rdquo; means multiple tenants can share a single table, and each tenant's data is distinguished from other tenants' data via the discriminator column(s). It is possible to use multiple tables with single-table multi-tenancy; but in that case, an entity's persisted data is stored in multiple tables, and multiple tenants can share all the tables.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<a id="BABIFFCI" name="BABIFFCI"></a><a id="TLADG261" name="TLADG261"></a>
+<div class="sect2">
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Main Tasks for Using Single-Table Multi-Tenancy</font></h2>
+<p>The following tasks provide instructions for using single-table multi-tenancy:</p>
+<ul>
+<li>
+<p><a href="#CHDBADCI">Task 1: Prerequisites</a></p>
+</li>
+<li>
+<p><a href="#BABDFFJD">Task 2: Enable Single-Table Multi-Tenancy</a></p>
+</li>
+<li>
+<p><a href="#BABFGJAJ">Task 3: Specify Tenant Discriminator Columns</a></p>
+</li>
+<li>
+<p><a href="#BABHIDCG">Task 4: Perform Operations and Queries</a></p>
+</li>
+<li>
+<p><a href="#CHDIHGID">Task 5: Use Single-Table Multi-Tenancy in an Inheritance Hierarchy</a></p>
+</li>
+</ul>
+<a id="CHDBADCI" name="CHDBADCI"></a><a id="TLADG1127" name="TLADG1127"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task 1: Prerequisites</font></h3>
+<p>To implement and use single-table multi-tenancy, you need:</p>
+<ul>
+<li>
+<p>EclipseLink 2.4 or later.</p>
+<p>Download EclipseLink from <code><a href="http://www.eclipse.org/eclipselink/downloads/">http://www.eclipse.org/eclipselink/downloads/</a></code>.</p>
+</li>
+<li>
+<p>Any compliant Java Database Connectivity (JDBC) database, including Oracle Database, Oracle Database Express Edition (Oracle Database XE), or MySQL. These instructions are based on Oracle Database XE 11g Release 2.</p>
+<p>For the certification matrix, see</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="BABDFFJD" name="BABDFFJD"></a><a id="TLADG262" name="TLADG262"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task 2: Enable Single-Table Multi-Tenancy</font></h3>
+<p>Single-table multi-tenancy can be enabled declaratively using the <code>@Multitenant</code> annotation, in an Object Relational Mapping (ORM) XML file using the <code>&lt;multitenant&gt;</code> element, or by using annotations and XML together.</p>
+<a id="TLADG263" name="TLADG263"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref82" name="sthref82"></a>
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Using the @Multitenant Annotation</font></h4>
+<p>To use the <code>@Multitenant</code> annotation, include it with an <code>@Entity</code> or <code>@MappedSuperclass</code> annotation. For example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+@Entity
+@Table(name=&rdquo;EMP&rdquo;)
+@Multitenant(SINGLE_TABLE)
+public class Employee {
+}
+</pre>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>Single-table is the default multi-tenancy type, so <code>SINGLE_TABLE</code> does not have to be included in <code>@Multitenant</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>The <code>@Table</code> annotation is not required, because the discriminator column is assumed to be on the primary table. However, if the discriminator column is defined on a secondary table, you must identify that table using <code>@SecondaryTable</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</div>
+<!-- class="sect4" -->
+<a id="TLADG264" name="TLADG264"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref83" name="sthref83"></a>
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Using the &lt;multitenant&gt; Element</font></h4>
+<p>To use the <code>&lt;multitenant&gt;</code> element, include the element within an <code>&lt;entity&gt;</code> element. For example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;entity class="model.Employee"&gt;
+   &lt;multitenant type="SINGLE_TABLE"&gt;
+   ...
+   &lt;/multitenant&gt;
+   ...
+&lt;/entity&gt;
+</pre></div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" -->
+<a id="BABFGJAJ" name="BABFGJAJ"></a><a id="TLADG490" name="TLADG490"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task 3: Specify Tenant Discriminator Columns</font></h3>
+<p>Discriminator columns are used together with an associated application context to indicate which rows in a table an application tenant can access.</p>
+<p>Tenant discriminator columns can be specified declaratively using the <code>@TenantDiscriminatorColumn</code> annotation or in an object-relational (ORM) XML file using the <code>&lt;tenant-discriminator-column&gt;</code> element.</p>
+<p>The following characteristics apply to discriminator columns:</p>
+<ul>
+<li>
+<p>Tenant discriminator column(s) must always be used with <code>@Multitenant</code> (or <code>&lt;multitenant&gt;</code> in the ORM XML file). You cannot specify the tenant discriminator column(s) only.</p>
+</li>
+<li>
+<p>The tenant discriminator column is assumed to be on the primary table unless another table is explicitly specified.</p>
+</li>
+<li>
+<p>On persist, the values of tenant discriminator columns are populated from their associated context properties.</p>
+</li>
+<li>
+<p>When a multi-tenant entity is specified, the tenant discriminator column can default. Its default values are:</p>
+<ul>
+<li>
+<p>Name = <code>TENANT_ID</code> (the database column name)</p>
+</li>
+<li>
+<p>Context property = <code>eclipselink.tenant.id</code> (the context property used to populate the database column)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Tenant discriminator columns are application definable. That is, the discriminator column is not tied to a specific column for each shared entity table. You can use <code>TENANT_ID</code>, <code>T_ID</code>, etc.</p>
+</li>
+<li>
+<p>There is no limit on the number of tenant discriminator columns an application can define.</p>
+</li>
+<li>
+<p>Any name can be used for a discriminator column.</p>
+</li>
+<li>
+<p>Generated schemas include specified tenant discriminator columns.</p>
+</li>
+<li>
+<p>Tenant discriminator columns can be mapped or unmapped:</p>
+<ul>
+<li>
+<p>When a tenant discriminator column is mapped, its associated mapping attribute must be marked as read only.</p>
+</li>
+<li>
+<p>Both mapped and unmapped properties are used to form the additional criteria when issuing a SELECT query.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a id="TLADG266" name="TLADG266"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref84" name="sthref84"></a>
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Use the @TenantDiscriminatorColumn Annotation</font></h4>
+<p>To use the <code>@TenantDiscriminatorColumn</code> annotation, include it with <code>@Multitenant</code> annotation on an entity or mapped superclass, and optionally include the <code>name</code> and <code>contextProperty</code> attributes. If you do not specify these attributes, the defaults <code>name = "TENANT-ID"</code> and <code>contextProperty = "eclipselink.tenant-id"</code> are used.</p>
+<p>For example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+@Entity
+@Multitenant(SINGLE_TABLE)
+@TenantDiscriminatorColumn(name = "TENANT", contextProperty = "multitenant.id")
+public class Employee {
+}
+</pre>
+<p>To specify multiple tenant discriminator columns, include multiple <code>@TenantDiscriminatorColumn</code> annotations within the <code>@TenantDiscriminatorColumns</code> annotation, and include the table where the column is located if it is not located on the primary table. For example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+@Entity
+@Table(name = "EMPLOYEE")
+@SecondaryTable(name = "RESPONSIBILITIES")
+@Multitenant(SINGLE_TABLE)
+@TenantDiscriminatorColumns({
+   @TenantDiscriminatorColumn(name = "TENANT_ID", 
+      contextProperty = "employee-tenant.id", length = 20)
+   @TenantDiscriminatorColumn(name = "TENANT_CODE", 
+      contextProperty = "employee-tenant.code", discriminatorType = STRING, 
+      table = "RESPONSIBILITIES")
+  }
+)
+public Employee() {
+   ...
+}
+</pre></div>
+<!-- class="sect4" -->
+<a id="TLADG267" name="TLADG267"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref85" name="sthref85"></a>
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Use the &lt;tenant-discriminator-column&gt; Element</font></h4>
+<p>To use the <code>&lt;tenant-discriminator-column&gt;</code> element, include the element within a <code>&lt;multitenant&gt;</code> element and optionally include the <code>name</code> and <code>context-property</code> attributes. If you do not specify these attributes, the defaults <code>name = "TENANT-ID"</code> and <code>contextProperty = "eclipselink.tenant-id"</code> are used.</p>
+<p>For example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;entity class="model.Employee"&gt;
+   &lt;multitenant&gt;
+      &lt;tenant-discriminator-column name="TENANT"
+         context-property="multitenant.id"/&gt;
+   &lt;/multitenant&gt;
+   ...
+&lt;/entity&gt;
+</pre>
+<p>To specify multiple columns, include additional <code>&lt;tenant-discriminator-column&gt;</code> elements, and include the table where the column is located if it is not located on the primary table. For example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;entity class="model.Employee"&gt;
+   &lt;multitenant type="SINGLE_TABLE"&gt;
+      &lt;tenant-discriminator-column name="TENANT_ID"
+         context-property="employee-tenant.id" length="20"/&gt;
+      &lt;tenant-discriminator-column name="TENANT_CODE"
+         context-property="employee-tenant.id" discriminator-type="STRING"
+         table="RESPONSIBILITIES"/&gt;
+   &lt;/multitenant&gt;
+   &lt;table name="EMPLOYEE"/&gt;
+   &lt;secondary-table name="RESPONSIBILITIES"/&gt;
+   ...
+&lt;/entity&gt;
+</pre></div>
+<!-- class="sect4" -->
+<a id="TLADG268" name="TLADG268"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref86" name="sthref86"></a>
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Map Tenant Discriminator Columns</font></h4>
+<p>Tenant discriminator columns can be mapped to a primary key or to another column. The following example maps the tenant discriminator column to the primary key on the table during DDL generation:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+@Entity
+@Table(name = "ADDRESS")
+@Multitenant
+@TenantDiscriminatorColumn(name = "TENANT", contextProperty = "tenant.id",
+   primaryKey = true)
+public Address() {
+  ...
+}
+</pre>
+<p>The following example uses the ORM XML file to map the tenant discriminator column to a primary key:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;entity class="model.Address"&gt;
+   &lt;multitenant&gt;
+      &lt;tenant-discriminator-column name="TENANT"
+         context-property="multitenant.id" primary-key="true"/&gt;
+   &lt;/multitenant&gt;
+   &lt;table name="ADDRESS"/&gt;
+   ...
+&lt;/entity&gt;
+</pre>
+<p>The following example maps the tenant discriminator column to another column named <code>AGE</code>:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+@Entity
+@Table(name = "Player")
+@Multitenant
+@TenantDiscriminatorColumn(name = "AGE", contextProperty = "tenant.age")
+public Player() {
+  ...
+ 
+  @Basic
+  @Column(name="AGE", insertable="false", updatable="false")
+  public int age;
+}
+</pre>
+<p>The following example uses the ORM XML file to map the tenant discriminator column to another column named <code>AGE</code>:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;entity class="model.Player"&gt;
+  &lt;multitenant&gt;
+    &lt;tenant-discriminator-column name="AGE" context-property="tenant.age"/&gt;
+  &lt;/multitenant&gt;
+  &lt;table name="PLAYER"/&gt;
+  ...
+  &lt;attributes&gt;
+    &lt;basic name="age" insertable="false" updatable="false"&gt;
+      &lt;column name="AGE"/&gt;
+    &lt;/basic&gt;
+    ...
+  &lt;/attributes&gt;
+  ...
+&lt;/entity&gt;
+</pre></div>
+<!-- class="sect4" -->
+<a id="CHDIIAAF" name="CHDIIAAF"></a><a id="TLADG617" name="TLADG617"></a>
+<div class="sect4">
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Define Persistence Unit and Entity Mappings Defaults</font></h4>
+<p>In addition to configuring discriminator columns at the entity and mapped superclass levels, you can also configure them at the <code>persistence-unit-defaults</code> and <code>entity-mappings</code> levels to provide defaults. Defining the metadata at the these levels follows similar JPA metadata defaulting and overriding rules.</p>
+<p>Specify default tenant discriminator column metadata at the <code>persistence-unit-defaults</code> level in the ORM XML file. When defined at this level, the defaults apply to all entities of the persistence unit that have specified a multi-tenant type of <code>SINGLE_TABLE</code> minus those that specify their own tenant discriminator metadata. For example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;persistence-unit-metadata&gt;
+  &lt;persistence-unit-defaults&gt;
+    &lt;tenant-discriminator-column name="TENANT_ID" context-property="tenant.id"/&gt;
+  &lt;/persistence-unit-defaults&gt;
+&lt;/persistence-unit-metadata&gt;
+</pre>
+<p>You can also specify tenant discriminator column metadata at the <code>entity-mappings</code> level in the ORM XML file. A setting at this level overrides a persistence unit default and applies to all entities with a multi-tenant type of <code>SINGLE_TABLE</code> of the mapping file, minus those that specify their own tenant discriminator metadata. For example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;entity-mappings&gt;
+  ...
+      ...
+      &lt;tenant-discriminator-column name="TENANT_ID" context-property="tenant.id"/&gt;
+      ...
+&lt;/entity-mappings&gt;
+</pre></div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" -->
+<a id="TLADG620" name="TLADG620"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref87" name="sthref87"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Configure Context Properties and Caching Scope</font></h3>
+<p>Runtime context properties are used in conjunction with the multi-tenancy configuration on an entity (or mapped superclass) to implement the multi-tenancy strategy. For example, the tenant ID assigned to a tenant discriminator column for an entity is used at runtime (via an entity manager) to restrict access to data, based on that tenant's ownership of (or access to) the rows and tables of the database.</p>
+<p>At runtime, multi-tenancy properties can be specified in a persistence unit definition or passed to a create entity manager factory call.</p>
+<p>The order of precedence for tenant discriminator column properties is as follows:</p>
+<ol>
+<li>
+<p><code>EntityManager</code></p>
+</li>
+<li>
+<p><code>EntityManagerFactory</code></p>
+</li>
+<li>
+<p>Application context (when in a Jakarta EE container)</p>
+</li>
+</ol>
+<p>For example, to set the configuration on a persistence unit in <code>persistence.xml</code>:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;persistence-unit name="multitenant"&gt;
+   ...
+   &lt;properties&gt;
+      &lt;property name="tenant.id" value="707"/&gt;
+      ...
+   &lt;/properties&gt;
+&lt;/persistence-unit&gt;
+</pre>
+<p>Alternatively, to set the properties programmatically:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+HashMap properties = new HashMap();
+properties.put("tenant.id", "707");
+...     
+EntityManager em = Persistence.createEntityManagerFactory("multi-tenant", 
+      properties).createEntityManager();
+</pre>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>Swapping tenant IDs during a live <code>EntityManager</code> is not allowed.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<a id="CHDBHBIG" name="CHDBHBIG"></a><a id="TLADG621" name="TLADG621"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Configure a Shared Entity Manager</font></h4>
+<p>By default, tenants share the entity manager factory. A single application instance with a shared <code>EntityManagerFactory</code> for a persistence unit can be responsible for handling requests from multiple tenants.</p>
+<p>The following example shows a shared entity manager factory configuration:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+EntityManager em = createEntityManager(MULTI_TENANT_PU);
+em.getTransaction().begin();
+em.setProperty(EntityManagerProperties.MULTITENANT_PROPERTY_DEFAULT, "my_id");
+</pre>
+<p>When using a shared entity manager factory, the L2 cache is by default not shared, and therefore multi-tenant entities have an <code>ISOLATED</code> cache setting.</p>
+<p>To share the cache, set the <code>eclipselink.multitenant.tenants-share-cache</code> property to <code>true</code>. This results in multi-tenant entities having a PROTECTED cache setting.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p><font face="arial, helvetica, sans-serif"><strong>Caution:</strong></font></p>
+<p>Queries that use the cache may return data from other tenants when using the <code>PROTECTED</code> setting.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</div>
+<!-- class="sect4" -->
+<a id="TLADG622" name="TLADG622"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref88" name="sthref88"></a>
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Configure a Non-Shared Entity Manager</font></h4>
+<p>To create an entity manager factory that is not shared, set the <code>eclipselink.multitenant.tenants-share-emf</code> property to <code>false</code>.</p>
+<p>When the entity manager factory is not shared, you must use the <code>eclipselink.session-name</code> property to provide a unique session name, as shown in the following example. This ensures that a unique server session and cache are provided for each tenant. This provides full caching capabilities. For example,</p>
+<pre xml:space="preserve" class="oac_no_warn">
+HashMap properties = new HashMap();
+properties.put("tenant.id", "707");
+properties.put("eclipselink.session-name", "multi-tenant-707");
+...     
+EntityManager em = Persistence.createEntityManagerFactory("multitenant", 
+                      properties).createEntityManager();
+</pre>
+<p>Another example:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+HashMap properties = new HashMap();
+properties.put(PersistenceUnitProperties.MULTITENANT_SHARED_EMF, "false");
+properties.put(PersistenceUnitProperties.SESSION_NAME, "non-shared-emf-for-this-emp");
+properties.put(PersistenceUnitProperties.MULTITENANT_PROPERTY_DEFAULT, "this-emp");
+...     
+EntityManager em = Persistence.createEntityManagerFactory("multi-tenant-pu", properties).createEntityManager();
+</pre>
+<p>An example in the persistence unit definition:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;persistence-unit name="multi-tenant-pu"&gt;
+  ...
+  &lt;properties&gt;
+    &lt;property name="eclipselink.multitenant.tenants-share-emf" value="false"/&gt;
+    &lt;property name="eclipselink.session-name" 
+         value="non-shared-emf-for-this-emp"/&gt;
+    &lt;property name="eclipselink.tenant-id" value="this-emp"/&gt;
+    ...
+  &lt;/properties&gt;
+&lt;/persistence-unit&gt;
+</pre></div>
+<!-- class="sect4" -->
+<a id="TLADG623" name="TLADG623"></a>
+<div class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref89" name="sthref89"></a>
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Configure an Entity Manager</font></h4>
+<p>When configuring properties at the level of the entity manager, you must specify the caching strategies, because the same server session can be used for each tenant. For example, you can set up an isolation level (L1 cache) to ensure no shared tenant information exists in the L2 cache. These settings are set when creating the entity manager factory.</p>
+<pre xml:space="preserve" class="oac_no_warn">
+HashMap tenantProperties = new HashMap();
+properties.put("tenant.id", "707");
+ 
+HashMap cacheProperties = new HashMap();
+properties.put("eclipselink.cache.shared.Employee", "false");
+properties.put("eclipselink.cache.size.Address", "10");
+properties.put("eclipselink.cache.type.Contract", "NONE");
+...     
+EntityManager em = Persistence.createEntityManagerFactory("multitenant", 
+                      cacheProperties).createEntityManager(tenantProperties);
+...
+</pre></div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" -->
+<a id="BABHIDCG" name="BABHIDCG"></a><a id="TLADG270" name="TLADG270"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task 4: Perform Operations and Queries</font></h3>
+<p>The tenant discriminator column is used at runtime through entity manager operations and querying. The tenant discriminator column and value are supported through the following entity manager operations:</p>
+<ul>
+<li>
+<p><code>persist()</code></p>
+</li>
+<li>
+<p><code>find()</code></p>
+</li>
+<li>
+<p><code>refresh()</code></p>
+</li>
+</ul>
+<p>The tenant discriminator column and value are supported through the following queries:</p>
+<ul>
+<li>
+<p>Named queries</p>
+</li>
+<li>
+<p>Update all</p>
+</li>
+<li>
+<p>Delete all</p>
+</li>
+</ul>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>Multi-tenancy is not supported through named native queries. To use named native queries in a multi-tenant environment, manually handle any multi-tenancy issues directly in the query. In general, it is best to avoid named native queries in a multi-tenant environment.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</div>
+<!-- class="sect3" -->
+<a id="CHDIHGID" name="CHDIHGID"></a><a id="TLADG624" name="TLADG624"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Task 5: Use Single-Table Multi-Tenancy in an Inheritance Hierarchy</font></h3>
+<p>Inheritance strategies are configured by specifying the inheritance type (<code>@jakarta.persistence.Inheritance</code>). Single-table multi-tenancy can be used in an inheritance hierarchy, as follows:</p>
+<ul>
+<li>
+<p>Multi-tenant metadata can be applied only at the root level of the inheritance hierarchy when using a <code>SINGLE_TABLE</code> or <code>JOINED</code> inheritance strategy.</p>
+</li>
+<li>
+<p>You can also specify multi-tenant metadata within a <code>TABLE_PER_CLASS</code> inheritance hierarchy. In this case, every entity has its own table, with all its mapping data (which is not the case with <code>SINGLE_TABLE</code> or <code>JOINED</code> strategies). Consequently, in the <code>TABLE_PER_CLASS</code> strategy, some entities of the hierarchy may be multi-tenant, while others may not be. The other inheritance strategies can only specify multi-tenancy at the root level, because you cannot isolate an entity to a single table to build only its type.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="multitenancy001.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="multitenancy003.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+<font size="-2">Copyright&nbsp;&copy;&nbsp;2014,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+</td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Search" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini"></span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2014 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --></body>
+</html>

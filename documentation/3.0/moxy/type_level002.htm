@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Setting Up Namespace Information | EclipseLink 3.0 EclipseLink MOXy</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.22 Build 1" />
+<meta name="date" content="2014-06-10T10:25:32Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Setting Up Namespace Information" />
+<meta name="relnum" content="Release 3.0" />
+<meta name="partnum" content="" />
+<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="type_level001.htm" title="Previous" type="text/html" />
+<link rel="next" href="type_level003.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:1hjujor5_fg', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><div class="booktitle">Developing JAXB Applications Using EclipseLink MOXy, 
+<b>Release 3.0</b><br /></font></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+</td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Search" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini"></span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_moxy.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="type_level001.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="type_level003.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header --><a id="CIHBJDDI" name="CIHBJDDI"></a><a id="TLJAX195" name="TLJAX195"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Setting Up Namespace Information</font></h1>
+<p>Most XML documents are qualified with a namespace. You can namespace-qualify elements of your Java class at the following levels:</p>
+<ul>
+<li>
+<p><a href="#BABJBJJH">Qualifying at the Package Level</a></p>
+</li>
+<li>
+<p><a href="#BABJBFHD">Qualifying at the Type Level</a></p>
+</li>
+<li>
+<p><a href="#BABFDCJH">Qualifying at the Field/Property Level</a></p>
+</li>
+</ul>
+<p>In most cases, package-level annotation is sufficient. You can use the other levels to customize your document. Use the <code>@XmlSchema</code> annotation to specify the namespace.</p>
+<a id="BABJBJJH" name="BABJBJJH"></a><a id="TLJAX196" name="TLJAX196"></a>
+<div class="sect2">
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Qualifying at the Package Level</font></h2>
+<p>Use the <code>@XmlSchema</code> annotation on the package to set a default namespace and specify that all elements in the package are qualified with the namespace. This information is specified in a special Java source file, <code>package-info.java</code>.</p>
+<div class="example"><a id="CIHBHJDB" name="CIHBHJDB"></a><a id="TLJAX197" name="TLJAX197"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 3-6 Using Annotations</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+<strong>@XmlSchema</strong>(
+   namespace="http://www.example.org/package",
+   elementFormDefault=XmlNsForm.QUALIFIED)
+package example;
+ 
+import jakarta.xml.bind.annotation.XmlNsForm;
+import jakarta.xml.bind.annotation.XmlSchema;
+ 
+</pre></div>
+<!-- class="example" -->
+<p>This can be defined in EclipseLink XML Bindings as follows:</p>
+<div class="example"><a id="CIHIHBGE" name="CIHIHBGE"></a><a id="TLJAX198" name="TLJAX198"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 3-7 Using OXM Metadata</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xml-bindings xmlns="http://www.eclipse.org/eclipselink/xsds/persistence/oxm"&gt;
+    &lt;<strong>xml-schema</strong>
+        element-form-default="QUALIFIED"
+        namespace="http://www.example.org/package"&gt;
+    &lt;/xml-schema&gt;
+ 
+    &lt;java-types&gt;
+        &lt;java-type name="Customer"&gt;
+        ...
+ 
+&lt;/xml-bindings&gt;
+ 
+</pre></div>
+<!-- class="example" -->
+<p>Using a simple <strong>Customer</strong> class, <a href="#CIHBHJDB">Example 3-6</a> and <a href="#CIHIHBGE">Example 3-7</a> will produce the following XML:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;customer xmlns="http://www.example.org/package"&gt;
+   &lt;name&gt;Jane Doe&lt;/name&gt;
+   &lt;account&gt;36328721&lt;/account&gt;
+&lt;/customer&gt;
+ 
+</pre>
+<p>All elements are qualified with the <strong>http://www.example.org/package</strong> namespace.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABJBFHD" name="BABJBFHD"></a><a id="TLJAX199" name="TLJAX199"></a>
+<div class="sect2">
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Qualifying at the Type Level</font></h2>
+<p>Type level annotations will override the package level namespace.</p>
+<div class="example"><a id="TLJAX200" name="TLJAX200"></a><a id="sthref60" name="sthref60"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 3-8 Using Annotations</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package example;
+ 
+@XmlRootElement
+<strong>@XmlType(namespace="http://www.example.org/type")</strong>
+public class Customer {
+   private String name;
+ 
+   private String account;
+ 
+   ...
+}
+ 
+</pre></div>
+<!-- class="example" -->
+<p>This can be defined in EclipseLink XML Bindings as follows:</p>
+<div class="example"><a id="TLJAX201" name="TLJAX201"></a><a id="sthref61" name="sthref61"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 3-9 Using XML Bindings File</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xml-bindings xmlns="http://www.eclipse.org/eclipselink/xsds/persistence/oxm"&gt;
+    &lt;xml-schema
+        element-form-default="QUALIFIED"
+        namespace="http://www.example.org/package"&gt;
+    &lt;/xml-schema&gt;
+ 
+    &lt;java-types&gt;
+        &lt;java-type name="Customer"&gt;
+            <strong>&lt;xml-type namespace="http://www.example.org/type" /&gt;</strong>
+            &lt;java-attributes&gt;
+                &lt;xml-element java-attribute="name" /&gt;
+                &lt;xml-element java-attribute="account" /&gt;
+            &lt;/java-attributes&gt;
+        &lt;/java-type&gt;
+    &lt;/java-types&gt;
+&lt;/xml-bindings&gt;
+ 
+</pre></div>
+<!-- class="example" -->
+<p>This will produce the following XML:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;custom xmlns="http://www.example.org/package" xmlns:ns0="http://www.example.org/type"&gt;
+   &lt;ns0:name&gt;Bob&lt;/ns0:name&gt;
+   &lt;ns0:account&gt;1928712&lt;/ns0:account&gt;
+&lt;/custom&gt;
+ 
+</pre>
+<p>Elements inside the <strong>Customer</strong> type are qualified with the <strong>http://www.example.org/type</strong> namespace.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABFDCJH" name="BABFDCJH"></a><a id="TLJAX202" name="TLJAX202"></a>
+<div class="sect2">
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Qualifying at the Field/Property Level</font></h2>
+<p>You can override the package or type namespaces at the property/field level. All attribute and element annotations accept the <strong>namespace</strong> parameter.</p>
+<div class="example"><a id="TLJAX203" name="TLJAX203"></a><a id="sthref62" name="sthref62"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 3-10 Overriding the Namespace</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package example;
+ 
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
+<strong>@XmlType(namespace="http://www.example.org/type")</strong>
+public class Customer {
+   private String name;
+ 
+   <strong>@XmlElement(namespace="http://www.example.org/property")</strong>
+   private String account;
+ 
+   ...
+}
+ 
+</pre></div>
+<!-- class="example" -->
+<p>This can be defined in EclipseLink XML Bindings as follows:</p>
+<div class="example"><a id="TLJAX204" name="TLJAX204"></a><a id="sthref63" name="sthref63"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 3-11 Sample Bindings File</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xml-bindings xmlns="http://www.eclipse.org/eclipselink/xsds/persistence/oxm"&gt;
+    &lt;xml-schema
+        element-form-default="QUALIFIED"
+        namespace="http://www.example.org/package"&gt;
+    &lt;/xml-schema&gt;
+ 
+    &lt;java-types&gt;
+        &lt;java-type name="Customer"&gt;
+            <strong>&lt;xml-type namespace="http://www.example.org/type" /&gt;</strong>
+            &lt;java-attributes&gt;
+                &lt;xml-element java-attribute="name" /&gt;
+                <strong>&lt;xml-element java-attribute="account" namespace="http://www.example.org/property" /&gt;</strong>
+            &lt;/java-attributes&gt;
+        &lt;/java-type&gt;
+    &lt;/java-types&gt;
+&lt;/xml-bindings&gt;
+ 
+</pre></div>
+<!-- class="example" -->
+<p>This will produce the following XML:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;custom xmlns="http://www.example.org/package" xmlns:ns1="http://www.example.org/property"
+   xmlns:ns0="http://www.example.org/type"&gt;
+   &lt;ns0:name&gt;Bob&lt;/ns0:name&gt;
+   &lt;ns1:account&gt;1928712&lt;/ns1:account&gt;
+&lt;/custom&gt;
+ 
+</pre>
+<p>Only the <strong>account</strong> element is qualified with the <strong>http://www.example.org/property</strong> namespace.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="type_level001.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="type_level003.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+ 
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+</td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Search" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini"></span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_moxy.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2013 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --></body>
+</html>

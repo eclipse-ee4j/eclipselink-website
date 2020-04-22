@@ -8,7 +8,7 @@
 	include($App->getProjectCommon());
 
 /*******************************************************************************
- * Copyright (c) 2009-2017 Eclipse Foundation and others.
+ * Copyright (c) 2009-2020 Eclipse Foundation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -35,7 +35,8 @@
 			<ul>
 				<li><form action="../"><label for="ReleaseNotes">Release Notes</label>
 <select name="ReleaseNotes">
-    <option selected="selected" value="http://www.eclipse.org/eclipselink/releases/2.7.php">2.7</option>
+    <option selected="selected" value="http://www.eclipse.org/eclipselink/releases/3.0.php">3.0</option>
+    <option value="http://www.eclipse.org/eclipselink/releases/2.7.php">2.7</option>
     <option value="http://www.eclipse.org/eclipselink/releases/2.6.php">2.6</option>
     <option value="http://www.eclipse.org/eclipselink/releases/2.5.php">2.5</option>
     <option value="http://www.eclipse.org/eclipselink/releases/2.4.php">2.4</option>
@@ -45,7 +46,8 @@
 				</li>
 				<li><form action="../"><label for="JavaDocs">Java Docs</label>
 <select name="JavaDocs">
-    <option selected="selected" value="http://www.eclipse.org/eclipselink/api/2.7/index.html">2.7</option>
+    <option selected="selected" value="http://www.eclipse.org/eclipselink/api/3.0/index.html">3.0</option>
+    <option value="http://www.eclipse.org/eclipselink/api/2.7/index.html">2.7</option>
     <option value="http://www.eclipse.org/eclipselink/api/2.6/index.html">2.6</option>
     <option value="http://www.eclipse.org/eclipselink/api/2.5/index.html">2.5</option>
     <option value="http://www.eclipse.org/eclipselink/api/2.4/index.html">2.4</option>
