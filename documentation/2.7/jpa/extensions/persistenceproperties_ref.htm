@@ -364,6 +364,9 @@ Release 2.7</div></td>
 <p><code><a href="#CACBICGG2">jdbc.exclusive-connection.mode</a></code></p>
 </li>
 <li>
+<p><code><a href="#CIHBHCIE">jdbc.naming_into_indexed</a></code></p>
+</li>
+<li>
 <p><code><a href="#CIHEACBE">jdbc.native-sql</a></code></p>
 </li>
 <li>
@@ -533,6 +536,9 @@ Release 2.7</div></td>
 </li>
 <li>
 <p><code><a href="#CACBICGG2">jdbc.exclusive-connection.mode</a></code></p>
+</li>
+<li>
+<p><code><a href="#CIHBHCIE">jdbc.naming_into_indexed</a></code></p>
 </li>
 <li>
 <p><code><a href="#CIHEACBE">jdbc.native-sql</a></code></p>
@@ -4364,6 +4370,84 @@ propertiesMap.put(PersistenceUnitProperties.EXCLUSIVE_CONNECTION_MODE, "Always")
 <!-- class="refsect1" -->
 <a id="CIHEACBE" name="CIHEACBE"></a><a id="TLJPA933" name="TLJPA933"></a>
 <hr />
+<!--jdbc.naming_into_indexed BEGIN-->
+<!-- class="refsect1" -->
+<a id="CIHBHCIE" name="CIHBHCIE"></a><a id="TLJPA939" name="TLJPA939"></a>
+<hr />
+<p class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">jdbc.naming_into_indexed</font></h2>
+<p>Use the <code>eclipselink.jdbc.naming_into_indexed</code> property defines if stored procedure parameters passed by name
+should be transformed into positional/index based passing if property value will be <code>true</code>.</p>
+<p>For stored procedure:</p>
+<p><code>CREATE PROCEDURE test_stored_proc1( IN param1 TEXT, IN param2 INTEGER )</code></p>
+<p>following Java call</p>
+<p><code>query.registerStoredProcedureParameter( "param1",Integer.class,ParameterMode.IN );</code></p>
+<p><code>query.registerStoredProcedureParameter( "param2",String.class,ParameterMode.IN );</code></p>
+<p>will be transformed into following e.g.</p>
+<p><code>{call test_stored_proc1(10, 'abcd')}</code></p>
+<p>instead of default</p>
+<p><code>{call test_stored_proc1(param1 => 10, param2 => 'abcd')}</code></p>
+<p>It's important to register parameters in Java in a same order as they specified in the stored procedure.</p>
+<p>This code was added there to ensure backward compatibility with older EclipseLink releases.</p>
+</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>Normally, <code>naming_into_indexed</code> is not required. It's usually required when JDBC driver doesn't support parameters passed to stored proceures by name.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<a id="sthref981" name="sthref981"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#CIHFHHGF">Table 5-51</a> describes this persistence property's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA940" name="TLJPA940"></a><a id="sthref982" name="sthref982"></a><a id="CIHFHHGF" name="CIHFHHGF"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 5-51 Valid Values for jdbc.naming_into_indexed</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for jdbc.naming_into_indexed" summary="This table describes the valid values for the jdbc.naming_into_indexed persistence property." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t56"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t56"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t56" headers="r1c1-t56">
+<p><code>true</code></p>
+</td>
+<td align="left" headers="r2c1-t56 r1c2-t56">
+<p>Transform named parameters into positional/index based.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t56" headers="r1c1-t56">
+<p><code>false</code></p>
+</td>
+<td align="left" headers="r3c1-t56 r1c2-t56">
+<p>(Default) Do not transform.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref983" name="sthref983"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CHDJHBDG">Example 5-55</a> shows how to use this property in the <code>persistence.xml</code> file.</p>
+<div class="example"><a id="CHDJHBDG" name="CHDJHBDG"></a><a id="TLJPA54144" name="TLJPA54144"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 5-55 Using jdbc.naming_into_indexed in persistence.xml</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;property name="eclipselink.jpa.naming_into_indexed" value="true"/&gt;
+</pre></div>
+<!--jdbc.naming_into_indexed END-->
 <div class="refsect1">
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">jdbc.native-sql</font></h2>
 <p>Use the <code>eclipselink.jdbc.native-sql</code> property to specify if EclipseLink uses generic SLQ or includes platform-specific (that is, "native") SQL statements.</p>
