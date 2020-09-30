@@ -12,6 +12,54 @@
         </description>
     </section>
 
+    <section class="main" name="3.0.0-M2 Certification Request">
+        <description>
+            <ul>
+                <li>
+                    Organization Name (“Organization”) and, if applicable, URL:
+                    Eclipse Foundation</li>
+                <li>
+                    Product Name, Version and download URL (if applicable):
+                    <a href="https://www.eclipse.org/eclipselink/downloads/ri.php">EclipseLink 3.0.0-M2</a>
+                </li>
+                <li>
+                    Specification Name, Version and download URL:
+                    <a href="https://jakarta.ee/specifications/persistence/3.0/">Jakarta Persistence 3.0</a>
+                </li>
+                <li>
+                    TCK Version, digital SHA-256 fingerprint and download URL:
+                    <a href="https://download.eclipse.org/jakartaee/persistence/3.0/eclipse-persistence-tck-3.0.0.zip">Jakarta Persistence TCK 3.0.0</a>, SHA-256: cf3edd0beb435ae3b7a443ddb097e5434e7d3530ea47d6d003ffa53eb988bc7f</li>
+                <li>
+                    Public URL of TCK Results Summary:
+                    <a href="https://www.eclipse.org/eclipselink/releases/tck-summary.php">TCK results summary</a>
+                </li>
+                <li>
+                    Any Additional Specification Certification Requirements:
+                    None</li>
+                <li>
+                    Java runtime used to run the implementation:
+                    Oracle JDK 1.8.0_202</li>
+                <li>
+                    Summary of the information for the certification environment, operating system, cloud, …:
+                    Apache Derby 10.14.2.0, Linux</li>
+                <li>
+                    I acknowledge that the Organization I represent accepts the terms of the <a href="https://www.eclipse.org/legal/tck.php">EFTL</a>.</li>
+                <li>
+                    I attest that all TCK requirements have been met, including any compatibility rules.</li>
+            </ul>
+
+            <p>Test results:</p>
+
+            <pre>
+        <code>***                        TCK results summary                                  ***
+        [javatest.batch] Number of Tests Passed      = 2055
+        [javatest.batch] Number of Tests Failed      = 0
+        [javatest.batch] Number of Tests with Errors = 0</code>
+            </pre>
+
+        </description>
+    </section>
+
     <section class="main" name="2.7.4 Certification Request">
         <description>
             <ul>
@@ -59,4 +107,5 @@
 
         </description>
     </section>
+
 </sections>

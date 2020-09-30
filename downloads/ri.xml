@@ -14,6 +14,29 @@
 	</section>
 http://download.eclipse.org/rt/eclipselink/ri/eclipselink-jpa2.1ri-v20130425-368d603.zip 
 
+	<section class="main" name="Jakarta Persistence API 3.0">
+		<description>
+			<p>
+				The
+				<a href="/eclipselink/jpa.php">EclipseLink JPA</a>
+				component in EclipseLink provides the compatible implementation of
+				Jakarta Persistence 3.0.
+			</p>
+			<p>
+				<b>Downloads:</b>
+				<ul>
+
+					<li>
+						<a href="https://jakarta.oss.sonatype.org/service/local/repositories/staging/content/org/eclipse/persistence/org.eclipse.persistence.distribution/3.0.0-M2/org.eclipse.persistence.distribution-3.0.0-M2.zip">
+							EclipseLink 3.0.0-M2 - Full EclipseLink build, including the Jakarta Persistence 3.0 CI (<a href="../releases/tck-summary.php">TCK Summary</a>).
+                        </a>
+					</li>
+
+				</ul>
+			</p>
+		</description>
+	</section>
+
 	<section class="main" name="Java Persistence API 2.2 (JSR 338)">
 		<description>
 			<p>
