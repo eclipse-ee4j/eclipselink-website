@@ -28,7 +28,7 @@
                 </li>
                 <li>
                     TCK Version, digital SHA-256 fingerprint and download URL:
-                    <a href="https://download.eclipse.org/jakartaee/persistence/3.0/eclipse-persistence-tck-3.0.0.zip">Jakarta Persistence TCK 3.0.0</a>, SHA-256: b08c8887f00306f8bb7ebe54c4c810f3452519f5395733637ccc639b5081aebf</li>
+                    <a href="https://download.eclipse.org/jakartaee/persistence/3.0/jakarta-persistence-tck-3.0.0.zip">Jakarta Persistence TCK 3.0.0</a>, SHA-256: b08c8887f00306f8bb7ebe54c4c810f3452519f5395733637ccc639b5081aebf</li>
                 <li>
                     Public URL of TCK Results Summary:
                     <a href="https://www.eclipse.org/eclipselink/releases/tck-summary.php">TCK results summary</a>
