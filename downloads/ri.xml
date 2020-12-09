@@ -27,8 +27,8 @@ http://download.eclipse.org/rt/eclipselink/ri/eclipselink-jpa2.1ri-v20130425-368
 				<ul>
 
 					<li>
-						<a href="https://jakarta.oss.sonatype.org/service/local/repositories/staging/content/org/eclipse/persistence/org.eclipse.persistence.distribution/3.0.0-M2/org.eclipse.persistence.distribution-3.0.0-M2.zip">
-							EclipseLink 3.0.0-M2 - Full EclipseLink build, including the Jakarta Persistence 3.0 CI (<a href="../releases/tck-summary.php">TCK Summary</a>).
+						<a href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/3.0.0/eclipselink-3.0.0.v20201208-87e9d1437d.zip">
+							EclipseLink 3.0.0 - Full EclipseLink build, including the Jakarta Persistence 3.0 CI (<a href="../releases/tck-summary.php">TCK Summary</a>).
                         </a>
 					</li>
 

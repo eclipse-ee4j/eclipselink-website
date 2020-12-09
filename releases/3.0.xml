@@ -4,27 +4,15 @@
     <section class="title">
         <description>
             <h1>EclipseLink 3.0</h1>
-            <p> The primary focus of the EclipseLink 3.0 release is stability, Java EE 8 integration, and JPA-RS.</p>
+            <p> The primary focus of the EclipseLink 3.0 release is switch over to new `jakarta` package namespace and support for Jakarta EE 9 APIs.</p>
             <p>
                 Main features and changes include:
                 <ul>
                     <li>
-                        <a href="https://bugs.eclipse.org/bugs/attachment.cgi?id=241506">Bean Validation support in MOXy</a>
+                        <a href="https://jakarta.ee/specifications/platform/9/">Jakarta EE Platform 9 support</a>
                     </li>
                     <li>
-                        <a href="https://wiki.eclipse.org/EclipseLink/DesignDocs/405161">Java API for JSON Processing (JSR-353) support in MOXy</a>
-                    </li>
-                    <li>
-                        <a href="https://wiki.eclipse.org/EclipseLink/DesignDocs/JPARS2.0">JPA-RS Enhancements (Pagination, Options, Versions, ...)</a>
-                    </li>
-                    <li>
-                        <a href="https://wiki.eclipse.org/EclipseLink/DesignDocs/459464">Redesign of type property in JSON processing</a>
-                    </li>
-                    <li>
-                        <a href="https://wiki.eclipse.org/EclipseLink/DesignDocs/406993">Pluggable Serializers</a>
-                    </li>
-                    <li>
-                        <a href="https://wiki.eclipse.org/EclipseLink/DesignDocs/282074">JGroups Support</a>
+                        <a href="https://github.com/eclipse-ee4j/eclipselink/pull/740">Java 8, 11 support</a>
                     </li>
                 </ul>
             </p>
@@ -42,35 +30,7 @@
                         
             <ul>
                 <li>
-                    Behavior of @XmlID and @XmlValue annotations has been updated to be JAXB 2.2 RI compatible.
-                    Fields annotated with @XmlID must be of type String, classes which contain field with @XmlValue annotation must not extend other type than java.lang.Object.
-                    To provide backward compatibility with EclipseLink 2.5.0, annotations @XmlIDExtension and @XmlValueExtension were introduced.
-                </li>
-                <li>
-                    Annotations @XmlElementNillable and @XmlNullPolicy are supported in both ElementType.TYPE and ElementType.PACKAGE targets, to enable configuration of @XmlElement 
-                    nillable parameter and runtime null policy at package level.
-                </li>
-            </ul>
-        </description>
-    </section>
-
-    <section class="main" name=" Known Issues" >
-        <description>
-            <p>The following are known issues and changes that have been identified as potentially affecting users of EclipseLink 3.0.</p>
-            <ul>
-                <li>
-                    <p>
-                        When running EclipseLink 3.0 in Glassfish 4.0, you must specify a valid datasource in the persistence.xml through either the jta-data-source or non-jta-data-source tags.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Java hotspot compiler may crash when compiling
-                        org.eclipse.persistence.internal.sessions.CommitManager::commitChangedObjectsForClassWithChangeSet
-                        As a workaround, execute java with 
-                        -XX:CompileCommand=exclude,org/eclipse/persistence/internal/sessions/CommitManager,commitChangedObjectsForClassWithChangeSet
-                        command line option for JIT compiler. More information can be found at: https://bugs.eclipse.org/bugs/show_bug.cgi?id=461322 
-                    </p>
+                    Thread dead-lock diagnostic features
                 </li>
             </ul>
         </description>
@@ -88,6 +48,15 @@
                 <li>
                     <a href="https://jakarta.ee/specifications/xml-binding/3.0/">Jakarta XML Binding 3.0</a>
                 </li>
+            </ul>
+        </description>
+    </section>
+
+    <section class="main" name=" Support (non-certified)">
+        <description>
+            <p>EclipseLink also offers support (non-certified) for:
+            </p>
+            <ul>
                 <li>
                     Service Data Objects (SDO) 2.1.1 -
                     <a href="http://jcp.org/en/jsr/detail?id=235">JSR 235</a>
@@ -102,7 +71,13 @@
     <section class="main" name=" Deprecated Functionality">
         <description>
             <p>
-                None.
+                CORBA and RMI support
+            </p>
+            <p>
+                Service Data Objects (SDO)
+            </p>
+            <p>
+                DB servers and Application servers not being supported by their corresponding vendors from August 01, 2021
             </p>
         </description>
     </section>
