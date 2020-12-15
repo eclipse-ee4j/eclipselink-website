@@ -58,7 +58,8 @@
 				<li>
 <form action="../"><label for="solutions">Installation and Configuration</label>
   <select name="Installation">
-    <option value="http://www.eclipse.org/eclipselink/documentation/2.7/solutions/install.htm" selected="selected"> 2.7 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/3.0/solutions/install.htm" selected="selected"> 3.0 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.7/solutions/install.htm"> 2.7 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.6/solutions/install.htm"> 2.6 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.5/solutions/install.htm"> 2.5 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.4/solutions/install.htm"> 2.4 </option>
@@ -77,7 +78,8 @@
 				<li>
 <form action="../"><label for="Concepts">Understanding EclipseLink (Concepts Guide)</label>
   <select name="Concepts">
-    <option value="http://www.eclipse.org/eclipselink/documentation/2.7/concepts/toc.htm" selected="selected"> 2.7 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/3.0/concepts/toc.htm" selected="selected"> 3.0 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.7/concepts/toc.htm"> 2.7 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.6/concepts/toc.htm"> 2.6 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.5/concepts/toc.htm"> 2.5 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.4/concepts/toc.htm"> 2.4 </option>
@@ -89,7 +91,8 @@
 				<li>
 <form action="../"><label for="solutions">EclipseLink Solutions Guide</label>
   <select name="Solutions">
-    <option value="http://www.eclipse.org/eclipselink/documentation/2.7/solutions/toc.htm" selected="selected"> 2.7 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/3.0/solutions/toc.htm" selected="selected"> 3.0 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.7/solutions/toc.htm"> 2.7 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.6/solutions/toc.htm"> 2.6 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.5/solutions/toc.htm"> 2.5 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.4/solutions/toc.htm"> 2.4 </option>
@@ -101,7 +104,8 @@
 				<li>
 <form action="../"><label for="solutions">EclipseLink JPA Extensions Reference</label>
   <select name="JPA">
-    <option value="http://www.eclipse.org/eclipselink/documentation/2.7/jpa/extensions/toc.htm" selected="selected"> 2.7 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/3.0/jpa/extensions/toc.htm" selected="selected"> 3.0 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.7/jpa/extensions/toc.htm"> 2.7 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.6/jpa/extensions/toc.htm"> 2.6 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.5/jpa/extensions/toc.htm"> 2.5 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.4/jpa/extensions/toc.htm"> 2.4 </option>
@@ -113,7 +117,8 @@
 				<li>
 <form action="../"><label for="solutions">Developing JAXB Applications Using EclipseLink MOXy</label>
   <select name="MOXy">
-    <option value="http://www.eclipse.org/eclipselink/documentation/2.7/moxy/toc.htm" selected="selected"> 2.7 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/3.0/moxy/toc.htm" selected="selected"> 3.0 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.7/moxy/toc.htm"> 2.7 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.6/moxy/toc.htm"> 2.6 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.5/moxy/toc.htm"> 2.5 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.4/moxy/toc.htm"> 2.4 </option>
@@ -125,7 +130,8 @@
 				<li>
 <form action="../"><label for="solutions">EclipseLink NoSQL</label>
   <select name="nosql">
-    <option value="2.7/concepts/nosql.htm" selected="selected"> 2.7 </option>
+    <option value="3.0/concepts/nosql.htm" selected="selected"> 3.0 </option>
+    <option value="2.7/concepts/nosql.htm"> 2.7 </option>
     <option value="2.6/concepts/nosql.htm"> 2.6 </option>
     <option value="2.5/concepts/nosql.htm"> 2.5 </option>
     <option value="2.4/jpa/extensions/a_nosql.htm"> 2.4 </option>
@@ -137,7 +143,8 @@
 				<li>
 <form action="../"><label for="solutions">Developing Persistence Architectures Using EclipseLink Database Web Services</label>
   <select name="dbws">
-    <option value="http://www.eclipse.org/eclipselink/documentation/2.7/dbws/toc.htm" selected="selected"> 2.7 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/3.0/dbws/toc.htm" selected="selected"> 3.0 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/2.7/dbws/toc.htm"> 2.7 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.6/dbws/toc.htm"> 2.6 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.5/dbws/toc.htm"> 2.5 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.4/dbws/toc.htm"> 2.4 </option>
