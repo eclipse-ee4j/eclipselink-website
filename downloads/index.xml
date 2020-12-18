@@ -3,7 +3,7 @@
    title="EclipseLink Downloads">
 
    <section class="main" name="Latest Release Downloads">
-      <a name="27"> </a>
+      <a name="30"> </a>
       <description>
          <b>EclipseLink 3.0.0 Release (Released Dec 8th, 2020)</b> - <a href="/eclipselink/releases/tck-summary.php">TCK Summary</a>, <a href="/eclipselink/releases/3.0.php">New and Noteworthy</a> - <a href="http://www.eclipse.org/eclipselink/documentation/3.0/">Getting Started</a><br/>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
@@ -92,14 +92,14 @@
 
       <a name="27"> </a>
       <description>
-         <b>EclipseLink 2.7.7 Release (Released May 7th, 2020)</b> - <a href="/eclipselink/releases/tck-summary.php">TCK Summary</a>, <a href="/eclipselink/releases/2.7.php">New and Noteworthy</a> - <a href="http://www.eclipse.org/eclipselink/documentation/2.7/">Getting Started</a><br/>
+         <b>EclipseLink 2.7.8 Release (Released Dec 18th, 2020)</b> - <a href="/eclipselink/releases/tck-summary.php">TCK Summary</a>, <a href="/eclipselink/releases/2.7.php">New and Noteworthy</a> - <a href="http://www.eclipse.org/eclipselink/documentation/2.7/">Getting Started</a><br/>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
                <td class="packageDesc">
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.7.7/eclipselink-2.7.7.v20200504-69f2c2b80d.zip">EclipseLink 2.7.7 Installer Zip (34 MB)</a>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.7.8/eclipselink-2.7.8.v20201217-ecdf3c32c4.zip">EclipseLink 2.7.8 Installer Zip (34 MB)</a>
                   </div>
-                  This zip includes EclipseLink 2.7.7 with the single jar packaging,  source,  JavaDocs, utilities, and dependent libraries. Intended for use in Java EE and SE environments.
+                  This zip includes EclipseLink 2.7.8 with the single jar packaging,  source,  JavaDocs, utilities, and dependent libraries. Intended for use in Java EE and SE environments.
                   <div class="bottomRow">
                   </div>
                </td>
@@ -109,7 +109,7 @@
             <tr class="tableData">
                <td class="packageDesc">
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.7.7/eclipselink-plugins-nosql-2.7.7.v20200504-69f2c2b80d.zip">EclipseLink NoSQL 2.7.7 Installer Zip (392 K)</a>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.7.8/eclipselink-plugins-nosql-2.7.8.v20201217-ecdf3c32c4.zip">EclipseLink NoSQL 2.7.8 Installer Zip (392 K)</a>
                   </div>
                   This zip includes EclipseLink NoSql support. This zip is to be used together with the EclipseLink zip (or EclipseLink bundles) to support NoSQL.  This zip includes binaries, source, and Javadocs.
                   <div class="bottomRow">
@@ -121,9 +121,9 @@
             <tr class="tableData">
                <td class="packageDesc">
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.7.7/eclipselink-plugins-2.7.7.v20200504-69f2c2b80d.zip">EclipseLink 2.7.7 OSGi Bundles Zip (33 MB)</a>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.7.8/eclipselink-plugins-2.7.8.v20201217-ecdf3c32c4.zip">EclipseLink 2.7.8 OSGi Bundles Zip (33 MB)</a>
                   </div>
-                  Contains EclipseLink and dependency bundles.  Get the OSGI Bundle Zip to use EclipseLink 2.7.7 runtime in an OSGi container.
+                  Contains EclipseLink and dependency bundles.  Get the OSGI Bundle Zip to use EclipseLink 2.7.8 runtime in an OSGi container.
                   <div class="bottomRow">
                      <div>
                      </div>
@@ -135,7 +135,7 @@
             <tr class="tableData">
                <td class="packageDesc">
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.7.7/eclipselink-src-2.7.7.v20200504-69f2c2b80d.zip">EclipseLink 2.7.7 Source Zip (8.3 MB)</a>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.7.8/eclipselink-src-2.7.8.v20201217-ecdf3c32c4.zip">EclipseLink 2.7.8 Source Zip (8.3 MB)</a>
                   </div>
                   Contains source code for all of eclipselink.
                   <div class="bottomRow">
