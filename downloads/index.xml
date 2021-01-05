@@ -73,20 +73,6 @@
                <td class="downloadCol">
                </td>
             </tr>
-            <tr class="tableData">
-               <td class="packageDesc">
-                  <div>
-                     <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates/">EclipseLink P2 Repository</a>
-                  </div>
-                  The EclipseLink bundles can be obtained from a P2 repository for installation in a target platform or Eclipse IDE.  Copy the following URL into the update site location:  http://download.eclipse.org/rt/eclipselink/updates/ .
-                  <div class="bottomRow">
-                     <div>
-                     </div>
-                  </div>
-               </td>
-               <td class="downloadCol">
-               </td>
-            </tr>
          </table>
       </description>
 
