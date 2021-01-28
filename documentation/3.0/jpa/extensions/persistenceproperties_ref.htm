@@ -85,6 +85,9 @@ Release 3.0</div></td>
 <li>
 <p><a href="#CHDICECH2">JDBC configuration</a></p>
 </li>
+    <li>
+        <p><a href="#CHDFDDBF1">Concurrency manager</a></p>
+    </li>
 </ul>
 <a id="CACGCEIJ2" name="CACGCEIJ2"></a><a id="TLJPA1049" name="TLJPA1049"></a>
 <div class="sect2"><!-- infolevel="all" infotype="General" -->
@@ -380,6 +383,37 @@ Release 3.0</div></td>
 </li>
 </ul>
 </div>
+
+    <!-- class="sect2" -->
+    <a id="CHDFDDBF1" name="CHDFDDBF1"></a><a id="TLJPA540511" name="TLJPA540511"></a>
+    <div class="sect2"><!-- infolevel="all" infotype="General" -->
+        <h3 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Concurrency manager</font></h3>
+        <p>EclipseLink includes the following persistence property extensions for concurrency management:</p>
+        <ul>
+            <li>
+                <p><code><a href="#concurrency.manager.waittime">concurrency.manager.waittime</a></code></p>
+            </li>
+            <li>
+                <p><code><a href="#concurrency.manager.maxsleeptime">concurrency.manager.maxsleeptime</a></code></p>
+            </li>
+            <li>
+                <p><code><a href="#concurrency.manager.maxfrequencytodumptinymessage">concurrency.manager.maxfrequencytodumptinymessage</a></code></p>
+            </li>
+            <li>
+                <p><code><a href="#concurrency.manager.maxfrequencytodumpmassivemessage">concurrency.manager.maxfrequencytodumpmassivemessage</a></code></p>
+            </li>
+            <li>
+                <p><code><a href="#concurrency.manager.allow.interruptedexception">concurrency.manager.allow.interruptedexception</a></code></p>
+            </li>
+            <li>
+                <p><code><a href="#concurrency.manager.allow.concurrencyexception">concurrency.manager.allow.concurrencyexception</a></code></p>
+            </li>
+            <li>
+                <p><code><a href="#concurrency.manager.allow.readlockstacktrace">concurrency.manager.allow.readlockstacktrace</a></code></p>
+            </li>
+        </ul>
+    </div>
+
 <!-- class="sect2" --></div>
 <!-- class="sect1" -->
 <a id="CACBGBJG2" name="CACBGBJG2"></a><a id="TLJPA1055" name="TLJPA1055"></a>
@@ -468,6 +502,29 @@ Release 3.0</div></td>
 <li>
 <p><code><a href="#CIHGHJGA">composite-unit.properties</a></code></p>
 </li>
+
+    <li>
+        <p><code><a href="#concurrency.manager.waittime">concurrency.manager.waittime</a></code></p>
+    </li>
+    <li>
+        <p><code><a href="#concurrency.manager.maxsleeptime">concurrency.manager.maxsleeptime</a></code></p>
+    </li>
+    <li>
+        <p><code><a href="#concurrency.manager.maxfrequencytodumptinymessage">concurrency.manager.maxfrequencytodumptinymessage</a></code></p>
+    </li>
+    <li>
+        <p><code><a href="#concurrency.manager.maxfrequencytodumpmassivemessage">concurrency.manager.maxfrequencytodumpmassivemessage</a></code></p>
+    </li>
+    <li>
+        <p><code><a href="#concurrency.manager.allow.interruptedexception">concurrency.manager.allow.interruptedexception</a></code></p>
+    </li>
+    <li>
+        <p><code><a href="#concurrency.manager.allow.concurrencyexception">concurrency.manager.allow.concurrencyexception</a></code></p>
+    </li>
+    <li>
+        <p><code><a href="#concurrency.manager.allow.readlockstacktrace">concurrency.manager.allow.readlockstacktrace</a></code></p>
+    </li>
+
 <li>
 <p><code><a href="#connectionpool">connection-pool</a></code></p>
 </li>
@@ -2635,6 +2692,318 @@ EntityManagerFactory emf = Persistence.createEntityManagerFactory("compositePu",
 </li>
 </ul>
 </div>
+
+    <!-- class="refsect1" -->
+    <a id="concurrency.manager.waittime" name="concurrency.manager.waittime"></a>
+    <hr />
+    <div class="refsect1">
+        <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">concurrency.manager.waittime</font></h2>
+        <p>This property in milliseconds can control thread management in <code>org.eclipse.persistence.internal.helper.ConcurrencyManager</code>. It control how much time loop wait before it try acquire lock for current thread again. It value is set above above 0 dead lock detection mechanism and related extended logging will be activated.</p>
+        <a id="sthref878" name="sthref878"></a>
+        <p><strong><br /><span class="refsubsect">Values</span></strong></p>
+        <p><a href="#concurrency.manager.waittime.tab">Table 5-30</a> describes this persistence property's values.</p>
+        <div class="tblhruleformalwide"><a id="TLJPA888" name="TLJPA888"></a><a id="sthref879" name="sthref879"></a><a id="concurrency.manager.waittime.tab" name="concurrency.manager.waittime.tab"></a>
+            <p><strong><em><font face="arial, helvetica, sans-serif">Table 5-30 Valid Values for concurrency.manager.waittime</font></em></strong></p>
+            <table class="HRuleFormalWide" title="Valid Values for concurrency.manager.waittime" summary="This table describes the valid values for the concurrency.manager.waittime persistence property." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+                <col width="29%" />
+                <col width="*" />
+                <thead>
+                <tr align="left" valign="top">
+                    <th align="left" valign="bottom" id="r1c1-t21"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+                    <th align="left" valign="bottom" id="r1c2-t21"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr align="left" valign="top">
+                    <td align="left" id="r2c1-t21" headers="r1c1-t21">
+                        <p>Wait time</p>
+                    </td>
+                    <td align="left" headers="r2c1-t21 r1c2-t21">
+                        <p>How much time loop wait before it try acquire lock for current thread again. Default value is 0 (unit is ms). Allowed values are: long</p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+            <p><a href="#concurrency.manager.waittime.example">Example 5-24</a> shows how to use this property in the <code>persistence.xml</code> file.</p>
+            <div class="example"><a id="concurrency.manager.waittime.example" name="concurrency.manager.waittime.example"></a><a id="TLJPA883" name="TLJPA883"></a>
+                <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-24 Using concurrency.manager.waittime in persistence.xml</font></em></strong></p>
+                <pre xml:space="preserve" class="oac_no_warn">
+&lt;property name="eclipselink.concurrency.manager.waittime" value="100" /&gt;
+            </pre>
+            </div>
+        </div>
+
+        <!-- class="refsect1" -->
+        <a id="concurrency.manager.maxsleeptime" name="concurrency.manager.maxsleeptime"></a>
+        <hr />
+        <div class="refsect1">
+            <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">concurrency.manager.maxsleeptime</font></h2>
+            <p>This system property in milliseconds can control thread management in <code>org.eclipse.persistence.internal.helper.ConcurrencyManager</code>. It control how long we are willing to wait before firing up an exception.</p>
+            <a id="sthref878" name="sthref878"></a>
+            <p><strong><br /><span class="refsubsect">Values</span></strong></p>
+            <p><a href="#concurrency.manager.maxsleeptime.tab">Table 5-30</a> describes this persistence property's values.</p>
+            <div class="tblhruleformalwide"><a id="TLJPA888" name="TLJPA888"></a><a id="sthref879" name="sthref879"></a><a id="concurrency.manager.maxsleeptime.tab" name="concurrency.manager.maxsleeptime.tab"></a>
+                <p><strong><em><font face="arial, helvetica, sans-serif">Table 5-30 Valid Values for concurrency.manager.maxsleeptime</font></em></strong></p>
+                <table class="HRuleFormalWide" title="Valid Values for concurrency.manager.maxsleeptime" summary="This table describes the valid values for the concurrency.manager.maxsleeptime persistence property." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+                    <col width="29%" />
+                    <col width="*" />
+                    <thead>
+                    <tr align="left" valign="top">
+                        <th align="left" valign="bottom" id="r1c1-t21"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+                        <th align="left" valign="bottom" id="r1c2-t21"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr align="left" valign="top">
+                        <td align="left" id="r2c1-t21" headers="r1c1-t21">
+                            <p>Wait time</p>
+                        </td>
+                        <td align="left" headers="r2c1-t21 r1c2-t21">
+                            <p>It control how long we are willing to wait before firing up an exception. Default value is 40000 (unit is ms). Allowed values are: long</p>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+                <p><a href="#concurrency.manager.maxsleeptime.example">Example 5-24</a> shows how to use this property in the <code>persistence.xml</code> file.</p>
+                <div class="example"><a id="concurrency.manager.maxsleeptime.example" name="concurrency.manager.maxsleeptime.example"></a><a id="TLJPA883" name="TLJPA883"></a>
+                    <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-24 Using concurrency.manager.maxsleeptime in persistence.xml</font></em></strong></p>
+                    <pre xml:space="preserve" class="oac_no_warn">
+&lt;property name="eclipselink.concurrency.manager.maxsleeptime" value="100" /&gt;
+            </pre>
+                </div>
+            </div>
+
+            <!-- class="refsect1" -->
+            <a id="concurrency.manager.maxfrequencytodumptinymessage" name="concurrency.manager.maxfrequencytodumptinymessage"></a>
+            <hr />
+            <div class="refsect1">
+                <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">concurrency.manager.maxfrequencytodumptinymessage</font></h2>
+                <p>This system property in milliseconds can control thread management in <code>org.eclipse.persistence.internal.helper.ConcurrencyManager</code> and <code>org.eclipse.persistence.internal.helper.ConcurrencyUtil</code>. It control how frequently the tiny dump log message is created.</p>
+                <a id="sthref878" name="sthref878"></a>
+                <p><strong><br /><span class="refsubsect">Values</span></strong></p>
+                <p><a href="#concurrency.manager.maxfrequencytodumptinymessage.tab">Table 5-30</a> describes this persistence property's values.</p>
+                <div class="tblhruleformalwide"><a id="TLJPA888" name="TLJPA888"></a><a id="sthref879" name="sthref879"></a><a id="concurrency.manager.maxfrequencytodumptinymessage.tab" name="concurrency.manager.maxfrequencytodumptinymessage.tab"></a>
+                    <p><strong><em><font face="arial, helvetica, sans-serif">Table 5-30 Valid Values for concurrency.manager.maxfrequencytodumptinymessage</font></em></strong></p>
+                    <table class="HRuleFormalWide" title="Valid Values for concurrency.manager.maxfrequencytodumptinymessage" summary="This table describes the valid values for the concurrency.manager.maxfrequencytodumptinymessage persistence property." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+                        <col width="29%" />
+                        <col width="*" />
+                        <thead>
+                        <tr align="left" valign="top">
+                            <th align="left" valign="bottom" id="r1c1-t21"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+                            <th align="left" valign="bottom" id="r1c2-t21"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr align="left" valign="top">
+                            <td align="left" id="r2c1-t21" headers="r1c1-t21">
+                                <p>Wait time</p>
+                            </td>
+                            <td align="left" headers="r2c1-t21 r1c2-t21">
+                                <p>It control how frequently the tiny dump log message is created. Default value is 40000 (unit is ms). Allowed values are: long</p>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+                    <p><a href="#concurrency.manager.maxfrequencytodumptinymessage.example">Example 5-24</a> shows how to use this property in the <code>persistence.xml</code> file.</p>
+                    <div class="example"><a id="concurrency.manager.maxfrequencytodumptinymessage.example" name="concurrency.manager.maxfrequencytodumptinymessage.example"></a><a id="TLJPA883" name="TLJPA883"></a>
+                        <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-24 Using concurrency.manager.maxfrequencytodumptinymessage in persistence.xml</font></em></strong></p>
+                        <pre xml:space="preserve" class="oac_no_warn">
+&lt;property name="eclipselink.concurrency.manager.maxfrequencytodumptinymessage" value="100000" /&gt;
+            </pre>
+                    </div>
+                </div>
+
+                <!-- class="refsect1" -->
+                <a id="concurrency.manager.maxfrequencytodumpmassivemessage" name="concurrency.manager.maxfrequencytodumpmassivemessage"></a>
+                <hr />
+                <div class="refsect1">
+                    <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">concurrency.manager.maxfrequencytodumpmassivemessage</font></h2>
+                    <p>This system property in milliseconds can control thread management in <code>org.eclipse.persistence.internal.helper.ConcurrencyManager</code> and <code>org.eclipse.persistence.internal.helper.ConcurrencyUtil</code>. It control how frequently the massive dump log message is created.</p>
+                    <a id="sthref878" name="sthref878"></a>
+                    <p><strong><br /><span class="refsubsect">Values</span></strong></p>
+                    <p><a href="#concurrency.manager.maxfrequencytodumpmassivemessage.tab">Table 5-30</a> describes this persistence property's values.</p>
+                    <div class="tblhruleformalwide"><a id="TLJPA888" name="TLJPA888"></a><a id="sthref879" name="sthref879"></a><a id="concurrency.manager.maxfrequencytodumpmassivemessage.tab" name="concurrency.manager.maxfrequencytodumpmassivemessage.tab"></a>
+                        <p><strong><em><font face="arial, helvetica, sans-serif">Table 5-30 Valid Values for concurrency.manager.maxfrequencytodumpmassivemessage</font></em></strong></p>
+                        <table class="HRuleFormalWide" title="Valid Values for concurrency.manager.maxfrequencytodumpmassivemessage" summary="This table describes the valid values for the concurrency.manager.maxfrequencytodumpmassivemessage persistence property." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+                            <col width="29%" />
+                            <col width="*" />
+                            <thead>
+                            <tr align="left" valign="top">
+                                <th align="left" valign="bottom" id="r1c1-t21"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+                                <th align="left" valign="bottom" id="r1c2-t21"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr align="left" valign="top">
+                                <td align="left" id="r2c1-t21" headers="r1c1-t21">
+                                    <p>Wait time</p>
+                                </td>
+                                <td align="left" headers="r2c1-t21 r1c2-t21">
+                                    <p>It control how frequently the massive dump log message is created. Default value is 60000 (unit is ms). Allowed values are: long</p>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+                        <p><a href="#concurrency.manager.maxfrequencytodumpmassivemessage.example">Example 5-24</a> shows how to use this property in the <code>persistence.xml</code> file.</p>
+                        <div class="example"><a id="concurrency.manager.maxfrequencytodumpmassivemessage.example" name="concurrency.manager.maxfrequencytodumpmassivemessage.example"></a><a id="TLJPA883" name="TLJPA883"></a>
+                            <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-24 Using concurrency.manager.maxfrequencytodumpmassivemessage in persistence.xml</font></em></strong></p>
+                            <pre xml:space="preserve" class="oac_no_warn">
+&lt;property name="eclipselink.concurrency.manager.maxfrequencytodumpmassivemessage" value="100000" /&gt;
+            </pre>
+                        </div>
+                    </div>
+
+                    <!-- class="refsect1" -->
+                    <a id="concurrency.manager.allow.interruptedexception" name="concurrency.manager.allow.interruptedexception"></a>
+                    <hr />
+                    <div class="refsect1">
+                        <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">concurrency.manager.allow.interruptedexception</font></h2>
+                        <p>In the places where use this property normally if a thread is stuck it is because it is doing object building. Blowing the threads ups is not that dangerous. It can be very dangerous for production if the dead lock ends up not being resolved because the productive business transactions will become cancelled if the application has a limited number of retries to for example process an MDB. However, the code spots where we use this constant are not as sensible as when the write lock manager is starving to run commit.</p>
+                        <a id="sthref878" name="sthref878"></a>
+                        <p><strong><br /><span class="refsubsect">Values</span></strong></p>
+                        <p><a href="#concurrency.manager.allow.interruptedexception.tab">Table 5-30</a> describes this persistence property's values.</p>
+                        <div class="tblhruleformalwide"><a id="TLJPA888" name="TLJPA888"></a><a id="sthref879" name="sthref879"></a><a id="concurrency.manager.allow.interruptedexception.tab" name="concurrency.manager.allow.interruptedexception.tab"></a>
+                            <p><strong><em><font face="arial, helvetica, sans-serif">Table 5-30 Valid Values for concurrency.manager.allow.interruptedexception</font></em></strong></p>
+                            <table class="HRuleFormalWide" title="Valid Values for concurrency.manager.allow.interruptedexception" summary="This table describes the valid values for the concurrency.manager.allow.interruptedexception persistence property." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+                                <col width="29%" />
+                                <col width="*" />
+                                <thead>
+                                <tr align="left" valign="top">
+                                    <th align="left" valign="bottom" id="r1c1-t21"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+                                    <th align="left" valign="bottom" id="r1c2-t21"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr align="left" valign="top">
+                                    <td align="left" id="r2c1-t21" headers="r1c1-t21">
+                                        <p>true</p>
+                                    </td>
+                                    <td align="left" headers="r2c1-t21 r1c2-t21">
+                                        <p>(Default) If we want the to fire up an exception to try to get the current thread to release all of its acquired locks and allow other threads to progress.</p>
+                                    </td>
+                                </tr>
+                                <tr align="left" valign="top">
+                                    <td align="left" id="r2c1-t21" headers="r1c1-t21">
+                                        <p>false</p>
+                                    </td>
+                                    <td align="left" headers="r2c1-t21 r1c2-t21">
+                                        <p>If aborting frozen thread is not effective it is preferable to not fire the interrupted exception let the system.</p>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+                            <p><a href="#concurrency.manager.allow.interruptedexception.example">Example 5-24</a> shows how to use this property in the <code>persistence.xml</code> file.</p>
+                            <div class="example"><a id="concurrency.manager.allow.interruptedexception.example" name="concurrency.manager.allow.interruptedexception.example"></a><a id="TLJPA883" name="TLJPA883"></a>
+                                <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-24 Using concurrency.manager.allow.interruptedexception in persistence.xml</font></em></strong></p>
+                                <pre xml:space="preserve" class="oac_no_warn">
+&lt;property name="eclipselink.concurrency.manager.allow.interruptedexception" value="true" /&gt;
+            </pre>
+                            </div>
+                        </div>
+
+                        <!-- class="refsect1" -->
+                        <a id="concurrency.manager.allow.concurrencyexception" name="concurrency.manager.allow.concurrencyexception"></a>
+                        <hr />
+                        <div class="refsect1">
+                            <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">concurrency.manager.allow.concurrencyexception</font></h2>
+                            <p>See valid values table.</p>
+                            <a id="sthref878" name="sthref878"></a>
+                            <p><strong><br /><span class="refsubsect">Values</span></strong></p>
+                            <p><a href="#concurrency.manager.allow.concurrencyexception.tab">Table 5-30</a> describes this persistence property's values.</p>
+                            <div class="tblhruleformalwide"><a id="TLJPA888" name="TLJPA888"></a><a id="sthref879" name="sthref879"></a><a id="concurrency.manager.allow.concurrencyexception.tab" name="concurrency.manager.allow.concurrencyexception.tab"></a>
+                                <p><strong><em><font face="arial, helvetica, sans-serif">Table 5-30 Valid Values for concurrency.manager.allow.concurrencyexception</font></em></strong></p>
+                                <table class="HRuleFormalWide" title="Valid Values for concurrency.manager.allow.concurrencyexception" summary="This table describes the valid values for the concurrency.manager.allow.concurrencyexception persistence property." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+                                    <col width="29%" />
+                                    <col width="*" />
+                                    <thead>
+                                    <tr align="left" valign="top">
+                                        <th align="left" valign="bottom" id="r1c1-t21"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+                                        <th align="left" valign="bottom" id="r1c2-t21"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr align="left" valign="top">
+                                        <td align="left" id="r2c1-t21" headers="r1c1-t21">
+                                            <p>true</p>
+                                        </td>
+                                        <td align="left" headers="r2c1-t21 r1c2-t21">
+                                            <p>(Default) If we want the to fire up an exception to try to get the current thread to realease all of its acquired locks and allow other threads to progress.</p>
+                                        </td>
+                                    </tr>
+                                    <tr align="left" valign="top">
+                                        <td align="left" id="r2c1-t21" headers="r1c1-t21">
+                                            <p>false</p>
+                                        </td>
+                                        <td align="left" headers="r2c1-t21 r1c2-t21">
+                                            <p>If aborting frozen thread is not effective it is preferable to not fire the concurrency exception let the system freeze and die and force the administration to kill the server. This is preferable to aborting the transactions multiple times without success in resolving the dead lock and having business critical messages that after 3 JMS retries are discarded out. Failing to resolve a dead lock can have terrible impact in system recovery unless we have infinite retries for the business transactions.</p>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+                                <p><a href="#concurrency.manager.allow.concurrencyexception.example">Example 5-24</a> shows how to use this property in the <code>persistence.xml</code> file.</p>
+                                <div class="example"><a id="concurrency.manager.allow.concurrencyexception.example" name="concurrency.manager.allow.concurrencyexception.example"></a><a id="TLJPA883" name="TLJPA883"></a>
+                                    <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-24 Using concurrency.manager.allow.concurrencyexception in persistence.xml</font></em></strong></p>
+                                    <pre xml:space="preserve" class="oac_no_warn">
+&lt;property name="eclipselink.concurrency.manager.allow.concurrencyexception" value="true" /&gt;
+            </pre>
+                                </div>
+                            </div>
+
+                            <!-- class="refsect1" -->
+                            <a id="concurrency.manager.allow.readlockstacktrace" name="concurrency.manager.allow.readlockstacktrace"></a>
+                            <hr />
+                            <div class="refsect1">
+                                <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">concurrency.manager.allow.readlockstacktrace</font></h2>
+                                <p>Collect debug/trace information during ReadLock acquisition.</p>
+                                <a id="sthref878" name="sthref878"></a>
+                                <p><strong><br /><span class="refsubsect">Values</span></strong></p>
+                                <p><a href="#concurrency.manager.allow.readlockstacktrace.tab">Table 5-30</a> describes this persistence property's values.</p>
+                                <div class="tblhruleformalwide"><a id="TLJPA888" name="TLJPA888"></a><a id="sthref879" name="sthref879"></a><a id="concurrency.manager.allow.readlockstacktrace.tab" name="concurrency.manager.allow.readlockstacktrace.tab"></a>
+                                    <p><strong><em><font face="arial, helvetica, sans-serif">Table 5-30 Valid Values for concurrency.manager.allow.readlockstacktrace</font></em></strong></p>
+                                    <table class="HRuleFormalWide" title="Valid Values for concurrency.manager.allow.readlockstacktrace" summary="This table describes the valid values for the concurrency.manager.allow.readlockstacktrace persistence property." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+                                        <col width="29%" />
+                                        <col width="*" />
+                                        <thead>
+                                        <tr align="left" valign="top">
+                                            <th align="left" valign="bottom" id="r1c1-t21"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+                                            <th align="left" valign="bottom" id="r1c2-t21"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr align="left" valign="top">
+                                            <td align="left" id="r2c1-t21" headers="r1c1-t21">
+                                                <p>true</p>
+                                            </td>
+                                            <td align="left" headers="r2c1-t21 r1c2-t21">
+                                                <p>(Default) Collect debug/trace information during ReadLock acquisition.</p>
+                                            </td>
+                                        </tr>
+                                        <tr align="left" valign="top">
+                                            <td align="left" id="r2c1-t21" headers="r1c1-t21">
+                                                <p>false</p>
+                                            </td>
+                                            <td align="left" headers="r2c1-t21 r1c2-t21">
+                                                <p>Don't collect debug/trace information during ReadLock acquisition</p>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+                                    <p><a href="#concurrency.manager.allow.readlockstacktrace.example">Example 5-24</a> shows how to use this property in the <code>persistence.xml</code> file.</p>
+                                    <div class="example"><a id="concurrency.manager.allow.readlockstacktrace.example" name="concurrency.manager.allow.readlockstacktrace.example"></a><a id="TLJPA883" name="TLJPA883"></a>
+                                        <p><strong><em><font face="arial, helvetica, sans-serif">Example 5-24 Using concurrency.manager.allow.readlockstacktrace in persistence.xml</font></em></strong></p>
+                                        <pre xml:space="preserve" class="oac_no_warn">
+&lt;property name="eclipselink.concurrency.manager.allow.readlockstacktrace" value="true" /&gt;
+            </pre>
+                                    </div>
+                                </div>
+
 <!-- class="refsect1" -->
 <a id="connectionpool" name="connectionpool"></a><a id="TLJPA1070" name="TLJPA1070"></a>
 <hr />
