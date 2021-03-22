@@ -20,10 +20,16 @@
                         
             <ul>
                 <li>
-                    <a  href="http://tinyurl.com/y7wrs2vg"
-                                            class="external text"
-                                            title="http://tinyurl.com/y7wrs2vg"
-                                            rel="nofollow">3.0.0: All Fixed Bugs and enhancement requests</a>
+                    <a  href="https://github.com/eclipse-ee4j/eclipselink/issues?q=is%3Aclosed+milestone%3A%22Release+3.0%22"
+                        class="external text"
+                        title="https://github.com/eclipse-ee4j/eclipselink/issues?q=is%3Aclosed+milestone%3A%22Release+3.0%22"
+                        rel="nofollow">3.0.0: All Fixed Bugs and enhancement requests - GitHub bug tracker</a>
+                </li>
+                <li>
+                    <a  href="https://bugs.eclipse.org/bugs/buglist.cgi?bug_status=CLOSED&amp;bug_status=RESOLVED&amp;classification=EE4J&amp;product=EclipseLink&amp;query_format=advanced&amp;resolution=FIXED&amp;target_milestone=3.0"
+                        class="external text"
+                        title="https://bugs.eclipse.org/bugs/buglist.cgi?bug_status=CLOSED&amp;bug_status=RESOLVED&amp;classification=EE4J&amp;product=EclipseLink&amp;query_format=advanced&amp;resolution=FIXED&amp;target_milestone=3.0"
+                        rel="nofollow">3.0.0: All Fixed Bugs and enhancement requests - Eclipse.org bug tracker</a>
                 </li>
             </ul>
             <p>Other important changes and updates include:</p>
