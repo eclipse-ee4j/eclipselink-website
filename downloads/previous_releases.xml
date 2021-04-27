@@ -2,6 +2,46 @@
 <sections title="Downloads for previous EclipseLink Releases and Patch-Sets">
    <section class="main" name="Downloads for previous EclipseLink Releases and Patch-Sets">
       <description>
+         <a name="3.0.0"> </a>
+         <b>EclipseLink 3.0.0 Release (Dec 8th, 2020)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
+         <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
+            <tr class="tableData">
+               <td class="packageDesc">
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/3.0.0/eclipselink-3.0.0.v20201208-87e9d1437d.zip">EclipseLink 3.0.0 Installer Zip (30.5 MB)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/3.0.0/eclipselink-plugins-nosql-3.0.0.v20201208-87e9d1437d.zip">EclipseLink NoSQL 3.0.0 Installer Zip (400 K)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/3.0.0/eclipselink-plugins-3.0.0.v20201208-87e9d1437d.zip">EclipseLink 3.0.0 OSGi Bundles Zip (63.9 MB)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/3.0.0/eclipselink-src-3.0.0.v20201208-87e9d1437d.zip">EclipseLink 3.0.0 Source Zip (7.5 MB)</a>
+                  </div>
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+               <td width="120" class="downloadCol">
+                  <div>
+                     <a href="/eclipselink/releases/3.0.php">Release Notes</a>
+                  </div>
+                  <div>
+                     <a href="https://www.eclipse.org/eclipselink/documentation/3.0/">Documentation</a>
+                  </div>
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/Maven">Maven</a>
+                  </div>
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+            </tr>
+         </table>
+         <br/>
          <a name="2.7.7"> </a>
          <b>EclipseLink 2.7.7 Release (May 7th, 2020)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
