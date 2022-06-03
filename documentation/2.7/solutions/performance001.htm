@@ -346,6 +346,13 @@ public class Employee implements Serializable {
 &lt;property name="eclipselink.jdbc.bind-parameters" value="true"/&gt;
 </pre>
 <p>To disable parameterized SQL, change <code>value=</code> to <code>false</code>.</p>
+
+<p>EclipseLink determines binding behavior based on the database platform's support for binding. If the database does not support untyped parameter markers in specific SQL expressions, EclipseLink will disable parameter binding for the whole query.</p>
+<p>To enable EclipseLink to restrict parameter binding decisions per expression, instead of per query, add this line to the persistence.xml file that is in the same path as your domain classes:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;property name="eclipselink.jdbc.allow-partial-bind-parameters" value="true"/&gt;
+</pre>
+
 <p>For more information about using parameterized SQL and statement caching, see "jdbc.bind-parameters" in <em>Java Persistence API (JPA) Extensions Reference for EclipseLink</em>.</p>
 </div>
 <!-- class="sect3" -->
