@@ -109,6 +109,9 @@ Release 3.0</div></td>
 <p><code><a href="#bindparameters">jdbc.bind-parameters</a></code></p>
 </li>
 <li>
+<p><code><a href="#allowpartialbindparameters">jdbc.allow-partial-bind-parameters</a></code></p>
+</li>
+<li>
 <p><code><a href="#BABCHAFD">jdbc.cache-statement</a></code></p>
 </li>
 <li>
@@ -1404,7 +1407,7 @@ import org.eclipse.persistence.config.HintValues;
 <p>Or by importing a <code>property</code> map:</p>
 <pre xml:space="preserve" class="oac_no_warn">
 import org.eclipse.persistence.config.PersistenceUnitProperties;
-propertiesMap.put(PersistenceUnitProperties.NATIVE_SQL, "true");
+propertiesMap.put(PersistenceUnitProperties.JDBC_BIND_PARAMETERS, "true");
 </pre></div>
 <!-- class="example" -->
 <a id="sthref601" name="sthref601"></a>
@@ -1413,6 +1416,80 @@ propertiesMap.put(PersistenceUnitProperties.NATIVE_SQL, "true");
 <ul>
 <li>
 <p><a href="persistenceproperties_ref.htm#CHDHAFAA">"jdbc.cache-statements"</a></p>
+</li>
+<li>
+<p><a href="persistenceproperties_ref.htm#CIHJADHF">"jdbc.batch-writing.size"</a></p>
+</li>
+<li>
+<p>"Parameterized SQL and Statement Caching" in <em>Solutions Guide for EclispeLink</em></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="allowpartialbindparameters" name="allowpartialbindparameters"></a><a id="TLJPA831" name="TLJPA831"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">jdbc.allow-partial-bind-parameters</font></h2>
+<p>Use <code>eclipselink.jdbc.allow-partial-bind-parameters</code> to specify if parameter binding decisions apply to individual expressions or the whole query.</p>
+<a id="sthref597" name="sthref597"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#BABHJFEK">Table 4-83</a> describes this persistence property's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA832" name="TLJPA832"></a><a id="sthref833" name="sthref833"></a><a id="BABHJFEK" name="BABHJFEK"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-83 Valid Values for jdbc.allow-partial-bind-parameters</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for jdbc.allow-partial-bind-parameters" summary="This table describes the valid values for the jdbc.allow-partial-bind-parameters persistence property." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t20"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t20"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t20" headers="r1c1-t20">
+<p><code>TRUE</code></p>
+</td>
+<td align="left" headers="r2c1-t20 r1c2-t20">
+<p>EclipseLink binds parameters per SQL function/expression.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t20" headers="r1c1-t20">
+<p><code>FALSE</code></p>
+</td>
+<td align="left" headers="r3c1-t20 r1c2-t20">
+<p>(Default) EclipseLink either binds all parameters or no parameters; depending on database support.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref834" name="sthref834"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>EclipseLink determines binding behavior based on the database's support for binding. If the database does not support binding, for a specific expression, EclipseLink will disable parameter binding for the whole query. Setting this property to 'true' will allow EclipseLink to bind per expression, instead of per query.</p>
+<a id="sthref835" name="sthref835"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<!-- class="example" -->
+<p><a href="#BABFBBJK">Example 4-83</a> shows how to configure parameter binding in the persistence unit <code>persistence.xml</code> file.</p>
+<div class="example"><a id="BABFBBJK" name="BABFBBJK"></a><a id="TLJPA836" name="TLJPA836"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-83 Specifying Allow Partial Parameter Binding Persistence Unit Property</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;property name="eclipselink.jdbc.allow-partial-bind-parameters" value="true"/&gt;
+</pre>
+<p>Or by importing a <code>property</code> map:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.PersistenceUnitProperties;
+propertiesMap.put(PersistenceUnitProperties.JDBC_ALLOW_PARTIAL_PARAMETERS, "true");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref837" name="sthref837"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="#bindparameters">"jdbc.bind-parameters"</a></p>
 </li>
 <li>
 <p><a href="persistenceproperties_ref.htm#CIHJADHF">"jdbc.batch-writing.size"</a></p>

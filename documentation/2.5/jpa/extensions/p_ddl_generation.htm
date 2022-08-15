@@ -50,6 +50,7 @@
 <div class="refsect1"><!-- infolevel="all" infotype="General" -->
 <h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">ddl-generation</font></h2>
 <p>Use <code>eclipselink.ddl-generation</code> to specify how EclipseLink generates DDL (Data Definition Language) for the database schema (tables and constraints) on deployment</p>
+<p>Note: EclipseLink does not support mixing EclipseLink defined and JPA defined DDL generation properties. If the <code>eclipselink.ddl-generation</code> property is specified, the <code>javax.persistence.schema-generation.database.action</code>, <code>javax.persistence.schema-generation.scripts.action</code>, and <code>javax.persistence.sql-load-script-source</code> JPA defined properties will be ignored.</p>
 <a id="sthref881" name="sthref881"></a>
 <p><strong><br /><span class="refsubsect">Values</span></strong></p>
 <p><a href="#BABBEGCE">Table 5-29</a> describes this persistence property's values.</p>
