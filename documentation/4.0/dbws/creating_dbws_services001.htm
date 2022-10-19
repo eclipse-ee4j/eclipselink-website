@@ -1,0 +1,556 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Creating EclipseLink DBWS Service from a Database Table | EclipseLink 4.0 EclipseLink DBWS</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.22 Build 1" />
+<meta name="date" content="2014-06-10T10:32:29Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Creating EclipseLink DBWS Service from a Database Table" />
+<meta name="relnum" content="Release 4.0" />
+<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="creating_dbws_services.htm" title="Previous" type="text/html" />
+<link rel="next" href="creating_dbws_services002.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:1hjujor5_fg', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><font face="helvetica, arial, sans-serif"><b>Oracle&#174; Fusion Middleware Developing Persistence Architectures Using EclipseLink Database Web Services</b><br />
+<b>Release 4.0</b><br />
+ </font></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+</td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Search" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini"></span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_moxy.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="creating_dbws_services.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="creating_dbws_services002.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header -->
+<script type="text/javascript" class="oac_no_warn">
+<!-- // <![CDATA[
+window.name='creating_dbws_services001'
+// ]]> -->
+</script> <script type="text/javascript" class="oac_no_warn">
+// <![CDATA[
+function footdisplay(footnum,footnote) {
+    var msg = window.open('', 'NewWindow' + footnum,
+        'directories=no,height=120,location=no,menubar=no,resizable=yes,' +
+        'scrollbars=yes,status=no,toolbar=no,width=598');
+    msg.document.open('text/html');
+    msg.document.write('<!DOCTYPE html ');
+    msg.document.write('PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" ');
+
+    msg.document.write('"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">');
+    msg.document.write('<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><title>');
+    msg.document.write('Footnote ' + footnum);
+    msg.document.write('<\/title><meta http-equiv="Content-Type" ');
+    msg.document.write('content="text/html; charset=utf-8" />');
+    msg.document.write('<meta http-equiv="Content-Script-Type" ');
+    msg.document.write('content="text/javascript" />');
+    msg.document.write('<style type="text/css"> <![CDATA[ ');
+    msg.document.write('h1 {text-align: center; font-size: 14pt;}');
+    msg.document.write('fieldset {border: none;}');
+    msg.document.write('form {text-align: center;}');
+    msg.document.write(' ]]\u003e <\/style>');
+    msg.document.write('<\/head><body><h1>Footnote ' + footnum + '<\/h1><p>');
+    msg.document.write(footnote);
+    msg.document.write('<\/p><form action="" method="post"><fieldset>');
+    msg.document.write('<input type="button" value="OK" ');
+    msg.document.write('onclick="window.close();" />');
+    msg.document.write('<\/fieldset><\/form><\/body><\/html>');
+    msg.document.close();
+    msg.focus();
+}
+// ]]>
+</script> <noscript>
+<p>The script content on this page is for navigation purposes only and does not alter the content in any way.</p>
+</noscript><a id="CJABFFBE" name="CJABFFBE"></a><a id="TLDBW143" name="TLDBW143"></a>
+<div class="sect1">
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Creating EclipseLink DBWS Service from a Database Table</font></h1>
+<p>You can create a web service that exposes a database table's CRUD (<strong>C</strong>reate/<strong>R</strong>ead[findByPK and findAll]/<strong>U</strong>pdate/<strong>D</strong>elete) operations. EclipseLink supports this for any table or multiple tables (use patterns supporting <strong>%</strong> for catalog, schema or table names) on any database on which the JDBC driver reliably and accurately delivers the table's metadata via the JDBC metadata APIs (<code>java.sql.DatabaseMetaData</code>).</p>
+<p>EclipseLink uses the <code>DBWSBuilder</code> utility to generate a DBWS XML schema, using the following rules:</p>
+<ul>
+<li>
+<p>table name ==&gt; translate any characters not supported by XML<a id="CJADCADG" name="CJADCADG" href="#CJADCADG" onclick='footdisplay(1,"Same algorithm documented as part of the SQL/X (a.k.a. SQL/XML:2003) specification.")'><sup><font size="-3">Foot&nbsp;</font>1&nbsp;</sup></a>&nbsp;&nbsp;==&gt; translate to_lowercase ==&gt; add suffix 'Type' ==&gt; top-level complex type in&nbsp;<code>.xsd</code> file</p>
+</li>
+<li>
+<p>column name ==&gt; translate any characters not supported by XML<a id="sthref32" name="sthref32" href="#sthref32" onclick='footdisplay(1,"Same algorithm documented as part of the SQL/X (a.k.a. SQL/XML:2003) specification.")'><sup><font size="-3">Footref&nbsp;</font>1</sup></a>&nbsp;&nbsp;==&gt; translate to_lowercase ==&gt; becomes <code>&lt;element-tag&gt;</code> name</p>
+<ul>
+<li>
+<p>All columns are expressed as elements</p>
+</li>
+<li>
+<p><code>BLOB</code> columns are automatically mapped to <code>xsd:base64Binary</code></p>
+</li>
+<li>
+<p><code>xsd:base64Binary</code> elements can be included in-line to the XML document, or handled as binary attachments (<code>SwaRef</code> or <code>MTOM</code> style).</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="#CJAFCCCA">Example 2-1</a> uses the <strong>EMP</strong> table (<a href="#CJABFAHH">Table 2-1</a>) from the Oracle <strong>scott</strong> database schema:</p>
+<div class="tblhruleformal"><a id="TLDBW144" name="TLDBW144"></a><a id="sthref33" name="sthref33"></a><a id="CJABFAHH" name="CJABFAHH"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 2-1 Sample EMP Table</font></em></strong></p>
+<table class="HRuleFormal" title="Sample EMP Table" summary="This is a sample EMP table. There are 8 columns: OWNER, TABLE_NAME, COLUMN_NAME, DATA_TYPE, DATA_LENGTH, DATA_PRECISION, DATA_SCALE, and NULLABLE?." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="13%" />
+<col width="12%" />
+<col width="18%" />
+<col width="*" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t2"><font face="Arial, Helvetica, sans-serif"><strong>OWNER</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t2"><font face="Arial, Helvetica, sans-serif"><strong>TABLE_NAME</strong></font></th>
+<th align="left" valign="bottom" id="r1c3-t2"><font face="Arial, Helvetica, sans-serif"><strong>COLUMN_NAME</strong></font></th>
+<th align="left" valign="bottom" id="r1c4-t2"><font face="Arial, Helvetica, sans-serif"><strong>DATA_TYPE</strong></font></th>
+<th align="left" valign="bottom" id="r1c5-t2"><font face="Arial, Helvetica, sans-serif"><strong>DATA_LENGTH</strong></font></th>
+<th align="left" valign="bottom" id="r1c6-t2"><font face="Arial, Helvetica, sans-serif"><strong>DATA_PRECISION</strong></font></th>
+<th align="left" valign="bottom" id="r1c7-t2"><font face="Arial, Helvetica, sans-serif"><strong>DATA_SCALE</strong></font></th>
+<th align="left" valign="bottom" id="r1c8-t2"><font face="Arial, Helvetica, sans-serif"><strong>NULLABLE?</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t2" headers="r1c1-t2">
+<p>SCOTT</p>
+</td>
+<td align="left" headers="r2c1-t2 r1c2-t2">
+<p>EMP</p>
+</td>
+<td align="left" headers="r2c1-t2 r1c3-t2">
+<p>EMPNO</p>
+</td>
+<td align="left" headers="r2c1-t2 r1c4-t2">
+<p>NUMBER</p>
+</td>
+<td align="left" headers="r2c1-t2 r1c5-t2">
+<p>22</p>
+</td>
+<td align="left" headers="r2c1-t2 r1c6-t2">
+<p>4</p>
+</td>
+<td align="left" headers="r2c1-t2 r1c7-t2">
+<p>0</p>
+</td>
+<td align="left" headers="r2c1-t2 r1c8-t2">
+<p>N</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t2" headers="r1c1-t2">
+<p>SCOTT</p>
+</td>
+<td align="left" headers="r3c1-t2 r1c2-t2">
+<p>EMP</p>
+</td>
+<td align="left" headers="r3c1-t2 r1c3-t2">
+<p>ENAME</p>
+</td>
+<td align="left" headers="r3c1-t2 r1c4-t2">
+<p>VARCHAR2</p>
+</td>
+<td align="left" headers="r3c1-t2 r1c5-t2">
+<p>10</p>
+</td>
+<td align="left" headers="r3c1-t2 r1c6-t2">
+<p>(null)</p>
+</td>
+<td align="left" headers="r3c1-t2 r1c7-t2">
+<p>(null)</p>
+</td>
+<td align="left" headers="r3c1-t2 r1c8-t2">
+<p>Y</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t2" headers="r1c1-t2">
+<p>SCOTT</p>
+</td>
+<td align="left" headers="r4c1-t2 r1c2-t2">
+<p>EMP</p>
+</td>
+<td align="left" headers="r4c1-t2 r1c3-t2">
+<p>JOB</p>
+</td>
+<td align="left" headers="r4c1-t2 r1c4-t2">
+<p>VARCHAR2</p>
+</td>
+<td align="left" headers="r4c1-t2 r1c5-t2">
+<p>9</p>
+</td>
+<td align="left" headers="r4c1-t2 r1c6-t2">
+<p>(null)</p>
+</td>
+<td align="left" headers="r4c1-t2 r1c7-t2">
+<p>(null)</p>
+</td>
+<td align="left" headers="r4c1-t2 r1c8-t2">
+<p>Y</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t2" headers="r1c1-t2">
+<p>SCOTT</p>
+</td>
+<td align="left" headers="r5c1-t2 r1c2-t2">
+<p>EMP</p>
+</td>
+<td align="left" headers="r5c1-t2 r1c3-t2">
+<p>MGR</p>
+</td>
+<td align="left" headers="r5c1-t2 r1c4-t2">
+<p>NUMBER</p>
+</td>
+<td align="left" headers="r5c1-t2 r1c5-t2">
+<p>22</p>
+</td>
+<td align="left" headers="r5c1-t2 r1c6-t2">
+<p>4</p>
+</td>
+<td align="left" headers="r5c1-t2 r1c7-t2">
+<p>0</p>
+</td>
+<td align="left" headers="r5c1-t2 r1c8-t2">
+<p>Y</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t2" headers="r1c1-t2">
+<p>SCOTT</p>
+</td>
+<td align="left" headers="r6c1-t2 r1c2-t2">
+<p>EMP</p>
+</td>
+<td align="left" headers="r6c1-t2 r1c3-t2">
+<p>HIREDATE</p>
+</td>
+<td align="left" headers="r6c1-t2 r1c4-t2">
+<p>DATE</p>
+</td>
+<td align="left" headers="r6c1-t2 r1c5-t2">
+<p>7</p>
+</td>
+<td align="left" headers="r6c1-t2 r1c6-t2">
+<p>(null)</p>
+</td>
+<td align="left" headers="r6c1-t2 r1c7-t2">
+<p>(null)</p>
+</td>
+<td align="left" headers="r6c1-t2 r1c8-t2">
+<p>Y</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t2" headers="r1c1-t2">
+<p>SCOTT</p>
+</td>
+<td align="left" headers="r7c1-t2 r1c2-t2">
+<p>EMP</p>
+</td>
+<td align="left" headers="r7c1-t2 r1c3-t2">
+<p>SAL</p>
+</td>
+<td align="left" headers="r7c1-t2 r1c4-t2">
+<p>NUMBER</p>
+</td>
+<td align="left" headers="r7c1-t2 r1c5-t2">
+<p>22</p>
+</td>
+<td align="left" headers="r7c1-t2 r1c6-t2">
+<p>7</p>
+</td>
+<td align="left" headers="r7c1-t2 r1c7-t2">
+<p>2</p>
+</td>
+<td align="left" headers="r7c1-t2 r1c8-t2">
+<p>Y</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t2" headers="r1c1-t2">
+<p>SCOTT</p>
+</td>
+<td align="left" headers="r8c1-t2 r1c2-t2">
+<p>EMP</p>
+</td>
+<td align="left" headers="r8c1-t2 r1c3-t2">
+<p>COMM</p>
+</td>
+<td align="left" headers="r8c1-t2 r1c4-t2">
+<p>NUMBER</p>
+</td>
+<td align="left" headers="r8c1-t2 r1c5-t2">
+<p>22</p>
+</td>
+<td align="left" headers="r8c1-t2 r1c6-t2">
+<p>7</p>
+</td>
+<td align="left" headers="r8c1-t2 r1c7-t2">
+<p>2</p>
+</td>
+<td align="left" headers="r8c1-t2 r1c8-t2">
+<p>Y</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t2" headers="r1c1-t2">
+<p>SCOTT</p>
+</td>
+<td align="left" headers="r9c1-t2 r1c2-t2">
+<p>EMP</p>
+</td>
+<td align="left" headers="r9c1-t2 r1c3-t2">
+<p>DEPTNO</p>
+</td>
+<td align="left" headers="r9c1-t2 r1c4-t2">
+<p>NUMBER</p>
+</td>
+<td align="left" headers="r9c1-t2 r1c5-t2">
+<p>22</p>
+</td>
+<td align="left" headers="r9c1-t2 r1c6-t2">
+<p>2</p>
+</td>
+<td align="left" headers="r9c1-t2 r1c7-t2">
+<p>0</p>
+</td>
+<td align="left" headers="r9c1-t2 r1c8-t2">
+<p>Y</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformal" -->
+<div class="example"><a id="CJAFCCCA" name="CJAFCCCA"></a><a id="TLDBW145" name="TLDBW145"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-1 Example</font></em></strong></p>
+<p>The DBWSBuilder utility requires a DBWS configuration file as input, as shown here:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;dbws-builder xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;properties&gt;
+    &lt;property name="projectName"&gt;emp&lt;/property&gt;
+    ... database properties
+  &lt;/properties&gt;
+  &lt;table
+    catalogPattern="%"
+    tableNamePattern="EMP"
+  /&gt;
+&lt;/dbws-builder&gt;
+</pre>
+<p>Use this command to execute the DBWSBuilder:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+prompt &gt; dbwsbuilder.cmd -builderFile dbws-builder.xml -stageDir output_directory -packageAs wls emp.war
+ 
+</pre>
+<p>where</p>
+<ul>
+<li>
+<p><code>dbws-builder.xml</code> is the DBWS configuration file (as shown previously)</p>
+</li>
+<li>
+<p><code>output_directory</code> is the output directory for the generated files</p>
+</li>
+<li>
+<p><code>-packageAs</code> is the platform on which the web service will be deployed</p>
+</li>
+</ul>
+<p>The <code>DBWSBuilder</code>-generated <code>eclipselink-dbws-schema.xsd</code> file derives <code>&lt;element-tag&gt;</code> names from the Database table metadata in <a href="#CJABFAHH">Table 2-1</a>:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xsd:schema
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  &gt;
+  &lt;xsd:complexType name="empType"&gt;
+    &lt;xsd:sequence&gt;
+      &lt;xsd:element name="<strong>empno</strong>" type="xsd:int" xsi:nil="false"/&gt;
+      &lt;xsd:element name="<strong>ename</strong>" type="xsd:string" xsi:nil="true"/&gt;
+      &lt;xsd:element name="<strong>job</strong>" type="xsd:string" xsi:nil="true"/&gt;
+      &lt;xsd:element name="<strong>mgr</strong>" type="xsd:int" minOccurs="0" xsi:nil="true"/&gt;
+      &lt;xsd:element name="<strong>hiredate</strong>" type="xsd:dateTime" xsi:nil="true"/&gt;
+      &lt;xsd:element name="<strong>sal</strong>" type="xsd:decimal" xsi:nil="true"/&gt;
+      &lt;xsd:element name="<strong>comm</strong>" type="xsd:int" minOccurs="0" xsi:nil="true"/&gt;
+      &lt;xsd:element name="<strong>deptno</strong>" type="xsd:int" xsi:nil="true"/&gt;
+    &lt;/xsd:sequence&gt;
+  &lt;/xsd:complexType&gt;
+&lt;/xsd:schema&gt;
+ 
+</pre></div>
+<!-- class="example" -->
+<a id="TLDBW146" name="TLDBW146"></a>
+<div class="sect2"><a id="sthref34" name="sthref34"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Generated EclipseLink DBWS service descriptor</font></h2>
+<p>The CRUD operations are illustrated in the generated EclipseLink DBWS service descriptor (<code>eclipselink-dbws.xml</code>) file, as shown here:</p>
+<div class="example"><a id="TLDBW147" name="TLDBW147"></a><a id="sthref35" name="sthref35"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 2-2 Sample CRUD Operations</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;dbws xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="urn:emp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+   &lt;name&gt;emp&lt;/name&gt;
+   &lt;sessions-file&gt;eclipselink-dbws-sessions.xml&lt;/sessions-file&gt;
+   &lt;<strong>update</strong>&gt;
+      &lt;name&gt;update_empType&lt;/name&gt;
+      &lt;parameter&gt;
+         &lt;name&gt;theInstance&lt;/name&gt;
+         &lt;type&gt;ns1:empType&lt;/type&gt;
+      &lt;/parameter&gt;
+   &lt;/update&gt;
+   &lt;<strong>insert</strong>&gt;
+      &lt;name&gt;create_empType&lt;/name&gt;
+      &lt;parameter&gt;
+         &lt;name&gt;theInstance&lt;/name&gt;
+         &lt;type&gt;ns1:empType&lt;/type&gt;
+      &lt;/parameter&gt;
+   &lt;/insert&gt;
+   &lt;<strong>query</strong>&gt;
+      &lt;name&gt;findByPrimaryKey_empType&lt;/name&gt;
+      &lt;parameter&gt;
+         &lt;name&gt;id&lt;/name&gt;
+         &lt;type&gt;xsd:decimal&lt;/type&gt;
+      &lt;/parameter&gt;
+      &lt;result&gt;
+         &lt;type&gt;ns1:empType&lt;/type&gt;
+      &lt;/result&gt;
+      &lt;named-query&gt;
+         &lt;name&gt;findByPrimaryKey&lt;/name&gt;
+         &lt;descriptor&gt;empType&lt;/descriptor&gt;
+      &lt;/named-query&gt;
+   &lt;/query&gt;
+   &lt;<strong>delete</strong>&gt;
+      &lt;name&gt;delete_empType&lt;/name&gt;
+      &lt;parameter&gt;
+         &lt;name&gt;theInstance&lt;/name&gt;
+         &lt;type&gt;ns1:empType&lt;/type&gt;
+      &lt;/parameter&gt;
+   &lt;/delete&gt;
+   &lt;<strong>query</strong>&gt;
+      &lt;name&gt;findAll_empType&lt;/name&gt;
+      &lt;result isCollection="true"&gt;
+         &lt;type&gt;ns1:empType&lt;/type&gt;
+      &lt;/result&gt;
+      &lt;named-query&gt;
+         &lt;name&gt;findAll&lt;/name&gt;
+         &lt;descriptor&gt;empType&lt;/descriptor&gt;
+      &lt;/named-query&gt;
+   &lt;/query&gt;
+&lt;/dbws&gt;
+ 
+</pre></div>
+<!-- class="example" --></div>
+<!-- class="sect2" -->
+<a id="TLDBW148" name="TLDBW148"></a>
+<div class="sect2"><a id="sthref36" name="sthref36"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">SOAP Messaging</font></h2>
+<p>The following SOAP Message invokes the <code>&lt;findAll_empType</code>&gt; operation for the <strong>emp</strong> DBWS service:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;env:Body&gt;
+    &lt;findAll_empType xmlns="urn:empService" xmlns:urn="urn:emp"/&gt;
+  &lt;/env:Body&gt;
+&lt;/env:Envelope&gt;
+ 
+</pre>
+<p>returning:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;SOAP-ENV:Header /&gt;
+  &lt;SOAP-ENV:Body&gt;
+    &lt;srvc:findAll_empTypeResponse xmlns="urn:emp" xmlns:srvc="urn:empService"&gt;
+      &lt;srvc:result&gt;
+        &lt;empType&gt;
+          &lt;empno&gt;7369&lt;/empno&gt;
+          &lt;ename&gt;SMITH&lt;/ename&gt;
+          &lt;job&gt;CLERK&lt;/job&gt;
+          &lt;mgr&gt;7902&lt;/mgr&gt;
+          &lt;hiredate&gt;1980-12-17T00:00:00.0-05:00&lt;/hiredate&gt;
+          &lt;sal&gt;800&lt;/sal&gt;
+          &lt;deptno&gt;20&lt;/deptno&gt;
+        &lt;/empType&gt;
+        &lt;empType&gt;
+          &lt;empno&gt;7499&lt;/empno&gt;
+          &lt;ename&gt;ALLEN&lt;/ename&gt;
+          &lt;job&gt;SALESMAN&lt;/job&gt;
+          &lt;mgr&gt;7698&lt;/mgr&gt;
+          &lt;hiredate&gt;1981-02-20T00:00:00.0-05:00&lt;/hiredate&gt;
+          &lt;sal&gt;1600&lt;/sal&gt;
+          &lt;comm&gt;300&lt;/comm&gt;
+          &lt;deptno&gt;30&lt;/deptno&gt;
+        &lt;/empType&gt;
+        ....
+      &lt;/srvc:result&gt;
+    &lt;/srvc:findAll_empTypeResponse&gt;
+  &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;
+</pre></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<hr />
+<br />
+<p style="text-decoration:underline">Footnote Legend</p>
+Footnote&nbsp;1:&nbsp;Same algorithm documented as part of the SQL/X (a.k.a. SQL/XML:2003) specification.<br /></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="creating_dbws_services.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="creating_dbws_services002.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+<font size="-2">Copyright&nbsp;&#169;&nbsp;1997, 2014,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</font> <a href="../../dcommon/html/cpyr.htm"><br />
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+</td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Search" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini"></span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_moxy.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2014 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --></body>
+</html>

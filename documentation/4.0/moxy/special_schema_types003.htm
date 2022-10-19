@@ -1,0 +1,376 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Binary Types | EclipseLink 4.0 EclipseLink MOXy</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.22 Build 1" />
+<meta name="date" content="2014-06-10T10:25:32Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Binary Types" />
+<meta name="relnum" content="Release 4.0" />
+<meta name="partnum" content="" />
+<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="special_schema_types002.htm" title="Previous" type="text/html" />
+<link rel="next" href="privately_owned_relations.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:1hjujor5_fg', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><div class="booktitle">Developing JAXB Applications Using EclipseLink MOXy, 
+<b>Release 4.0</b><br /></font></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+</td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Search" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini"></span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_moxy.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="special_schema_types002.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="privately_owned_relations.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header --><a id="BABHFHFG" name="BABHFHFG"></a><a id="TLJAX307" name="TLJAX307"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Binary Types</font></h1>
+<p>There are additional items to consider when mapping to binary type fields, such as <code>byte[]</code> or <code>Byte[]</code>.</p>
+<a id="TLJAX308" name="TLJAX308"></a>
+<div class="sect2"><a id="sthref102" name="sthref102"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Specifying Binary Formats Base64 and Hex</font></h2>
+<p>EclipseLink supports marshalling and unmarshalling binary data in two different representation formats: <code>base64Binary</code> (default) and <code>hexBinary</code>. You can specify the desired binary format using the <code>@XmlSchemaType</code> annotation, or <code>&lt;xml-schema-type&gt;</code> element in EclipseLink OXM. The examples below shows the result of marshalling the same <code>byte[]</code> to each of these formats.</p>
+<div class="example"><a id="TLJAX309" name="TLJAX309"></a><a id="sthref103" name="sthref103"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 5-7 Annotations</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package example;
+ 
+import jakarta.xml.bind.annotation.*;
+ 
+@XmlRootElement
+public class BinaryData {
+ 
+   @XmlSchemaType(name="hexBinary")
+   public byte[] hexBytes;
+ 
+   @XmlSchemaType(name="base64Binary")
+   public byte[] base64Bytes;
+ 
+}
+ 
+</pre></div>
+<!-- class="example" -->
+<div class="example"><a id="TLJAX310" name="TLJAX310"></a><a id="sthref104" name="sthref104"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 5-8 EclipseLink OXM</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+...
+&lt;java-type name="example.BinaryData"&gt;
+    &lt;xml-root-element/&gt;
+    &lt;java-attributes&gt;
+        &lt;xml-element java-attribute="hexBytes"&gt;
+            &lt;xml-schema-type name="hexBinary"/&gt;
+        &lt;/xml-element&gt;
+        &lt;xml-element java-attribute="base64Bytes"&gt;
+            &lt;xml-schema-type name="base64Binary"/&gt;
+        &lt;/xml-element&gt;
+    &lt;/java-attributes&gt;
+&lt;/java-type&gt;
+...
+ 
+</pre></div>
+<!-- class="example" -->
+<pre xml:space="preserve" class="oac_no_warn">
+BinaryData b = new BinaryData();
+b.hexBytes = new byte[] {2,4,8,16,32,64};
+b.base64Bytes = b.hexBytes;
+
+jaxbContext.createMarshaller().marshal(b, System.out);
+</pre>
+<div class="example"><a id="TLJAX311" name="TLJAX311"></a><a id="sthref105" name="sthref105"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 5-9 Output</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;binaryData&gt;
+   &lt;hexBytes&gt;020308102040&lt;/hexBytes&gt;
+   &lt;base64Bytes&gt;AgMIECBA&lt;/base64Bytes&gt;
+&lt;/binaryData&gt;
+ 
+</pre></div>
+<!-- class="example" --></div>
+<!-- class="sect2" -->
+<a id="TLJAX312" name="TLJAX312"></a>
+<div class="sect2"><a id="sthref106" name="sthref106"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Understanding byte[] versus Byte[]</font></h2>
+<p>Unlike other Java primitive/wrapper types, EclipseLink differentiates between <code>byte[]</code> (primitive) and <code>Byte[]</code> (wrapper) data types. By default, <code>byte[]</code> will marshal to a single element or attribute, whereas <code>Byte[]</code> will marshal each <code>byte</code> as its own element, as illustrated by the following example:</p>
+<div class="example"><a id="TLJAX313" name="TLJAX313"></a><a id="sthref107" name="sthref107"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 5-10 Using byte[] and Byte[]</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package example;
+ 
+import jakarta.xml.bind.annotation.*;
+ 
+@XmlRootElement
+public class BinaryData {
+ 
+   public <strong>byte[]</strong> primitiveBytes;
+   public <strong>Byte[]</strong> byteObjects;
+ 
+}
+ 
+</pre></div>
+<!-- class="example" -->
+<pre xml:space="preserve" class="oac_no_warn">
+BinaryData b = new BinaryData();
+b.primitiveBytes = new byte[] {34,45,56,67,78,89,89,34,23,12,12,11,2};
+b.byteObjects = new Byte[] {23,1,112,12,1,64,1,14,3,2};
+ 
+jaxbContext.createMarshaller().marshal(b, System.out);
+ 
+</pre>
+<div class="example"><a id="TLJAX314" name="TLJAX314"></a><a id="sthref108" name="sthref108"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 5-11 Output</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;binaryData&gt;
+   &lt;primitiveBytes&gt;Ii04Q05ZWSIXDAwLAg==&lt;/primitiveBytes&gt;
+   &lt;byteObjects&gt;23&lt;/byteObjects&gt;
+   &lt;byteObjects&gt;1&lt;/byteObjects&gt;
+   &lt;byteObjects&gt;112&lt;/byteObjects&gt;
+   &lt;byteObjects&gt;12&lt;/byteObjects&gt;
+   &lt;byteObjects&gt;1&lt;/byteObjects&gt;
+   &lt;byteObjects&gt;64&lt;/byteObjects&gt;
+   &lt;byteObjects&gt;1&lt;/byteObjects&gt;
+   &lt;byteObjects&gt;14&lt;/byteObjects&gt;
+   &lt;byteObjects&gt;3&lt;/byteObjects&gt;
+   &lt;byteObjects&gt;2&lt;/byteObjects&gt;
+&lt;/binaryData&gt;
+ 
+</pre></div>
+<!-- class="example" --></div>
+<!-- class="sect2" -->
+<a id="TLJAX315" name="TLJAX315"></a>
+<div class="sect2"><a id="sthref109" name="sthref109"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Working with SOAP Attachments</font></h2>
+<p>If you are using EclipseLink MOXy in a Web Services environment, certain types of binary data may be created as an MTOM/XOP Attachment, instead of written directly into an XML element or attribute. This is done as an optimization for large amounts of binary data.</p>
+<p>The following table shows the Java types that are automatically treated as Attachments, along with their corresponding MIME type:</p>
+<div class="tblhruleformal"><a id="TLJAX316" name="TLJAX316"></a><a id="sthref110" name="sthref110"></a><a id="sthref111" name="sthref111"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 5-1 Java Attributes Treated as Attachments</font></em></strong></p>
+<table class="HRuleFormal" title="Java Attributes Treated as Attachments" summary="This table lists the Java sttributes that are automatically treated as attachments. It lists the Java type and the corresponding MIME type." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="*" />
+<col width="48%" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t2"><font face="Arial, Helvetica, sans-serif"><strong>Java Type</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t2"><font face="Arial, Helvetica, sans-serif"><strong>MIME Type</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t2" headers="r1c1-t2">
+<p>java.awt.Image</p>
+</td>
+<td align="left" headers="r2c1-t2 r1c2-t2">
+<p>image/gif</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t2" headers="r1c1-t2">
+<p>java.awt.Image</p>
+</td>
+<td align="left" headers="r3c1-t2 r1c2-t2">
+<p>image/jpeg</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t2" headers="r1c1-t2">
+<p>javax.xml.transform.Source</p>
+</td>
+<td align="left" headers="r4c1-t2 r1c2-t2">
+<p>text/xml</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t2" headers="r1c1-t2">
+<p>application/xml</p>
+</td>
+<td align="left" headers="r5c1-t2 r1c2-t2">
+<p>*</p>
+<br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t2" headers="r1c1-t2">
+<p>javax.activation.DataHandler</p>
+</td>
+<td align="left" headers="r6c1-t2 r1c2-t2">
+<p>*/*</p>
+<br /></td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformal" -->
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>For more information on the basics of SOAP Attachments, see "Appendix H: Enhanced Binary Data Handling" of the Java Architecture for XML Binding (JAXB) Specification (http://jcp.org/en/jsr/detail?id=222).</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>The following Java class contains two binary fields: a simple <code>byte[]</code>, and a <code>java.awt.Image</code>. In a Web Services environment, the Image data will automatically be created as an attachment.</p>
+<div class="example"><a id="CHDCHBCE" name="CHDCHBCE"></a><a id="TLJAX317" name="TLJAX317"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 5-12 Sample Java Class</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package example;
+ 
+import java.awt.Image;
+ 
+import jakarta.xml.bind.annotation.*;
+ 
+@XmlRootElement
+public class BinaryData {
+ 
+   public byte[] bytes;
+ 
+   public Image photo;
+ 
+}
+ 
+</pre></div>
+<!-- class="example" -->
+<p>Marshalling the object in <a href="#CHDCHBCE">Example 5-12</a> in a Web Services environment would look something like <a href="#CHDECIAJ">Example 5-13</a> (the actual appearance will depend on your application server's implementation of <code>AttachmentMarshaller</code>):</p>
+<div class="example"><a id="CHDECIAJ" name="CHDECIAJ"></a><a id="TLJAX318" name="TLJAX318"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 5-13 Resulting XML</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;binaryData&gt;
+   &lt;bytes&gt;Ii04Q05ZWSIXDAwLAg==&lt;/bytes&gt;
+   &lt;photo&gt;
+      &lt;xop:Include href="cid:1" xmlns:xop="http://www.w3.org/2004/08/xop/include"/&gt;
+   &lt;/photo&gt;
+&lt;/binaryData&gt;
+ 
+</pre></div>
+<!-- class="example" -->
+<a id="TLJAX319" name="TLJAX319"></a>
+<div class="sect3"><a id="sthref112" name="sthref112"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Using @XmlInlineBinaryData</font></h3>
+<p>If you would like to force your binary data to be written as an inline <code>string</code> in your XML, you can annotate the field with the <code>@XmlInlineBinaryData</code> annotation:</p>
+<div class="example"><a id="TLJAX320" name="TLJAX320"></a><a id="sthref113" name="sthref113"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 5-14 Using the @XmlInlineBinaryData Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package example;
+ 
+import java.awt.Image;
+ 
+import jakarta.xml.bind.annotation.*;
+ 
+@XmlRootElement
+public class BinaryData {
+ 
+   public byte[] bytes;
+ 
+   <strong>@XmlInlineBinaryData</strong>
+   public Image photo;
+ 
+}
+ 
+</pre></div>
+<!-- class="example" -->
+<p>This will result in an XML document like this:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+ 
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;binaryData&gt;
+   &lt;bytes&gt;Ii04Q05ZWSIXDAwLAg==&lt;/bytes&gt;
+   &lt;photo&gt;/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHB ... Af/2Q==&lt;/photo&gt;
+&lt;/binaryData&gt;
+ 
+</pre></div>
+<!-- class="sect3" -->
+<a id="TLJAX321" name="TLJAX321"></a>
+<div class="sect3"><a id="sthref114" name="sthref114"></a>
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Using @XmlMimeType</font></h3>
+<p>You can explicitly set the MIME Type for an binary field using the <code>@XmlMimeType</code> annotation. Your application's <code>AttachmentMarshaller</code> and <code>AttachmentUnmarshaller</code> will be responsible for processing this information.</p>
+<div class="example"><a id="TLJAX322" name="TLJAX322"></a><a id="sthref115" name="sthref115"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 5-15 Using the @XmlMimeType Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package example;
+ 
+import java.awt.Image;
+ 
+import jakarta.xml.bind.annotation.*;
+ 
+@XmlRootElement
+public class BinaryData {
+ 
+   public byte[] bytes;
+ 
+   <strong>@XmlMimeType</strong>("image/gif")
+   public Image photo;
+ 
+}
+</pre></div>
+<!-- class="example" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="special_schema_types002.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="privately_owned_relations.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+ 
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+</td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Search" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini"></span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_moxy.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2013 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --></body>
+</html>

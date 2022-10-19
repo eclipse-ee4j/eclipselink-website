@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Mapping to a Union Field | EclipseLink 4.0 EclipseLink MOXy</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.22 Build 1" />
+<meta name="date" content="2014-06-10T10:25:32Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Mapping to a Union Field" />
+<meta name="relnum" content="Release 4.0" />
+<meta name="partnum" content="" />
+<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="special_schema_types001.htm" title="Previous" type="text/html" />
+<link rel="next" href="special_schema_types003.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:1hjujor5_fg', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><div class="booktitle">Developing JAXB Applications Using EclipseLink MOXy, 
+<b>Release 4.0</b><br /></font></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+</td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Search" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini"></span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_moxy.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="special_schema_types001.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="special_schema_types003.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header --><a id="BABFFEHF" name="BABFFEHF"></a><a id="TLJAX298" name="TLJAX298"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Mapping to a Union Field</font></h1>
+<p>The following XML schema and class diagram show a typical use of an XML Schema Union:</p>
+<div class="example"><a id="TLJAX299" name="TLJAX299"></a><a id="sthref94" name="sthref94"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 5-4 XML Schema Union</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+    &lt;xsd:element name="customer" type="customer-type" /&gt;
+    &lt;xsd:complexType name="customer-type"&gt;
+        &lt;xsd:sequence&gt;
+            &lt;xsd:element name="shoe-size" type="size-type" /&gt;
+        &lt;/xsd:sequence&gt;
+    &lt;/xsd:complexType&gt;
+    &lt;xsd:simpleType name="size-type"&gt;
+        &lt;<strong>xsd:union</strong> memberTypes="xsd:decimal xsd:string" /&gt;
+    &lt;/xsd:simpleType&gt;
+&lt;/xsd:schema&gt;
+ 
+</pre></div>
+<!-- class="example" -->
+<div class="figure"><a id="TLJAX300" name="TLJAX300"></a><a id="sthref95" name="sthref95"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Figure 5-1 Mapping to a Union Field</font></em></strong></p>
+<img src="img/dxmuc.gif" alt="Mapping to a Union Field" title="Mapping to a Union Field" longdesc="img_text/dxmuc.htm" /><br />
+<a id="sthref96" name="sthref96" href="img_text/dxmuc.htm">Description of "Figure 5-1 Mapping to a Union Field"</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p><a href="#BABDEIDD">Figure 5-2</a> illustrates a mapping to a union field in an XML document that conforms to the example schema. When EclipseLink unmarshalls the XML document, it tries each of the union types until it can make a successful conversion. The first schema type in the union is <code>xsd:decimal</code>. Because <strong>10.5</strong> is a valid decimal, EclipseLink converts the value to the appropriate type.</p>
+<div class="figure"><a id="BABDEIDD" name="BABDEIDD"></a><a id="TLJAX301" name="TLJAX301"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Figure 5-2 Mapping to a Union Field in an XML Document</font></em></strong></p>
+<img src="img/dxmuv.gif" alt="Mapping to a Union Field in an XML Document" title="Mapping to a Union Field in an XML Document" longdesc="img_text/dxmuv.htm" /><br />
+<a id="sthref97" name="sthref97" href="img_text/dxmuv.htm">Description of "Figure 5-2 Mapping to a Union Field in an XML Document"</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>In <a href="#BABFGEDJ">Figure 5-3</a>, the value <strong>M</strong> is <em>not</em> a valid <code>xsd:decimal</code> type, so the next union type is tried, <code>xsd:string</code>.</p>
+<div class="figure"><a id="BABFGEDJ" name="BABFGEDJ"></a><a id="TLJAX302" name="TLJAX302"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Figure 5-3 Mapping to a Union Field</font></em></strong></p>
+<img src="img/dxmuvs.gif" alt="Mapping to a Union Field" title="Mapping to a Union Field" longdesc="img_text/dxmuvs.htm" /><br />
+<a id="sthref98" name="sthref98" href="img_text/dxmuvs.htm">Description of "Figure 5-3 Mapping to a Union Field"</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>Currently, EclipseLink does not support the mapping of Unions using Annotations or OXM Metadata. However, an EclipseLink XML Customizer can be used to create the mapping.</p>
+<p>First, we annotate the <code>shoeSize</code> attribute with <code>@XmlTransient</code>, to avoid automatically generating a mapping for it. We also include an <code>@XmlCustomizer</code> annotation; the <code>CustomerCustomizer</code> class will create the Union mapping in code.</p>
+<div class="example"><a id="TLJAX303" name="TLJAX303"></a><a id="sthref99" name="sthref99"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 5-5 Using an EclipseLink Customizer</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package example;
+ 
+import jakarta.xml.bind.annotation.*;
+import org.eclipse.persistence.oxm.annotations.*;
+ 
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
+<strong>@XmlCustomizer</strong>(CustomerCustomizer.class)
+public class Customer {
+   @XmlTransient
+   private Object shoeSize;
+ 
+   ...
+}
+ 
+</pre></div>
+<!-- class="example" -->
+<p>The <code>CustomerCustomizer</code> class can be used to manually add a mapping to the <code>shoeSize</code> attribute. In <a href="#CHDEDAIJ">Example 5-6</a>, an <code>XMLUnionField</code> is configured on the mapping, and the possible Union member types are added by calling <code>addSchemaType()</code>:</p>
+<div class="example"><a id="CHDEDAIJ" name="CHDEDAIJ"></a><a id="TLJAX304" name="TLJAX304"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 5-6 Mapping a Union Field</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+package example;
+ 
+import org.eclipse.persistence.config.DescriptorCustomizer;
+import org.eclipse.persistence.descriptors.ClassDescriptor;
+import org.eclipse.persistence.oxm.*;
+ 
+public class CustomerCustomizer implements DescriptorCustomizer {
+ 
+   @Override
+   public void customize(ClassDescriptor descriptor) throws Exception {
+      XMLDirectMapping shoeSizeMapping = new XMLDirectMapping();
+      shoeSizeMapping.setAttributeName("shoeSize");
+ 
+      <strong>XMLUnionField</strong> shoeSizeField = new XMLUnionField();
+      shoeSizeField.setXPath("shoe-size/text()");
+      shoeSizeField.addSchemaType(XMLConstants.DECIMAL_QNAME);
+      shoeSizeField.addSchemaType(XMLConstants.STRING_QNAME);
+ 
+      shoeSizeMapping.setField(shoeSizeField);
+ 
+      descriptor.addMapping(shoeSizeMapping);
+   }
+ 
+}
+ 
+</pre></div>
+<!-- class="example" -->
+<a id="TLJAX305" name="TLJAX305"></a>
+<div class="sect2"><a id="sthref100" name="sthref100"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Understanding Conversion Order</font></h2>
+<p>The order of the calls to <code>addSchemaType()</code> is important; when converting an XML value into Java, EclipseLink will attempt the conversions in the order that they were added to the field, and return as soon as a successful conversion is made. For example, when unmarshalling a <code>shoeSize</code> of <strong>10.5</strong>:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+...
+shoeSizeField.addSchemaType(XMLConstants.DECIMAL_QNAME);
+shoeSizeField.addSchemaType(XMLConstants.STRING_QNAME);
+...
+ 
+</pre>
+<p>A <code>BigDecimal</code> will be created to store the value. If, however, your XMLUnionField was set up like this:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+...
+shoeSizeField.addSchemaType(XMLConstants.STRING_QNAME);
+shoeSizeField.addSchemaType(XMLConstants.DECIMAL_QNAME);
+...
+ 
+</pre>
+<p>The shoeSize value will be a <code>String</code> <strong>("10.5")</strong>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="TLJAX306" name="TLJAX306"></a>
+<div class="sect2"><a id="sthref101" name="sthref101"></a>
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Customizing Conversion Classes</font></h2>
+<p>EclipseLink uses a set of default conversions to create a value for the Java attribute (in this case, <code>xsd:decimal</code> will be converted into a <code>BigDecimal</code>). You can override this behavior in Java code using the XMLUnionField method addConversion. For example, if you want your Java object to store <code>shoeSize</code> as a <code>Float</code>:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+shoeSizeField.addConversion(XMLConstants.DECIMAL_QNAME, Float.class);
+</pre></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="special_schema_types001.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="special_schema_types003.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+ 
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+</td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Search" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini"></span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_moxy.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2013 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --></body>
+</html>

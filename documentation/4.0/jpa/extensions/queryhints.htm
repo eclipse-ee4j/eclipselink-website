@@ -1,0 +1,3654 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>JPA Query Customization Extensions | EclipseLink 4.0.x Jakarta Persistence API (JPA) Extensions Reference</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.22 Build 1" />
+<meta name="date" content="2014-06-10T10:29:49Z" />
+<meta name="description" content="This chapter describes how to specify EcpliseLink query hints (JPA query extensions). You can specify EclipseLink query hints (JPA query extensions) by:" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="JPA Query Customization Extensions" />
+<meta name="relnum" content="Release 4.0" />
+<link rel="stylesheet" type="text/css" href="../../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="http://www.eclipse.org/org/documents/epl-v10.php" title="Copyright" type="text/html" />  
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="jpql.htm" title="Previous" type="text/html" />
+<link rel="next" href="persistenceproperties_ref.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../../dcommon/header.html"></iframe><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:4sqnhke2any', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><div class="booktitle">Jakarta Persistence API (JPA) Extensions Reference for EclipseLink, 
+Release 4.0</div></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+</td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Search" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini"></span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="jpql.htm"><img src="../../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="persistenceproperties_ref.htm"><img src="../../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header --><a id="TLJPA634" name="TLJPA634"></a> <a id="sthref533" name="sthref533"></a>
+<h1 class="chapter"><font face="arial, helvetica, sans-serif" color="#330099"><span class="secnum">4</span> JPA Query Customization Extensions</font></h1>
+<a id="TLJPA54068" name="TLJPA54068"></a>
+<p>This chapter describes how to specify EcpliseLink query hints (JPA query extensions). You can specify EclipseLink query hints (JPA query extensions) by:</p>
+<ul>
+<li>
+<p>Using the <code>@QueryHint</code> annotation</p>
+</li>
+<li>
+<p>Including the hints in the <code>orm.xml</code> or <code>eclipselink-orm.xml</code> file</p>
+</li>
+<li>
+<p>Using the <code>setHint()</code> method when executing a named or dynamic query (JPQL or Criteria)</p>
+</li>
+</ul>
+<p>EclipseLink supplies the following query hints:</p>
+<ul>
+<li>
+<p><code><a href="#batch">batch</a></code></p>
+</li>
+<li>
+<p><code><a href="#BABHCJIH">batch.size</a></code></p>
+</li>
+<li>
+<p><code><a href="#BABFGHAA">batch.type</a></code></p>
+</li>
+<li>
+<p><code><a href="#cacheusage">cache-usage</a></code></p>
+</li>
+<li>
+<p><code><a href="#BABDBIDI">cache-usage.indirection-policy</a></code></p>
+</li>
+<li>
+<p><code><a href="#BABBGFJA">cursor</a></code></p>
+</li>
+<li>
+<p><code><a href="#CHDDFIDC">composite-unit.member</a></code></p>
+</li>
+<li>
+<p><code><a href="#CHDJJCHG">cursor.initial-size</a></code></p>
+</li>
+<li>
+<p><code><a href="#CACIGJGE">cursor.page-size</a></code></p>
+</li>
+<li>
+<p><code><a href="#BABJFGGC">exclusive-connection</a></code></p>
+</li>
+<li>
+<p><code><a href="#CBHFHGEB">flush</a></code></p>
+</li>
+<li>
+<p><code><a href="#CACDJCBE">history.as-of</a></code></p>
+</li>
+<li>
+<p><code><a href="#BDCBGEJG">history.as-of.scn</a></code></p>
+</li>
+<li>
+<p><code><a href="#BABEDHJB">inheritance.outer-join</a></code></p>
+</li>
+<li>
+<p><code><a href="#bindparameters">jdbc.bind-parameters</a></code></p>
+</li>
+<li>
+<p><code><a href="#allowpartialbindparameters">jdbc.allow-partial-bind-parameters</a></code></p>
+</li>
+<li>
+<p><code><a href="#BABCHAFD">jdbc.cache-statement</a></code></p>
+</li>
+<li>
+<p><code><a href="#fetchsize">jdbc.fetch-size</a></code></p>
+</li>
+<li>
+<p><code><a href="#BHAGGAIA">jdbc.first-result</a></code></p>
+</li>
+<li>
+<p><code><a href="#maxrows">jdbc.max-rows</a></code></p>
+</li>
+<li>
+<p><code><a href="#CACCHBBG">jdbc.native-connection</a></code></p>
+</li>
+<li>
+<p><code><a href="#CHDEBFHE">jdbc.parameter-delimiter</a></code></p>
+</li>
+<li>
+<p><code><a href="#timeout">jdbc.timeout</a></code></p>
+</li>
+<li>
+<p><code><a href="#fetch">join-fetch</a></code></p>
+</li>
+<li>
+<p><code><a href="#CHDEFDDC">left-join-fetch</a></code></p>
+</li>
+<li>
+<p><code><a href="#BABIJCGD">load-group</a></code></p>
+</li>
+<li>
+<p><code><a href="#CACEDHDG">load-group.attribute</a></code></p>
+</li>
+<li>
+<p><code><a href="#maintaincache">maintain-cache</a></code></p>
+</li>
+<li>
+<p><code><a href="#pessimisticlock">pessimistic-lock</a></code></p>
+</li>
+<li>
+<p><code><a href="#CHDGDECH">prepare</a></code></p>
+</li>
+<li>
+<p><code><a href="#CHDGEADJ">query-results-cache</a></code></p>
+</li>
+<li>
+<p><code><a href="#BABHGIHG">query-results-cache.expiry</a></code></p>
+</li>
+<li>
+<p><code><a href="#CBAFBFJA">query-results-cache.expiry-time-of-day</a></code></p>
+</li>
+<li>
+<p><code><a href="#CHDHGGBD">query-results-cache.ignore-null</a></code></p>
+</li>
+<li>
+<p><code><a href="#BEIGHCEF">query-results-cache.randomize-expiry</a></code></p>
+</li>
+<li>
+<p><code><a href="#CACJDDDG">query-results-cache.size</a></code></p>
+</li>
+<li>
+<p><code><a href="#CACCFFDA">query-results-cache.type</a></code></p>
+</li>
+<li>
+<p><code><a href="#querytype">query-type</a></code></p>
+</li>
+<li>
+<p><code><a href="#readonly">read-only</a></code></p>
+</li>
+<li>
+<p><code><a href="#refresh">refresh</a></code></p>
+</li>
+<li>
+<p><code><a href="#refreshcache">refresh.cascade</a></code></p>
+</li>
+<li>
+<p><code><a href="#BABCJADG">result-collection-type</a></code></p>
+</li>
+<li>
+<p><code><a href="#CIHHAEDE">sql.hint</a></code></p>
+</li>
+</ul>
+<p>All EclipseLink query hints are defined in the <code>QueryHints</code> class in the <code>org.eclipse.persistence.config package</code>. When you set a hint, you can set the value using the public static final field in the appropriate configuration class in <code>org.eclipse.persistence.config</code> package, including the following:</p>
+<ul>
+<li>
+<p><code>HintValues</code></p>
+</li>
+<li>
+<p><code>CacheUsage</code></p>
+</li>
+<li>
+<p><code>PessimisticLock</code></p>
+</li>
+<li>
+<p><code>QueryType</code></p>
+</li>
+</ul>
+<p>For more information, see Section 10.3.1 "NamedQuery Annotation" in the JPA Specification (<code><a href="http://jcp.org/en/jsr/detail?id=317">http://jcp.org/en/jsr/detail?id=317</a></code>).</p>
+<a id="batch" name="batch"></a><a id="TLJPA635" name="TLJPA635"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">batch</font></h2>
+<p>Use <code>eclipselink.batch</code> to supply EclipseLink with batching information so subsequent queries of related objects can be optimized in batches, instead of being retrieved one-by-one or in one large joined read.</p>
+<a id="sthref534" name="sthref534"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p>This query hint accepts a single-valued, relationship path expression.</p>
+<a id="sthref535" name="sthref535"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>Using the <code>eclipselink.batch</code> hint is more efficient than joining, because EclipseLink avoids reading duplicate data.</p>
+<p>You can only batch queries that have a single object in the select clause.</p>
+<p>Valid values: a single-valued relationship path expression.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>Use <em>dot notation</em> to access nested attributes. For example, to batch-read an employee's manager's address, use <code>e.manager.address</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<a id="sthref536" name="sthref536"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CBHCBIJB">Example 4-1</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="CBHCBIJB" name="CBHCBIJB"></a><a id="TLJPA636" name="TLJPA636"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-1 Using batch in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.batch", "e.address");
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CBHJEGBF">Example 4-2</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="CBHJEGBF" name="CBHJEGBF"></a><a id="TLJPA637" name="TLJPA637"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-2 Using batch in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.BATCH, value="e.address");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref537" name="sthref537"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p>"EclipseLink" JPA Query Hints <code><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Querying/Query_Hints">http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Querying/Query_Hints</a></code></p>
+</li>
+<li>
+<p><a href="#fetch">"join-fetch"</a></p>
+</li>
+<li>
+<p><a href="#BABHCJIH">"batch.size"</a></p>
+</li>
+<li>
+<p><a href="#BABFGHAA">"batch.type"</a></p>
+</li>
+<li>
+<p>"Querying" in <em>Solutions Guide for EclispeLink</em></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="BABHCJIH" name="BABHCJIH"></a><a id="TLJPA723" name="TLJPA723"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">batch.size</font></h2>
+<p>Use <code>eclipselink.batch.size</code> to configure the batch size when using <code><a href="#BABFGHAA">batch.type</a></code> set to <code>IN</code>.</p>
+<a id="sthref538" name="sthref538"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#BABEJGHF">Table 4-1</a> describes this persistence property's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA724" name="TLJPA724"></a><a id="sthref539" name="sthref539"></a><a id="BABEJGHF" name="BABEJGHF"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-1 Valid Values for batch.size</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for batch.size" summary="This table describes the valid values for the batch.size extension." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t3"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t3"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t3" headers="r1c1-t3">
+<p>Size</p>
+</td>
+<td align="left" headers="r2c1-t3 r1c2-t3">
+<p>The number of keys in each <code>IN</code> clause</p>
+<p>Default: <strong>256</strong> or the query's <code>pageSize</code> (for cursor queries)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref540" name="sthref540"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#BABHIGJA">Example 4-3</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="BABHIGJA" name="BABHIGJA"></a><a id="TLJPA54028" name="TLJPA54028"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-3 Using batch.size in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.BATCH_SIZE", "3");
+</pre></div>
+<!-- class="example" -->
+<p><a href="#BABIHJJH">Example 4-4</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="BABIHJJH" name="BABIHJJH"></a><a id="TLJPA54029" name="TLJPA54029"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-4 Using batch.size in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.BATCH_SIZE, value="3");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref541" name="sthref541"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="#batch">"batch"</a></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="BABFGHAA" name="BABFGHAA"></a><a id="TLJPA727" name="TLJPA727"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">batch.type</font></h2>
+<p>Use <code>eclipselink.batch.type</code> to specify the type of batch fetching the query should use for any batch-fetched relationships.</p>
+<a id="sthref542" name="sthref542"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#CBAEHJEE">Table 4-2</a> describes this query hint's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA728" name="TLJPA728"></a><a id="sthref543" name="sthref543"></a><a id="CBAEHJEE" name="CBAEHJEE"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-2 Valid Values for batch.type</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for batch.type" summary="This table describes the valid values for the batch.type extension." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t4"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t4"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t4" headers="r1c1-t4">
+<p><code>JOIN</code></p>
+</td>
+<td align="left" headers="r2c1-t4 r1c2-t4">
+<p>(Default) The original query's selection criteria is joined with the batch query.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t4" headers="r1c1-t4">
+<p><code>EXISTS</code></p>
+</td>
+<td align="left" headers="r3c1-t4 r1c2-t4">
+<p>Uses an SQL <code>EXISTS</code> and a sub-select in the batch query instead of a join.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t4" headers="r1c1-t4">
+<p><code>IN</code></p>
+</td>
+<td align="left" headers="r4c1-t4 r1c2-t4">
+<p>Uses an SQL <code>IN</code> clause in the batch query passing in the source object IDs.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref544" name="sthref544"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#BABGBHFC">Example 4-5</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="BABGBHFC" name="BABGBHFC"></a><a id="TLJPA54030" name="TLJPA54030"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-5 Using batch.type in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.BATCH_TYPE", "EXISTS");
+</pre></div>
+<!-- class="example" -->
+<p><a href="#BABFGECF">Example 4-6</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="BABFGECF" name="BABFGECF"></a><a id="TLJPA54031" name="TLJPA54031"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-6 Using batch.type in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.BATCH_TYPE, value="EXISTS");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref545" name="sthref545"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="#batch">"batch"</a></p>
+</li>
+<li>
+<p><a href="annotations_ref.htm#CHDCCIDA">"@BatchFetch"</a></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="cacheusage" name="cacheusage"></a><a id="TLJPA638" name="TLJPA638"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">cache-usage</font></h2>
+<p>Use <code>eclipselink.cache-usage</code> to specify how the query should interact with the EclipseLink cache.</p>
+<a id="sthref546" name="sthref546"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#BABEIJAE">Table 4-3</a> describes this query hint's valid values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA639" name="TLJPA639"></a><a id="sthref547" name="sthref547"></a><a id="BABEIJAE" name="BABEIJAE"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-3 Valid Values for org.eclipse.persistence.config.CacheUsage</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for org.eclipse.persistence.config.CacheUsage" summary="This table describes the valid values for the org.eclipse.persistence.config.CacheUsage query hint." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t5"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t5"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t5" headers="r1c1-t5">
+<p><code>DoNotCheckCache</code></p>
+</td>
+<td align="left" headers="r2c1-t5 r1c2-t5">
+<p>Always go to the database.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t5" headers="r1c1-t5">
+<p><code>CheckCacheByExactPrimaryKey</code></p>
+</td>
+<td align="left" headers="r3c1-t5 r1c2-t5">
+<p>If a read-object query contains an expression where the primary key is the only comparison, you can obtain a cache hit if you process the expression against the object in memory</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t5" headers="r1c1-t5">
+<p><code>CheckCacheByPrimaryKey</code></p>
+</td>
+<td align="left" headers="r4c1-t5 r1c2-t5">
+<p>If a read-object query contains an expression that compares at least the primary key, you can obtain a cache hit if you process the expression against the objects in memory.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t5" headers="r1c1-t5">
+<p><code>CheckCacheThenDatabase</code></p>
+</td>
+<td align="left" headers="r5c1-t5 r1c2-t5">
+<p>You can configure any read-object query to check the cache completely before you resort to accessing the database.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t5" headers="r1c1-t5">
+<p><code>CheckCacheOnly</code></p>
+</td>
+<td align="left" headers="r6c1-t5 r1c2-t5">
+<p>You can configure any read-all query to check only the parent session cache (shared cache) and return the result from it without accessing the database.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t5" headers="r1c1-t5">
+<p><code>ConformResultsInUnitOfWork</code></p>
+</td>
+<td align="left" headers="r7c1-t5 r1c2-t5">
+<p>You can configure any read-object or read-all query within the context of a unit of work to conform the results with the changes to the object made within that unit of work. This includes new objects, deleted objects and changed objects.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t5" headers="r1c1-t5">
+<p><code>UseEntityDefault</code></p>
+</td>
+<td align="left" headers="r8c1-t5 r1c2-t5">
+<p>(Default) Use the cache configuration as specified by the EclipseLink descriptor API for this entity.</p>
+<p><strong>Note</strong>: The entity default value is to not check the cache (<code>DoNotCheckCache</code>). The query will access the database and synchronize with the cache. Unless refresh has been set on the query, the cached objects will be returned without being refreshed from the database. EclipseLink does not support the cache usage for native queries or queries that have complex result sets such as returning data or multiple objects.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref548" name="sthref548"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>EclipseLink JPA uses a shared cache assessed across the entire persistence unit. After completing an operation in a particular persistence context, EclipseLink merges the results into the shared cache, so that other persistence contexts can use the results <em>regardless of whether the entity manager and persistence context are created in Java SE or Jakarta EE</em>.</p>
+<p>Any entity persisted or removed using the entity manager will always consistently maintained with the cache.</p>
+<a id="sthref549" name="sthref549"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#BABCBJAH">Example 4-7</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="BABCBJAH" name="BABCBJAH"></a><a id="TLJPA640" name="TLJPA640"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-7 Using cache-usage in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.CacheUsage;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint(QueryHints.CACHE_USAGE, CacheUsage.CheckCacheOnly);
+</pre></div>
+<!-- class="example" -->
+<p><a href="#BABBFCGD">Example 4-8</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="BABBFCGD" name="BABBFCGD"></a><a id="TLJPA641" name="TLJPA641"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-8 Using cache-usage in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.CacheUsage;
+ import org.eclipse.persistence.config.TargetDatabase;
+ @QueryHint(name=QueryHints.CACHE_USAGE, value=CacheUsage.CheckCacheOnly);
+
+</pre></div>
+<!-- class="example" -->
+<a id="sthref550" name="sthref550"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p>"EclipseLink Caches" in <em>Understanding EclipseLink</em></p>
+</li>
+<li>
+<p>"Querying" in <em>Solutions Guide for EclispeLink</em></p>
+</li>
+<li>
+<p>"Enhancing Performance" in <em>Solutions Guide for EclispeLink</em></p>
+</li>
+<li>
+<p><a href="#BABDBIDI">"cache-usage.indirection-policy"</a></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="BABDBIDI" name="BABDBIDI"></a><a id="TLJPA731" name="TLJPA731"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">cache-usage.indirection-policy</font></h2>
+<p>Use <code>eclipselink.cache-usage.indirection-policy</code> (with <a href="#cacheusage">cache-usage</a>) to configure in-memory querying and conforming's treatment of uninstantiated indirection/lazy relationships.</p>
+<a id="sthref551" name="sthref551"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#CBAHAACF">Table 4-4</a> describes this query hint's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA732" name="TLJPA732"></a><a id="sthref552" name="sthref552"></a><a id="CBAHAACF" name="CBAHAACF"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-4 Valid Values for cache-usage.indirection-policy</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for cache-usage.indirection-policy" summary="This table describes the valid values for the cache-usage.indirection-policy extension." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t6"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t6"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t6" headers="r1c1-t6">
+<p><code>Conform</code></p>
+</td>
+<td align="left" headers="r2c1-t6 r1c2-t6">
+<p>If conforming encounters an uninstantiated indirection/lazy object, it is assumed to conform.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t6" headers="r1c1-t6">
+<p><code>Exception</code></p>
+</td>
+<td align="left" headers="r3c1-t6 r1c2-t6">
+<p>(Default) If conforming encounters an uninstantiated indirection/lazy object an exception is thrown.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t6" headers="r1c1-t6">
+<p><code>NotConform</code></p>
+</td>
+<td align="left" headers="r4c1-t6 r1c2-t6">
+<p>If conforming encounters an uninstantiated indirection/lazy object it is assumed to not conform.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t6" headers="r1c1-t6">
+<p><code>Trigger</code></p>
+</td>
+<td align="left" headers="r5c1-t6 r1c2-t6">
+<p>If conforming encounters an uninstantiated indirection/lazy object it is triggered.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref553" name="sthref553"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>This hint applies only when the query traverses a <code>join</code> across a lazy relationship.</p>
+<a id="sthref554" name="sthref554"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CHDGHCAF">Example 4-9</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="CHDGHCAF" name="CHDGHCAF"></a><a id="TLJPA733" name="TLJPA733"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-9 Using cache-usage.indirection-policy in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+query.setHint(QueryHints.INDIRECTION_POLICY, CacheUsageIndirectionPolicy.Trigger); 
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CHDEFCID">Example 4-10</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="CHDEFCID" name="CHDEFCID"></a><a id="TLJPA734" name="TLJPA734"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-10 Using cache-usage.indirection-policy in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+@QueryHint(name=QueryHints.INDIRECTION_POLICY, value=CacheUsageIndirectionPolicy.Trigger) 
+</pre></div>
+<!-- class="example" -->
+<a id="sthref555" name="sthref555"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p>"EclipseLink" JPA Query Hints <code><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Querying/Query_Hints">http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Querying/Query_Hints</a></code></p>
+</li>
+<li>
+<p>"EclipseLink Caches" in <em>Understanding EclipseLink</em></p>
+</li>
+<li>
+<p>"Querying" in <em>Solutions Guide for EclispeLink</em></p>
+</li>
+<li>
+<p><a href="#cacheusage">"cache-usage"</a></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="BABBGFJA" name="BABBGFJA"></a><a id="TLJPA735" name="TLJPA735"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">cursor</font></h2>
+<p>Use <code>eclipselink.cursor</code> to configure the query to return a <code>CursoredStream</code>.</p>
+<a id="sthref556" name="sthref556"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#BABDGGBI">Table 4-5</a> describes this persistence property's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA736" name="TLJPA736"></a><a id="sthref557" name="sthref557"></a><a id="BABDGGBI" name="BABDGGBI"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-5 Valid Values for cursor</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for cursor" summary="This table describes the valid values for the cursor extension." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t7"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t7"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t7" headers="r1c1-t7">
+<p><code>true</code></p>
+</td>
+<td align="left" headers="r2c1-t7 r1c2-t7"><br /></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t7" headers="r1c1-t7">
+<p><code>false</code></p>
+</td>
+<td align="left" headers="r3c1-t7 r1c2-t7">
+<p>(Default)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref558" name="sthref558"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>A <em>Cursor</em> is a stream of the JDBC <code>ResultSet</code>. Cursors are useful for large results sets, or when you only need the few results of a query.</p>
+<p>A cursor implements <code>Enumeration</code>, when the each <code>next()</code> will fetch the next from the JDBC <code>ResultSet</code>, and builds the resulting Object or value. A Cursor requires, and will keep, a live JDBC connection. You must use <code>close()</code> to free the Cursor's resources.</p>
+<p>You can access a Cursor from a JPA Query through <code>getSingleResult()</code>, or from <code>JpaQuery</code> using <code>getResultCursor()</code>.</p>
+<div align="center">
+<div class="inftblnotealso"><br />
+<table class="NoteAlso oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p><font face="arial, helvetica, sans-serif"><strong>Tip:</strong></font></p>
+<p>You can use <code>MAX_ROWS</code> and <code>FIRST_RESULT</code> instead of a Cursor to obtain a page of results.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnotealso" --></div>
+<a id="sthref559" name="sthref559"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#BABHFHEG">Example 4-11</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="BABHFHEG" name="BABHFHEG"></a><a id="TLJPA54032" name="TLJPA54032"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-11 Using cursor in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.cursor", "TRUE");
+</pre></div>
+<!-- class="example" -->
+<p><a href="#BABFADCA">Example 4-12</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="BABFADCA" name="BABFADCA"></a><a id="TLJPA54033" name="TLJPA54033"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-12 Using cursor in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.CURSOR, value="TRUE");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref560" name="sthref560"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="#CHDJJCHG">"cursor.initial-size"</a></p>
+</li>
+<li>
+<p><a href="#CACIGJGE">"cursor.page-size"</a></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="CHDDFIDC" name="CHDDFIDC"></a><a id="TLJPA54134" name="TLJPA54134"></a>
+<hr />
+<div class="refsect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">composite-unit.member</font></h2>
+<p>The ecliplselink.composite-unit.member query hint specifies the name of the composite member persistence unit on which you want to execute the query. You must use it on a native query executed on a composite persistence unit.</p>
+<a id="sthref561" name="sthref561"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#CHDIAHAB">Table 4-6</a> describes this persistence property's values.</p>
+<div class="tblformalwide"><a id="TLJPA54135" name="TLJPA54135"></a><a id="sthref562" name="sthref562"></a><a id="CHDIAHAB" name="CHDIAHAB"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-6 Valid Values for composite-unit.member</font></em></strong></p>
+<table class="FormalWide" title="Valid Values for composite-unit.member" summary="This table describes the valid values for the composite-unit.member persistence property." dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="25%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t9"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t9"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t9" headers="r1c1-t9">
+<p>value</p>
+</td>
+<td align="left" headers="r2c1-t9 r1c2-t9">
+<p>The name of the composite persistence unit.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformalwide" -->
+<a id="sthref563" name="sthref563"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CHDEJEAE">Example 4-13</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="CHDEJEAE" name="CHDEJEAE"></a><a id="TLJPA54136" name="TLJPA54136"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-13 Using composite-unit.member in a JPA query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.QueryHints;
+query.setHint("eclipselink.composite-unit.member", "mypersistentunit");
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CHDDJEAA">Example 4-14</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="CHDDJEAA" name="CHDDJEAA"></a><a id="TLJPA54137" name="TLJPA54137"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-14 Using composite-unit.member in an @QueryHint annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.QueryHints;
+@QueryHint(name=QueryHints.COMPOSITE_UNIT_MEMBER, 
+value="mypersistentunit");
+</pre></div>
+<!-- class="example" --></div>
+<!-- class="refsect1" -->
+<a id="CHDJJCHG" name="CHDJJCHG"></a><a id="TLJPA739" name="TLJPA739"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">cursor.initial-size</font></h2>
+<p>Use <code>eclipselink.cursor.initial-size</code> to configure the query to return a CursoredStream with the specified initial size.</p>
+<a id="sthref564" name="sthref564"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#CHDBDJEA">Table 4-7</a> describes this query hint's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA740" name="TLJPA740"></a><a id="sthref565" name="sthref565"></a><a id="CHDBDJEA" name="CHDBDJEA"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-7 Valid Values for cursor.initial-size</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for cursor.initial-size" summary="This table describes the valid values for the cursor.initial-size extension." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t10"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t10"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t10" headers="r1c1-t10">
+<p><code>Integer</code> or <code>Strings</code> that can be parsed to <code>int</code> values</p>
+</td>
+<td align="left" headers="r2c1-t10 r1c2-t10">
+<p>The initial number of objects that are prebuilt for the stream before a <code>next()</code> is called</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref566" name="sthref566"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CHDIIBJH">Example 4-15</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="CHDIIBJH" name="CHDIIBJH"></a><a id="TLJPA741" name="TLJPA741"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-15 Using cursor.initial-size in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.cursor_initial_size", "10");
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CHDIHGDI">Example 4-16</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="CHDIHGDI" name="CHDIHGDI"></a><a id="TLJPA742" name="TLJPA742"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-16 Using cursor.initial-size in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.CURSOR_INITIAL_SIZE, value="10");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref567" name="sthref567"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="#BABBGFJA">"cursor"</a></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="CACIGJGE" name="CACIGJGE"></a><a id="TLJPA54069" name="TLJPA54069"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">cursor.page-size</font></h2>
+<p>Use <code>eclipselink.cursor.page-size</code> to configure the query to return a <code>CursoredStream</code> with the specified page size.</p>
+<a id="sthref568" name="sthref568"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#BABEBBJJ">Table 4-8</a> describes this query hint's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA54070" name="TLJPA54070"></a><a id="sthref569" name="sthref569"></a><a id="BABEBBJJ" name="BABEBBJJ"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-8 Valid Values for cursor.page-size</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for cursor.page-size" summary="This table describes the valid values for the cursor.page-size extension." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t11"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t11"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t11" headers="r1c1-t11">
+<p><code>Integer</code> or <code>Strings</code> that can be parsed to <code>int</code> values</p>
+</td>
+<td align="left" headers="r2c1-t11 r1c2-t11">
+<p>The number of objects that are fetched from the stream on a <code>next()</code> call, if the buffer of objects is empty</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref570" name="sthref570"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CHDIAFBG">Example 4-17</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="CHDIAFBG" name="CHDIAFBG"></a><a id="TLJPA54071" name="TLJPA54071"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-17 Using cursor.page-size in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.CURSOR_PAGE_SIZE", "10");
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CHDIACBG">Example 4-18</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="CHDIACBG" name="CHDIACBG"></a><a id="TLJPA54072" name="TLJPA54072"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-18 Using cursor.page-size in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.CURSOR_PAGE_SIZE, value="10");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref571" name="sthref571"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="#BABBGFJA">"cursor"</a></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="BABJFGGC" name="BABJFGGC"></a><a id="TLJPA747" name="TLJPA747"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">exclusive-connection</font></h2>
+<p>Use <code>eclipselink.exclusive-connection</code> to specify if the query should use the exclusive (transactional/write) connection.</p>
+<a id="sthref572" name="sthref572"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#BABGGEAH">Table 4-9</a> describes this query hint's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA748" name="TLJPA748"></a><a id="sthref573" name="sthref573"></a><a id="BABGGEAH" name="BABGGEAH"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-9 Valid Values for exclusive-connection</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for exclusive-connection" summary="This table describes the valid values for the exclusive-connection extension." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t12"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t12"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t12" headers="r1c1-t12">
+<p>true</p>
+</td>
+<td align="left" headers="r2c1-t12 r1c2-t12">
+<p>The query is executed through the exclusive connection.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t12" headers="r1c1-t12">
+<p>false</p>
+</td>
+<td align="left" headers="r3c1-t12 r1c2-t12"><br /></td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref574" name="sthref574"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>This is valid only when an <code>EXCLUSIVE_CONNECTION_MODE</code> property has been set for the persistence unit (such as VPD). If a <code><a href="persistenceproperties_ref.htm#CACBICGG2">jdbc.exclusive-connection.mode</a></code> has been configured, use this query hint to ensure that the query is executed through the exclusive connection.</p>
+<p>This may be required in certain cases, such as when database security prevents a query joining to a secure table from returning the correct results, when executed through the shared connection.</p>
+<a id="sthref575" name="sthref575"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CHDHHEGA">Example 4-19</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="CHDHHEGA" name="CHDHHEGA"></a><a id="TLJPA749" name="TLJPA749"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-19 Using exclusive-connection in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.EXCLUSIVE_CONNECTION", "TRUE");
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CHDIGEII">Example 4-20</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="CHDIGEII" name="CHDIGEII"></a><a id="TLJPA750" name="TLJPA750"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-20 Using exclusive-connection in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.EXCLUSIVE_CONNECTION, value="TRUE");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref576" name="sthref576"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="persistenceproperties_ref.htm#CACBICGG2">"jdbc.exclusive-connection.mode"</a></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="CBHFHGEB" name="CBHFHGEB"></a><a id="TLJPA751" name="TLJPA751"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">flush</font></h2>
+<p>Use <code>eclipselink.flush</code> to specify if the query should flush the persistence context before executing.</p>
+<a id="sthref577" name="sthref577"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#CBAGCCIH">Table 4-10</a> describes this query hint's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA752" name="TLJPA752"></a><a id="sthref578" name="sthref578"></a><a id="CBAGCCIH" name="CBAGCCIH"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-10 Valid Values for flush</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for flush" summary="This table describes the valid values for the flush extension." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t13"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t13"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t13" headers="r1c1-t13">
+<p><code>true</code></p>
+</td>
+<td align="left" headers="r2c1-t13 r1c2-t13">
+<p>The query triggers a flush of the persistence context before execution</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t13" headers="r1c1-t13">
+<p><code>false</code></p>
+</td>
+<td align="left" headers="r3c1-t13 r1c2-t13">
+<p>(Default)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref579" name="sthref579"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>If the query may access objects that have been changed in the persistence context, you must trigger a flush in order for the query to see the changes. If the query does not require seeing the changes, you should avoid the flush in order to improve performance.</p>
+<p>You can also configure the flush-mode as a persistence unit property. See <a href="persistenceproperties_ref.htm#CDEJGBEI">"flush-clear.cache"</a> for more information.</p>
+<p>You can also use conforming to query changes without requiring a flush. See <a href="#cacheusage">"cache-usage"</a> for more information.</p>
+<a id="sthref580" name="sthref580"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CHDGGHHG">Example 4-21</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="CHDGGHHG" name="CHDGGHHG"></a><a id="TLJPA753" name="TLJPA753"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-21 Using flush in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.FLUSH", "TRUE");
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CHDHDACD">Example 4-22</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="CHDHDACD" name="CHDHDACD"></a><a id="TLJPA754" name="TLJPA754"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-22 Using flush in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.FLUSH, value="TRUE");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref581" name="sthref581"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="persistenceproperties_ref.htm#BABDHEEB">"persistence-context.flush-mode"</a></p>
+</li>
+<li>
+<p><a href="persistenceproperties_ref.htm#CDEJGBEI">"flush-clear.cache"</a></p>
+</li>
+<li>
+<p>"EclipseLink" JPA Query Hints <code><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Querying/Query_Hints">http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Querying/Query_Hints</a></code></p>
+</li>
+<li>
+<p>"EclipseLink Caches" in <em>Understanding EclipseLink</em></p>
+</li>
+<li>
+<p>"Querying" in <em>Solutions Guide for EclispeLink</em></p>
+</li>
+<li>
+<p><a href="#BABDBIDI">"cache-usage.indirection-policy"</a></p>
+</li>
+<li>
+<p><a href="#cacheusage">"cache-usage"</a></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="CACDJCBE" name="CACDJCBE"></a><a id="TLJPA755" name="TLJPA755"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">history.as-of</font></h2>
+<p>Configures the query to query the state of the object as-of a point in time.</p>
+<a id="sthref582" name="sthref582"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#CACFHAJC">Table 4-11</a> describes this query hint's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA756" name="TLJPA756"></a><a id="sthref583" name="sthref583"></a><a id="CACFHAJC" name="CACFHAJC"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-11 Valid Values for history.as-of</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for history.as-of" summary="This table describes the valid values for the history.as-of extension." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t14"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t14"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t14" headers="r1c1-t14">
+<p>Timestamp</p>
+</td>
+<td align="left" headers="r2c1-t14 r1c2-t14">
+<p>Timestamp, in the form: <code>YYYY/MM/DD HH:MM:SS.n</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref584" name="sthref584"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>Both the query execution and result will conform to the database as it existed based on the database SCN.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>This query hint requires a class with historical support or when using Oracle Flashback.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<a id="sthref585" name="sthref585"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CHDGCFEI">Example 4-23</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="CHDGCFEI" name="CHDGCFEI"></a><a id="TLJPA757" name="TLJPA757"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-23 Using history.as-of in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.AS_OF", "2012/10/15 11:21:18.2");
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CHDIEAIC">Example 4-24</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="CHDIEAIC" name="CHDIEAIC"></a><a id="TLJPA758" name="TLJPA758"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-24 Using history.as-of in @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.AS_OF, value="2012/10/15 11:21:18.2");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref586" name="sthref586"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="#BDCBGEJG">"history.as-of.scn"</a></p>
+</li>
+<li>
+<p>"Using Oracle Flashback Technology" in <em>Oracle Database Advanced Application Developer's Guide</em></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="BDCBGEJG" name="BDCBGEJG"></a><a id="TLJPA759" name="TLJPA759"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">history.as-of.scn</font></h2>
+<p>Use <code>eclipselink.history.as-of.scn</code> to configure the query to query the state of the object as-of a database SCN (System Change Number).</p>
+<a id="sthref587" name="sthref587"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#CBACAFGG">Table 4-12</a> describes this query hint's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA760" name="TLJPA760"></a><a id="sthref588" name="sthref588"></a><a id="CBACAFGG" name="CBACAFGG"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-12 Valid Values for history.as-of.scn</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for history.as-of.scn" summary="This table describes the valid values for the history.as-of.scn extension." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t16"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t16"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t16" headers="r1c1-t16">
+<p>value</p>
+</td>
+<td align="left" headers="r2c1-t16 r1c2-t16">
+<p>Integer SCN value</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref589" name="sthref589"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>This query hint requires Oracle Flashback support.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<a id="sthref590" name="sthref590"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CHDGAJAB">Example 4-25</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="CHDGAJAB" name="CHDGAJAB"></a><a id="TLJPA761" name="TLJPA761"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-25 Using history.as-of.scn in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.AS_OF_SCN", "3");
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CHDIHCFG">Example 4-26</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="CHDIHCFG" name="CHDIHCFG"></a><a id="TLJPA762" name="TLJPA762"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-26 Using history.as-of.scn in @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.AS_OF_SCN, value="3");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref591" name="sthref591"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="#CACDJCBE">"history.as-of"</a></p>
+</li>
+<li>
+<p>"Using Oracle Flashback Technology" in <em>Oracle Database Advanced Application Developer's Guide</em></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="BABEDHJB" name="BABEDHJB"></a><a id="TLJPA763" name="TLJPA763"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">inheritance.outer-join</font></h2>
+<p>Use <code>eclipselink.inheritance.outer-join</code> to configure the query to use an outer-join for all subclasses.</p>
+<a id="sthref592" name="sthref592"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#CBAGHABJ">Table 4-13</a> describes this query hint's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA764" name="TLJPA764"></a><a id="sthref593" name="sthref593"></a><a id="CBAGHABJ" name="CBAGHABJ"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-13 Valid Values for inheritance.outer-join</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for inheritance.outer-join" summary="This table describes the valid values for the inheritance.outer-join extension." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t18"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t18"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t18" headers="r1c1-t18">
+<p><code>true</code></p>
+</td>
+<td align="left" headers="r2c1-t18 r1c2-t18">
+<p>Use outer-join.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t18" headers="r1c1-t18">
+<p><code>false</code></p>
+</td>
+<td align="left" headers="r3c1-t18 r1c2-t18">
+<p>(Default) Do not use outer-join; execute a separate query for each subclass.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref594" name="sthref594"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>This query hint can be used queries to root or branch inherited classes.</p>
+<p>You can also configure this behavior by using a <code>DescriptorCustomizer</code> (see <a href="persistenceproperties_ref.htm#CCHIEAIA">"descriptor.customizer"</a>).</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>This is required for correct ordering, <code>firstResult</code>, <code>maxResult</code>, and cursors.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<a id="sthref595" name="sthref595"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CHDICAFC">Example 4-27</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="CHDICAFC" name="CHDICAFC"></a><a id="TLJPA765" name="TLJPA765"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-27 Using inheritance.outer-join in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.INHERITANCE_OUTER_JOIN", "TRUE");
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CHDIFIJJ">Example 4-28</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="CHDIFIJJ" name="CHDIFIJJ"></a><a id="TLJPA54034" name="TLJPA54034"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-28 Using inheritance.outer-join in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.INHERITANCE_OUTER_JOIN, value="TRUE");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref596" name="sthref596"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p>"Inheritance" in <em>Understanding EclipseLink</em></p>
+</li>
+<li>
+<p>"Enhancing Performance" in <em>Solutions Guide for EclispeLink</em></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="bindparameters" name="bindparameters"></a><a id="TLJPA642" name="TLJPA642"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">jdbc.bind-parameters</font></h2>
+<p>Use <code>eclipselink.jdbc.bind-parameters</code> to specify if the query uses parameter binding (parameterized SQL).</p>
+<a id="sthref597" name="sthref597"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#BABHJFEJ">Table 4-14</a> describes this query hint's valid values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA643" name="TLJPA643"></a><a id="sthref598" name="sthref598"></a><a id="BABHJFEJ" name="BABHJFEJ"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-14 Valid Values for org.eclipse.persistence.config.HintValues</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for org.eclipse.persistence.config.HintValues" summary="This table describes the valid values for the org.eclipse.persistence.config.HintValues query hint." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t20"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t20"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t20" headers="r1c1-t20">
+<p><code>TRUE</code></p>
+</td>
+<td align="left" headers="r2c1-t20 r1c2-t20">
+<p>Bind all parameters.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t20" headers="r1c1-t20">
+<p><code>FALSE</code></p>
+</td>
+<td align="left" headers="r3c1-t20 r1c2-t20">
+<p>Do not bind all parameters.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t20" headers="r1c1-t20">
+<p><code>PERSISTENCE_UNIT_DEFAULT</code></p>
+</td>
+<td align="left" headers="r4c1-t20 r1c2-t20">
+<p>(Default) Use the parameter binding setting made in your EclipseLink session's database login, which is true by default.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref599" name="sthref599"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>By default, EclipseLink enables parameter binding and statement caching. This causes EclipseLink to use a prepared statement, binding all SQL parameters and caching the prepared statement. When you re-execute this query, you avoid the SQL preparation, which improves performance.</p>
+<p>You can also configure parameter binding for the persistence unit in the <code>persistence.xml</code> file (when used in a Java SE environment).</p>
+<a id="sthref600" name="sthref600"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#BABGDCJA">Example 4-29</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="BABGDCJA" name="BABGDCJA"></a><a id="TLJPA644" name="TLJPA644"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-29 Using bind-parameters in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint(QueryHints.BIND_PARAMETERS, HintValues.TRUE);
+</pre></div>
+<!-- class="example" -->
+<p><a href="#BABIHAEJ">Example 4-30</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="BABIHAEJ" name="BABIHAEJ"></a><a id="TLJPA645" name="TLJPA645"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-30 Using bind-parameters in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.TargetDatabase;
+ @QueryHint(name=QueryHints.BIND_PARAMETERS, value=HintValues.TRUE);
+</pre></div>
+<!-- class="example" -->
+<p><a href="#BABFBBJD">Example 4-31</a> shows how to configure parameter binding in the persistence unit <code>persistence.xml</code> file.</p>
+<div class="example"><a id="BABFBBJD" name="BABFBBJD"></a><a id="TLJPA646" name="TLJPA646"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-31 Specifying Parameter Binding Persistence Unit Property</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;property name="eclipselink.jdbc.bind-parameters" value="false"/&gt;
+</pre>
+<p>Or by importing a <code>property</code> map:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.PersistenceUnitProperties;
+propertiesMap.put(PersistenceUnitProperties.JDBC_BIND_PARAMETERS, "true");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref601" name="sthref601"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="persistenceproperties_ref.htm#CHDHAFAA">"jdbc.cache-statements"</a></p>
+</li>
+<li>
+<p><a href="persistenceproperties_ref.htm#CIHJADHF">"jdbc.batch-writing.size"</a></p>
+</li>
+<li>
+<p>"Parameterized SQL and Statement Caching" in <em>Solutions Guide for EclispeLink</em></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="allowpartialbindparameters" name="allowpartialbindparameters"></a><a id="TLJPA831" name="TLJPA831"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">jdbc.allow-partial-bind-parameters</font></h2>
+<p>Use <code>eclipselink.jdbc.allow-partial-bind-parameters</code> to specify if parameter binding decisions apply to individual expressions or the whole query.</p>
+<a id="sthref597" name="sthref597"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#BABHJFEK">Table 4-83</a> describes this persistence property's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA832" name="TLJPA832"></a><a id="sthref833" name="sthref833"></a><a id="BABHJFEK" name="BABHJFEK"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-83 Valid Values for jdbc.allow-partial-bind-parameters</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for jdbc.allow-partial-bind-parameters" summary="This table describes the valid values for the jdbc.allow-partial-bind-parameters persistence property." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t20"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t20"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t20" headers="r1c1-t20">
+<p><code>TRUE</code></p>
+</td>
+<td align="left" headers="r2c1-t20 r1c2-t20">
+<p>EclipseLink binds parameters per SQL function/expression.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t20" headers="r1c1-t20">
+<p><code>FALSE</code></p>
+</td>
+<td align="left" headers="r3c1-t20 r1c2-t20">
+<p>(Default) EclipseLink either binds all parameters or no parameters; depending on database support.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref834" name="sthref834"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>EclipseLink determines binding behavior based on the database's support for binding. If the database does not support binding, for a specific expression, EclipseLink will disable parameter binding for the whole query. Setting this property to 'true' will allow EclipseLink to bind per expression, instead of per query.</p>
+<a id="sthref835" name="sthref835"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<!-- class="example" -->
+<p><a href="#BABFBBJK">Example 4-83</a> shows how to configure parameter binding in the persistence unit <code>persistence.xml</code> file.</p>
+<div class="example"><a id="BABFBBJK" name="BABFBBJK"></a><a id="TLJPA836" name="TLJPA836"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-83 Specifying Allow Partial Parameter Binding Persistence Unit Property</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;property name="eclipselink.jdbc.allow-partial-bind-parameters" value="true"/&gt;
+</pre>
+<p>Or by importing a <code>property</code> map:</p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.PersistenceUnitProperties;
+propertiesMap.put(PersistenceUnitProperties.JDBC_ALLOW_PARTIAL_PARAMETERS, "true");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref837" name="sthref837"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="#bindparameters">"jdbc.bind-parameters"</a></p>
+</li>
+<li>
+<p><a href="persistenceproperties_ref.htm#CIHJADHF">"jdbc.batch-writing.size"</a></p>
+</li>
+<li>
+<p>"Parameterized SQL and Statement Caching" in <em>Solutions Guide for EclispeLink</em></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="BABCHAFD" name="BABCHAFD"></a><a id="TLJPA766" name="TLJPA766"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">jdbc.cache-statement</font></h2>
+<p>Specify if the query caches its JDBC statement.</p>
+<a id="sthref602" name="sthref602"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#CHDIBGGB">Table 4-15</a> describes this query hint's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA767" name="TLJPA767"></a><a id="sthref603" name="sthref603"></a><a id="CHDIBGGB" name="CHDIBGGB"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-15 Valid Values for jdbc.cache-statement</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for jdbc.cache-statement" summary="This table describes the valid values for the jdbc.cache-statement extension." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t21"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t21"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t21" headers="r1c1-t21">
+<p><code>true</code></p>
+</td>
+<td align="left" headers="r2c1-t21 r1c2-t21">
+<p>The query will cache its JDBC statement.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t21" headers="r1c1-t21">
+<p><code>false</code></p>
+</td>
+<td align="left" headers="r3c1-t21 r1c2-t21">
+<p>(Default)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref604" name="sthref604"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>This allows queries to use parameterized SQL with statement caching. It also allows a specific query to not cache its statement, if statement caching is enable for the persistence unit.</p>
+<div align="center">
+<div class="inftblnotealso"><br />
+<table class="NoteAlso oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p><font face="arial, helvetica, sans-serif"><strong>Tip:</strong></font></p>
+<p>Normally, you should set statement caching for the entire persistence unit (see <a href="persistenceproperties_ref.htm#CHDHAFAA">"jdbc.cache-statements"</a>) instead of each query.</p>
+<p>When using a <code>DataSource</code>, you must set statement caching in the <code>DataSource</code> configuration.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnotealso" --></div>
+<a id="sthref605" name="sthref605"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CHDIAHFI">Example 4-32</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="CHDIAHFI" name="CHDIAHFI"></a><a id="TLJPA54035" name="TLJPA54035"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-32 Using jdbc.cache-statement in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.CACHE_STATEMENT", "TRUE");
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CHDHEDDG">Example 4-33</a> shows how to use this hint in the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="CHDHEDDG" name="CHDHEDDG"></a><a id="TLJPA54036" name="TLJPA54036"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-33 Using jdbc.cache-statement in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.CACHE_STATEMENT, value="TRUE");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref606" name="sthref606"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="persistenceproperties_ref.htm#CHDHAFAA">"jdbc.cache-statements"</a></p>
+</li>
+<li>
+<p>"Enhancing Performance" in <em>Solutions Guide for EclispeLink</em></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="fetchsize" name="fetchsize"></a><a id="TLJPA647" name="TLJPA647"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">jdbc.fetch-size</font></h2>
+<p>Use <code>eclipselink.jdbc.fetch-size</code> to specify the number of rows to be fetched from the database when additional rows are needed.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>This property requires JDBC driver support.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<a id="sthref607" name="sthref607"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#CHDHHCFG">Table 4-16</a> describes this query hint's valid values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA648" name="TLJPA648"></a><a id="sthref608" name="sthref608"></a><a id="CHDHHCFG" name="CHDHHCFG"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-16 Valid Values for eclipselink.jdbc.fetch-size</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for eclipselink.jdbc.fetch-size" summary="This table describes the valid values for the eclipselink.jdbc.fetch-size query hint." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t24"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t24"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t24" headers="r1c1-t24">
+<p>from <code>0</code> to <code>Integer.MAX_VALUE</code></p>
+</td>
+<td align="left" headers="r2c1-t24 r1c2-t24">
+<p>(Default = <code>0</code>) As a <code>String</code>, depending on your JDBC driver.</p>
+<p>If 0, the JDBC driver default will be used.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref609" name="sthref609"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>For queries that return a large number of objects, you can configure the row fetch size used in the query to improve performance by reducing the number database hits required to satisfy the selection criteria.</p>
+<p>By default, most JDBC drivers use a fetch size of 10. , so if you are reading 1000 objects, increasing the fetch size to 256 can significantly reduce the time required to fetch the query's results. The optimal fetch size is not always obvious. Usually, a fetch size of one half or one quarter of the total expected result size is optimal.</p>
+<p>If you are unsure of the result set size, incorrectly setting a fetch size too large or too small can decrease performance.</p>
+<a id="sthref610" name="sthref610"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CHDBEBDE">Example 4-34</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="CHDBEBDE" name="CHDBEBDE"></a><a id="TLJPA649" name="TLJPA649"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-34 Using jdbc.fetch-size in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.JDBC_FETCH_SIZE", "100");
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CHDHFAHJ">Example 4-35</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="CHDHFAHJ" name="CHDHFAHJ"></a><a id="TLJPA650" name="TLJPA650"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-35 Using jdbc.fetch-size in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.JDBC_FETCH_SIZE, value="100");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref611" name="sthref611"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p>"EclipseLink" JPA Query Hints <code><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Querying/Query_Hints">http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Querying/Query_Hints</a></code></p>
+</li>
+<li>
+<p>"Querying" and "Enhancing Performance" in <em>Solutions Guide for EclispeLink</em></p>
+</li>
+<li>
+<p>"EclipseLink Caches" in <em>Understanding EclipseLink</em></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="BHAGGAIA" name="BHAGGAIA"></a><a id="TLJPA770" name="TLJPA770"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">jdbc.first-result</font></h2>
+<p>Use <code>eclipselink.jdbc.first-result</code> to specify if the query should skip the specified number of rows in the result.</p>
+<a id="sthref612" name="sthref612"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#BHAGFHHH">Table 4-17</a> describes this query hint's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA771" name="TLJPA771"></a><a id="sthref613" name="sthref613"></a><a id="BHAGFHHH" name="BHAGFHHH"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-17 Valid Values for jdbc.first-result</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for jdbc.first-result" summary="This table describes the valid values for the jdbc.first-result extension." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t25"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t25"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t25" headers="r1c1-t25">
+<p>Integer</p>
+</td>
+<td align="left" headers="r2c1-t25 r1c2-t25">
+<p><code>Integer</code> or <code>String</code> value that can be parsed to an <code>int</code> value.</p>
+<p>The position of the first result to retrieve.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref614" name="sthref614"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>This query hint is similar to JPA Query <code>setFirstResults()</code>, but can be set in metadata for <code>NamedQuerys</code>.</p>
+<a id="sthref615" name="sthref615"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CHDIFCDA">Example 4-36</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="CHDIFCDA" name="CHDIFCDA"></a><a id="TLJPA772" name="TLJPA772"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-36 Using jdbc.first-result in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.JDBC_FIRST_RESULT", "10");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref616" name="sthref616"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p>"Query Concepts" in <em>Understanding EclipseLink</em></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="maxrows" name="maxrows"></a><a id="TLJPA651" name="TLJPA651"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">jdbc.max-rows</font></h2>
+<p>Use <code>eclipselink.jdbc.max-rows</code> to specify the maximum number of rows to be returned. If the query returns more rows than specified, the trailing rows will not be returned.</p>
+<a id="sthref617" name="sthref617"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#BACJCJHA">Table 4-18</a> describes this query hint's valid values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA652" name="TLJPA652"></a><a id="sthref618" name="sthref618"></a><a id="BACJCJHA" name="BACJCJHA"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-18 Valid Values for eclipselink.jdbc.max-rows</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for eclipselink.jdbc.max-rows" summary="This table describes the valid values for the eclipselink.jdbc.max-rows query hint." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t26"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t26"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t26" headers="r1c1-t26">
+<p><code>Int</code> or <code>String</code> (that can be parsed to <code>Int</code> values)</p>
+</td>
+<td align="left" headers="r2c1-t26 r1c2-t26">
+<p>Configures the JDBC maximum number of rows.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref619" name="sthref619"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>This hint is similar to JPQL <code>setMaxResults()</code>, but can be specified within the metadata for <code>NamedQueries</code>.</p>
+<a id="sthref620" name="sthref620"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#BACJHHJB">Example 4-37</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="BACJHHJB" name="BACJHHJB"></a><a id="TLJPA653" name="TLJPA653"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-37 Using jdbc.max-rows in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.JDBC_MAX_ROWS", "100");
+</pre></div>
+<!-- class="example" -->
+<p><a href="#BACEDDBB">Example 4-38</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="BACEDDBB" name="BACEDDBB"></a><a id="TLJPA654" name="TLJPA654"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-38 Using jdbc.max-rows in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.JDBC_MAX_ROWS, value="100");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref621" name="sthref621"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p>EclipseLink Pagination Example http://wiki.eclipse.org/EclipseLink/Examples/JPA/Pagination</p>
+</li>
+<li>
+<p>"Query Concepts" in <em>Understanding EclipseLink</em></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="CACCHBBG" name="CACCHBBG"></a><a id="TLJPA773" name="TLJPA773"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">jdbc.native-connection</font></h2>
+<p>Use <code>eclipselink.jdbc.native-connection</code> to specify if the query requires a native JDBC connection.</p>
+<a id="sthref622" name="sthref622"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#CBAFCGCJ">Table 4-19</a> describes this persistence property's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA774" name="TLJPA774"></a><a id="sthref623" name="sthref623"></a><a id="CBAFCGCJ" name="CBAFCGCJ"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-19 Valid Values for jdbc.native-connection</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for jdbc.native-connection" summary="This table describes the valid values for the jdbc.native-connection extension." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t27"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t27"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t27" headers="r1c1-t27">
+<p><code>true</code></p>
+</td>
+<td align="left" headers="r2c1-t27 r1c2-t27">
+<p>Require native connection.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t27" headers="r1c1-t27">
+<p><code>false</code></p>
+</td>
+<td align="left" headers="r3c1-t27 r1c2-t27">
+<p>(Default) Do not require native connection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref624" name="sthref624"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>This may be required for some queries on some server platforms that have <code>DataSource</code> implementations that wrap the JDBC connection in their own proxy. If the query requires custom JDBC access, it may require a native connection.</p>
+<p>A <code>ServerPlatform</code> is required to be set as a persistence property to be able to use a native connection. For features that EclipseLink already knows require a native connection, eclipselink.jdbc.native-connection will default to <code>true</code>.</p>
+<a id="sthref625" name="sthref625"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CHDIGECJ">Example 4-39</a> shows how to use the hint in a JPA Query.</p>
+<div class="example"><a id="CHDIGECJ" name="CHDIGECJ"></a><a id="TLJPA775" name="TLJPA775"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-39 Using jdbc.native-connection in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.NATIVE_CONNECTION", "TRUE");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref626" name="sthref626"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="persistenceproperties_ref.htm#target-server">"target-server"</a></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="CHDEBFHE" name="CHDEBFHE"></a><a id="TLJPA776" name="TLJPA776"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">jdbc.parameter-delimiter</font></h2>
+<p>Use <code>eclipselink.jdbc.parameter-delimiter</code> to specify a custom parameter binding character (instead of the default hash <strong>#</strong> character).</p>
+<a id="sthref627" name="sthref627"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#CBAJJADC">Table 4-20</a> describes this query hint's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA777" name="TLJPA777"></a><a id="sthref628" name="sthref628"></a><a id="CBAJJADC" name="CBAJJADC"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-20 Valid Values for jdbc.parameter-delimiter</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for jdbc.parameter-delimiter" summary="This table describes the valid values for the jdbc.parameter-delimiter extension." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t28"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t28"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t28" headers="r1c1-t28">
+<p>Character</p>
+</td>
+<td align="left" headers="r2c1-t28 r1c2-t28">
+<p>Any valid, single character. Do not use "".</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref629" name="sthref629"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CHDCICJE">Example 4-40</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="CHDCICJE" name="CHDCICJE"></a><a id="TLJPA54037" name="TLJPA54037"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-40 Using jdbc.parameter-delimiter in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.PARAMETER_DELIMITER", ",");
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CHDFCEBI">Example 4-41</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="CHDFCEBI" name="CHDFCEBI"></a><a id="TLJPA54038" name="TLJPA54038"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-41 Using jdbc.parameter-delimiter in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.PARAMETER_DELIMITER, value=",");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref630" name="sthref630"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="#bindparameters">"jdbc.bind-parameters"</a></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="timeout" name="timeout"></a><a id="TLJPA656" name="TLJPA656"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">jdbc.timeout</font></h2>
+<p>Use <code>eclipselink.jdbc.timeout</code> to specify number of seconds EclipseLink will wait (time out) for a query result, before throwing a <code>DatabaseExcpetion</code>.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>This property requires JDBC driver support.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<a id="sthref631" name="sthref631"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#CHDHBCIE">Table 4-21</a> describes this query hint's valid values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA657" name="TLJPA657"></a><a id="sthref632" name="sthref632"></a><a id="CHDHBCIE" name="CHDHBCIE"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-21 Valid Values for eclipselink.jdbc.timeout</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for eclipselink.jdbc.timeout" summary="This table describes the valid values for the eclipselink.jdbc.timeout query hint." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t30"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t30"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t30" headers="r1c1-t30">
+<p>from <code>0</code> to <code>Integer.MAX_VALUE</code></p>
+</td>
+<td align="left" headers="r2c1-t30 r1c2-t30">
+<p>(Default = <code>0</code>) As a <code>String</code>, depending on your JDBC driver.</p>
+<p>If 0, EclipseLink will never time out waiting for a query.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref633" name="sthref633"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>Some database platforms may not support lock timeouts, so you may consider setting a <code>JDBC_TIMEOUT</code> hint for these platforms.</p>
+<a id="sthref634" name="sthref634"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CHDGCDAG">Example 4-42</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="CHDGCDAG" name="CHDGCDAG"></a><a id="TLJPA658" name="TLJPA658"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-42 Using jdbc.timeout in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.CacheUsage;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint(QueryHints.<strong>JDBC_TIMEOUT</strong>, "100");
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CHDHICEC">Example 4-43</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="CHDHICEC" name="CHDHICEC"></a><a id="TLJPA659" name="TLJPA659"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-43 Using jdbc.timeout in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.CacheUsage;
+ import org.eclipse.persistence.config.TargetDatabase;
+ @QueryHint(name=QueryHints.<strong>JDBC_TIMEOUT</strong>, value="100");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref635" name="sthref635"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="#querytype">"query-type"</a></p>
+</li>
+<li>
+<p>"About JPA Query Hints" in <em>Understanding EclipseLink</em></p>
+</li>
+<li>
+<p>"Enhancing Performance" in <em>Solutions Guide for EclispeLink</em></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="fetch" name="fetch"></a><a id="TLJPA660" name="TLJPA660"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">join-fetch</font></h2>
+<p>Use <code>eclipselink.join-fetch hint</code> to join attributes in a query.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>Use <em>dot notation</em> to access nested attributes. For example, to batch-read an employee's manager's address, use <code>e.manager.address</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<a id="sthref636" name="sthref636"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#BABHECAC">Table 4-22</a> describes this query hint's valid values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA661" name="TLJPA661"></a><a id="sthref637" name="sthref637"></a><a id="BABHECAC" name="BABHECAC"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-22 Valid Values for eclipselink.join-fetch hint</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for eclipselink.join-fetch hint" summary="This table lists the valid value for the eclipselink.join-fetch query hint." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t32"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t32" headers="r1c1-t32">
+<p>A relationship path expression</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref638" name="sthref638"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>This hint is similar to <code>eclipselink.<a href="#batch">batch</a></code>. Subsequent queries of related objects can be optimized in batches instead of being retrieved in one large joined read</p>
+<p>The <code>eclipselink.join-fetch</code> hint differs from JPQL joining in that it allows multilevel fetch joins.</p>
+<a id="sthref639" name="sthref639"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#BABJAJBE">Example 4-44</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="BABJAJBE" name="BABJAJBE"></a><a id="TLJPA662" name="TLJPA662"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-44 Using join-fetch in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.<strong>join-fetch</strong>", "e.address");
+</pre></div>
+<!-- class="example" -->
+<p><a href="#BABCAFGJ">Example 4-45</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="BABCAFGJ" name="BABCAFGJ"></a><a id="TLJPA663" name="TLJPA663"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-45 Using join-fetch in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.FETCH, value="e.address");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref640" name="sthref640"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p>"EclipseLink" JPA Query Hints <code><a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Querying/Query_Hints">http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic_JPA_Development/Querying/Query_Hints</a></code></p>
+</li>
+<li>
+<p>EclipseLink Examples <code><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/QueryOptimization">http://wiki.eclipse.org/EclipseLink/Examples/JPA/QueryOptimization</a></code></p>
+</li>
+<li>
+<p>"Optimizing Queries" in <em>Understanding EclipseLink</em>.</p>
+</li>
+<li>
+<p>"Fetch Joins" in the JPA Specification (<code><a href="http://jcp.org/en/jsr/detail?id=317">http://jcp.org/en/jsr/detail?id=317</a></code>)</p>
+</li>
+<li>
+<p><a href="#batch">"batch"</a></p>
+</li>
+<li>
+<p><a href="#CHDEFDDC">"left-join-fetch"</a></p>
+</li>
+<li>
+<p>"Enhancing Performance" in <em>Solutions Guide for EclispeLink</em></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="CHDEFDDC" name="CHDEFDDC"></a><a id="TLJPA779" name="TLJPA779"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">left-join-fetch</font></h2>
+<p>Use <code>eclipselink.left-join-fetch</code> to optimize the query: related objects will be joined into the query instead of being queries separately.</p>
+<a id="sthref641" name="sthref641"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#CBADFCGG">Table 4-23</a> describes this query hint's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA780" name="TLJPA780"></a><a id="sthref642" name="sthref642"></a><a id="CBADFCGG" name="CBADFCGG"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-23 Valid Values for left-join-fetch</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for left-join-fetch" summary="This table describes the valid values for the left-join-fetch extension." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t33"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t33"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t33" headers="r1c1-t33">
+<p>String</p>
+</td>
+<td align="left" headers="r2c1-t33 r1c2-t33">
+<p>JPQL-style navigations to a relationship</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref643" name="sthref643"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>You can use this query hint to create nested join fetches, which is not supported by JPQL. You can also use <code>eclipselink.left-join-fetch</code> to create join fetches with native queries.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>This uses an <code>OUTER</code> join to allow null or empty values.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<a id="sthref644" name="sthref644"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CHDCBHBD">Example 4-46</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="CHDCBHBD" name="CHDCBHBD"></a><a id="TLJPA54039" name="TLJPA54039"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-46 Using left-join-fetch in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.LEFT_FETCH", "<em>STRING</em>");
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CHDECBHE">Example 4-47</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="CHDECBHE" name="CHDECBHE"></a><a id="TLJPA54040" name="TLJPA54040"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-47 Using left-join-fetch in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.LEFT_FETCH, value="<em>STRING</em>");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref645" name="sthref645"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<ul>
+<li>
+<p>EclipseLink Examples <code><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/QueryOptimization">http://wiki.eclipse.org/EclipseLink/Examples/JPA/QueryOptimization</a></code></p>
+</li>
+<li>
+<p>"Fetch Joins" in the JPA Specification (<code><a href="http://jcp.org/en/jsr/detail?id=317">http://jcp.org/en/jsr/detail?id=317</a></code>)</p>
+</li>
+<li>
+<p><a href="#batch">"batch"</a></p>
+</li>
+<li>
+<p><a href="#fetch">"join-fetch"</a></p>
+</li>
+<li>
+<p>"Enhancing Performance" in <em>Solutions Guide for EclispeLink</em></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="BABIJCGD" name="BABIJCGD"></a><a id="TLJPA782" name="TLJPA782"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">load-group</font></h2>
+<p>Use <code>eclipselink.load-group</code> to configures a query to use the load group object.</p>
+<a id="sthref646" name="sthref646"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#CBAFAEGI">Table 4-24</a> describes this persistence property's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA783" name="TLJPA783"></a><a id="sthref647" name="sthref647"></a><a id="CBAFAEGI" name="CBAFAEGI"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-24 Valid Values for load-group</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for load-group" summary="Valid values for this extensiont" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t35"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t35"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t35" headers="r1c1-t35">
+<p><code>load-group</code> classname</p>
+</td>
+<td align="left" headers="r2c1-t35 r1c2-t35">
+<p>An instance of <code>LoadGroup</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref648" name="sthref648"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>With load groups, EclipseLink ensures that all relational attributes for a group are loaded. LoadGroups are only supported for queries returning objects (only a single alias can be the select clause).</p>
+<a id="sthref649" name="sthref649"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CHDDJICH">Example 4-48</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="CHDDJICH" name="CHDDJICH"></a><a id="TLJPA54041" name="TLJPA54041"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-48 Using load-group in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.LOAD_GROUP", MyLoadGroup);
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CHDFJAGD">Example 4-49</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="CHDFJAGD" name="CHDFJAGD"></a><a id="TLJPA54042" name="TLJPA54042"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-49 Using load-group in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.LOAD_GROUP, value="lg");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref650" name="sthref650"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="#CACEDHDG">"load-group.attribute"</a></p>
+</li>
+<li>
+<p>"AttributeGroup Types and Operations" in <em>Understanding EclipseLink</em></p>
+</li>
+<li>
+<p>EclipseLink Attribute Group example:<code><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/AttributeGroup">http://wiki.eclipse.org/EclipseLink/Examples/JPA/AttributeGroup</a></code></p>
+</li>
+<li>
+<p><a href="annotations_ref.htm#BABJBDEG">"@FetchGroup"</a></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="CACEDHDG" name="CACEDHDG"></a><a id="TLJPA785" name="TLJPA785"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">load-group.attribute</font></h2>
+<p>Use <code>eclipselink.load-group.attribute</code> to specify if the query uses a <a href="#BABIJCGD">load-group</a> that includes a list of attributes.</p>
+<a id="sthref651" name="sthref651"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>You must define each attribute using a separate hint. The query loads all relational attributes defined in the load group.</p>
+<p>LoadGroups are only supported for queries returning objects (only a single alias can be the select clause). Both local and nested attributes are supported.</p>
+<a id="sthref652" name="sthref652"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="#BABIJCGD">"load-group"</a></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="maintaincache" name="maintaincache"></a><a id="TLJPA54073" name="TLJPA54073"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">maintain-cache</font></h2>
+<p>Use <code>eclipselink.maintain-cache</code> to controls whether or not query results are cached in the session cache</p>
+<a id="sthref653" name="sthref653"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#BABEHGHI">Table 4-25</a> describes this query hint's valid values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA54074" name="TLJPA54074"></a><a id="sthref654" name="sthref654"></a><a id="BABEHGHI" name="BABEHGHI"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-25 Valid Values for org.eclipselink.maintain-cache</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for org.eclipselink.maintain-cache" summary="This table describes the valid values for the org.eclipselink.maintain-cache query hint." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t36"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t36"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t36" headers="r1c1-t36">
+<p><code>TRUE</code></p>
+</td>
+<td align="left" headers="r2c1-t36 r1c2-t36">
+<p>Maintain cache.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t36" headers="r1c1-t36">
+<p><code>FALSE</code></p>
+</td>
+<td align="left" headers="r3c1-t36 r1c2-t36">
+<p>(Default) Do not maintain cache.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref655" name="sthref655"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>The <code>eclipselink.maintain-cache</code> hint provides a way to query the current database contents <em>without affecting the current persistence context</em>. It configures the query to return un-managed instances so any updates to entities queried using this hint would have to be merged into the persistence context.</p>
+<a id="sthref656" name="sthref656"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#BABJCJGF">Example 4-50</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="BABJCJGF" name="BABJCJGF"></a><a id="TLJPA54075" name="TLJPA54075"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-50 Using maintain-cache in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint(QueryHints.MAINTAIN_CACHE, HintValues.FALSE);
+</pre></div>
+<!-- class="example" -->
+<p><a href="#BABBHIDI">Example 4-51</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="BABBHIDI" name="BABBHIDI"></a><a id="TLJPA54076" name="TLJPA54076"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-51 Using maintain-cache in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.MAINTAIN_CACHE, value=HintValues.FALSE);
+</pre></div>
+<!-- class="example" -->
+<a id="sthref657" name="sthref657"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p>"Scaling EclipseLink Applications in Clusters" in <em>Solutions Guide for EclispeLink</em></p>
+</li>
+<li>
+<p>"Enhancing Performance" in <em>Solutions Guide for EclispeLink</em></p>
+</li>
+<li>
+<p>"EclipseLink Caches" in <em>Understanding EclipseLink</em></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="pessimisticlock" name="pessimisticlock"></a><a id="TLJPA668" name="TLJPA668"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">pessimistic-lock</font></h2>
+<p>Use <code>eclipselink.pessimistic-lock</code> to specify if EclipseLink uses pessimistic locking.</p>
+<a id="sthref658" name="sthref658"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#CIHDEEDF">Table 4-26</a> describes this query hint's valid values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA669" name="TLJPA669"></a><a id="sthref659" name="sthref659"></a><a id="CIHDEEDF" name="CIHDEEDF"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-26 Valid Values for org.eclipse.persistence.config.PessimisticLock</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for org.eclipse.persistence.config.PessimisticLock" summary="This table describes the valid values for the org.eclipse.persistence.config.PessimisticLock query hint." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t37"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t37"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t37" headers="r1c1-t37">
+<p><code>NoLock</code></p>
+</td>
+<td align="left" headers="r2c1-t37 r1c2-t37">
+<p>(Default) Do not use pessimistic locking.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t37" headers="r1c1-t37">
+<p><code>Lock</code></p>
+</td>
+<td align="left" headers="r3c1-t37 r1c2-t37">
+<p>EclipseLink issues <code>SELECT .... FOR UPDATE</code> statements.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t37" headers="r1c1-t37">
+<p><code>LockNoWait</code></p>
+</td>
+<td align="left" headers="r4c1-t37 r1c2-t37">
+<p>EclipseLink issues <code>SELECT .... FOR UPDATE NO WAIT</code> statements.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref660" name="sthref660"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>The primary advantage of using pessimistic locking is that you are assured, once the lock is obtained, of a successful edit. This is desirable in highly concurrent applications in which optimistic locking may cause too many optimistic locking errors.</p>
+<p>One drawback of pessimistic locking is that it requires additional database resources, requiring the database transaction and connection to be maintained for the duration of the edit. Pessimistic locking may also cause deadlocks and lead to concurrency issues.</p>
+<a id="sthref661" name="sthref661"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CIHGEJFF">Example 4-52</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="CIHGEJFF" name="CIHGEJFF"></a><a id="TLJPA670" name="TLJPA670"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-52 Using pessimistic-lock in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.PessimisticLock;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint(QueryHints.PESSIMISTIC_LOCK, PessimisticLock.LockNoWait);
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CIHIAFGH">Example 4-53</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="CIHIAFGH" name="CIHIAFGH"></a><a id="TLJPA671" name="TLJPA671"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-53 Using pessimistic-lock in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.PessimisticLock;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.PESSIMISTIC_LOCK, value=PessimisticLock.LockNoWait);
+</pre></div>
+<!-- class="example" -->
+<a id="sthref662" name="sthref662"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p>EclipseLink Examples <code><a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/PessimisticLocking">http://wiki.eclipse.org/EclipseLink/Examples/JPA/PessimisticLocking</a></code></p>
+</li>
+<li>
+<p>"Scaling EclipseLink Applications in Clusters" in <em>Solutions Guide for EclispeLink</em></p>
+</li>
+<li>
+<p>"Understanding Queries" in <em>Understanding EclipseLink</em></p>
+</li>
+<li>
+<p>"Building Blocks of a EclipseLink Project" in <em>Understanding EclipseLink</em></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="CHDGDECH" name="CHDGDECH"></a><a id="TLJPA788" name="TLJPA788"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">prepare</font></h2>
+<p>Use <code>eclipselink.prepare</code> to specify if a query prepares (that is, generates) its SQL for each execution.</p>
+<a id="sthref663" name="sthref663"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#CBABAEBF">Table 4-27</a> describes this query hint's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA789" name="TLJPA789"></a><a id="sthref664" name="sthref664"></a><a id="CBABAEBF" name="CBABAEBF"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-27 Valid Values for prepare</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for prepare" summary="This table describes the valid values for the prepare extension." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t38"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t38"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t38" headers="r1c1-t38">
+<p>true</p>
+</td>
+<td align="left" headers="r2c1-t38 r1c2-t38">
+<p>Generate the SQL <em>each time</em> EclipseLink executes the query.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t38" headers="r1c1-t38">
+<p><code>false</code></p>
+</td>
+<td align="left" headers="r3c1-t38 r1c2-t38">
+<p>(Default) Generate the SQL only the <em>first time</em> EclipseLink executes the query.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref665" name="sthref665"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>By default, EclipseLink does not re-generate the SQL for each execution. This may improve performance.</p>
+<p>For queries that require dynamic SQL (for example, to handle <code>null</code> parameters) set <code>eclipselink.prepare</code> to <strong>false</strong>.</p>
+<a id="sthref666" name="sthref666"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CHDEABHD">Example 4-54</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="CHDEABHD" name="CHDEABHD"></a><a id="TLJPA54043" name="TLJPA54043"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-54 Using prepare in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.PREPARE", "TRUE");
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CHDBDIFC">Example 4-55</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="CHDBDIFC" name="CHDBDIFC"></a><a id="TLJPA54044" name="TLJPA54044"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-55 Using prepare in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.PREPARE, value="TRUE");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref667" name="sthref667"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p>"Understanding Queries" in <em>Understanding EclipseLink</em></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="CHDGEADJ" name="CHDGEADJ"></a><a id="TLJPA792" name="TLJPA792"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">query-results-cache</font></h2>
+<p>Use <code>eclipselink.query-results-cache</code> to specify that the query should use a results cache.</p>
+<a id="sthref668" name="sthref668"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#CHDEBFCF">Table 4-28</a> describes this persistence property's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA793" name="TLJPA793"></a><a id="sthref669" name="sthref669"></a><a id="CHDEBFCF" name="CHDEBFCF"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-28 Valid Values for query-results-cache</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for query-results-cache" summary="This table describes the valid values for the query-results-cache extension." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t39"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t39"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t39" headers="r1c1-t39">
+<p><code>Persistence_Unit_Default</code></p>
+</td>
+<td align="left" headers="r2c1-t39 r1c2-t39">
+<p>(Default)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t39" headers="r1c1-t39">
+<p><code>True</code></p>
+</td>
+<td align="left" headers="r3c1-t39 r1c2-t39">
+<p>Query results are cache.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t39" headers="r1c1-t39">
+<p><code>False</code></p>
+</td>
+<td align="left" headers="r4c1-t39 r1c2-t39">
+<p>Query results are not cached.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref670" name="sthref670"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>By default, the query will cache 100 query results (see <a href="#CACJDDDG">query-results-cache.size</a>); if the same named query with the same arguments is re-executed EclipseLink will skip the database and return the cached results.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>The <em>query</em> cache is different and independent from the <em>object</em> cache.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<a id="sthref671" name="sthref671"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CHDHAFFG">Example 4-56</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="CHDHAFFG" name="CHDHAFFG"></a><a id="TLJPA54045" name="TLJPA54045"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-56 Using query-results-cache in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.QUERY_RESULTS_CACHE", "TRUE");
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CHDBHAGC">Example 4-57</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="CHDBHAGC" name="CHDBHAGC"></a><a id="TLJPA54046" name="TLJPA54046"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-57 Using query-results-cache in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.QUERY_RESULTS_CACHE, value="TRUE");
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CHDBHFJI">Example 4-58</a> shows how to use this hint in an <code>orm.xml</code> file.</p>
+<div class="example"><a id="CHDBHFJI" name="CHDBHFJI"></a><a id="TLJPA796" name="TLJPA796"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-58 Using query-results-cache in orm.xml File</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+&lt;?xml version="1.0"?&gt;
+&lt;entity-mappings
+    xmlns="http://www.eclipse.org/eclipselink/xsds/persistence/orm"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.eclipse.org/eclipselink/xsds/persistence/orm     http://www.eclipse.org/eclipselink/xsds/eclipselink_orm_2_4.xsd"
+    version="2.4"&gt;
+    &lt;entity name="Employee" class="org.acme.Employee" access="FIELD"&gt;
+        &lt;named-query name="findAllEmployeesInCity" query="Select e from Employee e where e.address.city = :city"&gt;
+            &lt;hint name="<strong>eclipselink.query-results-cache</strong>" value="true"/&gt;
+            &lt;hint name="eclipselink.query-results-cache.size" value="500"/&gt;
+        &lt;/named-query&gt;
+        ...
+    &lt;/entity&gt;
+&lt;/entity-mappings&gt;
+
+</pre></div>
+<!-- class="example" -->
+<a id="sthref672" name="sthref672"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p>"About Query Results Cache" in <em>Understanding EclipseLink</em></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="BABHGIHG" name="BABHGIHG"></a><a id="TLJPA797" name="TLJPA797"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">query-results-cache.expiry</font></h2>
+<p>Use <code>eclipselink.query-results-cache.expiry</code> to set the time-to-live (that is, expiration time) of the query's results cache.</p>
+<a id="sthref673" name="sthref673"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#CBAEIJBC">Table 4-29</a> describes this query hint's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA798" name="TLJPA798"></a><a id="sthref674" name="sthref674"></a><a id="CBAEIJBC" name="CBAEIJBC"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-29 Valid Values for query-results-cache.expiry</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for query-results-cache.expiry" summary="This table describes the valid values for the query-results-cache.expiry extension." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t41"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t41"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t41" headers="r1c1-t41">
+<p>Value</p>
+</td>
+<td align="left" headers="r2c1-t41 r1c2-t41">
+<p>Number of milliseconds, as <code>Integer</code> or <code>Strings</code> that can be parsed to <code>int</code> values.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref675" name="sthref675"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>By default the query results cache will not expiry results.</p>
+<a id="sthref676" name="sthref676"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CHDHHGJE">Example 4-59</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="CHDHHGJE" name="CHDHHGJE"></a><a id="TLJPA54047" name="TLJPA54047"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-59 Using query-results-cache.expiry in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.QUERY_RESULTS_CACHE_EXPIRY", "100");
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CHDHIJFD">Example 4-60</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="CHDHIJFD" name="CHDHIJFD"></a><a id="TLJPA54048" name="TLJPA54048"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-60 Using query-results-cache.expiry in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.QUERY_RESULTS_CACHE_EXPIRY, value="100");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref677" name="sthref677"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="#CHDGEADJ">"query-results-cache"</a></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="CBAFBFJA" name="CBAFBFJA"></a><a id="TLJPA801" name="TLJPA801"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">query-results-cache.expiry-time-of-day</font></h2>
+<p>Use <code>eclipselink.query-results-cache.expiry-time-of-day</code> to set the time of day of the query's results cache expiration.</p>
+<a id="sthref678" name="sthref678"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#CBAEDBEC">Table 4-30</a> describes this persistence property's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA802" name="TLJPA802"></a><a id="sthref679" name="sthref679"></a><a id="CBAEDBEC" name="CBAEDBEC"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-30 Valid Values for query-results-cache.expiry-time-of-day</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for query-results-cache.expiry-time-of-day" summary="This table describes the valid values for the query-results-cache.expiry-time-of-day extension." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t42"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t42"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t42" headers="r1c1-t42">
+<p>Value</p>
+</td>
+<td align="left" headers="r2c1-t42 r1c2-t42">
+<p>Time, in HH:MM:SS format, as a <code>String</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref680" name="sthref680"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>By default the query results cache will not expiry results.</p>
+<a id="sthref681" name="sthref681"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CHDCCJCH">Example 4-61</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="CHDCCJCH" name="CHDCCJCH"></a><a id="TLJPA803" name="TLJPA803"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-61 Using query-results-cache.expiry-time-of-day in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.QUERY_RESULTS_CACHE_EXPIRY_TIME_OF_DAY", "11:15:34");
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CHDEDCDD">Example 4-62</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="CHDEDCDD" name="CHDEDCDD"></a><a id="TLJPA804" name="TLJPA804"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-62 Using query-results-cache.expiry-time-of-day in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.QUERY_RESULTS_CACHE_EXPIRY_TIME_OF_DAY, value="11:15:34");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref682" name="sthref682"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="#CHDGEADJ">"query-results-cache"</a></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="CHDHGGBD" name="CHDHGGBD"></a><a id="TLJPA805" name="TLJPA805"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">query-results-cache.ignore-null</font></h2>
+<p>Use eclipselink.query-results-cache.ignore-null to specify if EclipseLink caches <code>null</code> query results</p>
+<a id="sthref683" name="sthref683"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#CBAJDDFC">Table 4-31</a> describes this query hint's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA806" name="TLJPA806"></a><a id="sthref684" name="sthref684"></a><a id="CBAJDDFC" name="CBAJDDFC"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-31 Valid Values for query-results-cache.ignore-null</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for query-results-cache.ignore-null" summary="This table describes the valid values for the query-results-cache.ignore-null extension." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t43"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t43"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t43" headers="r1c1-t43">
+<p><code>true</code></p>
+</td>
+<td align="left" headers="r2c1-t43 r1c2-t43">
+<p>Ignore null results (that is, <em>do not</em> cache results)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t43" headers="r1c1-t43">
+<p><code>false</code></p>
+</td>
+<td align="left" headers="r3c1-t43 r1c2-t43">
+<p>(Default) Do not ignore <code>null</code> results (that is, <em>do</em> cache results)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref685" name="sthref685"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>You can use this query hint to use query cache as a secondary key index, and allow inserts of new objects.</p>
+<a id="sthref686" name="sthref686"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CHDEAHFC">Example 4-63</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="CHDEAHFC" name="CHDEAHFC"></a><a id="TLJPA807" name="TLJPA807"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-63 Using query-results-cache.ignore-null in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.QUERY_RESULTS_CACHE_IGNORE_NULL", "TRUE");
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CHDIEEHG">Example 4-64</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="CHDIEEHG" name="CHDIEEHG"></a><a id="TLJPA808" name="TLJPA808"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-64 Using query-results-cache.ignore-null in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.QUERY_RESULTS_CACHE_IGNORE_NULL, value="TRUE");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref687" name="sthref687"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="#CHDGEADJ">"query-results-cache"</a></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="BEIGHCEF" name="BEIGHCEF"></a><a id="TLJPA54077" name="TLJPA54077"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">query-results-cache.randomize-expiry</font></h2>
+<p>Use <code>eclipselink.query-results-cache.randomize-expiry</code> to specify the expiry time (<a href="#BABHGIHG">query-results-cache.expiry</a>) should be randomized by 10% of its set value.</p>
+<a id="sthref688" name="sthref688"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#BABEGFHE">Table 4-32</a> describes this query hint's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA54078" name="TLJPA54078"></a><a id="sthref689" name="sthref689"></a><a id="BABEGFHE" name="BABEGFHE"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-32 Valid Values for query-results-cache.randomize-expiry</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for query-results-cache.randomize-expiry" summary="This table describes the valid values for the query-results-cache.randomize-expiry extension." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t44"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t44"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t44" headers="r1c1-t44">
+<p><code>true</code></p>
+</td>
+<td align="left" headers="r2c1-t44 r1c2-t44">
+<p>Randomize the expiration time by 10%.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t44" headers="r1c1-t44">
+<p><code>false</code></p>
+</td>
+<td align="left" headers="r3c1-t44 r1c2-t44">
+<p>(Default) Do not randomize the expiration time.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref690" name="sthref690"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>Use this query hint to avoid bottlenecks from multiple cached values expiring at a fixed time.</p>
+<a id="sthref691" name="sthref691"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CHDHEDDC">Example 4-65</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="CHDHEDDC" name="CHDHEDDC"></a><a id="TLJPA54079" name="TLJPA54079"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-65 Using query-results-cache.randomize-expiry in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.QUERY_RESULTS_CACHE_RANDOMIZE_EXPIRY", "TRUE");
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CHDICBII">Example 4-66</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="CHDICBII" name="CHDICBII"></a><a id="TLJPA54080" name="TLJPA54080"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-66 Using query-results-cache.randomize-expiry in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.QUERY_RESULTS_CACHE_RANDOMIZE_EXPIRY, value="TRUE");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref692" name="sthref692"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="#CHDGEADJ">"query-results-cache"</a></p>
+</li>
+<li>
+<p><a href="#BABHGIHG">"query-results-cache.expiry"</a></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="CACJDDDG" name="CACJDDDG"></a><a id="TLJPA813" name="TLJPA813"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">query-results-cache.size</font></h2>
+<p>Use <code>eclipselink.query-results-cache.size</code> to set the fixed size of the query's results cache.</p>
+<a id="sthref693" name="sthref693"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#CBAIEAAC">Table 4-33</a> describes this query hint's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA814" name="TLJPA814"></a><a id="sthref694" name="sthref694"></a><a id="CBAIEAAC" name="CBAIEAAC"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-33 Valid Values for query-results-cache.size</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for query-results-cache.size" summary="This table describes the valid values for the query-results-cache.size extension." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t45"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t45"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t45" headers="r1c1-t45">
+<p>Size</p>
+</td>
+<td align="left" headers="r2c1-t45 r1c2-t45">
+<p>Integer or Strings that can be parsed to int values (Default: <strong>100</strong>)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref695" name="sthref695"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>When using <a href="#CHDGEADJ">query-results-cache</a>, if the same named query with the same arguments is re-executed EclipseLink will skip the database and return the cached results.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>If a query has no arguments, use a size of <strong>1</strong> (as there is only a single result).</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<a id="sthref696" name="sthref696"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CHDGADHE">Example 4-67</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="CHDGADHE" name="CHDGADHE"></a><a id="TLJPA815" name="TLJPA815"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-67 Using query-results-cache.size in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.QUERY_RESULTS_CACHE_SIZE", "150");
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CHDIGAAF">Example 4-68</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="CHDIGAAF" name="CHDIGAAF"></a><a id="TLJPA816" name="TLJPA816"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-68 Using query-results-cache.size in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.QUERY_RESULTS_CACHE_SIZE, value="150");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref697" name="sthref697"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="#CHDGEADJ">"query-results-cache"</a></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="CACCFFDA" name="CACCFFDA"></a><a id="TLJPA54081" name="TLJPA54081"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">query-results-cache.type</font></h2>
+<p>Use <code>eclipselink.query-results-cache.type</code> to set the cache type used for the query's results cache.</p>
+<a id="sthref698" name="sthref698"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#BABJADJH">Table 4-34</a> describes this query hint's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA54082" name="TLJPA54082"></a><a id="sthref699" name="sthref699"></a><a id="BABJADJH" name="BABJADJH"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-34 Valid Values for query-results-cache.type</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for query-results-cache.type" summary="This table describes the valid values for the query-results-cache.type extension." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t47"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t47"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t47" headers="r1c1-t47">
+<p>Cache</p>
+</td>
+<td align="left" headers="r2c1-t47 r1c2-t47">
+<p>(Default) Fixed size LRU cache (<code>CacheIdentityMap</code>)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t47" headers="r1c1-t47">
+<p>Full</p>
+</td>
+<td align="left" headers="r3c1-t47 r1c2-t47">
+<p>Provides full caching and guaranteed identity.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t47" headers="r1c1-t47">
+<p>Hard_Weak</p>
+</td>
+<td align="left" headers="r4c1-t47 r1c2-t47">
+<p>Similar to SOFT_WEAK, except that it uses <em>hard</em> references in the sub-cache.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t47" headers="r1c1-t47">
+<p>None</p>
+</td>
+<td align="left" headers="r5c1-t47 r1c2-t47">
+<p>No caching.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t47" headers="r1c1-t47">
+<p>Soft</p>
+</td>
+<td align="left" headers="r6c1-t47 r1c2-t47">
+<p>Similar to FULL, except the map holds the objects using <em>soft</em> references.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t47" headers="r1c1-t47">
+<p>Soft_Weak</p>
+</td>
+<td align="left" headers="r7c1-t47 r1c2-t47">
+<p>Similar to WEAK, except it maintains a most-frequently-used sub-cache.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t47" headers="r1c1-t47">
+<p>Weak</p>
+</td>
+<td align="left" headers="r8c1-t47 r1c2-t47">
+<p>Similar to FULL, except the map holds the objects using <em>weak</em> references.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref700" name="sthref700"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<a id="sthref701" name="sthref701"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#BABEAAAI">Example 4-69</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="BABEAAAI" name="BABEAAAI"></a><a id="TLJPA54083" name="TLJPA54083"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-69 Using query-results-cache.type in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.QUERY_RESULTS_CACHE_TYPE", "FULL");
+</pre></div>
+<!-- class="example" -->
+<p><a href="#BABHGBJD">Example 4-70</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="BABHGBJD" name="BABHGBJD"></a><a id="TLJPA54084" name="TLJPA54084"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-70 Using query-results-cache.type in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.QUERY_RESULTS_CACHE_TYPE, value="FULL");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref702" name="sthref702"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="annotations_ref.htm#CHDBBIHE">"@Cache"</a></p>
+</li>
+<li>
+<p>"Caching Overview"<code>http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Basic JPA Development/Caching/Caching Overview</code></p>
+</li>
+<li>
+<p>"EclipseLink Caches" in the <em>Understanding EclipseLink</em></p>
+</li>
+<li>
+<p>"Scaling EclipseLink Applications in Clusters" in <em>Solutions Guide for EclispeLink</em></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="querytype" name="querytype"></a><a id="TLJPA672" name="TLJPA672"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">query-type</font></h2>
+<p>Use <code>eclipselink.query-type</code> to specify which EclipseLink query type to use for the query.</p>
+<a id="sthref703" name="sthref703"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#CDECCFBJ">Table 4-35</a> describes this query hint's valid values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA673" name="TLJPA673"></a><a id="sthref704" name="sthref704"></a><a id="CDECCFBJ" name="CDECCFBJ"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-35 Valid Values for org.eclipse.persistence.config.QueryType</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for org.eclipse.persistence.config.QueryType" summary="This table describes the valid values for the org.eclipse.persistence.config.QueryType query hint." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t48"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t48"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t48" headers="r1c1-t48">
+<p><code>Auto</code></p>
+</td>
+<td align="left" headers="r2c1-t48 r1c2-t48">
+<p>(Default = <code>0</code>) EclipseLink chooses the type of query.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t48" headers="r1c1-t48">
+<p><code>ReadAll</code></p>
+</td>
+<td align="left" headers="r3c1-t48 r1c2-t48">
+<p>Use a <code>ReadAllQuery</code>.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t48" headers="r1c1-t48">
+<p><code>ReadObject</code></p>
+</td>
+<td align="left" headers="r4c1-t48 r1c2-t48">
+<p>Use a <code>ReadObjectQuery</code>.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t48" headers="r1c1-t48">
+<p><code>Report</code></p>
+</td>
+<td align="left" headers="r5c1-t48 r1c2-t48">
+<p>Use a <code>ReportQuery</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref705" name="sthref705"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>By default, EclipseLink uses <code>org.eclipse.persistence.queries.ReportQuery</code> or <code>org.eclipse.persistence.queries.ReadAllQuery</code> for most JPQL queries. Use the <code>eclipselink.query-type</code> hint lets to specify another query type, such as <code>org.eclipse.persistence.queries.ReadObjectQuery</code> for queries that will return a single object.</p>
+<a id="sthref706" name="sthref706"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CDEJACJC">Example 4-71</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="CDEJACJC" name="CDEJACJC"></a><a id="TLJPA674" name="TLJPA674"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-71 Using query-type in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.QueryType;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint(QueryHints.QUERY_TYPE, QueryType.ReadObject);
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CDEIIIDE">Example 4-72</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="CDEIIIDE" name="CDEIIIDE"></a><a id="TLJPA675" name="TLJPA675"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-72 Using query-type in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.QueryType;
+ import org.eclipse.persistence.config.TargetDatabase;
+ @QueryHint(name=QueryHints.QUERY_TYPE, value=QueryType.ReadObject);
+</pre></div>
+<!-- class="example" -->
+<a id="sthref707" name="sthref707"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p>"Queries" in <em>Understanding EclipseLink</em></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="readonly" name="readonly"></a><a id="TLJPA676" name="TLJPA676"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">read-only</font></h2>
+<p>Use <code>eclipselink.read-only</code> to retrieve read-only results back from a query.</p>
+<a id="sthref708" name="sthref708"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#CDDDFGIB">Table 4-36</a> describes this query hint's valid values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA677" name="TLJPA677"></a><a id="sthref709" name="sthref709"></a><a id="CDDDFGIB" name="CDDDFGIB"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-36 Valid Values for read-only</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for read-only" summary="This table describes the valid values for the read-only query hint." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t49"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t49"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t49" headers="r1c1-t49">
+<p><code>TRUE</code></p>
+</td>
+<td align="left" headers="r2c1-t49 r1c2-t49">
+<p>Retrieve read-only results from the query.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t49" headers="r1c1-t49">
+<p><code>FALSE</code></p>
+</td>
+<td align="left" headers="r3c1-t49 r1c2-t49">
+<p>(Default) Do not retrieve read-only results from the query.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref710" name="sthref710"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>For non-transactional read operations, if the requested entity types are stored in the shared cache you can request that the shared instance be returned instead of a detached copy.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="note"><img src="../../../dcommon/images/note_icon.png" width="16" height="16" alt="Note" style="vertical-align:middle;padding-right:5px;" />Note:</p>
+<p>You should never modify objects returned from the shared cache.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<a id="sthref711" name="sthref711"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CDDEDJEH">Example 4-73</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="CDDEDJEH" name="CDDEDJEH"></a><a id="TLJPA678" name="TLJPA678"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-73 Using read-only in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint(QueryHints.READ_ONLY, HintValues.TRUE);
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CDDCEFBH">Example 4-74</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="CDDCEFBH" name="CDDCEFBH"></a><a id="TLJPA679" name="TLJPA679"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-74 Using read-only in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.READ_ONLY, value=HintValues.TRUE);
+</pre></div>
+<!-- class="example" -->
+<a id="sthref712" name="sthref712"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p>"Oracle EclipseLink JPA Performance Tuning" in <em>Oracle Fusion Middleware Performance and Tuning Guide</em></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="refresh" name="refresh"></a><a id="TLJPA680" name="TLJPA680"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">refresh</font></h2>
+<p>Use <code>eclipselink.refresh</code> to specify whether or not to update the EclipseLink session cache with objects returned by the query.</p>
+<a id="sthref713" name="sthref713"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#CHDJJBJF">Table 4-37</a> describes this query hint's valid values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA681" name="TLJPA681"></a><a id="sthref714" name="sthref714"></a><a id="CHDJJBJF" name="CHDJJBJF"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-37 Valid Values for eclipselink.refresh</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for eclipselink.refresh" summary="This table describes the valid values for the eclipselink.refresh query hint." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t51"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t51"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t51" headers="r1c1-t51">
+<p><code>TRUE</code></p>
+</td>
+<td align="left" headers="r2c1-t51 r1c2-t51">
+<p>Refreshes the cache.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t51" headers="r1c1-t51">
+<p><code>FALSE</code></p>
+</td>
+<td align="left" headers="r3c1-t51 r1c2-t51">
+<p>(Default) Does not refresh the cache. You can use <code>""</code> instead of <code>FALSE</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref715" name="sthref715"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>The <code>eclipselink.refresh</code> query hint configures the query to refresh the resulting objects in the cache and persistence context with the current state of the database. It also refreshes the objects in the shared cache, unless a flush has occurred. Any <em>unflushed</em> changes made to the objects are lost, unless this query triggers a flush before it executes). The refresh will cascade relationships based on the <code>REFRESH_CASCADE</code> hint value.</p>
+<a id="sthref716" name="sthref716"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CHDJBCHB">Example 4-75</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="CHDJBCHB" name="CHDJBCHB"></a><a id="TLJPA682" name="TLJPA682"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-75 Using refresh in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint(QueryHints.<strong>REFRESH</strong>, HintValues.TRUE);
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CHDJFCJB">Example 4-76</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="CHDJFCJB" name="CHDJFCJB"></a><a id="TLJPA683" name="TLJPA683"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-76 Using refresh in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.<strong>REFRESH</strong>, value=HintValues.TRUE);
+</pre></div>
+<!-- class="example" -->
+<a id="sthref717" name="sthref717"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="#refreshcache">"refresh.cascade"</a></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="refreshcache" name="refreshcache"></a><a id="TLJPA1056" name="TLJPA1056"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">refresh.cascade</font></h2>
+<p>Use <code>eclipselink.refresh.cascade</code> to specify if a refresh query should cascade the refresh to relationships.</p>
+<a id="sthref718" name="sthref718"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#CDEEGHHB">Table 4-38</a> describes this query hint's valid values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA1057" name="TLJPA1057"></a><a id="sthref719" name="sthref719"></a><a id="CDEEGHHB" name="CDEEGHHB"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-38 Valid Values for eclipselink.refresh.cascade</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for eclipselink.refresh.cascade" summary="This table describes the valid values for the eclipselink.refresh.cascade query hint." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t52"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t52"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t52" headers="r1c1-t52">
+<p><code>CascadeAllParts</code></p>
+</td>
+<td align="left" headers="r2c1-t52 r1c2-t52">
+<p>Cascade to all associations.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t52" headers="r1c1-t52">
+<p><code>CascadeByMapping</code></p>
+</td>
+<td align="left" headers="r3c1-t52 r1c2-t52">
+<p>Cascade by mapping metadata.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t52" headers="r1c1-t52">
+<p><code>CascadePrivateParts</code></p>
+</td>
+<td align="left" headers="r4c1-t52 r1c2-t52">
+<p>Cascade to privately-owned relationships.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t52" headers="r1c1-t52">
+<p><code>NoCascade</code></p>
+</td>
+<td align="left" headers="r5c1-t52 r1c2-t52">
+<p>Do not cascade.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref720" name="sthref720"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>You should also use a <code><a href="#refresh">refresh</a></code> hint in order to cause the refresh.</p>
+<a id="sthref721" name="sthref721"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CDEDJFBE">Example 4-77</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="CDEDJFBE" name="CDEDJFBE"></a><a id="TLJPA1058" name="TLJPA1058"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-77 Using refresh.cascade in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues
+ import oorg.eclipse.persistence.config.QueryHints;
+ query.setHint(QueryHints.<strong>REFRESH_CASCADE</strong>, CascadePolicy.CascadeAllParts);
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CDEGAJFE">Example 4-78</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="CDEGAJFE" name="CDEGAJFE"></a><a id="TLJPA1059" name="TLJPA1059"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-78 Using refresh.cascade in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.<strong>REFRESH_CASCADE</strong>, value=CascadePolicy.CascadeAllParts);
+</pre></div>
+<!-- class="example" -->
+<a id="sthref722" name="sthref722"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="#refresh">"refresh"</a></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="BABCJADG" name="BABCJADG"></a><a id="TLJPA655" name="TLJPA655"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">result-collection-type</font></h2>
+<p>Use <code>eclipselink.result-collection-type</code> to configure the collection class implementation for the query's results.</p>
+<a id="sthref723" name="sthref723"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#CHDDBIGC">Table 4-39</a> describes this query hint's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA821" name="TLJPA821"></a><a id="sthref724" name="sthref724"></a><a id="CHDDBIGC" name="CHDDBIGC"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-39 Valid Values for result-collection-type</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for result-collection-type" summary="This table describes the valid values for the result-collection-type extension." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t53"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t53"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t53" headers="r1c1-t53">
+<p><code>true</code></p>
+</td>
+<td align="left" headers="r2c1-t53 r1c2-t53">
+<p>Fully qualified class name, without&nbsp;<code>.class</code>, representing a collection type.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t53" headers="r1c1-t53">
+<p><code>false</code></p>
+</td>
+<td align="left" headers="r3c1-t53 r1c2-t53">
+<p>(Default) Do not ignore <code>null</code> results (that is, <em>do</em> cache results)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref725" name="sthref725"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>If you use a <code>Collection</code> type that <em>is not</em> a <code>List</code>, you must use <code>getResultCollection()</code> or <code>getSingleResult()</code> instead of <code>getResultList()</code>.</p>
+<a id="sthref726" name="sthref726"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CHDHCECJ">Example 4-79</a> show how to use this hint in a JPA query.</p>
+<div class="example"><a id="CHDHCECJ" name="CHDHCECJ"></a><a id="TLJPA54049" name="TLJPA54049"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-79 Using result-collection-type in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ query.setHint("eclipselink.RESULT_COLLECTION_TYPE", "<em>&lt;CLASS_NAME&gt;</em>");
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CHDFHCEF">Example 4-80</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="CHDFHCEF" name="CHDFHCEF"></a><a id="TLJPA54050" name="TLJPA54050"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-80 Using result-collection-type in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+ import org.eclipse.persistence.config.QueryHints;
+ @QueryHint(name=QueryHints.RESULT_COLLECTION_TYPE, value="<em>&lt;CLASS_NAME&gt;</em>");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref727" name="sthref727"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p>"Collection Mappings" in the <em>Understanding EclipseLink</em></p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" -->
+<a id="CIHHAEDE" name="CIHHAEDE"></a><a id="TLJPA822" name="TLJPA822"></a>
+<hr />
+<div class="refsect1">
+<h2 class="refsect1"><font face="arial, helvetica, sans-serif" color="#330099">sql.hint</font></h2>
+<p>Use <code>eclipselink.sql.hint</code> to include an SQL hint in the SQL for a query.</p>
+<a id="sthref728" name="sthref728"></a>
+<p><strong><br /><span class="refsubsect">Values</span></strong></p>
+<p><a href="#CBAHJJFF">Table 4-40</a> describes this query hint's values.</p>
+<div class="tblhruleformalwide"><a id="TLJPA823" name="TLJPA823"></a><a id="sthref729" name="sthref729"></a><a id="CBAHJJFF" name="CBAHJJFF"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Table 4-40 Valid Values for sql.hint</font></em></strong></p>
+<table class="HRuleFormalWide" title="Valid Values for sql.hint" summary="This table describes the valid values for the sql.hint extension." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t54"><font face="Arial, Helvetica, sans-serif"><strong>Value</strong></font></th>
+<th align="left" valign="bottom" id="r1c2-t54"><font face="Arial, Helvetica, sans-serif"><strong>Description</strong></font></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t54" headers="r1c1-t54">
+<p>value</p>
+</td>
+<td align="left" headers="r2c1-t54 r1c2-t54">
+<p>The full hint string, including the comment \ delimiters</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="sthref730" name="sthref730"></a>
+<p><strong><br /><span class="refsubsect">Usage</span></strong></p>
+<p>A SQL hint can be used on certain database platforms to define how the query uses indexes and other such low level usages. The SQL hint will be included in the SQL, after the <code>SELECT</code>/<code>INSERT</code>/<code>UPDATE</code>/<code>DELETE</code> command.</p>
+<a id="sthref731" name="sthref731"></a>
+<p><strong><br /><span class="refsubsect">Examples</span></strong></p>
+<p><a href="#CIHHIBCH">Example 4-81</a> shows how to use this hint in a JPA query.</p>
+<div class="example"><a id="CIHHIBCH" name="CIHHIBCH"></a><a id="TLJPA824" name="TLJPA824"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-81 Using sql.hint in a JPA Query</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+import org.eclipse.persistence.config.QueryHints;
+query.setHint("eclipselink.HINT", "/*+ index(scott.emp ix_emp) * /");
+</pre></div>
+<!-- class="example" -->
+<p><a href="#CIHDEAGG">Example 4-82</a> shows how to use this hint with the <code>@QueryHint</code> annotation.</p>
+<div class="example"><a id="CIHDEAGG" name="CIHDEAGG"></a><a id="TLJPA825" name="TLJPA825"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Example 4-82 Using sql.hint in a @QueryHint Annotation</font></em></strong></p>
+<pre xml:space="preserve" class="oac_no_warn">
+import org.eclipse.persistence.config.HintValues;
+import org.eclipse.persistence.config.QueryHints;
+@QueryHint(name=QueryHints.HINT, value="/*+ index(scott.emp ix_emp) * /");
+</pre></div>
+<!-- class="example" -->
+<a id="sthref732" name="sthref732"></a>
+<p><strong><br /><span class="refsubsect">See Also</span></strong></p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p>"Query Hints" in <em>Understanding EclipseLink</em></p>
+</li>
+<li>
+<p>"Query" in <em>Solutions Guide for EclispeLink</em></p>
+</li>
+<li>
+<p>Section 10.3.1 "NamedQuery Annotation" in the JPA Specification (<code><a href="http://jcp.org/en/jsr/detail?id=317">http://jcp.org/en/jsr/detail?id=317</a></code>)</p>
+</li>
+</ul>
+</div>
+<!-- class="refsect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="jpql.htm"><img src="../../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="persistenceproperties_ref.htm"><img src="../../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+</td>
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+</td><td>&nbsp;</td><td align="center"><a href="../../../" target="_top" class="external text" title="Search" rel="nofollow"><img src="../../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini"></span></a></td><td>&nbsp;</td><td align="center"><a href="../../eclipselink_jpa_extensions.pdf" title="PDF" target="_blank"><img src="../../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"></a></td><td align="center"><a href="#disqus_thread" title="Comments""><img src="../../../dcommon/images/comments.png" style="padding-right:5px;border:0" alt="Comments"><br /><span class="mini">Comments</span></a>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2014 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --></body>
+</html>

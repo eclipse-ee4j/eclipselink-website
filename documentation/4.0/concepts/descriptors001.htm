@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Common Descriptor Concepts | EclipseLink 4.0.x Understanding EclipseLink</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 1.0.22 Build 1" />
+<meta name="date" content="2014-06-10T10:39:52Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Common Descriptor Concepts" />
+<meta name="relnum" content="4.0" />
+<link rel="stylesheet" type="text/css" href="../../dcommon/style.css" media="screen" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="prev" href="descriptors.htm" title="Previous" type="text/html" />
+<link rel="next" href="descriptors002.htm" title="Next" type="text/html" />
+<!-- START: Disqus --><script type="text/javascript">  var disqus_developer = 0; </script><!-- END: Disqus --><!-- START: Sharethis --><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript" src="http://s.sharethis.com/loader.js"></script> <!-- END: Sharethis --></head>
+<body bgcolor="#FFFFFF"><iframe id="docheader" frameborder="0" framemargin="0" scrolling="no" src="../../dcommon/header.html"></iframe><script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">   google.load('search', '1', {language : 'en'});  google.setOnLoadCallback(function() {    var customSearchOptions = {};    var googleAnalyticsOptions = {};    googleAnalyticsOptions['queryParameter'] = 'q';    googleAnalyticsOptions['categoryParameter'] = '';    customSearchOptions['googleAnalyticsOptions'] = googleAnalyticsOptions;  var customSearchControl = new google.search.CustomSearchControl(      '016171230611334810008:mdbgdwjv8zu', customSearchOptions);    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);    var options = new google.search.DrawOptions();    options.setSearchFormRoot('cse-search-form');    customSearchControl.draw('cse', options);  }, true);</script><link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /><div id="cse" style="width:100%;"></div> 
+<div class="header"><a id="top" name="top"></a>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><div class="booktitle">Understanding EclipseLink, 
+<b>4.0</b><br /></font></td>
+<td valign="bottom" align="right" width="144">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+</td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Search" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini"></span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<tr>
+<td align="center"><a href="descriptors.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="descriptors002.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header --><a id="CHEBFJEC" name="CHEBFJEC"></a><a id="OTLCG92055" name="OTLCG92055"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="sect1"><font face="arial, helvetica, sans-serif" color="#330099">Common Descriptor Concepts</font></h1>
+<p>The following sections describe the concepts that are common to Object-Relational and MOXy descriptors.</p>
+<ul>
+<li>
+<p><a href="#CHEJJGIE">Descriptor Architecture</a></p>
+</li>
+<li>
+<p><a href="#CHEEDJEH">Descriptors and Inheritance</a></p>
+</li>
+<li>
+<p><a href="#CHEIIIBJ">Descriptors and Aggregation</a></p>
+</li>
+<li>
+<p><a href="#CACGEBJF">Descriptor Customization</a></p>
+</li>
+<li>
+<p><a href="#CHEIGIHG">Amendment Methods</a></p>
+</li>
+<li>
+<p><a href="#CHEDDDJF">Descriptor Event Manager</a></p>
+</li>
+</ul>
+<a id="CHEJJGIE" name="CHEJJGIE"></a><a id="OTLCG92056" name="OTLCG92056"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Descriptor Architecture</font></h2>
+<p>A <strong>descriptor</strong> stores all the information describing how an instance of a particular object class can be represented in a data source. The Descriptor API can be used to define, or amend EclipseLink descriptors through Java code. The Descriptor API classes are mainly in the <code>org.eclipse.persistence.descriptors</code> package.</p>
+<p>EclipseLink descriptors may contain the following information:</p>
+<ul>
+<li>
+<p>The persistent Java class it describes and the corresponding data source (database tables or XML complex type interaction)</p>
+</li>
+<li>
+<p>A collection of mappings, which describe how the attributes and relationships for that class are represented in the data source</p>
+</li>
+<li>
+<p>The primary key information (or equivalent) of the data source</p>
+</li>
+<li>
+<p>A list of query keys (or aliases) for field names</p>
+</li>
+<li>
+<p>Information for sequence numbers</p>
+</li>
+<li>
+<p>A set of optional properties for tailoring the behavior of the descriptor, including support for caching refresh options, identity maps, optimistic locking, the event manager, and the query manager</p>
+</li>
+</ul>
+<p>There is a descriptor type for each data source type that EclipseLink supports. In some cases, multiple descriptor types are valid for the same data source type. The type of descriptor you use determines the type of mappings that you can define.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHEEDJEH" name="CHEEDJEH"></a><a id="OTLCG92058" name="OTLCG92058"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Descriptors and Inheritance</font></h2>
+<p><strong>Inheritance</strong> describes how a derived (child) class inherits the characteristics of its superclass (parent). You can use descriptors to describe the inheritance relationships between classes in relational and XML projects.</p>
+<p>In the descriptor for a child class, you can override mappings that have been specified in the descriptor for a parent class, or map attributes that have not been mapped at all in the parent class descriptor.</p>
+<p><a href="#CHEIDEAE">Figure 5-1</a> illustrates the <code>Vehicle</code> object model&ndash;a typical Java inheritance hierarchy. The root class <code>Vehicle</code> contains two branch classes: <code>FueledVehicle</code> and <code>NonFueledVehicle</code>. Each branch class contains a leaf class: <code>Car</code> and <code>Bicycle</code>, respectively.</p>
+<div class="figure"><a id="CHEIDEAE" name="CHEIDEAE"></a><a id="OTLCG92070" name="OTLCG92070"></a>
+<p><strong><em><font face="arial, helvetica, sans-serif">Figure 5-1 Example Inheritance Hierarchy</font></em></strong></p>
+<img src="img/javainhr.gif" alt="Description of Figure 5-1 follows" title="Description of Figure 5-1 follows" longdesc="img_text/javainhr.htm" /><br />
+<a id="sthref26" name="sthref26" href="img_text/javainhr.htm">Description of "Figure 5-1 Example Inheritance Hierarchy "</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>EclipseLink recognizes the following three types of classes in an inheritance hierarchy:</p>
+<ul>
+<li>
+<p>The root class stores information about <em>all</em> instantiable classes in its subclass hierarchy. By default, queries performed on the root class return instances of the root class and its instantiable subclasses. However, the root class can be configured so queries on it return only instances of itself, without instances of its subclasses.</p>
+<p>For example, the <code>Vehicle</code> class in <a href="#CHEIDEAE">Figure 5-1</a> is a root class.</p>
+</li>
+<li>
+<p>Branch classes have a persistent superclass and also have subclasses. By default, queries performed on the branch class return instances of the branch class and any of its subclasses. However, as with the root class, the branch class can be configured so queries on it return only instances of itself without instances of its subclasses.</p>
+<p>For example, the <code>FueledVehicle</code> class in <a href="#CHEIDEAE">Figure 5-1</a> is a branch class.</p>
+</li>
+<li>
+<p>Leaf classes have a persistent superclass in the hierarchy but do not have subclasses. Queries performed on the leaf class can only return instances of the leaf class.</p>
+<p>For example, the <code>Car</code> class in <a href="#CHEIDEAE">Figure 5-1</a> is a leaf class.</p>
+</li>
+</ul>
+<p>In the descriptor for a child class, you can override mappings that have been specified in the descriptor for a parent class, or map attributes that have not been mapped at all in the parent class descriptor.</p>
+<p>This section includes information on the following topics:</p>
+<ul>
+<li>
+<p><a href="#CHEEIAEA">Specifying a Class Indicator</a></p>
+</li>
+<li>
+<p><a href="#CHECJEGE">Inheritance and Primary Keys</a></p>
+</li>
+<li>
+<p><a href="#CHEJGFGH">Single and Multi-Table Inheritance</a></p>
+</li>
+<li>
+<p><a href="#CHEEDCIJ">Aggregate and Composite Descriptors and Inheritance</a></p>
+</li>
+</ul>
+<a id="CHEEIAEA" name="CHEEIAEA"></a><a id="OTLCG92071" name="OTLCG92071"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Specifying a Class Indicator</font></h3>
+<p>When configuring inheritance, you configure the root class descriptor with the means of determining which subclasses it should instantiate.</p>
+<p>You can do this in one of the following ways:</p>
+<ul>
+<li>
+<p><a href="#CHEFDEDA">Using Class Indicator Fields</a></p>
+</li>
+<li>
+<p><a href="#CHEJDAID">Using Class Extraction Methods</a></p>
+</li>
+</ul>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p><font face="arial, helvetica, sans-serif"><strong><strong>Note</strong>:</strong></font></p>
+<p>All leaf classes in the hierarchy must have a class indicator and they must have the same type of class indicator (field or class extraction method).</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<a id="CHEFDEDA" name="CHEFDEDA"></a><a id="OTLCG92072" name="OTLCG92072"></a>
+<div class="sect4">
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Using Class Indicator Fields</font></h4>
+<p>You can use a persistent attribute of a class to indicate which subclass should be instantiated. For example, in a relational descriptor, you can use a class indicator field in the root class table. The indicator field should not have an associated direct mapping unless it is set to read-only.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p><font face="arial, helvetica, sans-serif"><strong><strong>Note</strong>:</strong></font></p>
+<p>If the indicator field is part of the primary key, define a write-only transformation mapping for the indicator field.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>You can use strings or numbers as values in the class indicator field.</p>
+<p>The root class descriptor must specify how the value in the class indicator field translates into the class to be instantiated.</p>
+</div>
+<!-- class="sect4" -->
+<a id="CHEJDAID" name="CHEJDAID"></a><a id="OTLCG92074" name="OTLCG92074"></a>
+<div class="sect4">
+<h4 class="sect4"><font face="arial, helvetica, sans-serif" color="#330099">Using Class Extraction Methods</font></h4>
+<p>You can define a Java method to compute the class indicator based on any available information in the object's data source record. Such a method is called a class extraction method.</p>
+<p>Using a class extraction method, you do not need to include an explicit class indicator field in your data model and you can handle relationships that are too complex to describe using class indicator fields.</p>
+<p>A class extraction method must have the following characteristics:</p>
+<ul>
+<li>
+<p>it must be defined on the root descriptor's class;</p>
+</li>
+<li>
+<p>it must be static;</p>
+</li>
+<li>
+<p>it must take a <code>Record</code> as an argument;</p>
+</li>
+<li>
+<p>it must return the <code>java.lang.Class</code> object to use for the <code>Record</code> passed in.</p>
+</li>
+</ul>
+<p>You may also need to define only-instances and with-all-subclasses expressions. If you use a class extraction method, then you must provide EclipseLink with expressions to correctly filter sibling instances for all classes that share a common table.</p>
+<p>When configuring inheritance using a class extraction method, EclipseLink does not generate SQL for queries on the root class.</p>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" -->
+<a id="CHECJEGE" name="CHECJEGE"></a><a id="OTLCG92078" name="OTLCG92078"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Inheritance and Primary Keys</font></h3>
+<p>For relational projects, EclipseLink assumes that all of the classes in an inheritance hierarchy have the same primary key, as set in the root descriptor.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHEJGFGH" name="CHEJGFGH"></a><a id="OTLCG92079" name="OTLCG92079"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Single and Multi-Table Inheritance</font></h3>
+<p>In a relational project, you can map your inheritance hierarchy to a single table or to multiple tables.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHEEDCIJ" name="CHEEDCIJ"></a><a id="OTLCG92080" name="OTLCG92080"></a>
+<div class="sect3">
+<h3 class="sect3"><font face="arial, helvetica, sans-serif" color="#330099">Aggregate and Composite Descriptors and Inheritance</font></h3>
+<p>You can designate relational descriptors as aggregates. XML descriptors are always composites (see <a href="#CHEIIIBJ">Descriptors and Aggregation</a>).</p>
+<p>When configuring inheritance for a relational aggregate descriptor, all the descriptors in the inheritance tree must be aggregates. The descriptors for aggregate and non-aggregate classes cannot exist in the same inheritance tree.</p>
+<p>When configuring inheritance for an XML descriptor, because all XML descriptors are composites, descriptor type does not restrict inheritance.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CHEIIIBJ" name="CHEIIIBJ"></a><a id="OTLCG92063" name="OTLCG92063"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Descriptors and Aggregation</font></h2>
+<p>Two objects&mdash;a source (parent or owning) object and a target (child or owned) object&mdash;are related by aggregation if there is a strict one-to-one relationship between them, and all the attributes of the target object can be retrieved from the same data source representation as the source object. This means that if the source object exists, then the target object must also exist, and if the source object is destroyed, then the target object is also destroyed.</p>
+<p>In this case, the descriptors for the source and target objects must be designated to reflect this relationship.</p>
+<p>The EJB 3.0 specification does not support nested aggregates).</p>
+</div>
+<!-- class="sect2" -->
+<a id="CACGEBJF" name="CACGEBJF"></a><a id="OTLCG00184" name="OTLCG00184"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Descriptor Customization</font></h2>
+<p>You can customize a descriptor at run time by specifying a descriptor customizer&mdash;a Java class that implements the <code>org.eclipse.persistence.config.DescriptorCustomizer</code> interface and provides a default (zero-argument) constructor.</p>
+<p>You use a descriptor customizer to customize a descriptor at run time through code API similar to how you use an amendment method to customize a descriptor. See <a href="#CHEIGIHG">Amendment Methods</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHEIGIHG" name="CHEIGIHG"></a><a id="OTLCG00186" name="OTLCG00186"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Amendment Methods</font></h2>
+<p>You can associate a static Java method that is called when a descriptor is loaded at run time. This method can amend the run-time descriptor instance through the descriptor Java code API. The method must be <code>public</code> <code>static</code> and take a single parameter of type <code>org.persistence.descriptors.structures.ClassDescriptor</code>. In the implementation of this method, you can configure advanced features of the descriptor using any of the public descriptor and mapping API.</p>
+<p>You can only modify descriptors before the session has been connected; you should not modify descriptors after the session has been connected.</p>
+<p>Amendment methods can be used with rational descriptors, object-relational data type descriptors, and XML descriptors.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHEDDDJF" name="CHEDDDJF"></a><a id="OTLCG00050" name="OTLCG00050"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2"><font face="arial, helvetica, sans-serif" color="#330099">Descriptor Event Manager</font></h2>
+<p>In relational projects, EclipseLink raises various instances of <code>DescriptorEvent</code> during the persistence life cycle. Each descriptor owns an instance of <code>DescriptorEventManager</code> that is responsible for receiving these events and dispatching them to the descriptor event handlers registered with it.</p>
+<p>Using a descriptor event handler, you can execute your own application specific logic whenever descriptor events occur, allowing you to take customized action at various points in the persistence life-cycle. For example, using a descriptor event handler, you can do the following:</p>
+<ul>
+<li>
+<p>Synchronize persistent objects with other systems, services, and frameworks</p>
+</li>
+<li>
+<p>Maintain nonpersistent attributes of which EclipseLink is not aware</p>
+</li>
+<li>
+<p>Notify other objects in the application when the persistent state of an object changes</p>
+</li>
+<li>
+<p>Implement complex mappings or optimizations not directly supported by EclipseLink mappings</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="navigation simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100" align="center">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td align="center"><a href="descriptors.htm"><img src="../../dcommon/images/larrow.png" alt="Previous" border="0" height="16" width="16" /></a></td>
+<td align="center"><a href="descriptors002.htm"><img src="../../dcommon/images/rarrow.png" alt="Next" border="0" height="16" width="16" /></a></td>
+</tr>
+</table>
+</td>
+<td align="center" width="34%"><a href="http://www.eclipse.org/eclipselink/" title="EclipseLink home"><img src="../../dcommon/images/ellogo.png" alt="EclipseLink" width="150" border="0" /></a><br />
+ 
+  
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/images/contents.png" alt="Go To Table Of Contents" border="0" height="16" width="16" /><br />
+</td><td>&nbsp;</td><td align="center"><a href="../../" target="_top" class="external text" title="Search" rel="nofollow"><img src="../../dcommon/images/search.png" alt="Search" style="border:0;" /><br /><span class="mini"></span></a></td><td>&nbsp;</td><td align="center"><a href="../eclipselink_otlcg.pdf" title="PDF" target="_blank"><img src="../../dcommon/images/pdf_icon.png" style="padding-right:5px;border:0" alt="PDF"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+<div id="copyright">Copyright &copy; 2012 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a><br /> <script type="text/javascript">var LastUpdated = document.lastModified;document.writeln ("Updated: " + LastUpdated);</script> </div><!-- START: Analytics --><script type="text/javascript">		  var _gaq = _gaq || [];		  _gaq.push(['_setAccount', 'UA-1608008-2']);		  _gaq.push(['_trackPageview']);				  (function() {		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);		  })();				</script><!-- END: Analytics --><!-- START: Sharethis --><script>var options={ "publisher": "e2fe9e07-fab6-4f84-83ea-0991b429842c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}};var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script><!-- END: Sharethis --></body>
+</html>
