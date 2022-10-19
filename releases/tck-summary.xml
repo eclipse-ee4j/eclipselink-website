@@ -13,7 +13,7 @@
     </section>
 
 
-    <section class="main" name="4.0.0-M3 Certification Request">
+    <section class="main" name="4.0.0 Certification Request">
         <description>
             <ul>
                 <li>
@@ -21,7 +21,7 @@
                     Eclipse Foundation</li>
                 <li>
                     Product Name, Version and download URL (if applicable):
-                    <a href="https://jakarta.oss.sonatype.org/content/repositories/staging/org/eclipse/persistence/eclipselink/4.0.0-M3/eclipselink-4.0.0-M3.zip">EclipseLink 4.0.0-M3</a>
+                    <a href="https://repo1.maven.org/maven2/org/eclipse/persistence/eclipselink/4.0.0/eclipselink-4.0.0.zip">EclipseLink 4.0.0</a>
                 </li>
                 <li>
                     Specification Name, Version and download URL:
