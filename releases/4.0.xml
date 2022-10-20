@@ -4,7 +4,7 @@
     <section class="title">
         <description>
             <h1>EclipseLink 4.0</h1>
-            <p> The primary focus of the EclipseLink 4.0 release is switch over to new `jakarta` package namespace and support for Jakarta EE 10 APIs.</p>
+            <p> The primary focus of the EclipseLink 4.0 release is support for Jakarta EE 10 APIs.</p>
             <p>
                 Main features and changes include:
                 <ul>
