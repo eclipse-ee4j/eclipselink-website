@@ -8,7 +8,7 @@
 	include($App->getProjectCommon());
 
 /*******************************************************************************
- * Copyright (c) 2009-2020 Eclipse Foundation and others.
+ * Copyright (c) 2009-2023 Eclipse Foundation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -81,7 +81,7 @@
 				<li>
 <form action="../"><label for="Concepts">Understanding EclipseLink (Concepts Guide)</label>
   <select name="Concepts">
-    <option value="http://www.eclipse.org/eclipselink/documentation/4.0/concepts/toc.htm" selected="selected"> 4.0 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/4.0/concepts/concepts.html" selected="selected"> 4.0 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/3.0/concepts/toc.htm"> 3.0 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.7/concepts/toc.htm"> 2.7 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.6/concepts/toc.htm"> 2.6 </option>
@@ -95,7 +95,7 @@
 				<li>
 <form action="../"><label for="solutions">EclipseLink Solutions Guide</label>
   <select name="Solutions">
-    <option value="http://www.eclipse.org/eclipselink/documentation/4.0/solutions/toc.htm" selected="selected"> 4.0 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/4.0/solutions/solutions.html" selected="selected"> 4.0 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/3.0/solutions/toc.htm"> 3.0 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.7/solutions/toc.htm"> 2.7 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.6/solutions/toc.htm"> 2.6 </option>
@@ -109,7 +109,7 @@
 				<li>
 <form action="../"><label for="solutions">EclipseLink JPA Extensions Reference</label>
   <select name="JPA">
-    <option value="http://www.eclipse.org/eclipselink/documentation/4.0/jpa/extensions/toc.htm" selected="selected"> 4.0 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/4.0/jpa/extensions/jpa-extensions.html" selected="selected"> 4.0 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/3.0/jpa/extensions/toc.htm"> 3.0 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.7/jpa/extensions/toc.htm"> 2.7 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.6/jpa/extensions/toc.htm"> 2.6 </option>
@@ -123,7 +123,7 @@
 				<li>
 <form action="../"><label for="solutions">Developing JAXB Applications Using EclipseLink MOXy</label>
   <select name="MOXy">
-    <option value="http://www.eclipse.org/eclipselink/documentation/4.0/moxy/toc.htm" selected="selected"> 4.0 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/4.0/moxy/moxy.html" selected="selected"> 4.0 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/3.0/moxy/toc.htm"> 3.0 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.7/moxy/toc.htm"> 2.7 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.6/moxy/toc.htm"> 2.6 </option>
@@ -137,7 +137,7 @@
 				<li>
 <form action="../"><label for="solutions">EclipseLink NoSQL</label>
   <select name="nosql">
-    <option value="4.0/concepts/nosql.htm" selected="selected"> 4.0 </option>
+    <option value="4.0/concepts/concepts.html#understanding-non-relational-data-sources" selected="selected"> 4.0 </option>
     <option value="3.0/concepts/nosql.htm"> 3.0 </option>
     <option value="2.7/concepts/nosql.htm"> 2.7 </option>
     <option value="2.6/concepts/nosql.htm"> 2.6 </option>
@@ -151,7 +151,7 @@
 				<li>
 <form action="../"><label for="solutions">Developing Persistence Architectures Using EclipseLink Database Web Services</label>
   <select name="dbws">
-    <option value="http://www.eclipse.org/eclipselink/documentation/4.0/dbws/toc.htm" selected="selected"> 4.0 </option>
+    <option value="http://www.eclipse.org/eclipselink/documentation/4.0/dbws/dbws.html" selected="selected"> 4.0 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/3.0/dbws/toc.htm"> 3.0 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.7/dbws/toc.htm"> 2.7 </option>
     <option value="http://www.eclipse.org/eclipselink/documentation/2.6/dbws/toc.htm"> 2.6 </option>

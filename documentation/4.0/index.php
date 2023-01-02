@@ -8,7 +8,7 @@
 	include($App->getProjectCommon());
 
 /*******************************************************************************
- * Copyright (c) 2009 Eclipse Foundation and others.
+ * Copyright (c) 2009-2023 Eclipse Foundation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -33,28 +33,26 @@
 	<div class="homeitem3col">
 		<h2>EclipseLink 4.0.x Documentation</h2>
 			<ul>
-				<li><a href="https://www.eclipse.org/eclipselink/releases/3.0.php">Release Notes</a></li>
+				<li><a href="https://www.eclipse.org/eclipselink/releases/4.0.php">Release Notes</a></li>
 				<li><a href="solutions/install.htm">Installation and Configuration</a></li>
-				<li> <a href="http://www.eclipse.org/eclipselink/api/3.0/index.html"> Java Docs</a></li>
+				<li> <a href="http://www.eclipse.org/eclipselink/api/4.0/index.html"> Java Docs</a></li>
 			</ul>
 	</div>
  
 	<div class="section">
 			<h3>Guides</h3>
 			<ul>
-				<li><a href="concepts/toc.htm">Understanding EclipseLink (Concepts Guide)</a></li>
+				<li><a href="concepts/concepts.html">Understanding EclipseLink (Concepts Guide)</a></li>
 				
-				<li><a href="solutions/toc.htm">EclipseLink Solutions Guide</a></li>
+				<li><a href="solutions/solutions.html">EclipseLink Solutions Guide</a></li>
 				
-				<li><a href="jpa/extensions/toc.htm">EclipseLink JPA Extensions Reference</a></li>
+				<li><a href="jpa/extensions/jpa-extensions.html">EclipseLink JPA Extensions Reference</a></li>
 
-				<li><a href="moxy/toc.htm">Developing JAXB Applications Using EclipseLink MOXy</a></li>
+				<li><a href="moxy/moxy.html">Developing JAXB Applications Using EclipseLink MOXy</a></li>
 
-				<li><a href="concepts/nosql.htm">EclipseLink NoSQL</a></li>
+				<li><a href="concepts/concepts.html#understanding-non-relational-data-sources">EclipseLink NoSQL</a></li>
 
-				<li><a href="http://www.eclipse.org/eclipselink/moxy.php">EclipseLink SDO</a></li>
-
-				<li><a href="dbws/toc.htm">Developing Persistence Architectures Using EclipseLink Database Web Services</a></li>
+				<li><a href="dbws/dbws.html">Developing Persistence Architectures Using EclipseLink Database Web Services</a></li>
 			</ul>
 	</div>
 
