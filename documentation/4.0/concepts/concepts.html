@@ -4,9 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.17">
-<meta name="description" content="EclipseLink">
-<meta name="keywords" content="eclipselink, java, jpa, persistence, concepts, understanding">
+<meta name="generator" content="Asciidoctor 2.0.18">
 <title>Understanding EclipseLink</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -86,10 +84,10 @@ code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;
 ul,ol,dl{line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
 ul,ol{margin-left:1.5em}
 ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0}
-ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
-ul.square{list-style-type:square}
 ul.circle{list-style-type:circle}
 ul.disc{list-style-type:disc}
+ul.square{list-style-type:square}
+ul.circle ul:not([class]),ul.disc ul:not([class]),ul.square ul:not([class]){list-style:inherit}
 ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
 dl dt{margin-bottom:.3125em;font-weight:bold}
 dl dd{margin-bottom:1.25em}
@@ -441,9 +439,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="book toc2 toc-left">
 <div id="header">
-<h1>Understanding EclipseLink</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
+<ul class="sectlevel0">
+<li><a href="#understanding-eclipselink">Understanding EclipseLink</a>
 <ul class="sectlevel1">
 <li><a href="#eclipselink">EclipseLink</a></li>
 <li><a href="#preface">Preface</a>
@@ -571,14 +570,24 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 </ul>
+</li>
+</ul>
 </div>
 </div>
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p><a href="concepts.pdf">PDF</a>|<a href="concepts.epub">ePub</a></p>
+<p><a href="http://wiki.eclipse.org/EclipseLink/FAQ">FAQs</a>|<a href="https://www.eclipse.org/eclipselink/documentation/">Documentation</a>|
+<a href="http://wiki.eclipse.org/EclipseLink/Examples">Examples</a>|<a href="http://wiki.eclipse.org/EclipseLink/Development/">Development</a></p>
 </div>
+<hr>
+</div>
+</div>
+<h1 id="understanding-eclipselink" class="sect0"><a class="anchor" href="#understanding-eclipselink"></a>Understanding EclipseLink</h1>
+<div class="openblock partintro">
+<div class="content">
+<a href="concepts.pdf">PDF</a>|<a href="concepts.epub">ePub</a>
 </div>
 </div>
 <div class="sect1">
@@ -12094,6 +12103,11 @@ include:</p>
 </div></div></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MariaDB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>org.eclipse.persistence.platform.database.MariaDBPlatform</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides MariaDB-specific behavior.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Microsoft Access</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>org.eclipse.persistence.platform.database.AccessPlatformPlatform</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Provides Microsoft Access-specific behavior.</p></td>
@@ -12160,6 +12174,9 @@ include:</p>
 </li>
 <li>
 <p><code>TIMESTAMP</code> (<code>TZ</code>, <code>LTZ</code>)</p>
+</li>
+<li>
+<p><code>JSON</code></p>
 </li>
 <li>
 <p>Native batch writing</p>
@@ -12259,6 +12276,12 @@ PointBase database-specific behavior.</p></td>
 <p>See also PostgreSQL:
 <code><a href="http://wiki.eclipse.org/EclipseLink/FAQ/JPA/PostgreSQL" class="bare">http://wiki.eclipse.org/EclipseLink/FAQ/JPA/PostgreSQL</a></code></p>
 </div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PostgreSQL 10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>org.eclipse.persistence.platform.database.PostgreSQL10Platform</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides PostgreSQL database-specific behavior, plus:</p>
+<p class="tableblock">* <code>JSON</code> datatype support</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SAP MaxDB</p></td>
@@ -12405,7 +12428,7 @@ API Reference for EclipseLink.</em></p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Java Classes</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">IBM WebSphere Application Server</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Open Liberty Application Server</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
 <li>
@@ -12417,35 +12440,18 @@ API Reference for EclipseLink.</em></p>
 <li>
 <p><code>org.eclipse.persistence.platform.server.was.WebSpherePlatform</code></p>
 </li>
+<li>
+<p><code>org.eclipse.persistence.platform.server.was.WebSphere_Liberty_Platform</code></p>
+</li>
 </ul>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">JBoss Application Server</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">WildFly Application Server</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
 <li>
 <p><code>org.eclipse.persistence.platform.server.jboss.JBossPlatform</code></p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Oracle Containers for J2EE (OC4J)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p><code>org.eclipse.persistence.platform.server.oc4j.Oc4jPlatform</code></p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Oracle Sun Application Server</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p><code>org.eclipse.persistence.platform.server.sunas</code></p>
 </li>
 </ul>
 </div></div></td>
@@ -12467,11 +12473,11 @@ API Reference for EclipseLink.</em></p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SAP NetWeaver Application Server</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GlassFish Application Server</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
 <li>
-<p><code>org.eclipse.persistence.platform.server.sap.SAPNetWeaver_7_1_Platform</code></p>
+<p><code>org.eclipse.persistence.platform.server.glassfish.GlassfishPlatform</code></p>
 </li>
 </ul>
 </div></div></td>
@@ -12657,7 +12663,7 @@ listed in the table, see <em>Java API Reference for EclipseLink</em>.</p>
 <hr>
 <div class="paragraph">
 <p>Copyright © 2022 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a>
-Updated: 2023-01-02 14:36:38 +0100</p>
+Updated: 2023-02-24 09:47:13 +0100</p>
 </div>
 </div>
 </div>
