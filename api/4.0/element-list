@@ -4,6 +4,10 @@ commonj.sdo.helper
 commonj.sdo.impl
 org.eclipse.persistence
 org.eclipse.persistence.annotations
+org.eclipse.persistence.asm
+org.eclipse.persistence.asm.internal
+org.eclipse.persistence.asm.internal.platform.eclipselink
+org.eclipse.persistence.asm.internal.platform.ow2
 org.eclipse.persistence.config
 org.eclipse.persistence.core.descriptors
 org.eclipse.persistence.core.mappings
@@ -111,6 +115,7 @@ org.eclipse.persistence.platform.server.glassfish
 org.eclipse.persistence.platform.server.jboss
 org.eclipse.persistence.platform.server.sap
 org.eclipse.persistence.platform.server.was
+org.eclipse.persistence.platform.server.wildfly
 org.eclipse.persistence.platform.server.wls
 org.eclipse.persistence.platform.xml
 org.eclipse.persistence.platform.xml.jaxp
@@ -131,6 +136,7 @@ org.eclipse.persistence.services.jboss
 org.eclipse.persistence.services.mbean
 org.eclipse.persistence.services.weblogic
 org.eclipse.persistence.services.websphere
+org.eclipse.persistence.services.wildfly
 org.eclipse.persistence.sessions
 org.eclipse.persistence.sessions.broker
 org.eclipse.persistence.sessions.changesets
@@ -161,4 +167,5 @@ org.eclipse.persistence.transaction.jboss
 org.eclipse.persistence.transaction.jotm
 org.eclipse.persistence.transaction.sap
 org.eclipse.persistence.transaction.was
+org.eclipse.persistence.transaction.wildfly
 org.eclipse.persistence.transaction.wls
