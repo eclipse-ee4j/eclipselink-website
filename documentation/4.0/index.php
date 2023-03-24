@@ -34,7 +34,7 @@
 		<h2>EclipseLink 4.0.x Documentation</h2>
 			<ul>
 				<li><a href="https://www.eclipse.org/eclipselink/releases/4.0.php">Release Notes</a></li>
-				<li><a href="solutions/install.htm">Installation and Configuration</a></li>
+				<li><a href="solutions/solutions.html#INSTALL">Installation and Configuration</a></li>
 				<li> <a href="http://www.eclipse.org/eclipselink/api/4.0/index.html"> Java Docs</a></li>
 			</ul>
 	</div>
