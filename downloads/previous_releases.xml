@@ -82,6 +82,46 @@
             </tr>
          </table>
          <br/>
+         <a name="3.0.3"> </a>
+         <b>EclipseLink 3.0.3 Release (Aug 19th, 2022)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
+         <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
+            <tr class="tableData">
+               <td class="packageDesc">
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/3.0.3/eclipselink-3.0.3.v202208190922-471432269c.zip">EclipseLink 3.0.3 Installer Zip (30.5 MB)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/3.0.3/eclipselink-plugins-nosql-3.0.3.v202208190922-471432269c.zip">EclipseLink NoSQL 3.0.3 Installer Zip (400 K)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/3.0.3/eclipselink-plugins-3.0.3.v202208190922-471432269c.zip">EclipseLink 3.0.3 OSGi Bundles Zip (63.9 MB)</a>
+                  </div>
+                  <div>
+                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/3.0.3/eclipselink-src-3.0.3.v202208190922-471432269c.zip">EclipseLink 3.0.3 Source Zip (7.5 MB)</a>
+                  </div>
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+               <td width="120" class="downloadCol">
+                  <div>
+                     <a href="/eclipselink/releases/3.0.php">Release Notes</a>
+                  </div>
+                  <div>
+                     <a href="https://www.eclipse.org/eclipselink/documentation/3.0/">Documentation</a>
+                  </div>
+                  <div>
+                     <a href="http://wiki.eclipse.org/EclipseLink/Maven">Maven</a>
+                  </div>
+                  <div class="bottomRow">
+                     <div>
+                     </div>
+                  </div>
+               </td>
+            </tr>
+         </table>
+         <br/>
          <a name="3.0.2"> </a>
          <b>EclipseLink 3.0.2 Release (Jul 16th, 2021)</b> <a class="packageTitle" href="http://download.eclipse.org/rt/eclipselink/updates">P2 Repository Link</a>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
