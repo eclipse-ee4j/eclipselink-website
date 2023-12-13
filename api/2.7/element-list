@@ -126,6 +126,7 @@ org.eclipse.persistence.platform.server.wls
 org.eclipse.persistence.platform.xml
 org.eclipse.persistence.platform.xml.jaxp
 org.eclipse.persistence.queries
+org.eclipse.persistence.security
 org.eclipse.persistence.sequencing
 org.eclipse.persistence.services
 org.eclipse.persistence.services.glassfish
@@ -154,6 +155,7 @@ org.eclipse.persistence.tools
 org.eclipse.persistence.tools.file
 org.eclipse.persistence.tools.profiler
 org.eclipse.persistence.tools.schemaframework
+org.eclipse.persistence.tools.security
 org.eclipse.persistence.tools.tuning
 org.eclipse.persistence.tools.weaving.jpa
 org.eclipse.persistence.transaction
