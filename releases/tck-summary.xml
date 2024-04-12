@@ -39,7 +39,7 @@
                     None</li>
                 <li>
                     Java runtime used to run the implementation:
-                    Oracle JDK "21.0.2"</li>
+                    Oracle JDK "17.0.10", Oracle JDK "21.0.2"</li>
                 <li>
                     Summary of the information for the certification environment, operating system, cloud, …:
                     Apache Derby 10.15.2.0, Linux</li>
@@ -49,10 +49,22 @@
                     I attest that all TCK requirements have been met, including any compatibility rules.</li>
             </ul>
 
-            <p>Test results:</p>
+            <p>Test results SE 17.0.10:</p>
 
             <pre>
-                <code>***********************************************************************************
+<code>***********************************************************************************
+***                        TCK results summary                                  ***
+[INFO] Number of Tests Passed      = 2135
+[INFO] Number of Tests Failed      = 0
+[INFO] Number of Tests with Errors = 0
+[INFO] Number of Skipped Tests     = 4
+[INFO] ****************************************************************************</code>
+            </pre>
+
+            <p>Test results SE 21.0.2:</p>
+
+            <pre>
+<code>***********************************************************************************
 ***                        TCK results summary                                  ***
 [INFO] Number of Tests Passed      = 2135
 [INFO] Number of Tests Failed      = 0
@@ -103,9 +115,9 @@
 
             <pre>
                 <code>***                        TCK results summary                                  ***
-                    [javatest.batch] Number of Tests Passed      = 2071
-                    [javatest.batch] Number of Tests Failed      = 0
-                    [javatest.batch] Number of Tests with Errors = 0</code>
+                [javatest.batch] Number of Tests Passed      = 2071
+                [javatest.batch] Number of Tests Failed      = 0
+                [javatest.batch] Number of Tests with Errors = 0</code>
             </pre>
 
         </description>
