@@ -151,14 +151,14 @@
 
       <a name="27"> </a>
       <description>
-         <b>EclipseLink 2.7.14 Release (Released Dec 13th, 2023)</b> - <a href="/eclipselink/releases/tck-summary.php">TCK Summary</a>, <a href="/eclipselink/releases/2.7.php">New and Noteworthy</a> - <a href="http://www.eclipse.org/eclipselink/documentation/2.7/">Getting Started</a><br/>
+         <b>EclipseLink 2.7.15 Release (Released May 22nd, 2024)</b> - <a href="/eclipselink/releases/tck-summary.php">TCK Summary</a>, <a href="/eclipselink/releases/2.7.php">New and Noteworthy</a> - <a href="http://www.eclipse.org/eclipselink/documentation/2.7/">Getting Started</a><br/>
          <table class="contentTable" width="100%" cellspacing="0" style="font-size:95%;">
             <tr class="tableData">
                <td class="packageDesc">
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.7.14/eclipselink-2.7.14.v20231208-d05cebc9b0.zip">EclipseLink 2.7.14 Installer Zip (35.2 MB)</a>
+                     <a class="packageTitle" href="https://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.7.15/eclipselink-2.7.15.v20240516-53511fdbd8.zip">EclipseLink 2.7.15 Installer Zip (35.2 MB)</a>
                   </div>
-                  This zip includes EclipseLink 2.7.14 with the single jar packaging,  source,  JavaDocs, utilities, and dependent libraries. Intended for use in Java EE and SE environments.
+                  This zip includes EclipseLink 2.7.15 with the single jar packaging,  source,  JavaDocs, utilities, and dependent libraries. Intended for use in Java EE and SE environments.
                   <div class="bottomRow">
                   </div>
                </td>
@@ -168,7 +168,7 @@
             <tr class="tableData">
                <td class="packageDesc">
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.7.14/eclipselink-plugins-nosql-2.7.14.v20231208-d05cebc9b0.zip">EclipseLink NoSQL 2.7.14 Installer Zip (758 K)</a>
+                     <a class="packageTitle" href="https://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.7.15/eclipselink-plugins-nosql-2.7.15.v20240516-53511fdbd8.zip">EclipseLink NoSQL 2.7.15 Installer Zip (761 K)</a>
                   </div>
                   This zip includes EclipseLink NoSql support. This zip is to be used together with the EclipseLink zip (or EclipseLink bundles) to support NoSQL.  This zip includes binaries, source, and Javadocs.
                   <div class="bottomRow">
@@ -180,9 +180,9 @@
             <tr class="tableData">
                <td class="packageDesc">
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.7.14/eclipselink-plugins-2.7.14.v20231208-d05cebc9b0.zip">EclipseLink 2.7.14 OSGi Bundles Zip (34.8 MB)</a>
+                     <a class="packageTitle" href="https://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.7.15/eclipselink-plugins-2.7.15.v20240516-53511fdbd8.zip">EclipseLink 2.7.15 OSGi Bundles Zip (34.2 MB)</a>
                   </div>
-                  Contains EclipseLink and dependency bundles.  Get the OSGI Bundle Zip to use EclipseLink 2.7.14 runtime in an OSGi container.
+                  Contains EclipseLink and dependency bundles.  Get the OSGI Bundle Zip to use EclipseLink 2.7.15 runtime in an OSGi container.
                   <div class="bottomRow">
                      <div>
                      </div>
@@ -194,7 +194,7 @@
             <tr class="tableData">
                <td class="packageDesc">
                   <div>
-                     <a class="packageTitle" href="http://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.7.14/eclipselink-src-2.7.14.v20231208-d05cebc9b0.zip">EclipseLink 2.7.14 Source Zip (8.3 MB)</a>
+                     <a class="packageTitle" href="https://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.7.15/eclipselink-src-2.7.15.v20240516-53511fdbd8.zip">EclipseLink 2.7.15 Source Zip (8.3 MB)</a>
                   </div>
                   Contains source code for all of eclipselink.
                   <div class="bottomRow">
