@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.18">
+<meta name="generator" content="Asciidoctor 2.0.20">
 <title>Jakarta Persistence API (JPA) Extensions Reference for EclipseLink</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -208,13 +208,10 @@ table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
 .admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
 .exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
-.exampleblock>.content>:first-child{margin-top:0}
-.exampleblock>.content>:last-child{margin-bottom:0}
 .sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
-.sidebarblock>:first-child{margin-top:0}
-.sidebarblock>:last-child{margin-bottom:0}
 .sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
-.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content>:first-child,.sidebarblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child,.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
 .literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
 @media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
 @media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
@@ -393,7 +390,7 @@ b.conum *{color:inherit!important}
 dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
 h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
 p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
-p,blockquote,dt,td.content,span.alt,summary{font-size:1.0625rem}
+p,blockquote,dt,td.content,td.hdlist1,span.alt,summary{font-size:1.0625rem}
 p{margin-bottom:1.25rem}
 .sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
 .exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
@@ -750,61 +747,62 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#logging-session">5.95. logging.session</a></li>
 <li><a href="#logging-thread">5.96. logging.thread</a></li>
 <li><a href="#logging-timestamp">5.97. logging.timestamp</a></li>
-<li><a href="#locking-timestamp-local">5.98. locking.timestamp.local</a></li>
-<li><a href="#metadata-source">5.99. metadata-source</a></li>
-<li><a href="#metadata-source-properties-file">5.100. metadata-source.properties.file</a></li>
-<li><a href="#metadata-source-send-refresh-command">5.101. metadata-source.send-refresh-command</a></li>
-<li><a href="#metadata-source-xml-file">5.102. metadata-source.xml.file</a></li>
-<li><a href="#metadata-source-xml-url">5.103. metadata-source.xml.url</a></li>
-<li><a href="#multitenanttenantssharecache">5.104. multitenant.tenants-share-cache</a></li>
-<li><a href="#sthref1077">5.105. multitenant.tenants-share-emf</a></li>
-<li><a href="#nosql-connection-factory">5.106. nosql.connection-factory</a></li>
-<li><a href="#nosql-connection-spec">5.107. nosql.connection-spec</a></li>
-<li><a href="#nosql-property">5.108. nosql.property</a></li>
-<li><a href="#oracle-proxy-type">5.109. oracle.proxy-type</a></li>
-<li><a href="#orm-throw-exceptions">5.110. orm.throw.exceptions</a></li>
-<li><a href="#orm-validate-schema">5.111. orm.validate.schema</a></li>
-<li><a href="#partitioning-3">5.112. partitioning</a></li>
-<li><a href="#partitioning-callback">5.113. partitioning.callback</a></li>
-<li><a href="#persistence-context-close-on-commit">5.114. persistence-context.close-on-commit</a></li>
-<li><a href="#persistence-context-commit-without-persist-rules">5.115. persistence-context.commit-without-persist-rules</a></li>
-<li><a href="#persistence-context-flush-mode">5.116. persistence-context.flush-mode</a></li>
-<li><a href="#persistence-context-persist-on-commit">5.117. persistence-context.persist-on-commit</a></li>
-<li><a href="#persistence-context-reference-mode">5.118. persistence-context.reference-mode</a></li>
-<li><a href="#persistenceunits-2">5.119. persistenceunits</a></li>
-<li><a href="#persistencexml-2">5.120. persistencexml</a></li>
-<li><a href="#persisencexml-default">5.121. persisencexml.default</a></li>
-<li><a href="#pessimistic-lock-timeout-unit-2">5.122. pessimistic.lock.timeout.unit</a></li>
-<li><a href="#profiler-2">5.123. profiler</a></li>
-<li><a href="#query-results-cache-validation-2">5.124. query-results-cache.validation</a></li>
-<li><a href="#query-timeout-unit">5.125. query.timeout.unit</a></li>
-<li><a href="#se-puinfo">5.126. se-puinfo</a></li>
-<li><a href="#sequencing-start-sequence-at-nextval">5.127. sequencing.start-sequence-at-nextval</a></li>
-<li><a href="#session-customizer">5.128. session.customizer</a></li>
-<li><a href="#session-include-descriptor-queries">5.129. session.include.descriptor.queries</a></li>
-<li><a href="#session-event-listener">5.130. session-event-listener</a></li>
-<li><a href="#session-name">5.131. session-name</a></li>
-<li><a href="#sessions-xml">5.132. sessions-xml</a></li>
-<li><a href="#target-database">5.133. target-database</a></li>
-<li><a href="#target-database-properties">5.134. target-database-properties</a></li>
-<li><a href="#target-server">5.135. target-server</a></li>
-<li><a href="#temporal-mutable">5.136. temporal.mutable</a></li>
-<li><a href="#tenant-id">5.137. tenant-id</a></li>
-<li><a href="#tenant-schema-id">5.138. tenant-schema-id</a></li>
-<li><a href="#thread-extended-logging">5.139. thread.extended.logging</a></li>
-<li><a href="#thread-extended-logging-threaddump">5.140. thread.extended.logging.threaddump</a></li>
-<li><a href="#tolerate-invalid-jpql">5.141. tolerate-invalid-jpql</a></li>
-<li><a href="#transaction-join-existing">5.142. transaction.join-existing</a></li>
-<li><a href="#tuning-2">5.143. tuning</a></li>
-<li><a href="#validate-existence">5.144. validate-existence</a></li>
-<li><a href="#validation-only">5.145. validation-only</a></li>
-<li><a href="#weaving-2">5.146. weaving</a></li>
-<li><a href="#weaving-changetracking">5.147. weaving.changetracking</a></li>
-<li><a href="#weaving-eager">5.148. weaving.eager</a></li>
-<li><a href="#weaving-fetchgroups">5.149. weaving.fetchgroups</a></li>
-<li><a href="#weaving-internal">5.150. weaving.internal</a></li>
-<li><a href="#weaving-mappedsuperclass">5.151. weaving.mappedsuperclass</a></li>
-<li><a href="#weaving-lazy">5.152. weaving.lazy</a></li>
+<li><a href="#login-encryptor">5.98. login.encryptor</a></li>
+<li><a href="#locking-timestamp-local">5.99. locking.timestamp.local</a></li>
+<li><a href="#metadata-source">5.100. metadata-source</a></li>
+<li><a href="#metadata-source-properties-file">5.101. metadata-source.properties.file</a></li>
+<li><a href="#metadata-source-send-refresh-command">5.102. metadata-source.send-refresh-command</a></li>
+<li><a href="#metadata-source-xml-file">5.103. metadata-source.xml.file</a></li>
+<li><a href="#metadata-source-xml-url">5.104. metadata-source.xml.url</a></li>
+<li><a href="#multitenanttenantssharecache">5.105. multitenant.tenants-share-cache</a></li>
+<li><a href="#sthref1077">5.106. multitenant.tenants-share-emf</a></li>
+<li><a href="#nosql-connection-factory">5.107. nosql.connection-factory</a></li>
+<li><a href="#nosql-connection-spec">5.108. nosql.connection-spec</a></li>
+<li><a href="#nosql-property">5.109. nosql.property</a></li>
+<li><a href="#oracle-proxy-type">5.110. oracle.proxy-type</a></li>
+<li><a href="#orm-throw-exceptions">5.111. orm.throw.exceptions</a></li>
+<li><a href="#orm-validate-schema">5.112. orm.validate.schema</a></li>
+<li><a href="#partitioning-3">5.113. partitioning</a></li>
+<li><a href="#partitioning-callback">5.114. partitioning.callback</a></li>
+<li><a href="#persistence-context-close-on-commit">5.115. persistence-context.close-on-commit</a></li>
+<li><a href="#persistence-context-commit-without-persist-rules">5.116. persistence-context.commit-without-persist-rules</a></li>
+<li><a href="#persistence-context-flush-mode">5.117. persistence-context.flush-mode</a></li>
+<li><a href="#persistence-context-persist-on-commit">5.118. persistence-context.persist-on-commit</a></li>
+<li><a href="#persistence-context-reference-mode">5.119. persistence-context.reference-mode</a></li>
+<li><a href="#persistenceunits-2">5.120. persistenceunits</a></li>
+<li><a href="#persistencexml-2">5.121. persistencexml</a></li>
+<li><a href="#persisencexml-default">5.122. persisencexml.default</a></li>
+<li><a href="#pessimistic-lock-timeout-unit-2">5.123. pessimistic.lock.timeout.unit</a></li>
+<li><a href="#profiler-2">5.124. profiler</a></li>
+<li><a href="#query-results-cache-validation-2">5.125. query-results-cache.validation</a></li>
+<li><a href="#query-timeout-unit">5.126. query.timeout.unit</a></li>
+<li><a href="#se-puinfo">5.127. se-puinfo</a></li>
+<li><a href="#sequencing-start-sequence-at-nextval">5.128. sequencing.start-sequence-at-nextval</a></li>
+<li><a href="#session-customizer">5.129. session.customizer</a></li>
+<li><a href="#session-include-descriptor-queries">5.130. session.include.descriptor.queries</a></li>
+<li><a href="#session-event-listener">5.131. session-event-listener</a></li>
+<li><a href="#session-name">5.132. session-name</a></li>
+<li><a href="#sessions-xml">5.133. sessions-xml</a></li>
+<li><a href="#target-database">5.134. target-database</a></li>
+<li><a href="#target-database-properties">5.135. target-database-properties</a></li>
+<li><a href="#target-server">5.136. target-server</a></li>
+<li><a href="#temporal-mutable">5.137. temporal.mutable</a></li>
+<li><a href="#tenant-id">5.138. tenant-id</a></li>
+<li><a href="#tenant-schema-id">5.139. tenant-schema-id</a></li>
+<li><a href="#thread-extended-logging">5.140. thread.extended.logging</a></li>
+<li><a href="#thread-extended-logging-threaddump">5.141. thread.extended.logging.threaddump</a></li>
+<li><a href="#tolerate-invalid-jpql">5.142. tolerate-invalid-jpql</a></li>
+<li><a href="#transaction-join-existing">5.143. transaction.join-existing</a></li>
+<li><a href="#tuning-2">5.144. tuning</a></li>
+<li><a href="#validate-existence">5.145. validate-existence</a></li>
+<li><a href="#validation-only">5.146. validation-only</a></li>
+<li><a href="#weaving-2">5.147. weaving</a></li>
+<li><a href="#weaving-changetracking">5.148. weaving.changetracking</a></li>
+<li><a href="#weaving-eager">5.149. weaving.eager</a></li>
+<li><a href="#weaving-fetchgroups">5.150. weaving.fetchgroups</a></li>
+<li><a href="#weaving-internal">5.151. weaving.internal</a></li>
+<li><a href="#weaving-mappedsuperclass">5.152. weaving.mappedsuperclass</a></li>
+<li><a href="#weaving-lazy">5.153. weaving.lazy</a></li>
 </ul>
 </li>
 <li><a href="#eclipselink-orm-xml-schema-reference">6. eclipselink-orm.xml Schema Reference</a>
@@ -830,7 +828,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h1 id="jakarta-persistence-api-jpa-extensions-reference-for-eclipselink" class="sect0"><a class="anchor" href="#jakarta-persistence-api-jpa-extensions-reference-for-eclipselink"></a>Jakarta Persistence API (JPA) Extensions Reference for EclipseLink</h1>
 <div class="openblock partintro">
 <div class="content">
-<a href="jpa-extensions.pdf">PDF</a>|<a href="jpa-extensions.epub">ePub</a>
+<div class="paragraph">
+<p><a href="jpa-extensions.pdf">PDF</a>|<a href="jpa-extensions.epub">ePub</a></p>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -840,7 +840,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Jakarta Persistence API (JPA) Extensions Reference for EclipseLink</p>
 </div>
 <div class="paragraph">
-<p>Release  4.0.1</p>
+<p>Release  4.0.5</p>
 </div>
 <div class="paragraph">
 <p>December 2022</p>
@@ -24377,6 +24377,9 @@ customizing descriptors and sessions:</p>
 <li>
 <p><a href="#metadatasourcexmlurl"><code>metadata-source.xml.url</code></a></p>
 </li>
+<li>
+<p><a href="#loginencryptor"><code>login.encryptor</code></a></p>
+</li>
 </ul>
 </div>
 <div class="paragraph">
@@ -25030,6 +25033,9 @@ concurrency management:</p>
 </li>
 <li>
 <p><a href="#loggingtimestamp"><code>logging.timestamp</code></a></p>
+</li>
+<li>
+<p><a href="#login-encryptor"><code>login.encryptor</code></a></p>
 </li>
 <li>
 <p><a href="#locking-timestamp-local"><code>locking.timestamp.local</code></a></p>
@@ -33768,6 +33774,86 @@ propertiesMap.put(PersistenceUnitProperties.LOGGING_TIMESTAMP, "false");</code><
 <hr>
 </div>
 <div class="sect2">
+<h3 id="login-encryptor"><a class="anchor" href="#login-encryptor"></a>login.encryptor</h3>
+<div class="paragraph">
+<p>Use the <code>eclipselink.login.encryptor</code> property to specify a custom
+implementation of class that implements the
+<code>org.eclipse.persistence.security.Securable</code> interface. The class
+must provide a default, no argument constructor.</p>
+</div>
+<div class="paragraph">
+<p><strong>Values</strong></p>
+</div>
+<div class="paragraph">
+<p><a href="#CHDGBEFGA">Table 5-89</a> describes this persistence property&#8217;s values.</p>
+</div>
+<div id="CHDGBEFGA" class="paragraph">
+<p><strong><em>Table 5-89 Valid Values for login.encryptor</em></strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Value</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fully qualified class name of custom implementation <code>org.eclipse.persistence.security.Securable</code> class.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Usage</strong></p>
+</div>
+<div class="paragraph">
+<p>It is used to encrypt and decrypt database password loaded from
+<code>jakarta.persistence.jdbc.password</code> property.
+Usage of this property avoids limitation of <a href="#sessioncustomizer"><code>session.customizer</code></a> which is called when all other
+properties have been processed (too late when database login needs to be configured).</p>
+</div>
+<div class="paragraph">
+<p><strong>Examples</strong></p>
+</div>
+<div class="paragraph">
+<p><a href="#CHDFBIEIA">Example 5-109</a> shows how to use this property in the
+<code>persistence.xml</code> file.</p>
+</div>
+<div class="paragraph">
+<p><a id="CHDFBIEIA"></a><a id="TLJPA1015"></a></p>
+</div>
+<div class="paragraph">
+<p><strong><em>Example 5-109 Using login.encryptor in persistence.xml</em></strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-oac_no_warn" data-lang="oac_no_warn">&lt;property name="eclipselink.login.encryptor"
+value="acme.sessions.MyEncryptor"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><a href="#CHDJEDJGA">Example 5-110</a> shows how to use this property in a
+property map.</p>
+</div>
+<div class="paragraph">
+<p><a id="CHDJEDJGA"></a><a id="TLJPA1016"></a></p>
+</div>
+<div class="paragraph">
+<p><strong><em>Example 5-110 Using session.customizer in a Property Map</em></strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-oac_no_warn" data-lang="oac_no_warn">import org.eclipse.persistence.config.PersistenceUnitProperties;
+propertiesMap.put(PersistenceUnitProperties.LOGIN_ENCRYPTOR,
+"acme.sessions.MyEncryptor");</code></pre>
+</div>
+</div>
+<hr>
+</div>
+<div class="sect2">
 <h3 id="locking-timestamp-local"><a class="anchor" href="#locking-timestamp-local"></a>locking.timestamp.local</h3>
 <div class="paragraph">
 <p>This property defines if locking policies should default to local time(true) or server time(false).</p>
@@ -39890,7 +39976,7 @@ Entity <strong>A</strong> with mappings <strong>c</strong> and <strong>d</strong
 <hr>
 <div class="paragraph">
 <p>Copyright © 2022 by The Eclipse Foundation under the <a href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public License (EPL)</a>
-Updated: 2023-02-24 09:47:37 +0100</p>
+Updated: 2024-12-23 13:14:34 +0100</p>
 </div>
 </div>
 </div>
