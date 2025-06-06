@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5WLCZXC');</script>
+  <!-- End Google Tag Manager -->    <meta name="author" content="Shaun Smith, Doug Clarke based on work by Bob Fraser"/>
+  <meta name="keywords" content="EclipseLink 2.3 release"/>
+  <link rel="shortcut icon" href="/eclipse.org-common/themes/solstice/public/images/favicon.ico"/>
+  <title>EclipseLink 2.3.0 Release | The Eclipse Foundation</title>
+  <link rel="stylesheet" href="/eclipse.org-common/themes/solstice/public/stylesheets/eclipse-ide.min.css?v1.0"/>
+  <meta property="og:description" content="The Eclipse Foundation - home to a global community, the Eclipse IDE, Jakarta EE and over 350 open source projects, including runtimes, tools and frameworks."/>
+  <meta property="og:image" content="https://www.eclipse.org/eclipse.org-common/themes/solstice/public/images/logo/eclipse-foundation-200x200.png"/>
+  <meta property="og:title" content="EclipseLink 2.3.0 Release | The Eclipse Foundation"/>
+  <meta property="og:image:width" content="200"/>
+  <meta property="og:image:height" content="200"/>
+  <meta itemprop="name" content="EclipseLink 2.3.0 Release | The Eclipse Foundation"/>
+  <meta itemprop="description" content="The Eclipse Foundation - home to a global community, the Eclipse IDE, Jakarta EE and over 350 open source projects, including runtimes, tools and frameworks."/>
+  <meta itemprop="image" content="https://www.eclipse.org/eclipse.org-common/themes/solstice/public/images/logo/eclipse-foundation-400x400.png"/>
+  <meta name="twitter:site" content="@EclipseFdn"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="EclipseLink 2.3.0 Release | The Eclipse Foundation"/>
+  <meta name="twitter:url" content="http://localhost/eclipselink/releases/2.3.0.html"/>
+  <meta name="twitter:description" content="The Eclipse Foundation - home to a global community, the Eclipse IDE, Jakarta EE and over 350 open source projects, including runtimes, tools and frameworks."/>
+  <meta name="twitter:image" content="https://www.eclipse.org/eclipse.org-common/themes/solstice/public/images/logo/eclipse-foundation-400x400.png"/>
+  <link href="//fonts.googleapis.com/css?family=Libre+Franklin:400,700,300,600,100" rel="stylesheet" type="text/css"/>
+  <script> var eclipse_org_common = {"settings":{"cookies_class":{"name":"eclipse_settings","enabled":1}}}</script>  </head>
+<body id="body_solstice">
+<a class="sr-only" href="#content">Skip to main content</a>
+<header class="header-wrapper" id="header-wrapper">
+  <div class="clearfix toolbar-container-wrapper">
+    <div class="container">
+      <div class="text-right toolbar-row row hidden-print">
+        <div class="col-md-24 row-toolbar-col">
+          <ul class="list-inline">
+            <li></li>
+            <li><a href="https://accounts.eclipse.org/user/login/?takemeback=http%3A%2F%2Fwww.eclipse.org%2Feclipselink%2Freleases%2F2.3.0.php"><i class="fa fa-sign-in fa-fw"></i> Log in</a></li>
+
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>  <div class="container">
+  <div class="row" id="header-row">
+    <div class="col-sm-5 col-md-4" id="header-left">
+      <div class="wrapper-logo-default"><a href="http://www.eclipse.org/"><img class="logo-eclipse-default hidden-xs" alt="logo" width="160" src="/eclipse.org-common/themes/solstice/public/images/logo/eclipse-ide/eclipse_logo_white.svg"/></a></div>
+    </div>            <div class="col-sm-4 col-md-5 text-right hidden-print hidden-xs pull-right margin-top-10" id="header-right">
+    <div id="btn-call-for-action"><a href="https://www.eclipse.org/donate/" class="btn btn-huge btn-info"><i class="fa fa-star"></i> Donate</a></div>
+  </div>      <div class="col-sm-15 col-md-15 reset margin-top-10" id="main-menu-wrapper">
+    <div class="navbar yamm" id="main-menu">
+      <div class="navbar-collapse collapse reset float-right" id="navbar-main-menu">
+        <ul class="nav navbar-nav">
+          <li><a href="http://www.eclipse.org/membership/" target="_self">Members</a></li><li><a href="http://www.eclipse.org/org/workinggroups/" target="_self">Working Groups</a></li><li><a href="http://www.eclipse.org/projects/" target="_self">Projects</a></li>                  <li class="dropdown visible-xs"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Community <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="http://marketplace.eclipse.org">Marketplace</a></li><li><a href="http://events.eclipse.org">Events</a></li><li><a href="http://www.planeteclipse.org/">Planet Eclipse</a></li><li><a href="http://www.eclipse.org/community/eclipse_newsletter/">Newsletter</a></li><li><a href="https://www.youtube.com/user/EclipseFdn">Videos</a></li><li><a href="https://blogs.eclipse.org">Blogs</a></li></ul></li><li class="dropdown visible-xs"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Participate <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="https://bugs.eclipse.org/bugs/">Report a Bug</a></li><li><a href="http://www.eclipse.org/forums/">Forums</a></li><li><a href="http://www.eclipse.org/mail/">Mailing Lists</a></li><li><a href="https://wiki.eclipse.org/">Wiki</a></li><li><a href="https://wiki.eclipse.org/IRC">IRC</a></li></ul></li><li class="dropdown visible-xs"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Eclipse IDE <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="http://www.eclipse.org/downloads">Download</a></li><li><a href="https://help.eclipse.org">Documentation</a></li><li><a href="http://www.eclipse.org/getting_started">Getting Started / Support</a></li><li><a href="http://www.eclipse.org/contribute/">How to Contribute</a></li><li><a href="http://www.eclipse.org/ide/">IDE and Tools</a></li><li><a href="https://www.eclipse.org/forums/index.php/f/89/">Newcomer Forum</a></li></ul></li>          <!-- More -->
+          <li class="dropdown eclipse-more hidden-xs">
+            <a data-toggle="dropdown" class="dropdown-toggle" role="button">More<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li>
+                <!-- Content container to add padding -->
+                <div class="yamm-content">
+                  <div class="row">
+                    <ul class="col-sm-8 list-unstyled"><li><p><strong>Community</strong></p></li><li><a href="http://marketplace.eclipse.org">Marketplace</a></li><li><a href="http://events.eclipse.org">Events</a></li><li><a href="http://www.planeteclipse.org/">Planet Eclipse</a></li><li><a href="http://www.eclipse.org/community/eclipse_newsletter/">Newsletter</a></li><li><a href="https://www.youtube.com/user/EclipseFdn">Videos</a></li><li><a href="https://blogs.eclipse.org">Blogs</a></li></ul><ul class="col-sm-8 list-unstyled"><li><p><strong>Participate</strong></p></li><li><a href="https://bugs.eclipse.org/bugs/">Report a Bug</a></li><li><a href="http://www.eclipse.org/forums/">Forums</a></li><li><a href="http://www.eclipse.org/mail/">Mailing Lists</a></li><li><a href="https://wiki.eclipse.org/">Wiki</a></li><li><a href="https://wiki.eclipse.org/IRC">IRC</a></li></ul><ul class="col-sm-8 list-unstyled"><li><p><strong>Eclipse IDE</strong></p></li><li><a href="http://www.eclipse.org/downloads">Download</a></li><li><a href="https://help.eclipse.org">Documentation</a></li><li><a href="http://www.eclipse.org/getting_started">Getting Started / Support</a></li><li><a href="http://www.eclipse.org/contribute/">How to Contribute</a></li><li><a href="http://www.eclipse.org/ide/">IDE and Tools</a></li><li><a href="https://www.eclipse.org/forums/index.php/f/89/">Newcomer Forum</a></li></ul>                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown eclipse-more main-menu-search">
+            <a data-toggle="dropdown" class="dropdown-toggle" role="button"><i class="fa fa-search"></i> <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li>
+                <!-- Content container to add padding -->
+                <div class="yamm-content">
+                  <div class="row">
+                    <div class="col-sm-24">
+                      <p>Search</p>
+                      <div class="row"><div class="col-md-24">
+                        <div id="custom-search-form" class="reset-box-sizing">
+                          <script>
+                            (function() {
+                              var cx = '011805775785170369411:p3ec0igo0qq';
+                              var gcse = document.createElement('script');
+                              gcse.type = 'text/javascript';
+                              gcse.async = true;
+                              gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                                      '//cse.google.com/cse.js?cx=' + cx;
+                              var s = document.getElementsByTagName('script')[0];
+                              s.parentNode.insertBefore(gcse, s);
+                            })();
+                          </script>
+                          <gcse:searchbox-only gname="main" resultsUrl="https://www.eclipse.org/home/search.php"></gcse:searchbox-only>
+                        </div></div></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-main-menu">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="wrapper-logo-mobile"><a class="navbar-brand visible-xs" href="http://www.eclipse.org/"><img class="logo-eclipse-default-mobile img-responsive" alt="logo" width="160" src="/eclipse.org-common/themes/solstice/public/images/logo/eclipse-ide/eclipse_logo_white.svg"/></a></div>    </div>
+    </div>
+  </div>
+  </div>
+</div>
+</header>
+<section class="default-breadcrumbs hidden-print breadcrumbs-default-margin" id="breadcrumb">
+  <div class="container">
+    <h3 class="sr-only">Breadcrumbs</h3>
+    <div class="row">
+      <div class="col-sm-24"><ol class="breadcrumb"><li><a href="/">Home</a></li><li><a href="http://www.eclipse.org/projects/">Projects</a></li><li><a href="http://www.eclipse.org/eclipselink">eclipselink</a></li><li class="active">2.3.0 Release</li></ol></div>
+    </div>
+  </div>
+</section> <!-- /#breadcrumb -->
+<main>
+
+  <div class="novaContent container legacy-page" id="novaContent">
+    <div class="row"><div class="col-md-18"><div class="logoBanner"><a href="/eclipselink"><img src="/eclipselink/images/logo.png" /></a></div>
+      <?xml version="1.0"?>
+      <div id="midcolumn"><div class="homeitem"><h1/><p>
+        <h1>EclipseLink 2.3.3</h1>
+        <p>The EclipseLink 2.3 release focuses on increased developer
+          flexibility allowing mapped objects to be extensible and multitenant
+          as well as external storage of mappings. These features are intended
+          to help developers address some of the challenges related to
+          developing for cloud architectures and more specifically SaaS
+          solutions.
+        </p>
+        <table>
+          <tr>
+
+            <td width="450">
+              <h4>Release</h4>
+            </td>
+            <td valign="right">
+              <div>
+                <h4>Date</h4>
+              </div>
+            </td>
+            <td valign="right">
+              <div>
+                <h4>Build</h4>
+              </div>
+            </td>
+
+          </tr>
+          <tr style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+
+            <td width="450">
+              EclipseLink 2.3.3
+            </td>
+            <td valign="right">
+              <div>
+                July 3, 2012
+              </div>
+            </td>
+            <td valign="right">
+              <div>
+              </div>
+            </td>
+          </tr>
+
+          <tr style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+
+            <td width="450">
+              EclipseLink 2.3.2
+            </td>
+            <td valign="right">
+              <div>
+                Dec 9 2011
+              </div>
+            </td>
+            <td valign="right">
+              <div>
+                2.3.2.v2011125-r10461
+              </div>
+            </td>
+          </tr>
+          <tr style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+
+            <td width="450">
+              EclipseLink 2.3.1
+            </td>
+            <td valign="right">
+              <div>
+                Nov 11 2011
+              </div>
+            </td>
+            <td valign="right">
+              <div>
+              </div>
+            </td>
+          </tr>
+          <tr style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+            <td width="450">
+              EclipseLink 2.3.0
+            </td>
+            <td valign="right">
+              <div>
+                Jun 22 2011
+              </div>
+            </td>
+            <td valign="right">
+              <div>
+              </div>
+            </td>
+          </tr>
+        </table>
+
+
+        </p></div><div class="homeitem3col"><h3><img width="40" src="/sequoyah/images/CC_news.png"/> New and Noteworthy</h3><p>
+
+        <table>
+          <tr>
+            <td colspan="2">
+              <h4>Extend Entities</h4>
+            </td>
+          </tr>
+          <tr style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+            <td valign="top">
+              Developers can make their JPA entities or MOXy JAXB
+              beans
+              extensible so that at runtime a set of additional extended
+              mappings can be used.
+            </td>
+            <td width="150">
+              <div>
+                <img src="/eclipselink/images/doc_small.png"/>
+                <a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Extensible_Entities">JPA Documentation</a>
+              </div>
+              <div>
+                <img src="/eclipselink/images/wiki_small.png"/>
+                <a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Extensibility">JPA example</a>
+              </div>
+              <div>
+                <img src="/eclipselink/images/wiki_small.png"/>
+                <a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/Extensible">MOXY example</a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <h4>Support Multiple Tenants</h4>
+            </td>
+          </tr>
+          <tr style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+            <td valign="top">
+              Developers can design and deploy applications where
+              their
+              persistent
+              entities manage entities for multiple tenants in
+              the
+              same application
+              with storage in a shared table.
+            </td>
+            <td>
+              <div>
+                <img src="/eclipselink/images/doc_small.png"/>
+                <a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Single-Table_Multi-Tenancy">JPA Documentation</a>
+              </div>
+              <div>
+                <img src="/eclipselink/images/wiki_small.png"/>
+                <a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Multitenant">JPA Example</a>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2">
+              <h4>Externalize Mappings</h4>
+            </td>
+          </tr>
+          <tr style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+            <td valign="top">
+              Developers can now store mappings using a
+              <b>MetadataSource</b>
+              external to the running application so that mapping overrides and
+              extended mappings can be more dynamically integrated into deployed
+              applications.
+            </td>
+            <td>
+
+              <div>
+                <img src="/eclipselink/images/wiki_small.png"/>
+                <a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/MetadataSource">JPA Example</a>
+              </div>
+              <div>
+                <img src="/eclipselink/images/doc_small.png"/>
+                <a href="http://wiki.eclipse.org/EclipseLink/UserGuide/MOXy/Advanced_Concepts/Refreshing_Metadata">MOXy Documentation</a>
+              </div>
+              <div>
+                <img src="/eclipselink/images/wiki_small.png"/>
+                <a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/MetadataRepository">MOXy Example</a>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2">
+              <h4>Multiple Database</h4>
+            </td>
+          </tr>
+          <tr style="padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+            <td valign="top">
+              <b>Composite Persistence Units</b>
+              (PU)
+              allows developers to access entities in different data sources
+              by
+              composing their PUs together including support for
+              relationships
+              between entities in different databases.
+            </td>
+            <td>
+              <div>
+                <img src="/eclipselink/images/doc_small.png"/>
+                <a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Composite_Persistence_Units">JPA Documentation</a>
+              </div>
+              <div>
+                <img src="/eclipselink/images/wiki_small.png"/>
+                <a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/Composite">JPA Example</a>
+              </div>
+            </td>
+          </tr>
+        </table>
+
+        </p><ul/></div><div class="homeitem3col"><h3><img width="40" src="/sequoyah/images/CC_bugs.png"/> Enhancements and Resolved Issues</h3><p>
+        <p>In addition to the features highlighted in the New and Noteworthy
+          section this release also includes a substantial number of bug fixes
+          and enhancements.
+        </p>
+        <ul>
+          <li>
+            <a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA/PLSQLStoredFunction">JPA Stored Procedure and PLSQL Support Enhancements</a>
+            -
+            <a href="http://wiki.eclipse.org/EclipseLink/UserGuide/JPA/Advanced_JPA_Development/Stored_Procedure_and_PL/SQL_Support">Documentation</a>
+          </li>
+          <li>
+            <a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/ElementMappingByAttributeValue">MOXy support for mapping with predicates</a>
+          </li>
+          <li>
+            <a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/MultipleBindingsFiles">MOXy support for multiple eclipselink-oxm.xml mapping files
+            </a>
+          </li>
+          <li>
+            <a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/XMLNameTransformer">MOXy support for custom XML name conversions</a>
+            -
+            <a href="http://wiki.eclipse.org/EclipseLink/UserGuide/MOXy/Advanced_Concepts/Customizing_XML_Name_Conversions">Documentation</a>
+          </li>
+          <li>
+            <a href="http://wiki.eclipse.org/EclipseLink/Examples/DBWS/DBWSComplexArgStoredFunction">DBWS from StoredFunction with PL/SQL arguments</a>
+          </li>
+          <li>
+            <a href="http://wiki.eclipse.org/EclipseLink/Examples/DBWS/DBWSOverloadStoredProcedure">DBWS from overloaded Stored Procedures</a>
+          </li>
+          <li>
+            <a href="http://wiki.eclipse.org/EclipseLink/Examples/MySports">MySports Example</a>
+            : New example showing new @Multitenant and @VirtualAccessMethods
+            features in Java EE web applications using JSF, JAX-RS, EJB and
+            JPA
+            .
+          </li>
+          <li>
+            <a href="http://wiki.eclipse.org/EclipseLink/Examples/JPA">Employee Example</a>
+            : The classic EclipseLink Employee example updated with a JSF
+            front
+            end.
+          </li>
+          <li>
+            <a href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;target_milestone=2.3.3;product=EclipseLink;known_name=2.3.3%20Fixed" class="external text" title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;target_milestone=2.3.3;product=EclipseLink;known_name=2.3.3%20Fixed" rel="nofollow">2.3.3: All Fixed Bugs and enhancement requests</a>
+            <dl>
+              <dd>
+                Component:
+                <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;component=Foundation;target_milestone=2.3.3;product=EclipseLink;classification=RT" class="external text" title="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;columnlist=bug_severity%2Cpriority%2Cversion%2Ctarget_milestone%2Cbug_status%2Creporter%2Cshort_desc;component=Foundation;target_milestone=2.3.3;product=EclipseLink;classification=RT" rel="nofollow">Foundation</a>
+                ,
+                <a href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=JPA;target_milestone=2.3.3;product=EclipseLink;known_name=2.3.3%20Fixed" class="external text" title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=JPA;target_milestone=2.3.3;product=EclipseLink;known_name=2.3.3%20Fixed" rel="nofollow">JPA</a>
+                ,
+                <a href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=MOXy;product=EclipseLink;target_milestone=2.3.3;known_name=2.3.3%20Fixed" class="external text" title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=MOXy;product=EclipseLink;target_milestone=2.3.3;known_name=2.3.3%20Fixed" rel="nofollow">MOXy</a>
+                ,
+                <a href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=SDO;target_milestone=2.3.3;product=EclipseLink;known_name=2.3.3%20Fixed" class="external text" title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=SDO;target_milestone=2.3.3;product=EclipseLink;known_name=2.3.3%20Fixed" rel="nofollow">SDO</a>
+                ,
+                <a href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=DBWS;product=EclipseLink;target_milestone=2.3.3;known_name=2.3.3%20Fixed" class="external text" title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=DBWS;product=EclipseLink;target_milestone=2.3.3;known_name=2.3.3%20Fixed" rel="nofollow">DBWS</a>
+                ,
+                <a href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Utils;target_milestone=2.3.0;product=EclipseLink;known_name=2.3%20Fixed" class="external text" title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Utils;target_milestone=2.3.0;product=EclipseLink;known_name=2.3%20Fixed" rel="nofollow">Utils</a>
+                ,
+                <a href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Examples;target_milestone=2.3.3;product=EclipseLink;known_name=2.3.3%20Fixed" class="external text" title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Examples;target_milestone=2.3.3;product=EclipseLink;known_name=2.3.3%20Fixed" rel="nofollow">Examples</a>
+                ,
+                <a href="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Documentation;target_milestone=2.3.3;product=EclipseLink;known_name=2.3.3%20Fixed" class="external text" title="https://bugs.eclipse.org/bugs/buglist.cgi?resolution=FIXED;classification=RT;query_based_on=2.3.3%20Fixed;query_format=advanced;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;component=Documentation;target_milestone=2.3.3;product=EclipseLink;known_name=2.3.3%20Fixed" rel="nofollow">Documentation</a>
+              </dd>
+            </dl>
+          </li>
+        </ul>
+        </p><ul/></div><div class="homeitem3col"><h3><img width="40" src="http://dev.eclipse.org/huge_icons/apps/help-browser.png"/> Known Issues</h3><p>
+        <p>
+          The following are known issues that have been identified as
+          potentially effecting users of EclipseLink 2.3.3.
+        </p>
+        </p><ul/></div><div class="homeitem3col"><h3><img width="40" src="/sequoyah/images/CC_code.png"/> Standards</h3><p>
+        <p>EclipseLink remains focused on the delivering support for the
+          latest standards. EclipseLink 2.3.3 offers certified support for:
+        </p>
+        <ul>
+          <li>
+            Java Persistence (JPA) 2.0 -
+            <a href="http://www.jcp.org/en/jsr/detail?id=317">JSR 317</a>
+          </li>
+          <li>
+            Java Architecture for XML Binding (JAXB) 2.2 -
+            <a href="http://jcp.org/en/jsr/detail?id=222">JSR 222</a>
+          </li>
+          <li>
+            Service Data Objects (SDO) 2.1.1 -
+            <a href="http://jcp.org/en/jsr/detail?id=235">JSR 235</a>
+          </li>
+        </ul>
+        </p><ul/></div><div class="homeitem3col"><h3><img width="40" src="http://dev.eclipse.org/huge_icons/actions/edit-clear.png"/> Deprecated Functionality</h3><p>
+        <p>
+          In EclipseLink 2.3 the following features/API have been
+          deprecated.
+          Please upgrade to the suggested alternatives to avoid
+          issues in the
+          future when these deprecated features/AIP might be
+          removed. If you
+          are upgrading from an earlier release please check the
+          applicable
+          <a href="index.php">release pages</a>
+          .
+        </p>
+        <ul>
+          <li>
+            <a href="http://bugs.eclipse.org/340074">Bug 340074:</a>
+            Deprecated use of 'javax.persistence.cacheRetrieveMode' and
+            'javax.persistence.cacheStoreMode' QueryHints to address JPA 2.0
+            spec compatibility. The hint names
+            'javax.persistence.cache.retrieveMode' and
+            'javax.persistence.cache.storeMode' should now be used.
+          </li>
+        </ul>
+        </p><ul/></div><div class="homeitem3col"><h3>Retention Policy</h3><p>
+        <p>
+          The EclipseLink 2.3 release will remain available for download
+          from
+          the
+          <a href="/eclipselink/downloads/index.html">primary download page</a>
+          until the next release is shipped. At
+          that point it will be moved to
+          the
+          <a href="/eclipselink/downloads/previous_releases.html">previous releases</a>
+          page where it remain
+          for a minimum period of 2 years before becoming
+          available for archival.
+        </p>
+        </p><ul/></div><div class="homeitem3col"><h3>Future Releases</h3><p>
+        <p>
+          For more information about future planned EclipseLink releases and
+          patch sets please refer to the releases section of the
+          <a href="/projects/project_summary.php?projectid=rt.eclipselink">project summary. </a>
+        </p>
+        </p><ul/></div></div><div id="rightcolumn"><div class="sideitem" style="text-align:center"><p>
+        <a href="/indigo">
+          <img src="/indigo/images/indigologo_alt.png" width="100%"/>
+        </a>
+        <h6 style="text-align:center">Getting Started</h6>
+        <div style="text-align:center;padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#FDD017;-moz-border-radius:4px;">
+          <img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png" border="0"/>
+          <a href="http://www.eclipse.org/eclipselink/downloads/index.html#2.3.3">
+            Download 2.3.3
+            <img src="http://dev.eclipse.org/large_icons/actions/go-bottom.png" border="0"/>
+          </a>
+
+        </div>
+        <div style="text-align:center;padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;-moz-border-radius:4px;">
+
+          <a href="/eclipselink/downloads/previous_releases.html">
+            Download 2.3.0, 2.3.1, 2.3.2
+
+          </a>
+
+        </div>
+
+        <div style="text-align:center;padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+          <img src="/eclipselink/images/doc_small.png"/>
+          <a href="/eclipselink/documentation/">Documentation Center</a>
+        </div>
+
+        <div style="text-align:center;padding:0.5em;margin:0.5em 0.5em 1em 1em;border:1px solid #D9D9D9;background:#EFEFEF;-moz-border-radius:4px;">
+          <img src="/eclipselink/images/wiki_small.png"/>
+          <a href="http://wiki.eclipse.org/EclipseLink/Examples">Examples and Tutorials</a>
+        </div>
+
+        </p></div></div>
+    </div><div class="col-md-6">  <!-- nav -->
+      <aside class="main-sidebar-default-margin" id="main-sidebar">
+        <ul id="leftnav" class="ul-left-nav fa-ul hidden-print">
+
+
+          <li class="separator">
+            <a class="separator" href="/eclipselink/">
+              EclipseLink Home              </a>
+          </li>
+
+
+
+          <li>
+            <i class="fa fa-caret-right fa-fw"></i>
+            <a href="https://projects.eclipse.org/projects/ee4j.eclipselink" target="_self">
+              About This Project              </a>
+          </li>
+
+
+
+          <li>
+            <i class="fa fa-caret-right fa-fw"></i>
+            <a href="https://projects.eclipse.org/projects/ee4j.eclipselink/contact" target="_self">
+              Contact Us              </a>
+          </li>
+
+
+
+          <li>
+            <i class="fa fa-caret-right fa-fw"></i>
+            <a href="https://eclipse.dev/eclipselink/#download" target="_self">
+              Downloads              </a>
+          </li>
+
+
+
+          <li>
+            <i class="fa fa-caret-right fa-fw"></i>
+            <a href="https://wiki.eclipse.org/EclipseLink/" target="_self">
+              Documentation/Wiki              </a>
+          </li>
+
+
+
+          <li>
+            <i class="fa fa-caret-right fa-fw"></i>
+            <a href="https://github.com/eclipse-ee4j/eclipselink/issues" target="_self">
+              Bugs              </a>
+          </li>
+
+
+
+          <li>
+            <i class="fa fa-caret-right fa-fw"></i>
+            <a href="https://www.eclipse.org/legal/" target="_self">
+              Legal              </a>
+          </li>
+
+
+
+          <li>
+            <i class="fa fa-caret-right fa-fw"></i>
+            <a href="https://dev.eclipse.org/mailman/listinfo/eclipselink-dev" target="_self">
+              Developer Mail List              </a>
+          </li>
+
+
+
+          <li>
+            <i class="fa fa-caret-right fa-fw"></i>
+            <a href="http://dev.eclipse.org/newslists/news.eclipse.technology.eclipselink/maillist.html" target="_self">
+              Newsgroup              </a>
+          </li>
+
+
+
+          <li>
+            <i class="fa fa-caret-right fa-fw"></i>
+            <a href="https://wiki.eclipse.org/EclipseLink/" target="_self">
+              Wiki              </a>
+          </li>
+
+        </ul>
+      </aside>
+    </div></div>
+  </div>
+</main><p id="back-to-top">
+  <a class="visible-xs" href="#top">Back to the top</a>
+</p>
+<!-- Sign Up to our Newsletter -->
+<div class="featured-footer featured-footer-newsletter background-tertiary">
+  <div class="container">
+    <p><i data-feather="mail" stroke-width="1"></i></p>
+    <h2>Sign up to our Newsletter</h2>
+    <p>A fresh new issue delivered monthly</p>
+    <form action="https://www.eclipse.org/donate/process.php" method="post" target="_blank">
+      <div class="form-group">
+        <input type="hidden" name="type" value="newsletter">
+        <input type="email" value="" name="email" class="textfield-underline form-control" id="mce-EMAIL" placeholder="Email">
+      </div>
+      <input type="submit" value="Subscribe" name="subscribe" class="button btn btn-warning">
+    </form>
+  </div>
+</div><footer id="solstice-footer">
+  <div class="container">
+    <div class="row">
+      <section class="col-sm-6 hidden-print" id="footer-eclipse-foundation">
+        <h2 class="section-title">Eclipse Foundation</h2>
+        <ul class="nav">
+          <li><a href="http://www.eclipse.org/org/">About Us</a></li>
+          <li><a href="http://www.eclipse.org/org/foundation/contact.php">Contact Us</a></li>
+          <li><a href="http://www.eclipse.org/donate">Donate</a></li>
+          <li><a href="http://www.eclipse.org/org/documents/">Governance</a></li>
+          <li><a href="http://www.eclipse.org/artwork/">Logo and Artwork</a></li>
+          <li><a href="http://www.eclipse.org/org/foundation/directors.php">Board of Directors</a></li>
+        </ul>      </section>
+      <section class="col-sm-6 hidden-print" id="footer-legal">
+        <h2 class="section-title">Legal</h2>
+        <ul class="nav">
+          <li><a href="http://www.eclipse.org/legal/privacy.php">Privacy Policy</a></li>
+          <li><a href="http://www.eclipse.org/legal/termsofuse.php">Terms of Use</a></li>
+          <li><a href="http://www.eclipse.org/legal/copyright.php">Copyright Agent</a></li>
+          <li><a href="http://www.eclipse.org/legal/epl-2.0/">Eclipse Public License</a></li>
+          <li><a href="http://www.eclipse.org/legal/">Legal Resources </a></li>
+        </ul>      </section>
+      <section class="col-sm-6 hidden-print" id="footer-useful-links">
+        <h2 class="section-title">Useful Links</h2>
+        <ul class="nav">
+          <li><a href="https://bugs.eclipse.org/bugs/">Report a Bug</a></li>
+          <li><a href="//help.eclipse.org/">Documentation</a></li>
+          <li><a href="http://www.eclipse.org/contribute/">How to Contribute</a></li>
+          <li><a href="http://www.eclipse.org/mail/">Mailing Lists</a></li>
+          <li><a href="http://www.eclipse.org/forums/">Forums</a></li>
+          <li><a href="//marketplace.eclipse.org">Marketplace</a></li>
+        </ul>      </section>
+      <section class="col-sm-6 hidden-print" id="footer-other">
+        <h2 class="section-title">Other</h2>
+        <ul class="nav">
+          <li><a href="http://www.eclipse.org/ide/">IDE and Tools</a></li>
+          <li><a href="http://www.eclipse.org/projects">Community of Projects</a></li>
+          <li><a href="http://www.eclipse.org/org/workinggroups/">Working Groups</a></li>
+          <li><a href="http://www.eclipse.org/org/research/">Research@Eclipse</a></li>
+          <li><a href="https://status.eclipse.org">Service Status</a></li>
+        </ul>      </section>
+      <div class="col-sm-24 margin-top-20">
+        <div class="row">
+          <div id="copyright" class="col-md-16">
+            <p id="copyright-text">Copyright &copy; Eclipse Foundation, Inc. All Rights Reserved.</p>
+          </div>
+          <div class="col-md-8 social-media">
+            <ul class="list-inline">
+              <li>
+                <a class="social-media-link fa-stack fa-lg" href="https://twitter.com/EclipseFdn">
+                  <i class="fa fa-circle-thin fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x"></i>
+                </a>
+              </li>
+              <li>
+                <a class="social-media-link fa-stack fa-lg" href="https://plus.google.com/+Eclipse">
+                  <i class="fa fa-circle-thin fa-stack-2x"></i>
+                  <i class="fa fa-google-plus fa-stack-1x"></i>
+                </a>
+              </li>
+              <li>
+                <a class="social-media-link fa-stack fa-lg" href="https://www.facebook.com/eclipse.org">
+                  <i class="fa fa-circle-thin fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x"></i>
+                </a>
+              </li>
+              <li>
+                <a class="social-media-link fa-stack fa-lg" href="https://www.youtube.com/user/EclipseFdn">
+                  <i class="fa fa-circle-thin fa-stack-2x"></i>
+                  <i class="fa fa-youtube fa-stack-1x"></i>
+                </a>
+              </li>
+              <li>
+                <a class="social-media-link fa-stack fa-lg" href="https://www.linkedin.com/company/eclipse-foundation">
+                  <i class="fa fa-circle-thin fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>      <a href="#" class="scrollup">Back to the top</a>
+    </div>
+  </div>
+</footer>
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/eclipse.org-common/themes/solstice/public/javascript/main.min.js"></script>
+
+</body>
+</html>
